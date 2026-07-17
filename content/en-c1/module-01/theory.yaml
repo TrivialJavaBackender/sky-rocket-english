@@ -1,0 +1,103 @@
+# Module 01 · Work & Careers — grammar spotlights + watchouts
+spotlights:
+  - title: "Narrative tenses: layering a career story"
+    intro: A career story is never a flat list of events. English layers it with four past forms — one for the backbone, three for depth — plus two ways of painting past habits.
+    items:
+      - form: past simple
+        example: She joined the firm in 2016 and left five years later.
+        note: The backbone — completed events in the order they happened.
+      - form: past continuous
+        example: She was managing two teams when the merger was announced.
+        note: The scenery — a longer activity interrupted by a backbone event.
+      - form: had + past participle
+        example: By 2020 she had led three product launches.
+        note: A step back — an event completed before the story's main past.
+      - form: had been + -ing
+        example: She had been running the office single-handedly for a year when they finally hired help.
+        note: Duration up to a past moment — how long something had gone on before the event.
+      - form: would + infinitive
+        example: Every Friday he would stay late to plan the next week.
+        note: Repeated past actions with a nostalgic colouring. Actions only — never states.
+      - form: used to + infinitive
+        example: He used to enjoy the commute; he used to own a car, too.
+        note: Past habits AND past states. The safe choice when would is off limits.
+  - title: "Perfect aspect: result or activity?"
+    intro: The perfect connects two times. What you choose next — simple or continuous — tells the listener whether you are selling the result or the effort.
+    items:
+      - form: have + past participle
+        example: I have written the report — it is in your inbox.
+        note: "Result now: the thing exists, count it, show it. The CV form."
+      - form: have been + -ing
+        example: I have been writing the report all morning — nearly there.
+        note: "Activity and duration: effort that explains the present, finished or not."
+      - form: have + pp with numbers
+        example: We have hired four engineers this quarter.
+        note: A number counts results, so the simple perfect — not have been hiring — carries it.
+      - form: had (been) + …
+        example: By Friday she had interviewed nine candidates; she had been interviewing all week.
+        note: The same result-vs-activity contrast, shifted one step into the past.
+  - title: Future forms with an edge
+    intro: Beyond will + infinitive lies the C1 shelf — futures that carry schedule, duration or imminence inside the verb itself.
+    items:
+      - form: will be + -ing
+        example: This time next week I will be presenting to the board.
+        note: An activity in progress at a future moment — also the polite way to ask about plans.
+      - form: will have + past participle
+        example: By Friday I will have cleared the backlog.
+        note: "Future perfect: looking back from a future vantage point. Partner of by."
+      - form: will have been + -ing
+        example: In May she will have been leading the team for ten years.
+        note: Duration measured at a future point — anniversaries and milestones.
+      - form: be to + infinitive
+        example: The chief executive is to step down in June.
+        note: Official arrangements and instructions — the press-release future.
+      - form: be about to / be on the verge of
+        example: The firm is about to announce layoffs; talks are on the verge of collapse.
+        note: Imminence. About to takes an infinitive; on the verge of takes a noun or -ing.
+  - title: Future in the past
+    intro: Stories need a way to point forward from a past moment — to plans that were still ahead, including the ones that never happened.
+    items:
+      - form: was going to + infinitive
+        example: I was going to hand in my notice, but they doubled my salary.
+        note: A past intention, usually overturned — the but is almost mandatory.
+      - form: was about to + infinitive
+        example: She was about to sign when the offer was withdrawn.
+        note: Imminence seen from the past; the interruption follows in when-clause.
+      - form: was to + infinitive
+        example: The plant was to close a year later.
+        note: A scheduled or fated future viewed from the past — historic narration.
+      - form: was to have + past participle
+        example: He was to have taken over in May, but the merger collapsed.
+        note: The ghost future — planned, scheduled, and cancelled. The perfect marks non-fulfilment.
+  - title: State verbs and the continuous
+    intro: Verbs of knowing, owning, feeling and seeming describe states, not actions — and states resist the continuous. The interest starts where the rule bends.
+    items:
+      - form: know · own · consist · belong
+        example: She owns two flats and knows exactly what they are worth.
+        note: Pure states — never continuous, whatever the time frame.
+      - form: think · have · see · taste
+        example: I think you are right ↔ I am thinking about quitting.
+        note: "Two meanings, two behaviours: opinion is a state; consideration is an activity."
+      - form: be + adjective vs be being
+        example: He is being difficult about the handover — normally he is the easiest colleague imaginable.
+        note: Is being = temporary behaviour, not character. A quiet C1 signal.
+      - form: enjoy-type verbs in the continuous
+        example: I am loving the new role so far.
+        note: Informal spoken English stretches the rule for temporary enthusiasm — fine in speech, risky in formal writing.
+watchouts:
+  - title: since + present perfect
+    bad: I am working here since 2019.
+    good: I have been working here since 2019.
+    note: A past starting point needs the perfect to reach the present. The present continuous cannot cross that distance — this is the single most harvested error in the block.
+  - title: would with state verbs
+    bad: As a trainee, I would know nothing about tax.
+    good: As a trainee, I used to know nothing about tax.
+    note: Would revisits repeated past actions only. States — know, own, love, believe — take used to or the past simple.
+  - title: will inside a time clause
+    bad: I will call you when I will finish the meeting.
+    good: I will call you when I finish the meeting.
+    note: After when, until, as soon as and once, English marks future time with the present tense. One will per sentence is enough.
+  - title: by the time without the past perfect
+    bad: By the time the recruiter called back, I accepted another offer.
+    good: By the time the recruiter called back, I had accepted another offer.
+    note: By the time draws a line in the past; whatever happened before that line takes had + past participle.

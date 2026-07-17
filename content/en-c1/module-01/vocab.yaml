@@ -1,0 +1,367 @@
+# Module 01 · Work & Careers — 45 lexemes in four domains:
+# career path (12) · hiring & firing (14) · workload & deadlines (12) · burnout & balance (7)
+entries:
+  # ── Career path ────────────────────────────────────────────────
+  - term: career trajectory
+    tag: neutral
+    definition: the direction a working life takes over time, pictured as a curve that rises, flattens or falls
+    use_cases:
+      - One viral product launch changed her whole career trajectory.
+      - His trajectory flattened the moment he refused the Singapore transfer.
+    collocations: a steep / flat trajectory · change / alter your trajectory
+    register: "Business and journalistic; everyday alternative: career path"
+  - term: climb the corporate ladder
+    tag: idiom · often ironic
+    definition: to advance step by step through the ranks of a large organisation
+    use_cases:
+      - He spent a decade climbing the corporate ladder before wondering who was holding it.
+      - She has no interest in climbing the ladder — she wants the work itself.
+    collocations: rise through the ranks · work your way up
+    register: "Neutral alternatives: advance, be promoted"
+  - term: carve out a niche
+    tag: idiom
+    definition: to build a small, secure position that suits your particular strengths
+    use_cases:
+      - She carved out a niche translating patents for biotech firms.
+      - It took him years to carve out a niche in such a crowded market.
+    collocations: carve out a role / a reputation / a career
+    register: Neutral to journalistic
+  - term: a stepping stone
+    tag: metaphor
+    definition: a job or experience valued mainly as a stage on the way to something better
+    use_cases:
+      - He saw the analyst role as a stepping stone to fund management.
+      - Treat the internship as a stepping stone, not a destination.
+    collocations: a stepping stone to / towards sth
+    register: Neutral
+  - term: a sideways move
+    tag: neutral
+    definition: a change to a different job at the same level, rather than a promotion
+    use_cases:
+      - The transfer to Vienna was a sideways move, but it opened new doors.
+      - Two sideways moves in a row make recruiters ask questions.
+    collocations: make a sideways move · a lateral move
+    register: "HR-neutral; contrast: a step up · a demotion"
+  - term: rise through the ranks
+    tag: idiom
+    definition: to be promoted repeatedly within one organisation, often from a junior start
+    use_cases:
+      - She rose through the ranks from cashier to regional director.
+      - Managers who have risen through the ranks command a different kind of respect.
+    collocations: rise rapidly / steadily through the ranks
+    register: Neutral, slightly formal
+  - term: a dead-end job
+    tag: informal
+    definition: a job that offers no prospect of promotion or development
+    use_cases:
+      - He quit a dead-end job in logistics to retrain as a nurse.
+      - Any job turns dead-end the day you stop learning in it.
+    collocations: be stuck in / trapped in a dead-end job
+    register: "Informal-neutral; formal: a position without prospects"
+  - term: take stock (of)
+    tag: idiom
+    definition: to pause and assess a situation carefully before deciding what to do next
+    use_cases:
+      - Every January she takes stock of which skills still earn their keep.
+      - After the layoffs, he took stock and decided to go freelance.
+    collocations: take stock of your career / options / finances
+    register: Neutral
+  - term: pivot
+    tag: business
+    definition: to change professional direction strategically while keeping what already works
+    use_cases:
+      - The studio pivoted from print to motion design within a year.
+      - Mid-career professionals often pivot into teaching or consultancy.
+    collocations: pivot from X to Y · pivot into a field
+    register: "Business / startup register; neutral: change direction"
+  - term: a career break
+    tag: neutral
+    definition: a planned period away from work, often for family, travel or retraining
+    use_cases:
+      - She took a two-year career break to look after her father.
+      - A career break used to be a red flag on a CV; it no longer is.
+    collocations: take a career break
+    register: "HR-neutral; informal: take time out"
+  - term: up-and-coming
+    tag: adjective
+    definition: beginning to be successful and likely to become well known
+    use_cases:
+      - The prize showcases up-and-coming talent in the industry.
+      - They hired an up-and-coming architect with a gift for restoration work.
+    collocations: an up-and-coming designer / firm / district
+    register: Journalistic-neutral
+  - term: the glass ceiling
+    tag: idiom
+    definition: the invisible barrier that keeps certain groups, especially women, out of top positions
+    use_cases:
+      - She shattered the glass ceiling to become the bank's first female CEO.
+      - The report argues the glass ceiling has merely been raised, not removed.
+    collocations: break / shatter / hit the glass ceiling
+    register: Journalistic; a fixed metaphor
+  # ── Hiring & firing ────────────────────────────────────────────
+  - term: be made redundant
+    tag: BrE
+    definition: to lose your job because the position itself is no longer needed
+    use_cases:
+      - Half the department was made redundant after the merger.
+      - Being made redundant at fifty pushed him into consultancy.
+    collocations: make a post redundant · voluntary redundancy
+    register: "BrE; AmE: be laid off. Not the same as be dismissed (for fault)"
+  - term: notice period
+    tag: contractual
+    definition: the time you must go on working between resigning and actually leaving
+    use_cases:
+      - Her three-month notice period kept her off the market until June.
+      - He negotiated a shorter notice period before signing the contract.
+    collocations: work out / serve your notice period
+    register: Neutral, contractual
+  - term: hand in your notice
+    tag: neutral
+    definition: to formally tell your employer you are leaving
+    use_cases:
+      - She handed in her notice the day her visa cleared.
+      - He had been threatening to hand it in for a year before he finally did.
+    collocations: give in / work your notice · notice period
+    register: "Formal: resign · Informal: quit"
+  - term: step down
+    tag: phrasal
+    definition: to leave a senior position voluntarily, especially so that someone can replace you
+    use_cases:
+      - The chairman stepped down after twelve years at the helm.
+      - She stepped down as head of research to return to the lab.
+    collocations: step down as chair · step down from a post
+    register: "Press-release register; blunter: resign"
+  - term: fill in for sb
+    tag: phrasal
+    definition: to do someone's job temporarily while they are away
+    use_cases:
+      - Could you fill in for me at Thursday's client call?
+      - She filled in for the director for six months — and impressed the board.
+    collocations: fill in for a colleague · a stand-in
+    register: "Neutral; formal: deputise for sb · also: cover for sb"
+  - term: headhunt
+    tag: business
+    definition: to approach someone who already has a job and persuade them to join another company
+    use_cases:
+      - She was headhunted by a rival bank while on holiday.
+      - We headhunted him specifically to rebuild the sales team.
+    collocations: be headhunted for a role · a headhunter
+    register: Neutral business
+  - term: a probationary period
+    tag: contractual
+    definition: the trial months in a new job during which either side can end the contract easily
+    use_cases:
+      - New hires pass a six-month probationary period before going permanent.
+      - His contract was not renewed at the end of the probationary period.
+    collocations: complete / pass / extend a probationary period
+    register: "Formal-contractual; informal: be on probation"
+  - term: lay off
+    tag: phrasal
+    definition: to dismiss workers because there is not enough work, usually in large numbers
+    use_cases:
+      - The plant laid off four hundred workers in a single afternoon.
+      - Tech firms have been laying off staff all year.
+    collocations: mass layoffs · be laid off
+    register: "AmE-leaning; BrE prefers make redundant"
+  - term: severance pay
+    tag: contractual
+    definition: money paid to an employee whose contract is ended by the employer
+    use_cases:
+      - Six months' severance pay softened the blow of redundancy.
+      - Read the severance terms before you resign, not after.
+    collocations: a severance package / agreement
+    register: "Formal-contractual; informal: a payoff"
+  - term: shortlist
+    tag: verb
+    definition: to select the few strongest candidates for final consideration
+    use_cases:
+      - Two hundred people applied; nine were shortlisted.
+      - Her portfolio got her shortlisted for the design prize.
+    collocations: be shortlisted for a post · draw up a shortlist
+    register: Neutral
+  - term: staff turnover
+    tag: HR metric
+    definition: the rate at which employees leave an organisation and are replaced
+    use_cases:
+      - High staff turnover in a team usually points at its manager.
+      - Turnover fell sharply once flexible hours came in.
+    collocations: high / low / rapid staff turnover
+    register: Neutral business
+  - term: be overqualified
+    tag: HR
+    definition: to have more experience or education than a job requires — and so be unlikely to stay
+    use_cases:
+      - They rejected her as overqualified for the coordinator role.
+      - Hire someone overqualified and they will have moved on within a year.
+    collocations: be overqualified for a post
+    register: Neutral
+  - term: a vacancy
+    tag: neutral
+    definition: a job that is available for someone to take
+    use_cases:
+      - The vacancy attracted over three hundred applications.
+      - Ask why the vacancy exists — the answer is often the real job description.
+    collocations: fill / advertise a vacancy
+    register: "Job-ad synonyms: an opening, a position"
+  - term: poach
+    tag: business · informal
+    definition: to lure an employee away from another company, often a direct rival
+    use_cases:
+      - Their entire data team was poached by a hedge fund.
+      - We lost two engineers to poaching last quarter.
+    collocations: poach staff / talent / clients from a rival
+    register: "Informal-business; neutral: recruit from"
+  # ── Workload & deadlines ───────────────────────────────────────
+  - term: take on a workload
+    tag: neutral
+    definition: to accept an amount of work, especially a large one
+    use_cases:
+      - She took on a workload designed for two people.
+      - Don't take on more than the role actually pays for.
+    collocations: take on work / staff / responsibility · a heavy workload
+    register: Neutral
+  - term: meet a deadline
+    tag: neutral
+    definition: to finish a piece of work by the agreed time
+    use_cases:
+      - We met the deadline with forty minutes to spare.
+      - He has never missed a deadline in ten years; his secret is padding every estimate.
+    collocations: meet / miss / extend / set a deadline · a tight deadline
+    register: Neutral
+  - term: be snowed under
+    tag: idiom
+    definition: to have far more work than you can deal with
+    use_cases:
+      - I'm completely snowed under this week — can it wait until Monday?
+      - The support team has been snowed under since the update shipped.
+    collocations: snowed under with work / emails / requests
+    register: "Informal-neutral; formal: be overwhelmed"
+  - term: knuckle down
+    tag: phrasal · informal
+    definition: to finally start working seriously and with full attention
+    use_cases:
+      - It's time to knuckle down and finish the application.
+      - Once she knuckled down, the thesis took only three months.
+    collocations: knuckle down to work / to revision
+    register: "Informal; neutral: apply yourself, get down to work"
+  - term: demanding yet rewarding
+    tag: collocation
+    definition: (of work) requiring great effort but giving deep satisfaction — the classic job-ad pairing
+    use_cases:
+      - Teaching is demanding yet rewarding in roughly equal measure.
+      - It was a demanding yet rewarding role — until it was merely demanding.
+    collocations: a demanding role / schedule · deeply rewarding
+    register: Job-ad and interview register
+  - term: work around the clock
+    tag: idiom
+    definition: to work continuously, day and night
+    use_cases:
+      - The legal team worked around the clock to close the deal.
+      - You cannot run a company by working around the clock yourself.
+    collocations: work around the clock to do sth · round-the-clock support
+    register: Neutral
+  - term: pull your weight
+    tag: idiom
+    definition: to do your fair share of the shared work
+    use_cases:
+      - Everyone here pulls their weight — there is nowhere to hide.
+      - He was let go for simply not pulling his weight.
+    collocations: pull your weight in a team
+    register: Informal-neutral
+  - term: delegate
+    tag: verb
+    definition: to give parts of your work, and the authority for them, to other people
+    use_cases:
+      - Learn to delegate, or your team will never grow.
+      - She delegates the routine and keeps the judgement calls.
+    collocations: delegate tasks / authority / responsibility to sb
+    register: Neutral business
+  - term: juggle competing demands
+    tag: metaphor
+    definition: to try to manage several conflicting duties at the same time
+    use_cases:
+      - Working parents juggle competing demands every single day.
+      - He was juggling three clients' demands from two screens.
+    collocations: juggle work and family · juggle priorities
+    register: Neutral-journalistic
+  - term: put in long hours
+    tag: neutral
+    definition: to spend a great deal of time working
+    use_cases:
+      - She put in brutal hours all through the audit season.
+      - Partners are expected to put in whatever hours the deal requires.
+    collocations: put in long hours / a full shift / overtime
+    register: Neutral
+  - term: keep on top of
+    tag: phrasal
+    definition: to stay in control of work that keeps arriving, so that it never piles up
+    use_cases:
+      - A daily fifteen-minute sweep keeps me on top of my inbox.
+      - Once you stop keeping on top of the paperwork, it buries you.
+    collocations: keep on top of your workload / admin / emails
+    register: Informal-neutral
+  - term: a looming deadline
+    tag: collocation
+    definition: a deadline that is approaching fast and beginning to cause worry
+    use_cases:
+      - The looming deadline concentrated everyone's minds wonderfully.
+      - With the deadline looming, they quietly cut half the features.
+    collocations: a deadline looms · with sth looming
+    register: Journalistic-neutral
+  # ── Burnout & balance ──────────────────────────────────────────
+  - term: burnout
+    tag: neutral
+    definition: physical and emotional collapse caused by prolonged overwork
+    use_cases:
+      - Burnout is rife among freelancers juggling four clients.
+      - She recognised the burnout only after her doctor named it.
+    collocations: suffer / experience burnout · be heading for burnout
+    register: Neutral, with a clinical flavour
+  - term: burn the candle at both ends
+    tag: idiom
+    definition: to exhaust yourself by working late and getting up early, day after day
+    use_cases:
+      - He was burning the candle at both ends — night classes after ten-hour shifts.
+      - Burn the candle at both ends in your twenties and the invoice arrives in your thirties.
+    collocations: (fixed idiom — used whole)
+    register: Informal
+  - term: run yourself into the ground
+    tag: idiom
+    definition: to work until your health or judgement gives way
+    use_cases:
+      - She ran herself into the ground getting the launch out on time.
+      - Don't run yourself into the ground for a company that would replace you within a week.
+    collocations: run sb / yourself into the ground
+    register: Informal
+  - term: work-life balance
+    tag: fixed phrase
+    definition: the healthy division of time and energy between work and the rest of life
+    use_cases:
+      - Work-life balance is easier to print on a mug than to practise.
+      - The four-day pilot measurably improved staff's work-life balance.
+    collocations: strike / maintain / improve a work-life balance
+    register: HR and journalistic
+  - term: take its toll (on)
+    tag: idiom
+    definition: to cause gradual, cumulative damage
+    use_cases:
+      - The commute was quietly taking its toll on her health.
+      - Years of shift work take their toll eventually.
+    collocations: take its toll on health / morale / relationships
+    register: Neutral
+  - term: be stretched too thin
+    tag: idiom
+    definition: to have your time and energy divided among so many duties that none is done well
+    use_cases:
+      - With two vacancies unfilled, the team is stretched dangerously thin.
+      - She was stretched so thin that even small requests felt heavy.
+    collocations: be stretched thin / to the limit
+    register: Neutral
+  - term: switch off
+    tag: phrasal
+    definition: to stop thinking about work and let your mind rest
+    use_cases:
+      - Remote workers find it far harder to switch off at the end of the day.
+      - He cannot switch off unless the phone stays in another room.
+    collocations: switch off from work · fully switch off
+    register: "Informal-neutral; formal: disconnect"

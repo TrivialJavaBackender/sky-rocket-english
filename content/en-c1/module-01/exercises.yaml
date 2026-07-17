@@ -1,0 +1,905 @@
+# Module 01 · Work & Careers — exercises
+# core: 10 grammar_drill · 8 error_correction · 8 key_word_transformation ·
+#       8 open_cloze · 6 reading_comprehension · 8 mc_cloze · 10 collocation_match · 8 word_formation  = 66
+# review_pool: 5 gd · 4 ec · 4 kwt · 4 oc · 1 rc · 4 mc · 4 cm · 4 wf  = 30
+core:
+  # ── grammar_drill × 10 · group grammar ─────────────────────────
+  - type: grammar_drill
+    group: grammar
+    grammar_point: Narrative tenses and past habits (would / used to)
+    content:
+      pre: "By the time the recruiter called back, she "
+      post: " another offer."
+      prompt: ACCEPT
+      options: [accepted, has accepted, had accepted, had been accepting]
+      answer: 2
+    explanation: "By the time + past draws a line in the past; whatever happened before that line takes the past perfect: had accepted. The continuous would stress ongoing activity, but accepting an offer is a single completed event."
+  - type: grammar_drill
+    group: grammar
+    grammar_point: Narrative tenses and past habits (would / used to)
+    content:
+      pre: "When the firm finally hired an assistant, Marta "
+      post: " the office single-handedly for over a year."
+      prompt: RUN
+      options: [ran, was running, had been running, has been running]
+      answer: 2
+    explanation: "For over a year measures duration up to a past event (the hiring), which is exactly what the past perfect continuous does: had been running. The present perfect cannot appear in a finished past narrative."
+  - type: grammar_drill
+    group: grammar
+    grammar_point: Narrative tenses and past habits (would / used to)
+    content:
+      pre: "As a trainee, he "
+      post: " nothing about corporate tax."
+      prompt: KNOW
+      options: [would know, used to know, was knowing, would have known]
+      answer: 1
+    explanation: "Know is a state verb, and would revisits repeated past actions only — so used to know is the one grammatical option. Was knowing breaks the state-verb rule; would have known changes the meaning entirely."
+  - type: grammar_drill
+    group: grammar
+    grammar_point: "Perfect aspect: result vs activity"
+    content:
+      pre: "Why is there paint on your suit? — I "
+      post: " the new office all morning."
+      prompt: PAINT
+      options: [have painted, have been painting, painted, had painted]
+      answer: 1
+    explanation: "The paint on the suit is evidence of recent activity, and all morning stresses duration — both point to the present perfect continuous. Have painted would announce a finished result instead of explaining the mess."
+  - type: grammar_drill
+    group: grammar
+    grammar_point: Future forms with an edge (continuous, perfect, be to, be about to)
+    content:
+      pre: "This time tomorrow I "
+      post: " the annual review with head office."
+      prompt: CHAIR
+      options: [will chair, will be chairing, will have chaired, am chairing]
+      answer: 1
+    explanation: "This time tomorrow freezes a future moment and asks what will be in progress at it — the future continuous: will be chairing. Will have chaired would mean the meeting is already over by then."
+  - type: grammar_drill
+    group: grammar
+    grammar_point: Future forms with an edge (continuous, perfect, be to, be about to)
+    content:
+      pre: "By the end of May, she "
+      post: " here for exactly ten years."
+      prompt: WORK
+      options: [will work, will be working, will have been working, has been working]
+      answer: 2
+    explanation: "By + future point + for + duration is the signature of the future perfect continuous: will have been working. The plain future forms state a fact but cannot measure duration up to that point."
+  - type: grammar_drill
+    group: grammar
+    grammar_point: Future forms with an edge (continuous, perfect, be to, be about to)
+    content:
+      pre: "According to this morning's announcement, the new director "
+      post: " office on the first of September."
+      prompt: TAKE
+      options: [is to take, will have taken, is about to have taken, would take]
+      answer: 0
+    explanation: "An official announcement of a scheduled event is the home ground of be to + infinitive: is to take office. Will have taken needs by, not on; is about to have taken is not a form English uses."
+  - type: grammar_drill
+    group: grammar
+    grammar_point: Future in the past (was going to, was to have done)
+    content:
+      pre: "I "
+      post: " my notice that Friday — then they offered me a partnership and I stayed."
+      prompt: HAND IN
+      options: [was going to hand in, would hand in, will hand in, used to hand in]
+      answer: 0
+    explanation: "A past intention overturned by events takes was going to — the classic future in the past, and the dash plays the role of but. Would hand in would suggest a repeated habit, and that Friday is a single occasion."
+  - type: grammar_drill
+    group: grammar
+    grammar_point: Future forms with an edge (continuous, perfect, be to, be about to)
+    content:
+      pre: "Hurry up — the presentation "
+      post: " start and your slides are still uploading."
+      prompt: BE
+      options: [is about to, is on the verge to, is to be, will have]
+      answer: 0
+    explanation: "Imminence + infinitive = be about to start. On the verge would need of + noun or -ing, and the other options simply do not combine with a bare infinitive here."
+  - type: grammar_drill
+    group: grammar
+    grammar_point: State verbs and the continuous
+    content:
+      pre: "This espresso "
+      post: " terrible — who descaled the machine with vinegar?"
+      prompt: TASTE
+      options: [tastes, is tasting, has tasted, is being tasted]
+      answer: 0
+    explanation: "When taste describes a quality (the coffee has a taste), it is a state verb and stays simple: tastes terrible. Is tasting would mean somebody is actively sampling it — a different verb in all but spelling."
+  # ── error_correction × 8 · group grammar ───────────────────────
+  - type: error_correction
+    group: grammar
+    grammar_point: "Perfect aspect: result vs activity"
+    content:
+      words: [She, is, leading, the, team, since, the, merger.]
+      wrong: 1
+      correction: is leading → has been leading
+    explanation: "Since + a past starting point (the merger) needs the perfect to connect past and present: has been leading. The present continuous can only describe now — it cannot reach back."
+  - type: error_correction
+    group: grammar
+    grammar_point: Narrative tenses and past habits (would / used to)
+    content:
+      words: [By, the, time, we, arrived, the, meeting, started.]
+      wrong: 7
+      correction: started → had started
+    explanation: "By the time we arrived sets a past reference line, and the meeting began before it — so the earlier event needs the past perfect: had started. Two past simples would put the events in the wrong order."
+  - type: error_correction
+    group: grammar
+    grammar_point: Future forms with an edge (continuous, perfect, be to, be about to)
+    content:
+      words: [When, I, will, finish, the, report, I, will, send, it, over.]
+      wrong: 2
+      correction: will finish → finish
+    explanation: "After when, until, as soon as and once, English marks future time with the present tense: when I finish. One will per sentence — in the main clause — is enough."
+  - type: error_correction
+    group: grammar
+    grammar_point: Narrative tenses and past habits (would / used to)
+    content:
+      words: [When, we, were, students, we, would, have, very, little, money.]
+      wrong: 5
+      correction: would have → used to have
+    explanation: "Having little money is a state, not a repeated action, and would only revisits actions. States take used to have — or simply the past simple, had."
+  - type: error_correction
+    group: grammar
+    grammar_point: State verbs and the continuous
+    content:
+      words: [She, is, owning, two, flats, in, the, city, centre.]
+      wrong: 1
+      correction: is owning → owns
+    explanation: "Own is a pure state verb — possession has no beginning, middle and end to stretch into the continuous. State verbs stay simple whatever the time frame: she owns."
+  - type: error_correction
+    group: grammar
+    grammar_point: Future forms with an edge (continuous, perfect, be to, be about to)
+    content:
+      words: [This, time, tomorrow, I, will, sit, in, the, departure, lounge.]
+      wrong: 4
+      correction: will sit → will be sitting
+    explanation: "This time tomorrow points at a moment inside a future activity, so the activity must be in progress: will be sitting. Will sit states a decision, not a scene."
+  - type: error_correction
+    group: grammar
+    grammar_point: Narrative tenses and past habits (would / used to)
+    content:
+      words: [He, used, to, working, late, every, night, before, the, deadline.]
+      wrong: 3
+      correction: working → work
+    explanation: "Used to + infinitive describes a past habit: used to work. The -ing form belongs to a different pattern — be / get used to doing, which means be accustomed to."
+  - type: error_correction
+    group: grammar
+    grammar_point: "Perfect aspect: result vs activity"
+    content:
+      words: [We, have, been, hiring, four, new, engineers, this, quarter.]
+      wrong: 1
+      correction: have been hiring → have hired
+    explanation: "A number counts completed results, and results take the simple perfect: we have hired four. Have been hiring describes the ongoing activity and refuses to be counted."
+  # ── key_word_transformation × 8 · group grammar ────────────────
+  - type: key_word_transformation
+    group: grammar
+    grammar_point: "Perfect aspect: result vs activity"
+    content:
+      s1: She joined the board two years ago.
+      key: BEEN
+      pre: "She has "
+      post: " two years."
+      answers: [been on the board for]
+      hint: 3–6 words, including the key word
+      answer_shown: been on the board for
+    explanation: "A past starting point (joined … ago) becomes a present-perfect duration: has been on the board for two years. For + period, never since, when the length of time follows."
+  - type: key_word_transformation
+    group: grammar
+    grammar_point: Future in the past (was going to, was to have done)
+    content:
+      s1: The handover was planned for May, but the merger collapsed.
+      key: TAKEN
+      pre: "The handover "
+      post: " place in May, but the merger collapsed."
+      answers: [was to have taken]
+      hint: 3–6 words, including the key word
+      answer_shown: was to have taken
+    explanation: "Was to have taken place is the ghost future: an event that was scheduled and then never happened. The perfect infinitive is what marks the cancellation."
+  - type: key_word_transformation
+    group: grammar
+    grammar_point: Future forms with an edge (continuous, perfect, be to, be about to)
+    content:
+      s1: The company will announce record losses very soon.
+      key: VERGE
+      pre: "The company is "
+      post: " record losses."
+      answers: [on the verge of announcing]
+      hint: 3–6 words, including the key word
+      answer_shown: on the verge of announcing
+    explanation: "Be on the verge of + -ing expresses imminence with a noun-based pattern — the of is obligatory, and the verb that follows must take the -ing form."
+  - type: key_word_transformation
+    group: grammar
+    grammar_point: Narrative tenses and past habits (would / used to)
+    content:
+      s1: He no longer works at weekends.
+      key: USED
+      pre: "He "
+      post: " at weekends."
+      answers: [used to work]
+      hint: 3–6 words, including the key word
+      answer_shown: used to work
+    explanation: "No longer does something → used to do it: the structure asserts a past habit that has stopped. Mind the spelling — used to, not use to, in the affirmative."
+  - type: key_word_transformation
+    group: grammar
+    grammar_point: Future forms with an edge (continuous, perfect, be to, be about to)
+    content:
+      s1: She joined the company exactly ten years ago today.
+      key: BEEN
+      pre: "By tonight she "
+      post: " the company for exactly ten years."
+      answers: [will have been with, will have been at]
+      hint: 3–6 words, including the key word
+      answer_shown: will have been with
+    explanation: "An anniversary measured at a future point takes the future perfect: will have been with the company for ten years. Joined … ago flips into have been … for, projected forward by will."
+  - type: key_word_transformation
+    group: grammar
+    grammar_point: Future in the past (was going to, was to have done)
+    content:
+      s1: The director was on the point of resigning when the board backed down.
+      key: ABOUT
+      pre: "The director "
+      post: " when the board backed down."
+      answers: [was about to resign]
+      hint: 3–6 words, including the key word
+      answer_shown: was about to resign
+    explanation: "On the point of doing and about to do are twin expressions of imminence; shifted into the past, be about to + infinitive gives was about to resign."
+  - type: key_word_transformation
+    group: grammar
+    grammar_point: Narrative tenses and past habits (would / used to)
+    content:
+      s1: The presentation started before we arrived at the venue.
+      key: ALREADY
+      pre: "By the time we arrived at the venue, the presentation "
+      post: "."
+      answers: [had already started]
+      hint: 3–6 words, including the key word
+      answer_shown: had already started
+    explanation: "By the time demands the past perfect for the earlier event, and already slots between had and the participle: had already started."
+  - type: key_word_transformation
+    group: grammar
+    grammar_point: Narrative tenses and past habits (would / used to)
+    content:
+      s1: Every Friday he stayed late to plan the next week.
+      key: WOULD
+      pre: "Every Friday he "
+      post: " the next week."
+      answers: [would stay late to plan]
+      hint: 3–6 words, including the key word
+      answer_shown: would stay late to plan
+    explanation: "A repeated past action with a time frame (every Friday) is exactly where would replaces the past simple: would stay late. It adds the flavour of remembered routine."
+  # ── open_cloze × 8 · group reading ─────────────────────────────
+  - type: open_cloze
+    group: reading
+    grammar_point: "Perfect aspect: result vs activity"
+    content:
+      pre: "He has been off work "
+      post: " the best part of a month, and the backlog shows it."
+      answers: [for]
+      answer_shown: for
+    explanation: "The best part of a month is a length of time, and lengths take for. Since would need the starting point instead — since mid-June."
+  - type: open_cloze
+    group: reading
+    grammar_point: Narrative tenses and past habits (would / used to)
+    content:
+      pre: "By the time the offer arrived, she "
+      post: " already accepted another role."
+      answers: [had]
+      answer_shown: had
+    explanation: "By the time + past pushes the earlier event into the past perfect, and already confirms it: had already accepted."
+  - type: open_cloze
+    group: reading
+    grammar_point: Future forms with an edge (continuous, perfect, be to, be about to)
+    content:
+      pre: "The new CFO is "
+      post: " take office on the first of March."
+      answers: [to]
+      answer_shown: to
+    explanation: "Be to + infinitive announces an official arrangement — the press-release future: is to take office."
+  - type: open_cloze
+    group: reading
+    grammar_point: Future in the past (was going to, was to have done)
+    content:
+      pre: "I was "
+      post: " to call you when your email arrived — you beat me to it."
+      answers: [about]
+      answer_shown: about
+    explanation: "Was about to call is imminence seen from the past — the action was seconds away when something interrupted it."
+  - type: open_cloze
+    group: reading
+    grammar_point: Narrative tenses and past habits (would / used to)
+    content:
+      pre: "As a trainee she "
+      post: " stay late every night, polishing reports nobody read."
+      answers: [would]
+      answer_shown: would
+    explanation: "Every night marks a repeated past action, and a single-word gap before the bare infinitive can only be would. Used to fits the meaning but needs two words."
+  - type: open_cloze
+    group: reading
+    grammar_point: "Perfect aspect: result vs activity"
+    content:
+      pre: "It has been three years "
+      post: " anyone in this office received a proper pay rise."
+      answers: [since]
+      answer_shown: since
+    explanation: "It has been + period + since + past event is a fixed frame: three years have passed from that last pay rise. For cannot introduce a clause."
+  - type: open_cloze
+    group: reading
+    grammar_point: Future forms with an edge (continuous, perfect, be to, be about to)
+    content:
+      pre: ""
+      post: " the time you read this, the board will have made its decision."
+      answers: [By]
+      answer_shown: By
+    explanation: "By the time partners the future perfect: at that future moment, the deciding will already be complete. At or in the time do not exist in this frame."
+  - type: open_cloze
+    group: reading
+    grammar_point: Future in the past (was going to, was to have done)
+    content:
+      pre: "The results were to "
+      post: " been announced on Friday, but the audit dragged on."
+      answers: [have]
+      answer_shown: have
+    explanation: "Were to have been announced — the perfect infinitive inside was/were to marks a scheduled event that never took place. The but-clause delivers the cancellation."
+  # ── reading_comprehension × 6 · group reading ──────────────────
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Our grandparents used to speak of a job for life without irony. The phrase described a bargain: loyalty in exchange for tenure, a pension and a retirement watch."
+      q: What does the writer suggest about the phrase 'a job for life'?
+      options:
+        - Earlier generations used it as a private joke.
+        - It described an exchange of loyalty for security.
+        - It was invented by employers to disguise low pay.
+        - It survives mainly in modern factories.
+      answer: 1
+    explanation: "Without irony means the phrase was meant seriously, and the bargain spelt out after the colon — loyalty for tenure and a pension — is precisely loyalty exchanged for security. Pay and factories are never mentioned."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "She was about to be promoted at last when the firm announced a restructuring; three weeks later half her department had been made redundant, and Marta was working out her notice period with a spreadsheet open on one screen and a resignation letter on the other."
+      q: What does the detail of the two screens tell us about Marta?
+      options:
+        - She was already doing two jobs at once.
+        - She was preparing her exit while still doing her job.
+        - She had been promoted just before the restructuring.
+        - She refused to work out her notice period.
+      answer: 1
+    explanation: "One screen holds her work (the spreadsheet), the other her way out (the resignation letter) — she is serving her notice and planning her departure simultaneously. The promotion never happened: she was only about to be promoted."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Staff turnover has doubled in a decade, and employees who would once have waited years for a sideways move now pivot entire careers in eighteen months, treating each role as a stepping stone rather than a destination."
+      q: What change in attitude does the sentence describe?
+      options:
+        - Workers now see jobs as stages rather than end points.
+        - Employers now promote people twice as fast as before.
+        - Sideways moves have become almost impossible to get.
+        - Careers now last only eighteen months in total.
+      answer: 0
+    explanation: "A stepping stone rather than a destination is the key opposition: each role is a stage on the way somewhere else. The doubling refers to turnover, not promotion speed, and eighteen months measures one pivot, not a career."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Researchers who have been tracking remote teams since the first lockdowns report that people find it far harder to switch off, and that burnout — once the private complaint of bankers who burned the candle at both ends — has become endemic."
+      q: What point is the writer making about burnout?
+      options:
+        - It has spread far beyond the professions it was once limited to.
+        - It remains a problem mainly for investment bankers.
+        - It disappeared when remote working arrived.
+        - It is now easier to treat than it used to be.
+      answer: 0
+    explanation: "Once the private complaint of bankers … has become endemic traces a movement from one narrow profession to everywhere. Endemic means regularly found in a group — the opposite of disappearing."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "By 2030, one much-quoted forecast insists, most knowledge workers will have stopped commuting daily altogether; a sizeable minority will be working for two employers at once."
+      q: How does the writer present the claims about 2030?
+      options:
+        - As settled facts already supported by legislation.
+        - As a widely repeated prediction, not a certainty.
+        - As the writer's own original research findings.
+        - As an exaggeration that has already been disproved.
+      answer: 1
+    explanation: "One much-quoted forecast insists attributes the claims to a prediction that is often repeated — the writer neither endorses it as fact nor dismisses it. Much-quoted signals popularity, not proof."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "None of this was supposed to happen so fast. The office was to have evolved gently, over a generation; managers were going to pilot flexibility in cautious, reversible steps. Instead a decade's change arrived in a single spring."
+      q: What does the writer say about the pace of change?
+      options:
+        - A change planned as gradual happened almost overnight.
+        - Managers succeeded in keeping the change reversible.
+        - The change took a full generation, as intended.
+        - The change was slower than most firms had hoped.
+      answer: 0
+    explanation: "Was to have evolved and were going to pilot describe the plan — gradual, cautious — and instead cancels it: a decade's change arrived in a single spring. The plans for reversibility belong to the cancelled version."
+  # ── mc_cloze × 8 · group vocab ─────────────────────────────────
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "He finally "
+      post: " in his notice after months of hesitation."
+      options: [handed, threw, placed, set]
+      answer: 0
+    explanation: "Hand in your notice is the fixed collocation for formally resigning. The other verbs do not combine with notice at all — the phrase is learnt as one item."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "The endless overtime finally "
+      post: " its toll on her health."
+      options: [took, made, brought, carried]
+      answer: 0
+    explanation: "Take its toll (on) is a fixed idiom for gradual, cumulative damage. Make, bring and carry all fail to collocate with toll."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "I'm completely snowed "
+      post: " at work this week — can we meet on Friday?"
+      options: [under, in, over, off]
+      answer: 0
+    explanation: "Be snowed under = buried in work; the image is of work falling on you like snow. Snowed in exists but means physically trapped by real snow."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "After the merger, forty members of staff were made "
+      post: "."
+      options: [redundant, resigned, sacked, fired]
+      answer: 0
+    explanation: "Make sb redundant is the only pattern here that takes make: the job disappears, without fault. Sacked and fired describe dismissal for a reason and never follow made; resigned is something you do yourself."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "It's a "
+      post: " role, but the hours are brutal."
+      options: [rewarding, awarding, rewarded, prized]
+      answer: 0
+    explanation: "Rewarding describes work that gives satisfaction — the job-ad partner of demanding. Awarding is not an adjective; rewarded and prized describe things given prizes, not the experience of doing them."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "He's been burning the "
+      post: " at both ends for months."
+      options: [candle, torch, lamp, wick]
+      answer: 0
+    explanation: "Burn the candle at both ends is a fixed idiom: work late and rise early until nothing is left. No other light source can be substituted into it."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "She decided to take a career "
+      post: " to retrain as a therapist."
+      options: [break, pause, stop, halt]
+      answer: 0
+    explanation: "Take a career break is the established HR collocation for a planned period away from work. Pause, stop and halt do not form fixed phrases with career."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "New hires must complete a six-month "
+      post: " period before their contract becomes permanent."
+      options: [probationary, probational, provisional, preparatory]
+      answer: 0
+    explanation: "Probationary period is the contractual term for the trial months of a new job. Provisional and preparatory are real words but do not name this arrangement; probational is not standard."
+  # ── collocation_match × 10 · group vocab ───────────────────────
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [hand in, take on, meet, step]
+      right: [down, your notice, a workload, a deadline]
+      pairs: {0: 1, 1: 2, 2: 3, 3: 0}
+    explanation: "Hand in your notice, take on a workload, meet a deadline, step down — four verb partnerships from the module's core. Swap the verbs and every phrase collapses."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [climb, carve out, burn, pull]
+      right: [your weight, the corporate ladder, a niche, the candle at both ends]
+      pairs: {0: 1, 1: 2, 2: 3, 3: 0}
+    explanation: "Climb the corporate ladder, carve out a niche, burn the candle at both ends, pull your weight — each idiom is welded to its own verb; none of the parts are interchangeable."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [fill in, knuckle down, switch off, take stock]
+      right: [of your options, for a colleague, to revision, from work]
+      pairs: {0: 1, 1: 2, 2: 3, 3: 0}
+    explanation: "The preposition is the fingerprint: fill in FOR somebody, knuckle down TO a task, switch off FROM work, take stock OF a situation. Learn verb and preposition as a single unit."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [severance, probationary, glass, career]
+      right: [ceiling, break, pay, period]
+      pairs: {0: 2, 1: 3, 2: 0, 3: 1}
+    explanation: "Severance pay, probationary period, glass ceiling, career break — noun compounds from the hiring-room register. Each first word selects exactly one partner."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [run yourself, juggle, put in, be stretched]
+      right: [competing demands, too thin, into the ground, long hours]
+      pairs: {0: 2, 1: 0, 2: 3, 3: 1}
+    explanation: "Run yourself into the ground, juggle competing demands, put in long hours, be stretched too thin — the vocabulary of overload, each verb bound to its own image."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [a dead-end, an up-and-coming, a stepping, a sideways]
+      right: [stone, job, designer, move]
+      pairs: {0: 1, 1: 2, 2: 0, 3: 3}
+    explanation: "A dead-end job, an up-and-coming designer, a stepping stone, a sideways move — four career-path noun phrases. The adjectives are not transferable: an up-and-coming job does not exist."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [staff, work-life, career, executive]
+      right: [trajectory, turnover, balance, search]
+      pairs: {0: 1, 1: 2, 2: 0, 3: 3}
+    explanation: "Staff turnover, work-life balance, career trajectory, executive search — fixed compounds of HR English. Each pairing is the only one that names a real concept."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [be made, be snowed, be stretched, be headhunted]
+      right: [under with emails, too thin, redundant, by a rival]
+      pairs: {0: 2, 1: 0, 2: 1, 3: 3}
+    explanation: "Made redundant, snowed under with emails, stretched too thin, headhunted by a rival — four passive fates of working life, each verb demanding its own completion."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [take its, keep on top, come across, rise through]
+      right: [of your inbox, toll on morale, the ranks, as self-aware]
+      pairs: {0: 1, 1: 0, 2: 3, 3: 2}
+    explanation: "Take its toll on morale, keep on top of your inbox, come across as self-aware, rise through the ranks — chunks, not words: the tail completes the meaning of the head."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [work out, be on the verge, hand in, run yourself]
+      right: [of resigning, your notice period, into the ground, your resignation]
+      pairs: {0: 1, 1: 0, 2: 3, 3: 2}
+    explanation: "Work out your notice period, be on the verge of resigning, hand in your resignation, run yourself into the ground — near-neighbours in meaning, never interchangeable in form."
+  # ── word_formation × 8 · group vocab ───────────────────────────
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "The scheme has cut youth "
+      post: " by a third in five years."
+      prompt: EMPLOY
+      answers: [unemployment]
+      answer_shown: unemployment
+    explanation: "The gap needs a noun with a negative sense: un + employ + ment. Many learners stop at employment, which reverses the meaning — a scheme does not cut employment."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "We received over two hundred "
+      post: " for a single vacancy."
+      prompt: APPLY
+      answers: [applications]
+      answer_shown: applications
+    explanation: "A countable noun after two hundred must be plural: applications. The -ation suffix turns the verb into the document, and the plural -s is where marks are usually lost."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "She was passed over for "
+      post: " twice before she finally left."
+      prompt: PROMOTE
+      answers: [promotion]
+      answer_shown: promotion
+    explanation: "Be passed over for promotion is the fixed phrase for being skipped when others move up. The noun promotion is uncountable here — no article, no plural."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "His sudden "
+      post: " left the board scrambling for a successor."
+      prompt: RESIGN
+      answers: [resignation]
+      answer_shown: resignation
+    explanation: "The gap sits after an adjective and needs the noun: resignation. Note the pronunciation shift — the silent g of resign is sounded in resignation."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Nursing is "
+      post: " work, both physically and emotionally."
+      prompt: DEMAND
+      answers: [demanding]
+      answer_shown: demanding
+    explanation: "Before work you need the adjective demanding — requiring great effort. Demanded would make the sentence passive nonsense, and demandful does not exist."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Punctual and "
+      post: ", she quickly became the manager's right hand."
+      prompt: RELY
+      answers: [reliable]
+      answer_shown: reliable
+    explanation: "Paired with punctual, the gap needs an adjective describing a person you can rely on: reliable. Watch the spelling — the y of rely becomes i before -able."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Chronic "
+      post: " is the first warning sign of burnout."
+      prompt: EXHAUST
+      answers: [exhaustion]
+      answer_shown: exhaustion
+    explanation: "Chronic modifies a noun, so the verb exhaust takes -ion: exhaustion. Exhaustedness is not a word English uses; the -ion form owns this meaning."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "He is talented but curiously "
+      post: ", content to stay in the same role for years."
+      prompt: AMBITION
+      answers: [unambitious]
+      answer_shown: unambitious
+    explanation: "But signals a contrast with talented, so the adjective must be negative: un + ambiti(on) + ous. The double move — prefix and suffix — is exactly what word formation tests at C1."
+review_pool:
+  # ── grammar_drill × 5 ──────────────────────────────────────────
+  - type: grammar_drill
+    group: grammar
+    grammar_point: Narrative tenses and past habits (would / used to)
+    content:
+      pre: "She "
+      post: " for a promotion for months when the salary freeze was announced."
+      prompt: PUSH
+      options: [was pushing, had been pushing, has been pushing, pushed]
+      answer: 1
+    explanation: "For months measures duration up to a past event (the announcement), which calls for the past perfect continuous: had been pushing. The present perfect cannot sit inside a past narrative."
+  - type: grammar_drill
+    group: grammar
+    grammar_point: Future forms with an edge (continuous, perfect, be to, be about to)
+    content:
+      pre: "Don't call at nine — I "
+      post: " the morning briefing."
+      prompt: RUN
+      options: [will run, will be running, will have run, run]
+      answer: 1
+    explanation: "At nine names a moment inside an ongoing future activity, so the future continuous paints the scene: will be running. Will run would merely announce a decision, not explain why you cannot talk."
+  - type: grammar_drill
+    group: grammar
+    grammar_point: Future forms with an edge (continuous, perfect, be to, be about to)
+    content:
+      pre: "By next spring, the consultancy "
+      post: " half its senior staff to rivals."
+      prompt: LOSE
+      options: [will lose, will be losing, will have lost, loses]
+      answer: 2
+    explanation: "By + a future point looks back from that point at what will already be complete — the future perfect: will have lost. Will lose merely predicts, without the by-deadline."
+  - type: grammar_drill
+    group: grammar
+    grammar_point: Future forms with an edge (continuous, perfect, be to, be about to)
+    content:
+      pre: "The minister "
+      post: " — the resignation letter is already drafted."
+      prompt: RESIGN
+      options: [is about to resign, is on the verge to resign, resigns, was to have resigned]
+      answer: 0
+    explanation: "A drafted letter signals imminence: is about to resign. On the verge would need of resigning, and was to have resigned would mean the resignation was cancelled — the letter says otherwise."
+  - type: grammar_drill
+    group: grammar
+    grammar_point: Narrative tenses and past habits (would / used to)
+    content:
+      pre: "As a junior he "
+      post: " every task that nobody else wanted."
+      prompt: TAKE ON
+      options: [would take on, used to taking on, would be taking on, was taking on]
+      answer: 0
+    explanation: "A repeated past action framed by as a junior takes would + infinitive: would take on. Used to would also work — but only as used to take on; with taking on the form is broken."
+  # ── error_correction × 4 ───────────────────────────────────────
+  - type: error_correction
+    group: grammar
+    grammar_point: "Perfect aspect: result vs activity"
+    content:
+      words: [She, works, here, since, March.]
+      wrong: 1
+      correction: works → has been working
+    explanation: "Since March anchors the sentence to a past starting point, and only the perfect can stretch from there to now: has been working (or has worked). The present simple lives entirely in the present."
+  - type: error_correction
+    group: grammar
+    grammar_point: Future forms with an edge (continuous, perfect, be to, be about to)
+    content:
+      words: [I, will, email, you, as, soon, as, the, contract, will, arrive.]
+      wrong: 9
+      correction: will arrive → arrives
+    explanation: "As soon as opens a time clause, and time clauses mark the future with the present tense: as soon as the contract arrives. The will belongs in the main clause only."
+  - type: error_correction
+    group: grammar
+    grammar_point: Narrative tenses and past habits (would / used to)
+    content:
+      words: [He, would, own, a, small, bookshop, before, the, war.]
+      wrong: 1
+      correction: would own → used to own
+    explanation: "Owning is a state, and would revisits repeated actions only. States take used to own — or the plain past simple, owned."
+  - type: error_correction
+    group: grammar
+    grammar_point: Narrative tenses and past habits (would / used to)
+    content:
+      words: [By, the, time, she, was, thirty, she, has, run, two, departments.]
+      wrong: 7
+      correction: has run → had run
+    explanation: "By the time she was thirty sets a line in the past, so the earlier achievement needs the past perfect: had run. The present perfect has run would drag a finished story into the present."
+  # ── key_word_transformation × 4 ────────────────────────────────
+  - type: key_word_transformation
+    group: grammar
+    grammar_point: Narrative tenses and past habits (would / used to)
+    content:
+      s1: The team finished the audit before the regulator arrived.
+      key: TIME
+      pre: "The team had finished the audit by "
+      post: " arrived."
+      answers: [the time the regulator]
+      hint: 3–6 words, including the key word
+      answer_shown: the time the regulator
+    explanation: "Before + past simple converts into by the time + past clause, with the earlier event in the past perfect — which the stem already supplies: had finished."
+  - type: key_word_transformation
+    group: grammar
+    grammar_point: Future in the past (was going to, was to have done)
+    content:
+      s1: His plan was to retire at sixty, but the crash changed everything.
+      key: GOING
+      pre: "He "
+      post: " at sixty, but the crash changed everything."
+      answers: [was going to retire]
+      hint: 3–6 words, including the key word
+      answer_shown: was going to retire
+    explanation: "A past plan overturned by events is was going to + infinitive: he was going to retire. The but-clause is what tells you the intention failed."
+  - type: key_word_transformation
+    group: grammar
+    grammar_point: Future forms with an edge (continuous, perfect, be to, be about to)
+    content:
+      s1: Her presentation starts in a moment.
+      key: ABOUT
+      pre: "Her presentation is "
+      post: "."
+      answers: [about to start]
+      hint: 3–6 words, including the key word
+      answer_shown: about to start
+    explanation: "In a moment compresses into be about to + infinitive: is about to start. The pattern always takes the bare future — no will inside it."
+  - type: key_word_transformation
+    group: grammar
+    grammar_point: "Perfect aspect: result vs activity"
+    content:
+      s1: This is my fifth year as a freelancer.
+      key: BEEN
+      pre: "I have "
+      post: " five years."
+      answers: [been a freelancer for, been freelancing for]
+      hint: 3–6 words, including the key word
+      answer_shown: been a freelancer for
+    explanation: "My fifth year converts into a present-perfect duration: have been a freelancer for five years. For + period of time — since would need the year it all began."
+  # ── open_cloze × 4 ─────────────────────────────────────────────
+  - type: open_cloze
+    group: reading
+    grammar_point: "Perfect aspect: result vs activity"
+    content:
+      pre: "She has been on leave "
+      post: " the beginning of April."
+      answers: [since]
+      answer_shown: since
+    explanation: "The beginning of April is a starting point, not a length — and starting points take since. For would need a period: for three months."
+  - type: open_cloze
+    group: reading
+    grammar_point: Future in the past (was going to, was to have done)
+    content:
+      pre: "We were "
+      post: " the verge of signing when the terms suddenly changed."
+      answers: ["on"]
+      answer_shown: "on"
+    explanation: "The idiom is be on the verge of — imminence expressed through a noun. At, in and by do not form the phrase."
+  - type: open_cloze
+    group: reading
+    content:
+      pre: ""
+      post: " being clearly talented, she kept being passed over for promotion."
+      answers: [Despite]
+      answer_shown: Despite
+    explanation: "Despite + -ing concedes an obstacle inside a single clause. Although would need a full clause — although she was clearly talented — and in spite of needs three words."
+  - type: open_cloze
+    group: reading
+    grammar_point: Future forms with an edge (continuous, perfect, be to, be about to)
+    content:
+      pre: "The delegation is "
+      post: " arrive on Monday morning, according to the official schedule."
+      answers: [to]
+      answer_shown: to
+    explanation: "According to the official schedule is the natural habitat of be to + infinitive: the delegation is to arrive. A single word turns a timetable into grammar."
+  # ── reading_comprehension × 1 ──────────────────────────────────
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "I placed her once, in 2019. She was to have started in March; the week before, our client froze all hiring, and by the time the freeze lifted she had been snowed under with counter-offers for a month. The perfect candidate exists — briefly, and usually for somebody else."
+      q: What is the recruiter's point in telling the 2019 story?
+      options:
+        - Perfect candidates usually conceal something important.
+        - Timing decides hiring outcomes as much as talent does.
+        - Hiring freezes rarely last longer than a single month.
+        - Counter-offers should always be politely refused.
+      answer: 1
+    explanation: "The candidate was perfect, yet the client lost her to a freeze and a month of counter-offers — the story is about timing, not about her qualities. Briefly, and usually for somebody else seals that reading."
+  # ── mc_cloze × 4 ───────────────────────────────────────────────
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "The long commute was quietly taking its "
+      post: " on her health."
+      options: [toll, cost, price, fee]
+      answer: 0
+    explanation: "Take its toll on is the fixed idiom for slow cumulative damage. Cost, price and fee are all money words that never join this pattern."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "He agreed to "
+      post: " in for the director during her sick leave."
+      options: [fill, cover, take, run]
+      answer: 0
+    explanation: "Fill in for somebody = do their job temporarily. Cover for somebody exists too — but without in, so only fill completes this gap."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "After the scandal, the chairman was forced to step "
+      post: "."
+      options: [down, out, off, back]
+      answer: 0
+    explanation: "Step down = leave a senior post. Step back means to distance yourself from involvement and would need from; step out and step off are literal movements."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "It's time to "
+      post: " down and finish that application."
+      options: [knuckle, hammer, nail, screw]
+      answer: 0
+    explanation: "Knuckle down = finally start working seriously. The other tools are red herrings — none of them forms this phrasal verb."
+  # ── collocation_match × 4 ──────────────────────────────────────
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [meet, take stock, come across, work]
+      right: [as arrogant, around the clock, a tight deadline, of your options]
+      pairs: {0: 2, 1: 3, 2: 0, 3: 1}
+    explanation: "Meet a tight deadline, take stock of your options, come across as arrogant, work around the clock — each verb selects one completion, and the preposition is the giveaway."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [high staff, a looming, a probationary, a rewarding]
+      right: [period, turnover, deadline, career]
+      pairs: {0: 1, 1: 2, 2: 0, 3: 3}
+    explanation: "High staff turnover, a looming deadline, a probationary period, a rewarding career — the adjective halves are not interchangeable: a looming career would be a threat, not a plan."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [suffer, strike, serve, advertise]
+      right: [a work-life balance, burnout, your notice period, a vacancy]
+      pairs: {0: 1, 1: 0, 2: 2, 3: 3}
+    explanation: "Suffer burnout, strike a work-life balance, serve your notice period, advertise a vacancy — four verbs from four corners of working life, each demanding its own object."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [severance, a stepping, the corporate, a dead-end]
+      right: [ladder, package, stone, job]
+      pairs: {0: 1, 1: 2, 2: 0, 3: 3}
+    explanation: "Severance package, a stepping stone, the corporate ladder, a dead-end job — only one complete matching works: try corporate job and dead-end ladder falls apart."
+  # ── word_formation × 4 ─────────────────────────────────────────
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "The agency handles "
+      post: " for most of the region's tech firms."
+      prompt: RECRUIT
+      answers: [recruitment]
+      answer_shown: recruitment
+    explanation: "The verb recruit needs its process noun: recruitment. Recruiting would work informally, but the -ment noun is the standard term for the business function."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Her proudest "
+      post: " was rebuilding the team after the layoffs."
+      prompt: ACHIEVE
+      answers: [achievement]
+      answer_shown: achievement
+    explanation: "Proudest modifies a noun: achievement. Spelling trap — achieve keeps its final e before -ment: achievement, not achievment."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "The graduate job market is fiercely "
+      post: " this year."
+      prompt: COMPETE
+      answers: [competitive]
+      answer_shown: competitive
+    explanation: "Fiercely calls for an adjective: competitive. Watch the vowel change — compete drops its long e sound, and competative is a classic misspelling."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Freelancers gain freedom but accept a degree of job "
+      post: "."
+      prompt: SECURE
+      answers: [insecurity]
+      answer_shown: insecurity
+    explanation: "But sets up a downside, so the noun must be negative: in + secur(e) + ity. Job insecurity is itself a fixed compound — the price of freedom in the gig economy."

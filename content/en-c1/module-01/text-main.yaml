@@ -1,0 +1,48 @@
+kind: main
+kicker: LONG-READ
+title: The Death of the Nine-to-Five
+meta: ≈ 6 min · dotted words carry glosses — tap to reveal
+word_count: 800
+body:
+  - - t: "For the better part of a century, the shape of a working life was not something you chose; it was something you inherited. You would leave school, join a firm and clock in at nine, and for the next forty years the job would decide where you lived, when you slept and how you measured your worth. Our grandparents used to speak of a job for life without irony. The phrase described a bargain: loyalty in exchange for "
+    - g: tenure
+    - t: ", a pension and a retirement watch. The hours themselves had been set by the factory whistle long before the office borrowed them, and hardly anyone thought to ask whether they still fitted the work being done."
+  - - t: "Consider what has happened to that bargain since. When Marta Kowalska joined a Warsaw consultancy in 2014, she was following the script her parents knew: a graduate scheme, a probationary period, a desk by the window if you knuckled down for long enough. By the time she turned thirty, she had been putting in sixty-hour weeks for the best part of a decade. She had taken on a workload designed for two people, missed more deadlines than she cares to remember and filled in for colleagues who had quietly burnt out and disappeared. The role was demanding yet rewarding, she says — until it was merely demanding, and her career trajectory, once so steep, had flattened into a corporate plateau. She was about to be promoted at last when the firm announced a restructuring; three weeks later half her department had been made redundant, and Marta was working out her notice period with a spreadsheet open on one screen and a resignation letter on the other."
+  - - t: "Stories like hers explain why the nine-to-five has been losing its grip. Since 2020, companies have been experimenting with hybrid schedules, four-day weeks and asynchronous teams — and employees have discovered that output, not presence, is what they are actually paid for. The old office rituals, from the 8.55 lift queue to the performative lateness of the truly "
+    - g: indispensable
+    - t: ", turned out to be "
+    - g: presenteeism
+    - t: " in a suit. The numbers tell the same story: HR departments call it "
+    - g: attrition
+    - t: "; workers call it escape. Staff turnover has doubled in a decade, and employees who would once have waited years for a sideways move now pivot entire careers in eighteen months, treating each role as a stepping stone rather than a destination."
+  - - t: "Flexibility, though, has arrived with a bill attached. When the office is your kitchen table, the working day has no walls: you are permanently reachable, permanently slightly behind, permanently snowed under. Researchers who have been tracking remote teams since the first lockdowns report that people find it far harder to switch off, and that burnout — once the private complaint of bankers who burned the candle at both ends — has become "
+    - g: endemic
+    - t: ". Juggling competing demands from two screens takes its toll on concentration and on families alike; work-life balance, the phrase of the decade, is proving easier to print on a mug than to practise. More than one study has caught remote staff working around the clock precisely because nobody could see them stop. The pattern is familiar from every technology of liberation: the tool that frees you is the tool that finds you."
+  - - t: "So what replaces the nine-to-five? The optimists' answer is brisk and measurable. By 2030, one much-quoted forecast insists, most knowledge workers will have stopped commuting daily altogether; a sizeable minority will be working for two employers at once; and the average professional will have been managing their career as a portfolio — clients, projects, a niche carefully carved out — for years rather than months. Legislation is hurrying to catch up. Several European parliaments are to debate a legal right to disconnect this autumn, and at least one government is on the verge of writing the four-day week into law. Employers have noticed too: flexibility, it turns out, is the cheapest pay rise a company can offer."
+  - - t: "None of this was supposed to happen so fast. The office was to have evolved gently, over a generation; managers were going to pilot flexibility in cautious, reversible steps. Instead a decade's change arrived in a single spring, and there is no undoing it. The nine-to-five is not quite dead — hospitals, schools and factories still run on it, and plenty of workers prefer its clean edges — but as a default, as a definition of what a career must look like, it is finished. Marta, for what it is worth, now runs a four-person consultancy and has been turning down full-time offers for a year. The ladder our grandparents climbed has gone; what remains is a climbing wall, and everyone on it is plotting a trajectory of their own."
+glosses:
+  - key: tenure
+    term: tenure
+    pos_label: noun
+    definition: the length of time you hold a position; also the secure, protected form of it
+    example: Professors with tenure cannot easily be dismissed.
+  - key: indispensable
+    term: indispensable
+    pos_label: adjective
+    definition: so important that the organisation believes it cannot function without you
+    example: Nobody is indispensable — the graveyard is full of indispensable men.
+  - key: presenteeism
+    term: presenteeism
+    pos_label: noun · HR jargon
+    definition: being visibly at work longer than useful, because presence is mistaken for performance
+    example: Presenteeism peaks whenever layoffs are rumoured.
+  - key: attrition
+    term: attrition
+    pos_label: noun · HR jargon
+    definition: the gradual loss of staff who leave and are not replaced
+    example: The firm cut costs by attrition rather than by redundancies.
+  - key: endemic
+    term: endemic
+    pos_label: adjective
+    definition: regularly found in a particular group or place — used of problems and diseases
+    example: Overwork is endemic in the legal profession.

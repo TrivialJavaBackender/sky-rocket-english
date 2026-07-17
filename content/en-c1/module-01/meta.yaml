@@ -1,0 +1,29 @@
+slug: m01
+title: Work & Careers
+standfirst: Narrative tenses, perfect aspect and future forms for career stories · 45 lexemes with use cases · a formal application email.
+goals:
+  - Layer narrative tenses confidently when telling a career story
+  - Choose between result and activity forms of the perfect on purpose
+  - Talk about schedules, imminence and cancelled plans with the full range of future forms
+  - Deploy 45 high-value career lexemes in your own sentences
+  - Write a formal letter of application in a consistently formal register
+grammar_points:
+  - Narrative tenses and past habits (would / used to)
+  - "Perfect aspect: result vs activity"
+  - Future forms with an edge (continuous, perfect, be to, be about to)
+  - Future in the past (was going to, was to have done)
+  - State verbs and the continuous
+texts:
+  - kind: main
+    title: The Death of the Nine-to-Five
+    word_count: 800
+  - kind: extra
+    title: "Inside the Hiring Room: A Recruiter Speaks"
+    word_count: 360
+production:
+  mode: writing
+  genre: formal application email
+cards:
+  vocab: 45
+  grammar_cloze: 10
+  transformation: 8

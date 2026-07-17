@@ -1,0 +1,37 @@
+kind: extra
+kicker: INTERVIEW
+title: "Inside the Hiring Room: A Recruiter Speaks"
+meta: ≈ 3 min · dotted words carry glosses — tap to reveal
+word_count: 360
+body:
+  - - t: "Fifteen years in executive search have taught Dana Whitfield to read a CV the way a customs officer reads a passport: quickly, twice, and with an eye for what is missing. We asked her what actually happens after you press apply — and how much of it a candidate can still influence."
+  - - t: "You shortlist for a living. What are you really looking for?"
+  - - t: "Evidence, not adjectives. A shortlist is built in under an hour, so anyone can write dynamic; I want led, delivered, cut costs by a third. And I read trajectory before I read titles: a promotion tells me one story, but two sideways moves in a row make me ask questions that no job title answers."
+  - - t: "What about gaps in a CV?"
+  - - t: "A career break used to be a "
+    - g: red_flag
+    - t: " in this business; it simply is not any more. Candidates who took a year out and can say what it taught them come across as more self-aware, not less ambitious. What still worries my clients is hiring someone overqualified. Bring in a manager whose last role was two "
+    - g: rung
+    - t: "s above this one, and the odds are they will have handed in their notice within a year."
+  - - t: "Any advice for someone being headhunted right now?"
+  - - t: "Slow down and read the paperwork. Ask how long the probationary period runs. Read the severance terms before you resign, not after — people fixate on salary and then discover that a three-month notice period keeps them off the market all spring. Above all, find out why the vacancy exists. High staff turnover in the team you are to join tells you more than the glossy brochure does. If the last three people stepped down within a year of arriving, you are not being offered a job; you are being offered a history."
+  - - t: "Last question. Does the perfect candidate exist?"
+  - - t: "I placed her once, in 2019. She was to have started in March; the week before, our client froze all hiring, and by the time the freeze lifted she had been snowed under with "
+    - g: counter_offer
+    - t: "s for a month. The perfect candidate exists — briefly, and usually for somebody else."
+glosses:
+  - key: red_flag
+    term: red flag
+    pos_label: noun · informal
+    definition: a visible warning sign that something may be seriously wrong
+    example: Vague answers about your last job are a red flag in any interview.
+  - key: rung
+    term: rung
+    pos_label: noun
+    definition: one step of a ladder — literal, or a level in a hierarchy
+    example: She started two rungs below her old position and did not mind.
+  - key: counter_offer
+    term: counter-offer
+    pos_label: noun
+    definition: an improved offer made to stop you accepting a rival's one
+    example: He resigned twice and was kept twice by generous counter-offers.
