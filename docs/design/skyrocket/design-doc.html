@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>SkyRocket — Design Doc</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400..700;1,400..600&display=swap">
+<style>
+*{box-sizing:border-box}body{margin:0;background:#F7F5F0;color:#20232A;font-family:'Source Sans 3',ui-sans-serif,system-ui,sans-serif;font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:#2E5F9E}a:hover{color:#22497D}::selection{background:#DCE9DF}
+main{max-width:760px;margin:0 auto;padding:48px 22px 96px}
+h1{font-size:36px;letter-spacing:-.015em;line-height:1.05;margin:8px 0 6px}
+h2{font-size:24px;letter-spacing:-.01em;margin:44px 0 10px;padding-top:20px;border-top:1px solid #E5E2DA}
+h3{font-size:17px;margin:22px 0 6px}
+p{margin:0 0 10px;text-wrap:pretty}
+.k{font-size:11px;letter-spacing:.14em;font-weight:700;color:#8A8478;text-transform:uppercase}
+.muted{color:#6E6A5E;font-size:14.5px}
+table{width:100%;border-collapse:collapse;font-size:14px;margin:10px 0 4px}
+th{text-align:left;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#8A8478;padding:6px 10px 6px 0;border-bottom:1px solid #E5E2DA}
+td{padding:8px 10px 8px 0;border-bottom:1px solid #EFECE4;vertical-align:top}
+td:first-child{font-weight:600;white-space:nowrap}
+.num{font-variant-numeric:tabular-nums}
+.sw{display:inline-block;width:13px;height:13px;border-radius:3px;vertical-align:-2px;margin-right:7px;border:1px solid rgba(32,35,42,.12)}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;background:#EFECE4;padding:1px 6px;border-radius:5px}
+.card{background:#fff;border:1px solid #E5E2DA;border-radius:12px;padding:16px 18px;margin:12px 0}
+ul,ol{margin:0 0 10px;padding-left:22px}li{margin:3px 0}
+.flow{font-size:14px;background:#fff;border:1px solid #E5E2DA;border-radius:12px;padding:14px 18px;line-height:1.9;font-variant-numeric:tabular-nums}
+</style></head><body><main>
+<div class="k">SkyRocket · English B2+ → C1 · 17 Jul 2026</div>
+<h1>Design doc</h1>
+<p class="muted">Information architecture, design tokens (light + dark), interaction spec per exercise type, and empty/edge states. The living mockup is <a href="Skyrocket.dc.html">Skyrocket.dc.html</a>.</p>
+
+<h2>1 · Information architecture</h2>
+<p>Four persistent destinations answer four questions; everything else is a flow launched from them and closed with <b>✕</b> back to its launcher.</p>
+<div class="flow">
+<b>Today</b> — “what do I do right now” · one primary CTA → current session<br>
+<b>Course</b> — Course map → Module unit → Exercise player · Writing/speaking flow<br>
+<b>Review</b> — the three lanes → Flashcard player · Review Slot · Module quiz<br>
+<b>Progress</b> — stats, block bars, item-state ladder, schedule<br>
+<span class="muted">Header (mobile) / rail footer (desktop): course switcher (multi-course from day one) + Settings.</span>
+</div>
+<h3>Navigation model</h3>
+<ul>
+<li><b>Tabs:</b> bottom bar &lt; 980 px, left rail ≥ 980 px. Module unit keeps the Course tab active.</li>
+<li><b>Players are modal flows:</b> exercise + flashcard players hide tabs — one exit (✕), no mid-session wandering. State is kept per flow, so an accidental exit resumes.</li>
+<li><b>Everything due funnels to Review;</b> Today only summarises it (counts are taps into the hub).</li>
+<li><b>Telegram Mini App:</b> the bot deep-links to <code>/review</code> (daily) and <code>/today</code> (session reminders); the same routes serve the PWA.</li>
+</ul>
+<h3>The three repetition lanes</h3>
+<table><tr><th>Lane</th><th>Source</th><th>Schedule</th><th>Surfaces</th></tr>
+<tr><td>1 · Flashcard SRS</td><td>vocab, grammar cloze, transformations; every harvested error</td><td class="num">SRS grades: again 10 min · hard 2 d · good 4 d · easy 8 d, expanding</td><td>Today count, Review hub, flashcard player</td></tr>
+<tr><td>2 · Exercise re-queue</td><td>failed exercise items</td><td class="num">2 → 7 → 21 days; sessions 2–3 open with a 10-item Review Slot</td><td>Review hub, session step plans</td></tr>
+<tr><td>3 · Module reviews</td><td>finished modules</td><td class="num">+7 d and +21 d quizzes; both ≥ 80% ⇒ Mastered</td><td>Review hub, course map notes, Progress schedule</td></tr></table>
+
+<h2>2 · Design tokens</h2>
+<h3>Type — Source Sans 3 only</h3>
+<table><tr><th>Role</th><th>Size / weight</th><th>Notes</th></tr>
+<tr><td>Display</td><td class="num">36/1.05 · 700 · −.015em</td><td>unit titles</td></tr>
+<tr><td>H1 screen</td><td class="num">28–30/1.15 · 700</td><td></td></tr>
+<tr><td>H2 section</td><td class="num">22–26/1.2 · 700</td><td>spotlight, reading title</td></tr>
+<tr><td>Reading body</td><td class="num">18/1.68 · 400</td><td>long-read; never below 18 px on phone</td></tr>
+<tr><td>UI body</td><td class="num">15–16/1.5 · 400–600</td><td></td></tr>
+<tr><td>Kicker</td><td class="num">11 · 700 · +.14em caps</td><td>coursebook labels: GRAMMAR SPOTLIGHT, WATCH OUT!</td></tr>
+<tr><td>Stats</td><td class="num">26–56 · 700 · tabular-nums</td><td><code>font-variant-numeric:tabular-nums</code> on every number</td></tr></table>
+<h3>Color — light / dark</h3>
+<table><tr><th>Token</th><th>Light</th><th>Dark</th><th>Use</th></tr>
+<tr><td>ground</td><td><span class="sw" style="background:#F7F5F0"></span>#F7F5F0</td><td><span class="sw" style="background:#191B1E"></span>#191B1E</td><td>page — warm paper / warm near-black</td></tr>
+<tr><td>surface</td><td><span class="sw" style="background:#FFFFFF"></span>#FFFFFF</td><td><span class="sw" style="background:#22252A"></span>#22252A</td><td>cards</td></tr>
+<tr><td>surface-2</td><td><span class="sw" style="background:#FBFAF7"></span>#FBFAF7</td><td><span class="sw" style="background:#26292F"></span>#26292F</td><td>quoted passages, unit review</td></tr>
+<tr><td>ink</td><td><span class="sw" style="background:#20232A"></span>#20232A</td><td><span class="sw" style="background:#ECEAE4"></span>#ECEAE4</td><td>text + primary buttons</td></tr>
+<tr><td>text-2</td><td><span class="sw" style="background:#6E6A5E"></span>#6E6A5E</td><td><span class="sw" style="background:#A5A198"></span>#A5A198</td><td>secondary</td></tr>
+<tr><td>hairline</td><td><span class="sw" style="background:#E5E2DA"></span>#E5E2DA</td><td><span class="sw" style="background:#33363C"></span>#33363C</td><td>borders, rules</td></tr>
+<tr><td>block-1</td><td><span class="sw" style="background:#B23A2E"></span>#B23A2E</td><td><span class="sw" style="background:#D06055"></span>#D06055</td><td>Consolidate — also “wrong”</td></tr>
+<tr><td>block-2</td><td><span class="sw" style="background:#2E5F9E"></span>#2E5F9E</td><td><span class="sw" style="background:#5B87BE"></span>#5B87BE</td><td>Expand</td></tr>
+<tr><td>block-3</td><td><span class="sw" style="background:#2E7D4F"></span>#2E7D4F</td><td><span class="sw" style="background:#57A377"></span>#57A377</td><td>Refine — also “correct”</td></tr>
+<tr><td>block-4</td><td><span class="sw" style="background:#B97417"></span>#B97417</td><td><span class="sw" style="background:#D29543"></span>#D29543</td><td>Command</td></tr></table>
+<p class="muted">Each block color has a tint (~92% ground mix: #F6E8E6 · #E8EEF6 · #E8F1EB · #F6EDDD) for panels and tags; dark theme uses 18% overlays instead. Correct/wrong reuse blocks 3/1 — one palette, no confetti.</p>
+<h3>Spacing & shape</h3>
+<p class="num">Scale 4-8-12-16-20-24 px. Cards radius 12–14, inputs/buttons 9–10, tags 6. One shadow (cards in players): <code>0 2px 10px rgba(32,35,42,.04)</code>. Hit targets ≥ 44 px. Max text column 720 px; player column 640 px.</p>
+
+<h2>3 · Interaction spec — exercise player</h2>
+<p>Shared frame: type kicker + “n of N” · progress squares (ink = current, green = right, red = wrong) · harvested counter. After any check an <b>explanation always renders</b> (English, 1–3 sentences). Wrong answers surface the one-tap harvest button; tapping it confirms in place — <i>“✓ In your deck — first review tomorrow, then 2 d · 7 d · 21 d”</i> — and increments the counter. Enter = Check on all typed items. All missed items auto-join the re-queue regardless of harvesting.</p>
+<table><tr><th>Type</th><th>Input</th><th>Validation</th><th>Reveal</th></tr>
+<tr><td>MC cloze</td><td>tap 1 of 4 options</td><td>instant on tap; options lock</td><td>correct option green-tinted, chosen wrong red; gap fills with answer</td></tr>
+<tr><td>Open cloze</td><td>inline text field in sentence</td><td>Check/Enter · trim, lowercase, collapse spaces · variant list</td><td>field underline + text turn green/red; answer shown in feedback title</td></tr>
+<tr><td>Word formation</td><td>prompt chip (EMPLOY) + inline field</td><td>as open cloze</td><td>explanation names the morphology (un + employ + ment)</td></tr>
+<tr><td>Key-word transformation</td><td>source sentence + KEY chip + gapped completion</td><td>3–6 words, must contain key; multiple accepted strings</td><td>one accepted answer shown; paraphrase logic explained</td></tr>
+<tr><td>Grammar drill</td><td>prompt chip (RUN) + form options</td><td>instant on tap</td><td>rejected form contrasted with the right one</td></tr>
+<tr><td>Error correction</td><td>tap the wrong word (chips)</td><td>instant: right word ⇒ correct; any other ⇒ wrong (shake)</td><td>faulty word struck through red; correction line “am → have been”</td></tr>
+<tr><td>Collocation match</td><td>tap left chip, then right chip</td><td>pair-by-pair; hits lock green, misses shake ~450 ms and count</td><td>item correct only if zero first-try misses</td></tr>
+<tr><td>Reading comprehension</td><td>quoted passage panel + MC question</td><td>instant on tap</td><td>explanation points at the licensing phrase in the text</td></tr></table>
+<p class="muted">Module page glosses share the harvest affordance: tap a dotted term → gloss card (word, POS, definition, example) with “＋ Add to deck”. Flashcards grade Again/Hard/Good/Easy with visible intervals; “use cases on the back” is mandatory for all three note types.</p>
+
+<h2>4 · Empty & edge states</h2>
+<table><tr><th>State</th><th>Behaviour</th></tr>
+<tr><td>Nothing due today</td><td>Quiet check mark, “Session 3 unlocks tomorrow”, streak reassurance, optional after-6pm head start; Review lanes read “Queue clear”. No confetti. <span class="muted">(tweak: todayState = nothing-due)</span></td></tr>
+<tr><td>Overdue reviews</td><td>Red banner atop Today with count + honest cost (“retention slips fastest…”) and a time-boxed CTA; Review lane chips show “9 overdue”. Never guilt-trips beyond facts. <span class="muted">(tweak: overdue-reviews)</span></td></tr>
+<tr><td>Checkpoint locked</td><td>Course map row states the exact unlock condition (“complete M09–M12 · pass mark 75%”); locked blocks render muted, never hidden.</td></tr>
+<tr><td>Course completed</td><td>Progress banner: 16/16 Mastered, final score, one CTA into the next course (German reuses the engine). <span class="muted">(tweak: courseState = completed)</span></td></tr>
+<tr><td>Flaky connectivity</td><td>Module content is typed data — current module + due queues cached on device (PWA); reading and flashcards work offline, grades sync later. Player never blocks mid-item on network.</td></tr>
+<tr><td>Empty re-queue / clean run</td><td>Practice summary says so plainly: “No new cards — a clean run. Nothing returns to the re-queue.”</td></tr></table>
+</main></body></html>

@@ -1,0 +1,901 @@
+<title>SkyRocket English — план B2+ → C1</title>
+<style>
+  :root{
+    --paper:#F7F9FC; --card:#FFFFFF; --ink:#1B2334; --muted:#5D6A80;
+    --accent:#2158CC; --accent-ink:#FFFFFF; --line:#DCE3EE; --line-soft:#E8EDF5;
+    --chip:#EDF2FA; --code:#F0F4FB;
+    --blockA:#2E7FC7; --blockB:#3D63CE; --blockC:#5A4AC8; --blockD:#7C3FB5; --gold:#B4690E;
+    --shadow:0 1px 2px rgba(27,35,52,.05),0 4px 16px rgba(27,35,52,.06);
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --paper:#0F141D; --card:#161D29; --ink:#E7EBF4; --muted:#939EB4;
+      --accent:#7AA5F5; --accent-ink:#0F141D; --line:#26303F; --line-soft:#1E2734;
+      --chip:#1C2532; --code:#1A2230;
+      --blockA:#5FA5E0; --blockB:#7B93E8; --blockC:#9284E6; --blockD:#AC7BDC; --gold:#D99A3D;
+      --shadow:0 1px 2px rgba(0,0,0,.3),0 4px 16px rgba(0,0,0,.25);
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#0F141D; --card:#161D29; --ink:#E7EBF4; --muted:#939EB4;
+    --accent:#7AA5F5; --accent-ink:#0F141D; --line:#26303F; --line-soft:#1E2734;
+    --chip:#1C2532; --code:#1A2230;
+    --blockA:#5FA5E0; --blockB:#7B93E8; --blockC:#9284E6; --blockD:#AC7BDC; --gold:#D99A3D;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 4px 16px rgba(0,0,0,.25);
+  }
+  :root[data-theme="light"]{
+    --paper:#F7F9FC; --card:#FFFFFF; --ink:#1B2334; --muted:#5D6A80;
+    --accent:#2158CC; --accent-ink:#FFFFFF; --line:#DCE3EE; --line-soft:#E8EDF5;
+    --chip:#EDF2FA; --code:#F0F4FB;
+    --blockA:#2E7FC7; --blockB:#3D63CE; --blockC:#5A4AC8; --blockD:#7C3FB5; --gold:#B4690E;
+    --shadow:0 1px 2px rgba(27,35,52,.05),0 4px 16px rgba(27,35,52,.06);
+  }
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} }
+  body{
+    background:var(--paper); color:var(--ink);
+    font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    font-size:16px; line-height:1.6; margin:0;
+  }
+  .wrap{max-width:1040px; margin:0 auto; padding:0 24px 96px}
+  h1,h2,h3,h4{font-family:"Avenir Next","Futura","Seravek",system-ui,sans-serif; text-wrap:balance; margin:0}
+  a{color:var(--accent)}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radius:4px}
+
+  /* ---------- header ---------- */
+  header.hero{padding:64px 0 8px}
+  .eyebrow{font-size:12px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--accent); margin:0 0 12px}
+  h1{font-size:clamp(30px,5vw,44px); font-weight:700; line-height:1.12; letter-spacing:-.015em}
+  .lede{max-width:68ch; color:var(--muted); font-size:17.5px; margin:18px 0 0}
+  .stats{display:flex; flex-wrap:wrap; gap:10px; margin:26px 0 0; padding:0; list-style:none}
+  .stats li{background:var(--chip); border:1px solid var(--line); border-radius:999px; padding:6px 14px; font-size:13.5px; font-weight:600; font-variant-numeric:tabular-nums}
+  .stats li b{color:var(--accent); font-weight:700}
+
+  /* ---------- nav ---------- */
+  nav.toc{position:sticky; top:0; z-index:20; background:var(--paper); border-bottom:1px solid var(--line); margin:36px -24px 0; padding:0 24px}
+  nav.toc ul{display:flex; gap:2px; overflow-x:auto; margin:0; padding:8px 0; list-style:none; scrollbar-width:none}
+  nav.toc ul::-webkit-scrollbar{display:none}
+  nav.toc a{display:block; padding:6px 12px; border-radius:8px; font-size:13.5px; font-weight:600; color:var(--muted); text-decoration:none; white-space:nowrap}
+  nav.toc a:hover{color:var(--accent); background:var(--chip)}
+
+  /* ---------- sections ---------- */
+  section{padding-top:56px}
+  section > h2{font-size:26px; font-weight:700; letter-spacing:-.01em; padding-bottom:10px; border-bottom:2px solid var(--line); margin-bottom:20px}
+  section > h2 small{display:block; font-size:12.5px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); margin-bottom:6px}
+  .prose{max-width:76ch}
+  .prose p{margin:0 0 14px}
+  .muted{color:var(--muted)}
+
+  /* английские примеры */
+  .en{font-family:Georgia,"Iowan Old Style",serif; font-style:italic; letter-spacing:.005em}
+
+  /* ---------- tables ---------- */
+  .tw{overflow-x:auto; border:1px solid var(--line); border-radius:12px; background:var(--card); box-shadow:var(--shadow); margin:20px 0}
+  table{border-collapse:collapse; width:100%; font-size:14.5px}
+  th{font-size:12px; letter-spacing:.09em; text-transform:uppercase; color:var(--muted); text-align:left; padding:12px 16px; border-bottom:1px solid var(--line); background:var(--chip)}
+  td{padding:11px 16px; border-bottom:1px solid var(--line-soft); vertical-align:top}
+  tr:last-child td{border-bottom:none}
+  td.num{font-variant-numeric:tabular-nums; white-space:nowrap}
+
+  /* ---------- cards & grids ---------- */
+  .grid2{display:grid; grid-template-columns:1fr 1fr; gap:16px; margin:20px 0}
+  .grid3{display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin:20px 0}
+  @media (max-width:800px){ .grid2,.grid3{grid-template-columns:1fr} }
+  .card{background:var(--card); border:1px solid var(--line); border-radius:12px; padding:18px 20px; box-shadow:var(--shadow)}
+  .card h3{font-size:16px; margin-bottom:10px}
+  .card p{margin:0 0 8px; font-size:14.5px}
+  .card ul,.card ol{margin:0; padding-left:18px; font-size:14.5px}
+  .card li{margin:4px 0}
+
+  /* каталог упражнений */
+  .exgrid{display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:14px; margin:20px 0}
+  .exitem{background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; box-shadow:var(--shadow)}
+  .exitem h4{font-size:14px; display:flex; justify-content:space-between; align-items:baseline; gap:8px}
+  .exitem h4 span{font-size:12px; color:var(--muted); font-weight:600; white-space:nowrap}
+  .exitem p{margin:8px 0 0; font-size:13.5px; color:var(--muted)}
+  .exitem p b{color:var(--ink)}
+
+  /* anki-карточки */
+  .anki{display:grid; grid-template-columns:repeat(auto-fit,minmax(290px,1fr)); gap:16px; margin:20px 0}
+  .acard{background:var(--card); border:1px solid var(--line); border-radius:12px; overflow:hidden; box-shadow:var(--shadow)}
+  .acard .ahead{padding:10px 16px; background:var(--chip); border-bottom:1px solid var(--line); font-weight:700; font-size:13.5px; display:flex; justify-content:space-between; gap:8px}
+  .acard .ahead span{color:var(--muted); font-weight:600; font-size:12px}
+  .acard .aside{padding:12px 16px; font-size:14px}
+  .acard .aside + .aside{border-top:1px dashed var(--line)}
+  .acard .lbl{display:block; font-size:10.5px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); margin-bottom:4px}
+  .acard code{background:var(--code); border-radius:5px; padding:1px 6px; font-size:12.5px; font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+
+  /* ---------- модули ---------- */
+  .blockhead{display:flex; align-items:center; gap:12px; margin:44px 0 6px}
+  .blockhead .tag{font-size:12px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:#fff; border-radius:7px; padding:4px 10px}
+  .blockhead h3{font-size:20px}
+  .blockhead p{margin:0; color:var(--muted); font-size:14px}
+  .bA{background:var(--blockA)} .bB{background:var(--blockB)} .bC{background:var(--blockC)} .bD{background:var(--blockD)} .bF{background:var(--gold)}
+  :root[data-theme="dark"] .tag, :root[data-theme="dark"] .mnum{color:#0F141D}
+  @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .tag, :root:not([data-theme="light"]) .mnum{color:#0F141D} }
+
+  .mod{background:var(--card); border:1px solid var(--line); border-radius:14px; margin:16px 0; box-shadow:var(--shadow); overflow:hidden}
+  .mod > header{display:flex; align-items:center; gap:14px; padding:16px 20px; border-bottom:1px solid var(--line-soft)}
+  .mnum{flex:none; font-family:"Avenir Next",Futura,system-ui,sans-serif; font-weight:800; font-size:14px; color:#fff; border-radius:9px; padding:7px 11px; font-variant-numeric:tabular-nums}
+  .mod header h4{font-size:17.5px}
+  .mod header p{margin:2px 0 0; font-size:13px; color:var(--muted)}
+  .mgrid{display:grid; grid-template-columns:5fr 6fr; gap:0}
+  @media (max-width:760px){ .mgrid{grid-template-columns:1fr} .mgrid .mcol + .mcol{border-left:none; border-top:1px solid var(--line-soft)} }
+  .mcol{padding:14px 20px}
+  .mcol + .mcol{border-left:1px solid var(--line-soft)}
+  .mcol h5{font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); margin:0 0 8px}
+  .mcol ul{margin:0; padding-left:17px; font-size:14px}
+  .mcol li{margin:3px 0}
+  .mcol .dom{font-size:13.5px; margin:0 0 8px}
+  .mcol .ex{font-size:14px; color:var(--muted); margin:0; line-height:1.75}
+  .mrows{display:grid; gap:0; margin:0; border-top:1px solid var(--line-soft)}
+  .mrows > div{display:grid; grid-template-columns:110px 1fr; gap:12px; padding:9px 20px; border-bottom:1px solid var(--line-soft); font-size:14px}
+  .mrows > div:last-child{border-bottom:none}
+  .mrows dt{font-size:11px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); padding-top:3px}
+  .mrows dd{margin:0}
+  @media (max-width:560px){ .mrows > div{grid-template-columns:1fr; gap:2px} }
+
+  .cpt{border:1px dashed var(--line); background:var(--chip); border-radius:14px; padding:16px 20px; margin:16px 0; font-size:14.5px}
+  .cpt b:first-child{font-family:"Avenir Next",Futura,system-ui,sans-serif}
+
+  /* ---------- прочее ---------- */
+  pre{background:var(--code); border:1px solid var(--line); border-radius:12px; padding:16px 18px; overflow-x:auto; font-size:13px; line-height:1.55; font-family:ui-monospace,SFMono-Regular,Menlo,monospace; margin:20px 0}
+  .check{list-style:none; padding:0; margin:16px 0; max-width:80ch}
+  .check li{padding:7px 0 7px 30px; position:relative; border-bottom:1px solid var(--line-soft); font-size:14.5px}
+  .check li::before{content:"✓"; position:absolute; left:4px; color:var(--accent); font-weight:800}
+  footer{margin-top:72px; padding-top:20px; border-top:1px solid var(--line); font-size:13px; color:var(--muted)}
+</style>
+
+<div class="wrap">
+
+<header class="hero">
+  <p class="eyebrow">SkyRocket English · учебная программа</p>
+  <h1>B2+ → C1 за 80 часов</h1>
+  <p class="lede">Не набор материалов, а система: 15 тематических модулей и финальный экзамен, каждый модуль — недельный цикл из четырёх сессий со встроенными повторениями и измеримым прогрессом. Контент модулей — только на английском, каждая лексема — с use cases. Спецификации готовы к передаче субагентам.</p>
+  <ul class="stats">
+    <li><b>80 ч</b> занятий</li>
+    <li><b>≈16 недель</b> при 5 ч/нед</li>
+    <li><b>15 + 1</b> модулей</li>
+    <li><b>≈675</b> лексических единиц</li>
+    <li><b>≈945</b> карточек Anki</li>
+    <li>контент — <b>English only</b></li>
+    <li>ориентир — <b>Cambridge C1 Advanced (CAE)</b></li>
+  </ul>
+</header>
+
+<nav class="toc" aria-label="Содержание">
+  <ul>
+    <li><a href="#method">Метод</a></li>
+    <li><a href="#arch">Архитектура</a></li>
+    <li><a href="#module">Прохождение</a></li>
+    <li><a href="#system">Система прогресса</a></li>
+    <li><a href="#anki">Anki</a></li>
+    <li><a href="#roadmap">Роадмап</a></li>
+    <li><a href="#checkpoints">Чек-пойнты</a></li>
+    <li><a href="#extensive">Вне 80 часов</a></li>
+    <li><a href="#production">Производство</a></li>
+    <li><a href="#design">Дизайн-промпт</a></li>
+    <li><a href="#criteria">Критерии C1</a></li>
+  </ul>
+</nav>
+
+<!-- ================================================================ -->
+<section id="method">
+  <h2><small>Отправная точка</small>Что отделяет B2 от C1</h2>
+  <div class="prose">
+    <p>На B2 вы уже «говорите свободно». Разрыв до C1 — не в количестве выученного, а в точности и диапазоне: там, где B2 обходится <span class="en">get, make, very good</span> и простыми придаточными, C1 выбирает точный глагол, идиоматичную коллокацию и конструкцию под задачу — инверсию для эмфазы, hedging для осторожного утверждения, номинализацию для формального стиля. Программа бьёт именно в этот разрыв.</p>
+  </div>
+  <div class="tw"><table>
+    <thead><tr><th>Область</th><th>B2 (сейчас)</th><th>C1 (цель)</th></tr></thead>
+    <tbody>
+      <tr><td><b>Лексика</b></td><td>≈4000 семей слов, частотная</td><td>≈8000, коллокации, идиомы, различение регистров (<span class="en">buy → purchase / snap up</span>)</td></tr>
+      <tr><td><b>Грамматика</b></td><td>Все времена, условные 1–3, пассив</td><td>Инверсия, клефты, смешанные условные, причастные обороты, subjunctive, эллипсис</td></tr>
+      <tr><td><b>Письмо</b></td><td>Понятное эссе с линкерами</td><td>Эссе / отчёт / proposal с контролем регистра и когезии, 220–260 слов за 45 минут</td></tr>
+      <tr><td><b>Чтение</b></td><td>Адаптированные и простые аутентичные тексты</td><td>Лонгриды уровня The Economist / Guardian без словаря на 90%</td></tr>
+      <tr><td><b>Речь</b></td><td>Свободно на знакомые темы</td><td>Развёрнутый монолог на абстрактную тему, перифраз на лету, юмор и оттенки</td></tr>
+    </tbody>
+  </table></div>
+  <div class="grid2">
+    <div class="card"><h3>Принцип 1 · English only</h3><p>Весь контент модулей — теория, определения, пояснения к ответам, карточки — только на английском, в стиле learner’s dictionary (EN-EN). На C1 выходят через язык, а не через перевод. Русский остаётся в этом плане — но не в учебных материалах.</p></div>
+    <div class="card"><h3>Принцип 2 · Система, а не набор материалов</h3><p>Тексты и упражнения — топливо. Движок — статусы каждой единицы, три колеи повторений и ворота блоков: в любой момент видно, что выучено, что шатается и что делать сегодня.</p></div>
+    <div class="card"><h3>Принцип 3 · 70% практики</h3><p>Теория модуля — 25 минут grammar spotlight. Остальное — чтение, 66 упражнений и продукция (письмо или записанный монолог). Конструкция считается выученной, когда вы её произвели, а не узнали.</p></div>
+    <div class="card"><h3>Принцип 4 · Повторение встроено в расписание</h3><p>Review Slot в сессиях каждой недели, ревью модуля на +7 и +21 день, Anki ежедневно. Повторение — часть протокола, а не сила воли.</p></div>
+    <div class="card"><h3>Принцип 5 · Из ошибки — карточка</h3><p>Любая ошибка в упражнении или письме превращается в карточку Anki и запись в карте ошибок. К финалу колода отражает лично ваши слабые места, а не среднестатистические.</p></div>
+    <div class="card"><h3>Принцип 6 · Экзаменационный формат</h3><p>Типы упражнений — из Cambridge C1 Advanced (Use of English). Это готовые, откалиброванные под C1 форматы: даже без сдачи экзамена они дают измеримость прогресса.</p></div>
+  </div>
+</section>
+
+<!-- ================================================================ -->
+<section id="arch">
+  <h2><small>Структура курса</small>Архитектура 80 часов</h2>
+  <div class="tw"><table>
+    <thead><tr><th>Этап</th><th>Состав</th><th class="num">Часы</th></tr></thead>
+    <tbody>
+      <tr><td><b>Диагностика</b></td><td>60 заданий Use of English по всем 15 грамм-темам + письмо + записанный монолог → карта пробелов</td><td class="num">2,0</td></tr>
+      <tr><td><b>Блок A · Каркас</b></td><td>Модули 1–4: ревизия ядра грамматики на уровне C1</td><td class="num">18,0</td></tr>
+      <tr><td><b>Чек-пойнт A</b></td><td>Тест 40 заданий + письмо + разбор ошибок</td><td class="num">2,0</td></tr>
+      <tr><td><b>Блок B · Сложные конструкции</b></td><td>Модули 5–8: условные, subjunctive, модальность, причастные обороты</td><td class="num">18,0</td></tr>
+      <tr><td><b>Чек-пойнт B</b></td><td>Тест 40 заданий + письмо + разбор ошибок</td><td class="num">2,0</td></tr>
+      <tr><td><b>Блок C · Эмфаза и стиль</b></td><td>Модули 9–12: клефты, инверсия, формальный регистр, разговорный дискурс</td><td class="num">18,0</td></tr>
+      <tr><td><b>Чек-пойнт C</b></td><td>Тест 40 заданий + письмо + разбор ошибок</td><td class="num">2,0</td></tr>
+      <tr><td><b>Блок D · Мастерство</b></td><td>Модули 13–15: hedging, точность, архитектура сложного письма</td><td class="num">13,5</td></tr>
+      <tr><td><b>Модуль 16 · Финал</b></td><td>Сокращённый мок CAE + разбор + план на C2</td><td class="num">4,5</td></tr>
+      <tr><td colspan="2" style="text-align:right"><b>Итого</b></td><td class="num"><b>80,0</b></td></tr>
+    </tbody>
+  </table></div>
+  <div class="prose">
+    <p><b>Ритм.</b> Один модуль (4,5 ч) — это одна неделя при темпе 5 ч/нед: четыре сессии фиксированного протокола (60′ / 75′ / 75′ / 60′ — см. «Как проходить модуль»). При 8 ч/нед курс сжимается до ~10 недель. Ежедневные 10–15 минут Anki — отдельный ритуал <em>вне</em> этих 80 часов: они делаются в транспорте и очередях, для этого и нужно мобильное приложение.</p>
+  </div>
+</section>
+
+<!-- ================================================================ -->
+<section id="module">
+  <h2><small>Протокол недели</small>Как проходить модуль — 4 сессии</h2>
+  <div class="prose">
+    <p>Модуль — это одна неделя: четыре сессии с фиксированным протоколом (суммарно 4,5 ч) плюс ежедневные повторы Anki. Протокол каждую неделю один и тот же — привычный ритуал убирает трение старта, а Review Slot в сессиях 2 и 3 вшивает повторение прошлых модулей прямо в расписание.</p>
+  </div>
+  <div class="grid2">
+    <div class="card"><h3>Сессия 1 · Prime — 60′ · вход в тему</h3><ol>
+      <li>Unit opener: цели модуля и can-do (5′)</li>
+      <li>Skim лонгрида без словаря — общий смысл (10′)</li>
+      <li>Grammar spotlight: правила с примерами и «Watch out»-блоками (25′)</li>
+      <li>Vocabulary studio: 45 единиц с use cases, отметить 10 приоритетных (15′)</li>
+      <li>Импорт колод модуля в Anki — новые карточки пошли в дневную норму (5′)</li>
+    </ol></div>
+    <div class="card"><h3>Сессия 2 · Input — 75′ · глубокое чтение</h3><ol>
+      <li>Review Slot: 10 заданий из очереди повторений (12′)</li>
+      <li>Close reading лонгрида с глоссами, разметка целевых конструкций (25′)</li>
+      <li>Reading comprehension — 6 вопросов (10′)</li>
+      <li>Лексический сет: multiple-choice cloze 8 · collocation match 10 · word formation 8 (28′)</li>
+    </ol></div>
+    <div class="card"><h3>Сессия 3 · Workout — 75′ · грамматика</h3><ol>
+      <li>Review Slot: 10 заданий из очереди повторений (12′)</li>
+      <li>Grammar drill 10 · open cloze 8 (25′)</li>
+      <li>Key-word transformations 8 · error correction 8 (25′)</li>
+      <li>Harvest: каждая ошибка → карточка Anki + строка в карте ошибок (13′)</li>
+    </ol></div>
+    <div class="card"><h3>Сессия 4 · Output — 60′ · продукция и закрытие</h3><ol>
+      <li>Доп. текст модуля — второй жанр (12′)</li>
+      <li>Продукция: письмо CAE-жанра (нечётные модули) или записанный монолог + shadowing (чётные) (30′)</li>
+      <li>Самопроверка: чек-лист + сравнение с модельным ответом (8′)</li>
+      <li>Module quiz: 10 заданий из review-пула → статус Completed, ревью назначены на +7 и +21 день (10′)</li>
+    </ol></div>
+  </div>
+  <div class="cpt"><b>Ежедневно · Anki 10–15 мин</b> вне сессий: все повторы дня + 8–12 новых карточек. Пропуск дня допустим, пропуск недели — нет.</div>
+
+  <h3 style="font-size:18px; margin-top:32px">Каталог упражнений (единый для всех модулей)</h3>
+  <p class="muted" style="font-size:14px; max-width:76ch; margin-top:6px">Форматы 1–4 — части экзамена CAE Reading &amp; Use of English. Один пример на тип; субагент генерирует задания строго этих типов — это позволит позже отрендерить их в приложении как типизированные интерактивные упражнения. Каждое задание сопровождается объяснением ответа — на английском.</p>
+  <div class="exgrid">
+    <div class="exitem"><h4>1 · Multiple-choice cloze <span>8 заданий</span></h4><p><span class="en">She was ___ under with work.</span> — A. snowed B. rained C. iced D. flooded → <b>A</b></p></div>
+    <div class="exitem"><h4>2 · Open cloze <span>8 заданий</span></h4><p><span class="en">Not only ___ he miss the deadline, he also blamed the team.</span> → <b>did</b></p></div>
+    <div class="exitem"><h4>3 · Word formation <span>8 заданий</span></h4><p><span class="en">His refusal was completely ___ (JUSTIFY).</span> → <b>unjustifiable</b></p></div>
+    <div class="exitem"><h4>4 · Key word transformation <span>8 заданий</span></h4><p><span class="en">I regret selling the bike. → WISH → I ___ the bike.</span> → <b>wish I hadn't sold</b></p></div>
+    <div class="exitem"><h4>5 · Grammar drill <span>10 заданий</span></h4><p>Направленные трансформации на конструкцию модуля: <span class="en">If I had known… → Had I known…</span></p></div>
+    <div class="exitem"><h4>6 · Error correction <span>8 заданий</span></h4><p><span class="en">Despite of the rain, we went out.</span> → лишнее <b>of</b>; отбор заданий — частотная L1-интерференция</p></div>
+    <div class="exitem"><h4>7 · Collocation match <span>10 заданий</span></h4><p>Соединить: <span class="en">meet / miss / extend</span> × <span class="en">a deadline</span>; <span class="en">heavy</span> × <span class="en">traffic, rain, accent</span></p></div>
+    <div class="exitem"><h4>8 · Reading comprehension <span>6 вопросов</span></h4><p>К лонгриду: вывод, отношение автора, значение слова из контекста — формат CAE Part 5</p></div>
+    <div class="exitem"><h4>9 · Writing / Speaking <span>1 задание</span></h4><p>CAE-жанр по модулю + модельный ответ + чек-лист самопроверки; либо карточка монолога (Speaking Part 2)</p></div>
+  </div>
+</section>
+
+<!-- ================================================================ -->
+<section id="system">
+  <h2><small>Ядро курса</small>Система прогресса и повторений</h2>
+  <div class="prose">
+    <p>Материалы — топливо, движок — повторения. Всё, что встречается в курсе, живёт в одной из трёх колей повторений, у каждой единицы есть статус, и в любой момент видно, что делать сегодня. Именно эту механику приложение должно хранить и визуализировать.</p>
+  </div>
+  <div class="grid3">
+    <div class="card"><h3>Колея 1 · Anki — атомы</h3><p>Слова с use cases, grammar cloze и трансформации. SRS-алгоритм сам решает, что показать сегодня; 10–15 минут в день закрывают всю колею. Из каждой ошибки в упражнениях сюда прилетает новая карточка.</p></div>
+    <div class="card"><h3>Колея 2 · Очередь упражнений — применение</h3><p>Задание, решённое неверно, возвращается свежим вариантом через 2 → 7 → 21 день. Review Slot в сессиях 2 и 3 разбирает очередь по 10 заданий — повторение прошлых модулей вшито в каждую неделю, а не оставлено на силу воли.</p></div>
+    <div class="card"><h3>Колея 3 · Ревью модулей — целое</h3><p>Через 7 и 21 день после закрытия модуля в очередь падает квиз из 10 новых вариантов его заданий. Оба пройдены на ≥80% — модуль становится Mastered; нет — его темы возвращаются в колею 2.</p></div>
+  </div>
+  <div class="tw"><table>
+    <thead><tr><th>Единица</th><th>Статусы</th><th>Что переводит на следующий статус</th></tr></thead>
+    <tbody>
+      <tr><td><b>Лексема</b></td><td class="num">New → Learning → Known → In use</td><td>Карточка стала mature в Anki → единица употреблена в собственном письме или монологе</td></tr>
+      <tr><td><b>Конструкция</b></td><td class="num">Introduced → Practising → Reliable</td><td>≥5 успешных применений в трансформациях и продукции</td></tr>
+      <tr><td><b>Модуль</b></td><td class="num">In progress → Completed → Mastered</td><td>Module quiz ≥80% в конце недели → оба ревью (+7 и +21 день) ≥80%</td></tr>
+      <tr><td><b>Блок</b></td><td class="num">Open → Passed / Revision week</td><td>Чек-пойнт ≥75%; иначе — неделя ревизии перед следующим блоком</td></tr>
+    </tbody>
+  </table></div>
+  <div class="prose">
+    <p><b>Метрики прогресса:</b> карта курса из 16 модулей со статусами, доля лексики Known и выше, доля конструкций Reliable, mature retention в Anki, стрик дней с закрытыми повторами. Прогресс меряется статусами и ретеншном, а не «пройденными страницами».</p>
+  </div>
+</section>
+
+<!-- ================================================================ -->
+<section id="anki">
+  <h2><small>Spaced repetition</small>Система Anki</h2>
+  <div class="prose">
+    <p>Одна колода <code style="background:var(--code); padding:1px 6px; border-radius:5px">English C1</code> с тегами по модулям (<code style="background:var(--code); padding:1px 6px; border-radius:5px">en-c1::m01</code>…). Три типа заметок — карточки покрывают не только слова, но и грамматические конструкции. Содержимое карточек — только английский: определения в стиле learner’s dictionary, у каждой лексемы на обороте — use cases. Каждый модуль поставляет три CSV-файла, готовых к импорту.</p>
+  </div>
+  <div class="anki">
+    <div class="acard">
+      <div class="ahead">Vocab <span>≈45 на модуль · 675 всего</span></div>
+      <div class="aside"><span class="lbl">Front</span><span class="en">take on (a workload)</span></div>
+      <div class="aside"><span class="lbl">Back</span>to accept a piece of work or responsibility · <span class="en">She’s taken on far too much this quarter.</span> · <span class="en">We’re not taking on new clients until spring.</span> · <span class="muted">take on staff / a role / a challenge · neutral</span></div>
+      <div class="aside"><span class="lbl">CSV</span><code>Term,Definition,UseCase1,UseCase2,Collocations,Register,Tags</code> — две карточки из ноты: term → meaning и definition + collocation cue → term (активный recall, EN-EN)</div>
+    </div>
+    <div class="acard">
+      <div class="ahead">Grammar cloze <span>10 на модуль · 150 всего</span></div>
+      <div class="aside"><span class="lbl">Text</span><span class="en">{{c1::Had I known}} about the delay, I would have taken an earlier train.</span></div>
+      <div class="aside"><span class="lbl">Hint</span>inverted 3rd conditional · ссылка на правило модуля</div>
+      <div class="aside"><span class="lbl">CSV</span><code>Text,Hint,Rule,Tags</code> — note type Cloze</div>
+    </div>
+    <div class="acard">
+      <div class="ahead">Transformation <span>8 на модуль · 120 всего</span></div>
+      <div class="aside"><span class="lbl">Front</span><span class="en">I regret selling the bike.</span> → <b>WISH</b> → <span class="en">I ___ the bike.</span></div>
+      <div class="aside"><span class="lbl">Back</span><span class="en">wish I hadn’t sold</span> + объяснение формы — на английском</div>
+      <div class="aside"><span class="lbl">CSV</span><code>Prompt,Key,Answer,Note,Tags</code> — тренирует продукцию, не узнавание</div>
+    </div>
+  </div>
+  <div class="grid3">
+    <div class="card"><h3>Дневная норма</h3><p>8–12 новых карточек в день + все повторы. Это 10–15 минут. 945 карточек распределяются на ~16 недель без авралов.</p></div>
+    <div class="card"><h3>Правило ошибки</h3><p>Ошиблись в упражнении или письме — карточка в тот же день, тег <code style="background:var(--code); padding:1px 5px; border-radius:5px">my-errors</code>. Это самые ценные карточки колоды.</p></div>
+    <div class="card"><h3>Метрика здоровья</h3><p>Mature retention ≥ 85%. Ниже — сократить приток новых и упростить формулировки карточек, а не бросать повторы.</p></div>
+  </div>
+</section>
+
+<!-- ================================================================ -->
+<section id="roadmap">
+  <h2><small>16 недель</small>Роадмап по модулям</h2>
+
+  <div class="cpt"><b>Неделя 0 · Диагностика — 2 ч.</b> Тест из 60 заданий Use of English, покрывающий все 15 грамматических тем курса, + эссе 220 слов + записанный монолог 2 мин. Результат — карта пробелов: модули не пропускаются, но вы заранее знаете, какие пойдут тяжело, и перераспределяете время внутри недели.</div>
+
+  <!-- ======== БЛОК A ======== -->
+  <div class="blockhead"><span class="tag bA">Блок A</span><div><h3>Каркас — ядро грамматики на уровне C1</h3><p>Модули 1–4 · 18 часов · привычные темы, но с нюансами, которых на B2 не касались</p></div></div>
+
+  <article class="mod" id="m01">
+    <header><span class="mnum bA">М1</span><div><h4>Work &amp; Careers</h4><p>Времена и аспект на уровне C1 · 4,5 ч</p></div></header>
+    <div class="mgrid">
+      <div class="mcol"><h5>Грамматика</h5><ul>
+        <li>Narrative tenses: past perfect continuous, <span class="en">would</span> / <span class="en">used to</span> для прошлых привычек</li>
+        <li>Perfect aspect: результат vs процесс (<span class="en">I’ve written / I’ve been writing</span>)</li>
+        <li>Будущее: future continuous для предположений, future perfect (continuous), <span class="en">be to</span>, <span class="en">be about to / on the verge of</span></li>
+        <li>Future in the past: <span class="en">was going to, was to have done</span></li>
+        <li>State verbs в continuous для временности и эмфазы</li>
+      </ul></div>
+      <div class="mcol"><h5>Лексика · 45 единиц</h5>
+        <p class="dom">Домены: карьерный путь, нагрузка и дедлайны, найм и увольнение, выгорание</p>
+        <p class="ex">take on a workload · meet / miss a deadline · be snowed under · a demanding yet rewarding role · career trajectory · a dead-end job · be made redundant · notice period · step down · fill in for sb · knuckle down · burnout</p>
+      </div>
+    </div>
+    <dl class="mrows">
+      <div><dt>Тексты</dt><dd>Лонгрид <span class="en">“The Death of the Nine-to-Five”</span> (будущее работы, 800 слов) + интервью с рекрутером (350 слов)</dd></div>
+      <div><dt>Продукция</dt><dd>Formal email: заявка на вакансию (CAE letter of application) + модельный ответ</dd></div>
+      <div><dt>Anki</dt><dd>45 vocab · 10 grammar cloze · 8 transformation</dd></div>
+    </dl>
+  </article>
+
+  <article class="mod" id="m02">
+    <header><span class="mnum bA">М2</span><div><h4>Science &amp; Technology</h4><p>Пассив и каузатив · 4,5 ч</p></div></header>
+    <div class="mgrid">
+      <div class="mcol"><h5>Грамматика</h5><ul>
+        <li>Пассив перфектных и continuous-форм; пассив модальных (<span class="en">must have been done</span>)</li>
+        <li>Impersonal passive: <span class="en">It is believed that… / He is said to have…</span></li>
+        <li>Каузатив: <span class="en">have / get sth done, have sb do, get sb to do</span></li>
+        <li>Пассив глаголов с двумя дополнениями (<span class="en">I was given…</span>)</li>
+        <li>Выбор пассива: информационная структура и академический стиль</li>
+      </ul></div>
+      <div class="mcol"><h5>Лексика · 45 единиц</h5>
+        <p class="dom">Домены: исследования, инновации, риски технологий</p>
+        <p class="ex">conduct research · a breakthrough · cutting-edge · obsolete · feasible · harness technology · undermine · facilitate · a double-edged sword · unintended consequences · peer review · groundbreaking</p>
+      </div>
+    </div>
+    <dl class="mrows">
+      <div><dt>Тексты</dt><dd>Лонгрид <span class="en">“The Algorithm Will See You Now”</span> (ИИ в медицине, 850 слов) + новостная заметка о прорыве (300 слов)</dd></div>
+      <div><dt>Продукция</dt><dd>Монолог 2–3 мин: <span class="en">“A technology that changed your field”</span> + shadowing 10 мин</dd></div>
+      <div><dt>Anki</dt><dd>45 vocab · 10 grammar cloze · 8 transformation</dd></div>
+    </dl>
+  </article>
+
+  <article class="mod" id="m03">
+    <header><span class="mnum bA">М3</span><div><h4>Media &amp; Communication</h4><p>Косвенная речь и reporting verbs · 4,5 ч</p></div></header>
+    <div class="mgrid">
+      <div class="mcol"><h5>Грамматика</h5><ul>
+        <li>Сдвиги времён — и когда они не нужны</li>
+        <li>Reporting verbs с паттернами: <span class="en">deny doing, accuse sb of, urge sb to, insist on, concede that, allege</span></li>
+        <li>Passive reporting: <span class="en">is alleged to, is reported to have</span></li>
+        <li>Вопросы, просьбы и советы в косвенной речи</li>
+        <li>Мостик к М6: паттерны <span class="en">suggest</span></li>
+      </ul></div>
+      <div class="mcol"><h5>Лексика · 45 единиц</h5>
+        <p class="dom">Домены: журналистика, достоверность, манипуляция</p>
+        <p class="ex">coverage · biased / impartial · allegedly · spin · clickbait · a credible source · go viral · misinformation vs disinformation · refute a claim · endorse · censorship · hush up</p>
+      </div>
+    </div>
+    <dl class="mrows">
+      <div><dt>Тексты</dt><dd>Лонгрид <span class="en">“Manufacturing Outrage”</span> (экономика кликбейта, 800 слов) + два репортажа об одном событии для сравнения фрейминга (2×200 слов)</dd></div>
+      <div><dt>Продукция</dt><dd>Opinion article 220–260 слов: <span class="en">“Should social media verify every account?”</span></dd></div>
+      <div><dt>Anki</dt><dd>45 vocab · 10 grammar cloze · 8 transformation</dd></div>
+    </dl>
+  </article>
+
+  <article class="mod" id="m04">
+    <header><span class="mnum bA">М4</span><div><h4>Education &amp; Learning</h4><p>Gerund vs infinitive · 4,5 ч</p></div></header>
+    <div class="mgrid">
+      <div class="mcol"><h5>Грамматика</h5><ul>
+        <li>Смыслоразличительные пары: <span class="en">remember / forget / regret / stop / try / mean / go on + -ing / to</span></li>
+        <li>Verb + object + infinitive; <span class="en">let / make</span> в пассиве (<span class="en">be made to</span>)</li>
+        <li><span class="en">to</span> как предлог: <span class="en">look forward to doing, be used to doing</span></li>
+        <li>Perfect forms: <span class="en">deny having done, seem to have done</span></li>
+        <li><span class="en">need doing</span> = <span class="en">need to be done</span></li>
+      </ul></div>
+      <div class="mcol"><h5>Лексика · 45 единиц</h5>
+        <p class="dom">Домены: обучение и когниция, образовательная система</p>
+        <p class="ex">rote learning · grasp a concept · a steep learning curve · retain information · cram for an exam · aptitude · drop out · lifelong learning · tuition fees · extracurricular · underachieve · curriculum</p>
+      </div>
+    </div>
+    <dl class="mrows">
+      <div><dt>Тексты</dt><dd>Лонгрид <span class="en">“Why Cramming Fails”</span> (наука обучения — про spaced repetition, 850 слов) + колонка выпускника (350 слов)</dd></div>
+      <div><dt>Продукция</dt><dd>Монолог 2–3 мин: <span class="en">“The most useful thing you’ve ever learned”</span> + shadowing</dd></div>
+      <div><dt>Anki</dt><dd>45 vocab · 10 grammar cloze · 8 transformation</dd></div>
+    </dl>
+  </article>
+
+  <div class="cpt"><b>Чек-пойнт A — 2 ч.</b> 40 заданий по М1–М4 (перемешанные форматы 1–7) + письмо + разбор. Порог 75%. Ниже порога — неделя ревизии: Anki-марафон по тегам слабых модулей и повтор упражнений с ошибками, только потом блок B.</div>
+
+  <!-- ======== БЛОК B ======== -->
+  <div class="blockhead"><span class="tag bB">Блок B</span><div><h3>Сложные конструкции — то, чего на B2 не было</h3><p>Модули 5–8 · 18 часов · главный грамматический скачок курса</p></div></div>
+
+  <article class="mod" id="m05">
+    <header><span class="mnum bB">М5</span><div><h4>Environment &amp; Sustainability</h4><p>Продвинутые условные · 4,5 ч</p></div></header>
+    <div class="mgrid">
+      <div class="mcol"><h5>Грамматика</h5><ul>
+        <li>Смешанные условные в обе стороны (<span class="en">If I’d studied medicine, I’d be a doctor now</span>)</li>
+        <li>Инверсия: <span class="en">Had we acted…, Were it not for…, Should you need…</span></li>
+        <li>Альтернативы <span class="en">if</span>: <span class="en">provided, as long as, on condition that, unless, but for, supposing</span></li>
+        <li><span class="en">otherwise / or else</span> как скрытое условие</li>
+        <li><span class="en">in case</span> vs <span class="en">if</span></li>
+      </ul></div>
+      <div class="mcol"><h5>Лексика · 45 единиц</h5>
+        <p class="dom">Домены: климат, ресурсы, причина и следствие</p>
+        <p class="ex">carbon footprint · depletion of resources · biodiversity loss · mitigate · irreversible damage · a tipping point · curb emissions · phase out · contaminate · habitat destruction · renewable · environmentally sound</p>
+      </div>
+    </div>
+    <dl class="mrows">
+      <div><dt>Тексты</dt><dd>Лонгрид <span class="en">“The Last Harvest”</span> (деградация почв, 850 слов) + манифест эко-стартапа (300 слов)</dd></div>
+      <div><dt>Продукция</dt><dd>Essay №1 (CAE Part 1): два из трёх аспектов проблемы, 220–260 слов + модельный ответ</dd></div>
+      <div><dt>Anki</dt><dd>45 vocab · 10 grammar cloze · 8 transformation</dd></div>
+    </dl>
+  </article>
+
+  <article class="mod" id="m06">
+    <header><span class="mnum bB">М6</span><div><h4>Society &amp; Inequality</h4><p>Unreal past и subjunctive · 4,5 ч</p></div></header>
+    <div class="mgrid">
+      <div class="mcol"><h5>Грамматика</h5><ul>
+        <li><span class="en">wish + past / past perfect / would</span>; <span class="en">if only</span></li>
+        <li><span class="en">would rather (sb did), would sooner</span></li>
+        <li><span class="en">it’s (high / about) time + past</span></li>
+        <li><span class="en">as if / as though</span> + unreal</li>
+        <li>Subjunctive: <span class="en">demand / insist / suggest that he (should) be…; it is essential that…</span></li>
+      </ul></div>
+      <div class="mcol"><h5>Лексика · 45 единиц</h5>
+        <p class="dom">Домены: неравенство, социальная политика, активизм</p>
+        <p class="ex">disparity · marginalized · social mobility · the poverty line · welfare · discrimination · grassroots · advocate for · a disadvantaged background · cohesion · integrate · level the playing field</p>
+      </div>
+    </div>
+    <dl class="mrows">
+      <div><dt>Тексты</dt><dd>Лонгрид <span class="en">“Born on the Wrong Side of Town”</span> (социальная мобильность, 850 слов) + три письма читателей с разными позициями (3×130 слов)</dd></div>
+      <div><dt>Продукция</dt><dd>Монолог 2–3 мин: сравнение двух фото-ситуаций (CAE Speaking Part 2) + shadowing</dd></div>
+      <div><dt>Anki</dt><dd>45 vocab · 10 grammar cloze · 8 transformation</dd></div>
+    </dl>
+  </article>
+
+  <article class="mod" id="m07">
+    <header><span class="mnum bB">М7</span><div><h4>Health &amp; Psychology</h4><p>Модальность: предположение и уверенность · 4,5 ч</p></div></header>
+    <div class="mgrid">
+      <div class="mcol"><h5>Грамматика</h5><ul>
+        <li>Дедукция о настоящем и прошлом: <span class="en">must / can’t / might have done</span></li>
+        <li>Градус уверенности: <span class="en">is bound to, is likely to, may well, could conceivably</span></li>
+        <li><span class="en">will / would</span> для типичного поведения (<span class="en">He’ll sit there for hours</span>)</li>
+        <li><span class="en">needn’t have done</span> vs <span class="en">didn’t need to do</span></li>
+        <li><span class="en">might as well; ought to; dare</span></li>
+      </ul></div>
+      <div class="mcol"><h5>Лексика · 45 единиц</h5>
+        <p class="dom">Домены: ментальное здоровье, привычки, восстановление</p>
+        <p class="ex">a sedentary lifestyle · chronic condition · wellbeing · resilience · cope with stress · deteriorate · alleviate symptoms · preventive measures · prone to · immune system · burnout recovery · stigma</p>
+      </div>
+    </div>
+    <dl class="mrows">
+      <div><dt>Тексты</dt><dd>Лонгрид <span class="en">“The Burnout Generation”</span> (850 слов) + транскрипт подкаста с психологом (400 слов, разговорный регистр)</dd></div>
+      <div><dt>Продукция</dt><dd>Informal email другу: совет по стрессу — тренировка неформального регистра + модельный ответ</dd></div>
+      <div><dt>Anki</dt><dd>45 vocab · 10 grammar cloze · 8 transformation</dd></div>
+    </dl>
+  </article>
+
+  <article class="mod" id="m08">
+    <header><span class="mnum bB">М8</span><div><h4>Globalisation &amp; Travel</h4><p>Относительные и причастные обороты · 4,5 ч</p></div></header>
+    <div class="mgrid">
+      <div class="mcol"><h5>Грамматика</h5><ul>
+        <li>Reduced relatives: <span class="en">the issues (which were) raised…</span></li>
+        <li>Предлог + <span class="en">which / whom</span>: <span class="en">the extent to which…</span></li>
+        <li><span class="en">whereby, whose, of which</span>; нюансы non-defining</li>
+        <li>Причастные обороты: <span class="en">Having finished…, Faced with…, The meeting over,…</span></li>
+        <li>Dangling participle как типовая ошибка</li>
+      </ul></div>
+      <div class="mcol"><h5>Лексика · 45 единиц</h5>
+        <p class="dom">Домены: глобализация, туризм, миграция</p>
+        <p class="ex">cultural homogenization · outsourcing · mass tourism · off the beaten track · culture shock · assimilate · interconnected · brain drain · remittances · border controls · a melting pot · sustainable tourism</p>
+      </div>
+    </div>
+    <dl class="mrows">
+      <div><dt>Тексты</dt><dd>Лонгрид <span class="en">“Everywhere Is Nowhere”</span> (овертуризм, 850 слов) + тревел-эссе (350 слов)</dd></div>
+      <div><dt>Продукция</dt><dd>Монолог 2–3 мин: <span class="en">“A place that changed how you see the world”</span> + shadowing</dd></div>
+      <div><dt>Anki</dt><dd>45 vocab · 10 grammar cloze · 8 transformation</dd></div>
+    </dl>
+  </article>
+
+  <div class="cpt"><b>Чек-пойнт B — 2 ч.</b> 40 заданий по М5–М8 + накопительные трансформации из блока A + письмо + разбор. Порог 75%. После блока B — старт нон-фикшн книги на английском (см. «Вне 80 часов»).</div>
+
+  <!-- ======== БЛОК C ======== -->
+  <div class="blockhead"><span class="tag bC">Блок C</span><div><h3>Эмфаза и стиль — звучать как C1</h3><p>Модули 9–12 · 18 часов · конструкции, которые отличают выученный язык от владения</p></div></div>
+
+  <article class="mod" id="m09">
+    <header><span class="mnum bC">М9</span><div><h4>Culture &amp; Arts</h4><p>Клефты и эмфаза · 4,5 ч</p></div></header>
+    <div class="mgrid">
+      <div class="mcol"><h5>Грамматика</h5><ul>
+        <li>It-cleft: <span class="en">It was the ending that ruined the film</span></li>
+        <li>Wh-cleft: <span class="en">What I object to is…; All you need is…</span></li>
+        <li><span class="en">The thing / reason / place… is…</span></li>
+        <li>Fronting: <span class="en">Up went the prices; Sitting at the desk was…</span></li>
+        <li>Эмфатическое <span class="en">do / did</span></li>
+      </ul></div>
+      <div class="mcol"><h5>Лексика · 45 единиц</h5>
+        <p class="dom">Домены: оценка искусства, критика, эмоциональный отклик</p>
+        <p class="ex">compelling · thought-provoking · derivative · poignant · acclaimed · mediocre · portray · evoke · subtle nuances · avant-garde · a box-office flop · a masterpiece</p>
+      </div>
+    </div>
+    <dl class="mrows">
+      <div><dt>Тексты</dt><dd>Лонгрид <span class="en">“In Defence of Difficult Art”</span> (800 слов) + две рецензии на один фильм: разгромная и восторженная (2×250 слов)</dd></div>
+      <div><dt>Продукция</dt><dd>Review 220–260 слов (CAE-жанр): фильм или сериал по выбору + модельный ответ</dd></div>
+      <div><dt>Anki</dt><dd>45 vocab · 10 grammar cloze · 8 transformation</dd></div>
+    </dl>
+  </article>
+
+  <article class="mod" id="m10">
+    <header><span class="mnum bC">М10</span><div><h4>Crime &amp; Justice</h4><p>Инверсия после отрицательных наречий · 4,5 ч</p></div></header>
+    <div class="mgrid">
+      <div class="mcol"><h5>Грамматика</h5><ul>
+        <li><span class="en">Never (before) / Rarely / Seldom / Little did…</span></li>
+        <li><span class="en">Not only… but (also)…; Not until… did…</span></li>
+        <li><span class="en">No sooner… than…; Hardly… when…</span></li>
+        <li><span class="en">Only after / when / by + инверсия; Only then did…</span></li>
+        <li><span class="en">Under no circumstances / On no account; Such was… / So + adj…; nor / neither</span></li>
+      </ul></div>
+      <div class="mcol"><h5>Лексика · 45 единиц</h5>
+        <p class="dom">Домены: правосудие, наказание и реабилитация</p>
+        <p class="ex">commit an offence · a deterrent · custodial sentence · rehabilitation · acquit / convict · circumstantial evidence · uphold the law · juvenile delinquency · white-collar crime · a lenient / harsh sentence · law-abiding · prosecution</p>
+      </div>
+    </div>
+    <dl class="mrows">
+      <div><dt>Тексты</dt><dd>Лонгрид <span class="en">“The Case for Second Chances”</span> (тюрьмы Скандинавии, 850 слов) + судебный репортаж (350 слов)</dd></div>
+      <div><dt>Продукция</dt><dd>Монолог 2–3 мин: <span class="en">“Does punishment work?”</span> — аргументация за/против + shadowing</dd></div>
+      <div><dt>Anki</dt><dd>45 vocab · 10 grammar cloze · 8 transformation</dd></div>
+    </dl>
+  </article>
+
+  <article class="mod" id="m11">
+    <header><span class="mnum bC">М11</span><div><h4>Business &amp; Economy</h4><p>Номинализация и формальный регистр · 4,5 ч</p></div></header>
+    <div class="mgrid">
+      <div class="mcol"><h5>Грамматика</h5><ul>
+        <li>Номинализация: <span class="en">they failed to comply → their failure to comply</span></li>
+        <li>Формальные линкеры: <span class="en">notwithstanding, albeit, hence, thereby, whereas</span></li>
+        <li>Сложные предлоги: <span class="en">with regard to, in the wake of, in light of</span></li>
+        <li>Пассивно-номинальный академический стиль; замена фразовых глаголов однословными (<span class="en">put off → postpone</span>)</li>
+        <li>Регистр-свитчинг: одно сообщение в трёх регистрах</li>
+      </ul></div>
+      <div class="mcol"><h5>Лексика · 45 единиц</h5>
+        <p class="dom">Домены: рынки, тренды, корпоративный язык</p>
+        <p class="ex">surge · plummet · fluctuate · a recession · inflation soars · a volatile market · revenue · austerity · subsidize · a monopoly · supply chain disruption · stagnate</p>
+      </div>
+    </div>
+    <dl class="mrows">
+      <div><dt>Тексты</dt><dd>Лонгрид <span class="en">“Bubble Trouble”</span> (пузыри и циклы, 850 слов) + учебный квартальный отчёт компании (350 слов, формальный регистр)</dd></div>
+      <div><dt>Продукция</dt><dd>Report 220–260 слов (CAE-жанр): с заголовками и рекомендациями + модельный ответ</dd></div>
+      <div><dt>Anki</dt><dd>45 vocab · 10 grammar cloze · 8 transformation</dd></div>
+    </dl>
+  </article>
+
+  <article class="mod" id="m12">
+    <header><span class="mnum bC">М12</span><div><h4>Language &amp; Identity</h4><p>Эллипсис, замещение, дискурс-маркеры · 4,5 ч</p></div></header>
+    <div class="mgrid">
+      <div class="mcol"><h5>Грамматика</h5><ul>
+        <li>Замещение: <span class="en">so / neither do I; I think so / I’m afraid not; do so; one / ones</span></li>
+        <li>Эллипсис после <span class="en">and / but</span>; в разговорных ответах</li>
+        <li>Разговорные маркеры: <span class="en">mind you, as it happens, having said that, then again</span></li>
+        <li>Письменные маркеры: <span class="en">moreover, nevertheless, conversely, in turn</span></li>
+        <li>Question tags: продвинутые случаи</li>
+      </ul></div>
+      <div class="mcol"><h5>Лексика · 45 единиц</h5>
+        <p class="dom">Домены: язык, идентичность, билингвизм + первый пакет идиом</p>
+        <p class="ex">mother tongue · heritage · code-switching · articulate · eloquent · convey meaning · connotation · colloquial · a dialect dies out · get the gist · lost in translation · not to mince words</p>
+      </div>
+    </div>
+    <dl class="mrows">
+      <div><dt>Тексты</dt><dd>Лонгрид <span class="en">“The Words We Lose”</span> (умирающие языки, 850 слов) + эссе билингва о двух идентичностях (350 слов)</dd></div>
+      <div><dt>Продукция</dt><dd>Монолог 2–3 мин: <span class="en">“What your languages say about you”</span> + shadowing</dd></div>
+      <div><dt>Anki</dt><dd>45 vocab · 10 grammar cloze · 8 transformation</dd></div>
+    </dl>
+  </article>
+
+  <div class="cpt"><b>Чек-пойнт C — 2 ч.</b> 40 заданий по М9–М12 + накопительные из A–B + письмо + разбор. Порог 75%. С этого момента сериалы — без субтитров.</div>
+
+  <!-- ======== БЛОК D ======== -->
+  <div class="blockhead"><span class="tag bD">Блок D</span><div><h3>Мастерство — точность и большой текст</h3><p>Модули 13–15 · 13,5 часов · тонкая настройка перед финалом</p></div></div>
+
+  <article class="mod" id="m13">
+    <header><span class="mnum bD">М13</span><div><h4>Ethics &amp; AI</h4><p>Hedging и уступка · 4,5 ч</p></div></header>
+    <div class="mgrid">
+      <div class="mcol"><h5>Грамматика</h5><ul>
+        <li>Хеджирование: <span class="en">appear / seem / tend to; arguably, presumably, to a certain extent</span></li>
+        <li><span class="en">It could be argued that…; there is some evidence to suggest…</span></li>
+        <li>Уступка: <span class="en">much as I admire…, granted,…, while / whilst</span></li>
+        <li><span class="en">however + adj (however hard you try); no matter how</span></li>
+        <li><span class="en">albeit</span> + прилагательное/наречие</li>
+      </ul></div>
+      <div class="mcol"><h5>Лексика · 45 единиц</h5>
+        <p class="dom">Домены: этика технологий, ответственность, приватность</p>
+        <p class="ex">accountability · transparency · algorithmic bias · surveillance · informed consent · a moral dilemma · dehumanize · autonomy · safeguard · a slippery slope · tread carefully · ethical implications</p>
+      </div>
+    </div>
+    <dl class="mrows">
+      <div><dt>Тексты</dt><dd>Лонгрид <span class="en">“Who Watches the Algorithms?”</span> (850 слов) + стенограмма дебатов за/против регулирования (400 слов)</dd></div>
+      <div><dt>Продукция</dt><dd>Essay №2 — под таймер 45 минут, полная имитация CAE Writing Part 1, самопроверка по чек-листу</dd></div>
+      <div><dt>Anki</dt><dd>45 vocab · 10 grammar cloze · 8 transformation</dd></div>
+    </dl>
+  </article>
+
+  <article class="mod" id="m14">
+    <header><span class="mnum bD">М14</span><div><h4>Consumer Society</h4><p>Точность: предлоги, сравнение, квантификаторы · 4,5 ч</p></div></header>
+    <div class="mgrid">
+      <div class="mcol"><h5>Грамматика</h5><ul>
+        <li>Dependent prepositions: <span class="en">insist on, capable of, a substitute for, dependent on / independent of, an alternative to</span></li>
+        <li>Сравнение: <span class="en">the more… the more; twice as… as; nowhere near as; by far the</span></li>
+        <li>Градуирование: <span class="en">marginally / considerably / infinitely + comparative</span></li>
+        <li>Квантификаторы: <span class="en">a great deal of, a handful of, scarcely any, the vast majority of</span></li>
+        <li>Замена <span class="en">very + adj</span> сильными прилагательными (<span class="en">very tired → exhausted</span>)</li>
+      </ul></div>
+      <div class="mcol"><h5>Лексика · 45 единиц</h5>
+        <p class="dom">Домены: потребление, реклама, маркетинговые приёмы + второй пакет идиом</p>
+        <p class="ex">conspicuous consumption · planned obsolescence · impulse buying · brand loyalty · a target audience · subliminal · materialistic · throwaway culture · value for money · retail therapy · cost an arm and a leg · a hard sell</p>
+      </div>
+    </div>
+    <dl class="mrows">
+      <div><dt>Тексты</dt><dd>Лонгрид <span class="en">“Engineered to Break”</span> (запланированное устаревание, 850 слов) + подборка рекламных текстов для разбора приёмов (300 слов)</dd></div>
+      <div><dt>Продукция</dt><dd>Монолог 2–3 мин: <span class="en">“Something you bought and regretted”</span> — с целевыми сравнительными конструкциями + shadowing</dd></div>
+      <div><dt>Anki</dt><dd>45 vocab · 10 grammar cloze · 8 transformation</dd></div>
+    </dl>
+  </article>
+
+  <article class="mod" id="m15">
+    <header><span class="mnum bD">М15</span><div><h4>Global Challenges</h4><p>Архитектура сложного письма · 4,5 ч</p></div></header>
+    <div class="mgrid">
+      <div class="mcol"><h5>Грамматика</h5><ul>
+        <li>Подчинение и пунктуация: точка с запятой, двоеточие, тире</li>
+        <li>Параллельные структуры в перечислениях</li>
+        <li>Когезия: цепочки референции, <span class="en">this + summary noun (this approach, this shift)</span></li>
+        <li>Абзацная логика: topic sentence → развитие → мостик</li>
+        <li>Run-on sentences и как их чинить</li>
+      </ul></div>
+      <div class="mcol"><h5>Лексика · 45 единиц</h5>
+        <p class="dom">Домены: кризисы, международное сотрудничество + Academic Word List (ядро)</p>
+        <p class="ex">a humanitarian crisis · displacement · food security · infrastructure · conflict resolution · scarce resources · international cooperation · alleviate poverty · a contingency plan · resilient systems · preparedness · aid distribution</p>
+      </div>
+    </div>
+    <dl class="mrows">
+      <div><dt>Тексты</dt><dd>Лонгрид <span class="en">“After the Flood”</span> (адаптация городов, 900 слов) + отчёт гуманитарной NGO (350 слов)</dd></div>
+      <div><dt>Продукция</dt><dd>Proposal 220–260 слов (CAE-жанр): предложение проекта с обоснованием бюджета + модельный ответ</dd></div>
+      <div><dt>Anki</dt><dd>45 vocab · 10 grammar cloze · 8 transformation</dd></div>
+    </dl>
+  </article>
+
+  <!-- ======== ФИНАЛ ======== -->
+  <div class="blockhead"><span class="tag bF">Финал</span><div><h3>Модуль 16 — экзаменационный спринт</h3><p>4,5 часа · замер против внешней шкалы</p></div></div>
+
+  <article class="mod" id="m16">
+    <header><span class="mnum bF">М16</span><div><h4>Mock Exam &amp; Debrief</h4><p>Итоговый замер · 4,5 ч</p></div></header>
+    <dl class="mrows" style="border-top:none">
+      <div><dt>Часть 1</dt><dd>Полный Reading &amp; Use of English в формате CAE (90 мин, все 8 частей) — собирается из материалов курса + новые тексты</dd></div>
+      <div><dt>Часть 2</dt><dd>Writing: essay + жанр по выбору (letter / proposal / review), 90 мин под таймер</dd></div>
+      <div><dt>Часть 3</dt><dd>Разбор: подсчёт по шкале CAE, финальная карта ошибок, план добора слабых мест</dd></div>
+      <div><dt>Часть 4</dt><dd>План на C2: extensive reading, CPE-материалы, разговорная практика — фиксируется письменно</dd></div>
+    </dl>
+  </article>
+</section>
+
+<!-- ================================================================ -->
+<section id="checkpoints">
+  <h2><small>Контроль</small>Чек-пойнты и карта ошибок</h2>
+  <div class="grid3">
+    <div class="card"><h3>Формат — 2 часа</h3><p>40 заданий типов 1–7 по пройденным модулям (плюс накопительные из прошлых блоков) + одна письменная работа + час разбора. Все задания новые, не из модулей.</p></div>
+    <div class="card"><h3>Порог 75%</h3><p>Ниже 75% — блок не «провален», но следующая неделя объявляется неделей ревизии: Anki-марафон по слабым тегам и повтор упражнений с ошибками. Курс удлиняется — это нормально и предусмотрено.</p></div>
+    <div class="card"><h3>Карта ошибок</h3><p>Единый файл <code style="background:var(--code); padding:1px 5px; border-radius:5px">error-map.md</code>: ошибка → правило → карточка. Ведётся с диагностики до финала; на чек-пойнтах сверяется, ушли ли старые ошибки.</p></div>
+  </div>
+</section>
+
+<!-- ================================================================ -->
+<section id="extensive">
+  <h2><small>Фон</small>Вне 80 часов — extensive input</h2>
+  <div class="prose"><p>80 часов — это интенсив. Уровень закрепляется объёмом входа, который в часы не считается: он идёт фоном и не требует стола и ноутбука.</p></div>
+  <div class="tw"><table>
+    <thead><tr><th>Активность</th><th>Норма</th><th>Что именно</th></tr></thead>
+    <tbody>
+      <tr><td><b>Anki</b></td><td class="num">10–15 мин/день</td><td>Двигатель всего курса. Пропуск дня допустим, пропуск недели — нет</td></tr>
+      <tr><td><b>Подкасты</b></td><td class="num">3 эпизода/нед</td><td>По теме текущего модуля: <span class="en">Hidden Brain, 99% Invisible, The Rest Is History, The Daily</span> — нативная скорость</td></tr>
+      <tr><td><b>Сериал</b></td><td class="num">2 эпизода/нед</td><td>Блоки A–B с английскими субтитрами, с блока C — без</td></tr>
+      <tr><td><b>Книга</b></td><td class="num">с блока B</td><td>Нон-фикшн уровня B2+/C1: <span class="en">Atomic Habits, Sapiens, Bad Blood</span> — 15–20 стр/нед, выписывать по 5 коллокаций</td></tr>
+      <tr><td><b>Микро-дневник</b></td><td class="num">5 предложений/день</td><td>Опционально: короткая запись с конструкцией недели — самый дешёвый способ продукции</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<!-- ================================================================ -->
+<section id="production">
+  <h2><small>Для делегирования субагентам</small>Производственный план контента</h2>
+  <div class="prose">
+    <p>Контент отвязан от платформы: каждый модуль — самодостаточный пакет файлов со строгой схемой. Его можно читать как markdown, импортировать в Anki, а позже — синкать в базу приложения. Новый язык (немецкий) — это просто новый корень <code style="background:var(--code); padding:1px 6px; border-radius:5px">content/de-a1/</code> с той же схемой. Жёсткое правило пакета: внутри файлов модуля нет ни слова по-русски.</p>
+  </div>
+  <pre>content/en-c1/
+  module-01/
+    meta.yaml          # тема, грамм-подтемы (grammar_points), standfirst, goals, тексты, жанр
+    vocab.yaml         # 45 entries: term, tag, definition, use_cases (2–3), collocations, register
+    theory.yaml        # grammar spotlights (form/example/note) + Watch out!-блоки — English only
+    text-main.yaml     # лонгрид 700–900 слов: body-сегменты с тап-глоссами + glosses
+    text-extra.yaml    # доп. текст 300–400 слов другого жанра
+    exercises.yaml     # 66 основных заданий + review_pool из 30 (module quiz и ревью +7/+21)
+    writing.yaml       # task + model answer + self-check checklist
+    anki-vocab.csv     # Term,Definition,UseCase1,UseCase2,Collocations,Register,Tags
+    anki-grammar.csv   # Text,Hint,Rule,Tags          (Cloze)
+    anki-transform.csv # Prompt,Key,Answer,Note,Tags
+  module-02/ …         # полная схема пакета: content/en-c1/README.md в репо</pre>
+
+  <h3 style="font-size:18px; margin-top:28px">Шаблон задачи субагенту</h3>
+  <pre>Разработай модуль M{N} курса en-c1 по спецификации из плана SkyRocket English.
+
+Вход: карточка модуля M{N} (тема, грамм-подтемы, домены лексики с якорями,
+названия текстов, жанр продукции).
+
+ЯЗЫК: весь контент — строго английский, graded под B2+ (стиль Cambridge-учебника
+и learner's dictionary). Ни одного русского слова ни в одном файле.
+
+Сгенерируй пакет файлов по схеме content/en-c1/module-{NN}/:
+1. meta.yaml — тема, подтемы грамматики, тексты, жанр продукции.
+2. vocab.yaml — ПОЛНЫЕ 45 записей (якоря из плана + добор в тех же доменах,
+   уровень C1, не частотник B1): term, definition, 2–3 use cases в разных
+   контекстах, collocations, register.
+3. theory.yaml — grammar spotlights по всем подтемам (form / example / note),
+   блоки "Watch out!" с частотными ошибками (отбор — L1-интерференция).
+4. text-main.yaml — лонгрид под заявленным названием: ≥20 единиц из vocab.yaml,
+   ≥8 целевых конструкций, аутентичная журналистика C1; body — сегменты
+   с тап-глоссами + glosses (term, pos, definition, example).
+5. text-extra.yaml — второй текст заявленного жанра, ≥8 единиц.
+6. exercises.yaml — основной сет ровно: 8 mc-cloze, 8 open-cloze,
+   8 word-formation, 8 key-word-transformation, 10 grammar-drill,
+   8 error-correction, 10 collocation-match, 6 reading-comprehension;
+   плюс review_pool: 30 смешанных коротких заданий для module quiz
+   и ревью на +7/+21 день. У каждого задания: answer + explanation
+   (English). Ровно один верный ответ.
+7. writing.yaml — задание CAE-жанра модуля + model answer 220–260 слов
+   + self-check checklist из 8 пунктов.
+8. Три CSV для Anki по схемам из плана: 45 vocab (с use cases), 10 cloze,
+   8 transform. Теги en-c1::m{NN}.
+
+Definition of Done — см. чек-лист производственного плана.</pre>
+
+  <h3 style="font-size:18px; margin-top:28px">Definition of Done для модуля</h3>
+  <ul class="check">
+    <li>Ни одного русского слова в файлах модуля; определения и объяснения — graded English (learner’s dictionary style)</li>
+    <li>45 записей vocab.yaml уровня C1: коллокации и фразовые глаголы, не одиночные частотные слова; у каждой — definition, 2–3 use cases в разных контекстах, collocations, register</li>
+    <li>Лонгрид содержит ≥20 целевых единиц и ≥8 целевых конструкций; читается как аутентичная журналистика, не как упражнение</li>
+    <li>66 основных заданий + 30 в review_pool; счёт по типам сходится; у каждого ровно один верный ответ и объяснение на английском</li>
+    <li>Все три CSV парсятся, количество строк сходится (45/10/8), теги <code style="background:var(--code); padding:1px 5px; border-radius:5px">en-c1::m{NN}</code> проставлены</li>
+    <li>Трансформации включают 2–3 задания на грамматику прошлых модулей (спиральное повторение)</li>
+    <li>Модельный ответ writing выдержан в целевом регистре и укладывается в 220–260 слов</li>
+  </ul>
+
+  <h3 style="font-size:18px; margin-top:28px">Порядок разработки</h3>
+  <div class="grid3">
+    <div class="card"><h3>1 · Пилот</h3><p>Диагностика + модуль М1. Пройти М1 самому от начала до конца, зафиксировать, что не работает (сложность, объём, формат карточек), откалибровать DoD.</p></div>
+    <div class="card"><h3>2 · Пачки по блоку</h3><p>После калибровки модули генерируются пачками по 4 (блок за раз), параллельными субагентами — каждому по карточке модуля из этого плана. Блок B заказывается, пока проходится блок A.</p></div>
+    <div class="card"><h3>3 · Ревизия чек-пойнтов</h3><p>Чек-пойнт-тесты генерируются после завершения контента блока — отдельная задача субагенту со списком фактических правил и лексики блока.</p></div>
+  </div>
+</section>
+
+<!-- ================================================================ -->
+<section id="design">
+  <h2><small>Следующий шаг — приложение</small>Дизайн-промпт для web app</h2>
+  <div class="prose">
+    <p>Подача «как в хорошем учебнике» и визуализация системы прогресса — задача приложения. Ниже — готовый бриф для отдельной дизайн-сессии: он сжимает этот план в спецификацию и просит спроектировать интерфейс вместе с интерактивным макетом. Копируется целиком в новую сессию Claude Code.</p>
+  </div>
+  <pre>Design brief — SkyRocket: a self-study language platform with a coursebook soul
+
+CONTEXT
+Personal web app for one adult learner (a software engineer). Stack: Next.js +
+Prisma + Neon Postgres on Netlify; mobile-first PWA; later the same deploy gets
+wrapped as a Telegram Mini App (daily-review reminders via bot). The engine is
+course-agnostic: the first course is English B2+ → C1 (16 modules in 4 blocks
+plus checkpoints); a German course will reuse the same engine. UI and all
+learning content are 100% English. Content ships as typed data per module
+(YAML/CSV); the app renders it.
+
+THE PRODUCT IS A SYSTEM, NOT A LIBRARY
+Core loop: one module = one week = 4 fixed sessions (Prime 60', Input 75',
+Workout 75', Output 60') + daily 10–15' of flashcards. Three repetition lanes
+the UI must make tangible:
+1) flashcard SRS — vocab (use cases on the back), grammar cloze, transformations;
+2) exercise re-queue — failed items return at 2/7/21 days; sessions 2–3 open
+   with a 10-item Review Slot taken from this queue;
+3) module reviews — quizzes at +7 and +21 days after finishing a module;
+   both at 80%+ promote the module to Mastered.
+Item states: lexeme New → Learning → Known → In use; construction Introduced →
+Practising → Reliable; module In progress → Completed → Mastered; block
+checkpoints are gates (75%+). Every mistake is harvested into a flashcard —
+make error harvesting a first-class, one-tap flow.
+
+SCREENS
+1. Today — answers "what do I do right now": current session with its step
+   plan, review queue size, cards due, streak; one primary call to action.
+2. Course map — blocks, modules, checkpoints and their states.
+3. Module unit — the coursebook experience (see below).
+4. Exercise player — 8 typed interactions: multiple-choice cloze, open cloze,
+   word formation, key-word transformation, grammar drill, error correction,
+   collocation match, reading comprehension. Instant check, English
+   explanations, harvest-on-error.
+5. Review hub — the three lanes, what is due and what is overdue.
+6. Flashcard player — three note types, use cases shown on the back.
+7. Writing / speaking flow — task, timer, submit, model-answer reveal,
+   self-check checklist.
+8. Progress — course map plus % lexis Known+, constructions Reliable,
+   retention, streak.
+9. Course switcher and settings (multi-course from day one).
+
+THE COURSEBOOK FEEL — the heart of this brief
+A module page should read like a beautifully typeset modern coursebook unit,
+not a feed: unit opener with goals; Grammar Spotlight panels; the long-read
+with tap-to-reveal glosses on target items; vocabulary boxes that always show
+use cases (2–3 example sentences, collocations, register notes); "Watch out!"
+error boxes; exercises interleaved right after the input they practise;
+a closing unit-review page. Reading typography is first-class on a phone;
+interactive elements clearly look interactive.
+
+CONSTRAINTS
+Mobile-first, comfortable one-handed; light and dark themes; a quiet, adult,
+print-inspired aesthetic (Cambridge coursebook meets modern editorial web);
+no childish gamification — progress reads as craft and mastery, not confetti;
+color-code the four course blocks; tabular numerals for all stats; reading
+views tolerate flaky connectivity.
+
+DELIVERABLES
+1. Information architecture and navigation model.
+2. Design tokens (color, type, spacing) for both themes.
+3. A high-fidelity interactive HTML mockup (phone + desktop) covering: Today,
+   Course map, Module unit, Exercise player with at least 4 exercise types
+   working, Flashcard player, Progress.
+4. Interaction spec per exercise type: input handling, validation states,
+   explanation reveal, error-harvest affordance.
+5. Empty and edge states: nothing due today, checkpoint locked, overdue
+   reviews, course completed.</pre>
+</section>
+
+<!-- ================================================================ -->
+<section id="criteria">
+  <h2><small>Финальная планка</small>Критерии достижения C1</h2>
+  <div class="tw"><table>
+    <thead><tr><th>Навык</th><th>Измеримый критерий</th></tr></thead>
+    <tbody>
+      <tr><td><b>Reading &amp; Use of English</b></td><td>≥ 65% на полном моке CAE (М16)</td></tr>
+      <tr><td><b>Writing</b></td><td>Эссе за 45 минут: структура, целевой регистр, естественно использованы ≥3 конструкции курса (инверсия, клефт, hedging…)</td></tr>
+      <tr><td><b>Listening</b></td><td>Нативный подкаст 20 минут → связный пересказ из 10 предложений</td></tr>
+      <tr><td><b>Speaking</b></td><td>Монолог 3 минуты на абстрактную тему: без пауз дольше 3 секунд, с самозаписью</td></tr>
+      <tr><td><b>Vocabulary</b></td><td>≈945 карточек в ротации, mature retention ≥ 85%</td></tr>
+    </tbody>
+  </table></div>
+  <div class="prose">
+    <p class="muted">Если критерии выполнены — вы уверенный кандидат C1, и имеет смысл сдать CAE ради внешнего подтверждения. Дальше дорога на C2 — это уже объём: 20–30 книг, регулярная разговорная практика, CPE-материалы. План на неё пишется в М16 на основе финальной карты ошибок.</p>
+  </div>
+</section>
+
+<footer>SkyRocket English · план курса B2+ → C1 · 80 часов · подготовлен для пошаговой генерации контента субагентами</footer>
+
+</div>
