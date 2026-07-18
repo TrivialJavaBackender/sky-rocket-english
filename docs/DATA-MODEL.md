@@ -1,6 +1,6 @@
 # SkyRocket · Data Model — Neon Postgres
 
-Схема данных курс-агностичного движка изучения языков: контент модулей, недельный протокол сессий, пользователи и три колеи повторений. Спроектирована по утверждённому дизайну (`docs/design/skyrocket/` — `content.js` задаёт формы данных экранов), дизайн-брифу и плану курса (`docs/PLAN.md`). Миграции: `db/migrations/0001_init.sql` (DDL + сид типов упражнений), `db/migrations/0002_seed_en_c1_skeleton.sql` (каркас курса en-c1).
+Схема данных курс-агностичного движка изучения языков: контент модулей, недельный протокол сессий, пользователи и три колеи повторений. Спроектирована по утверждённому дизайну (`docs/design/skyrocket/` — `content.js` задаёт формы данных экранов), дизайн-брифу и плану курса (`docs/PLAN.md`). Миграции: `db/migrations/0001_init.sql` (DDL + сид типов упражнений), `db/migrations/0002_seed_en_c1_skeleton.sql` (каркас курса en-c1), `db/migrations/0003_content_natural_keys.sql` (стабильные натуральные ключи `ident` для `exercise`/`writing_task`/`flashcard` — см. ниже).
 
 ## Принципы
 
@@ -57,11 +57,13 @@ erDiagram
     enum group_key "grammar|reading|vocab"
     jsonb content "форма по типу плеера"
     text explanation "English-only"
+    text ident "натуральный ключ sync, partial UK(module_id/checkpoint_id)"
   }
   flashcard {
     enum note_type "vocab|grammar_cloze|transformation"
     jsonb fields "front, main, cases, extra"
     enum source "content|error_harvest|gloss|manual"
+    text ident UK "натуральный ключ sync, глобально уникален"
   }
 ```
 
@@ -153,9 +155,9 @@ erDiagram
 | `gloss` | Тап-глоссы текста | unique(text, key); «Add to deck» — источник карточки |
 | `vocab_entry` | Лексика 45/модуль | `use_cases jsonb` (2–3 примера), `tag`, `collocations`, `register_note` |
 | `exercise_type` | Справочник 8 типов | `interaction`: choice / text_input / word_tap / match; сид в 0001 |
-| `exercise` | Задание | владелец: модуль XOR чек-пойнт; `pool` core/review; `group_key` — лончеры юнита; `content jsonb` по типу; `explanation` EN |
-| `writing_task` | Письмо / спикинг | `mode`, `genre`, `model_answer_md`, `checklist jsonb` |
-| `flashcard` | Карточка (3 note-типа) | `fields jsonb` `{front, main, cases, extra}`; `source`: content / error_harvest / gloss / manual + ссылки на источник |
+| `exercise` | Задание | владелец: модуль XOR чек-пойнт; `pool` core/review; `group_key` — лончеры юнита; `content jsonb` по типу; `explanation` EN; `ident` (0003) — натуральный ключ sync, partial unique `(module_id, ident)`/`(checkpoint_id, ident)` |
+| `writing_task` | Письмо / спикинг | `mode`, `genre`, `model_answer_md`, `checklist jsonb`; `ident` (0003) — натуральный ключ sync, partial unique `(module_id, ident)`/`(checkpoint_id, ident)` |
+| `flashcard` | Карточка (3 note-типа) | `fields jsonb` `{front, main, cases, extra}`; `source`: content / error_harvest / gloss / manual + ссылки на источник; `ident` (0003) — натуральный ключ sync, глобально unique |
 
 ### Протокол сессий
 
@@ -217,9 +219,12 @@ left join user_vocab_state uvs on uvs.vocab_entry_id = ve.id and uvs.user_id = $
 ```bash
 psql "$DATABASE_URL" -f db/migrations/0001_init.sql
 psql "$DATABASE_URL" -f db/migrations/0002_seed_en_c1_skeleton.sql
+psql "$DATABASE_URL" -f db/migrations/0003_content_natural_keys.sql
 ```
 
-Проверено на чистом PostgreSQL 16 (docker): обе миграции применяются без ошибок; каркас — 1 курс, 4 блока, 15 модулей, 5 чек-пойнтов, 60 сессий, 255 шагов, 8 типов упражнений; сценарий «ошибка → очередь повторений» и запросы всех трёх колей работают, частичные индексы задействованы (`EXPLAIN`).
+(В приложении `web/` эти три файла применяет `scripts/migrate.ts` — идемпотентный раннер на `pg` с таблицей учёта `schema_migrations`, см. `docs/ARCHITECTURE.md` §3.2.)
+
+Проверено на чистом PostgreSQL 16 (docker): все три миграции применяются без ошибок; каркас — 1 курс, 4 блока, 15 модулей, 5 чек-пойнтов, 60 сессий, 255 шагов, 8 типов упражнений; сценарий «ошибка → очередь повторений» и запросы всех трёх колей работают, частичные индексы задействованы (`EXPLAIN`). После 0003 подтверждено на реальном sync module-01: `exercise`/`writing_task`/`flashcard` upsert по `ident` стабильно сохраняет `id` при пересинке и переупорядочивании контента, прунинг удалённых сущностей не задевает `id` остальных строк.
 
 ---
 
@@ -810,6 +815,37 @@ join (values
                                                                       10, '{"count":10,"pool":"review"}')
 ) as v(stype, position, kind, title, detail, minutes, config)
   on v.stype = s.session_type::text;
+
+commit;
+```
+
+### db/migrations/0003_content_natural_keys.sql
+
+```sql
+-- 0003_content_natural_keys.sql — stable natural keys for exercise, writing_task, flashcard.
+-- 0001 gave these tables no unique natural key: a full re-sync that recreates
+-- rows (or keys them by position) would change their ids on any content
+-- reorder, orphaning exercise_attempt / review_queue_item / card_state / module_review.
+-- `ident` is a deterministic, content-derived (or author-supplied) key that
+-- scripts/sync.ts upserts on, so ids stay stable across re-sync.
+-- Apply: applied by scripts/migrate.ts (or psql "$DATABASE_URL" -f db/migrations/0003_content_natural_keys.sql)
+
+begin;
+
+alter table exercise add column ident text;
+create unique index exercise_module_ident_uniq
+  on exercise (module_id, ident) where module_id is not null;
+create unique index exercise_checkpoint_ident_uniq
+  on exercise (checkpoint_id, ident) where checkpoint_id is not null;
+
+alter table writing_task add column ident text;
+create unique index writing_task_module_ident_uniq
+  on writing_task (module_id, ident) where module_id is not null;
+create unique index writing_task_checkpoint_ident_uniq
+  on writing_task (checkpoint_id, ident) where checkpoint_id is not null;
+
+alter table flashcard add column ident text;
+create unique index flashcard_ident_uniq on flashcard (ident);
 
 commit;
 ```

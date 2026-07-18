@@ -1,0 +1,630 @@
+# SkyRocket English — архитектура веб-приложения
+
+> **Назначение.** Канонический проектный документ, по которому три исполнителя реализуют приложение: **этап 2** — каркас `web/` + синк контента, **этап 3** — бэкенд (доменные модели, use cases, server actions, SSR-выборки), **этап 4** — фронтенд по утверждённому дизайну. Документ не содержит кода приложения — только контракты, решения и ТЗ.
+>
+> **Источники истины (в порядке приоритета при конфликте):**
+> 1. Схема БД — raw SQL миграции `db/migrations/*.sql` (+ `docs/DATA-MODEL.md` как их описание).
+> 2. Контент — пакеты `content/en-c1/module-*/` (+ `content/en-c1/README.md` как схема пакета).
+> 3. План курса — `docs/PLAN.md` (метод, протокол, повторения, роадмап).
+> 4. Дизайн — `docs/design/skyrocket/` (`content.js` — формы данных экранов, `Skyrocket.dc.html` — вёрстка и логика плеера упражнений/карточек).
+> 5. Референс инженерии — `../concurrency/web` (Next.js 15 + Prisma + sync-скрипт + Netlify).
+>
+> Правило CLAUDE.md: **контент — English only**; документы для пользователя (включая этот) — по-русски; идентификаторы кода — как есть.
+
+---
+
+## 0. Утверждённые рамки (не пересматриваются)
+
+- **Стек:** Next.js 15 (App Router, SSR/RSC) + React 19, Server Actions вместо отдельного API-сервера. Деплой на Netlify через `@netlify/plugin-nextjs`. БД — Neon Postgres (прод) / Postgres 16 в Docker (локально).
+- **Расположение:** приложение в каталоге `web/` этого репозитория; `netlify.toml` в корне репо с `base = "web"`.
+- **Пользователь:** один, без регистрации/логина (захардкоженный `app_user`). Но все прогресс-таблицы уже несут `user_id` — весь код параметризуется `userId`, чтобы мультиюзер добавлялся без переписывания.
+- **Контент vs прогресс:** контент-таблицы синкаются идемпотентно по `content_hash`; прогресс пользователя синк не трогает.
+- **Миграции — source of truth схемы.** Prisma их **не** владеет (никакого `prisma migrate`).
+
+---
+
+## 1. Полный каталог use cases
+
+Ниже — все пользовательские сценарии, выведенные из `PLAN.md` (§3 протокол, §4 три колеи), схемы БД и экранов мокапа. Формат: **триггер → шаги → таблицы (R=чтение, W=запись) → что рендерится**. Каждый use case реализуется как функция application-слоя (`lib/use-cases/*`), вызываемая либо из RSC-страницы (чтение), либо из server action (запись).
+
+> Везде далее `U` = текущий `user_id` (сейчас константа, см. §2.7).
+
+### 1.1. Обзор и навигация
+
+**UC-01 · Dashboard / Today (главный экран).**
+- Триггер: заход на `/` (или таб «Today»).
+- Шаги: определить текущий модуль и сессию пользователя; собрать шаги сессии; посчитать «что горит сегодня» по трём колеям; показать стрик.
+- R: `user_course`, `module` + `user_module_state` (найти `in_progress`), `study_session` + `user_session_state` (текущая сессия «N of 4»), `session_step` (+ `user_step_state`), `card_state` (due ≤ now — счётчик карточек), `review_queue_item` (open, due ≤ now — счётчик очереди), `module_review` (due ≤ now — квизы ревью), `daily_activity` (стрик).
+- W: —.
+- Рендер: карточка текущей сессии + кнопка «Continue Session N», плитки «cards due / queue due», список шагов сессии, баннер overdue (если бэклог), стрик. Формы — `SKY.today` в `content.js`. Крайние состояния: `session-due` / `nothing-due` / `overdue-reviews` (см. `todayState` в мокапе).
+
+**UC-02 · Course map (карта курса).**
+- Триггер: таб «Course» / `/course`.
+- Шаги: собрать дерево `course → block → module` со статусами модулей и футерами-чек-пойнтами.
+- R: `block`, `module` + `user_module_state`, `checkpoint` + `user_checkpoint_state`, `course.level_label`.
+- W: —.
+- Рендер: 4 блока (цвет/tint из `block`), в каждом — модули с бейджем статуса (`Locked/Upcoming/In progress/Completed/Mastered`), футер блока = чек-пойнт (`passed · 86%` / `Locked — hint`). Формы — `SKY.blocks`. Тап по открытому модулю → UC-05.
+
+**UC-03 · Переключение курса.**
+- Триггер: меню курс-свитчера в шапке.
+- Шаги: сменить активный `user_course.is_active`; перегрузить дерево для другого курса.
+- R: `course` (все активные), `user_course`.
+- W: `user_course.is_active`.
+- Рендер: обновлённая карта/Today для выбранного курса. Пока курс один (`en-c1`) — свитчер показывает «German · A2 → B1» как заглушку (`SKY.course.other`), фактическое переключение включится со вторым курсом.
+
+**UC-04 · Progress (метрики).**
+- Триггер: таб «Progress» / `/progress`.
+- Шаги: агрегаты по статусам единиц + ретеншн + стрик + прогресс-бары блоков; лестница статусов; ближайшие события.
+- R: `user_vocab_state` (доля Known+/In use), `user_grammar_state` (доля Reliable), `card_review_log` (30-дневный first-try retention), `daily_activity` (стрик), `block`+`module`+`user_module_state` (проценты блоков), `module_review`+`review_queue_item` (upcoming).
+- W: —.
+- Рендер: 4 стата (`SKY.progress.stats`), лестница `Lexeme/Construction/Module`, бары блоков, список upcoming. Состояние «course completed» (`courseState`) — отдельный экран с CTA на следующий курс.
+
+### 1.2. Прохождение модуля
+
+**UC-05 · Unit overview (обзор модуля).**
+- Триггер: тап по модулю на карте / `/course/[courseSlug]/module/[moduleSlug]`.
+- Шаги: собрать шапку модуля, цели, ленту 4 сессий со статусами, «лончеры» теории/чтения/лексики.
+- R: `module` (`title`, `standfirst`, `goals`), `study_session`+`user_session_state` (лента сессий), плюс наличие `grammar_spotlight`/`reading_text`/`vocab_entry` для лончеров.
+- W: при первом входе — `user_module_state` → `in_progress` (если было `upcoming`), `started_at`.
+- Рендер: `SKY.unit` (block kicker, title, standfirst, goals, sessions grid, spotlight, watchout, reading, vocab, launchers).
+
+**UC-06 · Grammar spotlight + Watch-outs (теория).**
+- Триггер: шаг `theory` сессии Prime, либо лончер «Practise the spotlight».
+- Шаги: показать панели правил и блоки «Watch out!».
+- R: `grammar_spotlight` (`items jsonb [{form,example,note}]`), `watchout` (`bad_example/good_example/note`).
+- W: `user_step_state` (done) при завершении шага.
+- Рендер: `SKY.unit.spotlight` (title/intro/rows) + `SKY.unit.watchout`.
+
+**UC-07 · Reading с тап-глоссами (close/skim reading).**
+- Триггер: шаг `reading` (Prime skim / Input close / Output extra).
+- Шаги: рендер абзацев из сегментов; тап по глоссированному слову раскрывает определение; «Add to deck» создаёт карточку из глоссы.
+- R: `reading_text` (`body jsonb` — массив абзацев из сегментов `{t}`/`{g:key}`), `gloss` (по `reading_text_id`+`key`).
+- W: `user_step_state` (done); «Add to deck» → `flashcard(source=gloss, source_gloss_id, note_type=vocab)` + `card_state` (новая) для U.
+- Рендер: текст с пунктирными глосс-спанами; всплывающий блок глоссы (word/pos/def/example + кнопка Add to deck). Формы — `SKY.unit.reading.paras`. **Отличие от мокапа:** в БД сегмент несёт только `{g:key}` (не инлайн-объект) — фронт **джойнит** глоссу по ключу (см. §8, разн. D3).
+
+**UC-08 · Vocabulary studio (лексика).**
+- Триггер: шаг `vocab` сессии Prime, либо лончер «Practise the vocabulary».
+- Шаги: пролистать 45 единиц с use cases; отметить приоритетные.
+- R: `vocab_entry` (`term`, `tag`, `definition`, `use_cases jsonb`, `collocations`, `register_note`), `user_vocab_state`.
+- W: `user_vocab_state` (`new→learning` при отметке приоритета — см. §8 разн. D6), `user_step_state`.
+- Рендер: карточки лексем `SKY.unit.vocab.entries`.
+
+**UC-09 · Exercise set (набор упражнений).**
+- Триггер: (а) шаг `exercise_set` сессии (config: `{"types":[...]}` или `{"group_key":"vocab"}`), (б) лончер юнита (`grammar`/`reading`/`vocab`), (в) `review_slot`, (г) `module_quiz`, (д) чек-пойнт, (е) свободная практика.
+- Шаги: набрать очередь упражнений по критерию; проиграть по одному; для каждого — принять ответ, проверить на сервере, показать объяснение; на ошибке предложить harvest; в конце — сводка.
+- R: `exercise` (+ `exercise_type`) отфильтрованные по `module_id`/`checkpoint_id` + `pool` + `group_key`/`type_code`; `session_step.config`.
+- W: на каждый ответ — `exercise_attempt` (`context`, `given_answer jsonb`, `is_correct`); на ошибку в контексте сессии — `review_queue_item` (stage 1, due +2д) [колея 2]; harvest → `flashcard(source=error_harvest)` + `error_map_entry` + `card_state`; закрытие `review_slot`-элемента → `review_queue_item.resolved_at`/`resolved_attempt_id`, при успехе — продвижение stage (+7/+21) или закрытие; `daily_activity.exercises_done++`.
+- Рендер: плеер упражнения (стем/варианты/поле ввода/матч/тап), полоса прогресса-точек, фидбек (verde/rojo), объяснение, кнопки Harvest/Next; финальная сводка (score, harvested, re-queue). Алгоритмы проверки — §5, формы — `SKY.exercises`.
+
+**UC-10 · Writing production (письменное задание).**
+- Триггер: шаг `production` сессии Output в нечётных модулях (`writing_task.mode='writing'`), либо чек-пойнт с письмом.
+- Шаги: показать prompt; пользователь пишет текст (счётчик слов); submit.
+- R: `writing_task` (`prompt_md`, `genre`, `checklist jsonb`, `model_answer_md`).
+- W: `writing_submission` (`body_md`, `duration_min`, `self_check`), `user_step_state`.
+- Рендер: prompt + редактор + счётчик слов (220–260). После submit → UC-12.
+
+**UC-11 · Speaking production (монолог).**
+- Триггер: шаг `production` в чётных модулях (`writing_task.mode='speaking'`).
+- Шаги: показать карточку задания; пользователь записывает монолог (или отмечает выполненным); прикрепляет запись.
+- R: `writing_task`.
+- W: `writing_submission` (`attachment_url` = запись), `user_step_state`.
+- Рендер: prompt монолога, таймер/запись, кнопка submit. **Хранение аудио — открытый вопрос D8.**
+
+**UC-12 · Self-check + model answer.**
+- Триггер: шаг `self_check` после production.
+- Шаги: показать модельный ответ и чек-лист; пользователь отмечает пункты.
+- R: `writing_task.model_answer_md`, `writing_task.checklist`, последний `writing_submission`.
+- W: `writing_submission.self_check jsonb` (отметки), `user_step_state`.
+- Рендер: свой текст ↔ модельный ответ + чек-лист.
+
+### 1.3. Протокол 4 сессий
+
+**UC-13 · Ход сессии (session runner).**
+- Триггер: «Continue Session N» / вход в сессию.
+- Шаги: последовательно проводить шаги `session_step` по `position`; каждый шаг — соответствующий UC (06–12, 15); отмечать `user_step_state`; при завершении последнего шага — закрыть `user_session_state`, открыть следующую сессию.
+- R: `study_session`, `session_step` (+config), `user_session_state`, `user_step_state`.
+- W: `user_session_state` (`in_progress`/`done`, `started_at`/`completed_at`), `user_step_state`, `daily_activity.minutes`.
+- Рендер: заголовок сессии (Prime/Input/Workout/Output, planned_minutes), список шагов с чекбоксами, активный шаг.
+
+**UC-14 · Закрытие модуля (module quiz → Completed).**
+- Триггер: шаг `module_quiz` сессии Output (config `{"count":10,"pool":"review"}`).
+- Шаги: провести 10 упражнений из review-пула (UC-09 в контексте `module_quiz`); посчитать score; при завершении — модуль `Completed`, запланировать ревью +7/+21.
+- R: `exercise` (`pool='review'`, `module_id`).
+- W: `user_module_state` (`status='completed'`, `completed_at`, `quiz_score`), `module_review` (2 строки: stage `r7` due +7д, `r21` due +21д, `taken_at=null`), `user_session_state`/`user_step_state`.
+- Рендер: квиз + экран завершения модуля («reviews scheduled at +7 and +21 days»).
+
+### 1.4. Три колеи повторений
+
+**UC-15 · Колея 1 — Flashcards (SRS).**
+- Триггер: ежедневный ритуал (кнопка «Start · ≈12 min» на Today/Review) или `flashcards_intro`.
+- Шаги: набрать карточки, у которых `card_state.due_at ≤ now` (+ новые из модуля); показать front → flip → оценка Again/Hard/Good/Easy; пересчитать расписание (SRS); лог.
+- R: `card_state` (due для U), `flashcard` (`fields jsonb {front,main,cases,extra}`, `note_type`).
+- W: `card_state` (`phase`,`due_at`,`interval_days`,`ease`,`reps`,`lapses`,`last_reviewed_at`), `card_review_log` (`rating 1–4`, `prev_phase`, `new_due_at`), `daily_activity.cards_reviewed++`.
+- Рендер: карточка (тип-бейдж, front/back с cases/extra), 4 кнопки оценки с интервалами. Формы — `SKY.flashcards`. Алгоритм — §6.4 (SM-2, интервалы на кнопках из мокапа: Again 10 min / Hard 2 d / Good 4 d / Easy 8 d).
+- Заметка: новые карточки модуля попадают в колею через `flashcards_intro` (создаётся `card_state phase='new'` для всех `flashcard` модуля, `due_at=now`).
+
+**UC-16 · Колея 2 — Exercise re-queue (Review Slot).**
+- Триггер: шаг `review_slot` сессий Input/Workout (config `{"count":10}`), либо кнопка «Run the Review Slot».
+- Шаги: взять до 10 `review_queue_item` (open, due ≤ now) по `due_at`; для каждого проиграть свежий вариант того же `exercise` (UC-09, context=`review_slot`); при успехе — продвинуть stage (1→2→3, due +7/+21) или закрыть на stage 3; при повторной ошибке — сбросить due (правило §6.2).
+- R: `review_queue_item` (open, due), связанные `exercise`.
+- W: `exercise_attempt` (context=`review_slot`), `review_queue_item` (`stage`,`due_at`,`resolved_at`,`resolved_attempt_id`), `daily_activity`.
+- Рендер: тот же плеер + счётчик «10 items from the re-queue». Формы — `SKY.review.lanes[1]`.
+
+**UC-17 · Колея 3 — Module reviews (r7/r21).**
+- Триггер: наступил `module_review.due_at` (виден на Today/Review как «+7-day quiz due today»); кнопка «Take quiz».
+- Шаги: провести квиз из 10 новых вариантов заданий модуля (UC-09, context=`module_review`); посчитать score; отметить `passed = score≥80`; если оба ревью (r7 и r21) passed → модуль `Mastered`; иначе темы возвращаются в колею 2.
+- R: `exercise` (модуля, `pool='review'`), `module_review`.
+- W: `module_review` (`taken_at`,`score`,`passed`), при обоих passed — `user_module_state` (`status='mastered'`, `mastered_at`); при провале — `review_queue_item` по слабым темам.
+- Рендер: квиз + результат; на карте модуль → Mastered. Формы — `SKY.review.lanes[2]`.
+
+### 1.5. Чек-пойнты (ворота)
+
+**UC-18 · Диагностика.**
+- Триггер: старт курса (первый экран), `checkpoint.kind='diagnostic'`, `pass_mark=null`.
+- Шаги: 60 заданий Use of English (UC-09, context=`checkpoint`) + письмо (UC-10) + монолог; результат — карта пробелов (не ворота, ничего не блокирует).
+- R: `exercise`/`writing_task` (`checkpoint_id`).
+- W: `exercise_attempt`, `writing_submission`, `user_checkpoint_state` (`status='passed'` формально, `best_score`), опционально `error_map_entry` по промахам.
+- Рендер: длинный набор + сводка-«карта пробелов».
+
+**UC-19 · Чек-пойнт блока (A/B/C) и Final mock.**
+- Триггер: все модули блока `Completed`/`Mastered` → чек-пойнт `available`; тап «Take checkpoint». Final — после чек-пойнта C.
+- Шаги: 40 заданий (block) / полный mock (final) + письмо; порог `pass_mark` (75 / 65); при passed — блок пройден, следующий блок открывается; при провале — неделя ревизии.
+- R: `checkpoint`+`user_checkpoint_state`, `exercise`/`writing_task` по `checkpoint_id`.
+- W: `user_checkpoint_state` (`status`,`best_score`,`taken_at`); при passed — разблокировка модулей следующего блока (`user_module_state locked→upcoming`).
+- Рендер: тест + разбор; на карте футер блока → passed/failed.
+
+### 1.6. Служебные / кросс-сценарии
+
+**UC-20 · Error map (карта ошибок).** R/W: `error_map_entry` (создаётся из harvest UC-09 и из письма); просмотр реестра ошибка→правило→карточка; на чек-пойнтах — свериться, ушли ли старые ошибки (`resolved_at`).
+
+**UC-21 · Manual flashcard / harvest.** W: `flashcard(source='manual'|'error_harvest', created_by_user_id=U)` + `card_state`. Ручное добавление карточки и harvest ошибки в колоду.
+
+**UC-22 · Streak / daily activity.** W: любой продуктивный шаг апсертит `daily_activity(U, today)` (exercises_done/cards_reviewed/minutes). Read на Today/Progress для стрика и heatmap.
+
+**UC-23 · Vocab/Grammar promotion (фоновые статусы).** При успешных применениях: `user_grammar_state.success_count++`, `introduced→practising→reliable` (≥5 успешных, см. PLAN §4); лексема `known→in_use` при употреблении в `writing_submission` (`in_use_submission_id`). Вызывается как побочный эффект UC-09/UC-10.
+
+---
+
+## 2. Слои и структура каталогов `web/`
+
+Слоистая архитектура: **domain (чистая логика) → use-cases (оркестрация) → repositories (доступ к БД) → app/components (UI)**. Направление зависимостей строго внутрь: UI → use-cases → repositories → db; domain не зависит ни от чего (тестируется без БД).
+
+```
+web/
+  app/                                  # Next.js App Router: страницы (RSC) + server actions
+    layout.tsx                          # оболочка, нав-рельса/боттом-нав, шрифты
+    globals.css
+    page.tsx                            # UC-01 Today  (RSC)
+    course/
+      page.tsx                          # UC-02 Course map (RSC)
+      [courseSlug]/module/[moduleSlug]/
+        page.tsx                        # UC-05 Unit overview (RSC)
+        session/[sessionType]/
+          page.tsx                      # UC-13 Session runner (RSC + client-острова шагов)
+    review/page.tsx                     # UC-16/17 Review hub (RSC)
+    progress/page.tsx                   # UC-04 Progress (RSC)
+    flashcards/page.tsx                 # UC-15 SRS player (client-остров)
+    actions/                            # 'use server' — тонкие врапперы над use-cases
+      exercises.ts  flashcards.ts  sessions.ts  reviews.ts  writing.ts  course.ts
+  components/
+    player/                             # клиентские острова
+      ExercisePlayer.tsx                # UC-09 плеер всех 8 типов
+      FlashcardPlayer.tsx               # UC-15
+      exercise-types/                   # McCloze, OpenCloze, WordFormation, Kwt,
+                                        #   GrammarDrill, ErrorCorrection, CollocationMatch, ReadingComprehension
+    reading/ReadingText.tsx             # UC-07 глоссы (client — тап-раскрытие)
+    map/  today/  progress/  unit/      # презентационные (server) компоненты экранов
+    ui/                                 # примитивы (Badge, Card, ProgressBar, BottomNav, SideRail)
+  lib/
+    domain/                             # ЧИСТАЯ логика, без БД и без 'server' — юнит-тестируемо
+      srs.ts                            # SRS-планировщик (колея 1) — §6.4
+      review-queue.ts                   # +2/+7/+21 стадии (колея 2) — §6.2
+      module-review.ts                  # r7/r21 → Mastered (колея 3) — §6.3
+      grading/                          # проверка ответов — §5
+        index.ts                        # gradeAttempt(type_code, content, given) -> {is_correct, correctAnswer}
+        normalize.ts                    # normalize(text)
+        graders/*.ts                    # по одному на type_code
+      module-state.ts                   # машина статусов модуля/блока/чек-пойнта — §1.5, §6.5
+      progress.ts                       # агрегаты статусов (доли Known+/Reliable/retention)
+      time.ts                           # startOfDay/addDays (из референса leitner.ts)
+      types.ts                          # доменные типы (ExerciseContent-юнион, GivenAnswer, статусы)
+    use-cases/                          # application-слой, 'server-only'; оркестрирует repo + domain
+      today.ts  course-map.ts  unit.ts  session.ts  exercise-set.ts
+      flashcards.ts  review.ts  module-review.ts  checkpoint.ts  progress.ts  writing.ts  course-switch.ts
+    repositories/                       # доступ к БД через Prisma; ТОЛЬКО здесь Prisma
+      course.repo.ts  module.repo.ts  content.repo.ts  exercise.repo.ts
+      progress.repo.ts  srs.repo.ts  review.repo.ts  writing.repo.ts  activity.repo.ts
+    db.ts                               # PrismaClient singleton (из референса)
+    serialize.ts                        # BigInt → number на границе repo (§3, разн. D7)
+    current-user.ts                     # getCurrentUserId(): сейчас const; будущий auth — здесь
+    content-schema.ts                   # zod-типы YAML пакета (общие для sync и рантайма)
+  prisma/
+    schema.prisma                       # ИНТРОСПЕКТИРОВАННАЯ схема (prisma db pull), @@map на snake_case
+  scripts/
+    migrate.ts                          # применяет db/migrations/*.sql идемпотентно (§3.2)
+    sync.ts                             # content/<course> → БД (§4)
+    seed-user.ts                        # создаёт единственного app_user (username='pavel')
+  content.config.ts                     # реестр курсов и модулей (порядок, slug) — §4.1
+  docker-compose.yml                    # Postgres 16 локально (из референса)
+  next.config.mjs  tailwind.config.ts  tsconfig.json  package.json  .env.example
+```
+
+**Корень репозитория:** `netlify.toml` с `base="web"` (см. §3.3). Каталоги `db/migrations/` и `content/` остаются в корне репо; sync и migrate обращаются к ним по относительному пути вверх (как в референсе `MODULES_ROOT = ../modules`).
+
+**Границы, которые исполнители не нарушают:**
+- Prisma импортируется **только** в `lib/repositories/*` и `scripts/*`. Use-cases и domain о Prisma не знают.
+- `lib/domain/*` не импортирует ничего из `lib/repositories`, `next`, `@prisma/client` — чистые функции.
+- Server actions (`app/actions/*`) — тонкие: `getCurrentUserId()` → вызов use-case → `revalidatePath`. Никакой бизнес-логики.
+- Клиентские компоненты (`'use client'`) не читают БД — только принимают props от RSC и дёргают server actions.
+
+---
+
+## 3. Доступ к БД: Prisma поверх raw SQL-миграций
+
+### 3.1. Решение
+
+**SQL-миграции — единственный source of truth схемы. Prisma используется как типизированный клиент, полученный интроспекцией, и НЕ владеет миграциями.**
+
+Поток:
+1. Разработчик пишет DDL в `db/migrations/000N_*.sql` (существующие не редактируются — только новые файлы).
+2. `scripts/migrate.ts` применяет миграции к БД (локально и на билде).
+3. `prisma db pull` интроспектирует уже применённую схему → генерирует/обновляет `prisma/schema.prisma` (модели с `@@map`/`@map` на snake_case имена таблиц и колонок, enum'ы как Prisma enums). Полученный `schema.prisma` **коммитится**.
+4. `prisma generate` (в `postinstall`) генерирует типизированный клиент из закоммиченного `schema.prisma`.
+
+Почему не `prisma migrate`: схема уже спроектирована в raw SQL (partial unique indexes, CHECK-констрейнты `exercise_owner`/`checkpoint_block_by_kind`, `generated always as identity`, частичные индексы `where resolved_at is null`) — часть этого Prisma-миграции не выражают. Интроспекция сохраняет БД как есть и лишь читает её.
+
+Практика: после каждой новой миграции разработчик прогоняет `prisma db pull` и коммитит обновлённый `schema.prisma` (это ручной шаг, не автоген на билде — на билде клиент генерируется из коммита). `prisma db pull` не потеряет частичные индексы/чеки — они останутся в БД; в `schema.prisma` они отражаются как поддерживаемые атрибуты либо остаются вне модели (Prisma их не трогает, потому что не мигрирует).
+
+### 3.2. `scripts/migrate.ts` (раннер миграций)
+
+Не зависит от `psql` (на Netlify его нет). Использует `pg` (node-postgres) напрямую:
+- Таблица учёта: `create table if not exists schema_migrations (filename text primary key, applied_at timestamptz default now())`.
+- Читает `../db/migrations/*.sql`, сортирует по имени, отбирает те, которых нет в `schema_migrations`.
+- Файлы уже содержат собственные `begin; ... commit;` — раннер выполняет содержимое файла **как есть** одним `query`, затем отдельным statement пишет строку в `schema_migrations`. Если файл упал — его транзакция откатилась, строка учёта не записана, билд падает.
+- Идемпотентность: повторный прогон применяет 0 файлов.
+- Регистрирует уже применённые вручную 0001/0002 (первый прогон на существующей БД: если таблицы есть, но `schema_migrations` пуста — предусмотреть флаг `--baseline`, помечающий все текущие файлы применёнными без выполнения; для чистой БД просто применяет все).
+
+Альтернатива, если не тянуть `pg`: `prisma db execute --file db/migrations/000N.sql --schema prisma/schema.prisma` в цикле по неприменённым (учёт всё равно нужен вручную). Основной вариант — `pg`-раннер.
+
+### 3.3. Билд и деплой
+
+**`netlify.toml` (корень репо):**
+```toml
+[build]
+  base    = "web"
+  command = "pnpm install --frozen-lockfile && pnpm build"
+  publish = ".next"
+[build.environment]
+  NODE_VERSION = "20"
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+```
+
+**`package.json` scripts (web):**
+```
+"build":  "tsx scripts/migrate.ts && tsx scripts/sync.ts && next build"
+"postinstall": "prisma generate"
+"dev":    "next dev"
+"migrate":"tsx scripts/migrate.ts"
+"sync":   "tsx scripts/sync.ts"
+"db:pull":"prisma db pull && prisma generate"
+```
+Порядок на билде: `prisma generate` (postinstall) → `migrate` (применить SQL) → `sync` (залить контент) → `next build`.
+
+**Подключения к Neon (две переменные, стандартный паттерн Prisma+Neon):**
+- `DATABASE_URL` — **пулер** Neon (pgBouncer, `?pgbouncer=true&connection_limit=1`), используется рантаймом (serverless-функции Netlify) и Prisma-клиентом.
+- `DIRECT_URL` — прямое подключение, используется `migrate.ts`/`sync.ts` на билде (DDL и bulk-upsert; на пулере DDL капризничает).
+- Локально обе указывают на Docker-Postgres (`postgres://dev:dev@localhost:5432/skyrocket`).
+
+**`docker-compose.yml`** — Postgres 16 (как в референсе), БД `skyrocket`.
+
+**`.env.example`** фиксирует `DATABASE_URL`, `DIRECT_URL`, `APP_USER_USERNAME`.
+
+### 3.4. Заметки по типам
+
+- Все PK — `bigint generated always as identity`. Prisma маппит `bigint` → JS `BigInt`. `BigInt` не сериализуется в JSON и неудобен в props RSC→client. **Решение (D7):** репозитории возвращают DTO, где id приведены к `number` через `lib/serialize.ts` (безопасно при single-user масштабе — id заведомо < 2^53). Доменные типы оперируют `number`.
+- `jsonb`-поля (`content`, `fields`, `items`, `body`, `use_cases`, `goals`, `config`, `checklist`, `self_check`, `given_answer`) Prisma отдаёт как `Prisma.JsonValue` — валидируются zod-типами из `lib/content-schema.ts`/`lib/domain/types.ts` на входе.
+- Enum'ы Postgres (`session_type`, `step_kind`, `card_phase`, `module_status`, …) интроспектируются в Prisma enums — использовать их как типы в domain.
+
+---
+
+## 4. Дизайн sync-скрипта («скраппер»)
+
+`scripts/sync.ts` по образцу `../concurrency/web/scripts/sync.ts`: обход контента, парсинг, идемпотентный upsert по `content_hash`, прунинг удалённого, полное сохранение прогресса. Отличие от референса: контент — структурированный **YAML/CSV** (а не markdown), и целевых таблиц много.
+
+### 4.1. Реестр (`content.config.ts`)
+
+```ts
+export const COURSES = [{
+  slug: 'en-c1', root: 'content/en-c1',
+  modules: [ { slug: 'm01', dir: 'module-01' }, … ],   // явный список — контроль порядка/наличия
+  checkpoints: [ { slug: 'diagnostic', dir: 'diagnostic' }, { slug: 'cp-a', dir: 'checkpoint-a' }, … ],
+}];
+```
+Как в референсе: синкается только то, что в реестре (новый модуль требует явной записи). Модуль без каталога — предупреждение и пропуск.
+
+### 4.2. Обход и маппинг файлов на таблицы
+
+Для каждого модуля `content/en-c1/module-NN/`:
+
+| Файл | Целевые таблицы | Натуральный ключ upsert |
+|---|---|---|
+| `meta.yaml` | `module` (title, standfirst, goals), `grammar_point[]` (из `grammar_points`) | `module`: unique(block_id, slug); `grammar_point`: unique(module_id, title) |
+| `theory.yaml` | `grammar_spotlight[]`, `watchout[]` | unique(module_id, position) |
+| `vocab.yaml` | `vocab_entry[]` | unique(module_id, term) |
+| `text-main.yaml` | `reading_text(kind=main)` + `gloss[]` | reading: unique(module_id, kind, position); gloss: unique(reading_text_id, key) |
+| `text-extra.yaml` | `reading_text(kind=extra)` + `gloss[]` | то же |
+| `exercises.yaml` | `exercise[]` (`core` + `review_pool`) | **см. §4.5 (натуральный ключ отсутствует — нужен `ident`)** |
+| `writing.yaml` | `writing_task` | **см. §4.5** |
+| `anki-vocab.csv` | `flashcard(note_type=vocab)` | **см. §4.5** |
+| `anki-grammar.csv` | `flashcard(note_type=grammar_cloze)` | |
+| `anki-transform.csv` | `flashcard(note_type=transformation)` | |
+
+Чек-пойнты: каталоги `diagnostic/`, `checkpoint-a…c/`, `final/` содержат `exercises.yaml` (+ `writing.yaml`) → `exercise`/`writing_task` с `checkpoint_id` (владелец — чек-пойнт, не модуль; CHECK `exercise_owner`).
+
+**Структура курса (course/block/module/checkpoint/study_session/session_step) НЕ синкается — она в миграции `0002`.** Sync лишь **обновляет** уже существующие `module`-строки (title/standfirst/goals/content_hash) по (block, slug) и наполняет их контентом. `grammar_spotlight`, `watchout`, `grammar_point`, `reading_text`, `gloss`, `vocab_entry`, `exercise`, `writing_task`, `flashcard` — создаются синком.
+
+### 4.3. Порядок вставки (с учётом FK)
+
+1. `module` (upsert по slug — обновление; строка уже есть из seed).
+2. `grammar_point` (нужен для `exercise.grammar_point_id`).
+3. `grammar_spotlight`, `watchout`.
+4. `reading_text` → затем `gloss` (FK на reading_text).
+5. `vocab_entry`.
+6. `exercise` (резолвит `grammar_point_id` по title, `reading_text_id` — для `reading_comprehension` линкует на main-текст модуля, опционально).
+7. `writing_task`.
+8. `flashcard` (из CSV; vocab-карточки линкуются на `vocab_entry` по `term` → `vocab_entry_id`).
+
+Прунинг — в обратном порядке зависимостей.
+
+### 4.4. content_hash и идемпотентность
+
+Двухуровневый хэш (как «нулевой» гейт + гранулярность):
+- **Модульный гейт:** `module.content_hash = sha256(конкатенация сырых байтов всех файлов пакета)`. Если совпал — весь модуль пропускается без единого запроса к контент-строкам (быстрый no-op на неизменном пакете, как в референсе — «zero writes when unchanged»).
+- **Пер-сущностный хэш:** для каждой строки `content_hash = sha256(нормализованный сериализованный объект этой сущности)`. Upsert по натуральному ключу: `create`, если строки нет; `update`, если `content_hash` изменился; иначе `unchanged`. Счётчики `+added ~updated =unchanged -removed` в лог (как в референсе).
+
+Прогресс не трогается: контент-строки имеют стабильные натуральные ключи, поэтому их `id` сохраняются между синками → `exercise_attempt`, `card_state`, `review_queue_item`, `user_vocab_state` и пр. остаются валидными.
+
+### 4.5. Стабильные натуральные ключи — обязательная миграция `0003` (важно)
+
+**Проблема (см. §8, разн. D1).** Таблицы `exercise`, `writing_task`, `flashcard` **не имеют** уникального натурального ключа в `0001`. Если синк будет пересоздавать эти строки (или ключевать их по `position`), то при любом переупорядочивании контента `exercise.id`/`flashcard.id` изменятся, и привязанный прогресс потеряется: `exercise_attempt`, `review_queue_item`, а критично — `card_state` (SRS-расписание, PK = (user, flashcard_id)) и `module_review`.
+
+**Решение — исполнитель этапа 2 добавляет `db/migrations/0003_content_natural_keys.sql`:**
+- `alter table exercise add column ident text;` + `create unique index exercise_module_ident_uniq on exercise (module_id, ident) where module_id is not null;` + `... (checkpoint_id, ident) where checkpoint_id is not null;`
+- `alter table writing_task add column ident text;` + аналогичные частичные unique.
+- `alter table flashcard add column ident text;` + `create unique index flashcard_ident_uniq on flashcard (ident);`
+- Обновить `docs/DATA-MODEL.md` и переопубликовать артефакт схемы (по правилу CLAUDE.md «изменить схему БД»).
+
+**Формирование `ident` синком (детерминированно, стабильно к переупорядочиванию):**
+- `exercise.ident`: если в YAML задан явный `id:` у упражнения — использовать его; иначе `sha1(type_code + '|' + нормализованный ключевой текст)`, где ключевой текст = `pre+post+prompt` (choice/cloze) / `s1+key` (kwt) / `join(words)` (error) / `join(left)+join(right)` (match) / `passage+q` (reading). Ключевой текст стабилен, пока задание по сути то же.
+- `writing_task.ident`: `genre` (в модуле письмо одно; для чек-пойнтов — `genre+position`).
+- `flashcard.ident`: `note_type + '|' + Term` (vocab) / `note_type + '|' + sha1(Text)` (grammar_cloze) / `note_type + '|' + sha1(Prompt+Key)` (transformation). Тег `en-c1::mNN` даёт префикс уникальности между модулями.
+
+**Рекомендация контент-команде:** добавить в схему пакета (`content/en-c1/README.md`) опциональное поле `id:` у каждого упражнения — тогда ключ полностью авторский и переживает любые правки формулировки. До этого работает хэш-фолбэк.
+
+### 4.6. Прунинг удалённых сущностей
+
+Как в референсе (`pruneRemoved`): для каждого типа контента синк собирает множество `seen` натуральных ключей текущего пакета и удаляет из БД строки этого `module_id`, которых в `seen` нет.
+- Жёсткое удаление: `grammar_spotlight`, `watchout`, `grammar_point`, `reading_text`+`gloss`, `vocab_entry`, `exercise`, `writing_task` (их прогресс — `exercise_attempt` и т. п. — каскадится/`set null` по FK; это допустимо: единица исчезла из курса).
+- **Мягкое удаление флешкарт:** `flashcard.archived = true` вместо delete (сохраняет SRS-историю `card_state`/`card_review_log`), как auto-cards в референсе. Возврат единицы в пакет → `archived=false`.
+
+### 4.7. Zod-валидация
+
+`lib/content-schema.ts` описывает zod-схемы всех YAML-файлов (включая юнион 8 типов `content`). Синк валидирует каждый файл перед upsert — падение с понятной ошибкой при несоответствии формату (страховка качества генерации модулей). Те же типы переиспользует рантайм при чтении `content jsonb`.
+
+---
+
+## 5. Проверка ответов упражнений (8 типов)
+
+Проверка **только на сервере** (server action → `lib/domain/grading`). Клиент показывает интерактив (как в мокапе), но `is_correct` вычисляет сервер — клиентские индексы/ввод отправляются как `given_answer`, сервер сверяет с `content` из БД. Единая точка: `gradeAttempt(type_code, content, given) → { is_correct, correctAnswer, explanation }`.
+
+**Нормализация текста** (`lib/domain/grading/normalize.ts`, из логики мокапа `check()`): `s.trim().toLowerCase().replace(/\s+/g,' ')`. Применяется и к вводу пользователя, и к каждому принимаемому ответу.
+
+| `type_code` | interaction | `content jsonb` (ключи из пакета) | `given_answer jsonb` | Алгоритм проверки | Фидбек |
+|---|---|---|---|---|---|
+| `mc_cloze` | choice | `{pre, post, options[], answer:int}` | `{selected:int}` | `selected === answer` | подсветить `options[answer]` |
+| `grammar_drill` | choice | `{pre, post, prompt, options[], answer:int}` | `{selected:int}` | `selected === answer` | то же |
+| `reading_comprehension` | choice | `{passage, q, options[], answer:int}` | `{selected:int}` | `selected === answer` | то же |
+| `open_cloze` | text_input | `{pre, post, answers:string[], answer_shown}` | `{text}` | `answers.map(normalize).includes(normalize(text))` | показать `answer_shown` |
+| `word_formation` | text_input | `{pre, post, prompt, answers[], answer_shown}` | `{text}` | то же | `answer_shown` |
+| `key_word_transformation` | text_input | `{s1, key, pre, post, answers[], answer_shown, hint}` | `{text}` | то же (мультиответы: список принимаемых форм) | `answer_shown` |
+| `error_correction` | word_tap | `{words:string[], wrong:int, correction}` | `{tapped:int}` | `tapped === wrong` | показать `correction` |
+| `collocation_match` | match | `{left[], right[], pairs:{Li:Ri}}` | `{pairs:{Li:Ri}, misses:int}` | `deepEqual(pairs, content.pairs) && misses === 0` | раскрыть верные пары |
+
+Пояснения:
+- **choice-типы:** ответ — индекс варианта (`answer` в пакете — целочисленный индекс, 0-based). В мокапе `pick(i)` мгновенно проверяет `i===answer` без кнопки Check.
+- **text_input:** `answers` — массив всех принимаемых форм (напр. `[been in this job for, been doing this job for, been at this job for]`). `answer_shown` — форма для показа (может быть с заглавной). Сервер нормализует и сверяет со списком.
+- **word_tap (`error_correction`):** пользователь тапает предположительно ошибочное слово; верно, если индекс совпал с `wrong`. `correction` (строка вида «is leading → has been leading») — только фидбек.
+- **match (`collocation_match`):** интерактив tap-verb → tap-noun; `pairs` в пакете — маппинг индексов left→right. Правильность = полное совпадение маппинга **и** отсутствие промахов с первой попытки (`misses===0`) — правило мокапа «First-try misses count». Сервер доверяет `misses` от клиента (single-user), но независимо проверяет корректность самого маппинга.
+
+**Что пишется в прогресс на каждый ответ:**
+- `exercise_attempt` (`user_id`, `exercise_id`, `context`, `given_answer`, `is_correct`, `time_ms`, `answered_at`).
+- Если `is_correct=false` и `context ∈ {session, module_quiz, practice}`: создать/не-дублировать `review_queue_item` (open, stage=1, due=+2д) [колея 2, партиал-unique `review_queue_open_uniq` защищает от дублей].
+- Если `context='review_slot'`: обновить исходный `review_queue_item` (`resolved_attempt_id`; при успехе — продвинуть stage/закрыть; при ошибке — оставить/сбросить due, §6.2).
+- Harvest (по кнопке на ошибке): `flashcard(source='error_harvest', source_exercise_id, note_type=grammar_cloze|transformation)` + `card_state(phase='new')` + `error_map_entry(source='exercise', source_attempt_id, error_text, rule_note=explanation)`.
+- Побочно (UC-23): при верном применении конструкции — `user_grammar_state.success_count++` и продвижение статуса.
+- `daily_activity.exercises_done++`.
+
+**Тип-код: канонический — длинный.** В `content.js`-мокапе типы закодированы коротко (`drill/error/kwt/open/read/mc/match/wf`) — это артефакт мокапа. И пакеты, и БД, и грейдер используют **длинные** `type_code` из сида `exercise_type`. Плеер переключается по длинному `type_code` (внутренняя мапа на компонент). См. §8 разн. D2.
+
+---
+
+## 6. Алгоритмы повторений и статусов (domain)
+
+### 6.1. Общие
+`lib/domain/time.ts`: `startOfDay/endOfDay/addDays` (порт из референса `leitner.ts`). Все `due_at` считаются от начала целевого дня в локальном времени, чтобы «due today» было предсказуемым.
+
+### 6.2. Колея 2 — `review-queue.ts`
+- Ошибка в упражнении (не в review_slot) → новый `review_queue_item` stage=1, `due_at = startOfDay(+2д)`. Партиал-unique гарантирует один открытый item на (user, exercise).
+- В Review Slot: верный ответ → stage 1→2 (`due=+7д`), 2→3 (`due=+21д`), на 3 верно → `resolved_at=now` (закрыт). Неверно на любой стадии → stage сбрасывается в 1, `due=+2д` (тема «не усвоена»).
+- Запрос «due сегодня»: `where user_id=U and resolved_at is null and due_at<=now order by due_at` (индекс `review_queue_due_idx`).
+
+### 6.3. Колея 3 — `module-review.ts`
+- Закрытие модуля (UC-14) создаёт `module_review` r7 (`due=+7д`) и r21 (`due=+21д`), `taken_at=null`.
+- Прохождение квиза: `taken_at=now`, `score`, `passed = score≥80`.
+- Оба (r7 и r21) `passed=true` → `user_module_state.status='mastered'`, `mastered_at=now`.
+- Провал ревью → создать `review_queue_item` по типам заданий, где промахи (возврат тем в колею 2).
+- Порог 80% — из PLAN §4 (не из `checkpoint.pass_mark`; чек-пойнты — отдельная механика).
+
+### 6.4. Колея 1 — `srs.ts` (SRS)
+- Схема `card_state` (`phase`,`due_at`,`interval_days`,`ease`,`reps`,`lapses`) и рейтинги 1–4 (Again/Hard/Good/Easy) в `card_review_log` — **алгоритм-агностичны** (комментарий в 0001: «SM-2 / FSRS both fit»).
+- **Решение MVP: SM-2** (проще FSRS, покрывает 4 рейтинга; интервалы на кнопках мокапа — Again 10 min, Hard 2 d, Good 4 d, Easy 8 d — как presentational-подсказки).
+  - `new/learning`: короткие шаги (Again→10 min, Good→1 d, Easy→выход в review с interval из ease).
+  - `review`: `Good` → `interval *= ease`; `Hard` → `interval *= 1.2`, `ease -= 0.15`; `Easy` → `interval *= ease * 1.3`, `ease += 0.15`; `Again` → `phase='relearning'`, `lapses++`, `ease -= 0.2`, короткий шаг.
+  - `ease` в границах [1.3, 2.5+]; `reps++` на успех.
+- Новые карточки модуля вводятся `flashcards_intro`: массовое `card_state(phase='new', due_at=now)` для всех `flashcard` модуля. На первом заходе большого объёма — раскидать `due_at` по дням (порт `spreadInitialDueDate` из референса), чтобы дневная очередь была посильной.
+- Функция чистая: `review(state, rating, now) → nextState` — тестируется без БД.
+
+### 6.5. Статусы — `module-state.ts`
+- **Module:** `locked → upcoming → in_progress → completed → mastered` (правила выше). Первый модуль курса стартует `upcoming`; при первом входе → `in_progress`.
+- **Открытие следующего модуля:** MVP-правило — модули блока открываются последовательно: завершение модуля N (`completed`) → модуль N+1 `locked→upcoming`. Блок открыт, пока не пройден его чек-пойнт. (Правило-кандидат, см. D5.)
+- **Checkpoint:** `locked → available → passed/failed`. Блочный: `available`, когда все модули блока `completed`+. `passed` при `best_score ≥ pass_mark` → модули следующего блока `upcoming`. Диагностика — всегда доступна, `pass_mark=null`, не блокирует.
+- **Block (визуальный):** `pct` = доля mastered/completed модулей; футер = статус чек-пойнта.
+
+---
+
+## 7. Маршруты страниц и карта компонентов
+
+### 7.1. Роуты (App Router)
+
+| Роут | UC | Тип | Данные (use-case) | Формы (content.js) |
+|---|---|---|---|---|
+| `/` | UC-01 | RSC | `getToday(U)` | `SKY.today` |
+| `/course` | UC-02 | RSC | `getCourseMap(U, courseSlug)` | `SKY.blocks`, `SKY.course` |
+| `/course/[courseSlug]/module/[moduleSlug]` | UC-05..08 | RSC + острова | `getUnit(U, moduleSlug)` | `SKY.unit` |
+| `.../module/[moduleSlug]/session/[sessionType]` | UC-13..14 | RSC + острова | `getSession(U, moduleSlug, sessionType)` | `SKY.today.steps`, `SKY.unit.sessions` |
+| `/review` | UC-16,17 | RSC | `getReviewHub(U)` | `SKY.review.lanes` |
+| `/progress` | UC-04 | RSC | `getProgress(U, courseSlug)` | `SKY.progress` |
+| `/flashcards` | UC-15 | RSC-обёртка + client-плеер | `getDueCards(U)` | `SKY.flashcards` |
+
+Экран упражнений (UC-09) — **не отдельный роут**, а модальный клиент-остров (`ExercisePlayer`) внутри страницы сессии/модуля/ревью/чек-пойнта (в мокапе это overlay `screen:'ex'`). Аналогично `FlashcardPlayer` может открываться поверх Today/Review (в мокапе `screen:'fc'`).
+
+Навигация: на десктопе — левая рельса (`SideRail`), на мобильном — нижний таб-бар (`BottomNav`); переключение по `isDesktop` (в мокапе `window.innerWidth>=980`). Оболочка — `app/layout.tsx`.
+
+### 7.2. Компоненты и где чистый SSR / где острова
+
+**Чистый SSR (RSC, без интерактива):** `TodayCard`, `SessionSteps` (список), `CourseMap` (блоки/модули), `UnitHeader`, `GoalsList`, `SessionRibbon`, `GrammarSpotlight`, `WatchoutBox`, `VocabStudio` (список), `ProgressStats`, `ProgressBars`, `Ladder`, `ReviewLanes`, `Launcher`. Данные приходят из use-case уже готовой формы (совпадающей с `content.js`).
+
+**Клиентские острова (`'use client'`, состояние + server actions):**
+- `ExercisePlayer` (UC-09) + 8 под-компонентов по `type_code`. Состояние очереди/фазы (`ans`/`chk`), точки-прогресс, harvest. На проверку и на harvest дёргает server actions (`gradeAndRecord`, `harvestError`). Порт логики из `Skyrocket.dc.html` (`pick/tapWord/pickL/pickR/check/next`), но `is_correct` — с сервера.
+- `FlashcardPlayer` (UC-15): flip + 4 оценки → `reviewFlashcard` action.
+- `ReadingText` (UC-07): тап-раскрытие глосс, «Add to deck» → `addGlossToDeck` action. Глоссы **джойнятся** по ключу (props содержат текст + словарь глосс).
+- `VocabStudio` может быть островом, если нужна отметка приоритета (иначе SSR).
+- `WritingEditor` (UC-10): textarea + счётчик слов → `submitWriting`.
+- Свитчер курса, боттом-нав/рельса (клиент для активного состояния и навигации).
+
+**Данные для островов** передаются из RSC как сериализованные props (после `serialize.ts`), в форме `content.js`. Острова не читают БД.
+
+---
+
+## 8. Открытые вопросы (с предлагаемым решением)
+
+Ниже — расхождения между схемой БД, контент-пакетом и мокапом. В ТЗ §9 заложено **предлагаемое** решение.
+
+**D1 · Нет стабильных натуральных ключей у `exercise`, `writing_task`, `flashcard`.** Угроза потери прогресса (особенно SRS `card_state`) при пересинке. → **Решение:** миграция `0003` добавляет `ident` + partial-unique (см. §4.5); синк ключует по `ident`. Обновить DATA-MODEL и артефакт схемы. **Приоритет — высокий, блокирует корректный sync.**
+
+**D2 · Коды типов упражнений: длинные (БД/пакет) vs короткие (мокап `content.js`).** БД `type_code`: `grammar_drill`, …; мокап `type`: `drill/error/kwt/open/read/mc/match/wf`. → **Решение:** канонический — длинный `type_code` (совпадает с сидом `exercise_type` и с `type:` в `exercises.yaml`). Плеер держит внутреннюю мапу `type_code → компонент`. Короткие коды мокапа не используются.
+
+**D3 · Форма `content jsonb`: `answer_shown` (пакет, snake_case) vs `answerShown` (мокап, camelCase); глоссы инлайн (мокап) vs нормализованы (БД).** DATA-MODEL заявляет «формы один-в-один с дизайном», но пакет использует snake_case и нормализованные глоссы (`{g:key}` + таблица `gloss`). → **Решение:** канон — **форма пакета** (snake_case, нормализованные глоссы). `content jsonb` в БД = объект `content:` из YAML **дословно**. Плеер и `ReadingText` пишутся под форму пакета; мокап — референс интеракции/вёрстки, а не буквальный контракт имён полей. Zod-типы (`content-schema.ts`) фиксируют канон.
+
+**D4 · Число модулей/блоков: PLAN и seed — 15 модулей (Блок D = 3, M13–M15); мокап `content.js` — 16 (4×4).** Плюс имена/цвета блоков и модулей в мокапе иллюстративные (Блок 1 красный «Time & tense» vs seed синий «Work & Careers»), лексики «18» vs 45. → **Решение:** источник истины — seed `0002` + пакеты. Фронт читает имена/цвета/число модулей из БД, **ничего не хардкодит** (ни «4 модуля на блок», ни палитру). `content.js` — только формы данных.
+
+**D5 · Правило разблокировки модулей внутри открытого блока не задано явно.** PLAN подразумевает последовательность, мокап показывает M09 `In progress`, M10–M12 `Upcoming`. → **Решение (MVP):** последовательное открытие внутри блока (завершил N → открылся N+1); блок целиком гейтится чек-пойнтом. Вынести в конфиг курса, чтобы менять без кода. Продуктовое решение — за владельцем.
+
+**D6 · «Отметить 10 приоритетных лексем» (Prime) не имеет поля в схеме.** `user_vocab_state` хранит только `status`. → **Решение (MVP):** отметка приоритета = перевод лексемы `new→learning` (появляется в фокусе). Если нужен отдельный флаг «priority» — добавить колонку в будущей миграции; пока не блокирует.
+
+**D7 · `bigint` PK → JS `BigInt` в Prisma.** Не сериализуется в JSON/props. → **Решение:** DTO-граница в репозиториях приводит id к `number` (`lib/serialize.ts`); безопасно при single-user. Domain оперирует `number`.
+
+**D8 · Хранение аудио монолога (`writing_submission.attachment_url`).** Куда класть запись (speaking-модули). → **Решение (MVP):** для одного пользователя — либо загрузка в Netlify Blobs / внешний бакет и хранение URL, либо на первом этапе кнопка «mark done» без файла (`attachment_url=null`), а запись — вне приложения. Полноценную запись/загрузку вынести в отдельную задачу. Не блокирует этапы 2–4.
+
+**D9 · Флешкарты: две карты из одной vocab-ноты (PLAN §5) vs одна строка на CSV-строку.** PLAN: из vocab-ноты две карты (term→meaning; def+collocation→term). → **Решение:** одна `flashcard`-строка = одна нота (как строка CSV); «две карты» — деталь Anki-шаблона, не нашей модели. SRS планирует ноту один раз. Если потребуется двусторонность — это UI-режим показа, не вторая строка. `flashcard.fields = {front, main, cases[], extra}` заполняется из CSV: vocab → front=Term, main=Definition, cases=[UseCase1,UseCase2], extra=Collocations+«Register: …».
+
+**D10 · Auth сейчас не нужен, но `app_user.password_hash NOT NULL`.** → **Решение:** `scripts/seed-user.ts` создаёт единственного пользователя (username из `APP_USER_USERNAME`, password_hash = заглушка/bcrypt от env-пароля). `getCurrentUserId()` возвращает его id (кэш). Точка расширения для bcrypt+jose (паттерн interview-prep) — `lib/current-user.ts`, без переделки остального.
+
+---
+
+## 9. Детальные ТЗ трёх исполнителей
+
+Общий инвариант для всех: не редактировать существующие миграции; контент — English only; документы — по-русски; соблюдать границы слоёв §2.
+
+### Этап 2 — Каркас `web/` + миграции + sync
+
+**Границы:** поднять проект, наладить применение схемы и заливку контента. Без экранов и без бизнес-логики повторений.
+
+**Входы:** `db/migrations/0001,0002`; `content/en-c1/module-01/*` и `content/en-c1/README.md`; референс `../concurrency/web` (структура, `sync.ts`, `db.ts`, `docker-compose.yml`, `netlify.toml`); §2–§4 этого документа.
+
+**Артефакты:**
+1. Каркас `web/` (Next.js 15 + React 19 + Tailwind, TS), `next.config.mjs`, `tsconfig.json` (paths `@/*`), `docker-compose.yml` (Postgres 16, БД `skyrocket`), `.env.example` (`DATABASE_URL`, `DIRECT_URL`, `APP_USER_USERNAME`).
+2. Корневой `netlify.toml` (`base="web"`, `@netlify/plugin-nextjs`), build = `migrate → sync → next build`.
+3. `db/migrations/0003_content_natural_keys.sql` (§4.5) + правка `docs/DATA-MODEL.md` + переопубликованный артефакт схемы.
+4. `scripts/migrate.ts` (§3.2) — идемпотентный раннер на `pg` с `schema_migrations` и `--baseline`.
+5. `prisma/schema.prisma` через `prisma db pull` (после применения 0001–0003), закоммичен; `postinstall: prisma generate`; `lib/db.ts` (singleton), `lib/serialize.ts` (BigInt→number).
+6. `content.config.ts` (реестр курса/модулей/чек-пойнтов), `lib/content-schema.ts` (zod для всех YAML/CSV, юнион 8 типов `content`).
+7. `scripts/sync.ts` (§4): обход, парсинг YAML/CSV, upsert по натуральным ключам/`ident`, content_hash (модульный гейт + пер-сущностный), порядок с учётом FK, прунинг (флешкарты — soft-archive), счётчики в лог.
+8. `scripts/seed-user.ts` + `lib/current-user.ts` (`getCurrentUserId()` → константный id).
+
+**Definition of Done:**
+- `docker compose up` + `pnpm migrate` применяет 0001–0003 на чистой БД без ошибок; повторный `pnpm migrate` = 0 применённых.
+- `pnpm sync` заливает `module-01`: проверяемо `select count(*)` → `vocab_entry=45`, `exercise` core=66 + review=30 (`select pool,count(*) ... group by`), `grammar_spotlight`/`watchout`/`reading_text(main,extra)`/`gloss`/`writing_task`/`flashcard` (45+10+8) присутствуют; `grammar_point` из meta (5) с корректными `user`-независимыми связями `exercise.grammar_point_id`.
+- Повторный `pnpm sync` без правок контента = `~0 +0` (все `=unchanged`), 0 записей (доказать логом счётчиков).
+- Правка одной use-case в `vocab.yaml` → re-sync обновляет ровно одну строку (`~1`), остальные `unchanged`; `id` строки не изменился (доказать, что натуральный ключ стабилен).
+- Удаление сущности из пакета → строка удалена (или флешкарта `archived=true`); прогресс других строк не затронут.
+- `prisma db pull` + `prisma generate` проходят; `pnpm build` (migrate→sync→next build) зелёный локально.
+- `next dev` поднимает пустую оболочку (можно placeholder-страницу).
+
+### Этап 3 — Бэкенд: domain + use-cases + repositories + server actions
+
+**Границы:** вся серверная логика без вёрстки экранов. Отдаёт use-cases (для RSC) и server actions (для островов), покрытые типами.
+
+**Входы:** результат этапа 2 (Prisma-клиент, sync, схема); §1 (use cases), §5 (грейдинг), §6 (алгоритмы), референс `lib/actions.ts`/`lib/leitner.ts`.
+
+**Артефакты:**
+1. `lib/domain/`: `time.ts`, `srs.ts` (SM-2, §6.4), `review-queue.ts` (§6.2), `module-review.ts` (§6.3), `module-state.ts` (§6.5), `progress.ts` (§6, §1.1), `grading/` (`normalize.ts`, `index.ts`, `graders/*` — 8 типов §5), `types.ts`. Всё — чистые функции, покрыты юнит-тестами.
+2. `lib/repositories/*`: типизированные выборки/записи (единственное место с Prisma), возвращают DTO с id:number.
+3. `lib/use-cases/*`: `getToday`, `getCourseMap`, `getUnit`, `getSession`, `getReviewHub`, `getProgress`, `getDueCards`, `startExerciseSet`, `gradeAndRecord`, `reviewFlashcard`, `takeModuleReview`, `takeCheckpoint`, `submitWriting`, `switchCourse`, `harvestError`, `addGlossToDeck`, `advanceStep/closeSession/closeModule`. Формы возврата чтения = `content.js`.
+4. `app/actions/*` (`'use server'`): тонкие обёртки (`getCurrentUserId()` → use-case → `revalidatePath`).
+5. Транзакционность критичных цепочек (`$transaction`): закрытие модуля (module_state + 2×module_review), оценка карточки (card_state + card_review_log + daily_activity), grade (attempt + review_queue + activity).
+
+**Definition of Done:**
+- Юнит-тесты domain зелёные: все 8 грейдеров на корректных/некорректных ответах (включая нормализацию мультиответов kwt и `misses`-правило match); SM-2 на 4 рейтингах; переходы review-queue 1→2→3 и сброс; r7+r21 → Mastered; переходы module-state/checkpoint.
+- Интеграционный прогон на локальной БД (после sync module-01): `getToday(U)`/`getUnit(U,'m01')`/`getSession(U,'m01','input')` возвращают непустые формы, совпадающие по ключам с `SKY.*`.
+- Сквозной сценарий скриптом: ответить неверно в сессии → `exercise_attempt` + open `review_queue_item(stage1,+2д)`; закрыть модуль квизом → `completed` + 2 `module_review`; оценить карточку → `card_state`/`card_review_log`/`daily_activity` обновлены. Проверяется SQL-выборками (типовые запросы из DATA-MODEL используют нужные частичные индексы — `explain`).
+- Пересинк контента после наигранного прогресса не рушит прогресс (id стабильны).
+- `getCurrentUserId()` — единственный источник userId; ни одна функция не хардкодит id внутри логики.
+
+### Этап 4 — Фронтенд по утверждённому дизайну
+
+**Границы:** экраны и острова по мокапу; данные — только из use-cases/actions этапа 3. Никакого доступа к БД из компонентов.
+
+**Входы:** результат этапа 3; `docs/design/skyrocket/` (`Skyrocket.dc.html` — вёрстка/стили/интеракция, `content.js` — формы, `support.js` — рантайм-референс); §7 (роуты/компоненты), §1 (UC), §5 (интеракция плеера).
+
+**Артефакты:**
+1. Оболочка `app/layout.tsx` + `globals.css`/Tailwind (перенести шрифты, палитру, атомы из мокапа; светлая тема, mobile-first PWA-каркас), `SideRail`/`BottomNav` с `isDesktop`.
+2. Экраны RSC: Today, Course map, Unit overview, Session runner, Review hub, Progress (+ состояние «course completed») — вёрстка по `Skyrocket.dc.html`, данные из use-cases.
+3. Острова: `ExercisePlayer` + 8 под-компонентов (по `type_code`), `FlashcardPlayer`, `ReadingText` (тап-глоссы + Add to deck), `WritingEditor` (+ счётчик слов), свитчер курса. Интеракция портируется из `Skyrocket.dc.html` (`pick/tapWord/pickL/pickR/check/next`, flip/grade), но проверка/оценка идут через server actions (`gradeAndRecord`, `reviewFlashcard`).
+4. UI-примитивы (`Badge`, `Card`, `ProgressBar`, точки-прогресс упражнений, статус-теги модулей с цветом блока).
+
+**Definition of Done:**
+- Все экраны рендерятся из реальных данных БД (module-01 засинкан), визуально соответствуют мокапу (десктоп-рельса и мобильный таб-бар, цвета блоков из БД).
+- Плеер упражнений проходит все 8 типов на данных `module-01`: выбор/ввод/тап/матч работают, фидбек и объяснение показываются, `is_correct` приходит с сервера; ошибка предлагает Harvest; финальная сводка (score/harvested/re-queue) верна.
+- Флешкарты: flip + 4 оценки меняют `card_state` (проверяемо), очередь берётся из `getDueCards`.
+- Reading: тап по глоссе раскрывает определение (джойн по ключу), «Add to deck» создаёт карточку.
+- Сессия проходится сверху вниз: шаги отмечаются done, «Session 2 of 4» корректно; завершение сессии Output с квизом закрывает модуль и на карте статус → Completed.
+- Прогон `/verify`-подобного сценария: пользователь открыл модуль → сделал набор упражнений → ошибся → увидел re-queue на Today; карта/Progress отражают изменения после `revalidatePath`.
+- Нет доступа к Prisma/БД из `components/**` и клиентских файлов (только props + actions).
+
+---
+
+## 10. Сводка ключевых решений
+
+1. **Prisma — только типизированный клиент через `prisma db pull`; миграции владеются raw SQL** и применяются раннером `scripts/migrate.ts` на `pg` (не `prisma migrate`, не `psql` на Netlify).
+2. **Слои:** `domain` (чистая логика, тестируется без БД) → `use-cases` (оркестрация) → `repositories` (единственное место с Prisma) → `app/components` (UI). Prisma не течёт в UI; domain не течёт наружу.
+3. **Sync** идемпотентен по `content_hash` (модульный гейт + пер-сущностный), ключует по натуральным ключам, прунит удалённое (флешкарты — soft-archive), не трогает прогресс. Требует **миграцию 0003** (`ident` для `exercise`/`writing_task`/`flashcard`) — иначе пересинк ломает SRS-прогресс.
+4. **Грейдинг — серверный**, единая точка `gradeAttempt(type_code, content, given)`; 8 типов с явными контрактами `content`/`given_answer`; текст нормализуется как в мокапе.
+5. **Три колеи** вынесены в чистый domain: SM-2 (колея 1), +2/+7/+21 re-queue (колея 2), r7/r21→Mastered порог 80% (колея 3).
+6. **Роуты** — 6 RSC-страниц; упражнения и карточки — модальные клиентские острова, не отдельные роуты; данные островам приходят props в формах `content.js`.
+7. **Один пользователь** через `getCurrentUserId()`; весь код параметризован `userId` — мультиюзер добавляется без переделки (точка расширения — `lib/current-user.ts`).
+8. **Источники истины при конфликте:** SQL-схема > контент-пакет > PLAN > мокап. Мокап `content.js` — контракт **форм данных**, но не буквальных имён (канон полей — из пакета: длинные `type_code`, snake_case, нормализованные глоссы).
+9. **Netlify build:** `prisma generate` → `migrate` → `sync` → `next build`; Neon — `DATABASE_URL` (пулер, рантайм) + `DIRECT_URL` (прямой, билд-скрипты); локально — Postgres 16 в Docker.
+10. **10 открытых вопросов зафиксированы** с предлагаемыми решениями, заложенными в ТЗ (ключевой — D1: стабильные натуральные ключи).
+```

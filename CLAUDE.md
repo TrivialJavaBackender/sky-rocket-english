@@ -14,6 +14,9 @@
 | `content/en-c1/` | Контент-пакеты модулей (YAML/CSV). `README.md` — схема пакета. Пакеты синкаются в БД по `content_hash` |
 | `docs/MODULE-TASK-TEMPLATE.md` | Шаблон ТЗ субагенту на генерацию модуля + Definition of Done |
 | `docs/artifacts/plan.html` | Исходник артефакта-витрины плана |
+| `docs/ARCHITECTURE.md` | **Архитектура веб-приложения**: каталог use cases, слои, дизайн sync, грейдинг 8 типов, роуты/компоненты, открытые вопросы D1–D10 |
+| `web/` | Приложение: Next.js 15 (App Router, SSR) + React 19 + Prisma + Tailwind. Слои: `lib/domain` (чистая логика) → `lib/use-cases` → `lib/repositories` (единственное место с Prisma) → `app`/`components`. `scripts/migrate.ts` — раннер raw SQL миграций, `scripts/sync.ts` — синк контента |
+| `netlify.toml` | Деплой: `base = "web"`, @netlify/plugin-nextjs; билд = generate → migrate → sync → next build |
 
 ## Жёсткие правила
 
@@ -32,7 +35,9 @@ Neon Postgres. Применение миграций: `psql "$DATABASE_URL" -f d
 
 ## Стек-решения (утверждены)
 
-Web app (mobile-first PWA) на Netlify + Neon по архитектуре `../concurrency` (Next.js 15 + Prisma, markdown/yaml → sync в БД на билде; там же паттерны auth bcrypt+jose и Leitner-SRS). Позже — обёртка Telegram Mini App для напоминаний. Текущий репо — vite-шаблон-заглушка; приложение будет создаваться отдельно, React не самоцель.
+Web app (mobile-first PWA) на Netlify + Neon по архитектуре `../concurrency` (Next.js 15 + Prisma, yaml/csv → sync в БД на билде). Приложение реализовано в `web/` (см. `docs/ARCHITECTURE.md`). Auth пока нет: один пользователь через `lib/current-user.ts`, но весь код параметризован `userId`. Позже — обёртка Telegram Mini App для напоминаний. Vite-стаб в корне (`src/`, `index.html`, `vite.config.js`) — legacy, приложением не является.
+
+Локальная разработка: `cd web && docker compose up -d && pnpm migrate && pnpm sync && pnpm seed-user && pnpm dev` (env — `web/.env`, образец `web/.env.example`). Прод: Neon через `DATABASE_URL` (пулер) + `DIRECT_URL` (билд-скрипты).
 
 ## Рабочие процессы
 

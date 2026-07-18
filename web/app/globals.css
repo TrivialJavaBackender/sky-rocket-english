@@ -1,0 +1,224 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+ * Design tokens ported from docs/design/skyrocket/Skyrocket.dc.html (the
+ * approved mockup) — ARCHITECTURE.md §9 stage 4 "перенести шрифты, палитру,
+ * атомы из мокапа". Values are lifted directly from the mockup's inline
+ * styles (hex literals throughout the .html), not reinterpreted.
+ *
+ * Block/course colors (`block.color`/`block.tint`) are NOT tokens here —
+ * they come from the DB per §8 D4 and are applied via inline style at the
+ * call site (CourseMap, ProgressBars, StatusTag), never hardcoded.
+ */
+:root {
+  /* surfaces */
+  --bg: #f7f5f0;
+  --bg-card: #ffffff;
+  --bg-soft: #fbfaf7;
+  --bg-faint: #efece4;
+
+  /* ink / text */
+  --ink: #23262e;
+  --fg: #20232a;
+  --fg-muted: #6e6a5e;
+  --fg-subtle: #8a8478;
+  --fg-faint: #a09a8c;
+  --fg-faintest: #b9b3a4;
+
+  /* borders */
+  --border: #e5e2da;
+  --border-faint: #efece4;
+
+  /* feedback: success/green */
+  --green: #2e7d4f;
+  --green-text: #25623e;
+  --green-soft: #e8f1eb;
+  --green-border: #cfe2d4;
+
+  /* feedback: error/red */
+  --red: #b23a2e;
+  --red-text: #8f2e23;
+  --red-soft: #f6e8e6;
+  --red-border: #e5c6c1;
+
+  /* links */
+  --link: #2e5f9e;
+  --link-hover: #22497d;
+
+  /* misc */
+  --selection: #dce9df;
+  --shadow-card: 0 2px 10px rgba(32, 35, 42, 0.04);
+  --shadow-pop: 0 8px 24px rgba(32, 35, 42, 0.08);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1c1d1a;
+    --bg-card: #24251f;
+    --bg-soft: #201f1b;
+    --bg-faint: #33332b;
+    --ink: #f2f1ea;
+    --fg: #f2f1ea;
+    --fg-muted: #b9b6a8;
+    --fg-subtle: #9c9686;
+    --fg-faint: #837d6d;
+    --fg-faintest: #6b6656;
+    --border: #3a3a30;
+    --border-faint: #2d2d26;
+    --green: #4fae78;
+    --green-text: #8fd8ac;
+    --green-soft: #1c2e21;
+    --green-border: #2f4a37;
+    --red: #d9695a;
+    --red-text: #f0a89c;
+    --red-soft: #3a2320;
+    --red-border: #5a332c;
+    --link: #7ea6dd;
+    --link-hover: #a5c2e8;
+    --selection: #2a3d2e;
+    --shadow-card: 0 2px 10px rgba(0, 0, 0, 0.28);
+    --shadow-pop: 0 8px 24px rgba(0, 0, 0, 0.4);
+  }
+}
+
+:root[data-theme='dark'] {
+  --bg: #1c1d1a;
+  --bg-card: #24251f;
+  --bg-soft: #201f1b;
+  --bg-faint: #33332b;
+  --ink: #f2f1ea;
+  --fg: #f2f1ea;
+  --fg-muted: #b9b6a8;
+  --fg-subtle: #9c9686;
+  --fg-faint: #837d6d;
+  --fg-faintest: #6b6656;
+  --border: #3a3a30;
+  --border-faint: #2d2d26;
+  --green: #4fae78;
+  --green-text: #8fd8ac;
+  --green-soft: #1c2e21;
+  --green-border: #2f4a37;
+  --red: #d9695a;
+  --red-text: #f0a89c;
+  --red-soft: #3a2320;
+  --red-border: #5a332c;
+  --link: #7ea6dd;
+  --link-hover: #a5c2e8;
+  --selection: #2a3d2e;
+  --shadow-card: 0 2px 10px rgba(0, 0, 0, 0.28);
+  --shadow-pop: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+:root[data-theme='light'] {
+  --bg: #f7f5f0;
+  --bg-card: #ffffff;
+  --bg-soft: #fbfaf7;
+  --bg-faint: #efece4;
+  --ink: #23262e;
+  --fg: #20232a;
+  --fg-muted: #6e6a5e;
+  --fg-subtle: #8a8478;
+  --fg-faint: #a09a8c;
+  --fg-faintest: #b9b3a4;
+  --border: #e5e2da;
+  --border-faint: #efece4;
+  --green: #2e7d4f;
+  --green-text: #25623e;
+  --green-soft: #e8f1eb;
+  --green-border: #cfe2d4;
+  --red: #b23a2e;
+  --red-text: #8f2e23;
+  --red-soft: #f6e8e6;
+  --red-border: #e5c6c1;
+  --link: #2e5f9e;
+  --link-hover: #22497d;
+  --selection: #dce9df;
+  --shadow-card: 0 2px 10px rgba(32, 35, 42, 0.04);
+  --shadow-pop: 0 8px 24px rgba(32, 35, 42, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+input,
+button,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+::selection {
+  background: var(--selection);
+}
+
+:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 2px;
+}
+
+a {
+  color: var(--link);
+}
+a:hover {
+  color: var(--link-hover);
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes cardIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes shake {
+  0%,
+  100% {
+    transform: none;
+  }
+  25% {
+    transform: translateX(-4px);
+  }
+  75% {
+    transform: translateX(4px);
+  }
+}
+.animate-fade-up {
+  animation: fadeUp 0.25s ease;
+}
+.animate-card-in {
+  animation: cardIn 0.22s ease;
+}
+.animate-shake {
+  animation: shake 0.3s ease;
+}
+
+/* text-wrap: pretty everywhere the mockup uses it (headlines, standfirsts) */
+.text-pretty {
+  text-wrap: pretty;
+}
