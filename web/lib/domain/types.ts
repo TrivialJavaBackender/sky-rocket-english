@@ -93,6 +93,13 @@ export type AttemptContext = 'session' | 'review_slot' | 'module_quiz' | 'module
 export type Rating = 1 | 2 | 3 | 4;
 
 export type SessionType = 'prime' | 'input' | 'workout' | 'output';
+
+/** module.goals jsonb entry (§8 D12): each goal names the session that earns it, so the unit hub can flip goals todo → in_progress → achieved bottom-up. */
+export interface ModuleGoal {
+  text: string;
+  achievedBy: SessionType;
+}
+
 export type StepKind =
   | 'opener'
   | 'theory'

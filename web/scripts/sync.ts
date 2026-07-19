@@ -636,10 +636,12 @@ async function syncModule(client: Client, courseSlug: string, mod: ModuleEntry, 
 
   await client.query('BEGIN');
   try {
+    // module.goals jsonb is stored normalized as [{text, achieved_by}] (§8 D12);
+    // bare-string goals default to achieved_by: output (earned when the module closes).
     await client.query('update module set title=$1, standfirst=$2, goals=$3, content_hash=$4 where id=$5', [
       meta.title,
       meta.standfirst,
-      JSON.stringify(meta.goals),
+      JSON.stringify(meta.goals.map((g) => (typeof g === 'string' ? { text: g, achieved_by: 'output' } : g))),
       moduleHash,
       moduleId,
     ]);

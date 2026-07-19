@@ -49,7 +49,8 @@ export function SessionCard({
         ))}
       </div>
       <LinkButton href={`/course/${courseSlug}/module/${moduleSlug}/session/${sessionType}`} size="block">
-        Continue Session {sessionPosition} →
+        Continue Session {sessionPosition}
+        {steps[0] ? ` · ${steps[0].title}` : ''} →
       </LinkButton>
     </Card>
   );

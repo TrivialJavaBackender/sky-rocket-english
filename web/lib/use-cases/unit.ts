@@ -15,15 +15,34 @@ import * as contentRepo from '../repositories/content.repo';
 import * as exerciseRepo from '../repositories/exercise.repo';
 import { moduleStatusOnFirstEntry } from '../domain/module-state';
 import { nextVocabStatusOnPriorityMark } from '../domain/progress';
+import { computeGoalStatus, computeSessionCells, type GoalStatus, type SessionCellState } from '../domain/session-gating';
+import { partBounds, slicePart } from '../domain/content-slicing';
 import type { GlossDTO, GrammarSpotlightDTO, ReadingTextDTO, VocabEntryDTO, WatchoutDTO } from '../repositories/content.repo';
-import type { ExerciseGroup, ReadingKind } from '../domain/types';
+import type { ExerciseGroup, ModuleGoal, ProgressStatus, ReadingKind, SessionType, StepKind } from '../domain/types';
+
+/** Compact step row inside a session's hub preview — enough for "what's in there" (incl. the Output writing task and extra text) without loading step content. */
+export interface UnitStepPreviewDTO {
+  kind: StepKind;
+  title: string;
+  detail: string | null;
+  plannedMinutes: number;
+  status: ProgressStatus;
+}
 
 export interface UnitSessionCellDTO {
-  sessionType: 'prime' | 'input' | 'workout' | 'output';
+  sessionType: SessionType;
   position: number;
   title: string;
   plannedMinutes: number;
-  cell: 'done' | 'current' | 'todo';
+  cell: SessionCellState;
+  steps: UnitStepPreviewDTO[];
+}
+
+/** A module goal + its live status and the session that earns it — the hub's bottom-up goals-progress card (D12). */
+export interface UnitGoalDTO extends ModuleGoal {
+  status: GoalStatus;
+  sessionPosition: number;
+  sessionTitle: string;
 }
 
 export interface UnitLauncherDTO {
@@ -53,11 +72,14 @@ export interface UnitDTO {
   moduleSlug: string;
   title: string;
   standfirst: string | null;
-  goals: string[];
+  goals: UnitGoalDTO[];
   sessions: UnitSessionCellDTO[];
+  /** The current session's first not-done step — the hub's single "do this next" CTA. Null once every session is done. */
+  continueTarget: { sessionType: SessionType; sessionPosition: number; sessionTitle: string; stepTitle: string } | null;
   spotlights: GrammarSpotlightDTO[];
   watchouts: WatchoutDTO[];
   reading: ReadingWithGlossesDTO | null;
+  readingExtra: ReadingWithGlossesDTO | null;
   vocabTitle: string;
   vocabEntries: VocabEntryDTO[];
   launchers: UnitLauncherDTO[];
@@ -119,6 +141,28 @@ export async function getModuleVocab(userId: number, moduleId: number): Promise<
   return contentRepo.listVocabForModule(userId, moduleId);
 }
 
+/** UC-06 dosed theory: step config {"part":P,"of":N} → the P-th balanced slice of the module's ordered spotlights and watchouts (PLAN.md §3: part 1 in Prime, part 2 in Workout). */
+export async function getModuleTheorySlice(
+  moduleId: number,
+  part: number,
+  of: number,
+): Promise<{ spotlights: GrammarSpotlightDTO[]; watchouts: WatchoutDTO[]; part: number; of: number }> {
+  const { spotlights, watchouts } = await getModuleTheory(moduleId);
+  return { spotlights: slicePart(spotlights, part, of), watchouts: slicePart(watchouts, part, of), part, of };
+}
+
+/** UC-08 dosed vocabulary: step config {"batch":B,"of":N} → the B-th balanced slice of the module's ordered vocab entries (45 → 15/15/15), plus 1-based range labels for the UI. */
+export async function getModuleVocabBatch(
+  userId: number,
+  moduleId: number,
+  batch: number,
+  of: number,
+): Promise<{ entries: VocabEntryDTO[]; rangeStart: number; rangeEnd: number; total: number; batch: number; of: number }> {
+  const all = await getModuleVocab(userId, moduleId);
+  const { start, end } = partBounds(all.length, batch, of);
+  return { entries: all.slice(start, end), rangeStart: start + 1, rangeEnd: end, total: all.length, batch, of };
+}
+
 export async function getUnit(userId: number, courseSlug: string, moduleSlug: string): Promise<UnitDTO | null> {
   const course = await courseRepo.getCourseBySlug(courseSlug);
   if (!course) return null;
@@ -134,19 +178,48 @@ export async function getUnit(userId: number, courseSlug: string, moduleSlug: st
   }
 
   const sessions = await moduleRepo.listSessionsForModule(userId, module.id);
-  const firstNotDoneIdx = sessions.findIndex((s) => s.status !== 'done');
+  const cells = computeSessionCells(sessions);
+
+  const allSteps = await moduleRepo.listStepsForModule(userId, module.id);
+  const stepsBySession = new Map<number, UnitStepPreviewDTO[]>();
+  for (const st of allSteps) {
+    const list = stepsBySession.get(st.studySessionId) ?? [];
+    list.push({ kind: st.kind, title: st.title, detail: st.detail, plannedMinutes: st.plannedMinutes, status: st.status });
+    stepsBySession.set(st.studySessionId, list);
+  }
+
   const sessionCells: UnitSessionCellDTO[] = sessions.map((s, i) => ({
     sessionType: s.sessionType,
     position: s.position,
     title: s.title,
     plannedMinutes: s.plannedMinutes,
-    cell: s.status === 'done' ? 'done' : i === (firstNotDoneIdx === -1 ? sessions.length - 1 : firstNotDoneIdx) ? 'current' : 'todo',
+    cell: cells[i],
+    steps: stepsBySession.get(s.id) ?? [],
   }));
 
-  const [spotlights, watchouts, reading, vocabEntries, launchers] = await Promise.all([
+  const currentIdx = cells.indexOf('current');
+  let continueTarget: UnitDTO['continueTarget'] = null;
+  if (currentIdx !== -1) {
+    const current = sessions[currentIdx];
+    const nextStep = (stepsBySession.get(current.id) ?? []).find((st) => st.status !== 'done');
+    continueTarget = { sessionType: current.sessionType, sessionPosition: current.position, sessionTitle: current.title, stepTitle: nextStep?.title ?? current.title };
+  }
+
+  const goals: UnitGoalDTO[] = module.goals.map((g) => {
+    const target = sessions.find((s) => s.sessionType === g.achievedBy);
+    return {
+      ...g,
+      status: computeGoalStatus(g.achievedBy, sessions, cells),
+      sessionPosition: target?.position ?? sessions.length,
+      sessionTitle: target?.title ?? 'Output',
+    };
+  });
+
+  const [spotlights, watchouts, reading, readingExtra, vocabEntries, launchers] = await Promise.all([
     contentRepo.listSpotlightsForModule(module.id),
     contentRepo.listWatchoutsForModule(module.id),
     getReadingWithGlosses(module.id, 'main'),
+    getReadingWithGlosses(module.id, 'extra'),
     contentRepo.listVocabForModule(userId, module.id),
     buildLaunchers(module.id),
   ]);
@@ -160,11 +233,13 @@ export async function getUnit(userId: number, courseSlug: string, moduleSlug: st
     moduleSlug: module.slug,
     title: module.title,
     standfirst: module.standfirst,
-    goals: module.goals,
+    goals,
     sessions: sessionCells,
+    continueTarget,
     spotlights,
     watchouts,
     reading,
+    readingExtra,
     vocabTitle: 'Vocabulary in focus',
     vocabEntries,
     launchers,

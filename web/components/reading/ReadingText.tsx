@@ -13,7 +13,18 @@ type Segment = { t: string } | { g: string };
  * own table); this island does the `key -> gloss` join on tap rather than
  * receiving inline gloss objects like the mockup's `content.js`.
  */
-export function ReadingText({ paragraphs, glosses, moduleId }: { paragraphs: Segment[][]; glosses: Record<string, GlossDTO>; moduleId: number }) {
+export function ReadingText({
+  paragraphs,
+  glosses,
+  moduleId,
+  glossesEnabled = true,
+}: {
+  paragraphs: Segment[][];
+  glosses: Record<string, GlossDTO>;
+  moduleId: number;
+  /** false in Prime's skim step (UC-07): gloss segments render as plain text — one pass, gist only. */
+  glossesEnabled?: boolean;
+}) {
   const [openKey, setOpenKey] = useState<string | null>(null);
   const [added, setAdded] = useState<Record<string, boolean>>({});
   const [adding, setAdding] = useState<string | null>(null);
@@ -36,6 +47,7 @@ export function ReadingText({ paragraphs, glosses, moduleId }: { paragraphs: Seg
               {para.map((s, si) => {
                 if ('t' in s) return <span key={si}>{s.t}</span>;
                 const gloss = glosses[s.g];
+                if (!glossesEnabled) return <span key={si}>{gloss?.term ?? s.g}</span>;
                 const isOpen = openKey === s.g;
                 return (
                   <span

@@ -26,10 +26,15 @@ content/en-c1/
 slug: m01
 title: Work & Careers
 standfirst: Narrative tenses, perfect aspect and future forms for career stories · 45 lexemes · a formal application email.
-goals:
-  - Use narrative tenses confidently when telling a career story
-  - Deploy 45 high-value career collocations in your own sentences
-  - Write a formal application email in the right register
+goals:                     # каждая цель привязана к сессии, которая её закрывает (achieved_by:
+                           # prime | input | workout | output) — на странице модуля цели загораются
+                           # по мере прохождения сессий. Голая строка тоже валидна (= output).
+  - text: Use narrative tenses confidently when telling a career story
+    achieved_by: workout
+  - text: Deploy 45 high-value career collocations in your own sentences
+    achieved_by: input
+  - text: Write a formal application email in the right register
+    achieved_by: output
 grammar_points:            # → grammar_point (статусы Reliable считаются по ним)
   - Narrative tenses and past habits (would / used to)
   - Perfect aspect: result vs activity

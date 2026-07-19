@@ -13,7 +13,7 @@
 и learner's dictionary). Ни одного русского слова ни в одном файле.
 
 Сгенерируй пакет файлов content/en-c1/module-{NN}/:
-1. meta.yaml — тема, подтемы грамматики (grammar_points), standfirst, goals
+1. meta.yaml — тема, подтемы грамматики (grammar_points), standfirst, goals (каждая цель — объект `{text, achieved_by}`: грамматические цели → `workout`, лексическая → `input`, продукционная → `output`)
    (3–4 can-do), тексты, жанр продукции.
 2. vocab.yaml — ПОЛНЫЕ 45 записей (якоря из плана + добор в тех же доменах,
    уровень C1, не частотник B1): term, tag, definition, use_cases (2–3 в разных

@@ -1,12 +1,13 @@
 import { notFound } from 'next/navigation';
 import { getCurrentUserId } from '@/lib/current-user';
-import { getUnit } from '@/lib/use-cases/unit';
+import { getUnit, type ReadingWithGlossesDTO } from '@/lib/use-cases/unit';
 import { startExerciseSet, type PublicExerciseDTO } from '@/lib/use-cases/exercise-set';
 import type { ExerciseGroup } from '@/lib/domain/types';
 import { LinkButton } from '@/components/ui/LinkButton';
 import { UnitHeader } from '@/components/unit/UnitHeader';
-import { GoalsList } from '@/components/unit/GoalsList';
+import { GoalsProgress } from '@/components/unit/GoalsProgress';
 import { SessionRibbon } from '@/components/unit/SessionRibbon';
+import { ReferenceSection } from '@/components/unit/ReferenceSection';
 import { GrammarSpotlight } from '@/components/unit/GrammarSpotlight';
 import { WatchoutBox } from '@/components/unit/WatchoutBox';
 import { VocabStudio } from '@/components/unit/VocabStudio';
@@ -15,7 +16,12 @@ import { ReadingText } from '@/components/reading/ReadingText';
 import { Card } from '@/components/ui/Card';
 import { Kicker } from '@/components/ui/Kicker';
 
-// UC-05..08 Unit overview (ARCHITECTURE.md §1.2, §7.1).
+/**
+ * UC-05 Unit hub (ARCHITECTURE.md §1.2, §7.1). The guided path lives in the
+ * session runner — this page shows goals-with-progress, the single Continue
+ * CTA, the 4-session plan with step previews (D11 gating states), and keeps
+ * the full theory/vocab/texts only as collapsed reference sections below.
+ */
 export default async function UnitPage({ params }: { params: Promise<{ courseSlug: string; moduleSlug: string }> }) {
   const { courseSlug, moduleSlug } = await params;
   const userId = await getCurrentUserId();
@@ -35,39 +41,64 @@ export default async function UnitPage({ params }: { params: Promise<{ courseSlu
 
       <UnitHeader blockPosition={unit.blockPosition} blockName={unit.blockName} moduleSlug={unit.moduleSlug} title={unit.title} standfirst={unit.standfirst} />
 
-      <Card className="mb-3.5">
-        <Kicker className="mb-1">In this unit</Kicker>
-        {unit.goals.map((g, i) => (
-          <div key={i} className="flex gap-3 border-t border-border-faint py-[9px] text-[15px] first:border-t-0">
-            <span className="mt-[7px] h-2 w-2 flex-none rounded-sm bg-green" />
-            <span>{g}</span>
-          </div>
-        ))}
+      <GoalsProgress goals={unit.goals} />
+
+      {unit.continueTarget ? (
+        <LinkButton href={`/course/${unit.courseSlug}/module/${unit.moduleSlug}/session/${unit.continueTarget.sessionType}`} size="block" className="mb-3.5">
+          Continue Session {unit.continueTarget.sessionPosition} · {unit.continueTarget.stepTitle} →
+        </LinkButton>
+      ) : (
+        <Card tone="green" className="mb-3.5 text-center text-[15px] font-semibold">
+          All four sessions are done — this unit is closed. 🎉
+        </Card>
+      )}
+
+      <Card className="mb-[22px]">
+        <Kicker className="mb-2.5">This week · 4 sessions</Kicker>
         <SessionRibbon courseSlug={unit.courseSlug} moduleSlug={unit.moduleSlug} sessions={unit.sessions} />
       </Card>
 
-      {unit.spotlights.map((s) => (
-        <GrammarSpotlight key={s.id} spotlight={s} />
-      ))}
+      <Kicker className="mx-0.5 mb-2">Reference · study inside the sessions, look things up here</Kicker>
 
-      {unit.watchouts.map((w) => (
-        <WatchoutBox key={w.id} watchout={w} />
-      ))}
+      <ReferenceSection title="Grammar reference" detail={`${unit.spotlights.length} spotlights · ${unit.watchouts.length} watch-outs`}>
+        {unit.spotlights.map((s) => (
+          <GrammarSpotlight key={s.id} spotlight={s} />
+        ))}
+        {unit.watchouts.map((w) => (
+          <WatchoutBox key={w.id} watchout={w} />
+        ))}
+      </ReferenceSection>
+
+      <ReferenceSection title={`Vocabulary · ${unit.vocabEntries.length} lexemes`} detail="Full studio">
+        <VocabStudio title={unit.vocabTitle} entries={unit.vocabEntries} />
+      </ReferenceSection>
 
       {unit.reading && (
-        <div className="mx-0.5 mb-[22px]">
-          {unit.reading.kicker && <Kicker>{unit.reading.kicker}</Kicker>}
-          <h2 className="text-pretty m-0 mb-1 mt-1 text-[26px] leading-[1.15] tracking-[-.01em]">{unit.reading.title}</h2>
-          {unit.reading.meta && <div className="mb-3.5 text-[13px] text-fg-subtle">{unit.reading.meta}</div>}
-          <ReadingText paragraphs={unit.reading.paragraphs} glosses={unit.reading.glosses} moduleId={unit.moduleId} />
-        </div>
+        <ReferenceSection title="Long-read" detail={unit.reading.title}>
+          <ReferenceReading reading={unit.reading} moduleId={unit.moduleId} />
+        </ReferenceSection>
       )}
 
-      <VocabStudio title={unit.vocabTitle} entries={unit.vocabEntries} />
+      {unit.readingExtra && (
+        <ReferenceSection title="Extra text" detail={unit.readingExtra.title}>
+          <ReferenceReading reading={unit.readingExtra} moduleId={unit.moduleId} />
+        </ReferenceSection>
+      )}
 
-      <UnitLaunchers launchers={unit.launchers} exerciseSets={exerciseSets} moduleTitle={unit.title} />
+      <ReferenceSection title="Free practice" detail="Exercise sets outside the weekly protocol">
+        <UnitLaunchers launchers={unit.launchers} exerciseSets={exerciseSets} moduleTitle={unit.title} />
+      </ReferenceSection>
+    </div>
+  );
+}
 
-      <GoalsList goals={unit.goals} kicker="Unit review · session 4" />
+function ReferenceReading({ reading, moduleId }: { reading: ReadingWithGlossesDTO; moduleId: number }) {
+  return (
+    <div>
+      {reading.kicker && <Kicker>{reading.kicker}</Kicker>}
+      <h2 className="text-pretty m-0 mb-1 mt-1 text-[22px] leading-[1.2] tracking-[-.01em]">{reading.title}</h2>
+      {reading.meta && <div className="mb-3.5 text-[13px] text-fg-subtle">{reading.meta}</div>}
+      <ReadingText paragraphs={reading.paragraphs} glosses={reading.glosses} moduleId={moduleId} />
     </div>
   );
 }

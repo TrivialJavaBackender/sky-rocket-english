@@ -36,7 +36,7 @@
 - Шаги: определить текущий модуль и сессию пользователя; собрать шаги сессии; посчитать «что горит сегодня» по трём колеям; показать стрик.
 - R: `user_course`, `module` + `user_module_state` (найти `in_progress`), `study_session` + `user_session_state` (текущая сессия «N of 4»), `session_step` (+ `user_step_state`), `card_state` (due ≤ now — счётчик карточек), `review_queue_item` (open, due ≤ now — счётчик очереди), `module_review` (due ≤ now — квизы ревью), `daily_activity` (стрик).
 - W: —.
-- Рендер: карточка текущей сессии + кнопка «Continue Session N», плитки «cards due / queue due», список шагов сессии, баннер overdue (если бэклог), стрик. Формы — `SKY.today` в `content.js`. Крайние состояния: `session-due` / `nothing-due` / `overdue-reviews` (см. `todayState` в мокапе).
+- Рендер: карточка текущей сессии + кнопка «Continue Session N · {название активного шага}», плитки «cards due / queue due», список оставшихся шагов сессии (detail каждого шага = его микро-цель), баннер overdue (если бэклог), стрик. Формы — `SKY.today` в `content.js`. Крайние состояния: `session-due` / `nothing-due` / `overdue-reviews` (см. `todayState` в мокапе).
 
 **UC-02 · Course map (карта курса).**
 - Триггер: таб «Course» / `/course`.
@@ -61,33 +61,33 @@
 
 ### 1.2. Прохождение модуля
 
-**UC-05 · Unit overview (обзор модуля).**
+**UC-05 · Unit hub (страница модуля).**
 - Триггер: тап по модулю на карте / `/course/[courseSlug]/module/[moduleSlug]`.
-- Шаги: собрать шапку модуля, цели, ленту 4 сессий со статусами, «лончеры» теории/чтения/лексики.
-- R: `module` (`title`, `standfirst`, `goals`), `study_session`+`user_session_state` (лента сессий), плюс наличие `grammar_spotlight`/`reading_text`/`vocab_entry` для лончеров.
+- Шаги: собрать шапку модуля; цели с прогрессом (D12: каждая цель привязана к сессии через `achieved_by`, статус `todo/in_progress/achieved` считается из состояния сессий); ленту 4 сессий с ячейками `done/current/locked` (D11) и превью шагов каждой сессии (в превью Output видны production-задание и extra-текст); цель «Continue» = текущая сессия + её первый непройденный шаг; свёрнутые справочные секции.
+- R: `module` (`title`, `standfirst`, `goals jsonb [{text, achieved_by}]`), `study_session`+`user_session_state`, `session_step`+`user_step_state` (превью и continue-target), `grammar_spotlight`/`watchout`/`reading_text` (main+extra)/`vocab_entry` для справочника, exercise-наличие для лончеров.
 - W: при первом входе — `user_module_state` → `in_progress` (если было `upcoming`), `started_at`.
-- Рендер: `SKY.unit` (block kicker, title, standfirst, goals, sessions grid, spotlight, watchout, reading, vocab, launchers).
+- Рендер: **хаб, а не свалка контента** — сверху `GoalsProgress`, CTA «Continue Session N · шаг», `SessionRibbon` (ряды сессий: done → «revisit»-ссылка, current → «Up next», locked → не-ссылка с «Finish Session N−1 first»); ниже — вся теория/лексика/тексты/free practice в свёрнутых `ReferenceSection` (`<details>`), т.к. учёба идёт внутри сессий, а сюда возвращаются за справкой.
 
 **UC-06 · Grammar spotlight + Watch-outs (теория).**
-- Триггер: шаг `theory` сессии Prime, либо лончер «Practise the spotlight».
-- Шаги: показать панели правил и блоки «Watch out!».
-- R: `grammar_spotlight` (`items jsonb [{form,example,note}]`), `watchout` (`bad_example/good_example/note`).
+- Триггер: шаг `theory` (Prime — часть 1, Workout — часть 2), либо справочная секция хаба.
+- Шаги: показать панели правил и блоки «Watch out!» **дозированно**: config шага `{"part":P,"of":N}` → P-я сбалансированная непрерывная доля упорядоченных spotlights и watchouts (`lib/domain/content-slicing.ts`; 5 spotlights при N=2 → 3+2). Пустая доля (модуль с одним spotlight) — валидный случай, рендерится заглушка «covered earlier».
+- R: `grammar_spotlight` (`items jsonb [{form,example,note}]`), `watchout` (`bad_example/good_example/note`), `session_step.config`.
 - W: `user_step_state` (done) при завершении шага.
-- Рендер: `SKY.unit.spotlight` (title/intro/rows) + `SKY.unit.watchout`.
+- Рендер: кикер «Part P of N» + `SKY.unit.spotlight` (title/intro/rows) + `SKY.unit.watchout`.
 
 **UC-07 · Reading с тап-глоссами (close/skim reading).**
-- Триггер: шаг `reading` (Prime skim / Input close / Output extra).
-- Шаги: рендер абзацев из сегментов; тап по глоссированному слову раскрывает определение; «Add to deck» создаёт карточку из глоссы.
+- Триггер: шаг `reading` (Prime skim / Input close / Output extra — `config {"reading_kind":...,"mode":...}`).
+- Шаги: рендер абзацев из сегментов; **режимы визуально различены** (`ReadingModeBanner`): skim — баннер «gist only» и глоссы выключены (`glossesEnabled=false`, сегменты рендерятся простым текстом), close — баннер «hunt the constructions», тап по глоссированному слову раскрывает определение; «Add to deck» создаёт карточку из глоссы.
 - R: `reading_text` (`body jsonb` — массив абзацев из сегментов `{t}`/`{g:key}`), `gloss` (по `reading_text_id`+`key`).
 - W: `user_step_state` (done); «Add to deck» → `flashcard(source=gloss, source_gloss_id, note_type=vocab)` + `card_state` (новая) для U.
 - Рендер: текст с пунктирными глосс-спанами; всплывающий блок глоссы (word/pos/def/example + кнопка Add to deck). Формы — `SKY.unit.reading.paras`. **Отличие от мокапа:** в БД сегмент несёт только `{g:key}` (не инлайн-объект) — фронт **джойнит** глоссу по ключу (см. §8, разн. D3).
 
 **UC-08 · Vocabulary studio (лексика).**
-- Триггер: шаг `vocab` сессии Prime, либо лончер «Practise the vocabulary».
-- Шаги: пролистать 45 единиц с use cases; отметить приоритетные.
-- R: `vocab_entry` (`term`, `tag`, `definition`, `use_cases jsonb`, `collocations`, `register_note`), `user_vocab_state`.
+- Триггер: шаг `vocab` (Prime — партия 1, Input — партии 2 и 3), либо справочная секция хаба.
+- Шаги: пролистать **партию** единиц с use cases (config `{"batch":B,"of":N}` → B-я доля упорядоченных 45 единиц, 15/15/15 через `content-slicing`); отметить приоритетные.
+- R: `vocab_entry` (`term`, `tag`, `definition`, `use_cases jsonb`, `collocations`, `register_note`), `user_vocab_state`, `session_step.config`.
 - W: `user_vocab_state` (`new→learning` при отметке приоритета — см. §8 разн. D6), `user_step_state`.
-- Рендер: карточки лексем `SKY.unit.vocab.entries`.
+- Рендер: карточки лексем `SKY.unit.vocab.entries` + метка диапазона «Lexemes X–Y of 45».
 
 **UC-09 · Exercise set (набор упражнений).**
 - Триггер: (а) шаг `exercise_set` сессии (config: `{"types":[...]}` или `{"group_key":"vocab"}`), (б) лончер юнита (`grammar`/`reading`/`vocab`), (в) `review_slot`, (г) `module_quiz`, (д) чек-пойнт, (е) свободная практика.
@@ -121,10 +121,13 @@
 
 **UC-13 · Ход сессии (session runner).**
 - Триггер: «Continue Session N» / вход в сессию.
-- Шаги: последовательно проводить шаги `session_step` по `position`; каждый шаг — соответствующий UC (06–12, 15); отмечать `user_step_state`; при завершении последнего шага — закрыть `user_session_state`, открыть следующую сессию.
-- R: `study_session`, `session_step` (+config), `user_session_state`, `user_step_state`.
+- Шаги: **жёсткий гейтинг (D11)** — `getSession` считает ячейки `computeSessionCells` и для `locked`-сессии возвращает `{kind:'locked'}` → страница делает `redirect` на хаб модуля; авто-старт `not_started→in_progress` только для `current`-сессии, `done` открыты для повтора. Дальше — последовательно проводить шаги `session_step` по `position`; каждый шаг — соответствующий UC (06–12, 15); отмечать `user_step_state`; при завершении последнего шага — закрыть `user_session_state`, открыть следующую сессию (она станет `current`).
+- R: `study_session` (все сессии модуля — для гейтинга), `session_step` (+config), `user_session_state`, `user_step_state`.
 - W: `user_session_state` (`in_progress`/`done`, `started_at`/`completed_at`), `user_step_state`, `daily_activity.minutes`.
-- Рендер: заголовок сессии (Prime/Input/Workout/Output, planned_minutes), список шагов с чекбоксами, активный шаг.
+- Рендер: заголовок сессии (Prime/Input/Workout/Output, planned_minutes), список шагов с чекбоксами, карточка «Step K of M · Goal» с микро-целью активного шага (`session_step.detail`), активный шаг; по завершении — CTA «Go to Session N+1».
+- **Возврат к пройденным шагам:** `?step=N` (1-based) открывает панель любого шага со статусом `done` (или активного) — строки таких шагов в списке кликабельны; при просмотре не-активного шага рендерится баннер «Revisiting a completed step» со ссылкой назад, `MarkStepDone` заменяется инертным «✓ Step already done», а `done` `module_quiz` перезапустить нельзя (инфо-карточка). `advanceStep` идемпотентен: для уже-`done` шага — ранний выход без записи и без повторного `daily_activity.minutes`.
+- **Пустой Review Slot:** при 0 due-элементов очереди шаг рендерит объяснение (очередь наполняется ошибками, возвраты +2/+7/+21 д) + `MarkStepDone` «Nothing due — continue» — сессия не блокируется.
+- **Текст рядом с вопросами:** `exercise_set` с `reading_comprehension` в `types` дополнительно грузит main-текст, уплощает его в plain-абзацы на сервере и передаёт в `ExercisePlayer`, который показывает его сворачиваемой панелью «Show the text» над упражнением.
 
 **UC-14 · Закрытие модуля (module quiz → Completed).**
 - Триггер: шаг `module_quiz` сессии Output (config `{"count":10,"pool":"review"}`).
@@ -182,6 +185,8 @@
 **UC-22 · Streak / daily activity.** W: любой продуктивный шаг апсертит `daily_activity(U, today)` (exercises_done/cards_reviewed/minutes). Read на Today/Progress для стрика и heatmap.
 
 **UC-23 · Vocab/Grammar promotion (фоновые статусы).** При успешных применениях: `user_grammar_state.success_count++`, `introduced→practising→reliable` (≥5 успешных, см. PLAN §4); лексема `known→in_use` при употреблении в `writing_submission` (`in_use_submission_id`). Вызывается как побочный эффект UC-09/UC-10.
+
+**Служебное (не UC): сброс прогресса.** Карточка «Danger zone» внизу `/progress` (двухшаговое подтверждение) → server action → `lib/use-cases/maintenance.ts` → `lib/repositories/maintenance.repo.ts::resetAllProgress` — транзакция, зеркалящая `scripts/reset-progress.ts`: все прогресс-таблицы пользователя + пользовательские флэшкарты; контент и `app_user` не трогаются. Тестовая аффорданс single-user периода.
 
 ---
 
@@ -540,6 +545,10 @@ export const COURSES = [{
 **D9 · Флешкарты: две карты из одной vocab-ноты (PLAN §5) vs одна строка на CSV-строку.** PLAN: из vocab-ноты две карты (term→meaning; def+collocation→term). → **Решение:** одна `flashcard`-строка = одна нота (как строка CSV); «две карты» — деталь Anki-шаблона, не нашей модели. SRS планирует ноту один раз. Если потребуется двусторонность — это UI-режим показа, не вторая строка. `flashcard.fields = {front, main, cases[], extra}` заполняется из CSV: vocab → front=Term, main=Definition, cases=[UseCase1,UseCase2], extra=Collocations+«Register: …».
 
 **D10 · Auth сейчас не нужен, но `app_user.password_hash NOT NULL`.** → **Решение:** `scripts/seed-user.ts` создаёт единственного пользователя (username из `APP_USER_USERNAME`, password_hash = заглушка/bcrypt от env-пароля). `getCurrentUserId()` возвращает его id (кэш). Точка расширения для bcrypt+jose (паттерн interview-prep) — `lib/current-user.ts`, без переделки остального.
+
+**D11 · Гейтинг сессий внутри модуля.** UC-13 описывал последовательность только нарративно; сессии были кликабельны в любом порядке, из-за чего было непонятно, «когда появится Session 3». → **Решено (утверждено владельцем):** жёсткий последовательный гейтинг. `lib/domain/session-gating.ts::computeSessionCells` — первая не-`done` сессия = `current`, все после неё = `locked`, `done` открыты для повтора; отдельной колонки в БД нет, состояние выводится из `user_session_state.status` + `position`. `getSession` для `locked` возвращает `{kind:'locked'}` → redirect на хаб; `SessionRibbon` рендерит `locked` не-ссылкой с подписью «Finish Session N−1 first». Правильность ответов в упражнениях прохождение **не** гейтит (ошибки уходят в очередь повторений — это осознанный дизайн); единственный скоринг-порог — module quiz (80%+ в сторону Mastered). Пошаговый гейтинг `advanceStep` по id шага не делаем (single-user MVP; шаги достижимы только из отрендеренных страниц).
+
+**D12 · Цели модуля не были связаны с прогрессом.** `module.goals` был массивом строк, цели рендерились статикой. → **Решено:** `meta.yaml` `goals` — объекты `{text, achieved_by: prime|input|workout|output}` (голая строка валидна и мапится в `output`); sync нормализует в jsonb `[{text, achieved_by}]`; `computeGoalStatus` (session-gating.ts) считает `todo/in_progress/achieved` из состояния сессий; хаб рендерит `GoalsProgress` — цели загораются снизу вверх по мере прохождения сессий. Микро-цели шагов живут в `session_step.detail` (переписаны в 0004 как цели) и показываются в карточке «Step K of M · Goal».
 
 ---
 

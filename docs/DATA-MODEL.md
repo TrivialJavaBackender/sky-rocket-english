@@ -1,6 +1,6 @@
 # SkyRocket · Data Model — Neon Postgres
 
-Схема данных курс-агностичного движка изучения языков: контент модулей, недельный протокол сессий, пользователи и три колеи повторений. Спроектирована по утверждённому дизайну (`docs/design/skyrocket/` — `content.js` задаёт формы данных экранов), дизайн-брифу и плану курса (`docs/PLAN.md`). Миграции: `db/migrations/0001_init.sql` (DDL + сид типов упражнений), `db/migrations/0002_seed_en_c1_skeleton.sql` (каркас курса en-c1), `db/migrations/0003_content_natural_keys.sql` (стабильные натуральные ключи `ident` для `exercise`/`writing_task`/`flashcard` — см. ниже).
+Схема данных курс-агностичного движка изучения языков: контент модулей, недельный протокол сессий, пользователи и три колеи повторений. Спроектирована по утверждённому дизайну (`docs/design/skyrocket/` — `content.js` задаёт формы данных экранов), дизайн-брифу и плану курса (`docs/PLAN.md`). Миграции: `db/migrations/0001_init.sql` (DDL + сид типов упражнений), `db/migrations/0002_seed_en_c1_skeleton.sql` (каркас курса en-c1), `db/migrations/0003_content_natural_keys.sql` (стабильные натуральные ключи `ident` для `exercise`/`writing_task`/`flashcard` — см. ниже), `db/migrations/0004_dose_theory_vocab_across_sessions.sql` (пересев `session_step`: дозирование теории/лексики по сессиям, детали шагов = микро-цели; DDL не меняет, сбрасывает `user_step_state`/`user_session_state` курса en-c1).
 
 ## Принципы
 
@@ -141,7 +141,7 @@ erDiagram
 |---|---|---|
 | `course` | Курс (язык) | `slug` unique; `level_label` для шапки («B2+ → C1») |
 | `block` | Блок из 4 модулей | `color`/`tint` — цветовой код карты; unique(course, slug) |
-| `module` | Учебный модуль-неделя | `standfirst`, `goals jsonb`; unique(block, slug) |
+| `module` | Учебный модуль-неделя | `standfirst`, `goals jsonb` — с 0004 канонически `[{text, achieved_by}]`, где `achieved_by` — сессия, закрывающая цель (ARCHITECTURE §8 D12); unique(block, slug) |
 | `checkpoint` | Ворота: диагностика / чек-пойнт блока / финальный мок | `kind`; `pass_mark` (null у диагностики, 75 у блоков, 65 у финала); CHECK связки kind↔block |
 
 ### Контент модуля (sync из `content/`)
@@ -163,8 +163,8 @@ erDiagram
 
 | Таблица | Назначение | Ключевое |
 |---|---|---|
-| `study_session` | 4 сессии недели | unique(module, session_type); Prime 60 / Input 75 / Workout 75 / Output 60 |
-| `session_step` | Шаги сессии | `kind` + `config jsonb` (`{"group_key":"vocab"}`, `{"types":[…]}`, `{"count":10}`) — из них рендерится Today |
+| `study_session` | 4 сессии недели | unique(module, session_type); Prime 60 / Input 75 / Workout 75 / Output 60; открываются строго по порядку (жёсткий гейтинг, ARCHITECTURE §8 D11 — состояние выводится из `user_session_state.status`, отдельной колонки нет) |
+| `session_step` | Шаги сессии | `kind` + `config jsonb` (`{"group_key":"vocab"}`, `{"types":[…]}`, `{"count":10}`, дозирование `{"part":P,"of":N}` / `{"batch":B,"of":N}`) — из них рендерится Today; `detail` = микро-цель шага. Матрица пересеяна миграцией `0004_dose_theory_vocab_across_sessions.sql`: теория в 2 частях (Prime/Workout), лексика в 3 партиях (Prime/Input×2), 5+6+5+4 шагов |
 
 ### Пользователь и прогресс
 

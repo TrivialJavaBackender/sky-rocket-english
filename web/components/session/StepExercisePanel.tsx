@@ -25,6 +25,8 @@ export function StepExercisePanel({
   stepId,
   moduleId,
   isModuleQuiz,
+  readingTitle,
+  readingParagraphs,
 }: {
   items: PublicExerciseDTO[];
   context: AttemptContext;
@@ -33,6 +35,9 @@ export function StepExercisePanel({
   stepId: number;
   moduleId: number;
   isModuleQuiz: boolean;
+  /** Fix 3: the close-read text, passed through to `ExercisePlayer` so a reading_comprehension exercise_set can show it without leaving the player. */
+  readingTitle?: string;
+  readingParagraphs?: string[];
 }) {
   const [open, setOpen] = useState(false);
   const router = useRouter();
@@ -64,6 +69,8 @@ export function StepExercisePanel({
             setOpen(false);
             router.refresh();
           }}
+          readingTitle={readingTitle}
+          readingParagraphs={readingParagraphs}
         />
       )}
     </>

@@ -12,11 +12,23 @@ import { z } from 'zod';
 
 // ───────────────────────────── meta.yaml ─────────────────────────────
 
+// A goal is either a bare string (legacy; sync maps it to achieved_by: output)
+// or an object naming the session that earns it (§8 D12 — drives the unit
+// hub's goals-progress card).
+export const GoalSchema = z.union([
+  z.string().min(1),
+  z.object({
+    text: z.string().min(1),
+    achieved_by: z.enum(['prime', 'input', 'workout', 'output']),
+  }),
+]);
+export type Goal = z.infer<typeof GoalSchema>;
+
 export const MetaSchema = z.object({
   slug: z.string().min(1),
   title: z.string().min(1),
   standfirst: z.string().min(1),
-  goals: z.array(z.string().min(1)).min(1),
+  goals: z.array(GoalSchema).min(1),
   grammar_points: z.array(z.string().min(1)).min(1),
   texts: z.array(
     z.object({

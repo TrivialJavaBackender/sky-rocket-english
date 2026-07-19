@@ -12,6 +12,7 @@ import * as activityRepo from '../repositories/activity.repo';
 import * as reviewRepo from '../repositories/review.repo';
 import { moduleStatusOnPriorModuleCompleted, moduleStatusOnQuizClose } from '../domain/module-state';
 import { scheduleModuleReviews as domainScheduleModuleReviews } from '../domain/module-review';
+import { computeSessionCells } from '../domain/session-gating';
 import type { SessionStepDTO, StudySessionDTO } from '../repositories/module.repo';
 import type { SessionType } from '../domain/types';
 
@@ -22,23 +23,40 @@ export interface SessionDTO extends StudySessionDTO {
   steps: SessionStepDTO[];
 }
 
-export async function getSession(userId: number, courseSlug: string, moduleSlug: string, sessionType: SessionType, now: Date = new Date()): Promise<SessionDTO | null> {
-  const course = await courseRepo.getCourseBySlug(courseSlug);
-  if (!course) return null;
-  const module = await moduleRepo.getModuleBySlug(course.id, moduleSlug);
-  if (!module) return null;
-  const session = await moduleRepo.getSession(module.id, sessionType, userId);
-  if (!session) return null;
+/** D11 hard gating: a locked session is never returned — the page redirects to the unit hub, which explains the lock. */
+export type GetSessionResult =
+  | { kind: 'ok'; session: SessionDTO }
+  | { kind: 'locked'; currentSessionType: SessionType }
+  | { kind: 'not_found' };
 
-  // First open of this session: not_started → in_progress (UC-13).
-  if (session.status === 'not_started') {
+export async function getSession(userId: number, courseSlug: string, moduleSlug: string, sessionType: SessionType, now: Date = new Date()): Promise<GetSessionResult> {
+  const course = await courseRepo.getCourseBySlug(courseSlug);
+  if (!course) return { kind: 'not_found' };
+  const module = await moduleRepo.getModuleBySlug(course.id, moduleSlug);
+  if (!module) return { kind: 'not_found' };
+
+  const sessions = await moduleRepo.listSessionsForModule(userId, module.id);
+  const idx = sessions.findIndex((s) => s.sessionType === sessionType);
+  if (idx === -1) return { kind: 'not_found' };
+
+  const cells = computeSessionCells(sessions);
+  if (cells[idx] === 'locked') {
+    const currentIdx = cells.indexOf('current');
+    return { kind: 'locked', currentSessionType: sessions[currentIdx === -1 ? 0 : currentIdx].sessionType };
+  }
+
+  const session = sessions[idx];
+  // First open of the *current* session: not_started → in_progress (UC-13).
+  // Done sessions are revisitable and locked ones never reach this point, so
+  // the old "any session auto-starts on open" hole is closed.
+  if (cells[idx] === 'current' && session.status === 'not_started') {
     await moduleRepo.upsertUserSessionState(userId, session.id, { status: 'in_progress', startedAt: now });
     session.status = 'in_progress';
     session.startedAt = now;
   }
 
   const steps = await moduleRepo.listStepsForSession(userId, session.id);
-  return { ...session, moduleTitle: module.title, moduleSlug: module.slug, steps };
+  return { kind: 'ok', session: { ...session, moduleTitle: module.title, moduleSlug: module.slug, steps } };
 }
 
 export interface AdvanceStepResult {
@@ -51,6 +69,10 @@ export interface AdvanceStepResult {
 export async function advanceStep(userId: number, stepId: number, now: Date = new Date()): Promise<AdvanceStepResult> {
   const step = await moduleRepo.getSessionStepById(userId, stepId);
   if (!step) throw new Error(`Session step not found: ${stepId}`);
+  // Idempotency guard: revisiting/re-running a step already marked done (Fix 2's
+  // "re-run a done exercise_set/review_slot" path, or a stray double-click) must
+  // not double-count minutes or re-trigger session-close/next-session-open.
+  if (step.status === 'done') return { sessionClosed: false, moduleId: 0, nextSessionOpened: null };
 
   await moduleRepo.upsertUserStepState(userId, stepId, { status: 'done', completedAt: now });
   await activityRepo.bumpDailyActivity(userId, { minutes: step.plannedMinutes }, now);

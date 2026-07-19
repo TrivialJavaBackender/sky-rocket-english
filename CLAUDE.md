@@ -10,11 +10,12 @@
 | `docs/DESIGN-BRIEF.md` | Бриф, по которому сделан утверждённый дизайн |
 | `docs/design/skyrocket/` | Утверждённый дизайн (mockup). `content.js` — **образцовые формы данных всех экранов**, схема БД следует им |
 | `docs/DATA-MODEL.md` | Схема данных: ER-диаграммы, справочник таблиц, решения, полный SQL |
-| `db/migrations/` | SQL-миграции Neon Postgres: `0001_init.sql` (DDL + сид типов упражнений), `0002_seed_en_c1_skeleton.sql` (каркас курса) |
+| `db/migrations/` | SQL-миграции Neon Postgres: `0001_init.sql` (DDL + сид типов упражнений), `0002_seed_en_c1_skeleton.sql` (каркас курса), `0003_content_natural_keys.sql` (`ident`-ключи sync), `0004_dose_theory_vocab_across_sessions.sql` (пересев шагов: дозирование теории/лексики, микро-цели) |
 | `content/en-c1/` | Контент-пакеты модулей (YAML/CSV). `README.md` — схема пакета. Пакеты синкаются в БД по `content_hash` |
 | `docs/MODULE-TASK-TEMPLATE.md` | Шаблон ТЗ субагенту на генерацию модуля + Definition of Done |
 | `docs/artifacts/plan.html` | Исходник артефакта-витрины плана |
-| `docs/ARCHITECTURE.md` | **Архитектура веб-приложения**: каталог use cases, слои, дизайн sync, грейдинг 8 типов, роуты/компоненты, открытые вопросы D1–D10 |
+| `docs/ARCHITECTURE.md` | **Архитектура веб-приложения**: каталог use cases, слои, дизайн sync, грейдинг 8 типов, роуты/компоненты, вопросы-решения D1–D12 (D11 — жёсткий гейтинг сессий, D12 — цели↔сессии) |
+| `docs/METHODOLOGY-REVIEW.md` | Методический аудит (2026-07): сверка протокола с лучшими практиками (Nation, CELTA, плато B2→C1), рекомендации P1–P3 (аудирование, fluency, noticing) |
 | `web/` | Приложение: Next.js 15 (App Router, SSR) + React 19 + Prisma + Tailwind. Слои: `lib/domain` (чистая логика) → `lib/use-cases` → `lib/repositories` (единственное место с Prisma) → `app`/`components`. `scripts/migrate.ts` — раннер raw SQL миграций, `scripts/sync.ts` — синк контента |
 | `netlify.toml` | Деплой: `base = "web"`, @netlify/plugin-nextjs; билд = generate → migrate → sync → next build |
 

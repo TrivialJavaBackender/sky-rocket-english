@@ -4,7 +4,7 @@
  */
 import { prisma } from '../db';
 import { idToNumber, decimalToNumber } from '../serialize';
-import type { ModuleStatus, ProgressStatus, SessionType, StepKind } from '../domain/types';
+import type { ModuleGoal, ModuleStatus, ProgressStatus, SessionType, StepKind } from '../domain/types';
 import type { Prisma } from '@prisma/client';
 
 export interface ModuleDTO {
@@ -13,7 +13,7 @@ export interface ModuleDTO {
   slug: string;
   title: string;
   standfirst: string | null;
-  goals: string[];
+  goals: ModuleGoal[];
   plannedMinutes: number;
   position: number;
 }
@@ -43,6 +43,24 @@ export interface SessionStepDTO {
   completedAt: Date | null;
 }
 
+/** module.goals jsonb is canonically [{text, achieved_by}] (§8 D12); bare strings (pre-D12 rows not yet re-synced) fall back to achieved_by: output. */
+function mapGoals(raw: Prisma.JsonValue): ModuleGoal[] {
+  if (!Array.isArray(raw)) return [];
+  const goals: ModuleGoal[] = [];
+  for (const g of raw) {
+    if (typeof g === 'string') {
+      goals.push({ text: g, achievedBy: 'output' });
+    } else if (g && typeof g === 'object' && !Array.isArray(g) && typeof (g as { text?: unknown }).text === 'string') {
+      const achievedBy = (g as { achieved_by?: unknown }).achieved_by;
+      goals.push({
+        text: (g as { text: string }).text,
+        achievedBy: achievedBy === 'prime' || achievedBy === 'input' || achievedBy === 'workout' || achievedBy === 'output' ? achievedBy : 'output',
+      });
+    }
+  }
+  return goals;
+}
+
 function mapModule(m: { id: bigint; block_id: bigint; slug: string; title: string; standfirst: string | null; goals: Prisma.JsonValue; planned_minutes: number; position: number }): ModuleDTO {
   return {
     id: idToNumber(m.id),
@@ -50,7 +68,7 @@ function mapModule(m: { id: bigint; block_id: bigint; slug: string; title: strin
     slug: m.slug,
     title: m.title,
     standfirst: m.standfirst,
-    goals: Array.isArray(m.goals) ? (m.goals as string[]) : [],
+    goals: mapGoals(m.goals),
     plannedMinutes: m.planned_minutes,
     position: m.position,
   };
@@ -284,6 +302,16 @@ export async function listStepsForSession(userId: number, studySessionId: number
     where: { study_session_id: studySessionId },
     include: { user_step_state: { where: { user_id: userId } } },
     orderBy: { position: 'asc' },
+  });
+  return rows.map(mapStep);
+}
+
+/** All steps of every session in the module, in walk order — feeds the unit hub's per-session step previews and the Continue target (UC-05). */
+export async function listStepsForModule(userId: number, moduleId: number): Promise<SessionStepDTO[]> {
+  const rows = await prisma.session_step.findMany({
+    where: { study_session: { module_id: moduleId } },
+    include: { user_step_state: { where: { user_id: userId } } },
+    orderBy: [{ study_session: { position: 'asc' } }, { position: 'asc' }],
   });
   return rows.map(mapStep);
 }

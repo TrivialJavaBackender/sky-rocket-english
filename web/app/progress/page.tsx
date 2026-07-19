@@ -8,6 +8,7 @@ import { ProgressBars } from '@/components/progress/ProgressBars';
 import { Ladder } from '@/components/progress/Ladder';
 import { UpcomingList } from '@/components/progress/UpcomingList';
 import { CourseCompletedBanner } from '@/components/progress/CourseCompletedBanner';
+import { ResetProgressCard } from '@/components/progress/ResetProgressCard';
 
 // UC-04 Progress (ARCHITECTURE.md §1.1, §7.1 `/progress`).
 export default async function ProgressPage() {
@@ -22,6 +23,7 @@ export default async function ProgressPage() {
       <ProgressBars blocks={progress.blocks} />
       <Ladder />
       <UpcomingList upcoming={progress.upcoming} />
+      <ResetProgressCard />
     </div>
   );
 }

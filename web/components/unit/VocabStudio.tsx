@@ -14,7 +14,7 @@ const STATUS_LABELS: Record<VocabStatus, string> = { new: 'New', learning: 'Lear
  * UC-08 vocabulary studio (ARCHITECTURE.md §1.2). "Mark priority" = `new ->
  * learning` (§8 D6 — the schema has no separate priority flag yet).
  */
-export function VocabStudio({ title, entries }: { title: string; entries: VocabEntryDTO[] }) {
+export function VocabStudio({ title, entries, rangeLabel }: { title: string; entries: VocabEntryDTO[]; rangeLabel?: string }) {
   const [statuses, setStatuses] = useState<Record<number, VocabStatus>>(() => Object.fromEntries(entries.map((e) => [e.id, e.status])));
   const [pending, setPending] = useState<number | null>(null);
   const router = useRouter();
@@ -33,6 +33,7 @@ export function VocabStudio({ title, entries }: { title: string; entries: VocabE
       <Kicker tone="green" className="mb-0.5">
         Vocabulary in focus · {title}
       </Kicker>
+      {rangeLabel && <div className="mb-1 text-[13px] text-fg-subtle">{rangeLabel}</div>}
       {entries.map((e) => {
         const status = statuses[e.id];
         return (

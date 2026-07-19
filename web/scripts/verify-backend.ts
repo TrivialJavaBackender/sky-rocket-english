@@ -125,6 +125,37 @@ async function main() {
   assert(writingTask !== null, 'writing_task present for m01');
   console.log(`  writing genre: ${writingTask!.genre}, checklist items: ${writingTask!.checklist.length}`);
 
+  // ── (b2) D11 session gating + dosed theory/vocab slices (0004) ──────────
+  section('(b2) Session gating (D11) + content slicing');
+  const cellsNow = unit!.sessions.map((s) => s.cell).join(',');
+  assert(cellsNow === 'current,locked,locked,locked', `hub cells start current,locked,locked,locked (got ${cellsNow})`);
+  assert(unit!.continueTarget?.sessionType === 'prime', `continueTarget points at prime (got ${unit!.continueTarget?.sessionType})`);
+  assert(unit!.readingExtra !== null, 'extra reading is surfaced on the hub');
+  assert(unit!.sessions.every((s) => s.steps.length > 0), 'every hub session cell carries a step preview');
+  assert(unit!.goals.length === 5 && unit!.goals.some((g) => g.achievedBy === 'workout'), 'module goals carry the achieved_by mapping (D12)');
+  assert(unit!.goals.every((g) => g.status !== 'achieved'), 'no goal is achieved before any session is done');
+
+  const primeRes = await sessionUseCase.getSession(userId, 'en-c1', 'm01', 'prime');
+  assert(primeRes.kind === 'ok', `prime opens as the current session (got ${primeRes.kind})`);
+  assert(primeRes.session.steps.length === 5, `prime has 5 steps after 0004 (got ${primeRes.session.steps.length})`);
+  const workoutRes = await sessionUseCase.getSession(userId, 'en-c1', 'm01', 'workout');
+  assert(workoutRes.kind === 'locked' && workoutRes.currentSessionType === 'prime', `workout is locked while prime is current (got ${workoutRes.kind})`);
+
+  const theory1 = await unitUseCase.getModuleTheorySlice(moduleId, 1, 2);
+  const theory2 = await unitUseCase.getModuleTheorySlice(moduleId, 2, 2);
+  assert(
+    theory1.spotlights.length + theory2.spotlights.length === unit!.spotlights.length && theory1.spotlights.length >= theory2.spotlights.length && theory2.spotlights.length > 0,
+    `theory parts are balanced and cover everything (${theory1.spotlights.length}+${theory2.spotlights.length}=${unit!.spotlights.length})`,
+  );
+  const batch1 = await unitUseCase.getModuleVocabBatch(userId, moduleId, 1, 3);
+  const batch2 = await unitUseCase.getModuleVocabBatch(userId, moduleId, 2, 3);
+  const batch3 = await unitUseCase.getModuleVocabBatch(userId, moduleId, 3, 3);
+  assert(
+    batch1.entries.length === 15 && batch2.entries.length === 15 && batch3.entries.length === 15,
+    `vocab batches split 15/15/15 (got ${batch1.entries.length}/${batch2.entries.length}/${batch3.entries.length})`,
+  );
+  assert(batch2.rangeStart === 16 && batch3.rangeEnd === 45, `vocab batch ranges are contiguous (batch2 starts ${batch2.rangeStart}, batch3 ends ${batch3.rangeEnd})`);
+
   // ── (c) Grade all 8 exercise types, correct + incorrect ──────────────────
   section('(c) gradeAndRecord — all 8 exercise types, correct + incorrect');
   const typeCodes: ExerciseTypeCode[] = [

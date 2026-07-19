@@ -68,12 +68,17 @@ export function ExercisePlayer({
   headerLabel,
   onClose,
   onFinished,
+  readingTitle,
+  readingParagraphs,
 }: {
   items: PublicExerciseDTO[];
   context: AttemptContext;
   headerLabel: string;
   onClose: () => void;
   onFinished?: (summary: ExercisePlayerSummary) => void | Promise<void>;
+  /** Fix 3: reading_comprehension exercise sets otherwise strand the learner without the text they're being quizzed on — a collapsed-by-default panel above the exercise Card lets them pull it back up without leaving the player. */
+  readingTitle?: string;
+  readingParagraphs?: string[];
 }) {
   const [i, setI] = useState(0);
   const [results, setResults] = useState<Array<boolean | null>>(() => items.map(() => null));
@@ -179,6 +184,22 @@ export function ExercisePlayer({
           <div className="text-[12.5px] font-semibold tabular-nums text-fg-subtle">{Object.keys(harvestedMap).length} harvested</div>
         </div>
         <ProgressDots results={results} currentIndex={i} />
+        {readingParagraphs && readingParagraphs.length > 0 && (
+          <details className="group mb-3.5 rounded-xl border border-border bg-bg-card px-4 py-3">
+            <summary className="cursor-pointer list-none text-[13.5px] font-semibold text-fg-muted">
+              <span className="group-open:hidden">Show the text ▸</span>
+              <span className="hidden group-open:inline">Hide the text ▾</span>
+            </summary>
+            <div className="mt-3 max-h-[45vh] overflow-y-auto pr-1">
+              {readingTitle && <h3 className="text-pretty m-0 mb-2 text-[16px] font-bold leading-[1.25]">{readingTitle}</h3>}
+              {readingParagraphs.map((p, pi) => (
+                <p key={pi} className="text-pretty mb-3 text-[14.5px] leading-relaxed text-fg last:mb-0">
+                  {p}
+                </p>
+              ))}
+            </div>
+          </details>
+        )}
         <Card className="px-5 py-[22px]">
           <div className="mb-3.5 flex items-center justify-between">
             <Kicker tone="green">{EXERCISE_TYPE_LABELS[item.typeCode]}</Kicker>
