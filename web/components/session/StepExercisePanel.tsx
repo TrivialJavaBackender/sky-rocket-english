@@ -1,12 +1,12 @@
 'use client';
 
 import { useState } from 'react';
-import { useRouter } from 'next/navigation';
 import type { AttemptContext } from '@/lib/domain/types';
 import type { PublicExerciseDTO } from '@/lib/use-cases/exercise-set';
 import { ExercisePlayer, type ExercisePlayerSummary } from '@/components/player/ExercisePlayer';
 import { Button } from '@/components/ui/Button';
 import { advanceStep, closeModule } from '@/app/actions/sessions';
+import { useActionRefresh } from '@/components/useActionRefresh';
 
 /**
  * A session step whose completion is a graded exercise run — `exercise_set`,
@@ -40,7 +40,7 @@ export function StepExercisePanel({
   readingParagraphs?: string[];
 }) {
   const [open, setOpen] = useState(false);
-  const router = useRouter();
+  const { pending, run } = useActionRefresh();
 
   async function handleFinished(summary: ExercisePlayerSummary) {
     if (isModuleQuiz) {
@@ -56,7 +56,7 @@ export function StepExercisePanel({
 
   return (
     <>
-      <Button size="block" onClick={() => setOpen(true)}>
+      <Button size="block" onClick={() => setOpen(true)} disabled={pending}>
         {startLabel}
       </Button>
       {open && (
@@ -65,10 +65,7 @@ export function StepExercisePanel({
           context={context}
           headerLabel={headerLabel}
           onFinished={handleFinished}
-          onClose={() => {
-            setOpen(false);
-            router.refresh();
-          }}
+          onClose={() => run(async () => setOpen(false))}
           readingTitle={readingTitle}
           readingParagraphs={readingParagraphs}
         />

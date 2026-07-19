@@ -1,21 +1,20 @@
 'use client';
 
 import { useState } from 'react';
-import { useRouter } from 'next/navigation';
 import type { WritingSubmissionDTO, WritingTaskDTO } from '@/lib/repositories/writing.repo';
 import { submitSelfCheck } from '@/app/actions/writing';
 import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
 import { Kicker } from '@/components/ui/Kicker';
 import { PromptText } from './PromptText';
+import { useActionRefresh } from '@/components/useActionRefresh';
 
 /** UC-12 self-check (ARCHITECTURE.md §1.2) — the learner's own submission next to the model answer, plus a tickable checklist. */
 export function SelfCheck({ task, latestSubmission, stepId }: { task: WritingTaskDTO; latestSubmission: WritingSubmissionDTO | null; stepId?: number }) {
   const initialTicks = (latestSubmission?.selfCheck as Record<string, boolean> | null) ?? {};
   const [ticks, setTicks] = useState<Record<string, boolean>>(initialTicks);
-  const [saving, setSaving] = useState(false);
   const [saved, setSaved] = useState(false);
-  const router = useRouter();
+  const { pending: saving, run } = useActionRefresh();
 
   if (!latestSubmission) {
     return (
@@ -26,13 +25,12 @@ export function SelfCheck({ task, latestSubmission, stepId }: { task: WritingTas
     );
   }
 
-  async function handleSave() {
-    if (saving) return;
-    setSaving(true);
-    await submitSelfCheck(latestSubmission!.id, ticks, stepId);
-    setSaving(false);
-    setSaved(true);
-    router.refresh();
+  function handleSave() {
+    // Scroll to top only in the session-step context, where the refresh swaps this panel for the next step.
+    run(async () => {
+      await submitSelfCheck(latestSubmission!.id, ticks, stepId);
+      setSaved(true);
+    }, { scrollTop: !!stepId });
   }
 
   return (

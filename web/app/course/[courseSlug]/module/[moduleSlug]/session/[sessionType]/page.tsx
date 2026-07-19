@@ -105,6 +105,7 @@ export default async function SessionPage({
             )
           )}
           <ActiveStepPanel
+            key={viewedStep.id}
             userId={userId}
             moduleId={session.moduleId}
             stepId={viewedStep.id}

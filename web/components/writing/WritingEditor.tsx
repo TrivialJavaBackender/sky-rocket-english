@@ -1,13 +1,13 @@
 'use client';
 
 import { useState } from 'react';
-import { useRouter } from 'next/navigation';
 import type { WritingTaskDTO } from '@/lib/repositories/writing.repo';
 import { submitWriting } from '@/app/actions/writing';
 import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
 import { Kicker } from '@/components/ui/Kicker';
 import { PromptText } from './PromptText';
+import { useActionRefresh } from '@/components/useActionRefresh';
 
 const WORD_TARGET: [number, number] = [220, 260];
 
@@ -20,29 +20,26 @@ const WORD_TARGET: [number, number] = [220, 260];
  */
 export function WritingEditor({ task, stepId, alreadySubmittedBody }: { task: WritingTaskDTO; stepId?: number; alreadySubmittedBody?: string | null }) {
   const [body, setBody] = useState(alreadySubmittedBody ?? '');
-  const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(!!alreadySubmittedBody);
-  const router = useRouter();
+  const { pending: submitting, run } = useActionRefresh();
   const wordCount = body.trim().length === 0 ? 0 : body.trim().split(/\s+/).length;
   const [min, max] = WORD_TARGET;
   const inRange = wordCount >= min && wordCount <= max;
 
-  async function handleSubmitWriting() {
-    if (submitting || !body.trim()) return;
-    setSubmitting(true);
-    await submitWriting(task.id, body, undefined, undefined, stepId);
-    setSubmitting(false);
-    setSubmitted(true);
-    router.refresh();
+  function handleSubmitWriting() {
+    if (!body.trim()) return;
+    // Scroll to top only when this editor is a session step (the refresh swaps in the next step's panel); standalone usage reveals the model answer below instead.
+    run(async () => {
+      await submitWriting(task.id, body, undefined, undefined, stepId);
+      setSubmitted(true);
+    }, { scrollTop: !!stepId });
   }
 
-  async function handleMarkSpeakingDone() {
-    if (submitting) return;
-    setSubmitting(true);
-    await submitWriting(task.id, '(recorded outside the app)', undefined, undefined, stepId);
-    setSubmitting(false);
-    setSubmitted(true);
-    router.refresh();
+  function handleMarkSpeakingDone() {
+    run(async () => {
+      await submitWriting(task.id, '(recorded outside the app)', undefined, undefined, stepId);
+      setSubmitted(true);
+    }, { scrollTop: !!stepId });
   }
 
   return (
