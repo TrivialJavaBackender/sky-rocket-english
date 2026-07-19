@@ -101,3 +101,34 @@ watchouts:
     bad: By the time the recruiter called back, I accepted another offer.
     good: By the time the recruiter called back, I had accepted another offer.
     note: By the time draws a line in the past; whatever happened before that line takes had + past participle.
+cloze_cards:
+  - text: "She {{c1::has been working}} here since 2019 — and she still loves it."
+    hint: work
+    rule: since + past starting point → present perfect; continuous for ongoing activity
+  - text: "By the time the recruiter called back, I {{c1::had accepted}} another offer."
+    hint: accept
+    rule: by the time + past → the earlier event takes the past perfect
+  - text: "When the assistant finally arrived, Marta {{c1::had been running}} the office alone for a year."
+    hint: run
+    rule: duration up to a past moment → past perfect continuous
+  - text: "As a trainee, he {{c1::used to know}} nothing about tax law."
+    hint: know — not would
+    rule: states take used to, never would
+  - text: "Every Friday she {{c1::would stay}} late to plan the week ahead."
+    hint: stay
+    rule: would + infinitive → repeated past actions with a nostalgic colouring
+  - text: "This time next week I {{c1::will be presenting}} to the board."
+    hint: present
+    rule: future continuous → activity in progress at a future moment
+  - text: "By May she {{c1::will have been leading}} the team for a decade."
+    hint: lead
+    rule: future perfect continuous → duration measured at a future point
+  - text: "The CEO {{c1::is to step}} down at June's annual meeting."
+    hint: step
+    rule: be to + infinitive → official arrangements, the press-release future
+  - text: "I {{c1::was about to leave}} when the phone rang."
+    hint: leave
+    rule: be about to in the past → imminent action interrupted
+  - text: "He {{c1::was to have taken}} over in May, but the merger collapsed."
+    hint: take over
+    rule: was to have done → a plan that never happened; the perfect marks non-fulfilment

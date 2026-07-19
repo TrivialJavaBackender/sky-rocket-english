@@ -1,0 +1,43 @@
+kind: main
+kicker: LONG-READ
+title: The Algorithm Will See You Now
+meta: ≈ 6 min · dotted words carry glosses — tap to reveal
+word_count: 850
+body:
+  - - t: "For more than a century, the chest X-ray has been read the same way: a tired human being, a lightbox and a judgement formed in seconds. That judgement is now being quietly outsourced. In hospitals from Seoul to Stockholm, state-of-the-art image-recognition systems are being rolled out alongside radiologists, and in some departments the machine now reads first. The pitch writes itself: software never sleeps, never hurries and never lets a difficult night skew its attention. The reality, as ever in medicine, is more complicated — and more interesting."
+  - - t: "The breakthrough behind the headlines is real. In 2018, a deep-learning system was shown, in a peer-reviewed study, to detect certain lung cancers earlier than experienced consultants could. The findings have since been replicated on data from three continents — the strongest empirical evidence yet that machines can, in narrow tasks, outperform the very people who trained them. The engineering is cutting-edge, but the idea is old: harness pattern recognition, feed it millions of labelled images, and let it crunch the numbers until the invisible becomes obvious. None of it happened overnight, either: the groundbreaking papers rest on a decade of unglamorous work in which archives were digitised, labels were argued over, and models were rebuilt each time they failed."
+  - - t: "It is believed that more than four hundred medical algorithms have now been approved by regulators, and the market is estimated to reach tens of billions of dollars within a decade. Hospitals at the forefront of the shift describe a "
+    - g: triage
+    - t: " revolution: urgent scans are flagged within minutes, routine ones are queued for the morning, and many radiologists have had the dullest stretch of their workload quietly lifted away. Administrators, for their part, see a chance to streamline overstretched departments and to automate the reporting that clogs them. The technology, in short, is gaining traction faster than anyone expected — faster, some argue, than the evidence justifies."
+  - - t: "Much of what is sold as a game changer has never faced a randomised controlled trial; a proof of concept built on a curated dataset is not a product that is safe on a Tuesday night shift. Training data drawn from a handful of teaching hospitals is hardly a representative sample of humanity, and a model trained on one population may quietly fail another. When independent researchers audited one celebrated system, they concluded that it must have been trained on scans that still carried hospital labels: the model had learned to read the sticker, not the lung. The study has become a cautionary tale, retold at every conference since."
+  - - t: "The failures follow a pattern engineers know as the "
+    - g: false_positive
+    - t: " problem. A system tuned to miss nothing will raise an alarm about everything, and every alarm has to be checked by the same humans the software was meant to relieve. In one widely reported pilot, a sepsis-alert model backfired so thoroughly that nurses simply learned to ignore it — the unintended consequences of automation include teaching professionals to distrust their own tools. A feasible tool on a benchmark, in other words, is not yet a feasible tool on a ward. Chastened, vendors now prefer to err on the side of caution in their claims, and the phrase 'decision support' has replaced the word 'diagnosis' in most of their brochures."
+  - - t: "There are also questions about accountability that nobody has fully answered. Most commercial models are "
+    - g: opaque
+    - t: ": they cannot explain why a shadow was flagged, and when they are wrong it is not obvious who carries the "
+    - g: liability
+    - t: " — the vendor, the hospital, or the doctor who was told by a machine that there was nothing to see. Professional bodies have raised concerns that over-reliance could undermine the training of junior doctors: nobody learns to read a scan if the reading has always been done for them. Privacy campaigners add that patients are rarely asked whether their images may be used to teach somebody else's product."
+  - - t: "What happens next will be decided less by engineers than by institutions. The most tech-savvy hospitals now have their systems audited independently before a single patient is scanned, and insist that every update be re-approved as populations and machines change. Regulators are drafting rules to the same effect, and none of it can be skipped: a safeguard that is bolted on after rollout tends to arrive exactly one scandal too late. It is said that the first major lawsuit over an algorithmic misdiagnosis is already being prepared; whatever its outcome, it will do more to shape the field than any benchmark."
+  - - t: "The honest conclusion is duller than the hype and kinder than the backlash. The algorithm is a double-edged sword: a tireless colleague with no idea when it is wrong. The radiologists who were given the software as an assistant rather than a replacement report the happiest results, and the departments that used it to scale up attention — not to render the humans obsolete — are the ones where it has genuinely paved the way for better medicine. The rest of us, early adopters or not, will meet it soon enough. The algorithm will see you now. It is worth asking who taught it to look."
+glosses:
+  - key: triage
+    term: triage
+    pos_label: noun
+    definition: the process of deciding which patients or tasks are most urgent and should be dealt with first
+    example: Emergency departments use triage to treat the sickest patients first.
+  - key: false_positive
+    term: false positive
+    pos_label: noun
+    definition: a test result that wrongly says a problem exists when in fact it does not
+    example: The scanner produced so many false positives that staff stopped trusting its alarms.
+  - key: opaque
+    term: opaque
+    pos_label: adjective
+    definition: impossible to see into or understand; not transparent about how something works
+    example: The bank's fee structure was so opaque that even its own staff could not explain it.
+  - key: liability
+    term: liability
+    pos_label: noun
+    definition: legal responsibility for damage or harm, especially the duty to pay for it
+    example: The court ruled that liability for the accident lay with the manufacturer.

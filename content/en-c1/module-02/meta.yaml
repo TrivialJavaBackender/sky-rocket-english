@@ -1,0 +1,34 @@
+slug: m02
+title: Science & Technology
+standfirst: Passives across every form, impersonal reporting and the causative for the language of research · 45 lexemes with use cases · a recorded monologue.
+goals:
+  - text: Move confidently between active and passive across perfect, continuous and modal forms
+    achieved_by: workout
+  - text: Report findings and claims with the impersonal passive of a careful scientist
+    achieved_by: workout
+  - text: Use causative have and get naturally for work done by other people
+    achieved_by: workout
+  - text: Deploy 45 high-value science and technology lexemes in your own sentences
+    achieved_by: input
+  - text: Deliver a fluent two-to-three-minute monologue on a technology that changed your field
+    achieved_by: output
+grammar_points:
+  - Passive of perfect and continuous forms
+  - Modal passives (must have been done)
+  - "Impersonal passive (It is said / believed that…)"
+  - Causative structures (have / get something done)
+  - Two-object passives and information structure
+texts:
+  - kind: main
+    title: The Algorithm Will See You Now
+    word_count: 850
+  - kind: extra
+    title: Artificial Cornea Restores Sight in First Human Trial
+    word_count: 270
+production:
+  mode: speaking
+  genre: recorded monologue (Speaking Part 2 style)
+cards:
+  vocab: 45
+  grammar_cloze: 10
+  transformation: 8

@@ -1,0 +1,137 @@
+# Module 02 · Science & Technology — grammar spotlights + watchouts + cloze cards
+spotlights:
+  - title: "The passive across the tense system"
+    intro: "B2 stops at is done and was done. C1 runs the passive through every tense you already own — the recipe never changes: put be in the tense you need, then add the past participle."
+    items:
+      - form: is / are being + past participle
+        example: The trial data are being analysed by an independent team.
+        note: An action in progress right now, doer demoted or dropped — the live-news passive.
+      - form: was / were being + past participle
+        example: When the auditors arrived, the logs were being deleted.
+        note: In progress at a past moment — the passive twin of the past continuous.
+      - form: has / have been + past participle
+        example: The results have been replicated in three independent labs.
+        note: A completed action with weight now — the abstract-of-a-paper form.
+      - form: had been + past participle
+        example: By 2020 the prototype had been tested a thousand times.
+        note: Completed before a past reference point — narrative depth, passive voice.
+      - form: will have been + past participle
+        example: By Friday every sample will have been sequenced.
+        note: Complete by a future deadline. The future perfect from M1, switched to passive.
+      - form: the missing form — no perfect continuous passive
+        example: The vaccine has been undergoing tests for a year (NOT has been being tested).
+        note: English refuses the double be. Reach for undergo, be under way, be in progress instead.
+  - title: "Modal passives: deduction in the lab"
+    intro: Combine M1's modal verbs with the passive and you get the language of technical judgement — what must, might or should have been done, without pointing a finger at anyone.
+    items:
+      - form: must have been + past participle
+        example: The sample must have been contaminated — nothing else explains the readings.
+        note: Confident deduction about a past event, doer unknown or unimportant.
+      - form: can't have been + past participle
+        example: The chip can't have been damaged in transit; the seals were intact.
+        note: The negative certainty. Never mustn't for deductions — English uses can't.
+      - form: may / might / could have been + past participle
+        example: The outage might have been caused by a single misconfigured router.
+        note: Open possibilities in a post-mortem — the honest engineer's hedge.
+      - form: should have been + past participle
+        example: The data should have been anonymised before it left the hospital.
+        note: The right procedure, not followed — criticism aimed at a process, not a person.
+      - form: has to / needs to be + past participle
+        example: Every release needs to be signed off by two reviewers.
+        note: Present obligation in the passive — the compliance-manual form.
+  - title: "The impersonal passive: reporting without a source"
+    intro: Science writing constantly reports what people in general believe, claim or estimate. English has two elegant frames for it — and C1 means switching between them freely.
+    items:
+      - form: It is said / believed / thought that + clause
+        example: It is believed that the algorithm outperforms human radiologists.
+        note: The claim is out there; nobody in particular owns it. Classic science-news opener.
+      - form: subject + is said to + infinitive
+        example: The device is said to halve diagnosis times.
+        note: Same meaning, tighter sentence — the subject steps forward, the sayers vanish.
+      - form: is said to have + past participle
+        example: The startup is reported to have known about the flaw for months.
+        note: The perfect infinitive pushes the reported event one step into the past.
+      - form: is expected / estimated to
+        example: The market is estimated to reach forty billion dollars by 2030.
+        note: The numbers-journalism pair — forecasts and measurements wear this frame.
+  - title: "Causatives: have and get"
+    intro: You did not build it, fix it or steal it — you arranged it, ordered it or suffered it. The causative is how English separates the owner of an action from its doer.
+    items:
+      - form: have + object + past participle
+        example: We had the servers upgraded over the weekend.
+        note: Work done for you by somebody else — the professional-services structure.
+      - form: get + object + past participle
+        example: Get your code reviewed before you ship it.
+        note: Same meaning as have, more informal, with a flavour of effort or urging.
+      - form: have + somebody + bare infinitive
+        example: The lab had every technician retrain on the new scanner.
+        note: You direct a person to act. After have the infinitive is bare — no to.
+      - form: get + somebody + to-infinitive
+        example: They finally got the vendor to extend the licence.
+        note: Persuasion — effort is part of the meaning. After get the to survives.
+      - form: have + object + past participle (misfortune)
+        example: She had her laptop stolen at the conference.
+        note: The dark twin — the same structure reports what was done TO you.
+  - title: "Choosing the passive: information structure"
+    intro: The passive is not the active in fancy dress — it is a tool for pointing the sentence at the right thing. C1 writing chooses it for three concrete reasons.
+    items:
+      - form: known first, new last (end-weight)
+        example: The vaccine was developed by a team of just twelve researchers.
+        note: The surprise — the tiny team — lands at the end, where English puts news.
+      - form: two-object verbs — person as subject
+        example: The researchers were given full access to the raw data.
+        note: Give, send, offer, show passivise both objects; English prefers the person up front.
+      - form: agent dropped
+        example: Mistakes were made, and the launch window was missed.
+        note: Doer unknown, obvious — or being protected. The evasive passive is a choice; notice it.
+      - form: passive for topic continuity
+        example: The telescope was launched in 2021. It was placed in orbit a million miles out.
+        note: One subject, sentence after sentence — the passive keeps the camera still.
+watchouts:
+  - title: the missing be
+    bad: The vaccine developed by a small startup.
+    good: The vaccine was developed by a small startup.
+    note: Russian builds the passive without an auxiliary; English never does. Be + past participle — always. (Without was, the words become a noun phrase, not a sentence.)
+  - title: make instead of have/get
+    bad: She made her laptop repaired at the service centre.
+    good: She had her laptop repaired at the service centre.
+    note: Make means force, and it does not build the arranged-service causative. Work you order or pay for takes have / get + object + past participle.
+  - title: is said + that-clause
+    bad: The device is said that it halves diagnosis times.
+    good: The device is said to halve diagnosis times.
+    note: "Two frames, never mixed: It is said that + clause, or subject + is said to + infinitive. Pick one and finish it."
+  - title: still built vs still being built
+    bad: The data centre is still built.
+    good: The data centre is still being built.
+    note: Drop being and the construction is finished. Is being + past participle is what keeps the cranes on site.
+cloze_cards:
+  - text: "The results {{c1::have been replicated}} in three independent labs."
+    hint: replicate
+    rule: present perfect passive → have / has been + past participle
+  - text: "When the auditors arrived, the logs {{c1::were being deleted}}."
+    hint: delete
+    rule: past continuous passive → was / were being + past participle, action in progress at a past moment
+  - text: "The sample {{c1::must have been contaminated}} — nothing else explains the readings."
+    hint: contaminate — confident deduction
+    rule: deduction about the past → must have been + past participle
+  - text: "It {{c1::is believed}} that the algorithm outperforms human radiologists."
+    hint: believe
+    rule: impersonal passive → It is said / believed / thought that + clause
+  - text: "The startup {{c1::is reported to have known}} about the flaw for months."
+    hint: report · know — perfect infinitive
+    rule: subject + is said / reported to have + past participle → reported earlier event
+  - text: "We {{c1::had the servers upgraded}} over the weekend."
+    hint: have · upgrade
+    rule: causative have + object + past participle → work done for you by others
+  - text: "They finally {{c1::got the vendor to extend}} the licence."
+    hint: get · extend
+    rule: get + somebody + to-infinitive → persuasion; the to survives after get
+  - text: "She {{c1::had her laptop stolen}} at the conference."
+    hint: have · steal — misfortune
+    rule: have + object + past participle for misfortunes — what was done TO you
+  - text: "The researchers {{c1::were given}} full access to the raw data."
+    hint: give
+    rule: two-object verbs passivise on the person → the receiver becomes the subject
+  - text: "By Friday every sample {{c1::will have been sequenced}}."
+    hint: sequence
+    rule: future perfect passive → will have been + past participle

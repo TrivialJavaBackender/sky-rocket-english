@@ -19,7 +19,9 @@
    уровень C1, не частотник B1): term, tag, definition, use_cases (2–3 в разных
    контекстах), collocations, register.
 3. theory.yaml — grammar spotlight (title, intro, items: form / example / note
-   по всем подтемам) + watchouts (частотные ошибки, отбор — L1-интерференция).
+   по всем подтемам) + watchouts (частотные ошибки, отбор — L1-интерференция)
+   + cloze_cards: 10 грамматических cloze-карточек (text с {{c1::…}}, hint,
+   rule) по подтемам модуля.
 4. text-main.yaml — лонгрид под заявленным названием: ≥20 единиц из vocab.yaml,
    ≥8 целевых конструкций, аутентичная журналистика C1; body — сегменты
    {t: "…"} | {g: gloss_key}; glosses: 3–5 записей (term, pos_label,
@@ -32,11 +34,15 @@
    типа — как в docs/design/skyrocket/content.js (exercises). У каждого:
    answer + explanation (English). Ровно один верный ответ. group_key:
    grammar | reading | vocab. 2–3 трансформации — на грамматику прошлых
-   модулей (спиральное повторение).
+   модулей (спиральное повторение). Индексы верных ответов (answer у
+   mc_cloze / grammar_drill / reading_comprehension, wrong у
+   error_correction) РАСПРЕДЕЛЯТЬ равномерно по позициям — никаких серий
+   из 3+ одинаковых индексов подряд и никакого «правильный всегда первый».
 7. writing.yaml — задание CAE-жанра (mode: writing или speaking по плану),
    prompt, model answer 220–260 слов, self-check checklist из 8 пунктов.
-8. Три CSV для Anki: anki-vocab.csv (45, с use cases), anki-grammar.csv (10,
-   cloze), anki-transform.csv (8). Теги en-c1::m{NN}.
+
+Флеш-карточки отдельно не пишутся: sync деривирует их из vocab.yaml (45),
+theory.yaml cloze_cards (10) и core key_word_transformation (8).
 
 Definition of Done — чек-лист ниже; каждый пункт проверить перед сдачей.
 ```
@@ -47,7 +53,8 @@ Definition of Done — чек-лист ниже; каждый пункт про�
 - [ ] 45 записей vocab.yaml уровня C1: коллокации и фразовые глаголы, не одиночные частотные слова; у каждой — definition, 2–3 use cases в разных контекстах, collocations, register.
 - [ ] Лонгрид содержит ≥20 целевых единиц и ≥8 целевых конструкций; читается как аутентичная журналистика, не как упражнение; глоссы расставлены.
 - [ ] 66 основных заданий + 30 в review_pool; счёт по типам сходится; у каждого ровно один верный ответ и объяснение на английском; формы content соответствуют типам плеера.
-- [ ] Все три CSV парсятся, количество строк сходится (45/10/8), теги `en-c1::m{NN}` проставлены.
+- [ ] Индексы верных ответов перемешаны: в каждом choice-типе (mc_cloze, grammar_drill, reading_comprehension) все позиции опций встречаются, серий из 3+ одинаковых `answer` подряд нет.
+- [ ] `theory.yaml` содержит ровно 10 `cloze_cards` (text с `{{c1::…}}`, rule; hint — опционально) по подтемам модуля.
 - [ ] Трансформации включают 2–3 задания на грамматику прошлых модулей (спиральное повторение).
 - [ ] Модельный ответ writing выдержан в целевом регистре и укладывается в 220–260 слов.
 - [ ] YAML валиден и соответствует схеме `content/en-c1/README.md` (поля для sync в БД).

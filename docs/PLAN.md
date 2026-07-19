@@ -119,17 +119,17 @@
 
 **Метрики прогресса:** карта курса со статусами, доля лексики Known+, доля конструкций Reliable, mature retention, стрик дней. Прогресс меряется статусами и ретеншном, а не «пройденными страницами».
 
-## 5. Карточки (Anki-совместимо)
+## 5. Карточки (SRS в приложении)
 
-Три типа заметок; содержимое — только английский (learner's dictionary style), у каждой лексемы на обороте — use cases. Каждый модуль поставляет три CSV, готовых к импорту в Anki (и те же данные — в таблицу `flashcard`).
+Три типа заметок; содержимое — только английский (learner's dictionary style), у каждой лексемы на обороте — use cases. Карточки живут только в webapp-SRS (таблица `flashcard`): sync деривирует их из YAML-источников пакета, отдельные Anki-CSV не поставляются (отменены 2026-07 — Anki параллельно не используется).
 
-| Тип | Объём | Форма | CSV-схема |
+| Тип | Объём | Форма | Источник в пакете |
 |---|---|---|---|
-| Vocab | ≈45/модуль · 675 всего | Front: *take on (a workload)* · Back: definition + 2 use cases + collocations + register | `Term,Definition,UseCase1,UseCase2,Collocations,Register,Tags` |
-| Grammar cloze | 10/модуль · 150 всего | *{{c1::Had I known}} about the delay, I would have taken an earlier train.* + hint | `Text,Hint,Rule,Tags` |
-| Transformation | 8/модуль · 120 всего | Front: предложение + KEY → Back: ответ + объяснение (EN) | `Prompt,Key,Answer,Note,Tags` |
+| Vocab | ≈45/модуль · 675 всего | Front: *take on (a workload)* · Back: definition + 2 use cases + collocations + register | `vocab.yaml` |
+| Grammar cloze | 10/модуль · 150 всего | *{{c1::Had I known}} about the delay, I would have taken an earlier train.* + hint | `theory.yaml (cloze_cards)` |
+| Transformation | 8/модуль · 120 всего | Front: предложение + KEY → Back: ответ + объяснение (EN) | core `key_word_transformation` из `exercises.yaml` |
 
-Правила: 8–12 новых в день + все повторы (10–15 мин); из вокаб-ноты две карточки (term → meaning; definition + collocation cue → term); ошибка дня → карточка с тегом `my-errors`; здоровье колоды — mature retention ≥ 85%. Теги: `en-c1::m01`…
+Правила: 8–12 новых в день + все повторы (10–15 мин); ошибка дня → карточка с тегом `my-errors`; здоровье колоды — mature retention ≥ 85%. Теги: `en-c1::m01`…
 
 ## 6. Роадмап по модулям
 

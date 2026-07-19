@@ -1,6 +1,6 @@
 /**
  * Content sync (ARCHITECTURE.md §4): walks content/<course>/module-NN/ and
- * content/<course>/<checkpoint>/ directories, validates every YAML/CSV file against
+ * content/<course>/<checkpoint>/ directories, validates every YAML file against
  * lib/content-schema.ts, and upserts into the content tables.
  *
  * Idempotent via a two-level sha256 hash (§4.4): a module-level gate hash
@@ -29,7 +29,6 @@ import { readdir, readFile, stat } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { parse as parseYaml } from 'yaml';
-import { parse as parseCsv } from 'csv-parse/sync';
 import { z } from 'zod';
 import { COURSES, type CheckpointEntry, type ModuleEntry } from '../content.config';
 import {
@@ -39,20 +38,16 @@ import {
   ReadingPackageSchema,
   ExercisesPackageSchema,
   WritingPackageSchema,
-  AnkiVocabRowSchema,
-  AnkiGrammarRowSchema,
-  AnkiTransformRowSchema,
   type Meta,
   type VocabEntry,
   type Spotlight,
   type Watchout,
+  type ClozeCard,
   type ReadingPackage,
   type Gloss,
   type ExerciseEntry,
+  type KeyWordTransformationContent,
   type WritingPackage,
-  type AnkiVocabRow,
-  type AnkiGrammarRow,
-  type AnkiTransformRow,
 } from '../lib/content-schema';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -114,35 +109,6 @@ async function readYamlFile<T>(filePath: string, schema: z.ZodType<T>): Promise<
     throw new Error(`Invalid content package ${filePath}:\n${issues}`);
   }
   return result.data;
-}
-
-/**
- * Anki-import CSVs open with `#separator:Comma` / `#html:false` comment
- * lines, then a `#Field1,Field2,...` header (also `#`-prefixed). Strip the
- * leading `#` off the header line only, so csv-parse's `comment: '#'`
- * option skips the other two lines and auto-detects columns from the header.
- */
-async function readCsvFile<T>(filePath: string, schema: z.ZodType<T>): Promise<T[]> {
-  const raw = await readFile(filePath, 'utf8');
-  const lines = raw.split(/\r?\n/);
-  const headerIdx = lines.findIndex((l) => l.startsWith('#') && l.includes(','));
-  if (headerIdx === -1) throw new Error(`CSV header row not found in ${filePath}`);
-  lines[headerIdx] = lines[headerIdx].slice(1);
-  const content = lines.join('\n');
-  const records = parseCsv(content, {
-    columns: true,
-    skip_empty_lines: true,
-    comment: '#',
-  }) as Record<string, string>[];
-
-  return records.map((row, i) => {
-    const result = schema.safeParse(row);
-    if (!result.success) {
-      const issues = result.error.issues.map((iss) => `  ${iss.path.join('.')}: ${iss.message}`).join('\n');
-      throw new Error(`Invalid CSV row ${i + 1} in ${filePath}:\n${issues}`);
-    }
-    return result.data;
-  });
 }
 
 /** Module/checkpoint gate hash: sha256 over the raw bytes of every package file, sorted by filename (§4.4). */
@@ -568,19 +534,27 @@ async function archiveRemovedFlashcards(client: Client, moduleId: number, seenId
   counter.removed += result.rowCount ?? 0;
 }
 
-function vocabFlashcardFields(row: AnkiVocabRow): FlashcardFields {
-  const cases = [row.UseCase1, row.UseCase2].filter((s) => s?.trim().length > 0);
+function vocabFlashcardFields(entry: VocabEntry): FlashcardFields {
+  const cases = entry.use_cases.slice(0, 2);
   const extraParts: string[] = [];
-  if (row.Collocations?.trim()) extraParts.push(`Collocations: ${row.Collocations}`);
-  if (row.Register?.trim()) extraParts.push(`Register: ${row.Register}`);
-  return { front: row.Term, main: row.Definition, cases, extra: extraParts.join('\n') };
+  if (entry.collocations?.trim()) extraParts.push(`Collocations: ${entry.collocations}`);
+  if (entry.register?.trim()) extraParts.push(`Register: ${entry.register}`);
+  return { front: entry.term, main: entry.definition, cases, extra: extraParts.join('\n') };
 }
-function grammarClozeFlashcardFields(row: AnkiGrammarRow): FlashcardFields {
-  return { front: row.Text, main: row.Rule, cases: [], extra: row.Hint?.trim() ? `Hint: ${row.Hint}` : '' };
+function grammarClozeFlashcardFields(card: ClozeCard): FlashcardFields {
+  return { front: card.text, main: card.rule, cases: [], extra: card.hint?.trim() ? `Hint: ${card.hint}` : '' };
 }
-function transformFlashcardFields(row: AnkiTransformRow): FlashcardFields {
-  const extra = [`Key: ${row.Key}`, row.Note?.trim() || null].filter((x): x is string => Boolean(x)).join(' · ');
-  return { front: row.Prompt, main: row.Answer, cases: [], extra };
+/**
+ * The transformation-card front reproduces the retired Anki-CSV Prompt shape
+ * ("s1 → pre___post") so the sha1-based idents computed before the CSV → YAML
+ * source switch keep matching and card_state survives.
+ */
+function transformPrompt(c: KeyWordTransformationContent): string {
+  return `${c.s1} → ${c.pre}___${c.post}`;
+}
+function transformFlashcardFields(c: KeyWordTransformationContent, note: string): FlashcardFields {
+  const extra = [`Key: ${c.key}`, note.trim() || null].filter((x): x is string => Boolean(x)).join(' · ');
+  return { front: transformPrompt(c), main: c.answer_shown, cases: [], extra };
 }
 
 // ───────────────────────────── module driver ─────────────────────────────
@@ -604,7 +578,7 @@ async function syncModule(client: Client, courseSlug: string, mod: ModuleEntry, 
   const moduleId = moduleRow.rows[0].id;
   const storedHash = moduleRow.rows[0].content_hash;
 
-  const moduleHash = await computePackageHash(moduleDir, ['.yaml', '.csv']);
+  const moduleHash = await computePackageHash(moduleDir, ['.yaml']);
   if (storedHash === moduleHash) {
     console.log(`[${mod.slug}] unchanged (module content_hash matches) — 0 queries`);
     return;
@@ -618,9 +592,6 @@ async function syncModule(client: Client, courseSlug: string, mod: ModuleEntry, 
   const textExtra = await readYamlFile(path.join(moduleDir, 'text-extra.yaml'), ReadingPackageSchema);
   const exercisesPkg = await readYamlFile(path.join(moduleDir, 'exercises.yaml'), ExercisesPackageSchema);
   const writingPkg = await readYamlFile(path.join(moduleDir, 'writing.yaml'), WritingPackageSchema);
-  const vocabCsv = await readCsvFile(path.join(moduleDir, 'anki-vocab.csv'), AnkiVocabRowSchema);
-  const grammarCsv = await readCsvFile(path.join(moduleDir, 'anki-grammar.csv'), AnkiGrammarRowSchema);
-  const transformCsv = await readCsvFile(path.join(moduleDir, 'anki-transform.csv'), AnkiTransformRowSchema);
 
   const counters = {
     grammar_point: newCounter(),
@@ -716,22 +687,28 @@ async function syncModule(client: Client, courseSlug: string, mod: ModuleEntry, 
     await upsertWritingTask(client, owner, writingPkg, writingIdent, counters.writing_task);
     await pruneByNotIn(client, 'writing_task', 'module_id', moduleId, 'ident', new Set([writingIdent]), counters.writing_task);
 
-    // flashcard (from the three Anki CSVs)
+    // flashcard — derived from the YAML sources: vocab cards from vocab.yaml,
+    // grammar cloze from theory.cloze_cards, transformation cards from the
+    // core key_word_transformation exercises. Ident keyParts (Term /
+    // sha1(Text) / sha1(Prompt+Key)) match the ones the retired Anki CSVs
+    // produced, so existing card_state rows keep their cards.
     const tag = `en-c1::${mod.slug}`;
     const seenFlashcardIdents = new Set<string>();
-    for (const row of vocabCsv) {
-      const ident = computeFlashcardIdent(tag, 'vocab', row.Term);
-      await upsertFlashcard(client, moduleId, 'vocab', ident, vocabFlashcardFields(row), vocabEntryIdByTerm.get(row.Term) ?? null, counters.flashcard);
+    for (const entry of vocabPkg.entries) {
+      const ident = computeFlashcardIdent(tag, 'vocab', entry.term);
+      await upsertFlashcard(client, moduleId, 'vocab', ident, vocabFlashcardFields(entry), vocabEntryIdByTerm.get(entry.term) ?? null, counters.flashcard);
       seenFlashcardIdents.add(ident);
     }
-    for (const row of grammarCsv) {
-      const ident = computeFlashcardIdent(tag, 'grammar_cloze', sha1(row.Text));
-      await upsertFlashcard(client, moduleId, 'grammar_cloze', ident, grammarClozeFlashcardFields(row), null, counters.flashcard);
+    for (const card of theoryPkg.cloze_cards) {
+      const ident = computeFlashcardIdent(tag, 'grammar_cloze', sha1(card.text));
+      await upsertFlashcard(client, moduleId, 'grammar_cloze', ident, grammarClozeFlashcardFields(card), null, counters.flashcard);
       seenFlashcardIdents.add(ident);
     }
-    for (const row of transformCsv) {
-      const ident = computeFlashcardIdent(tag, 'transformation', sha1(row.Prompt + row.Key));
-      await upsertFlashcard(client, moduleId, 'transformation', ident, transformFlashcardFields(row), null, counters.flashcard);
+    for (const entry of exercisesPkg.core) {
+      if (entry.type !== 'key_word_transformation') continue;
+      const prompt = transformPrompt(entry.content);
+      const ident = computeFlashcardIdent(tag, 'transformation', sha1(prompt + entry.content.key));
+      await upsertFlashcard(client, moduleId, 'transformation', ident, transformFlashcardFields(entry.content, entry.explanation), null, counters.flashcard);
       seenFlashcardIdents.add(ident);
     }
     await archiveRemovedFlashcards(client, moduleId, seenFlashcardIdents, counters.flashcard);

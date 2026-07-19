@@ -11,7 +11,7 @@
 | `docs/design/skyrocket/` | Утверждённый дизайн (mockup). `content.js` — **образцовые формы данных всех экранов**, схема БД следует им |
 | `docs/DATA-MODEL.md` | Схема данных: ER-диаграммы, справочник таблиц, решения, полный SQL |
 | `db/migrations/` | SQL-миграции Neon Postgres: `0001_init.sql` (DDL + сид типов упражнений), `0002_seed_en_c1_skeleton.sql` (каркас курса), `0003_content_natural_keys.sql` (`ident`-ключи sync), `0004_dose_theory_vocab_across_sessions.sql` (пересев шагов: дозирование теории/лексики, микро-цели) |
-| `content/en-c1/` | Контент-пакеты модулей (YAML/CSV). `README.md` — схема пакета. Пакеты синкаются в БД по `content_hash` |
+| `content/en-c1/` | Контент-пакеты модулей (YAML; флеш-карточки деривируются sync'ом из vocab/theory/exercises, отдельных CSV нет). `README.md` — схема пакета. Пакеты синкаются в БД по `content_hash` |
 | `docs/MODULE-TASK-TEMPLATE.md` | Шаблон ТЗ субагенту на генерацию модуля + Definition of Done |
 | `docs/artifacts/plan.html` | Исходник артефакта-витрины плана |
 | `docs/ARCHITECTURE.md` | **Архитектура веб-приложения**: каталог use cases, слои, дизайн sync, грейдинг 8 типов, роуты/компоненты, вопросы-решения D1–D12 (D11 — жёсткий гейтинг сессий, D12 — цели↔сессии) |
@@ -36,7 +36,7 @@ Neon Postgres. Применение миграций: `psql "$DATABASE_URL" -f d
 
 ## Стек-решения (утверждены)
 
-Web app (mobile-first PWA) на Netlify + Neon по архитектуре `../concurrency` (Next.js 15 + Prisma, yaml/csv → sync в БД на билде). Приложение реализовано в `web/` (см. `docs/ARCHITECTURE.md`). Auth пока нет: один пользователь через `lib/current-user.ts`, но весь код параметризован `userId`. Позже — обёртка Telegram Mini App для напоминаний. Vite-стаб в корне (`src/`, `index.html`, `vite.config.js`) — legacy, приложением не является.
+Web app (mobile-first PWA) на Netlify + Neon по архитектуре `../concurrency` (Next.js 15 + Prisma, yaml → sync в БД на билде). Приложение реализовано в `web/` (см. `docs/ARCHITECTURE.md`). Auth пока нет: один пользователь через `lib/current-user.ts`, но весь код параметризован `userId`. Позже — обёртка Telegram Mini App для напоминаний. Vite-стаб в корне (`src/`, `index.html`, `vite.config.js`) — legacy, приложением не является.
 
 Локальная разработка: `cd web && docker compose up -d && pnpm migrate && pnpm sync && pnpm seed-user && pnpm dev` (env — `web/.env`, образец `web/.env.example`). Прод: Neon через `DATABASE_URL` (пулер) + `DIRECT_URL` (билд-скрипты).
 

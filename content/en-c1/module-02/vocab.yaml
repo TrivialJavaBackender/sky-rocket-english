@@ -1,0 +1,367 @@
+# Module 02 · Science & Technology — 45 lexemes in four domains:
+# research & evidence (12) · innovation & progress (12) · building & shipping (11) · risks & consequences (10)
+entries:
+  # ── Research & evidence ────────────────────────────────────────
+  - term: conduct research
+    tag: formal
+    definition: to carry out an organised scientific study of something
+    use_cases:
+      - The institute has been conducting research into battery chemistry for a decade.
+      - Research conducted on such a small sample proves very little.
+    collocations: conduct a study / an experiment / a survey / a trial
+    register: "Formal-academic; everyday alternative: do research"
+  - term: peer review
+    tag: academic
+    definition: the process by which other experts in a field check a piece of research before it is published
+    use_cases:
+      - The paper failed peer review twice before the authors fixed the statistics.
+      - Peer review is slow precisely because it is meant to be sceptical.
+    collocations: undergo / survive peer review · a peer-reviewed journal
+    register: Academic; the adjective peer-reviewed is a quality badge
+  - term: empirical evidence
+    tag: academic
+    definition: information based on observation and experiment rather than on theory or opinion
+    use_cases:
+      - There is little empirical evidence that the app improves concentration.
+      - Empirical evidence eventually forced the committee to abandon its favourite theory.
+    collocations: empirical evidence for / against sth · gather / provide evidence
+    register: "Academic; everyday contrast: anecdotal evidence"
+  - term: test a hypothesis
+    tag: academic
+    definition: to run experiments in order to find out whether a proposed explanation is true
+    use_cases:
+      - The team designed a simple field study to test the hypothesis.
+      - A hypothesis you cannot test is a belief, not science.
+    collocations: form / confirm / reject a hypothesis · a working hypothesis
+    register: Academic; plural hypotheses
+  - term: a controlled trial
+    tag: academic
+    definition: an experiment in which one group receives the treatment and a comparison group does not
+    use_cases:
+      - The supplement has never been through a controlled trial.
+      - In a controlled trial, the drug performed no better than the placebo.
+    collocations: a randomised controlled trial · run / conduct a trial
+    register: Scientific-medical; abbreviated RCT in research writing
+  - term: replicate the findings
+    tag: academic
+    definition: to repeat a study and obtain the same results, confirming that they are reliable
+    use_cases:
+      - Three independent labs have replicated the findings.
+      - Half of the famous results in the field could not be replicated.
+    collocations: replicate a study / an experiment / results
+    register: "Academic; the replication crisis is a fixed phrase in science journalism"
+  - term: a representative sample
+    tag: academic
+    definition: a group chosen for a study that fairly reflects the larger population being studied
+    use_cases:
+      - Two hundred volunteers from one city are hardly a representative sample.
+      - Pollsters spend most of their budget chasing a representative sample.
+    collocations: a random / biased sample · sample size
+    register: Statistics and social science; neutral
+  - term: skew the results
+    tag: neutral
+    definition: to distort the outcome of a study so that it no longer reflects reality
+    use_cases:
+      - Testing only volunteers who love technology will skew the results.
+      - The results were skewed by a bug in the logging software.
+    collocations: skew the data / the figures · a skewed sample
+    register: "Neutral-academic; informal cousin: cherry-pick the data"
+  - term: yield results
+    tag: formal
+    definition: to produce results, especially useful or measurable ones
+    use_cases:
+      - Decades of fusion research have finally begun to yield results.
+      - The new screening method yielded surprising results in older patients.
+    collocations: yield findings / insights / benefits · yield little / nothing
+    register: "Formal; everyday alternative: produce results"
+  - term: draw conclusions
+    tag: neutral
+    definition: to decide what is true after considering the evidence
+    use_cases:
+      - It is far too early to draw conclusions from a single trial.
+      - Journalists drew sweeping conclusions the authors had never made.
+    collocations: draw / reach / jump to conclusions · a hasty conclusion
+    register: "Neutral; jump to conclusions is the impatient version"
+  - term: proof of concept
+    tag: neutral
+    definition: a small demonstration that shows an idea can work in practice
+    use_cases:
+      - The prototype is only a proof of concept, not a product.
+      - They built a proof of concept in a weekend to convince investors.
+    collocations: a proof-of-concept study / demo · move beyond proof of concept
+    register: Engineering and startup register
+  - term: crunch the numbers
+    tag: informal
+    definition: to process large amounts of data or do many calculations, usually by computer
+    use_cases:
+      - Give the model a night to crunch the numbers and it will find the pattern.
+      - We crunched the numbers and the savings simply are not there.
+    collocations: number-crunching · crunch the data
+    register: "Informal-business; formal: process / analyse the data"
+  # ── Innovation & progress ──────────────────────────────────────
+  - term: a breakthrough
+    tag: neutral
+    definition: a sudden important discovery or development that removes a long-standing obstacle
+    use_cases:
+      - The breakthrough came when the team stopped imitating the human eye.
+      - Investors treat every incremental update as a major breakthrough.
+    collocations: a major / scientific breakthrough · achieve / make a breakthrough
+    register: "Neutral-journalistic; adjective for discoveries: groundbreaking"
+  - term: groundbreaking
+    tag: journalistic
+    definition: completely new and changing the way people think about a subject
+    use_cases:
+      - Her groundbreaking work on protein folding rewrote the textbooks.
+      - The study looked groundbreaking until nobody could replicate it.
+    collocations: groundbreaking research / work / technology
+    register: "Journalistic praise; sober alternative: innovative"
+  - term: cutting-edge
+    tag: journalistic
+    definition: at the most advanced and recent stage of development
+    use_cases:
+      - The lab pairs cutting-edge imaging with very old-fashioned patience.
+      - Cutting-edge today is museum-piece in ten years.
+    collocations: cutting-edge technology / research · at the cutting edge of
+    register: "Journalistic; near-synonym: state-of-the-art"
+  - term: state-of-the-art
+    tag: neutral
+    definition: using the most modern methods and equipment currently available
+    use_cases:
+      - The hospital has installed a state-of-the-art scanner.
+      - Their state-of-the-art security was defeated by one reused password.
+    collocations: state-of-the-art equipment / facilities · the state of the art
+    register: "Neutral-technical; as a noun: the state of the art in robotics"
+  - term: at the forefront of
+    tag: formal
+    definition: in the leading position in an area of activity or research
+    use_cases:
+      - The university has stayed at the forefront of vaccine research for decades.
+      - Small studios are often at the forefront of new design tools.
+    collocations: at the forefront of research / innovation / change
+    register: "Formal-journalistic; informal: ahead of the pack"
+  - term: push the boundaries
+    tag: idiom
+    definition: to go beyond the accepted limits of what is possible or allowed in a field
+    use_cases:
+      - The chip makers keep pushing the boundaries of how small a transistor can be.
+      - Artists used the new software to push the boundaries of animation.
+    collocations: push the boundaries of science / technology · push the limits
+    register: Neutral-journalistic
+  - term: pave the way for
+    tag: idiom
+    definition: to create the conditions that make a later development possible
+    use_cases:
+      - The 1998 experiment paved the way for today's gene therapies.
+      - Cheap sensors paved the way for the smart-home industry.
+    collocations: pave the way for reform / innovation / a discovery
+    register: "Neutral-formal; similar: lay the groundwork for"
+  - term: gain traction
+    tag: business
+    definition: to begin to be accepted or successful with a growing number of people
+    use_cases:
+      - The open-source alternative is finally gaining traction among hospitals.
+      - The theory gained traction once the raw data was published.
+    collocations: gain / lose traction · an idea gains ground
+    register: "Business-journalistic; formal: gain acceptance"
+  - term: a game changer
+    tag: informal
+    definition: something new that completely changes how an activity is done
+    use_cases:
+      - Instant translation was a game changer for small exporters.
+      - Cheap batteries would be a game changer for the whole grid.
+    collocations: a real / potential game changer · game-changing technology
+    register: "Informal-business; overused in marketing — use sparingly in formal writing"
+  - term: harness technology
+    tag: formal
+    definition: to control and use technology in order to achieve a particular purpose
+    use_cases:
+      - The city harnessed sensor data to cut water losses by a third.
+      - Schools are still learning how to harness AI rather than fight it.
+    collocations: harness the power / potential of sth · harness energy
+    register: "Formal-journalistic; plain alternative: make use of"
+  - term: on the cusp of
+    tag: formal
+    definition: at the point where an important change or discovery is about to happen
+    use_cases:
+      - Materials science is on the cusp of a quiet revolution.
+      - The company was on the cusp of profitability when the scandal broke.
+    collocations: on the cusp of a breakthrough / a new era / change
+    register: "Formal-journalistic; echoes M1's be on the verge of"
+  - term: a quantum leap
+    tag: idiom
+    definition: a sudden very large improvement or advance
+    use_cases:
+      - Moving from film to digital was a quantum leap for astronomy.
+      - The new engine is better, but it is no quantum leap.
+    collocations: a quantum leap in performance / quality · take a quantum leap
+    register: "Journalistic idiom; physicists dislike it — a real quantum jump is tiny"
+  # ── Building & shipping ────────────────────────────────────────
+  - term: roll out
+    tag: phrasal
+    definition: to introduce a new product or service gradually to more and more users
+    use_cases:
+      - The update is being rolled out to European users first.
+      - They rolled the feature out too fast and spent a month fixing it.
+    collocations: roll out a product / an update / a vaccine · a phased rollout
+    register: "Business-phrasal; noun: rollout"
+  - term: scale up
+    tag: phrasal
+    definition: to increase the size or capacity of something so it can serve far more people
+    use_cases:
+      - The process works in the lab but is brutally hard to scale up.
+      - They scaled up production tenfold without losing quality.
+    collocations: scale up production / operations · scalable · at scale
+    register: "Business-engineering; opposite: scale back / down"
+  - term: streamline
+    tag: business
+    definition: to make a process simpler and more efficient by removing unnecessary steps
+    use_cases:
+      - The new software streamlined the approval process from weeks to hours.
+      - Streamlining a bad process just produces bad results faster.
+    collocations: streamline a process / operations / procedures
+    register: "Business-formal; watch the euphemism: streamlining often means job cuts"
+  - term: automate
+    tag: neutral
+    definition: to make a process run by machines or software instead of people
+    use_cases:
+      - The warehouse automated its sorting line and doubled throughput.
+      - Automate the boring checks so reviewers can focus on real design flaws.
+    collocations: automate a task / a process · automation · fully automated
+    register: Neutral-technical
+  - term: a prototype
+    tag: neutral
+    definition: the first working model of a product, built to test whether the design works
+    use_cases:
+      - The prototype survived a week of field testing before the wheels failed.
+      - They demoed a prototype that was held together with tape and hope.
+    collocations: build / develop / test a prototype · an early prototype
+    register: Engineering-neutral
+  - term: an early adopter
+    tag: business
+    definition: one of the first people to start using a new product or technology
+    use_cases:
+      - Early adopters forgave the bugs; the mass market will not.
+      - She is an early adopter by temperament — her kitchen talks to her.
+    collocations: early adopters of technology · an early-adopter discount
+    register: "Marketing register; contrast: a laggard"
+  - term: tech-savvy
+    tag: informal
+    definition: confident and skilful in using modern technology
+    use_cases:
+      - The service assumes a tech-savvy user who reads error messages.
+      - Her grandmother turned out to be surprisingly tech-savvy.
+    collocations: tech-savvy users / consumers · media-savvy · savvy about sth
+    register: "Informal-journalistic; formal: technologically literate"
+  - term: facilitate
+    tag: formal
+    definition: to make a process or action easier or smoother
+    use_cases:
+      - The platform facilitates collaboration between labs on three continents.
+      - Anonymised records facilitate research without exposing patients.
+    collocations: facilitate communication / access / the exchange of data
+    register: "Formal-academic; plain alternative: make easier, help"
+  - term: obsolete
+    tag: neutral
+    definition: no longer used because something newer and better has replaced it
+    use_cases:
+      - The update rendered thousands of perfectly good devices obsolete.
+      - Fax machines are obsolete almost everywhere except hospitals.
+    collocations: become / render sth obsolete · planned obsolescence
+    register: "Neutral-technical; softer: outdated, dated"
+  - term: planned obsolescence
+    tag: formal
+    definition: the policy of designing products to wear out or date quickly so customers buy replacements
+    use_cases:
+      - Non-replaceable batteries are planned obsolescence in its purest form.
+      - Regulators are finally treating planned obsolescence as a consumer issue.
+    collocations: accuse a maker of planned obsolescence · built-in obsolescence
+    register: Formal-journalistic, critical in tone
+  - term: feasible
+    tag: formal
+    definition: possible to do with the resources, time and technology available
+    use_cases:
+      - Carbon capture is technically feasible but ruinously expensive.
+      - A city-wide sensor network only became feasible when chips got cheap.
+    collocations: technically / economically feasible · a feasibility study
+    register: "Formal; everyday alternative: doable, workable"
+  # ── Risks & consequences ───────────────────────────────────────
+  - term: a double-edged sword
+    tag: idiom
+    definition: something that has both important benefits and equally important drawbacks
+    use_cases:
+      - Anonymity online is a double-edged sword — it protects both victims and trolls.
+      - Automation proved a double-edged sword for the region's economy.
+    collocations: prove / be a double-edged sword · cut both ways
+    register: Neutral idiom, safe in formal writing
+  - term: unintended consequences
+    tag: formal
+    definition: results of an action that nobody planned or predicted, often harmful ones
+    use_cases:
+      - The recommendation engine had the unintended consequence of narrowing what people read.
+      - Every regulation produces unintended consequences; good ones produce small ones.
+    collocations: have / produce unintended consequences · the law of unintended consequences
+    register: Formal-journalistic; usually plural
+  - term: undermine
+    tag: formal
+    definition: to gradually weaken something such as trust, authority or a system
+    use_cases:
+      - Deepfakes undermine the assumption that video is evidence.
+      - Constant tracking undermines the trust that makes a workplace function.
+    collocations: undermine trust / confidence / credibility / efforts
+    register: "Formal; stronger: erode, sabotage (deliberate)"
+  - term: pose a threat
+    tag: formal
+    definition: to be a possible danger to someone or something
+    use_cases:
+      - Outdated hospital software poses a real threat to patient safety.
+      - The report asks whether superintelligence poses an existential threat.
+    collocations: pose a threat / a risk / a danger / a challenge to sth
+    register: "Formal-journalistic; verb pattern: pose sth to sb"
+  - term: raise concerns
+    tag: formal
+    definition: to make people begin to worry about something, or to express that worry publicly
+    use_cases:
+      - The face-recognition trial raised concerns among city councillors.
+      - Engineers had raised concerns about the sensor months before the failure.
+    collocations: raise concerns / doubts / questions about sth · address concerns
+    register: "Formal; the diplomatic verb of science journalism"
+  - term: backfire
+    tag: neutral
+    definition: to produce the opposite result to the one intended
+    use_cases:
+      - The ban backfired, driving users to less regulated platforms.
+      - Automating support backfired badly when the chatbot began inventing policies.
+    collocations: a plan / policy backfires · backfire badly / spectacularly
+    register: "Neutral; formal alternative: prove counterproductive"
+  - term: safeguard against
+    tag: formal
+    definition: to take action to protect something from a possible danger
+    use_cases:
+      - Two-factor login safeguards against the most common attacks.
+      - No procedure fully safeguards against human error.
+    collocations: safeguard against fraud / abuse / failure · a safeguard
+    register: "Formal; noun: safeguards, as in build in safeguards"
+  - term: err on the side of caution
+    tag: idiom
+    definition: to choose the safest available option when you are not sure what to do
+    use_cases:
+      - With patient data, regulators prefer to err on the side of caution.
+      - We erred on the side of caution and rolled the update back.
+    collocations: err on the side of caution / of generosity
+    register: "Formal idiom; the verb err alone is rare and literary"
+  - term: a cautionary tale
+    tag: idiom
+    definition: a true story used as a warning about what can go wrong
+    use_cases:
+      - The smart-fridge botnet is now a cautionary tale told at every security conference.
+      - Her startup became a cautionary tale about scaling before the product works.
+    collocations: a cautionary tale about / of sth · serve as a cautionary tale
+    register: Journalistic-literary
+  - term: tamper with
+    tag: phrasal
+    definition: to interfere with something secretly and without permission, usually to damage it
+    use_cases:
+      - The logs showed someone had tampered with the calibration settings.
+      - Tamper with the firmware and the warranty is void.
+    collocations: tamper with evidence / equipment / results · tamper-proof
+    register: "Neutral-legal; formal: interfere with"

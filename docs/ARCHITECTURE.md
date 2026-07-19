@@ -335,7 +335,7 @@ web/
 
 ## 4. Дизайн sync-скрипта («скраппер»)
 
-`scripts/sync.ts` по образцу `../concurrency/web/scripts/sync.ts`: обход контента, парсинг, идемпотентный upsert по `content_hash`, прунинг удалённого, полное сохранение прогресса. Отличие от референса: контент — структурированный **YAML/CSV** (а не markdown), и целевых таблиц много.
+`scripts/sync.ts` по образцу `../concurrency/web/scripts/sync.ts`: обход контента, парсинг, идемпотентный upsert по `content_hash`, прунинг удалённого, полное сохранение прогресса. Отличие от референса: контент — структурированный **YAML** (а не markdown), и целевых таблиц много.
 
 ### 4.1. Реестр (`content.config.ts`)
 
@@ -361,9 +361,7 @@ export const COURSES = [{
 | `text-extra.yaml` | `reading_text(kind=extra)` + `gloss[]` | то же |
 | `exercises.yaml` | `exercise[]` (`core` + `review_pool`) | **см. §4.5 (натуральный ключ отсутствует — нужен `ident`)** |
 | `writing.yaml` | `writing_task` | **см. §4.5** |
-| `anki-vocab.csv` | `flashcard(note_type=vocab)` | **см. §4.5** |
-| `anki-grammar.csv` | `flashcard(note_type=grammar_cloze)` | |
-| `anki-transform.csv` | `flashcard(note_type=transformation)` | |
+| — (деривация) | `flashcard`: vocab ← `vocab.yaml`, grammar_cloze ← `theory.yaml (cloze_cards)`, transformation ← core KWT из `exercises.yaml` | **см. §4.5** |
 
 Чек-пойнты: каталоги `diagnostic/`, `checkpoint-a…c/`, `final/` содержат `exercises.yaml` (+ `writing.yaml`) → `exercise`/`writing_task` с `checkpoint_id` (владелец — чек-пойнт, не модуль; CHECK `exercise_owner`).
 
@@ -378,7 +376,7 @@ export const COURSES = [{
 5. `vocab_entry`.
 6. `exercise` (резолвит `grammar_point_id` по title, `reading_text_id` — для `reading_comprehension` линкует на main-текст модуля, опционально).
 7. `writing_task`.
-8. `flashcard` (из CSV; vocab-карточки линкуются на `vocab_entry` по `term` → `vocab_entry_id`).
+8. `flashcard` (деривируется из YAML-источников пакета: vocab — из `vocab.yaml`, grammar_cloze — из `theory.yaml (cloze_cards)`, transformation — из core `key_word_transformation`; vocab-карточки линкуются на `vocab_entry` по `term` → `vocab_entry_id`). Отдельные Anki-CSV не поставляются — карточки живут только в webapp-SRS.
 
 Прунинг — в обратном порядке зависимостей.
 
@@ -403,7 +401,7 @@ export const COURSES = [{
 **Формирование `ident` синком (детерминированно, стабильно к переупорядочиванию):**
 - `exercise.ident`: если в YAML задан явный `id:` у упражнения — использовать его; иначе `sha1(type_code + '|' + нормализованный ключевой текст)`, где ключевой текст = `pre+post+prompt` (choice/cloze) / `s1+key` (kwt) / `join(words)` (error) / `join(left)+join(right)` (match) / `passage+q` (reading). Ключевой текст стабилен, пока задание по сути то же.
 - `writing_task.ident`: `genre` (в модуле письмо одно; для чек-пойнтов — `genre+position`).
-- `flashcard.ident`: `note_type + '|' + Term` (vocab) / `note_type + '|' + sha1(Text)` (grammar_cloze) / `note_type + '|' + sha1(Prompt+Key)` (transformation). Тег `en-c1::mNN` даёт префикс уникальности между модулями.
+- `flashcard.ident`: `note_type + '|' + term` (vocab) / `note_type + '|' + sha1(text)` (grammar_cloze) / `note_type + '|' + sha1(prompt+key)` (transformation), где `prompt = "s1 → pre___post"` — исторический формат Prompt отменённых Anki-CSV, сохранён ради стабильности ident'ов. Тег `en-c1::mNN` даёт префикс уникальности между модулями.
 
 **Рекомендация контент-команде:** добавить в схему пакета (`content/en-c1/README.md`) опциональное поле `id:` у каждого упражнения — тогда ключ полностью авторский и переживает любые правки формулировки. До этого работает хэш-фолбэк.
 
@@ -542,7 +540,7 @@ export const COURSES = [{
 
 **D8 · Хранение аудио монолога (`writing_submission.attachment_url`).** Куда класть запись (speaking-модули). → **Решение (MVP):** для одного пользователя — либо загрузка в Netlify Blobs / внешний бакет и хранение URL, либо на первом этапе кнопка «mark done» без файла (`attachment_url=null`), а запись — вне приложения. Полноценную запись/загрузку вынести в отдельную задачу. Не блокирует этапы 2–4.
 
-**D9 · Флешкарты: две карты из одной vocab-ноты (PLAN §5) vs одна строка на CSV-строку.** PLAN: из vocab-ноты две карты (term→meaning; def+collocation→term). → **Решение:** одна `flashcard`-строка = одна нота (как строка CSV); «две карты» — деталь Anki-шаблона, не нашей модели. SRS планирует ноту один раз. Если потребуется двусторонность — это UI-режим показа, не вторая строка. `flashcard.fields = {front, main, cases[], extra}` заполняется из CSV: vocab → front=Term, main=Definition, cases=[UseCase1,UseCase2], extra=Collocations+«Register: …».
+**D9 · Флешкарты: две карты из одной vocab-ноты (PLAN §5) vs одна строка-нота.** PLAN: из vocab-ноты две карты (term→meaning; def+collocation→term). → **Решение:** одна `flashcard`-строка = одна нота; «две карты» — деталь Anki-шаблона, не нашей модели. SRS планирует ноту один раз. Если потребуется двусторонность — это UI-режим показа, не вторая строка. `flashcard.fields = {front, main, cases[], extra}` деривируется синком из YAML: vocab → front=term, main=definition, cases=use_cases[0..1], extra=Collocations+«Register: …» (из `vocab.yaml`); grammar_cloze → из `theory.yaml (cloze_cards)`; transformation → из core `key_word_transformation` (`exercises.yaml`). Отдельные Anki-CSV отменены (2026-07): карточки живут только в webapp-SRS, экспорт в Anki не поддерживается.
 
 **D10 · Auth сейчас не нужен, но `app_user.password_hash NOT NULL`.** → **Решение:** `scripts/seed-user.ts` создаёт единственного пользователя (username из `APP_USER_USERNAME`, password_hash = заглушка/bcrypt от env-пароля). `getCurrentUserId()` возвращает его id (кэш). Точка расширения для bcrypt+jose (паттерн interview-prep) — `lib/current-user.ts`, без переделки остального.
 
@@ -568,8 +566,8 @@ export const COURSES = [{
 3. `db/migrations/0003_content_natural_keys.sql` (§4.5) + правка `docs/DATA-MODEL.md` + переопубликованный артефакт схемы.
 4. `scripts/migrate.ts` (§3.2) — идемпотентный раннер на `pg` с `schema_migrations` и `--baseline`.
 5. `prisma/schema.prisma` через `prisma db pull` (после применения 0001–0003), закоммичен; `postinstall: prisma generate`; `lib/db.ts` (singleton), `lib/serialize.ts` (BigInt→number).
-6. `content.config.ts` (реестр курса/модулей/чек-пойнтов), `lib/content-schema.ts` (zod для всех YAML/CSV, юнион 8 типов `content`).
-7. `scripts/sync.ts` (§4): обход, парсинг YAML/CSV, upsert по натуральным ключам/`ident`, content_hash (модульный гейт + пер-сущностный), порядок с учётом FK, прунинг (флешкарты — soft-archive), счётчики в лог.
+6. `content.config.ts` (реестр курса/модулей/чек-пойнтов), `lib/content-schema.ts` (zod для всех YAML, юнион 8 типов `content`).
+7. `scripts/sync.ts` (§4): обход, парсинг YAML, upsert по натуральным ключам/`ident`, content_hash (модульный гейт + пер-сущностный), порядок с учётом FK, прунинг (флешкарты — soft-archive), счётчики в лог.
 8. `scripts/seed-user.ts` + `lib/current-user.ts` (`getCurrentUserId()` → константный id).
 
 **Definition of Done:**

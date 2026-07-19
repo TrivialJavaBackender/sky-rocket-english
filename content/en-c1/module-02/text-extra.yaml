@@ -1,0 +1,25 @@
+kind: extra
+kicker: NEWS REPORT
+title: Artificial Cornea Restores Sight in First Human Trial
+meta: ≈ 2 min · a breakthrough story in news register
+word_count: 270
+body:
+  - - t: "A synthetic "
+    - g: cornea
+    - t: " developed by a small Israeli startup has restored functional sight to a 78-year-old man who had been blind for a decade, in what surgeons describe as a genuine breakthrough for the field. The one-hour operation, performed in Tel Aviv in January, was the first in a controlled trial that will eventually enrol ten patients."
+  - - t: "The implant is said to integrate directly with the wall of the eye without donor tissue — a step forward that could render traditional "
+    - g: graft
+    - t: "s obsolete in the hardest cases. Until now, patients whose corneas had been scarred by injury or disease depended on donated tissue, which is scarce and which the body frequently rejects. The device is reported to have survived two years of animal testing without a single rejection."
+  - - t: "The result has not yet been through peer review, and independent specialists were quick to raise concerns about the sample: a proof of concept in one patient, they note, is not empirical evidence that the approach will work at scale. The company's founder concedes the point. 'We are on the cusp of something,' she said on Tuesday, 'but the data will decide, not the headlines.'"
+  - - t: "If the remaining implants succeed, the firm plans to scale up production and to have the device assessed by European regulators next year — a process that is expected to take eighteen months. Analysts are already calling the technology a potential game changer for the two million people who lose their sight to corneal damage every year. The surgeons involved prefer a quieter formula: the trial, they say, must simply be allowed to run."
+glosses:
+  - key: cornea
+    term: cornea
+    pos_label: noun
+    definition: the transparent layer at the front of the eye that light passes through
+    example: Scratches on the cornea are painful but usually heal quickly.
+  - key: graft
+    term: graft
+    pos_label: noun
+    definition: a piece of living tissue that is transplanted surgically to replace damaged tissue
+    example: The burn was treated with a skin graft taken from her arm.

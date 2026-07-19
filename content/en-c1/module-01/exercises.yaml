@@ -51,8 +51,8 @@ core:
       pre: "This time tomorrow I "
       post: " the annual review with head office."
       prompt: CHAIR
-      options: [will chair, will be chairing, will have chaired, am chairing]
-      answer: 1
+      options: [will be chairing, will chair, will have chaired, am chairing]
+      answer: 0
     explanation: "This time tomorrow freezes a future moment and asks what will be in progress at it — the future continuous: will be chairing. Will have chaired would mean the meeting is already over by then."
   - type: grammar_drill
     group: grammar
@@ -71,8 +71,8 @@ core:
       pre: "According to this morning's announcement, the new director "
       post: " office on the first of September."
       prompt: TAKE
-      options: [is to take, will have taken, is about to have taken, would take]
-      answer: 0
+      options: [will have taken, is about to have taken, would take, is to take]
+      answer: 3
     explanation: "An official announcement of a scheduled event is the home ground of be to + infinitive: is to take office. Will have taken needs by, not on; is about to have taken is not a form English uses."
   - type: grammar_drill
     group: grammar
@@ -91,8 +91,8 @@ core:
       pre: "Hurry up — the presentation "
       post: " start and your slides are still uploading."
       prompt: BE
-      options: [is about to, is on the verge to, is to be, will have]
-      answer: 0
+      options: [is on the verge to, is to be, is about to, will have]
+      answer: 2
     explanation: "Imminence + infinitive = be about to start. On the verge would need of + noun or -ing, and the other options simply do not combine with a bare infinitive here."
   - type: grammar_drill
     group: grammar
@@ -359,10 +359,10 @@ core:
       q: What does the detail of the two screens tell us about Marta?
       options:
         - She was already doing two jobs at once.
-        - She was preparing her exit while still doing her job.
         - She had been promoted just before the restructuring.
         - She refused to work out her notice period.
-      answer: 1
+        - She was preparing her exit while still doing her job.
+      answer: 3
     explanation: "One screen holds her work (the spreadsheet), the other her way out (the resignation letter) — she is serving her notice and planning her departure simultaneously. The promotion never happened: she was only about to be promoted."
   - type: reading_comprehension
     group: reading
@@ -382,11 +382,11 @@ core:
       passage: "Researchers who have been tracking remote teams since the first lockdowns report that people find it far harder to switch off, and that burnout — once the private complaint of bankers who burned the candle at both ends — has become endemic."
       q: What point is the writer making about burnout?
       options:
-        - It has spread far beyond the professions it was once limited to.
         - It remains a problem mainly for investment bankers.
         - It disappeared when remote working arrived.
+        - It has spread far beyond the professions it was once limited to.
         - It is now easier to treat than it used to be.
-      answer: 0
+      answer: 2
     explanation: "Once the private complaint of bankers … has become endemic traces a movement from one narrow profession to everywhere. Endemic means regularly found in a group — the opposite of disappearing."
   - type: reading_comprehension
     group: reading
@@ -426,24 +426,24 @@ core:
     content:
       pre: "The endless overtime finally "
       post: " its toll on her health."
-      options: [took, made, brought, carried]
-      answer: 0
+      options: [made, brought, took, carried]
+      answer: 2
     explanation: "Take its toll (on) is a fixed idiom for gradual, cumulative damage. Make, bring and carry all fail to collocate with toll."
   - type: mc_cloze
     group: vocab
     content:
       pre: "I'm completely snowed "
       post: " at work this week — can we meet on Friday?"
-      options: [under, in, over, off]
-      answer: 0
+      options: [in, under, over, off]
+      answer: 1
     explanation: "Be snowed under = buried in work; the image is of work falling on you like snow. Snowed in exists but means physically trapped by real snow."
   - type: mc_cloze
     group: vocab
     content:
       pre: "After the merger, forty members of staff were made "
       post: "."
-      options: [redundant, resigned, sacked, fired]
-      answer: 0
+      options: [resigned, sacked, fired, redundant]
+      answer: 3
     explanation: "Make sb redundant is the only pattern here that takes make: the job disappears, without fault. Sacked and fired describe dismissal for a reason and never follow made; resigned is something you do yourself."
   - type: mc_cloze
     group: vocab
@@ -458,24 +458,24 @@ core:
     content:
       pre: "He's been burning the "
       post: " at both ends for months."
-      options: [candle, torch, lamp, wick]
-      answer: 0
+      options: [torch, lamp, candle, wick]
+      answer: 2
     explanation: "Burn the candle at both ends is a fixed idiom: work late and rise early until nothing is left. No other light source can be substituted into it."
   - type: mc_cloze
     group: vocab
     content:
       pre: "She decided to take a career "
       post: " to retrain as a therapist."
-      options: [break, pause, stop, halt]
-      answer: 0
+      options: [pause, stop, halt, break]
+      answer: 3
     explanation: "Take a career break is the established HR collocation for a planned period away from work. Pause, stop and halt do not form fixed phrases with career."
   - type: mc_cloze
     group: vocab
     content:
       pre: "New hires must complete a six-month "
       post: " period before their contract becomes permanent."
-      options: [probationary, probational, provisional, preparatory]
-      answer: 0
+      options: [probational, probationary, provisional, preparatory]
+      answer: 1
     explanation: "Probationary period is the contractual term for the trial months of a new job. Provisional and preparatory are real words but do not name this arrangement; probational is not standard."
   # ── collocation_match × 10 · group vocab ───────────────────────
   - type: collocation_match
@@ -660,8 +660,8 @@ review_pool:
       pre: "The minister "
       post: " — the resignation letter is already drafted."
       prompt: RESIGN
-      options: [is about to resign, is on the verge to resign, resigns, was to have resigned]
-      answer: 0
+      options: [is on the verge to resign, resigns, was to have resigned, is about to resign]
+      answer: 3
     explanation: "A drafted letter signals imminence: is about to resign. On the verge would need of resigning, and was to have resigned would mean the resignation was cancelled — the letter says otherwise."
   - type: grammar_drill
     group: grammar
@@ -810,8 +810,8 @@ review_pool:
     content:
       pre: "The long commute was quietly taking its "
       post: " on her health."
-      options: [toll, cost, price, fee]
-      answer: 0
+      options: [cost, price, toll, fee]
+      answer: 2
     explanation: "Take its toll on is the fixed idiom for slow cumulative damage. Cost, price and fee are all money words that never join this pattern."
   - type: mc_cloze
     group: vocab
@@ -826,16 +826,16 @@ review_pool:
     content:
       pre: "After the scandal, the chairman was forced to step "
       post: "."
-      options: [down, out, off, back]
-      answer: 0
+      options: [out, off, back, down]
+      answer: 3
     explanation: "Step down = leave a senior post. Step back means to distance yourself from involvement and would need from; step out and step off are literal movements."
   - type: mc_cloze
     group: vocab
     content:
       pre: "It's time to "
       post: " down and finish that application."
-      options: [knuckle, hammer, nail, screw]
-      answer: 0
+      options: [hammer, knuckle, nail, screw]
+      answer: 1
     explanation: "Knuckle down = finally start working seriously. The other tools are red herrings — none of them forms this phrasal verb."
   # ── collocation_match × 4 ──────────────────────────────────────
   - type: collocation_match

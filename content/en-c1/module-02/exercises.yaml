@@ -1,0 +1,904 @@
+# Module 02 · Science & Technology — exercises
+# core: 10 grammar_drill · 8 error_correction · 8 key_word_transformation ·
+#       8 open_cloze · 6 reading_comprehension · 8 mc_cloze · 10 collocation_match · 8 word_formation  = 66
+# review_pool: 5 gd · 4 ec · 4 kwt · 4 oc · 1 rc · 4 mc · 4 cm · 4 wf  = 30
+# Answer indices are deliberately spread across positions — no runs of 3+.
+core:
+  # ── grammar_drill × 10 · group grammar ─────────────────────────
+  - type: grammar_drill
+    group: grammar
+    grammar_point: Passive of perfect and continuous forms
+    content:
+      pre: "The results "
+      post: " in three independent labs so far."
+      prompt: REPLICATE
+      options: [replicated, have been replicated, are replicating, had been replicated]
+      answer: 1
+    explanation: "So far connects the past to the present, and the results receive the action — present perfect passive: have been replicated. Had been replicated would need a past reference point, and the active forms leave the verb without a doer."
+  - type: grammar_drill
+    group: grammar
+    grammar_point: Passive of perfect and continuous forms
+    content:
+      pre: "When the inspectors arrived, the faulty sensors "
+      post: "."
+      prompt: REPLACE
+      options: [were still replacing, are still being replaced, were still being replaced, had still replaced]
+      answer: 2
+    explanation: "An action in progress at a past moment, done to the sensors — past continuous passive: were still being replaced. The present tense breaks the past frame, and the active forms would make the sensors the workers."
+  - type: grammar_drill
+    group: grammar
+    grammar_point: Modal passives (must have been done)
+    content:
+      pre: "The control group's data looks wrong too — the samples "
+      post: " during collection last week."
+      prompt: CONTAMINATE
+      options: [must have been contaminated, must be contaminated, must have contaminated, should contaminate]
+      answer: 0
+    explanation: "Last week anchors the event in the past, and the samples suffered it — confident deduction takes must have been + past participle. Must have contaminated would make the samples the polluters, not the victims."
+  - type: grammar_drill
+    group: grammar
+    grammar_point: "Impersonal passive (It is said / believed that…)"
+    content:
+      pre: "The startup "
+      post: " about the vulnerability for months before the leak."
+      prompt: KNOW
+      options: [is said to know, said to have known, is saying to know, is said to have known]
+      answer: 3
+    explanation: "The knowing happened before the leak, so the perfect infinitive pushes it back: is said to have known. Is said to know would report a present state, and the other options break the impersonal pattern altogether."
+  - type: grammar_drill
+    group: grammar
+    grammar_point: Causative structures (have / get something done)
+    content:
+      pre: "We don't audit the code ourselves — we "
+      post: " by an outside firm."
+      prompt: AUDIT
+      options: [have audited it, have it audited, audit it, have it audit]
+      answer: 1
+    explanation: "Work arranged and paid for, done by somebody else, is the causative: have + object + past participle — have it audited. Have audited it says you did it yourselves, and have it audit turns the code into the auditor."
+  - type: grammar_drill
+    group: grammar
+    grammar_point: Causative structures (have / get something done)
+    content:
+      pre: "It took a month of phone calls, but we finally "
+      post: " the contract."
+      prompt: EXTEND
+      options: [got the vendor to extend, got the vendor extend, had the vendor to extend, made the vendor to extend]
+      answer: 0
+    explanation: "Persuasion after effort is get + somebody + to-infinitive: got the vendor to extend. After have or make the infinitive would be bare — and neither verb carries the sense of winning somebody over."
+  - type: grammar_drill
+    group: grammar
+    grammar_point: Two-object passives and information structure
+    content:
+      pre: "After the audit, the researchers "
+      post: " full access to the raw data."
+      prompt: GIVE
+      options: [gave, were being given, were given, have given]
+      answer: 2
+    explanation: "The researchers received the access, so the two-object verb passivises on the person: were given. English prefers the human receiver as subject; the continuous would add an unwanted in-progress meaning."
+  - type: grammar_drill
+    group: grammar
+    grammar_point: Passive of perfect and continuous forms
+    content:
+      pre: "By the end of next week, every device on the network "
+      post: "."
+      prompt: PATCH
+      options: [will be patching, will have patched, is patched, will have been patched]
+      answer: 3
+    explanation: "By + a future deadline looks back from that point at an action completed on the devices — future perfect passive: will have been patched. The active forms would need somebody doing the patching as subject."
+  - type: grammar_drill
+    group: grammar
+    grammar_point: "Impersonal passive (It is said / believed that…)"
+    content:
+      pre: ""
+      post: " that the two failures were caused by the same faulty batch."
+      prompt: BELIEVE
+      options: [It believes, It is believed, They are believed, It is believing]
+      answer: 1
+    explanation: "The impersonal frame for a general claim is It is believed that + clause. They are believed would need an infinitive to follow (they are believed to…), and the active forms give believe an impossible subject."
+  - type: grammar_drill
+    group: grammar
+    grammar_point: Modal passives (must have been done)
+    content:
+      pre: "The data "
+      post: " before it left the hospital — that was the whole point of the protocol."
+      prompt: ANONYMISE
+      options: [should anonymise, should have anonymised, should have been anonymised, must anonymise]
+      answer: 2
+    explanation: "A required procedure that was not followed, done to the data: should have been anonymised. Should have anonymised needs the person responsible as subject — the data cannot anonymise anything."
+  # ── error_correction × 8 · group grammar ───────────────────────
+  - type: error_correction
+    group: grammar
+    grammar_point: Passive of perfect and continuous forms
+    content:
+      words: [The, testing, facility, is, still, built, so, tours, are, impossible.]
+      wrong: 5
+      correction: built → being built
+    explanation: "Without being, the building is finished and the tours make no sense. Is being + past participle is the continuous passive — the form that keeps the cranes on site."
+  - type: error_correction
+    group: grammar
+    grammar_point: "Impersonal passive (It is said / believed that…)"
+    content:
+      words: [He, is, thought, that, he, leaked, the, documents.]
+      wrong: 3
+      correction: that he leaked → to have leaked
+    explanation: "With a personal subject the impersonal passive takes an infinitive: he is thought to have leaked. The that-clause belongs to the other frame — It is thought that he leaked — and the two must never be mixed."
+  - type: error_correction
+    group: grammar
+    grammar_point: Causative structures (have / get something done)
+    content:
+      words: [After, the, breach, we, made, all, passwords, changed, by, the, IT, team.]
+      wrong: 4
+      correction: made → had
+    explanation: "Work you order or arrange takes the causative have (or get) + object + past participle: had all passwords changed. Make means force and does not build this structure."
+  - type: error_correction
+    group: grammar
+    grammar_point: Modal passives (must have been done)
+    content:
+      words: [The, files, must, have, deleted, by, someone, with, admin, rights.]
+      wrong: 4
+      correction: deleted → been deleted
+    explanation: "The by-phrase shows the files received the action, so the modal deduction needs the passive: must have BEEN deleted. Without been, the files become the ones doing the deleting."
+  - type: error_correction
+    group: grammar
+    grammar_point: Two-object passives and information structure
+    content:
+      words: [A, full, refund, was, given, for, the, customers, affected.]
+      wrong: 5
+      correction: for → to
+    explanation: "Give sends something TO a receiver: a refund was given to the customers. For would describe a purpose or benefit, not the direction of the giving — a classic preposition trap in two-object passives."
+  - type: error_correction
+    group: grammar
+    grammar_point: Passive of perfect and continuous forms
+    content:
+      words: [The, motorway, is, resurfaced, at, the, moment, so, expect, delays.]
+      wrong: 3
+      correction: is resurfaced → is being resurfaced
+    explanation: "At the moment demands an action in progress, and the motorway receives it — present continuous passive: is being resurfaced. The simple passive states a general fact, not tonight's roadworks."
+  - type: error_correction
+    group: grammar
+    grammar_point: "Impersonal passive (It is said / believed that…)"
+    content:
+      words: [The, trial, is, expected, reaching, its, final, phase, in, May.]
+      wrong: 4
+      correction: reaching → to reach
+    explanation: "Is expected, like is said and is estimated, takes a to-infinitive: is expected to reach. The -ing form does not follow this family of impersonal passives."
+  - type: error_correction
+    group: grammar
+    grammar_point: Causative structures (have / get something done)
+    content:
+      words: [We, got, the, manufacturer, replace, the, faulty, batch, free, of, charge.]
+      wrong: 4
+      correction: replace → to replace
+    explanation: "Get + somebody keeps the to: got the manufacturer TO replace. It is have + somebody that takes the bare infinitive — the two causatives differ in exactly this one word."
+  # ── key_word_transformation × 8 · group grammar ────────────────
+  - type: key_word_transformation
+    group: grammar
+    grammar_point: "Impersonal passive (It is said / believed that…)"
+    content:
+      s1: People believe that the device shortens diagnosis times.
+      key: SAID
+      pre: "The device "
+      post: " diagnosis times."
+      answers: [is said to shorten]
+      hint: 3–6 words, including the key word
+      answer_shown: is said to shorten
+    explanation: "The personal-subject frame of the impersonal passive: subject + is said to + infinitive. The believers disappear, the device steps forward, and the claim stays unowned."
+  - type: key_word_transformation
+    group: grammar
+    grammar_point: Causative structures (have / get something done)
+    content:
+      s1: An outside firm services our machines every winter.
+      key: HAVE
+      pre: "We "
+      post: " by an outside firm every winter."
+      answers: [have our machines serviced]
+      hint: 3–6 words, including the key word
+      answer_shown: have our machines serviced
+    explanation: "Work done for you by somebody else is causative have + object + past participle: have our machines serviced. The by-phrase survives untouched from the active sentence."
+  - type: key_word_transformation
+    group: grammar
+    grammar_point: Modal passives (must have been done)
+    content:
+      s1: I'm certain the figures were checked before release.
+      key: BEEN
+      pre: "The figures must "
+      post: " before release."
+      answers: [have been checked]
+      hint: 3–6 words, including the key word
+      answer_shown: have been checked
+    explanation: "Certainty about a past event flips into must have been + past participle: must have been checked. The modal carries the deduction; been keeps the figures on the receiving end."
+  - type: key_word_transformation
+    group: grammar
+    grammar_point: Two-object passives and information structure
+    content:
+      s1: They offered the volunteers no explanation.
+      key: WERE
+      pre: "The volunteers "
+      post: " explanation."
+      answers: [were offered no]
+      hint: 3–6 words, including the key word
+      answer_shown: were offered no
+    explanation: "Offer has two objects, and English promotes the person: the volunteers were offered no explanation. The thing offered stays after the verb, exactly where the active left it."
+  - type: key_word_transformation
+    group: grammar
+    grammar_point: Passive of perfect and continuous forms
+    content:
+      s1: Nobody has updated the firmware since 2022.
+      key: BEEN
+      pre: "The firmware has "
+      post: " 2022."
+      answers: [not been updated since]
+      hint: 3–6 words, including the key word
+      answer_shown: not been updated since
+    explanation: "Nobody has done X → X has not been done: the present perfect passive keeps the since-frame and drops the empty subject. Not slots between has and been."
+  - type: key_word_transformation
+    group: grammar
+    grammar_point: Causative structures (have / get something done)
+    content:
+      s1: The lawyer persuaded the regulator to reopen the case.
+      key: GOT
+      pre: "The lawyer "
+      post: " the case."
+      answers: [got the regulator to reopen]
+      hint: 3–6 words, including the key word
+      answer_shown: got the regulator to reopen
+    explanation: "Persuade sb to do = get sb to do: got the regulator to reopen. Get is the causative of effort — and unlike have, it keeps the to before the infinitive."
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: The rocket was on the point of launching when the fault appeared.
+      key: ABOUT
+      pre: "The rocket "
+      post: " when the fault appeared."
+      answers: [was about to launch]
+      hint: 3–6 words, including the key word
+      answer_shown: was about to launch
+    explanation: "Spiral review from Module 1: on the point of doing = about to do, shifted into the past — was about to launch. Imminence interrupted, exactly the M1 pattern."
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: Engineers no longer draw circuit boards by hand.
+      key: USED
+      pre: "Engineers "
+      post: " circuit boards by hand."
+      answers: [used to draw]
+      hint: 3–6 words, including the key word
+      answer_shown: used to draw
+    explanation: "Spiral review from Module 1: no longer does → used to do, the structure that asserts a finished past habit. Spelling — used to, not use to, in the affirmative."
+  # ── open_cloze × 8 · group reading ─────────────────────────────
+  - type: open_cloze
+    group: reading
+    grammar_point: "Impersonal passive (It is said / believed that…)"
+    content:
+      pre: "It is widely "
+      post: " that the outage was caused by a single faulty switch."
+      answers: [believed, thought, assumed]
+      answer_shown: believed
+    explanation: "It is widely believed / thought that + clause — the impersonal passive that reports a general opinion without naming anyone who holds it."
+  - type: open_cloze
+    group: reading
+    grammar_point: Passive of perfect and continuous forms
+    content:
+      pre: "The archive has "
+      post: " digitised, but the labels are still being checked."
+      answers: [been]
+      answer_shown: been
+    explanation: "Present perfect passive: has been digitised. The second clause shows the pattern's continuous cousin — is still being checked — working alongside it."
+  - type: open_cloze
+    group: reading
+    grammar_point: Causative structures (have / get something done)
+    content:
+      pre: "You should get your eyes "
+      post: " before you renew your licence."
+      answers: [tested, checked, examined]
+      answer_shown: tested
+    explanation: "Causative get + object + past participle: get your eyes tested — you arrange it, the optician does it. The bare or -ing forms would make you the examiner."
+  - type: open_cloze
+    group: reading
+    grammar_point: Modal passives (must have been done)
+    content:
+      pre: "The seals were intact, so the chip can't "
+      post: " been damaged in transit."
+      answers: [have]
+      answer_shown: have
+    explanation: "Negative deduction about the past: can't HAVE been damaged. English rejects mustn't here — impossibility about past events always runs through can't have."
+  - type: open_cloze
+    group: reading
+    grammar_point: Passive of perfect and continuous forms
+    content:
+      pre: "Please use the side entrance while the lobby is "
+      post: " refurbished."
+      answers: [being]
+      answer_shown: being
+    explanation: "While + an action in progress, done to the lobby — is BEING refurbished. Without being, the refurbishment would already be finished and the notice pointless."
+  - type: open_cloze
+    group: reading
+    grammar_point: "Impersonal passive (It is said / believed that…)"
+    content:
+      pre: "The trial results are expected "
+      post: " be published in the spring."
+      answers: [to]
+      answer_shown: to
+    explanation: "Are expected TO be published — the impersonal passive of forecasting takes a to-infinitive, here itself passive: to be published."
+  - type: open_cloze
+    group: reading
+    grammar_point: Two-object passives and information structure
+    content:
+      pre: "The telescope was placed in orbit "
+      post: " a private contractor rather than the agency itself."
+      answers: [by]
+      answer_shown: by
+    explanation: "The agent phrase of the passive is introduced BY by — and here it earns its place: the point of the sentence is precisely who did the placing."
+  - type: open_cloze
+    group: reading
+    grammar_point: Causative structures (have / get something done)
+    content:
+      pre: "We had the whole system rebuilt "
+      post: " scratch after the breach."
+      answers: [from]
+      answer_shown: from
+    explanation: "From scratch — starting again with nothing kept — sits naturally inside the causative had the system rebuilt. The fixed phrase supplies the missing preposition."
+  # ── reading_comprehension × 6 · group reading ──────────────────
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "The pitch writes itself: software never sleeps, never hurries and never lets a difficult night skew its attention. The reality, as ever in medicine, is more complicated — and more interesting."
+      q: What does the writer imply with 'the pitch writes itself'?
+      options:
+        - The software was unusually easy to program.
+        - The sales argument is so obvious it needs no effort.
+        - The company refuses to advertise the product.
+        - Doctors wrote the marketing materials themselves.
+      answer: 1
+    explanation: "A pitch that writes itself is a sales case so self-evident that nobody has to work on it — which the writer immediately undercuts with 'the reality is more complicated'. Programming effort and advertising are never mentioned."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "When independent researchers audited one celebrated system, they concluded that it must have been trained on scans that still carried hospital labels: the model had learned to read the sticker, not the lung."
+      q: What had the system actually learned to do?
+      options:
+        - Diagnose lung disease more accurately than doctors.
+        - Remove identifying labels from medical scans.
+        - Distinguish healthy lungs from damaged ones.
+        - Rely on an irrelevant clue instead of medical evidence.
+      answer: 3
+    explanation: "Reading 'the sticker, not the lung' means the model keyed on the hospital label — an irrelevant shortcut — rather than on anything medical. The sentence is precisely a denial of options A and C."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "In one widely reported pilot, a sepsis-alert model backfired so thoroughly that nurses simply learned to ignore it — the unintended consequences of automation include teaching professionals to distrust their own tools."
+      q: What point is made about the sepsis-alert model?
+      options:
+        - Its constant alarms ended up destroying the staff's trust in it.
+        - It failed because the nurses refused to be trained.
+        - It detected sepsis more reliably than the nursing staff.
+        - It was withdrawn before staff could learn to use it.
+      answer: 0
+    explanation: "Backfired + 'nurses simply learned to ignore it' describes a tool that talked itself out of being believed. Nothing suggests the nurses were at fault, that it outperformed them, or that it was withdrawn."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Most commercial models are opaque: they cannot explain why a shadow was flagged, and when they are wrong it is not obvious who carries the liability — the vendor, the hospital, or the doctor who was told by a machine that there was nothing to see."
+      q: What problem does the writer identify?
+      options:
+        - Vendors deliberately hide their prices from hospitals.
+        - Doctors routinely ignore the machines' explanations.
+        - Responsibility for errors cannot be clearly assigned.
+        - Hospitals cannot afford to buy the systems.
+      answer: 2
+    explanation: "The sentence lists three candidates for the liability and settles on none — the point is exactly that responsibility is unassignable. Opaque refers to the models' reasoning, not their pricing."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "The radiologists who were given the software as an assistant rather than a replacement report the happiest results, and the departments that used it to scale up attention — not to render the humans obsolete — are the ones where it has genuinely paved the way for better medicine."
+      q: According to the passage, where has the technology worked best?
+      options:
+        - Where it fully replaced the radiologists.
+        - Where it was tested on the largest datasets.
+        - Where managers cut staff to pay for it.
+        - Where it supported doctors instead of replacing them.
+      answer: 3
+    explanation: "'As an assistant rather than a replacement' and 'not to render the humans obsolete' both point the same way: the technology succeeds as support. Options A and C are the exact configurations the passage rejects."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "It is said that the first major lawsuit over an algorithmic misdiagnosis is already being prepared; whatever its outcome, it will do more to shape the field than any benchmark."
+      q: How does the writer present the coming lawsuit?
+      options:
+        - As a more powerful force for change than technical measures.
+        - As proof that the technology should be banned outright.
+        - As unlikely ever to reach an actual courtroom.
+        - As a distraction from genuine scientific progress.
+      answer: 0
+    explanation: "'It will do more to shape the field than any benchmark' ranks legal pressure above technical evaluation as an engine of change — whatever the verdict. The writer takes no side on banning, likelihood or distraction."
+  # ── mc_cloze × 8 · group vocab ─────────────────────────────────
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "The findings could not be "
+      post: " by any other lab, and the paper was quietly withdrawn."
+      options: [rehearsed, recycled, replicated, restaged]
+      answer: 2
+    explanation: "Replicate the findings — repeat the study and get the same results — is the fixed collocation of research English. The other re- verbs belong to theatre and waste management, not the lab."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "Years of unglamorous work finally "
+      post: " results last spring."
+      options: [yielded, rewarded, arrived, succeeded]
+      answer: 0
+    explanation: "Yield results — produce them, the way a field yields a harvest — is the collocation. Work may be rewarded, results may arrive, but neither verb takes results as its object here."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "Testing only on volunteers under thirty will "
+      post: " the results."
+      options: [bend, skew, curve, tilt]
+      answer: 1
+    explanation: "Skew the results is the statistician's verb for distortion by a biased sample. Bend, curve and tilt describe physical shapes and never partner results."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "The startup hopes its payment app will gain "
+      post: " outside the big cities."
+      options: [movement, friction, speed, traction]
+      answer: 3
+    explanation: "Gain traction — begin to grip, like a tyre on the road — means to start winning users or acceptance. Friction is the enemy of the metaphor, and movement and speed do not collocate with gain this way."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "Cheap sensors "
+      post: " the way for the smart-home boom."
+      options: [paved, painted, planted, poured]
+      answer: 0
+    explanation: "Pave the way for something — make it possible by preparing the ground — is a fixed idiom. The image is a road being surfaced, and only paved builds it."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "Critics accuse phone makers of planned "
+      post: " — batteries that die the month the warranty ends."
+      options: [obsoletion, obscurity, obsolescence, oblivion]
+      answer: 2
+    explanation: "Planned obsolescence is the term for designing products to date or fail early. Obsoletion is not a standard word, and obscurity and oblivion are about being forgotten, not breaking."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "Anonymity online has proved a double-edged "
+      post: " for the site's moderators."
+      options: [knife, sword, blade, razor]
+      answer: 1
+    explanation: "A double-edged sword — something that helps and harms at once — is welded to sword. No other blade can be substituted into the idiom."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "Regulators prefer to "
+      post: " on the side of caution where patient data is involved."
+      options: [lean, stand, fall, err]
+      answer: 3
+    explanation: "Err on the side of caution — choose the safest option when unsure — preserves the old verb err, to make a mistake. The idiom means: if you must be wrong, be wrong in the careful direction."
+  # ── collocation_match × 10 · group vocab ───────────────────────
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [conduct, undergo, replicate, crunch]
+      right: [the numbers, peer review, a controlled trial, the findings]
+      pairs: {0: 2, 1: 1, 2: 3, 3: 0}
+    explanation: "Conduct a controlled trial, undergo peer review, replicate the findings, crunch the numbers — four verbs from the research pipeline, each bound to its own object."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [push, pave, gain, harness]
+      right: [traction, the potential of AI, the way for reform, the boundaries]
+      pairs: {0: 3, 1: 2, 2: 0, 3: 1}
+    explanation: "Push the boundaries, pave the way for reform, gain traction, harness the potential of AI — the vocabulary of progress, and none of the verbs are interchangeable."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [pose, raise, draw, yield]
+      right: [conclusions, results, a threat, concerns]
+      pairs: {0: 2, 1: 3, 2: 0, 3: 1}
+    explanation: "Pose a threat, raise concerns, draw conclusions, yield results — formal science-writing verbs. Swap any pair and the phrase stops being English."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [a randomised, a representative, empirical, a working]
+      right: [hypothesis, evidence, controlled trial, sample]
+      pairs: {0: 2, 1: 3, 2: 1, 3: 0}
+    explanation: "A randomised controlled trial, a representative sample, empirical evidence, a working hypothesis — the four noun phrases that make a study worth reading."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [roll out, scale up, streamline, tamper]
+      right: [with the settings, an update, production, the approval process]
+      pairs: {0: 1, 1: 2, 2: 3, 3: 0}
+    explanation: "Roll out an update, scale up production, streamline the approval process, tamper with the settings — the preposition with is the fingerprint of tamper."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [a state-of-the-art, an early, a tech-savvy, a groundbreaking]
+      right: [discovery, adopter, scanner, grandmother]
+      pairs: {0: 2, 1: 1, 2: 3, 3: 0}
+    explanation: "A state-of-the-art scanner, an early adopter, a tech-savvy grandmother, a groundbreaking discovery — adjective and noun select each other; an early scanner or a groundbreaking grandmother name nothing."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [err on, safeguard, backfire, be on]
+      right: [against fraud, the cusp of change, spectacularly, the side of caution]
+      pairs: {0: 3, 1: 0, 2: 2, 3: 1}
+    explanation: "Err on the side of caution, safeguard against fraud, backfire spectacularly, be on the cusp of change — learn the tail with the head; the fragments are useless apart."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [a double-edged, unintended, a cautionary, planned]
+      right: [obsolescence, consequences, sword, tale]
+      pairs: {0: 2, 1: 1, 2: 3, 3: 0}
+    explanation: "A double-edged sword, unintended consequences, a cautionary tale, planned obsolescence — the module's four warnings, each a fixed phrase with no moving parts."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [render devices, facilitate, test, automate]
+      right: [a hypothesis, obsolete, routine checks, collaboration]
+      pairs: {0: 1, 1: 3, 2: 0, 3: 2}
+    explanation: "Render devices obsolete, facilitate collaboration, test a hypothesis, automate routine checks — render + adjective is the elegant way to say make something become."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [a proof, a quantum, at the forefront, a game]
+      right: [changer, leap, of concept, of innovation]
+      pairs: {0: 2, 1: 1, 2: 3, 3: 0}
+    explanation: "A proof of concept, a quantum leap, at the forefront of innovation, a game changer — four set phrases of tech journalism; the of-tails are not transferable."
+  # ── word_formation × 8 · group vocab ───────────────────────────
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "A "
+      post: " study will tell us whether the plan can work at all."
+      prompt: FEASIBLE
+      answers: [feasibility]
+      answer_shown: feasibility
+    explanation: "Before study you need the noun: feasibility. A feasibility study is itself a fixed compound — the report that decides whether a project is worth starting."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "The lab is renowned for its "
+      post: " approach to data ethics."
+      prompt: INNOVATE
+      answers: [innovative]
+      answer_shown: innovative
+    explanation: "Between its and approach the gap wants an adjective: innovative. The stress moves to the first syllable — IN-novative — a favourite pronunciation trap."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Full "
+      post: " of the warehouse eliminated four hundred jobs."
+      prompt: AUTOMATE
+      answers: [automation]
+      answer_shown: automation
+    explanation: "The subject of eliminated must be a noun: automation. The verb automate drops its final e before the -ion suffix."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "The results were dismissed as statistically "
+      post: "."
+      prompt: SIGNIFY
+      answers: [insignificant]
+      answer_shown: insignificant
+    explanation: "Dismissed as tells you the adjective is negative: in + significant. Statistically significant / insignificant is the fixed pair of research reporting — the double move of prefix and suffix is pure C1."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Several sensors proved "
+      post: " in cold weather and had to be replaced."
+      prompt: RELY
+      answers: [unreliable]
+      answer_shown: unreliable
+    explanation: "Had to be replaced signals a negative adjective: un + reli + able. The y of rely becomes i before the suffix — and the un- is what carries the failure."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "The committee questioned the "
+      post: " of the sample."
+      prompt: VALID
+      answers: [validity]
+      answer_shown: validity
+    explanation: "After the and before of, the gap is a noun: validity. Questioning the validity of a sample is standard peer-review language — the adjective valid would not survive between the and of."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Rapid "
+      post: " has made last year's flagship phone feel ancient."
+      prompt: OBSOLETE
+      answers: [obsolescence]
+      answer_shown: obsolescence
+    explanation: "The subject noun of has made is obsolescence — the process of going out of date. Watch the spelling shift: obsolete ends -ete, the noun ends -escence."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Her explanation was so "
+      post: " that even the lawyers understood the algorithm."
+      prompt: ACCESS
+      answers: [accessible]
+      answer_shown: accessible
+    explanation: "So + adjective + that: accessible — able to be understood or reached. The -ible spelling (not -able) is the exam's favourite detail here."
+review_pool:
+  # ── grammar_drill × 5 ──────────────────────────────────────────
+  - type: grammar_drill
+    group: grammar
+    grammar_point: Passive of perfect and continuous forms
+    content:
+      pre: "Two of the reactors "
+      post: " down for maintenance since May."
+      prompt: SHUT
+      options: [shut, are shutting, have shut, have been shut]
+      answer: 3
+    explanation: "Since May connects a past starting point to now, and the reactors received the action — present perfect passive: have been shut down. The active forms would make the reactors close themselves."
+  - type: grammar_drill
+    group: grammar
+    grammar_point: Causative structures (have / get something done)
+    content:
+      pre: "The clinic "
+      post: " translated into six languages last year."
+      prompt: HAVE
+      options: [had its leaflets, made its leaflets, let its leaflets, kept its leaflets]
+      answer: 0
+    explanation: "Arranged work done by translators is causative have + object + past participle: had its leaflets translated. Make, let and keep do not build the arranged-service pattern."
+  - type: grammar_drill
+    group: grammar
+    grammar_point: "Impersonal passive (It is said / believed that…)"
+    content:
+      pre: "The two crashes "
+      post: " by the same software fault."
+      prompt: THINK · CAUSE
+      options: [are thought to be caused, think to have been caused, are thought to have been caused, are thinking to be caused]
+      answer: 2
+    explanation: "The crashes already happened, so the reported event needs the perfect passive infinitive: are thought to have been caused. To be caused would report a present or general process."
+  - type: grammar_drill
+    group: grammar
+    grammar_point: Modal passives (must have been done)
+    content:
+      pre: "Relax — the invitation "
+      post: " to your old address. Check the spam folder too."
+      prompt: SEND
+      options: [must send, may have been sent, must have sent, should send]
+      answer: 1
+    explanation: "A calm guess about a past event, done to the invitation — may have been sent. Must have sent would need a sender as subject, and the present forms cannot look back."
+  - type: grammar_drill
+    group: grammar
+    grammar_point: Passive of perfect and continuous forms
+    content:
+      pre: "Right now the votes "
+      post: " under international observation."
+      prompt: COUNT
+      options: [are being counted, are counting, have counted, were being counted]
+      answer: 0
+    explanation: "Right now demands the present continuous, and the votes receive the counting: are being counted. The past continuous passive breaks the time frame; the active forms make the votes the counters."
+  # ── error_correction × 4 ───────────────────────────────────────
+  - type: error_correction
+    group: grammar
+    grammar_point: "Impersonal passive (It is said / believed that…)"
+    content:
+      words: [It, believes, that, the, tunnel, will, open, in, "2028."]
+      wrong: 1
+      correction: believes → is believed
+    explanation: "The impersonal frame is passive: It is believed that. Active believes would need a real believer as subject — and it is nobody."
+  - type: error_correction
+    group: grammar
+    grammar_point: Passive of perfect and continuous forms
+    content:
+      words: [The, invoices, still, haven't, be, processed, by, the, new, system.]
+      wrong: 4
+      correction: be → been
+    explanation: "After haven't the perfect passive needs the participle been: haven't been processed. Bare be belongs after modals — will be processed — not after have."
+  - type: error_correction
+    group: grammar
+    grammar_point: Causative structures (have / get something done)
+    content:
+      words: [I, must, have, my, blood, pressure, check, before, the, flight.]
+      wrong: 6
+      correction: check → checked
+    explanation: "Causative have + object + PAST PARTICIPLE: have my blood pressure checked. The bare infinitive after the object would mean the blood pressure performs the checking."
+  - type: error_correction
+    group: grammar
+    grammar_point: Two-object passives and information structure
+    content:
+      words: [The, finalists, was, sent, the, results, by, email, on, Friday.]
+      wrong: 2
+      correction: was → were
+    explanation: "The subject of the two-object passive is the finalists — plural — so the verb must agree: were sent. The nearby singular results is a distraction, not the subject."
+  # ── key_word_transformation × 4 ────────────────────────────────
+  - type: key_word_transformation
+    group: grammar
+    grammar_point: "Impersonal passive (It is said / believed that…)"
+    content:
+      s1: People say the founder sold his shares weeks before the crash.
+      key: HAVE
+      pre: "The founder is said to "
+      post: " his shares weeks before the crash."
+      answers: [have sold]
+      hint: 3–6 words, including the key word
+      answer_shown: have sold
+    explanation: "The selling happened before the saying, so the infinitive goes perfect: is said to have sold. Without have, the two events collapse into the same moment."
+  - type: key_word_transformation
+    group: grammar
+    grammar_point: Causative structures (have / get something done)
+    content:
+      s1: Thieves stole her prototype at the trade fair.
+      key: HAD
+      pre: "She "
+      post: " at the trade fair."
+      answers: [had her prototype stolen]
+      hint: 3–6 words, including the key word
+      answer_shown: had her prototype stolen
+    explanation: "The misfortune causative: had her prototype stolen — the same have + object + past participle, but reporting what was done TO her, not what she arranged."
+  - type: key_word_transformation
+    group: grammar
+    grammar_point: Two-object passives and information structure
+    content:
+      s1: They showed the inspectors every maintenance log.
+      key: WERE
+      pre: "The inspectors "
+      post: " every maintenance log."
+      answers: [were shown]
+      hint: 3–6 words, including the key word
+      answer_shown: were shown
+    explanation: "Show passivises on the person: the inspectors were shown every log. The thing shown keeps its place after the verb — information structure preserved, agent gone."
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: The team fixed the leak before the storm arrived.
+      key: TIME
+      pre: "The team had fixed the leak by "
+      post: " arrived."
+      answers: [the time the storm]
+      hint: 3–6 words, including the key word
+      answer_shown: the time the storm
+    explanation: "Spiral review from Module 1: before + past simple becomes by the time + clause, with the earlier event in the past perfect — which the stem already supplies."
+  # ── open_cloze × 4 ─────────────────────────────────────────────
+  - type: open_cloze
+    group: reading
+    grammar_point: Passive of perfect and continuous forms
+    content:
+      pre: "The lecture theatre is closed while asbestos is "
+      post: " removed."
+      answers: [being]
+      answer_shown: being
+    explanation: "An operation in progress, done to the asbestos: is BEING removed. Drop being and the closure loses its reason — the work would already be over."
+  - type: open_cloze
+    group: reading
+    grammar_point: "Impersonal passive (It is said / believed that…)"
+    content:
+      pre: "The comet is estimated "
+      post: " pass within a million kilometres of Earth."
+      answers: [to]
+      answer_shown: to
+    explanation: "Is estimated TO pass — the measurement family of impersonal passives (estimated, expected, reported) always runs on the to-infinitive."
+  - type: open_cloze
+    group: reading
+    grammar_point: Modal passives (must have been done)
+    content:
+      pre: "The bug can't "
+      post: " been introduced yesterday — the build was frozen."
+      answers: [have]
+      answer_shown: have
+    explanation: "Impossibility about the past: can't HAVE been introduced. The frozen build is the evidence; can't have + past participle is the verdict."
+  - type: open_cloze
+    group: reading
+    grammar_point: Two-object passives and information structure
+    content:
+      pre: "All complaints are dealt "
+      post: " by an independent ombudsman."
+      answers: [with]
+      answer_shown: with
+    explanation: "Deal WITH keeps its preposition in the passive: are dealt with by. Prepositional verbs drag their particle through the transformation — dropping it is the classic slip."
+  # ── reading_comprehension × 1 ──────────────────────────────────
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "The device is reported to have survived two years of animal testing without a single rejection. Even so, the result has not yet been through peer review, and a proof of concept in one patient is not empirical evidence that the approach will work at scale."
+      q: What attitude does the passage take to the company's results?
+      options:
+        - They have already been disproved by independent labs.
+        - They matter only for veterinary medicine.
+        - They are promising but not yet properly verified.
+        - They were invented to impress investors.
+      answer: 2
+    explanation: "The passage grants the promise (survived two years, no rejection) and then withholds the verdict: no peer review, no scale. That is caution, not accusation — nothing has been disproved or called fake."
+  # ── mc_cloze × 4 ───────────────────────────────────────────────
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "The chatbot experiment "
+      post: " badly, flooding support with complaints."
+      options: [backdated, backfired, backtracked, backslid]
+      answer: 1
+    explanation: "Backfire — produce the opposite of the intended effect — is the verb for plans that explode in your face. Backtrack means to retreat from a position, and the others are unrelated."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "Someone had "
+      post: " with the calibration settings overnight."
+      options: [tangled, trampled, tumbled, tampered]
+      answer: 3
+    explanation: "Tamper with — interfere secretly and without permission — is the security-report verb, always with with. The three lookalikes describe physical chaos, not covert interference."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "The firm is at the "
+      post: " of battery research."
+      options: [forefront, forehead, foreground, foreword]
+      answer: 0
+    explanation: "At the forefront of — in the leading position — is the fixed phrase. Foreground belongs to photography, foreword to books, and forehead to anatomy."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "Wearables were dismissed as toys until they gained "
+      post: " among doctors."
+      options: [attraction, friction, traction, suction]
+      answer: 2
+    explanation: "Gain traction — begin to be accepted by a growing group — is the idiom; the tyre-grip metaphor only works with traction. The rhyming distractors grip nothing."
+  # ── collocation_match × 4 ──────────────────────────────────────
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [gather, jump to, run, address]
+      right: [concerns, a controlled trial, conclusions, empirical evidence]
+      pairs: {0: 3, 1: 2, 2: 1, 3: 0}
+    explanation: "Gather empirical evidence, jump to conclusions, run a controlled trial, address concerns — jump to conclusions is what the module's careful verbs exist to prevent."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [a phased, a tamper-proof, a peer-reviewed, a tech-savvy]
+      right: [journal, audience, rollout, seal]
+      pairs: {0: 2, 1: 3, 2: 0, 3: 1}
+    explanation: "A phased rollout, a tamper-proof seal, a peer-reviewed journal, a tech-savvy audience — compound adjectives choose their nouns; a phased seal protects nothing."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [undermine, streamline, harness, replicate]
+      right: [an experiment, public trust, solar energy, the paperwork]
+      pairs: {0: 1, 1: 3, 2: 2, 3: 0}
+    explanation: "Undermine public trust, streamline the paperwork, harness solar energy, replicate an experiment — four verbs, four different worlds, one correct object each."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [a proof-of-concept, an unintended, a cautionary, a feasibility]
+      right: [study, tale, demo, consequence]
+      pairs: {0: 2, 1: 3, 2: 1, 3: 0}
+    explanation: "A proof-of-concept demo, an unintended consequence, a cautionary tale, a feasibility study — the study belongs to feasibility; give it to proof-of-concept and the feasibility half is left with nothing."
+  # ── word_formation × 4 ─────────────────────────────────────────
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "The failure was traced to a tiny "
+      post: " in the cooling system."
+      prompt: FUNCTION
+      answers: [malfunction]
+      answer_shown: malfunction
+    explanation: "A tiny + noun, and the sense is negative: mal + function — a failure to work properly. The mal- prefix is rarer than un- and in-, which is exactly why exams love it."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Her "
+      post: " to detail made her the lab's best reviewer."
+      prompt: ATTEND
+      answers: [attention]
+      answer_shown: attention
+    explanation: "Attention to detail is the fixed phrase; the verb attend converts with -tion, and the to survives as part of the collocation."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "The report criticised the "
+      post: " handling of patient records."
+      prompt: CARE
+      answers: [careless]
+      answer_shown: careless
+    explanation: "Criticised sets the polarity: careless — without proper care. Careful would praise the handling and clash with the sentence; the -less suffix flips the root."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Critics doubt the commercial "
+      post: " of fusion within our lifetime."
+      prompt: VIABLE
+      answers: [viability]
+      answer_shown: viability
+    explanation: "Between commercial and of the gap is a noun: viability — the capacity to survive as a business. The -ity suffix swallows the final -le of viable."

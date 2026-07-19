@@ -89,9 +89,21 @@ export const WatchoutSchema = z.object({
 });
 export type Watchout = z.infer<typeof WatchoutSchema>;
 
+// Authored grammar-cloze card: `text` uses Anki cloze syntax ({{c1::…}}) and
+// becomes the card front; `rule` is the back. The only flashcard content not
+// derivable from other package files — vocab cards come from vocab.yaml and
+// transformation cards from the core key_word_transformation exercises.
+export const ClozeCardSchema = z.object({
+  text: z.string().min(1),
+  hint: z.string().optional(),
+  rule: z.string().min(1),
+});
+export type ClozeCard = z.infer<typeof ClozeCardSchema>;
+
 export const TheoryPackageSchema = z.object({
   spotlights: z.array(SpotlightSchema).min(1),
   watchouts: z.array(WatchoutSchema).min(1),
+  cloze_cards: z.array(ClozeCardSchema).min(1),
 });
 
 // ───────────────────────── text-main.yaml / text-extra.yaml ─────────────────────────
@@ -239,35 +251,3 @@ export const WritingPackageSchema = z.object({
   checklist: z.array(z.string().min(1)).optional(),
 });
 export type WritingPackage = z.infer<typeof WritingPackageSchema>;
-
-// ───────────────────────────── anki-*.csv ─────────────────────────────
-// Header row is `#Field1,Field2,...` (Anki-import comment convention) —
-// scripts/sync.ts strips the leading `#` before treating it as the header.
-
-export const AnkiVocabRowSchema = z.object({
-  Term: z.string().min(1),
-  Definition: z.string().min(1),
-  UseCase1: z.string(),
-  UseCase2: z.string(),
-  Collocations: z.string(),
-  Register: z.string(),
-  Tags: z.string(),
-});
-export type AnkiVocabRow = z.infer<typeof AnkiVocabRowSchema>;
-
-export const AnkiGrammarRowSchema = z.object({
-  Text: z.string().min(1),
-  Hint: z.string(),
-  Rule: z.string(),
-  Tags: z.string(),
-});
-export type AnkiGrammarRow = z.infer<typeof AnkiGrammarRowSchema>;
-
-export const AnkiTransformRowSchema = z.object({
-  Prompt: z.string().min(1),
-  Key: z.string(),
-  Answer: z.string(),
-  Note: z.string(),
-  Tags: z.string(),
-});
-export type AnkiTransformRow = z.infer<typeof AnkiTransformRowSchema>;

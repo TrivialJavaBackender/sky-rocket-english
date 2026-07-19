@@ -1,0 +1,57 @@
+mode: speaking
+genre: recorded monologue (Speaking Part 2 style)
+prompt: |
+  Record a monologue of 2–3 minutes on the topic below — an extended version of
+  Cambridge Speaking Part 2, unscripted and in one take.
+
+  TOPIC: A technology that changed your field.
+
+  Take one minute to plan, then speak. Cover, in any order:
+  · what the technology is and what it replaced;
+  · what working life was like before it arrived;
+  · how the change actually happened — fast or slow, welcomed or resisted;
+  · what has been gained, and what has quietly been lost.
+
+  While speaking, deliberately deploy the module's grammar: at least three
+  passive forms in different tenses (has been built, was being tested, will
+  have been replaced), one impersonal passive (It is said that… / X is known
+  to…), and one causative (have / get something done). Reach for this module's
+  vocabulary where it fits naturally — five lexemes is a good target.
+
+  Afterwards, listen to your recording once and note two grammar slips and one
+  pronunciation habit to fix. Then shadow the model answer below: read it
+  aloud twice, sentence by sentence, imitating the stress and rhythm of a
+  confident speaker, and record one final take of your own monologue.
+model_answer: |
+  The technology I want to talk about is version control — the quiet system
+  that records every change ever made to a piece of software. It is not
+  glamorous, and outside the industry it is barely known, but almost
+  everything you use today has been built on top of it.
+
+  When I wrote my first programs, files were shared by email and overwritten
+  by whoever saved last. Whole days of work would simply disappear, and nobody
+  could say who had broken what. The first time I saw a proper project history
+  — every change logged, every author visible — it felt like being handed a
+  time machine. Anything that had been damaged could be restored in seconds,
+  and mistakes stopped being disasters.
+
+  What changed my field, though, was not the tool itself but the habits it
+  created. Code is now reviewed before it is merged; experiments are run on
+  separate branches; a bad release can be rolled back the moment something
+  goes wrong. Teams of complete strangers got each other to trust the work,
+  because the history keeps everyone honest. It is often said that software is
+  a team sport; version control is the referee.
+
+  Of course, it has been a double-edged sword in small ways — the history
+  never forgets your worst ideas either. But I cannot imagine the alternative
+  any more. If your field still keeps its knowledge in files called final-v2,
+  get a version control system installed, and have your future self thank you.
+checklist:
+  - Speaks for a full 2–3 minutes without long silences or restarts
+  - Opens by naming the technology and its field in one clear sentence
+  - Uses at least three accurate passives across different tenses
+  - Includes one impersonal passive (It is said that… / X is known to…)
+  - Includes at least one causative (have / get something done)
+  - Deploys five or more lexemes from this module naturally, not as a list
+  - Signposts the structure (before, the turning point, gains and losses) instead of chaining and… and…
+  - Ends with a rounded conclusion rather than trailing off

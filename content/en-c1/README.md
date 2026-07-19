@@ -6,18 +6,17 @@
 content/en-c1/
   module-01/
     meta.yaml            # → module: title, standfirst, goals[], grammar_points[]
-    vocab.yaml           # → vocab_entry: 45 записей
-    theory.yaml          # → grammar_spotlight + watchout
+    vocab.yaml           # → vocab_entry: 45 записей (+ flashcard note_type=vocab — деривация)
+    theory.yaml          # → grammar_spotlight + watchout + cloze_cards (→ flashcard grammar_cloze)
     text-main.yaml       # → reading_text(kind=main) + gloss
     text-extra.yaml      # → reading_text(kind=extra) + gloss
-    exercises.yaml       # → exercise: core 66 + review_pool 30
+    exercises.yaml       # → exercise: core 66 + review_pool 30 (core KWT → flashcard transformation)
     writing.yaml         # → writing_task
-    anki-vocab.csv       # → flashcard(note_type=vocab)         · импортируемо в Anki
-    anki-grammar.csv     # → flashcard(note_type=grammar_cloze) · импортируемо в Anki
-    anki-transform.csv   # → flashcard(note_type=transformation)· импортируемо в Anki
   checkpoint-a/          # пакеты чек-пойнтов: exercises.yaml (40) + writing.yaml
   diagnostic/            # 60 заданий + writing.yaml
 ```
+
+Флеш-карточки не имеют отдельных файлов: sync деривирует таблицу `flashcard` из YAML-источников пакета (см. раздел «Флеш-карточки» ниже). Отдельные Anki-CSV отменены — карточки живут только в webapp-SRS.
 
 ## Форматы файлов
 
@@ -55,7 +54,7 @@ entries:
     register: "Formal: resign · Informal: quit"
 ```
 
-### theory.yaml → `grammar_spotlight`, `watchout`
+### theory.yaml → `grammar_spotlight`, `watchout`, `flashcard(note_type=grammar_cloze)`
 ```yaml
 spotlights:
   - title: The perfect aspect in career narratives
@@ -69,6 +68,10 @@ watchouts:
     bad: I am working here since 2019.
     good: I have been working here since 2019.
     note: A past starting point needs the perfect to reach the present.
+cloze_cards:                           # 10 шт. → flashcard(note_type=grammar_cloze)
+  - text: "She {{c1::has been working}} here since 2019 — and she still loves it."
+    hint: work                         # опционально
+    rule: since + past starting point → present perfect; continuous for ongoing activity
 ```
 
 ### text-main.yaml / text-extra.yaml → `reading_text`, `gloss`
@@ -137,10 +140,12 @@ checklist:
   - 220–260 words
 ```
 
-### CSV → `flashcard` (+ импорт в Anki)
-- `anki-vocab.csv`: `Term,Definition,UseCase1,UseCase2,Collocations,Register,Tags` — 45 строк
-- `anki-grammar.csv`: `Text,Hint,Rule,Tags` (cloze `{{c1::…}}`) — 10 строк
-- `anki-transform.csv`: `Prompt,Key,Answer,Note,Tags` — 8 строк
-- Теги: `en-c1::m{NN}`
+### Флеш-карточки → `flashcard` (деривация, отдельных файлов нет)
+Sync собирает карточки из уже существующих YAML-источников; авторский контент карточек — только `cloze_cards` в `theory.yaml`:
+- `note_type=vocab` — 45 шт. из `vocab.yaml`: front=term, back=definition + первые 2 use cases + collocations + register.
+- `note_type=grammar_cloze` — 10 шт. из `theory.yaml (cloze_cards)`: front=text (cloze `{{c1::…}}`), back=rule (+hint).
+- `note_type=transformation` — 8 шт. из core `key_word_transformation` в `exercises.yaml`: front=`s1 → pre___post` + key, back=answer_shown + explanation.
+
+Теги: `en-c1::m{NN}` (префикс ident'а, между модулями карточки не коллидируют).
 
 Шаблон ТЗ на генерацию модуля и Definition of Done: `docs/MODULE-TASK-TEMPLATE.md`.
