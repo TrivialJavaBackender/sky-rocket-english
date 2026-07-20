@@ -93,7 +93,7 @@
 - Триггер: (а) шаг `exercise_set` сессии (config: `{"types":[...]}` или `{"group_key":"vocab"}`), (б) лончер юнита (`grammar`/`reading`/`vocab`), (в) `review_slot`, (г) `module_quiz`, (д) чек-пойнт, (е) свободная практика.
 - Шаги: набрать очередь упражнений по критерию; проиграть по одному; для каждого — принять ответ, проверить на сервере, показать объяснение; на ошибке предложить harvest; в конце — сводка.
 - R: `exercise` (+ `exercise_type`) отфильтрованные по `module_id`/`checkpoint_id` + `pool` + `group_key`/`type_code`; `session_step.config`.
-- W: на каждый ответ — `exercise_attempt` (`context`, `given_answer jsonb`, `is_correct`); на ошибку в контексте сессии — `review_queue_item` (stage 1, due +2д) [колея 2]; harvest → `flashcard(source=error_harvest)` + `error_map_entry` + `card_state`; закрытие `review_slot`-элемента → `review_queue_item.resolved_at`/`resolved_attempt_id`, при успехе — продвижение stage (+7/+21) или закрытие; `daily_activity.exercises_done++`.
+- W: на каждый ответ — `exercise_attempt` (`context`, `given_answer jsonb`, `is_correct`); на ошибку в контексте сессии — `review_queue_item` (stage 1, due +2д) [колея 2]; harvest → `error_map_entry` (карточка больше не создаётся — см. §5 и D9); закрытие `review_slot`-элемента → `review_queue_item.resolved_at`/`resolved_attempt_id`, при успехе — продвижение stage (+7/+21) или закрытие; `daily_activity.exercises_done++`.
 - Рендер: плеер упражнения (стем/варианты/поле ввода/матч/тап), полоса прогресса-точек, фидбек (verde/rojo), объяснение, кнопки Harvest/Next; финальная сводка (score, harvested, re-queue). Алгоритмы проверки — §5, формы — `SKY.exercises`.
 
 **UC-10 · Writing production (письменное задание).**
@@ -144,7 +144,9 @@
 - R: `card_state` (due для U), `flashcard` (`fields jsonb {front,main,cases,extra}`, `note_type`).
 - W: `card_state` (`phase`,`due_at`,`interval_days`,`ease`,`reps`,`lapses`,`last_reviewed_at`), `card_review_log` (`rating 1–4`, `prev_phase`, `new_due_at`), `daily_activity.cards_reviewed++`.
 - Рендер: карточка (тип-бейдж, front/back с cases/extra), 4 кнопки оценки с интервалами. Формы — `SKY.flashcards`. Алгоритм — §6.4 (SM-2, интервалы на кнопках из мокапа: Again 10 min / Hard 2 d / Good 4 d / Easy 8 d).
-- Заметка: новые карточки модуля попадают в колею через `flashcards_intro` (создаётся `card_state phase='new'` для всех `flashcard` модуля, `due_at=now`).
+- Заметка: новые карточки модуля попадают в колею через `flashcards_intro` (создаётся `card_state phase='new'` для всех `flashcard` модуля, `due_at` раскидан по 7 дням — §6.4 `spreadInitialDueDate`).
+- Заметка: колода — **только лексика**, по две карточки на слово (`vocab` — term→definition, `vocab_reverse` — definition→term, миграция `0005`). Grammar cloze и transformation из колеи убраны: это задания, их место — колея 2. Отдельные строки, а не двусторонний показ одной ноты, потому что узнавание и воспроизведение планируются независимо (отменяет D9).
+- Заметка: `flashcards_intro` разовый, поэтому карточки, появившиеся у модуля позже (например reverse-сторона после `0005`), вводит `catchUpModuleIntroductions` — он вызывается при рендере `/flashcards` и `/review` и добирает всё непредставленное в модулях с уже начатой колодой.
 
 **UC-16 · Колея 2 — Exercise re-queue (Review Slot).**
 - Триггер: шаг `review_slot` сессий Input/Workout (config `{"count":10}`), либо кнопка «Run the Review Slot».
@@ -178,9 +180,9 @@
 
 ### 1.6. Служебные / кросс-сценарии
 
-**UC-20 · Error map (карта ошибок).** R/W: `error_map_entry` (создаётся из harvest UC-09 и из письма); просмотр реестра ошибка→правило→карточка; на чек-пойнтах — свериться, ушли ли старые ошибки (`resolved_at`).
+**UC-20 · Error map (карта ошибок).** R/W: `error_map_entry` (создаётся из harvest UC-09 и из письма); просмотр реестра ошибка→правило; на чек-пойнтах — свериться, ушли ли старые ошибки (`resolved_at`). Само задание при этом возвращается колеёй 2, а не карточкой.
 
-**UC-21 · Manual flashcard / harvest.** W: `flashcard(source='manual'|'error_harvest', created_by_user_id=U)` + `card_state`. Ручное добавление карточки и harvest ошибки в колоду.
+**UC-21 · Manual flashcard.** W: `flashcard(source='manual', created_by_user_id=U)` + `card_state`. Ручное добавление карточки (и `source='gloss'` из читалки — UC-07). Harvest ошибки в колоду больше не пишет: с `0005` колода лексическая.
 
 **UC-22 · Streak / daily activity.** W: любой продуктивный шаг апсертит `daily_activity(U, today)` (exercises_done/cards_reviewed/minutes). Read на Today/Progress для стрика и heatmap.
 
@@ -241,14 +243,18 @@ web/
       progress.repo.ts  srs.repo.ts  review.repo.ts  writing.repo.ts  activity.repo.ts
     db.ts                               # PrismaClient singleton (из референса)
     serialize.ts                        # BigInt → number на границе repo (§3, разн. D7)
-    current-user.ts                     # getCurrentUserId(): сейчас const; будущий auth — здесь
+    current-user.ts                     # getCurrentUserId(): id из cookie-сессии (§8 D10)
+    auth/
+      tokens.ts                         # подпись/проверка access+refresh JWT (jose, edge-safe)
+      cookies.ts                        # имена и флаги httpOnly-кук (единственное место)
+      session.ts                        # чтение сессии из кук в RSC/Server Actions
     content-schema.ts                   # zod-типы YAML пакета (общие для sync и рантайма)
   prisma/
     schema.prisma                       # ИНТРОСПЕКТИРОВАННАЯ схема (prisma db pull), @@map на snake_case
   scripts/
     migrate.ts                          # применяет db/migrations/*.sql идемпотентно (§3.2)
     sync.ts                             # content/<course> → БД (§4)
-    seed-user.ts                        # создаёт единственного app_user (username='pavel')
+  middleware.ts                         # гейт + тихое обновление access-токена (§8 D10)
   content.config.ts                     # реестр курсов и модулей (порядок, slug) — §4.1
   docker-compose.yml                    # Postgres 16 локально (из референса)
   next.config.mjs  tailwind.config.ts  tsconfig.json  package.json  .env.example
@@ -323,7 +329,9 @@ web/
 
 **`docker-compose.yml`** — Postgres 16 (как в референсе), БД `skyrocket`.
 
-**`.env.example`** фиксирует `DATABASE_URL`, `DIRECT_URL`, `APP_USER_USERNAME`.
+**`.env.example`** фиксирует `DATABASE_URL`, `DIRECT_URL`, `AUTH_JWT_SECRET`.
+
+**`AUTH_JWT_SECRET`** — ключ подписи access/refresh JWT (§8 D10), минимум 32 символа. На проде задаётся в переменных окружения Netlify; смена ключа разлогинивает всех. Билду он не нужен — `next build` собирается и без него, и без единого пользователя в БД.
 
 ### 3.4. Заметки по типам
 
@@ -361,7 +369,7 @@ export const COURSES = [{
 | `text-extra.yaml` | `reading_text(kind=extra)` + `gloss[]` | то же |
 | `exercises.yaml` | `exercise[]` (`core` + `review_pool`) | **см. §4.5 (натуральный ключ отсутствует — нужен `ident`)** |
 | `writing.yaml` | `writing_task` | **см. §4.5** |
-| — (деривация) | `flashcard`: vocab ← `vocab.yaml`, grammar_cloze ← `theory.yaml (cloze_cards)`, transformation ← core KWT из `exercises.yaml` | **см. §4.5** |
+| — (деривация) | `flashcard`: vocab + vocab_reverse ← `vocab.yaml` · `exercise(open_cloze, pool=review)` ← `theory.yaml (cloze_cards)` | **см. §4.5**, D9 |
 
 Чек-пойнты: каталоги `diagnostic/`, `checkpoint-a…c/`, `final/` содержат `exercises.yaml` (+ `writing.yaml`) → `exercise`/`writing_task` с `checkpoint_id` (владелец — чек-пойнт, не модуль; CHECK `exercise_owner`).
 
@@ -376,7 +384,7 @@ export const COURSES = [{
 5. `vocab_entry`.
 6. `exercise` (резолвит `grammar_point_id` по title, `reading_text_id` — для `reading_comprehension` линкует на main-текст модуля, опционально).
 7. `writing_task`.
-8. `flashcard` (деривируется из YAML-источников пакета: vocab — из `vocab.yaml`, grammar_cloze — из `theory.yaml (cloze_cards)`, transformation — из core `key_word_transformation`; vocab-карточки линкуются на `vocab_entry` по `term` → `vocab_entry_id`). Отдельные Anki-CSV не поставляются — карточки живут только в webapp-SRS.
+8. `flashcard` (деривируется из `vocab.yaml`: на каждую запись две строки — `vocab` и `vocab_reverse`, обе линкуются на `vocab_entry` по `term` → `vocab_entry_id`). Заданий в колоде нет — `cloze_cards` уходят в `exercise` шагом выше (D9). Отдельные Anki-CSV не поставляются — карточки живут только в webapp-SRS.
 
 Прунинг — в обратном порядке зависимостей.
 
@@ -401,7 +409,8 @@ export const COURSES = [{
 **Формирование `ident` синком (детерминированно, стабильно к переупорядочиванию):**
 - `exercise.ident`: если в YAML задан явный `id:` у упражнения — использовать его; иначе `sha1(type_code + '|' + нормализованный ключевой текст)`, где ключевой текст = `pre+post+prompt` (choice/cloze) / `s1+key` (kwt) / `join(words)` (error) / `join(left)+join(right)` (match) / `passage+q` (reading). Ключевой текст стабилен, пока задание по сути то же.
 - `writing_task.ident`: `genre` (в модуле письмо одно; для чек-пойнтов — `genre+position`).
-- `flashcard.ident`: `note_type + '|' + term` (vocab) / `note_type + '|' + sha1(text)` (grammar_cloze) / `note_type + '|' + sha1(prompt+key)` (transformation), где `prompt = "s1 → pre___post"` — исторический формат Prompt отменённых Anki-CSV, сохранён ради стабильности ident'ов. Тег `en-c1::mNN` даёт префикс уникальности между модулями.
+- `flashcard.ident`: `tag + '|' + note_type + '|' + term` — для обеих сторон слова (`vocab`, `vocab_reverse`), тег `en-c1::mNN` даёт уникальность между модулями. Прямая сторона сохранила формулу ident'а с доредакционных времён, поэтому `card_state` пережил переход на двустороннюю колоду.
+- `exercise.ident` для упражнений из `theory.yaml`: `theory-cloze-<sha1(text)[0..12]>` — явный ключ, потому что дефолтная формула (`sha1(type|pre+post)`) могла бы совпасть с авторским `open_cloze` из `exercises.yaml`, а `(module_id, ident)` уникален.
 
 **Рекомендация контент-команде:** добавить в схему пакета (`content/en-c1/README.md`) опциональное поле `id:` у каждого упражнения — тогда ключ полностью авторский и переживает любые правки формулировки. До этого работает хэш-фолбэк.
 
@@ -428,7 +437,7 @@ export const COURSES = [{
 | `mc_cloze` | choice | `{pre, post, options[], answer:int}` | `{selected:int}` | `selected === answer` | подсветить `options[answer]` |
 | `grammar_drill` | choice | `{pre, post, prompt, options[], answer:int}` | `{selected:int}` | `selected === answer` | то же |
 | `reading_comprehension` | choice | `{passage, q, options[], answer:int}` | `{selected:int}` | `selected === answer` | то же |
-| `open_cloze` | text_input | `{pre, post, answers:string[], answer_shown}` | `{text}` | `answers.map(normalize).includes(normalize(text))` | показать `answer_shown` |
+| `open_cloze` | text_input | `{pre, post, hint?, answers:string[], answer_shown}` | `{text}` | `answers.map(normalize).includes(normalize(text))` | показать `answer_shown` |
 | `word_formation` | text_input | `{pre, post, prompt, answers[], answer_shown}` | `{text}` | то же | `answer_shown` |
 | `key_word_transformation` | text_input | `{s1, key, pre, post, answers[], answer_shown, hint}` | `{text}` | то же (мультиответы: список принимаемых форм) | `answer_shown` |
 | `error_correction` | word_tap | `{words:string[], wrong:int, correction}` | `{tapped:int}` | `tapped === wrong` | показать `correction` |
@@ -444,7 +453,7 @@ export const COURSES = [{
 - `exercise_attempt` (`user_id`, `exercise_id`, `context`, `given_answer`, `is_correct`, `time_ms`, `answered_at`).
 - Если `is_correct=false` и `context ∈ {session, module_quiz, practice}`: создать/не-дублировать `review_queue_item` (open, stage=1, due=+2д) [колея 2, партиал-unique `review_queue_open_uniq` защищает от дублей].
 - Если `context='review_slot'`: обновить исходный `review_queue_item` (`resolved_attempt_id`; при успехе — продвинуть stage/закрыть; при ошибке — оставить/сбросить due, §6.2).
-- Harvest (по кнопке на ошибке): `flashcard(source='error_harvest', source_exercise_id, note_type=grammar_cloze|transformation)` + `card_state(phase='new')` + `error_map_entry(source='exercise', source_attempt_id, error_text, rule_note=explanation)`.
+- Harvest (по кнопке на ошибке): `error_map_entry(source='exercise', source_attempt_id, error_text, rule_note=explanation)`. Карточку не создаёт — одна ошибка и так даёт элемент колеи 2 (перерешать то же задание) и строку карты ошибок; третий артефакт-дубликат в колоде убран вместе с note-типами заданий (`0005`).
 - Побочно (UC-23): при верном применении конструкции — `user_grammar_state.success_count++` и продвижение статуса.
 - `daily_activity.exercises_done++`.
 
@@ -540,9 +549,29 @@ export const COURSES = [{
 
 **D8 · Хранение аудио монолога (`writing_submission.attachment_url`).** Куда класть запись (speaking-модули). → **Решение (MVP):** для одного пользователя — либо загрузка в Netlify Blobs / внешний бакет и хранение URL, либо на первом этапе кнопка «mark done» без файла (`attachment_url=null`), а запись — вне приложения. Полноценную запись/загрузку вынести в отдельную задачу. Не блокирует этапы 2–4.
 
-**D9 · Флешкарты: две карты из одной vocab-ноты (PLAN §5) vs одна строка-нота.** PLAN: из vocab-ноты две карты (term→meaning; def+collocation→term). → **Решение:** одна `flashcard`-строка = одна нота; «две карты» — деталь Anki-шаблона, не нашей модели. SRS планирует ноту один раз. Если потребуется двусторонность — это UI-режим показа, не вторая строка. `flashcard.fields = {front, main, cases[], extra}` деривируется синком из YAML: vocab → front=term, main=definition, cases=use_cases[0..1], extra=Collocations+«Register: …» (из `vocab.yaml`); grammar_cloze → из `theory.yaml (cloze_cards)`; transformation → из core `key_word_transformation` (`exercises.yaml`). Отдельные Anki-CSV отменены (2026-07): карточки живут только в webapp-SRS, экспорт в Anki не поддерживается.
+**D9 · Что вообще лежит в колоде.** Изначально: три типа заметок (vocab, grammar_cloze, transformation), одна строка = одна нота, двусторонность — «UI-режим показа, не вторая строка». → **Пересмотрено (2026-07, миграция `0005`)** после того, как в ежедневном ревью всплыла grammar-cloze карточка с невырезанной Anki-разметкой `{{c1::…}}`: ответ был виден на лицевой стороне, то есть карточка не работала вовсе. Разбор показал, что сломан не рендер, а само разделение.
 
-**D10 · Auth сейчас не нужен, но `app_user.password_hash NOT NULL`.** → **Решение:** `scripts/seed-user.ts` создаёт единственного пользователя (username из `APP_USER_USERNAME`, password_hash = заглушка/bcrypt от env-пароля). `getCurrentUserId()` возвращает его id (кэш). Точка расширения для bcrypt+jose (паттерн interview-prep) — `lib/current-user.ts`, без переделки остального.
+**Решение — колода только лексическая, задания только в колее 2:**
+- `grammar_cloze` убран. `theory.yaml (cloze_cards)` синкается как упражнения `open_cloze` в review-пул модуля (`clozeCardToExercise` в `scripts/sync.ts`): `{{c1::X}}` → `{pre, post, answers:[X], answer_shown:X}`, `hint` → подсказка-основа, `rule` → `explanation`. Так они попадают в module quiz и r7/r21, а промах открывает элемент колеи 2.
+- `transformation` убран как дубликат: карточка деривировалась из `key_word_transformation`, который и так лежит в `exercises.yaml` core-пулом.
+- Двусторонность лексики — **две строки**, а не режим показа: `vocab` (front=term, main=definition) и `vocab_reverse` (front=definition, main=term), у обеих `cases=use_cases[0..1]`, `extra=Collocations+Register`. Узнавание и воспроизведение — разные навыки с разной кривой забывания, а `card_state` (PK = user+flashcard) умеет вести только один график на строку. Это прямо отменяет исходную формулировку D9.
+- Старые строки не удаляются: `0005` ставит им `archived=true`, `card_state` и ссылки `error_map_entry.flashcard_id` остаются. `listDueCards` фильтрует по `archived=false`, поэтому они просто перестают выпадать. Архивируются и harvest-карточки (`source='error_harvest'`) — у них те же note-типы, которые приложение больше не рендерит.
+- Миграция обнуляет `module.content_hash` для `en-c1`: гейт-хеш §4.4 считается от байтов YAML, а изменилась логика деривации — без сброса sync пропустил бы все модули с нулём запросов, в том числе на билде.
+
+Отдельные Anki-CSV отменены ещё раньше (2026-07): карточки живут только в webapp-SRS, экспорт в Anki не поддерживается.
+
+**D10 · Auth.** Раньше: `scripts/seed-user.ts` создавал единственного пользователя, `getCurrentUserId()` возвращал его закэшированный id. → **Пересмотрено (2026-07):** сид-пользователь удалён, аккаунты заводятся сами через `/register`; билд обязан собираться на БД без единого пользователя.
+
+**Решение — cookie-сессия на двух JWT (HS256, ключ `AUTH_JWT_SECRET`):**
+
+- **Токены** (`lib/auth/tokens.ts`): access (15 мин) и refresh (30 дней), оба в httpOnly-куках `sr_access`/`sr_refresh` (`SameSite=lax`, `Secure` вне dev). В payload — `sub` (id) и `username`; поле `kind` различает типы, иначе refresh принимался бы вместо access и короткий TTL терял бы смысл. Импорт `jose` — подпутями (`jose/jwt/sign`, `jose/jwt/verify`), баррель тянет JWE-ветку с `DecompressionStream`, на которую Next ругается в Edge.
+- **Обновление — только в `middleware.ts`.** Access протух, refresh жив → выписывается новый access и кладётся и в `request` (чтобы текущий рендер уже видел сессию), и в ответ. Одна точка продления позволяет `lib/auth/session.ts` доверять access-куке безусловно. Middleware работает в Edge и БД не трогает: всё нужное — в подписанном токене (удалённый из БД пользователь доживает до истечения токена; страницы всё равно падают на своих же запросах).
+- **Гейтинг** — там же: без сессии → `/login?next=<путь>`; с сессией на `/login`/`/register` → `/`. Битый refresh чистится, чтобы не проверять мёртвый токен на каждом запросе.
+- **Идентичность** — `lib/current-user.ts` (`getCurrentUserId()`), как и планировалось, единственное изменённое место: подписи репозиториев и use-cases не тронуты. Кэш `cachedUserId` убран — модульный кэш общий для параллельных запросов и отдал бы одному пользователю id другого.
+- **Разделение экранов** — route groups: `app/(app)/*` (шелл с навигацией, `force-dynamic`) и `app/(auth)/*` (логин/регистрация, без обращений к сессии и БД). Корневой layout — только `<html>/<body>`, поэтому auth-страницы рендерятся для гостя.
+- **Прогресс по пользователям** — держится на том, что все прогресс-таблицы имеют `user_id`, а enrollment и первый модуль материализуются лениво (`ensureActiveEnrollment` / `ensureFirstModuleUnlocked`) при первом заходе на дашборд. Регистрация создаёт только строку `app_user`.
+- **Пароли** — bcrypt (cost 12) в `lib/use-cases/auth.ts`. Username нормализуется в lowercase; при неизвестном логине сравнение идёт с фиктивным хешем, чтобы время ответа не выдавало существующие аккаунты; сообщение об ошибке одно на оба случая.
+- Миграция не понадобилась: `app_user(username, password_hash)` существует с `0001_init.sql`.
 
 **D11 · Гейтинг сессий внутри модуля.** UC-13 описывал последовательность только нарративно; сессии были кликабельны в любом порядке, из-за чего было непонятно, «когда появится Session 3». → **Решено (утверждено владельцем):** жёсткий последовательный гейтинг. `lib/domain/session-gating.ts::computeSessionCells` — первая не-`done` сессия = `current`, все после неё = `locked`, `done` открыты для повтора; отдельной колонки в БД нет, состояние выводится из `user_session_state.status` + `position`. `getSession` для `locked` возвращает `{kind:'locked'}` → redirect на хаб; `SessionRibbon` рендерит `locked` не-ссылкой с подписью «Finish Session N−1 first». Правильность ответов в упражнениях прохождение **не** гейтит (ошибки уходят в очередь повторений — это осознанный дизайн); единственный скоринг-порог — module quiz (80%+ в сторону Mastered). Пошаговый гейтинг `advanceStep` по id шага не делаем (single-user MVP; шаги достижимы только из отрендеренных страниц).
 
@@ -561,14 +590,14 @@ export const COURSES = [{
 **Входы:** `db/migrations/0001,0002`; `content/en-c1/module-01/*` и `content/en-c1/README.md`; референс `../concurrency/web` (структура, `sync.ts`, `db.ts`, `docker-compose.yml`, `netlify.toml`); §2–§4 этого документа.
 
 **Артефакты:**
-1. Каркас `web/` (Next.js 15 + React 19 + Tailwind, TS), `next.config.mjs`, `tsconfig.json` (paths `@/*`), `docker-compose.yml` (Postgres 16, БД `skyrocket`), `.env.example` (`DATABASE_URL`, `DIRECT_URL`, `APP_USER_USERNAME`).
+1. Каркас `web/` (Next.js 15 + React 19 + Tailwind, TS), `next.config.mjs`, `tsconfig.json` (paths `@/*`), `docker-compose.yml` (Postgres 16, БД `skyrocket`), `.env.example` (`DATABASE_URL`, `DIRECT_URL`; `APP_USER_USERNAME` заменён на `AUTH_JWT_SECRET` в 2026-07, см. D10).
 2. Корневой `netlify.toml` (`base="web"`, `@netlify/plugin-nextjs`), build = `migrate → sync → next build`.
 3. `db/migrations/0003_content_natural_keys.sql` (§4.5) + правка `docs/DATA-MODEL.md` + переопубликованный артефакт схемы.
 4. `scripts/migrate.ts` (§3.2) — идемпотентный раннер на `pg` с `schema_migrations` и `--baseline`.
 5. `prisma/schema.prisma` через `prisma db pull` (после применения 0001–0003), закоммичен; `postinstall: prisma generate`; `lib/db.ts` (singleton), `lib/serialize.ts` (BigInt→number).
 6. `content.config.ts` (реестр курса/модулей/чек-пойнтов), `lib/content-schema.ts` (zod для всех YAML, юнион 8 типов `content`).
 7. `scripts/sync.ts` (§4): обход, парсинг YAML, upsert по натуральным ключам/`ident`, content_hash (модульный гейт + пер-сущностный), порядок с учётом FK, прунинг (флешкарты — soft-archive), счётчики в лог.
-8. `scripts/seed-user.ts` + `lib/current-user.ts` (`getCurrentUserId()` → константный id).
+8. ~~`scripts/seed-user.ts` + `lib/current-user.ts` (`getCurrentUserId()` → константный id).~~ — отменено в 2026-07, см. D10: сид-пользователя больше нет, `getCurrentUserId()` берёт id из cookie-сессии.
 
 **Definition of Done:**
 - `docker compose up` + `pnpm migrate` применяет 0001–0003 на чистой БД без ошибок; повторный `pnpm migrate` = 0 применённых.

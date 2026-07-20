@@ -1,6 +1,6 @@
 /**
  * Testing/dev affordance — a one-user app currently has no other way to get
- * back to a clean slate short of re-running migrate/sync/seed-user. Not a
+ * back to a clean slate short of re-running migrate/sync. Not a
  * real product use case (no UC-N in ARCHITECTURE.md); see the Progress
  * screen's "Danger zone" card.
  */

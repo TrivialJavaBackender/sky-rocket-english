@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { SignOutButton } from '@/components/auth/SignOutButton';
 
 /**
  * Mobile top header (< 980px, "onMain" screens only per the mockup) — course
@@ -9,7 +10,15 @@ import { useState } from 'react';
  * placeholder (see SideRail's comment) — there is no second course row to
  * fetch yet.
  */
-export function HeaderBar({ courseLabel, courseFullLabel }: { courseLabel: string; courseFullLabel: string }) {
+export function HeaderBar({
+  courseLabel,
+  courseFullLabel,
+  username,
+}: {
+  courseLabel: string;
+  courseFullLabel: string;
+  username: string;
+}) {
   const [open, setOpen] = useState(false);
   return (
     <header className="relative mb-3.5 flex items-center justify-between desktop:hidden">
@@ -29,7 +38,8 @@ export function HeaderBar({ courseLabel, courseFullLabel }: { courseLabel: strin
             German · A2 → B1 <span className="self-center text-[10.5px] font-bold tracking-[.08em]">SOON</span>
           </div>
           <div className="my-1.5 border-t border-border-faint" />
-          <div className="px-3 py-[9px] text-sm text-fg-muted">Settings</div>
+          <div className="truncate px-3 py-[6px] text-sm font-semibold">{username}</div>
+          <SignOutButton className="w-full rounded-lg px-3 py-[9px] text-sm text-fg-muted hover:bg-bg-faint" />
         </div>
       )}
     </header>

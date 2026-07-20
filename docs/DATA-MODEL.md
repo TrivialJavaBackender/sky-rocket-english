@@ -60,7 +60,7 @@ erDiagram
     text ident "натуральный ключ sync, partial UK(module_id/checkpoint_id)"
   }
   flashcard {
-    enum note_type "vocab|grammar_cloze|transformation"
+    enum note_type "vocab|vocab_reverse|(grammar_cloze,transformation — архив)"
     jsonb fields "front, main, cases, extra"
     enum source "content|error_harvest|gloss|manual"
     text ident UK "натуральный ключ sync, глобально уникален"
@@ -249,6 +249,9 @@ create type exercise_pool    as enum ('core','review');
 create type exercise_group   as enum ('grammar','reading','vocab');
 create type task_mode        as enum ('writing','speaking');
 create type note_type        as enum ('vocab','grammar_cloze','transformation');
+-- 0005: + 'vocab_reverse'. Колода стала лексической (две стороны на слово);
+-- grammar_cloze/transformation остаются в enum только ради архивных строк —
+-- новые не создаются, задания живут в exercise + review_queue_item (ARCHITECTURE D9).
 create type flashcard_source as enum ('content','error_harvest','gloss','manual');
 create type session_type     as enum ('prime','input','workout','output');
 create type step_kind        as enum ('opener','theory','reading','vocab','exercise_set',

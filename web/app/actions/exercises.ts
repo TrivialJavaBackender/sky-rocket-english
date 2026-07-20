@@ -23,6 +23,6 @@ export async function harvestError(attemptId: number) {
   const userId = await getCurrentUserId();
   const result = await exerciseSetUseCase.harvestError(userId, attemptId);
   revalidatePath('/review');
-  revalidatePath('/flashcards');
+  revalidatePath('/progress');
   return result;
 }

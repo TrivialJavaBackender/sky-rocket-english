@@ -7,12 +7,16 @@ import type { DueCardViewDTO } from '@/lib/use-cases/flashcards';
 import { reviewFlashcard } from '@/app/actions/flashcards';
 import { Button } from '@/components/ui/Button';
 
-const TYPE_LABELS: Record<NoteType, string> = { vocab: 'Vocab', grammar_cloze: 'Grammar cloze', transformation: 'Transformation' };
-const TYPE_COLORS: Record<NoteType, [string, string]> = {
+// Two directions of one word (0005): `vocab` asks you to recognise the term,
+// `vocab_reverse` to produce it from the definition. Retired note types can
+// still reach the player from an old row, so the lookups fall back instead of
+// crashing on an undefined label.
+const TYPE_LABELS: Record<string, string> = { vocab: 'Word → meaning', vocab_reverse: 'Meaning → word' };
+const TYPE_COLORS: Record<string, [string, string]> = {
   vocab: ['var(--green-soft)', 'var(--green-text)'],
-  grammar_cloze: ['#E8EEF6', '#2E5F9E'],
-  transformation: ['#F6EDDD', '#8A5510'],
+  vocab_reverse: ['#E8EEF6', '#2E5F9E'],
 };
+const FALLBACK_COLORS: [string, string] = ['var(--bg-subtle)', 'var(--fg-muted)'];
 
 const RATINGS: { rating: Rating; label: string; interval: string; accent?: 'red' | 'green' }[] = [
   { rating: 1, label: 'Again', interval: '10 min', accent: 'red' },
@@ -70,7 +74,8 @@ export function FlashcardPlayer({ cards, backHref }: { cards: DueCardViewDTO[]; 
     );
   }
 
-  const [bg, fg] = TYPE_COLORS[card.noteType];
+  const [bg, fg] = TYPE_COLORS[card.noteType] ?? FALLBACK_COLORS;
+  const typeLabel = TYPE_LABELS[card.noteType] ?? card.noteType.replace(/_/g, ' ');
 
   return (
     <div className="fixed inset-0 z-50 overflow-y-auto bg-bg">
@@ -89,7 +94,7 @@ export function FlashcardPlayer({ cards, backHref }: { cards: DueCardViewDTO[]; 
           className="flex min-h-[320px] cursor-pointer flex-col rounded-2xl border border-border bg-bg-card p-6 shadow-card"
         >
           <span className="self-start rounded-md px-2.5 py-1 text-[10.5px] font-bold tracking-[.1em]" style={{ background: bg, color: fg }}>
-            {TYPE_LABELS[card.noteType].toUpperCase()}
+            {typeLabel.toUpperCase()}
           </span>
           {side === 'front' ? (
             <>

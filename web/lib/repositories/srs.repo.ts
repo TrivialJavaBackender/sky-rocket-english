@@ -145,6 +145,20 @@ export async function listUnintroducedFlashcardIds(userId: number, moduleId: num
   return rows.map((r) => idToNumber(r.id));
 }
 
+/** Modules whose deck this user has already started — the set `catchUpModuleIntroductions` (UC-15) tops up when a module gains new cards. */
+export async function listModuleIdsWithIntroducedCards(userId: number): Promise<number[]> {
+  const rows = await prisma.card_state.findMany({
+    where: { user_id: userId, flashcard: { module_id: { not: null } } },
+    select: { flashcard: { select: { module_id: true } } },
+    distinct: ['flashcard_id'],
+  });
+  const ids = new Set<number>();
+  for (const r of rows) {
+    if (r.flashcard.module_id !== null) ids.add(idToNumber(r.flashcard.module_id));
+  }
+  return [...ids];
+}
+
 export async function createCardState(userId: number, flashcardId: number, dueAt: Date): Promise<void> {
   await prisma.card_state.upsert({
     where: { user_id_flashcard_id: { user_id: userId, flashcard_id: flashcardId } },

@@ -6,11 +6,11 @@
 content/en-c1/
   module-01/
     meta.yaml            # → module: title, standfirst, goals[], grammar_points[]
-    vocab.yaml           # → vocab_entry: 45 записей (+ flashcard note_type=vocab — деривация)
-    theory.yaml          # → grammar_spotlight + watchout + cloze_cards (→ flashcard grammar_cloze)
+    vocab.yaml           # → vocab_entry: 45 записей (+ 2 flashcard на запись — деривация)
+    theory.yaml          # → grammar_spotlight + watchout + cloze_cards (→ exercise open_cloze, review-пул)
     text-main.yaml       # → reading_text(kind=main) + gloss
     text-extra.yaml      # → reading_text(kind=extra) + gloss
-    exercises.yaml       # → exercise: core 66 + review_pool 30 (core KWT → flashcard transformation)
+    exercises.yaml       # → exercise: core 66 + review_pool 30 (+10 из theory.cloze_cards)
     writing.yaml         # → writing_task
   checkpoint-a/          # пакеты чек-пойнтов: exercises.yaml (40) + writing.yaml
   diagnostic/            # 60 заданий + writing.yaml
@@ -68,7 +68,7 @@ watchouts:
     bad: I am working here since 2019.
     good: I have been working here since 2019.
     note: A past starting point needs the perfect to reach the present.
-cloze_cards:                           # 10 шт. → flashcard(note_type=grammar_cloze)
+cloze_cards:                           # 10 шт. → exercise(open_cloze, pool=review)
   - text: "She {{c1::has been working}} here since 2019 — and she still loves it."
     hint: work                         # опционально
     rule: since + past starting point → present perfect; continuous for ongoing activity
@@ -141,10 +141,11 @@ checklist:
 ```
 
 ### Флеш-карточки → `flashcard` (деривация, отдельных файлов нет)
-Sync собирает карточки из уже существующих YAML-источников; авторский контент карточек — только `cloze_cards` в `theory.yaml`:
-- `note_type=vocab` — 45 шт. из `vocab.yaml`: front=term, back=definition + первые 2 use cases + collocations + register.
-- `note_type=grammar_cloze` — 10 шт. из `theory.yaml (cloze_cards)`: front=text (cloze `{{c1::…}}`), back=rule (+hint).
-- `note_type=transformation` — 8 шт. из core `key_word_transformation` в `exercises.yaml`: front=`s1 → pre___post` + key, back=answer_shown + explanation.
+Колода — **только лексика**, по две карточки на запись `vocab.yaml` (90 на модуль):
+- `note_type=vocab` — узнавание: front=term, back=definition + первые 2 use cases + collocations + register.
+- `note_type=vocab_reverse` — воспроизведение: front=definition, back=term + те же use cases. Use cases держатся на обороте: они содержат термин.
+
+Заданий в колоде нет (решение 2026-07, миграция `0005`): `cloze_cards` из `theory.yaml` синкаются как упражнения `open_cloze` в review-пул модуля — `{{c1::X}}` разбирается в `{pre, post, answers:[X]}`, `hint` становится подсказкой-основой, `rule` — разбором. Трансформации и так лежат в `exercises.yaml`. Промах по любому из них возвращает **само задание** через очередь повторений (+2/+7/+21 д), а не карточку.
 
 Теги: `en-c1::m{NN}` (префикс ident'а, между модулями карточки не коллидируют).
 

@@ -115,7 +115,13 @@ export type StepKind =
 export type ReadingKind = 'main' | 'extra';
 export type TaskMode = 'writing' | 'speaking';
 export type FlashcardSource = 'content' | 'error_harvest' | 'gloss' | 'manual';
-export type NoteType = 'vocab' | 'grammar_cloze' | 'transformation';
+/**
+ * Deck = vocabulary only, in both directions (0005). `grammar_cloze` and
+ * `transformation` still exist in the DB enum for rows archived by that
+ * migration, but nothing derives or creates them any more — grammar drills are
+ * exercises, and exercises live in lane 2.
+ */
+export type NoteType = 'vocab' | 'vocab_reverse';
 export type ExerciseGroup = 'grammar' | 'reading' | 'vocab';
 export type ExercisePool = 'core' | 'review';
 export type ErrorSource = 'exercise' | 'writing' | 'manual';

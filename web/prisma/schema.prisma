@@ -600,6 +600,7 @@ enum module_status {
 
 enum note_type {
   vocab
+  vocab_reverse
   grammar_cloze
   transformation
 }

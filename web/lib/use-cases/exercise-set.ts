@@ -8,7 +8,6 @@
 import * as exerciseRepo from '../repositories/exercise.repo';
 import * as reviewRepo from '../repositories/review.repo';
 import * as contentRepo from '../repositories/content.repo';
-import * as srsRepo from '../repositories/srs.repo';
 import * as activityRepo from '../repositories/activity.repo';
 import { gradeAttempt, toPublicContent } from '../domain/grading';
 import { advanceReviewQueueItem, scheduleNewReviewQueueItem } from '../domain/review-queue';
@@ -25,7 +24,6 @@ import type {
   GrammarDrillContent,
   KeyWordTransformationContent,
   McClozeContent,
-  NoteType,
   OpenClozeContent,
   ReadingComprehensionContent,
   WordFormationContent,
@@ -182,23 +180,6 @@ export async function gradeAndRecord(
 
 // ───────────────────────── harvest (UC-09/UC-20/UC-21) ─────────────────────────
 
-function dummyGivenAnswerFor(typeCode: ExerciseTypeCode): GivenAnswer {
-  switch (typeCode) {
-    case 'mc_cloze':
-    case 'grammar_drill':
-    case 'reading_comprehension':
-      return { selected: -1 };
-    case 'open_cloze':
-    case 'word_formation':
-    case 'key_word_transformation':
-      return { text: '' };
-    case 'error_correction':
-      return { tapped: -1 };
-    case 'collocation_match':
-      return { pairs: {}, misses: 0 };
-  }
-}
-
 function buildHarvestFront(typeCode: ExerciseTypeCode, content: ExerciseContent): string {
   switch (typeCode) {
     case 'mc_cloze':
@@ -227,35 +208,31 @@ function buildHarvestFront(typeCode: ExerciseTypeCode, content: ExerciseContent)
   }
 }
 
-/** UC-09/UC-20: turns a missed exercise into a flashcard (source=error_harvest) + card_state + error_map_entry. */
-export async function harvestError(userId: number, attemptId: number): Promise<{ flashcardId: number }> {
+/**
+ * UC-09/UC-20: records a missed exercise in the error map (PLAN §2.5).
+ *
+ * It used to also mint a flashcard (source=error_harvest) + card_state, but
+ * that made one mistake produce three artefacts: the lane-2 re-queue item that
+ * `gradeAndRecord` already opens on every miss, the error-map row, and a deck
+ * card repeating the same task. Since 0005 the deck holds vocabulary only, so
+ * harvesting keeps the entry that is actually its own thing — the error map,
+ * which is what the checkpoints read back to see whether old mistakes are gone.
+ * The re-attempt lives in lane 2, on the +2/+7/+21 d schedule.
+ */
+export async function harvestError(userId: number, attemptId: number): Promise<{ errorMapEntryId: number }> {
   const attempt = await exerciseRepo.getExerciseAttemptById(attemptId);
   if (!attempt) throw new Error(`Attempt not found: ${attemptId}`);
   const exercise = await exerciseRepo.getExerciseById(attempt.exerciseId);
   if (!exercise) throw new Error(`Exercise not found: ${attempt.exerciseId}`);
 
   const content = exercise.content as ExerciseContent;
-  const { correctAnswer } = gradeAttempt(exercise.typeCode, content, dummyGivenAnswerFor(exercise.typeCode));
-  const front = buildHarvestFront(exercise.typeCode, content);
-  const noteType: NoteType = exercise.typeCode === 'key_word_transformation' ? 'transformation' : 'grammar_cloze';
-
-  const flashcard = await srsRepo.createFlashcard({
-    moduleId: exercise.moduleId,
-    noteType,
-    fields: { front, main: correctAnswer, cases: [], extra: exercise.explanation },
-    source: 'error_harvest',
-    sourceExerciseId: exercise.id,
-    createdByUserId: userId,
-  });
-  await srsRepo.createCardState(userId, flashcard.id, new Date());
-  await exerciseRepo.createErrorMapEntry({
+  const entry = await exerciseRepo.createErrorMapEntry({
     userId,
     moduleId: exercise.moduleId,
     source: 'exercise',
     sourceAttemptId: attempt.id,
-    errorText: front,
+    errorText: buildHarvestFront(exercise.typeCode, content),
     ruleNote: exercise.explanation,
-    flashcardId: flashcard.id,
   });
-  return { flashcardId: flashcard.id };
+  return { errorMapEntryId: entry.id };
 }

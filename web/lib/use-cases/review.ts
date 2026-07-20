@@ -50,8 +50,8 @@ export async function getReviewHub(userId: number, now: Date = new Date()): Prom
     reviewRepo.listUpcomingModuleReviews(userId, 10),
   ]);
 
-  const breakdown: Record<NoteType, number> = { vocab: 0, grammar_cloze: 0, transformation: 0 };
-  for (const c of dueCards) breakdown[c.flashcard.noteType] += 1;
+  const breakdown: Record<NoteType, number> = { vocab: 0, vocab_reverse: 0 };
+  for (const c of dueCards) breakdown[c.flashcard.noteType] = (breakdown[c.flashcard.noteType] ?? 0) + 1;
 
   return {
     lane1: { cardsDue: dueCards.length, breakdown },

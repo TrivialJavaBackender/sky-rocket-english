@@ -41,8 +41,11 @@
 7. writing.yaml — задание CAE-жанра (mode: writing или speaking по плану),
    prompt, model answer 220–260 слов, self-check checklist из 8 пунктов.
 
-Флеш-карточки отдельно не пишутся: sync деривирует их из vocab.yaml (45),
-theory.yaml cloze_cards (10) и core key_word_transformation (8).
+Флеш-карточки отдельно не пишутся: sync деривирует из vocab.yaml две карточки
+на запись (узнавание term→definition и воспроизведение definition→term, 90 на
+модуль). Колода — только лексика. cloze_cards из theory.yaml становятся
+упражнениями open_cloze в review-пуле, а не карточками, поэтому hint пиши как
+подсказку-основу для ответа (базовая форма глагола), а rule — как разбор.
 
 Definition of Done — чек-лист ниже; каждый пункт проверить перед сдачей.
 ```

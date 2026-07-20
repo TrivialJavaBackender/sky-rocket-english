@@ -10,7 +10,7 @@
 | `docs/DESIGN-BRIEF.md` | Бриф, по которому сделан утверждённый дизайн |
 | `docs/design/skyrocket/` | Утверждённый дизайн (mockup). `content.js` — **образцовые формы данных всех экранов**, схема БД следует им |
 | `docs/DATA-MODEL.md` | Схема данных: ER-диаграммы, справочник таблиц, решения, полный SQL |
-| `db/migrations/` | SQL-миграции Neon Postgres: `0001_init.sql` (DDL + сид типов упражнений), `0002_seed_en_c1_skeleton.sql` (каркас курса), `0003_content_natural_keys.sql` (`ident`-ключи sync), `0004_dose_theory_vocab_across_sessions.sql` (пересев шагов: дозирование теории/лексики, микро-цели) |
+| `db/migrations/` | SQL-миграции Neon Postgres: `0001_init.sql` (DDL + сид типов упражнений), `0002_seed_en_c1_skeleton.sql` (каркас курса), `0003_content_natural_keys.sql` (`ident`-ключи sync), `0004_dose_theory_vocab_across_sessions.sql` (пересев шагов: дозирование теории/лексики, микро-цели), `0005_cards_words_only_vocab_reverse.sql` (колода только лексическая + reverse-сторона; grammar-cloze/transformation карточки в архив) |
 | `content/en-c1/` | Контент-пакеты модулей (YAML; флеш-карточки деривируются sync'ом из vocab/theory/exercises, отдельных CSV нет). `README.md` — схема пакета. Пакеты синкаются в БД по `content_hash` |
 | `docs/MODULE-TASK-TEMPLATE.md` | Шаблон ТЗ субагенту на генерацию модуля + Definition of Done |
 | `docs/artifacts/plan.html` | Исходник артефакта-витрины плана |
@@ -32,13 +32,13 @@
 
 ## База данных
 
-Neon Postgres. Применение миграций: `psql "$DATABASE_URL" -f db/migrations/0001_init.sql` (затем 0002). Ядро схемы: `course → block → module` + `checkpoint` (ворота: diagnostic/block/final); контент (`grammar_spotlight`, `watchout`, `reading_text`+`gloss`, `vocab_entry`, `exercise` с `content jsonb` по 8 типам, `writing_task`, `flashcard`); протокол (`study_session` 4 типа × `session_step`); прогресс — три колеи повторений (`card_state` SRS, `review_queue_item` +2/+7/+21 д, `module_review` r7/r21) + статусы (`user_vocab_state`, `user_grammar_state`, `user_module_state`).
+Neon Postgres. Применение миграций: `psql "$DATABASE_URL" -f db/migrations/0001_init.sql` (затем 0002). Ядро схемы: `course → block → module` + `checkpoint` (ворота: diagnostic/block/final); контент (`grammar_spotlight`, `watchout`, `reading_text`+`gloss`, `vocab_entry`, `exercise` с `content jsonb` по 8 типам, `writing_task`, `flashcard` — только лексика, две стороны на слово); протокол (`study_session` 4 типа × `session_step`); прогресс — три колеи повторений (`card_state` SRS, `review_queue_item` +2/+7/+21 д, `module_review` r7/r21) + статусы (`user_vocab_state`, `user_grammar_state`, `user_module_state`).
 
 ## Стек-решения (утверждены)
 
-Web app (mobile-first PWA) на Netlify + Neon по архитектуре `../concurrency` (Next.js 15 + Prisma, yaml → sync в БД на билде). Приложение реализовано в `web/` (см. `docs/ARCHITECTURE.md`). Auth пока нет: один пользователь через `lib/current-user.ts`, но весь код параметризован `userId`. Позже — обёртка Telegram Mini App для напоминаний. Vite-стаб в корне (`src/`, `index.html`, `vite.config.js`) — legacy, приложением не является.
+Web app (mobile-first PWA) на Netlify + Neon по архитектуре `../concurrency` (Next.js 15 + Prisma, yaml → sync в БД на билде). Приложение реализовано в `web/` (см. `docs/ARCHITECTURE.md`). Auth — cookie-сессия на access/refresh JWT (`middleware.ts` + `lib/auth/*`, идентичность — `lib/current-user.ts`), регистрация через `/register`; прогресс у каждого пользователя свой (все прогресс-таблицы по `user_id`). Позже — обёртка Telegram Mini App для напоминаний. Vite-стаб в корне (`src/`, `index.html`, `vite.config.js`) — legacy, приложением не является.
 
-Локальная разработка: `cd web && docker compose up -d && pnpm migrate && pnpm sync && pnpm seed-user && pnpm dev` (env — `web/.env`, образец `web/.env.example`). Прод: Neon через `DATABASE_URL` (пулер) + `DIRECT_URL` (билд-скрипты).
+Локальная разработка: `cd web && docker compose up -d && pnpm migrate && pnpm sync && pnpm dev` (env — `web/.env`, образец `web/.env.example`), затем завести аккаунт на `/register` — сид-пользователя нет, и билд собирается на БД без пользователей. Прод: Neon через `DATABASE_URL` (пулер) + `DIRECT_URL` (билд-скрипты) + `AUTH_JWT_SECRET` (ключ подписи токенов, ≥32 символов; смена разлогинивает всех).
 
 ## Рабочие процессы
 

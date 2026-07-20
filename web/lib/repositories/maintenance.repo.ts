@@ -1,7 +1,7 @@
 /**
  * Dev/testing affordance only — wipes every progress row for one user so
  * the app can be exercised from a clean slate without re-running
- * migrate/sync/seed-user (mirrors scripts/reset-progress.ts exactly; keep
+ * migrate/sync (mirrors scripts/reset-progress.ts exactly; keep
  * the two in sync if the progress schema changes).
  *
  * Deletes are ordered so FK references clear before their targets (e.g.

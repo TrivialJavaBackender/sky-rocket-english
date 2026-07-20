@@ -1,24 +1,36 @@
-import { prisma } from './db';
+import { redirect } from 'next/navigation';
+import { getSessionClaims } from './auth/session';
 
 /**
- * Single hardcoded user for now (ARCHITECTURE.md §0, §8 D10) — no auth flow
- * exists yet. Every repository/use-case still takes `userId` as a real
- * parameter rather than reading a global, so swapping this for a real
- * session lookup (bcrypt + jose, cookie-based — see the interview-prep
- * reference's lib/auth.ts) later touches only this file.
+ * The identity of the current request (ARCHITECTURE.md §0, §8 D10).
  *
- * Resolves + caches the id of the row scripts/seed-user.ts creates for
- * APP_USER_USERNAME. This is a narrow, intentional exception to "Prisma
- * only in lib/repositories/* and scripts/*" (ARCHITECTURE §2) — user
- * identity resolution isn't a content/domain repository, it's the identity
- * of the auth boundary itself, same footing as lib/db.ts.
+ * Every repository and use-case already takes `userId` as a real parameter,
+ * so swapping the old single-hardcoded-user stub for a real cookie session
+ * touched only this file, exactly as its previous incarnation predicted.
+ * Progress tables are all keyed by `user_id`, which is what makes each
+ * registered learner's progress independent.
+ *
+ * This is a narrow, intentional exception to "Prisma only in
+ * lib/repositories/*" (ARCHITECTURE §2) — user identity resolution isn't a
+ * content/domain repository, it's the identity of the auth boundary itself,
+ * same footing as lib/db.ts. (It no longer touches Prisma at all: the id
+ * comes from the signed access token.)
+ *
+ * Deliberately not cached across requests: a module-level cache is shared by
+ * every concurrent request on the instance and would leak one user's id into
+ * another user's session.
  */
-let cachedUserId: number | null = null;
-
 export async function getCurrentUserId(): Promise<number> {
-  if (cachedUserId !== null) return cachedUserId;
-  const username = process.env.APP_USER_USERNAME ?? 'pavel';
-  const user = await prisma.app_user.findUniqueOrThrow({ where: { username } });
-  cachedUserId = Number(user.id);
-  return cachedUserId;
+  const claims = await getSessionClaims();
+  // `middleware.ts` normally redirects unauthenticated traffic long before a
+  // page renders; reaching this branch means the cookie died mid-request, so
+  // send them to the login form rather than throwing a 500 at them.
+  if (!claims) redirect('/login');
+  return claims.userId;
+}
+
+/** The same identity, minus the redirect — for UI that renders differently when signed out. */
+export async function getCurrentUser(): Promise<{ userId: number; username: string } | null> {
+  const claims = await getSessionClaims();
+  return claims ? { userId: claims.userId, username: claims.username } : null;
 }

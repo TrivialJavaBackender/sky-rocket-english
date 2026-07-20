@@ -6,13 +6,13 @@ import { LinkButton } from '@/components/ui/LinkButton';
 import { ReviewQueueLauncher } from './ReviewQueueLauncher';
 import { ModuleReviewLauncher } from './ModuleReviewLauncher';
 
-const NOTE_TYPE_LABELS = { vocab: 'vocab', grammar_cloze: 'grammar cloze', transformation: 'transformations' } as const;
+const NOTE_TYPE_LABELS: Record<string, string> = { vocab: 'word → meaning', vocab_reverse: 'meaning → word' };
 
 /** UC-16/17 Review hub — the three lanes (ARCHITECTURE.md §1.4, §7.1 `/review`). Lane 1 links to the dedicated `/flashcards` route; lanes 2/3 launch `ExercisePlayer` in place. */
 export function ReviewLanes({ hub, queueItems, moduleReviewSets }: { hub: ReviewHubDTO; queueItems: PublicExerciseDTO[]; moduleReviewSets: Record<number, PublicExerciseDTO[]> }) {
   const breakdown = Object.entries(hub.lane1.breakdown)
     .filter(([, n]) => n > 0)
-    .map(([type, n]) => `${n} ${NOTE_TYPE_LABELS[type as keyof typeof NOTE_TYPE_LABELS]}`)
+    .map(([type, n]) => `${n} ${NOTE_TYPE_LABELS[type] ?? type.replace(/_/g, ' ')}`)
     .join(' · ');
 
   return (

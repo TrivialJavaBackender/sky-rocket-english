@@ -4,13 +4,17 @@
  * (module-01 already synced) and prints actual results for each DoD point.
  * Throws (non-zero exit) on the first failed assertion.
  *
- * Usage: tsx scripts/verify-backend.ts
- * Leaves real progress rows behind for the seeded user — run
- * `tsx scripts/reset-progress.ts` afterwards to give stage 4 a clean slate.
+ * Usage: tsx scripts/verify-backend.ts --username=<name>
+ * The user must already exist — register one through /register first. This
+ * script can't go through `lib/current-user.ts` any more: identity now comes
+ * from a request cookie, and there is no request here.
+ *
+ * Leaves real progress rows behind for that user — run
+ * `tsx scripts/reset-progress.ts --username=<name>` afterwards to give
+ * stage 4 a clean slate.
  */
 import 'dotenv/config';
 import { prisma } from '../lib/db';
-import { getCurrentUserId } from '../lib/current-user';
 
 import * as todayUseCase from '../lib/use-cases/today';
 import * as courseMapUseCase from '../lib/use-cases/course-map';
@@ -73,9 +77,24 @@ function buildGivenAnswers(typeCode: ExerciseTypeCode, content: any): { correct:
   }
 }
 
+/** Resolves the target user directly, since there is no request cookie to read outside the app. */
+async function resolveUserId(): Promise<number> {
+  const username = process.argv.find((a) => a.startsWith('--username='))?.split('=')[1];
+  if (!username) {
+    console.error('Usage: tsx scripts/verify-backend.ts --username=<name>');
+    process.exit(1);
+  }
+  const user = await prisma.app_user.findUnique({ where: { username } });
+  if (!user) {
+    console.error(`No app_user with username "${username}" — register one at /register first.`);
+    process.exit(1);
+  }
+  return Number(user.id);
+}
+
 async function main() {
-  const userId = await getCurrentUserId();
-  console.log(`Verifying against user_id=${userId} (APP_USER_USERNAME=${process.env.APP_USER_USERNAME})`);
+  const userId = await resolveUserId();
+  console.log(`Verifying against user_id=${userId}`);
 
   const priorAttempts = await prisma.exercise_attempt.count({ where: { user_id: userId } });
   if (priorAttempts > 0) {

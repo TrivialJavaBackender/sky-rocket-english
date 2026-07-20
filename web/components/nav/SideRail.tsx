@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { NAV_ITEMS, isNavItemActive } from './nav-items';
 import { CourseIcon, ProgressIcon, ReviewIcon, TodayIcon } from './NavIcons';
+import { SignOutButton } from '@/components/auth/SignOutButton';
 
 const ICONS = { today: TodayIcon, course: CourseIcon, review: ReviewIcon, progress: ProgressIcon };
 
@@ -15,7 +16,7 @@ const ICONS = { today: TodayIcon, course: CourseIcon, review: ReviewIcon, progre
  * один — свитчер показывает заглушку, пока не появится второй курс") — it
  * names a course that has no row in the DB yet, so there is nothing to fetch.
  */
-export function SideRail({ courseLabel }: { courseLabel: string }) {
+export function SideRail({ courseLabel, username }: { courseLabel: string; username: string }) {
   const pathname = usePathname();
   return (
     <nav className="fixed inset-y-0 left-0 z-20 hidden w-56 flex-col gap-[3px] border-r border-border bg-bg-card p-[22px_14px] desktop:flex">
@@ -37,7 +38,10 @@ export function SideRail({ courseLabel }: { courseLabel: string }) {
       <div className="mt-auto border-t border-border-faint pt-3">
         <div className="rounded-lg bg-bg-faint px-3 py-2 text-[13.5px] font-semibold">{courseLabel}</div>
         <div className="px-3 py-2 text-[13.5px] text-fg-faint">German · A2 → B1 · soon</div>
-        <div className="px-3 py-2 text-[13.5px] text-fg-muted">Settings</div>
+        <div className="mt-1 border-t border-border-faint pt-2">
+          <div className="truncate px-3 py-1 text-[13.5px] font-semibold">{username}</div>
+          <SignOutButton className="w-full rounded-lg px-3 py-2 text-[13.5px] text-fg-muted hover:bg-bg-faint/60 hover:text-fg" />
+        </div>
       </div>
     </nav>
   );

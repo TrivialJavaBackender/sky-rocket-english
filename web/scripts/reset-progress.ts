@@ -1,8 +1,8 @@
 /**
- * Wipes every progress row for the seeded user, leaving content (module/
+ * Wipes every progress row for one user, leaving content (module/
  * exercise/vocab_entry/gloss/writing_task/content-sourced flashcards/...)
  * and the app_user row itself untouched — gives stage 4 (or a re-run of
- * verify-backend.ts) a clean slate without re-running migrate/sync/seed-user.
+ * verify-backend.ts) a clean slate without re-running migrate/sync.
  *
  * Deletes are ordered so FK references clear before their targets (e.g.
  * review_queue_item/error_map_entry before exercise_attempt) even though
@@ -14,7 +14,10 @@
  * made, so they're deleted outright rather than orphaned; content-sourced
  * flashcards (source='content', created_by_user_id null) are untouched.
  *
- * Usage: tsx scripts/reset-progress.ts [--username=pavel]
+ * Usage: tsx scripts/reset-progress.ts --username=<name>
+ * The username is required: accounts are self-registered through /register,
+ * so there is no longer a default user to guess at — and guessing wrong
+ * would wipe the wrong learner's progress.
  */
 import 'dotenv/config';
 import { Client } from 'pg';
@@ -48,7 +51,11 @@ const PROGRESS_TABLES_BY_USER_ID = [
 
 async function main() {
   const usernameArg = process.argv.find((a) => a.startsWith('--username='));
-  const username = usernameArg ? usernameArg.split('=')[1] : (process.env.APP_USER_USERNAME ?? 'pavel');
+  const username = usernameArg?.split('=')[1];
+  if (!username) {
+    console.error('Usage: tsx scripts/reset-progress.ts --username=<name>');
+    process.exit(1);
+  }
 
   const client = new Client({ connectionString: connectionString() });
   await client.connect();

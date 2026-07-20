@@ -158,7 +158,7 @@ export function ExercisePlayer({
             {correct} / {items.length}
           </div>
           <div className="text-[15px] text-fg-muted">
-            {harvestedCount === 0 ? 'No new cards — a clean run.' : `${harvestedCount} harvested ${harvestedCount === 1 ? 'card' : 'cards'} join tomorrow's review.`}
+            {harvestedCount === 0 ? 'Nothing logged — a clean run.' : `${harvestedCount} ${harvestedCount === 1 ? 'mistake' : 'mistakes'} logged in your error map.`}
           </div>
           <div className="mt-0.5 text-[15px] text-fg-muted">
             {missed === 0 ? 'Nothing returns to the re-queue.' : `${missed} missed item${missed > 1 ? 's' : ''} return${missed > 1 ? '' : 's'} to the re-queue at +2 → +7 → +21 days.`}
@@ -192,7 +192,7 @@ export function ExercisePlayer({
             ✕
           </button>
           <div className="flex-1 text-center text-[13px] font-semibold text-fg-muted">{headerLabel}</div>
-          <div className="text-[12.5px] font-semibold tabular-nums text-fg-subtle">{Object.keys(harvestedMap).length} harvested</div>
+          <div className="text-[12.5px] font-semibold tabular-nums text-fg-subtle">{Object.keys(harvestedMap).length} logged</div>
         </div>
         <ProgressDots results={results} currentIndex={i} />
         {readingParagraphs && readingParagraphs.length > 0 && (
@@ -229,10 +229,10 @@ export function ExercisePlayer({
               <div className="mt-1 text-[14.5px] leading-relaxed text-fg">{current.explanation}</div>
               {!current.isCorrect && !harvestedMap[i] && (
                 <Button variant="outline" size="sm" className="mt-2.5" onClick={handleHarvest} disabled={harvesting}>
-                  {harvesting ? 'Harvesting…' : '+ Harvest to flashcards'}
+                  {harvesting ? 'Logging…' : '+ Log in error map'}
                 </Button>
               )}
-              {!current.isCorrect && harvestedMap[i] && <div className="mt-2.5 text-[13.5px] font-bold text-green-text">✓ In your deck — first review tomorrow, then 2 d · 7 d · 21 d</div>}
+              {!current.isCorrect && harvestedMap[i] && <div className="mt-2.5 text-[13.5px] font-bold text-green-text">✓ In your error map — this item returns at +2 → +7 → +21 days</div>}
             </div>
           )}
 

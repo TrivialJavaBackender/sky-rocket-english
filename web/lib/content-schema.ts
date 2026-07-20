@@ -166,6 +166,11 @@ export type ReadingComprehensionContent = z.infer<typeof ReadingComprehensionCon
 export const OpenClozeContentSchema = z.object({
   pre: z.string(),
   post: z.string(),
+  // Base form shown before answering, as in a coursebook's "(work)". Optional:
+  // classic open cloze gives no prompt, but the drills derived from
+  // theory.cloze_cards need one — "She ___ here since 2019" has several
+  // grammatical answers until you fix the verb.
+  hint: z.string().optional(),
   answers: z.array(z.string().min(1)).min(1),
   answer_shown: z.string().min(1),
 });

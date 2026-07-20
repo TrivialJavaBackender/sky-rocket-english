@@ -41,6 +41,30 @@ export async function introduceModuleFlashcards(userId: number, moduleId: number
   return { introduced: ids.length };
 }
 
+/**
+ * Tops up the deck of every module the learner has already introduced.
+ *
+ * `introduceModuleFlashcards` runs once per module, from the `flashcards_intro`
+ * step of its Prime session, so cards added to a module afterwards would never
+ * reach the deck. That went from theoretical to real in 0005, when every vocab
+ * entry gained a `vocab_reverse` card: without this, the reverse side of an
+ * already-studied module would sit in `flashcard` forever with no `card_state`.
+ * Editing a shipped module's vocab has the same shape, so this stays useful
+ * beyond the migration.
+ *
+ * Cheap when there is nothing to do — one indexed query per started module,
+ * and `listUnintroducedFlashcardIds` returns empty once a deck is complete.
+ */
+export async function catchUpModuleIntroductions(userId: number, now: Date = new Date()): Promise<{ introduced: number }> {
+  const moduleIds = await srsRepo.listModuleIdsWithIntroducedCards(userId);
+  let introduced = 0;
+  for (const moduleId of moduleIds) {
+    const result = await introduceModuleFlashcards(userId, moduleId, now);
+    introduced += result.introduced;
+  }
+  return { introduced };
+}
+
 export interface ReviewFlashcardResult {
   nextPhase: CardPhase;
   nextDueAt: Date;

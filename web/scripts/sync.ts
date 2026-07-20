@@ -167,6 +167,33 @@ function computeExerciseIdent(entry: ExerciseEntry): string {
   return sha1(`${entry.type}|${keyText}`);
 }
 
+/**
+ * theory.yaml carries `cloze_cards` — authored sentences with exactly one gap
+ * in Anki's cloze syntax. Until 2026-07 sync derived them into
+ * note_type=grammar_cloze flashcards, which put a *task* into the SRS deck and
+ * leaked the raw {{c1::…}} markup into the player, so the answer sat in plain
+ * sight on the front of the card. They are drills, not atoms to recall, so they
+ * are synced as open_cloze exercises in the module's review pool instead: the
+ * same authored content, but actually gradeable, and a miss opens a lane-2
+ * re-queue item like any other exercise. `hint` becomes the base-form prompt —
+ * without it several answers are grammatical.
+ */
+function clozeCardToExercise(card: ClozeCard): ExerciseEntry | null {
+  const match = /^([\s\S]*?)\{\{c1::(.+?)\}\}([\s\S]*)$/.exec(card.text);
+  if (!match) return null;
+  const [, pre, answer, post] = match;
+  return {
+    type: 'open_cloze',
+    group: 'grammar',
+    // Explicit ident: computeExerciseIdent keys open_cloze on pre+post, which
+    // could collide with an authored item from exercises.yaml, and
+    // (module_id, ident) is unique.
+    id: `theory-cloze-${sha1(card.text).slice(0, 12)}`,
+    content: { pre, post, hint: card.hint, answers: [answer], answer_shown: answer },
+    explanation: card.rule,
+  };
+}
+
 // ───────────────────────────── upserts: grammar_point ─────────────────────────────
 
 async function upsertGrammarPoint(
@@ -467,7 +494,7 @@ async function upsertWritingTask(
 
 // ───────────────────────────── upserts: flashcard ─────────────────────────────
 
-type NoteType = 'vocab' | 'grammar_cloze' | 'transformation';
+type NoteType = 'vocab' | 'vocab_reverse';
 interface FlashcardFields {
   front: string;
   main: string;
@@ -534,27 +561,25 @@ async function archiveRemovedFlashcards(client: Client, moduleId: number, seenId
   counter.removed += result.rowCount ?? 0;
 }
 
+function vocabExtra(entry: VocabEntry): string {
+  const parts: string[] = [];
+  if (entry.collocations?.trim()) parts.push(`Collocations: ${entry.collocations}`);
+  if (entry.register?.trim()) parts.push(`Register: ${entry.register}`);
+  return parts.join('\n');
+}
+
+/** Recognition: term on the front, definition + use cases on the back. */
 function vocabFlashcardFields(entry: VocabEntry): FlashcardFields {
-  const cases = entry.use_cases.slice(0, 2);
-  const extraParts: string[] = [];
-  if (entry.collocations?.trim()) extraParts.push(`Collocations: ${entry.collocations}`);
-  if (entry.register?.trim()) extraParts.push(`Register: ${entry.register}`);
-  return { front: entry.term, main: entry.definition, cases, extra: extraParts.join('\n') };
+  return { front: entry.term, main: entry.definition, cases: entry.use_cases.slice(0, 2), extra: vocabExtra(entry) };
 }
-function grammarClozeFlashcardFields(card: ClozeCard): FlashcardFields {
-  return { front: card.text, main: card.rule, cases: [], extra: card.hint?.trim() ? `Hint: ${card.hint}` : '' };
-}
+
 /**
- * The transformation-card front reproduces the retired Anki-CSV Prompt shape
- * ("s1 → pre___post") so the sha1-based idents computed before the CSV → YAML
- * source switch keep matching and card_state survives.
+ * Production: definition on the front, term on the back. Use cases stay on the
+ * back — they contain the term, so showing them up front would give the answer
+ * away; there they confirm the recalled word in context.
  */
-function transformPrompt(c: KeyWordTransformationContent): string {
-  return `${c.s1} → ${c.pre}___${c.post}`;
-}
-function transformFlashcardFields(c: KeyWordTransformationContent, note: string): FlashcardFields {
-  const extra = [`Key: ${c.key}`, note.trim() || null].filter((x): x is string => Boolean(x)).join(' · ');
-  return { front: transformPrompt(c), main: c.answer_shown, cases: [], extra };
+function vocabReverseFlashcardFields(entry: VocabEntry): FlashcardFields {
+  return { front: entry.definition, main: entry.term, cases: entry.use_cases.slice(0, 2), extra: vocabExtra(entry) };
 }
 
 // ───────────────────────────── module driver ─────────────────────────────
@@ -680,6 +705,16 @@ async function syncModule(client: Client, courseSlug: string, mod: ModuleEntry, 
     for (const entry of exercisesPkg.review_pool) {
       await upsertExercise(client, owner, entry, 'review', reviewPos++, grammarPointIdByTitle, mainReadingTextId, counters.exercise, seenExerciseIdents);
     }
+    // theory.cloze_cards ride the same review pool — they feed module quizzes
+    // and r7/r21 reviews, and land in lane 2 when missed.
+    for (const card of theoryPkg.cloze_cards) {
+      const entry = clozeCardToExercise(card);
+      if (entry === null) {
+        console.warn(`  ! cloze card has no {{c1::…}} gap, skipped: ${card.text.slice(0, 60)}`);
+        continue;
+      }
+      await upsertExercise(client, owner, entry, 'review', reviewPos++, grammarPointIdByTitle, mainReadingTextId, counters.exercise, seenExerciseIdents);
+    }
     await pruneByNotIn(client, 'exercise', 'module_id', moduleId, 'ident', seenExerciseIdents, counters.exercise);
 
     // writing_task (one per module)
@@ -687,29 +722,28 @@ async function syncModule(client: Client, courseSlug: string, mod: ModuleEntry, 
     await upsertWritingTask(client, owner, writingPkg, writingIdent, counters.writing_task);
     await pruneByNotIn(client, 'writing_task', 'module_id', moduleId, 'ident', new Set([writingIdent]), counters.writing_task);
 
-    // flashcard — derived from the YAML sources: vocab cards from vocab.yaml,
-    // grammar cloze from theory.cloze_cards, transformation cards from the
-    // core key_word_transformation exercises. Ident keyParts (Term /
-    // sha1(Text) / sha1(Prompt+Key)) match the ones the retired Anki CSVs
-    // produced, so existing card_state rows keep their cards.
+    // flashcard — vocabulary only, two cards per entry (0005): `vocab` is
+    // recognition (term → definition), `vocab_reverse` is production
+    // (definition → term). They are separate rows, not one note shown from
+    // either side, because each direction needs its own SRS schedule — knowing
+    // a word when you see it says little about producing it.
+    //
+    // Grammar cloze and transformation notes are gone from the deck: the first
+    // now syncs as open_cloze exercises (above), the second always duplicated
+    // an exercise that already exists in the module. Both are tasks, and tasks
+    // belong to lane 2. archiveRemovedFlashcards retires their rows on the
+    // next sync, leaving card_state intact.
     const tag = `en-c1::${mod.slug}`;
     const seenFlashcardIdents = new Set<string>();
     for (const entry of vocabPkg.entries) {
+      const vocabEntryId = vocabEntryIdByTerm.get(entry.term) ?? null;
       const ident = computeFlashcardIdent(tag, 'vocab', entry.term);
-      await upsertFlashcard(client, moduleId, 'vocab', ident, vocabFlashcardFields(entry), vocabEntryIdByTerm.get(entry.term) ?? null, counters.flashcard);
+      await upsertFlashcard(client, moduleId, 'vocab', ident, vocabFlashcardFields(entry), vocabEntryId, counters.flashcard);
       seenFlashcardIdents.add(ident);
-    }
-    for (const card of theoryPkg.cloze_cards) {
-      const ident = computeFlashcardIdent(tag, 'grammar_cloze', sha1(card.text));
-      await upsertFlashcard(client, moduleId, 'grammar_cloze', ident, grammarClozeFlashcardFields(card), null, counters.flashcard);
-      seenFlashcardIdents.add(ident);
-    }
-    for (const entry of exercisesPkg.core) {
-      if (entry.type !== 'key_word_transformation') continue;
-      const prompt = transformPrompt(entry.content);
-      const ident = computeFlashcardIdent(tag, 'transformation', sha1(prompt + entry.content.key));
-      await upsertFlashcard(client, moduleId, 'transformation', ident, transformFlashcardFields(entry.content, entry.explanation), null, counters.flashcard);
-      seenFlashcardIdents.add(ident);
+
+      const reverseIdent = computeFlashcardIdent(tag, 'vocab_reverse', entry.term);
+      await upsertFlashcard(client, moduleId, 'vocab_reverse', reverseIdent, vocabReverseFlashcardFields(entry), vocabEntryId, counters.flashcard);
+      seenFlashcardIdents.add(reverseIdent);
     }
     await archiveRemovedFlashcards(client, moduleId, seenFlashcardIdents, counters.flashcard);
 
