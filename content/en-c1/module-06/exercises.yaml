@@ -1,0 +1,868 @@
+# Module 06 · Society & Inequality — exercises
+# core: 10 grammar_drill · 8 error_correction · 8 key_word_transformation ·
+#       8 open_cloze · 6 reading_comprehension · 8 mc_cloze · 10 collocation_match · 8 word_formation  = 66
+# review_pool: 5 gd · 4 ec · 4 kwt · 4 oc · 1 rc · 4 mc · 4 cm · 4 wf  = 30
+# Answer indices are deliberately spread across positions — no runs of 3+.
+core:
+  # ── grammar_drill × 10 · group grammar ─────────────────────────
+  - type: grammar_drill
+    group: grammar
+    grammar_point: wish and if only (past, past perfect, would)
+    content:
+      pre: "I "
+      post: " at sixteen how much of it was already decided."
+      prompt: KNOW
+      options: [wish I would know, wish I knew, wish I had known, wished I know]
+      answer: 2
+    explanation: "Wish + past perfect is the form for regret about a closed past — she looks back from now at what she was not told then. Wish I knew would place the ignorance in the present, but at sixteen anchors the sentence in a finished past."
+  - type: grammar_drill
+    group: grammar
+    grammar_point: wish and if only (past, past perfect, would)
+    content:
+      pre: "I wish the council "
+      post: " pretending the bus route was never cut."
+      prompt: STOP
+      options: [would stop, stopped, will stop, had stopped]
+      answer: 0
+    explanation: "Wish + would complains about somebody else's repeated behaviour that could perfectly well change, which is exactly what the council is doing. Wish + past simple would describe a state rather than an irritating habit, and wish never takes will at all."
+  - type: grammar_drill
+    group: grammar
+    grammar_point: wish and if only (past, past perfect, would)
+    content:
+      pre: "If only there "
+      post: " one barrier you could point at and remove."
+      prompt: BE
+      options: [is, will be, would be, were]
+      answer: 3
+    explanation: "If only takes the same unreal past as wish, and the subjunctive were is the careful-English form for all persons. Would be is impossible here because nobody's behaviour is being complained about — the structure describes a situation, not somebody's conduct."
+  - type: grammar_drill
+    group: grammar
+    grammar_point: would rather and would sooner
+    content:
+      pre: "I'd rather you "
+      post: " my name when you write this up."
+      prompt: MENTION
+      options: [don't mention, didn't mention, not to mention, wouldn't have mentioned]
+      answer: 1
+    explanation: "Would rather + somebody + past simple is the polite-request pattern, and the past form is unreal rather than past — nothing has been mentioned yet. I'd rather you don't mention is the everyday slip and the one an exam marks."
+  - type: grammar_drill
+    group: grammar
+    grammar_point: "it's (high) time + past"
+    content:
+      pre: "It is high time the department "
+      post: " what two decades of cuts have cost."
+      prompt: ADMIT
+      options: [admitted, admits, to admit, should admit]
+      answer: 0
+    explanation: "Once a subject follows it's time, the verb must be past simple: admitted. That past form is what supplies the impatience — should admit states an obligation neutrally and loses the whole point of the structure."
+  - type: grammar_drill
+    group: grammar
+    grammar_point: as if / as though + unreal
+    content:
+      pre: "He talks about the estate as though he "
+      post: " half of it."
+      prompt: OWN
+      options: [owns, has owned, owned, would own]
+      answer: 2
+    explanation: "A past form after as though signals that the comparison is untrue — he owns none of it. Owns would tell the reader the speaker thinks the ownership may be genuine, which is the opposite of what the sentence implies."
+  - type: grammar_drill
+    group: grammar
+    grammar_point: "The subjunctive (demand / insist / suggest that it be…)"
+    content:
+      pre: "The committee demanded that the evaluation "
+      post: " in full."
+      prompt: PUBLISH
+      options: [was published, be published, is published, would be published]
+      answer: 1
+    explanation: "Demand triggers the subjunctive, and its passive is a bare be plus past participle: be published. Was published would report a fact instead of a demand — the committee is asking for something that has not happened."
+  - type: grammar_drill
+    group: grammar
+    grammar_point: "The subjunctive (demand / insist / suggest that it be…)"
+    content:
+      pre: "It is essential that every child in the borough "
+      post: " a library within walking distance."
+      prompt: HAVE
+      options: [has, would have, is having, have]
+      answer: 3
+    explanation: "Adjectives of necessity — essential, vital, imperative — take the same bare verb as demand, so have carries no -s despite the singular subject. Has is the natural-sounding trap and the one form the structure forbids."
+  - type: grammar_drill
+    group: grammar
+    grammar_point: would rather and would sooner
+    content:
+      pre: "I'd sooner "
+      post: " the three miles than ask him for a lift again."
+      prompt: WALK
+      options: [to walk, walking, walk, walked]
+      answer: 2
+    explanation: "Would sooner, like would rather, takes a bare infinitive when the preference concerns you yourself, and than introduces a second bare infinitive. The to belongs to prefer, which is a different verb with a different pattern."
+  - type: grammar_drill
+    group: grammar
+    grammar_point: as if / as though + unreal
+    content:
+      pre: "She writes about Brackenhill as if she "
+      post: " up there, which she never did."
+      prompt: GROW
+      options: [had grown, grew, has grown, grows]
+      answer: 0
+    explanation: "As if + past perfect marks an untrue comparison with an earlier action, and which she never did confirms the falsehood. Grew would suggest the writer accepts that she really did grow up there."
+  # ── error_correction × 8 · group grammar ───────────────────────
+  - type: error_correction
+    group: grammar
+    grammar_point: wish and if only (past, past perfect, would)
+    content: {words: [I, wish, I, will, find, a, job, closer, to, "home."], wrong: 3, correction: "will find → could find"}
+    explanation: "Wish never takes will. For something you would like to be able to do, English uses wish + could; if the sentence is a genuine hope about the future, the verb itself must change to hope, which does take will."
+  - type: error_correction
+    group: grammar
+    grammar_point: "it's (high) time + past"
+    content: {words: ["It's", high, time, we, go, and, see, the, scheme, for, "ourselves."], wrong: 4, correction: "go → went"}
+    explanation: "Once a subject follows it's time, the verb moves into the past simple: it's high time we went. The infinitive survives only when nobody is named — it's time to go — or after for, as in it's time for us to go."
+  - type: error_correction
+    group: grammar
+    grammar_point: "The subjunctive (demand / insist / suggest that it be…)"
+    content: {words: [The, committee, demanded, that, the, report, goes, to, every, "household."], wrong: 6, correction: "goes → go"}
+    explanation: "Demand triggers the subjunctive, so the verb in the that-clause is bare — go, with no -s, whatever the subject. Should go would also be correct in British English; only the ordinary present tense is wrong."
+  - type: error_correction
+    group: grammar
+    grammar_point: as if / as though + unreal
+    content: {words: [Politicians, talk, about, the, estate, as, if, it, is, another, "country."], wrong: 8, correction: "is → were"}
+    explanation: "A present tense after as if tells the reader the comparison might be true, and the estate is plainly not another country. The unreal past is required, and were rather than was is the form careful writing uses."
+  - type: error_correction
+    group: grammar
+    grammar_point: would rather and would sooner
+    content: {words: ["I'd", rather, to, keep, my, name, out, of, the, "article."], wrong: 2, correction: "to keep → keep"}
+    explanation: "Would rather takes a bare infinitive with no to anywhere in the structure. The to-infinitive belongs to prefer — I'd prefer to keep — and mixing the two patterns produces the commonest error of the pair."
+  - type: error_correction
+    group: grammar
+    grammar_point: "The subjunctive (demand / insist / suggest that it be…)"
+    content: {words: [It, is, essential, that, everybody, has, the, same, starting, "point."], wrong: 5, correction: "has → have"}
+    explanation: "Essential is an adjective of necessity, so the that-clause takes a bare verb: have, without the -s that everybody would otherwise require. The subjunctive ignores person and number completely."
+  - type: error_correction
+    group: grammar
+    grammar_point: wish and if only (past, past perfect, would)
+    content: {words: [If, only, somebody, has, told, me, about, the, grant, "sooner."], wrong: 3, correction: "has told → had told"}
+    explanation: "If only follows the same rules as wish, and regret about a finished past needs the past perfect: had told. The present perfect keeps the sentence in the real world, where if only cannot operate."
+  - type: error_correction
+    group: grammar
+    grammar_point: "The subjunctive (demand / insist / suggest that it be…)"
+    content: {words: [The, new, mayor, insisted, that, the, funding, was, ring-fenced, for, three, "years."], wrong: 7, correction: "was → be"}
+    explanation: "Insist takes the subjunctive when it means demand, so the passive is a bare be ring-fenced. Was ring-fenced changes the meaning entirely — the mayor would then be asserting that the money had already been protected."
+  # ── key_word_transformation × 8 · group grammar ────────────────
+  # The last three revise earlier modules (M3 reporting verbs, M5 inversion, M2 causative) and stay untagged.
+  - type: key_word_transformation
+    group: grammar
+    grammar_point: wish and if only (past, past perfect, would)
+    content:
+      s1: I regret not applying for the hardship grant last year.
+      key: WISH
+      pre: "I "
+      post: " for the hardship grant last year."
+      answers: [wish I had applied, wish that I had applied]
+      answer_shown: wish I had applied
+      hint: 3–6 words, including the key word
+    explanation: "Regret about a closed opportunity becomes wish + past perfect. The past simple wish I applied would describe a present habit rather than something that can no longer be done."
+  - type: key_word_transformation
+    group: grammar
+    grammar_point: would rather and would sooner
+    content:
+      s1: Please don't use my name in the article.
+      key: RATHER
+      pre: "I'd "
+      post: " my name in the article."
+      answers: [rather you didn't use, rather you did not use]
+      answer_shown: rather you didn't use
+      hint: 3–6 words, including the key word
+    explanation: "A request about somebody else's behaviour takes would rather + subject + past simple. The past form is unreal, not past — the name has not been used yet."
+  - type: key_word_transformation
+    group: grammar
+    grammar_point: "it's (high) time + past"
+    content:
+      s1: The council really ought to have published these figures by now.
+      key: TIME
+      pre: "It's high "
+      post: " these figures."
+      answers: [time the council published]
+      answer_shown: time the council published
+      hint: 3–6 words, including the key word
+    explanation: "It's high time + subject + past simple says that something is overdue, which is exactly what ought to have done by now means. The past form carries the criticism a present tense would remove."
+  - type: key_word_transformation
+    group: grammar
+    grammar_point: as if / as though + unreal
+    content:
+      s1: He behaves like the owner of the building, although he only rents a room.
+      key: THOUGH
+      pre: "He behaves as "
+      post: " the building, although he only rents a room."
+      answers: [though he owned]
+      answer_shown: though he owned
+      hint: 3–6 words, including the key word
+    explanation: "As though + past simple marks a comparison the writer rejects, and the second clause confirms that he owns nothing. A present tense would tell the reader the ownership might be real."
+  - type: key_word_transformation
+    group: grammar
+    grammar_point: "The subjunctive (demand / insist / suggest that it be…)"
+    content:
+      s1: The report must be published in full, the committee said.
+      key: INSISTED
+      pre: "The committee "
+      post: " in full."
+      answers: [insisted that the report be published, insisted the report be published, insisted that the report should be published]
+      answer_shown: insisted that the report be published
+      hint: 4–7 words, including the key word
+    explanation: "Insist meaning demand takes a subjunctive that-clause, and its passive is a bare be published. An ordinary tense after insist would change the meaning to asserting a fact rather than making a demand."
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: Why don't we ring-fence the funding for three years? said the chair.
+      key: SUGGESTED
+      pre: "The chair "
+      post: " for three years."
+      answers: [suggested ring-fencing the funding, suggested that the funding be ring-fenced]
+      answer_shown: suggested ring-fencing the funding
+      hint: 4–7 words, including the key word
+    explanation: "Module 3 revision — reporting verb patterns. A why don't we proposal reports as suggest + -ing: suggested ring-fencing the funding. Suggest refuses a to-infinitive and takes no object before the gerund, and its that-clause is the subjunctive this module builds on."
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: The college would be twenty minutes away if the bus route had survived.
+      key: HAD
+      pre: "The college would be twenty minutes away "
+      post: "."
+      answers: [had the bus route survived]
+      answer_shown: had the bus route survived
+      hint: 4–6 words, including the key word
+    explanation: "Module 5 revision — inversion in conditionals. Formal English drops if and puts had in front of the subject: had the bus route survived. The meaning is unchanged and the register rises."
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: An independent team evaluates the scheme for the council every two years.
+      key: HAS
+      pre: "The council "
+      post: " every two years."
+      answers: [has the scheme evaluated]
+      answer_shown: has the scheme evaluated
+      hint: 3–6 words, including the key word
+    explanation: "Module 2 revision — the causative. Work that the council arranges but does not carry out itself takes have + object + past participle: has the scheme evaluated."
+  # ── open_cloze × 8 · group reading ─────────────────────────────
+  - type: open_cloze
+    group: reading
+    grammar_point: wish and if only (past, past perfect, would)
+    content:
+      pre: "I wish somebody "
+      post: " told me at sixteen how much of it was already decided."
+      answers: [had]
+      answer_shown: had
+    explanation: "Wish + HAD + past participle is the form for regret about a closed past. A present perfect would keep the sentence in the real world, where wish cannot operate."
+  - type: open_cloze
+    group: reading
+    grammar_point: wish and if only (past, past perfect, would)
+    content:
+      pre: "If "
+      post: " the bus route had survived, the college would be twenty minutes away."
+      answers: [only]
+      answer_shown: only
+    explanation: "If ONLY is the emphatic twin of wish and takes exactly the same unreal forms. Without only the sentence becomes an ordinary conditional and loses the note of regret."
+  - type: open_cloze
+    group: reading
+    grammar_point: "it's (high) time + past"
+    content:
+      pre: "It's high "
+      post: " the council admitted what the cuts have cost."
+      answers: [time]
+      answer_shown: time
+    explanation: "It's high TIME + subject + past simple says that something is long overdue. High is the formal intensifier in this frame; about is the conversational one."
+  - type: open_cloze
+    group: reading
+    grammar_point: as if / as though + unreal
+    content:
+      pre: "She writes about the estate as "
+      post: " she had grown up there, which she never did."
+      answers: [if, though]
+      answer_shown: if
+    explanation: "As IF or as THOUGH introduces the comparison, and the past perfect after it marks that comparison as untrue. The two are interchangeable, though as though is slightly more formal."
+  - type: open_cloze
+    group: reading
+    grammar_point: would rather and would sooner
+    content:
+      pre: "I'd "
+      post: " you didn't quote me on any of this."
+      answers: [rather, sooner]
+      answer_shown: rather
+    explanation: "Would RATHER or would SOONER + subject + past simple is the polite way of asking somebody not to do something. Prefer will not fit — it takes a to-infinitive, not a clause with a past verb."
+  - type: open_cloze
+    group: reading
+    grammar_point: "The subjunctive (demand / insist / suggest that it be…)"
+    content:
+      pre: "The committee demanded that the report "
+      post: " published in full."
+      answers: [be]
+      answer_shown: be
+    explanation: "The subjunctive passive is a bare BE plus past participle after demand. Was or is would turn the demand into a statement about what had already happened."
+  - type: open_cloze
+    group: reading
+    grammar_point: "The subjunctive (demand / insist / suggest that it be…)"
+    content:
+      pre: "It is "
+      post: " that every child have a safe route to school."
+      answers: [essential, vital, imperative, crucial]
+      answer_shown: essential
+    explanation: "An adjective of necessity — ESSENTIAL, vital, imperative — is what licenses the bare have in the that-clause. Adjectives like obvious or likely take an ordinary tense instead."
+  - type: open_cloze
+    group: reading
+    grammar_point: would rather and would sooner
+    content:
+      pre: "I'd sooner walk the three miles "
+      post: " ask him for a lift again."
+      answers: [than]
+      answer_shown: than
+    explanation: "Would sooner and would rather introduce the rejected alternative with THAN, followed by a second bare infinitive. To would be wrong — that is prefer's pattern, as in prefer walking to waiting."
+  # ── reading_comprehension × 6 · group reading ──────────────────
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "The 61 bus crosses Ashfield in eleven minutes. It carries passengers from a postcode where men live, on average, to seventy-two, into a postcode where they live to eighty-one. Nine years, eleven minutes, one fare. The borough's public health report records the disparity in a single line and then moves on, as though there were nothing further to be said about it."
+      q: What is the writer implying about the borough's public health report?
+      options:
+        - It exaggerates the difference between the two postcodes.
+        - It disputes the life expectancy figures it publishes.
+        - It treats a striking finding as unremarkable.
+        - It blames residents for the gap it describes.
+      answer: 2
+    explanation: "Recording the disparity in a single line and then moving on, as though there were nothing further to be said, is a criticism of how little attention the finding receives. The report is never said to doubt or overstate its own numbers."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "'People imagine a wall,' says Dr Rehana Sood, who studies deprivation. 'It is not a wall. It is a hundred small tolls, and only some children are asked to pay them.'"
+      q: What does Sood's image of tolls rather than a wall convey?
+      options:
+        - Disadvantage is made of many small costs rather than one obstacle.
+        - The barriers facing poorer children are impossible to remove.
+        - Families are charged directly for the services they use.
+        - Only a small minority of children are affected at all.
+      answer: 0
+    explanation: "A wall is a single barrier; a hundred small tolls is an accumulation of separate costs, and that is the distinction she is drawing. She says only some children pay, not that few are affected, and nothing suggests the tolls are literal charges."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "He has heard the estate described in the language of welfare and marginalised communities all his adult life, and he resents it. 'They talk about us as if we were a problem to be managed,' he says. 'Half the lads I employ came off this estate and they are doing fine. What we want is the bus back.' Little of that disagrees with Sood."
+      q: What is Whitlock objecting to?
+      options:
+        - The suggestion that the estate needs better transport.
+        - The accuracy of the life expectancy statistics.
+        - The claim that his employees are struggling financially.
+        - The way outsiders describe the estate rather than what they propose.
+      answer: 3
+    explanation: "His complaint is about vocabulary — being talked about as a problem to be managed — and the writer notes that little of it actually disagrees with Sood's analysis. He asks for the bus back, so better transport is what he wants, not what he objects to."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Some economists hold that it is essential that support be universal, since means-tested schemes stigmatise the people they reach and miss everybody just above the threshold. Others would sooner redistribute the same money narrowly, because a pound spent on a household that does not need it is a pound denied to a child who does. Both sides say they are levelling the playing field; they disagree about where the field is."
+      q: What separates the two groups of economists?
+      options:
+        - Whether inequality can be reduced by public spending at all.
+        - How the same amount of money should be targeted.
+        - Whether means-testing saves money in the long run.
+        - How large the welfare budget ought to be.
+      answer: 1
+    explanation: "Both sides accept public spending and both claim the same goal, so the argument is about universal provision versus narrow targeting of the same money. Neither the size of the budget nor the principle of spending is in dispute."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Cohesion, sociologists argue, depends less on how people feel about one another than on whether they ever meet: the same school gate, the same waiting room, the same five-a-side pitch. Ashfield's two halves once integrated at the steelworks, which employed four thousand people and closed in 1993. Nothing replaced it."
+      q: According to the passage, what did the steelworks provide besides employment?
+      options:
+        - A source of funding for local public services.
+        - Training that improved the town's exam results.
+        - A reason for younger residents to stay in the town.
+        - A shared space in which the two halves of the town mixed.
+      answer: 3
+    explanation: "Cohesion is defined here as a matter of whether people ever meet, and the works is named as the place where the two halves once integrated. Funding, training and migration are not mentioned in the passage at all."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "I am twenty-two and I grew up on an estate three miles from the one in your piece, so let me say the obvious thing. Everybody in that article was talking about us and almost nobody was talking to us. I wish journalists would ring the youth club before they ring the councillor."
+      q: What is this reader's main criticism of the article?
+      options:
+        - It reported on the estate without consulting the people who live there.
+        - It relied on figures that she believes are out of date.
+        - It gave too much space to the views of local business owners.
+        - It described her own estate rather than the one in the piece.
+      answer: 0
+    explanation: "Talking about us and almost nobody talking to us names the omission precisely, and ringing the youth club before the councillor is her proposed remedy. She questions who was asked, not what the figures said."
+  # ── mc_cloze × 8 · group vocab ─────────────────────────────────
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "Children from "
+      post: " are twice as likely to leave school without qualifications."
+      options: [a vested interest, a disadvantaged background, an eligibility criterion, a pressure group]
+      answer: 1
+    explanation: "A disadvantaged background names the family circumstances a child grows up in, which is what the statistic measures. A vested interest is a reason for wanting things to stay as they are, and belongs to people with something to lose."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "Two families with identical needs, twelve miles apart, get quite different support — provision here is famously "
+      post: "."
+      options: [a safety net, a head start, unconscious bias, a postcode lottery]
+      answer: 3
+    explanation: "A postcode lottery is exactly this: the service you receive depends on where you happen to live rather than on what you need. A safety net is the help itself, not the geographical unfairness in how it is shared out."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "She taught for twenty-two years and now "
+      post: " the scheme at national level."
+      options: [advocates for, claims, integrates, subsidises]
+      answer: 0
+    explanation: "Advocate for means to argue publicly and persistently in support of something, which is what national campaigning is. Subsidise would mean paying part of its costs — a financial act rather than an argumentative one."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "The grant's "
+      post: " exclude any household where a mother works more than sixteen hours."
+      options: [life chances, vested interests, eligibility criteria, pressure groups]
+      answer: 2
+    explanation: "Eligibility criteria are the conditions that decide who qualifies for a scheme, which is precisely what is doing the excluding here. Life chances are the opportunities a person has over a lifetime, not rules on a form."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "The campaign was started in a church hall by two retired teachers — "
+      post: " organising at its most basic."
+      options: [means-tested, entrenched, underrepresented, grassroots]
+      answer: 3
+    explanation: "Grassroots describes action organised locally by ordinary people rather than by a government, which a church hall and two volunteers illustrates exactly. Entrenched describes something too firmly fixed to change, the opposite of a new campaign."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "Nine years of life expectancy separate two postcodes a mile apart, and the report records the "
+      post: " in a single line."
+      options: [cohesion, disparity, traction, integration]
+      answer: 1
+    explanation: "A disparity is a clear and unfair difference between two groups, which nine years of life expectancy plainly is. Cohesion is what holds a community together and could not be measured in years."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "Free childcare and a decent bus service do more to "
+      post: " than any speech about aspiration."
+      options: [claim benefits, gain traction, level the playing field, speak out]
+      answer: 2
+    explanation: "Level the playing field means to change conditions so that everybody competes on equal terms, which is what removing practical obstacles does. Gain traction is about an idea attracting support, not about equalising conditions."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "Youth services lost sixty per cent of their funding during a decade of "
+      post: "."
+      options: [austerity, cohesion, welfare, mobility]
+      answer: 0
+    explanation: "Austerity is the policy of cutting public spending sharply to reduce debt, which a sixty per cent funding loss describes. Welfare is the help the state provides, not the programme of cuts made to it."
+  # ── collocation_match × 10 · group vocab ───────────────────────
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [social, the poverty, the attainment, a postcode]
+      right: [gap, lottery, mobility, line]
+      pairs: {0: 2, 1: 3, 2: 0, 3: 1}
+    explanation: "Social mobility, the poverty line, the attainment gap, a postcode lottery — four fixed compounds that carry most of the statistics in any article about inequality."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [advocate, speak out, hold sb, gain]
+      right: [to account, traction, for a cause, against injustice]
+      pairs: {0: 2, 1: 3, 2: 0, 3: 1}
+    explanation: "Advocate for a cause, speak out against injustice, hold somebody to account, gain traction — the prepositions are fixed and no verb here will take another's."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [claim, tackle, ring-fence, level]
+      right: [funding, inequality, benefits, the playing field]
+      pairs: {0: 2, 1: 1, 2: 0, 3: 3}
+    explanation: "Claim benefits, tackle inequality, ring-fence funding, level the playing field — four verb-object pairs of policy English whose halves cannot be swapped."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [means-tested, affordable, unconscious, entrenched]
+      right: [bias, housing, disadvantage, support]
+      pairs: {0: 3, 1: 1, 2: 0, 3: 2}
+    explanation: "Means-tested support, affordable housing, unconscious bias, entrenched disadvantage — each adjective has one habitual partner in writing about society."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [a safety, a head, a vested, a pressure]
+      right: [group, net, interest, start]
+      pairs: {0: 1, 1: 3, 2: 2, 3: 0}
+    explanation: "A safety net, a head start, a vested interest, a pressure group — four noun compounds whose second half is fixed by long use."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [raise, mobilise, subsidise, redistribute]
+      right: [wealth, awareness, childcare, volunteers]
+      pairs: {0: 1, 1: 3, 2: 2, 3: 0}
+    explanation: "Raise awareness, mobilise volunteers, subsidise childcare, redistribute wealth — the verb tells you whether attention, people or money is the thing being moved."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [below the poverty, from a disadvantaged, at grassroots, out of]
+      right: [background, poverty, line, level]
+      pairs: {0: 2, 1: 0, 2: 3, 3: 1}
+    explanation: "Below the poverty line, from a disadvantaged background, at grassroots level, out of poverty — fixed prepositional phrases in which no preposition can be exchanged for another."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [eligibility, life, public, social]
+      right: [chances, spending, criteria, cohesion]
+      pairs: {0: 2, 1: 0, 2: 1, 3: 3}
+    explanation: "Eligibility criteria, life chances, public spending, social cohesion — four compounds that appear in almost every policy document on this subject."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [shut sb out of, pigeonhole, integrate into, discriminate against]
+      right: [society, older applicants, the labour market, an entire postcode]
+      pairs: {0: 2, 1: 3, 2: 0, 3: 1}
+    explanation: "Shut somebody out of the labour market, pigeonhole an entire postcode, integrate into society, discriminate against older applicants — note that discriminate always takes against."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [financial, a marginalised, an inclusive, a lobby]
+      right: [group, community, curriculum, hardship]
+      pairs: {0: 3, 1: 1, 2: 2, 3: 0}
+    explanation: "Financial hardship, a marginalised community, an inclusive curriculum, a lobby group — four pairings that travel together in writing about society."
+  # ── word_formation × 8 · group vocab ───────────────────────────
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "The report records the "
+      post: " in life expectancy between two neighbouring postcodes."
+      prompt: DISPARATE
+      answers: [disparity]
+      answer_shown: disparity
+    explanation: "After the the gap needs an abstract noun: disparity. Note the spelling change — the adjective disparate loses its final syllable before -ity."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Growing up in "
+      post: " shapes far more than a household's income."
+      prompt: DEPRIVE
+      answers: [deprivation]
+      answer_shown: deprivation
+    explanation: "After the preposition in the gap wants a noun: deprivation. The verb deprive drops its final e and takes -ation."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "The scheme was built to be as "
+      post: " as possible and turns nobody away."
+      prompt: INCLUDE
+      answers: [inclusive]
+      answer_shown: inclusive
+    explanation: "Between as and as possible the gap needs an adjective: inclusive. The noun inclusion would leave the comparison with nothing to describe."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "A third of the borough's children are growing up below the "
+      post: " line."
+      prompt: POOR
+      answers: [poverty]
+      answer_shown: poverty
+    explanation: "Before line the gap wants the abstract noun used attributively: the poverty line. Poorness exists but never appears in this fixed phrase."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Social "
+      post: " has stalled for three decades, whichever measure you use."
+      prompt: MOBILE
+      answers: [mobility]
+      answer_shown: mobility
+    explanation: "After the adjective social the gap needs a noun: mobility. The adjective mobile loses its final e before the suffix."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Women remain badly "
+      post: " on the council's planning committee."
+      prompt: REPRESENT
+      answers: [underrepresented, under-represented]
+      answer_shown: underrepresented
+    explanation: "Badly signals a shortfall, so the gap needs the prefix as well as the participle: underrepresented. Represented alone would say the opposite of what badly prepares you for."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "The volunteers have raised more "
+      post: " of what actually helps than any official consultation."
+      prompt: AWARE
+      answers: [awareness]
+      answer_shown: awareness
+    explanation: "Raise takes a noun as its object, and the fixed collocation is raise awareness of something. The adjective aware cannot follow more in this structure."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Age "
+      post: " is illegal and almost impossible to prove."
+      prompt: DISCRIMINATE
+      answers: [discrimination]
+      answer_shown: discrimination
+    explanation: "After the noun age the gap needs another noun to complete the compound: age discrimination. The verb would leave the sentence without a subject."
+review_pool:
+  # ── grammar_drill × 5 ──────────────────────────────────────────
+  - type: grammar_drill
+    group: grammar
+    grammar_point: wish and if only (past, past perfect, would)
+    content:
+      pre: "I wish I "
+      post: " closer to the college."
+      prompt: LIVE
+      options: [will live, lived, would live, have lived]
+      answer: 1
+    explanation: "Wish + past simple describes a present situation you would like to be different. Wish + would is impossible about yourself — you are the one who decides where you live."
+  - type: grammar_drill
+    group: grammar
+    grammar_point: would rather and would sooner
+    content:
+      pre: "I'd rather she "
+      post: " me in the piece, but it went out on Sunday."
+      prompt: NOT QUOTE
+      options: [doesn't quote, wouldn't quote, not to quote, hadn't quoted]
+      answer: 3
+    explanation: "The quoting has already happened, so would rather + subject + past perfect is required. The past simple would refer to something not yet done."
+  - type: grammar_drill
+    group: grammar
+    grammar_point: "it's (high) time + past"
+    content:
+      pre: "It's about time somebody "
+      post: " the residents what they actually want."
+      prompt: ASK
+      options: [asked, asks, to ask, should have asked]
+      answer: 0
+    explanation: "With a subject after it's time, the verb is past simple: asked. About time adds a conversational note of impatience that the neutral it's time to ask would lose."
+  - type: grammar_drill
+    group: grammar
+    grammar_point: "The subjunctive (demand / insist / suggest that it be…)"
+    content:
+      pre: "The board recommended that the name "
+      post: " published."
+      prompt: NOT BE
+      options: [was not, is not, not be, be not]
+      answer: 2
+    explanation: "The subjunctive negative puts not straight before the bare verb: that the name not be published. No form of do appears anywhere in the structure."
+  - type: grammar_drill
+    group: grammar
+    grammar_point: as if / as though + unreal
+    content:
+      pre: "It looks as if the funding "
+      post: " cut again, judging by this letter."
+      prompt: BE
+      options: [were, has been, had been, would be]
+      answer: 1
+    explanation: "After look, sound and seem, as if + present perfect signals that the speaker thinks the comparison may well be true. An unreal past would deny it, which judging by this letter contradicts."
+  # ── error_correction × 4 ───────────────────────────────────────
+  - type: error_correction
+    group: grammar
+    grammar_point: wish and if only (past, past perfect, would)
+    content: {words: [She, wishes, her, colleagues, will, stop, asking, about, her, "background."], wrong: 4, correction: "will stop → would stop"}
+    explanation: "Wish never takes will. Irritation at somebody else's repeated behaviour is expressed with wish + would — would stop."
+  - type: error_correction
+    group: grammar
+    grammar_point: would rather and would sooner
+    content: {words: ["I'd", sooner, to, walk, than, wait, another, "hour."], wrong: 2, correction: "to walk → walk"}
+    explanation: "Would sooner takes a bare infinitive, and than introduces a second bare infinitive. The to belongs to prefer, not to this structure."
+  - type: error_correction
+    group: grammar
+    grammar_point: "The subjunctive (demand / insist / suggest that it be…)"
+    content: {words: [It, is, vital, that, the, council, publishes, the, figures, in, "full."], wrong: 6, correction: "publishes → publish"}
+    explanation: "Vital is an adjective of necessity, so the that-clause takes a bare verb with no -s: publish. Should publish would also be correct."
+  - type: error_correction
+    group: grammar
+    grammar_point: wish and if only (past, past perfect, would)
+    content: {words: [If, only, I, have, applied, for, the, grant, last, "spring."], wrong: 3, correction: "have applied → had applied"}
+    explanation: "If only about a missed past opportunity needs the past perfect: had applied. Last spring closes the time frame, so a present perfect cannot reach it."
+  # ── key_word_transformation × 4 ────────────────────────────────
+  - type: key_word_transformation
+    group: grammar
+    grammar_point: wish and if only (past, past perfect, would)
+    content:
+      s1: It's a pity I never learnt to drive.
+      key: WISH
+      pre: "I "
+      post: " to drive."
+      answers: [wish I had learnt, wish I had learned]
+      answer_shown: wish I had learnt
+      hint: 3–6 words, including the key word
+    explanation: "Regret about something that never happened takes wish + past perfect. British English prefers learnt and American learned; both are accepted."
+  - type: key_word_transformation
+    group: grammar
+    grammar_point: "it's (high) time + past"
+    content:
+      s1: The sector should have stopped mistaking good intentions for evidence long ago.
+      key: TIME
+      pre: "It's high "
+      post: " good intentions for evidence."
+      answers: [time the sector stopped mistaking]
+      answer_shown: time the sector stopped mistaking
+      hint: 4–6 words, including the key word
+    explanation: "It's high time + subject + past simple expresses an overdue change, which long ago signals. The past form is what supplies the impatience."
+  - type: key_word_transformation
+    group: grammar
+    grammar_point: "The subjunctive (demand / insist / suggest that it be…)"
+    content:
+      s1: You must ring-fence the funding, the campaigners told the council.
+      key: DEMANDED
+      pre: "The campaigners "
+      post: " the funding."
+      answers: [demanded that the council ring-fence, demanded the council ring-fence]
+      answer_shown: demanded that the council ring-fence
+      hint: 4–6 words, including the key word
+    explanation: "Demand takes a subjunctive that-clause with a bare verb: ring-fence, with no -s. There is no demanded the council to ring-fence pattern in English."
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: They would not let us record the session.
+      key: ALLOWED
+      pre: "We "
+      post: " the session."
+      answers: [were not allowed to record, weren't allowed to record]
+      answer_shown: were not allowed to record
+      hint: 3–6 words, including the key word
+    explanation: "Module 4 revision — let and make in the passive. Let has no ordinary passive, so English switches to be allowed to, and the to-infinitive is obligatory after allowed."
+  # ── open_cloze × 4 ─────────────────────────────────────────────
+  - type: open_cloze
+    group: reading
+    grammar_point: wish and if only (past, past perfect, would)
+    content:
+      pre: "I wish the heating "
+      post: " been fixed before November."
+      answers: [had]
+      answer_shown: had
+    explanation: "Wish + HAD + past participle for a regret about something already finished; the passive keeps the heating as the thing repaired."
+  - type: open_cloze
+    group: reading
+    grammar_point: "The subjunctive (demand / insist / suggest that it be…)"
+    content:
+      pre: "It is imperative that every applicant "
+      post: " treated identically."
+      answers: [be]
+      answer_shown: be
+    explanation: "Adjectives of necessity take a bare BE in the that-clause. Is treated would report a fact rather than state a requirement."
+  - type: open_cloze
+    group: reading
+    grammar_point: as if / as though + unreal
+    content:
+      pre: "He spends as though money "
+      post: " unlimited, which it visibly is not."
+      answers: [were, was]
+      answer_shown: were
+    explanation: "As though + unreal past denies the comparison, and WERE is the subjunctive form careful writing prefers for every person."
+  - type: open_cloze
+    group: reading
+    grammar_point: would rather and would sooner
+    content:
+      pre: "I'd rather we "
+      post: " that in public than promised what we cannot deliver."
+      answers: [admitted]
+      answer_shown: admitted
+    explanation: "Would rather + subject + past simple is unreal, not past — the admission has not been made. Than introduces the rejected alternative."
+  # ── reading_comprehension × 1 ──────────────────────────────────
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Its founders have lobbied the council with a persistence bordering on rudeness, and last spring the committee accepted a recommendation that the scheme's funding be ring-fenced until 2029."
+      q: What does the passage suggest about how the scheme won its funding?
+      options:
+        - The council approached the founders with an offer.
+        - An independent evaluation persuaded the committee.
+        - Sustained pressure from the founders eventually worked.
+        - The money was guaranteed by national government.
+      answer: 2
+    explanation: "Lobbying with a persistence bordering on rudeness names the cause, and the committee's decision followed it. The evaluation appears elsewhere in the article as something still being demanded, not as something already delivered."
+  # ── mc_cloze × 4 ───────────────────────────────────────────────
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "Unpaid internships "
+      post: " anybody who cannot afford to live rent-free in the capital."
+      options: [integrate, subsidise, shut out, mobilise]
+      answer: 2
+    explanation: "Shut somebody out means to prevent them from taking part in something they have a fair claim to join, which an unaffordable condition does. Integrate would mean precisely the opposite."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "Everyone in the room had "
+      post: " in the figures being wrong."
+      options: [a vested interest, a safety net, a head start, a pressure group]
+      answer: 0
+    explanation: "A vested interest is a personal or financial reason for wanting a situation to stay as it is, which is why the figures were unwelcome. A safety net is state help, not a motive."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "The petition only "
+      post: " after a national paper picked it up."
+      options: [claimed benefits, was pigeonholed, was ring-fenced, gained traction]
+      answer: 3
+    explanation: "Gain traction means to start attracting real support and making visible progress, which national coverage produced. Ring-fenced applies to money set aside for one purpose, not to a campaign."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "Attitudes to class in this country are "
+      post: " rather than deliberate."
+      options: [inclusive, entrenched, marginalised, means-tested]
+      answer: 1
+    explanation: "Entrenched means so firmly established over time that it is very hard to shift, which is exactly the contrast being drawn with deliberate. Marginalised describes people pushed to the edges, not attitudes."
+  # ── collocation_match × 4 ──────────────────────────────────────
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [push for, hold sb to, speak out, advocate]
+      right: [for a cause, account, reform, against a decision]
+      pairs: {0: 2, 1: 1, 2: 3, 3: 0}
+    explanation: "Push for reform, hold somebody to account, speak out against a decision, advocate for a cause — four campaigning collocations with fixed prepositions."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [a decade of, a shortage of, a lack of, a culture of]
+      right: [social cohesion, affordable housing, austerity, blame]
+      pairs: {0: 2, 1: 1, 2: 0, 3: 3}
+    explanation: "A decade of austerity, a shortage of affordable housing, a lack of social cohesion, a culture of blame — of-phrases naming what a society has too little or too much of."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [meet the, widen the, cross the, improve]
+      right: [poverty line, life chances, eligibility criteria, attainment gap]
+      pairs: {0: 2, 1: 3, 2: 0, 3: 1}
+    explanation: "Meet the eligibility criteria, widen the attainment gap, cross the poverty line, improve life chances — the verb tells you whether a rule, a difference or an opportunity is meant."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [racial, unconscious, indirect, residential]
+      right: [discrimination, segregation, prejudice, bias]
+      pairs: {0: 2, 1: 3, 2: 0, 3: 1}
+    explanation: "Racial prejudice, unconscious bias, indirect discrimination, residential segregation — each adjective selects one partner and rarely appears with the others."
+  # ── word_formation × 4 ─────────────────────────────────────────
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Two governors argued that the policy was "
+      post: " against part-time staff."
+      prompt: DISCRIMINATE
+      answers: [discriminatory]
+      answer_shown: discriminatory
+    explanation: "After was the gap needs an adjective: discriminatory. The noun discrimination cannot follow was directly in this frame."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Community "
+      post: " is easier to damage than to build."
+      prompt: COHESIVE
+      answers: [cohesion]
+      answer_shown: cohesion
+    explanation: "After the noun community the gap needs another noun: community cohesion. The adjective cohesive cannot be the subject of is."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "The charity's "
+      post: " work has changed three pieces of legislation."
+      prompt: ADVOCATE
+      answers: [advocacy]
+      answer_shown: advocacy
+    explanation: "Before work the gap wants a noun used attributively: advocacy work. Advocate is either the person or the verb, and neither fits here."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Half the families who qualify never apply, because the form is "
+      post: "."
+      prompt: READ
+      answers: [unreadable]
+      answer_shown: unreadable
+    explanation: "The sense required is impossible to read, which needs both the prefix and the suffix: unreadable. Unread would mean only that nobody has read it."

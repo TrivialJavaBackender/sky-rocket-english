@@ -1,0 +1,357 @@
+# Checkpoint A · 40 items over modules 1–4 (Block A · Consolidate). Pass mark 75%
+# (30/40) — set in db/migrations/0002, not here.
+#
+# Unlike the diagnostic, every item here is built from what was actually taught:
+# the 20 grammar points of M01–M04 and the 180 lexemes of their vocab.yaml files.
+# Nothing is tested that the block did not cover.
+#
+# Design: exactly 10 items per module, formats 1–7 of the catalogue mixed
+# throughout. reading_comprehension is excluded — a checkpoint package carries no
+# reading_text, so sync would store reading_text_id = null.
+#
+# Format spread: 7 grammar_drill · 6 open_cloze · 6 key_word_transformation ·
+#                6 mc_cloze · 5 word_formation · 5 error_correction ·
+#                5 collocation_match = 40
+#
+# ATTRIBUTION: checkpoint exercises cannot carry `grammar_point` (the column is
+# module-scoped and syncCheckpoint passes an empty map), so the owning module is
+# carried in the explanation prefix — "M02 · Causative — …". That keeps the
+# debrief able to say which module a miss belongs to.
+#
+# review_pool is empty: a checkpoint is sat once and does not seed spaced review.
+
+core:
+  # ══════════════ M01 · Work & Careers ══════════════
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "By the time the restructuring was announced, she "
+      post: " for the firm for eleven years."
+      prompt: WORK
+      options: [worked, had been working, has been working, was working]
+      answer: 1
+    explanation: "M01 · Narrative tenses — The announcement is a fixed point in the past and the eleven years run up to it, which is the past perfect continuous. Has been working would measure the period up to now, and the past-tense was announced rules that out."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "He "
+      post: " to step down in March, but the board talked him into staying another year."
+      prompt: GO
+      options: [is going, has been going, will be going, was going]
+      answer: 3
+    explanation: "M01 · Future in the past — An intention held in the past that was never carried out takes was going to + infinitive. The but-clause confirms the plan was abandoned, which is exactly what this form signals."
+  - type: open_cloze
+    group: reading
+    content:
+      pre: "She "
+      post: " been snowed under ever since the two departments were merged."
+      answers: [has]
+      answer_shown: has
+    explanation: "M01 · Perfect aspect — Ever since marks a past starting point for a state that still holds, so the present perfect continuous is required and only the auxiliary has fits. Be snowed under is the block's idiom for being overwhelmed with work."
+  - type: open_cloze
+    group: reading
+    content:
+      pre: "By December she "
+      post: " have worked here for a decade, which entitles her to the long-service leave."
+      answers: [will]
+      answer_shown: will
+    explanation: "M01 · Future forms — By December sets a future point and the decade is complete at it, which is the future perfect: will have worked. The present perfect would place the anniversary in the past instead."
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: It is six years since she joined the company.
+      key: BEEN
+      pre: "She "
+      post: " with the company for six years."
+      answers: [has been]
+      answer_shown: has been
+      hint: 2–3 words, including the key word
+    explanation: "M01 · Perfect aspect — It is six years since X joined reports a state that began then and continues, which the present perfect expresses directly: has been with the company for six years. Since takes a point, for takes a span."
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: She intended to hand in her notice, but the promotion changed her mind.
+      key: GOING
+      pre: "She "
+      post: " in her notice, but the promotion changed her mind."
+      answers: [was going to hand]
+      answer_shown: was going to hand
+      hint: 3–5 words, including the key word
+    explanation: "M01 · Future in the past — An intention formed in the past and then abandoned is was going to + infinitive. Would hand would report a prediction rather than a personal plan the speaker later dropped."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "After fifteen years of eighty-hour weeks he was close to complete "
+      post: ", and took six months off."
+      options: [turnover, severance, burnout, redundancy]
+      answer: 2
+    explanation: "M01 · Workload and burnout — Burnout is the exhaustion produced by sustained overwork, which the eighty-hour weeks establish. Turnover concerns staff leaving, severance is money paid on dismissal, and redundancy is the loss of a post."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "The post is "
+      post: " yet rewarding, which is why people stay in it for years."
+      prompt: DEMAND
+      answers: [demanding]
+      answer_shown: demanding
+    explanation: "M01 · Workload — The gap needs an adjective describing the post, and the -ing form of demand supplies it: demanding yet rewarding is the block's fixed pairing. Demanded would make the post the thing requested."
+  - type: error_correction
+    group: grammar
+    content: {words: [I, am, knowing, him, since, we, worked, together, in, "Berlin."], wrong: 1, correction: "am knowing → have known"}
+    explanation: "M01 · State verbs and the continuous — Know is a state verb and does not take the continuous at all, and since needs a perfect form to reach the present: have known him since. Two rules of the module fail in the same three words."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [hand in, take on, meet, carve out]
+      right: [a niche, your notice, a deadline, a workload]
+      pairs: {0: 1, 1: 3, 2: 2, 3: 0}
+    explanation: "M01 · Career and workload collocations — Hand in your notice, take on a workload, meet a deadline, carve out a niche. Each verb selects one partner and the pairings do not cross over."
+
+  # ══════════════ M02 · Science & Technology ══════════════
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "The sample "
+      post: " before it ever reached the lab — nothing else explains the readings."
+      prompt: TAMPER
+      options: ["must have been tampered with", "must have tampered with", "must be tampering with", "had to tamper with"]
+      answer: 0
+    explanation: "M02 · Modal passives — A confident deduction about a past event in the passive is must have been + past participle, and tamper keeps its preposition: tampered with. The sample receives the action, so the active forms are impossible."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "The department "
+      post: " by an independent laboratory before anything is published."
+      prompt: HAVE
+      options: ["has verified its findings", "has been verified", "has its findings verified", "was having verified"]
+      answer: 2
+    explanation: "M02 · Causative — Work the department arranges but does not perform itself is have + object + past participle: has its findings verified. Has verified its findings would make the department the verifier, which the by-phrase contradicts, and has been verified would mean the department itself was checked."
+  - type: open_cloze
+    group: reading
+    content:
+      pre: "It "
+      post: " widely believed that the technique will be obsolete within a decade."
+      answers: [is]
+      answer_shown: is
+    explanation: "M02 · Impersonal passive — It is believed that… reports a widely held view without naming who holds it. The dummy subject it requires a form of be before the participle, and no other word fits the gap."
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: People say the technique is already obsolete.
+      key: SAID
+      pre: "The technique "
+      post: " already obsolete."
+      answers: [is said to be]
+      answer_shown: is said to be
+      hint: 3–4 words, including the key word
+    explanation: "M02 · Passive reporting — People say that X is Y converts to X is said to be Y, moving the subject of the that-clause into subject position. The infinitive is is required after said to."
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: An outside firm crunches the numbers for them every quarter.
+      key: HAVE
+      pre: "They "
+      post: " every quarter."
+      answers: [have the numbers crunched]
+      answer_shown: have the numbers crunched
+      hint: 3–5 words, including the key word
+    explanation: "M02 · Causative — Arranging for somebody else to do the work is have + object + past participle: have the numbers crunched. The outside firm disappears from the sentence, which is exactly what the causative is for."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "The trial was far too small to be "
+      post: ", so the findings cannot be generalised to the population."
+      options: [representative, feasible, obsolete, empirical]
+      answer: 0
+    explanation: "M02 · Research vocabulary — A representative sample reflects the wider population, which is precisely what a small trial fails to do. Feasible means practicable, obsolete means out of date, and empirical describes evidence from observation."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "The technique has finally begun to "
+      post: " among smaller manufacturers, five years after the first prototype."
+      options: ["scale up", "roll out", "back up", "gain traction"]
+      answer: 3
+    explanation: "M02 · Innovation vocabulary — Gain traction means to start being adopted and taken seriously, which fits the slow spread described. Scale up and roll out both need somebody to perform them, but the subject here is the technique itself."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "The findings have limited "
+      post: " outside the narrow conditions of the original trial."
+      prompt: APPLY
+      answers: [applicability]
+      answer_shown: applicability
+    explanation: "M02 · Research vocabulary — The gap follows the adjective limited and so must be an abstract noun: applicability, the extent to which something can be applied. Application would refer to a particular use rather than the general property."
+  - type: error_correction
+    group: grammar
+    content: {words: [The, experiment, must, had, been, repeated, before, the, results, were, "published."], wrong: 3, correction: "had → have"}
+    explanation: "M02 · Modal passives — A modal is always followed by a bare infinitive, so the perfect passive after must is have been repeated. Must had been is impossible: only one of the two verbs may carry tense, and the modal has already taken it."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [conduct, draw, replicate, pose]
+      right: [research, a threat, conclusions, the findings]
+      pairs: {0: 0, 1: 2, 2: 3, 3: 1}
+    explanation: "M02 · Research collocations — Conduct research, draw conclusions, replicate the findings, pose a threat. Each of these verbs is the standard academic partner for its noun, and substituting a near-synonym reads as non-native."
+
+  # ══════════════ M03 · Media & Communication ══════════════
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "The paper "
+      post: " the minister of suppressing the inspectors' report for eight months."
+      prompt: ACCUSE
+      options: [alleged, blamed, denied, accused]
+      answer: 3
+    explanation: "M03 · Reporting verb patterns — Accuse selects of + -ing: accused the minister of suppressing. Blame takes for, allege takes a that-clause, and deny takes no personal object at all — each verb locks to its own pattern."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "She suggested "
+      post: " the claim with a second source before running the story."
+      prompt: CHECK
+      options: ["us to check", checking, "to check", "that we checking"]
+      answer: 1
+    explanation: "M03 · Patterns with suggest — Suggest takes an -ing form or a that-clause, never object + infinitive. Suggested us to check is the single most persistent error with this verb, and suggested that we check would be the other correct option."
+  - type: open_cloze
+    group: reading
+    content:
+      pre: "The source "
+      post: " alleged to have leaked the documents to two rival outlets."
+      answers: [is]
+      answer_shown: is
+    explanation: "M03 · Passive reporting — Is alleged to have leaked reports an accusation without endorsing it, and the perfect infinitive places the leaking before the reporting. Only the auxiliary fits the gap."
+  - type: open_cloze
+    group: reading
+    content:
+      pre: "He said he "
+      post: " been working on the investigation for the better part of a year."
+      answers: [had]
+      answer_shown: had
+    explanation: "M03 · Tense backshift — The reporting verb said is past, so the present perfect of the original words backshifts to the past perfect: had been working. Has been working would leave the quotation unshifted."
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: "'Could you verify this before Friday?' the editor asked me."
+      key: ASKED
+      pre: "The editor "
+      post: " the claim before Friday."
+      answers: [asked me to verify]
+      answer_shown: asked me to verify
+      hint: 3–5 words, including the key word
+    explanation: "M03 · Requests in reported speech — A polite request reports as ask + object + to-infinitive, and the question form disappears entirely: asked me to verify. Asked me that I verify is not English."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "The allegations remain entirely "
+      post: ": not one of the three sources has corroborated them."
+      options: [impartial, unsubstantiated, credible, "off the record"]
+      answer: 1
+    explanation: "M03 · Credibility vocabulary — Unsubstantiated means unsupported by evidence, which the failure to corroborate establishes. Impartial describes a lack of bias, credible would mean the opposite of what the colon explains, and off the record concerns permission to publish."
+  - type: error_correction
+    group: grammar
+    content: {words: [She, told, that, the, story, had, already, been, "retracted."], wrong: 1, correction: "told → said"}
+    explanation: "M03 · Reported speech — Tell requires a personal object (told me that…), whereas say takes a that-clause directly. With no object present, only said is possible here."
+  - type: error_correction
+    group: grammar
+    content: {words: [The, editor, suggested, me, to, hold, the, story, for, a, "day."], wrong: 3, correction: "me to hold → holding"}
+    explanation: "M03 · Patterns with suggest — Suggest never takes object + infinitive. The alternatives are suggested holding the story or suggested that I hold it, and both drop the personal object from that position."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "The coverage was widely criticised as "
+      post: ", trading nuance for outrage on every front page."
+      prompt: SENSATION
+      answers: [sensationalist, sensational]
+      answer_shown: sensationalist
+    explanation: "M03 · Media vocabulary — Sensationalist describes reporting that exaggerates in order to excite, which trading nuance for outrage spells out. The neutral sensational would mean excellent, the opposite of a criticism."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [break, hold, stoke, retract]
+      right: [outrage, a statement, the story, someone to account]
+      pairs: {0: 2, 1: 3, 2: 0, 3: 1}
+    explanation: "M03 · Journalism collocations — Break the story, hold someone to account, stoke outrage, retract a statement. These are the fixed verb-noun pairings of news English and none of them accepts a substitute verb."
+
+  # ══════════════ M04 · Education & Learning ══════════════
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "She stopped "
+      post: " for exams the year she left school, and has never gone back to it."
+      prompt: CRAM
+      options: [cramming, "to cram", cram, "having crammed"]
+      answer: 0
+    explanation: "M04 · Verbs that change meaning — Stop + -ing ends the activity itself, which has never gone back to it confirms. Stopped to cram would mean she interrupted something else in order to start cramming."
+  - type: open_cloze
+    group: reading
+    content:
+      pre: "After two terms abroad she is still not used "
+      post: " studying in her third language."
+      answers: [to]
+      answer_shown: to
+    explanation: "M04 · to as a preposition — Be used to means be accustomed to, and its to is a preposition, which is why the -ing form follows. Keep it apart from used to study, the past habit, which never has a form of be in front of it."
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: Somebody needs to rewrite this chapter before it goes to the printer.
+      key: NEEDS
+      pre: "This chapter "
+      post: " before it goes to the printer."
+      answers: [needs rewriting]
+      answer_shown: needs rewriting
+      hint: 2–3 words, including the key word
+    explanation: "M04 · Perfect and passive -ing forms — After need, the -ing form carries a passive meaning: needs rewriting = needs to be rewritten. Needs to rewrite would make the chapter the writer rather than the thing written."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "About six weeks in, most trainees "
+      post: " and stop making any visible progress for a month or so."
+      options: ["hit a plateau", "fall behind", "drop out", underachieve]
+      answer: 0
+    explanation: "M04 · Learning vocabulary — Hit a plateau describes progress levelling off despite continued effort, which the second half of the sentence restates. Fall behind implies comparison with others, and drop out means leaving altogether."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "He has a real "
+      post: " for languages, though he has never studied one formally."
+      options: [curriculum, plateau, flair, scholarship]
+      answer: 2
+    explanation: "M04 · Aptitude vocabulary — A flair for something is a natural talent, which never studied one formally underlines. A curriculum is a course of study, a plateau is a stall in progress, and a scholarship is funding."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Most of what he knows is "
+      post: ", picked up on the job rather than in a lecture hall."
+      prompt: VOCATION
+      answers: [vocational]
+      answer_shown: vocational
+    explanation: "M04 · Education vocabulary — Vocational describes training tied to a particular trade or job, which picked up on the job spells out. The gap follows is and needs an adjective, not the noun vocation."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Rote "
+      post: " will carry you through Thursday and fail you for the rest of your life."
+      prompt: LEARN
+      answers: [learning]
+      answer_shown: learning
+    explanation: "M04 · Education vocabulary — Rote learning is the fixed compound for memorising by repetition without understanding. The gap is the head noun of the subject, so the -ing form is required."
+  - type: error_correction
+    group: grammar
+    content: {words: [I, look, forward, to, hear, from, the, admissions, office, "soon."], wrong: 4, correction: "hear → hearing"}
+    explanation: "M04 · to as a preposition — The to of look forward to is a preposition, so an -ing form must follow: look forward to hearing. Substituting a noun proves it — look forward to your reply is perfectly natural."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [grasp, retain, sit, "brush up"]
+      right: [information, a concept, "on your French", "an exam"]
+      pairs: {0: 1, 1: 0, 2: 3, 3: 2}
+    explanation: "M04 · Learning collocations — Grasp a concept, retain information, sit an exam, brush up on your French. Note that brush up carries its own preposition on, which the other three do not take."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: ["enrol on", "graduate from", "drop out of", "put theory into"]
+      right: [university, practice, "a course", "medical school"]
+      pairs: {0: 2, 1: 0, 2: 3, 3: 1}
+    explanation: "M04 · Institutions and credentials — Enrol on a course, graduate from university, drop out of medical school, put theory into practice. The prepositions are fixed and each verb selects its own kind of object."
+
+review_pool: []

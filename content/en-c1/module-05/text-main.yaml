@@ -1,0 +1,54 @@
+kind: main
+kicker: LONG-READ
+title: The Last Harvest
+meta: ≈ 7 min · dotted words carry glosses — tap to reveal
+word_count: 1062
+body:
+  - - t: "The wheat came up thin again this spring on the eastern edge of the county, and Marta Ruiz walked the rows the way you walk a hospital corridor. In a good decade it stood waist-high by May. This year it reached her knee. Four dry years have taken a toll on more than the wheat."
+  - - t: "What is happening on this plain is not weather, or not only weather. Beneath it lies an "
+    - g: aquifer
+    - t: ", a bed of saturated gravel laid down while the last ice sheets were retreating, and since the first irrigation licences were granted in the 1950s the district has drawn water out of it roughly twenty times faster than rain puts it back. Hydrologists call that an overdraft. The textbooks call it resource depletion. Farmers here call it Tuesday. If the county had metered its wells when the first "
+    - g: drawdown
+    - t: " maps were published, the water table would still be within reach of an ordinary pump today; it did not, and it is not."
+  - - t: "Cheap diesel, a guaranteed price and a subsidy paid by the hectare turned a patchwork of pasture and orchards into one crop repeated to the horizon. A "
+    - g: monoculture
+    - t: " is a magnificent machine as long as nothing goes wrong with it. Pull out the hedgerows, drain the wet corners, and you gain four per cent more arable land and lose the insects, the birds that ate them and the fungal networks that held the ground together. The biodiversity loss was invisible from the cab of a tractor, and so was the habitat destruction that produced it. So was the soil degradation that followed, arriving at perhaps one per cent of crop yields a year — a figure too small to argue about until thirty of them had been added up."
+  - - t: "Then there was the water that did come back. Fertiliser the wheat never took up left the fields as "
+    - g: run_off
+    - t: ", and whatever the rivers did not carry away leached into the shallow groundwater instead. Two villages have been drinking from tankers since 2021. Officials say the contaminated supply is treatable, provided the treatment plant is funded beyond the end of the decade, and are rather less forthcoming about what happens if it is not. The knock-on effects reached the kitchens long before anybody connected them to the fields."
+  - - t: "Had the county acted in 2005, when the first serious report landed on the desk of a committee that met twice a year, the correction would have cost about the price of a bypass. Delay is never free. It is simply invoiced later, and the invoice is presented to people who did not order the meal."
+  - - t: "Were it not for a retirement scheme that pays growers to cap their wells and take the land out of production, perhaps half of those still farming here would have gone already. The scheme is voluntary and oversubscribed. Marta has not applied. \"My grandfather broke this ground,\" she says, and then, after a pause, \"which is exactly the sentence that got us into this.\""
+  - - t: "But for the aquifer, none of this would have been farmland at all. The plain was grazed, lightly, for two centuries, because a hundred millimetres of rain a year supports cattle and not wheat. Irrigation did not make the land fertile. It borrowed fertility from underneath it, at the expense of every farmer who would come after, and called the loan income. Growers are now asked to cut back on the one input that makes the arithmetic work, and told that otherwise there will be nothing left to irrigate by 2050."
+  - - t: "Hydrologists worry less about the average rate of decline than about "
+    - g: tipping_point
+    - t: " that arrives without announcing itself. As the water is drawn down, the clay layers between the gravel compact under the weight of the ground above them, and the pore space that once held the water closes for good. The loss is irreversible damage on any timescale that matters to a family, a county or a country. Worse, it is a feedback loop: a compacted aquifer stores less of the rain that does fall, so each dry year exacerbates the next."
+  - - t: "The plain is not unusual, only early. Extreme weather events do not create water scarcity here so much as expose it: a wet decade hides an overdraft, a dry one presents it. Nations argue about curbing emissions; this district argues about metres. Climate resilience, where there is one crop and one well, would mean having something to fall back on. There is nothing to fall back on."
+  - - t: "Should the rains fail for a third consecutive spring, the district will move to emergency allocation — a polite word for deciding which farms stop. Unless demand falls by roughly a third, every model the university has run ends in the same place, differing only in the decade. What is disputed is not the models but who goes first, and whether the phase-out should follow the size of the farm or the depth of the well."
+  - - t: "Marta has planted twelve hectares of a drought-tolerant variety this year in case the allocation is cut in the autumn — not because she expects it, but because twelve hectares is what she can afford to be wrong about. Two of her neighbours have sold their licences to a company that now generates renewable power where their beans used to be; the panels need no water, carry a carbon footprint mostly spent before they arrived, and the ground beneath them is quietly recovering. If she were a woman who kept a spreadsheet rather than a memory, she would have taken that offer in 2018. The developer is still interested, on condition that the grid connection is approved before the tariff changes."
+  - - t: "None of this is a story about villains. The collapse of the aquifer was nobody's plan; it was the unintended consequence of a hundred sensible decisions, each of which paid for itself, taken by people never required to add them up. Mitigation at the scale of one farm is not mitigation but sacrifice, and environmental stewardship here means asking a single grower to carry a cost shared by everybody who eats. Marta calls this year's crop the last harvest. She has called it that for four years. Each spring the wheat comes up thinner, and each spring she walks out to look at it, because the alternative is not looking."
+glosses:
+  - key: aquifer
+    term: aquifer
+    pos_label: noun
+    definition: a layer of rock or gravel below ground that holds water which can be pumped to the surface
+    example: Once an aquifer has been drained and the clay has compacted, it will not refill.
+  - key: drawdown
+    term: drawdown
+    pos_label: noun
+    definition: the drop in the level of underground water caused by pumping more out than rain puts back
+    example: The drawdown maps published in the 1980s showed the water table falling a metre a year.
+  - key: monoculture
+    term: monoculture
+    pos_label: noun
+    definition: the practice of growing a single crop over a large area, season after season
+    example: Breaking the monoculture cost the farm nine per cent of its income and saved its soil.
+  - key: run_off
+    term: agricultural run-off
+    pos_label: noun phrase
+    definition: rain water that washes fertiliser and chemicals off farmland into rivers and groundwater
+    example: Agricultural run-off, not sewage, is what turns the river green every June.
+  - key: tipping_point
+    term: a tipping point
+    pos_label: noun phrase
+    definition: the moment at which a small further change pushes a system irreversibly into a new state
+    example: Scientists argue about where the tipping point lies, not about whether there is one.

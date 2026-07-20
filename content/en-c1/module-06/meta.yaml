@@ -1,0 +1,36 @@
+slug: m06
+title: Society & Inequality
+standfirst: The unreal past behind wish, would rather and as if, and the subjunctive of demand and necessity · 45 lexemes with use cases · a comparative monologue.
+goals:
+  - text: Express regret, irritation and impatience with the right past form after wish, if only and it's high time
+    achieved_by: workout
+  - text: Handle would rather and would sooner in both patterns — bare infinitive for yourself, unreal past for other people
+    achieved_by: workout
+  - text: Signal with as if and as though whether a comparison is meant to be true or not
+    achieved_by: workout
+  - text: Produce the subjunctive after verbs, adjectives and nouns of demand and necessity (demand that it be…)
+    achieved_by: workout
+  - text: Deploy 45 high-value lexemes of inequality, social policy and activism in your own sentences
+    achieved_by: input
+  - text: Compare two contrasting social situations in a fluent two-to-three-minute monologue
+    achieved_by: output
+grammar_points:
+  - wish and if only (past, past perfect, would)
+  - would rather and would sooner
+  - "it's (high) time + past"
+  - as if / as though + unreal
+  - "The subjunctive (demand / insist / suggest that it be…)"
+texts:
+  - kind: main
+    title: Born on the Wrong Side of Town
+    word_count: 1017
+  - kind: extra
+    title: Three Readers Reply
+    word_count: 401
+production:
+  mode: speaking
+  genre: comparative monologue (Speaking Part 2 style)
+cards:
+  vocab: 45
+  grammar_cloze: 10
+  transformation: 8

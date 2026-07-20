@@ -141,6 +141,44 @@ export async function countAttemptsInWindow(userId: number, since: Date): Promis
   return prisma.exercise_attempt.count({ where: { user_id: userId, answered_at: { gte: since } } });
 }
 
+export interface ExerciseAttemptTallyDTO {
+  /** How many times this exercise has ever been attempted in this context. */
+  count: number;
+  /** Correctness of the most recent of those attempts. */
+  lastIsCorrect: boolean;
+}
+
+/**
+ * Per-exercise attempt tally for one context, used to resume an interrupted set
+ * (UC-09). Returns both the count and the latest correctness: the count is what
+ * separates the current run from previous ones (see `computeSetProgress`), the
+ * correctness is what repaints the progress dots.
+ *
+ * Exercises with no attempt are simply absent from the map.
+ */
+export async function getAttemptTallies(
+  userId: number,
+  exerciseIds: number[],
+  context: AttemptContext,
+): Promise<Map<number, ExerciseAttemptTallyDTO>> {
+  const out = new Map<number, ExerciseAttemptTallyDTO>();
+  if (exerciseIds.length === 0) return out;
+
+  const rows = await prisma.exercise_attempt.findMany({
+    where: { user_id: userId, context, exercise_id: { in: exerciseIds.map((id) => BigInt(id)) } },
+    select: { exercise_id: true, is_correct: true, answered_at: true },
+    orderBy: { answered_at: 'asc' },
+  });
+
+  for (const r of rows) {
+    const id = idToNumber(r.exercise_id);
+    const prev = out.get(id);
+    // rows are ascending, so the last one seen is the most recent
+    out.set(id, { count: (prev?.count ?? 0) + 1, lastIsCorrect: r.is_correct });
+  }
+  return out;
+}
+
 export async function getExerciseAttemptById(id: number): Promise<ExerciseAttemptDTO | null> {
   const row = await prisma.exercise_attempt.findUnique({ where: { id } });
   if (!row) return null;

@@ -1,0 +1,34 @@
+slug: m03
+title: Media & Communication
+standfirst: Reported speech, the reporting verbs that carry their own verdict and the passive of rumour · 45 lexemes with use cases · an opinion article.
+goals:
+  - text: Backshift tenses accurately in reported speech — and recognise the cases that need no shift at all
+    achieved_by: workout
+  - text: Choose reporting verbs whose pattern carries the meaning (deny doing, accuse sb of, urge sb to)
+    achieved_by: workout
+  - text: Report unverified claims at a professional distance with the passive (is alleged to have)
+    achieved_by: workout
+  - text: Deploy 45 high-value media and credibility lexemes in your own sentences
+    achieved_by: input
+  - text: Argue a position on platform verification in a 220–260 word opinion article
+    achieved_by: output
+grammar_points:
+  - Tense backshift — and when it is not needed
+  - Reporting verb patterns (deny doing, accuse sb of, urge sb to)
+  - Passive reporting (is alleged to / is rumoured to have)
+  - Questions, requests and advice in reported speech
+  - Patterns with suggest (and recommend)
+texts:
+  - kind: main
+    title: Manufacturing Outrage
+    word_count: 832
+  - kind: extra
+    title: One Vote, Two Front Pages
+    word_count: 477
+production:
+  mode: writing
+  genre: opinion article
+cards:
+  vocab: 45
+  grammar_cloze: 10
+  transformation: 8

@@ -1,0 +1,69 @@
+mode: writing
+genre: CAE Writing Part 1 essay
+prompt: |
+  Your class has attended a panel discussion on how the environmental damage
+  caused by modern farming should be dealt with. You have made the notes below.
+
+    Ways of protecting the environment from intensive agriculture:
+    · regulation — legal limits on water extraction, fertiliser and land use
+    · financial incentives — carbon pricing, payments for stewardship, scrapping harmful subsidies
+    · technology — drought-tolerant crops, soil sensors, renewable power on farmland
+
+    Some opinions expressed in the discussion:
+    "Nobody changes anything until it costs them money."
+    "The rules always arrive twenty years after the damage."
+    "You cannot invent your way out of running out of water."
+
+  Write an essay for your tutor discussing TWO of the three approaches in your
+  notes. You should explain which approach you think is more effective in
+  protecting the environment, and provide reasons to support your opinion.
+
+  You may, if you wish, make use of the opinions expressed in the discussion,
+  but you should use your own words as far as possible.
+
+  Write 220–260 words in a formal, impersonal register: no contractions, no
+  direct address to the reader, and a clear position stated in the final
+  paragraph.
+
+  Deploy the grammar of this module deliberately. Include at least:
+  · one mixed conditional (past cause → present result, or the reverse);
+  · one inverted conditional (Had…, Were it not for…, Should…);
+  · one alternative to if (provided that / as long as / on condition that / unless);
+  · one otherwise or but for.
+  Use at least six lexemes from this module, and do not signpost them — they
+  should be invisible inside the argument.
+model_answer: |
+  Modern agriculture feeds more people than at any point in history, and it does
+  so by drawing down the soil and water on which it depends. Of the three
+  approaches discussed, regulation and financial incentives seem to me the two
+  that determine whether anything changes at all.
+
+  Regulation has the advantage of certainty. A legal limit on extraction slows
+  resource depletion on every farm equally, and unless such limits exist, the careful grower is
+  simply undercut by the careless one. Its weakness is timing. Rules are
+  normally written once the evidence has become undeniable, by which point the
+  soil degradation they address may already amount to irreversible damage. Had
+  the aquifers now failing been metered thirty years ago, the corrections
+  required today would be modest and local rather than national and ruinous.
+
+  Financial incentives work faster, because they speak the language in which
+  farming decisions are actually taken. Carbon pricing and payments for
+  environmental stewardship alter the arithmetic of a single season rather than
+  the law of a decade and, provided the measurement is honest, they reward good
+  practice directly instead of merely forbidding its opposite. Were it not for
+  subsidies pulling in precisely the opposite direction, many of the practices
+  now regretted would never have spread so widely in the first place.
+
+  On balance, incentives appear to me the more effective instrument, but only
+  where regulation defines the outer boundary; otherwise the price simply buys
+  the damage. Prices move behaviour, while limits establish what is not for
+  sale.
+checklist:
+  - Discusses exactly two of the three approaches, and compares them rather than describing each in turn
+  - States a clear position on which approach is more effective in the final paragraph
+  - Stays within 220–260 words
+  - Maintains a formal, impersonal register throughout — no contractions and no direct address to the reader
+  - Contains at least one mixed conditional in which the two halves sit in different times
+  - Contains at least one inverted conditional (Had…, Were it not for…, Should…), with the negative written out in full
+  - Uses at least one alternative to if (provided that, as long as, on condition that, unless) and one otherwise or but for
+  - Deploys six or more lexemes from this module inside the argument rather than as decoration

@@ -1,0 +1,34 @@
+slug: m04
+title: Education & Learning
+standfirst: Gerunds and infinitives, the verb pairs that change meaning and the traps of to · 45 lexemes with use cases · a recorded monologue.
+goals:
+  - text: Choose between -ing and to correctly after verbs whose meaning depends on that choice
+    achieved_by: workout
+  - text: Handle verb + object + infinitive patterns, including let and make in the passive
+    achieved_by: workout
+  - text: Recognise to as a preposition and put the -ing form after it without hesitating
+    achieved_by: workout
+  - text: Deploy 45 high-value education and cognition lexemes in your own sentences
+    achieved_by: input
+  - text: Deliver a fluent two-to-three-minute monologue on the most useful thing you have learnt
+    achieved_by: output
+grammar_points:
+  - Verbs that change meaning (remember / forget / regret / stop / try / mean / go on)
+  - Verb + object + infinitive
+  - let and make in the passive
+  - to as a preposition (look forward to doing, be used to doing)
+  - Perfect and passive -ing forms (deny having done, need doing)
+texts:
+  - kind: main
+    title: Why Cramming Fails
+    word_count: 1035
+  - kind: extra
+    title: Everything I Learnt After I Stopped Studying
+    word_count: 354
+production:
+  mode: speaking
+  genre: recorded monologue (Speaking Part 2 style)
+cards:
+  vocab: 45
+  grammar_cloze: 10
+  transformation: 8

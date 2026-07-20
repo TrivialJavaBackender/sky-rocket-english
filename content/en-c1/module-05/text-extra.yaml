@@ -1,0 +1,36 @@
+kind: extra
+kicker: MANIFESTO
+title: Nothing We Build Will Outlast the Soil
+meta: ≈ 3 min · a start-up states its terms — dotted words carry glosses
+word_count: 360
+body:
+  - - t: "We are fourteen people in a converted dairy outside Norwich. Better to say this badly now than beautifully in five years."
+  - - t: "One. We do not sell "
+    - g: offsets
+    - t: ". Offsetting lets somebody else's balance sheet cancel your emissions, and unless the reduction would genuinely not have happened without your money, it is arithmetic rather than repair. Carbon pricing works when a tonne is a tonne; offsetting works when a tonne is a story. Most of this market is "
+    - g: greenwashing
+    - t: " with a certificate."
+  - - t: "Two. Soil is not a backdrop, it is a resource, and resource depletion looks the same underground as it does at sea. Overfishing stays invisible until the boats come back empty; soil degradation, until the crop yields stop recovering. We build sensors that pay farmers for measured "
+    - g: organic_carbon
+    - t: ", not for intentions. Provided the measurement is honest, the incentive can be honest too."
+  - - t: "Three. We work at the scale of a single field, because that is where the damage happens and where it can be reversed. Were it not for the fact that no satellite sees the first ten centimetres of ground, this would be somebody else's problem."
+  - - t: "Four. Nothing we build will be adopted unless it pays for itself in the first season. We have watched environmentally sound ideas die of virtue. Should ours cost a farmer more than it returns, we will say so in public and stop selling it."
+  - - t: "Five. We will publish what fails. Had the last decade of agricultural technology published its failures, the whole sector would be five years further on than it is."
+  - - t: "Six. We intend to scale up, and we know what scaling does to a promise. So, in writing: the method stays open, the data stays with the farmer, and the day we are bought by a fertiliser company this page goes with us — or else it means nothing."
+  - - t: "We are not going to mitigate our way out of anything from a converted dairy. But the difference between soil that holds water and soil that does not is the difference between a bad harvest and no harvest. In case anyone is keeping score: eleven thousand hectares, four counties, no offsets."
+glosses:
+  - key: offsets
+    term: offsets
+    pos_label: noun
+    definition: payments that compensate for the emissions you produce by funding a reduction somewhere else
+    example: The airline sells offsets that fund tree planting which takes forty years to work.
+  - key: greenwashing
+    term: greenwashing
+    pos_label: noun
+    definition: making a company or a product look environmentally responsible without changing very much
+    example: The campaign was pure greenwashing — a new logo, a recycled label and the same factory.
+  - key: organic_carbon
+    term: organic carbon
+    pos_label: noun phrase
+    definition: carbon stored in the soil as decayed plant and animal material, which holds water and feeds crops
+    example: Two years of cover crops raised the organic carbon in the top ten centimetres by a fifth.

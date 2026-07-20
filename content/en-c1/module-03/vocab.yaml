@@ -1,0 +1,367 @@
+# Module 03 · Media & Communication — 45 lexemes in four domains:
+# the newsroom (12) · truth & verification (11) · spin & manipulation (12) · exposure & suppression (10)
+entries:
+  # ── The newsroom ───────────────────────────────────────────────
+  - term: coverage
+    tag: neutral
+    definition: the reporting of an event or subject in newspapers, on television and online
+    use_cases:
+      - The trial received blanket coverage on every channel.
+      - Election coverage now begins a full year before anyone votes.
+    collocations: media / press / live / wall-to-wall coverage · coverage of sth
+    register: "Neutral; uncountable — no plural, however much of it there is"
+  - term: a media outlet
+    tag: journalistic
+    definition: a single organisation that publishes or broadcasts news — a paper, a channel or a site
+    use_cases:
+      - Only two media outlets bothered to send reporters to the hearing.
+      - The story was picked up by outlets on three continents within a day.
+    collocations: a mainstream / independent / state-run outlet
+    register: "Journalistic-neutral; wider than paper or channel, which is its whole point"
+  - term: break the story
+    tag: journalistic
+    definition: to be the first to report a piece of news
+    use_cases:
+      - A local blog broke the story two days before the national papers noticed.
+      - She broke the story of the leaked audit — and spent the next year in court for it.
+    collocations: break the news to sb · a breaking story
+    register: "Journalistic; on screen the label is breaking news"
+  - term: run a story
+    tag: journalistic
+    definition: to publish or broadcast a news report
+    use_cases:
+      - The editor refused to run the story without a second source.
+      - They ran it on the front page, under the biggest type the desk allowed.
+    collocations: run a piece / a correction / an interview
+    register: "Newsroom register; plain alternative: publish"
+  - term: make headlines
+    tag: neutral
+    definition: to be reported widely and prominently in the news
+    use_cases:
+      - The resignation made headlines across Europe by breakfast.
+      - He made headlines for all the wrong reasons.
+    collocations: hit / grab the headlines · front-page news
+    register: "Neutral-journalistic; hit the headlines is the punchier twin"
+  - term: a scoop
+    tag: journalistic
+    definition: an important story that one outlet publishes before all of its rivals
+    use_cases:
+      - The prison interview was a genuine scoop — nobody else knew he was in the country.
+      - Rival papers spent the whole decade trying to scoop each other on royal news.
+    collocations: get / land a scoop · scoop the competition
+    register: "Journalistic-informal; also a verb: to scoop your rivals"
+  - term: investigative journalism
+    tag: neutral
+    definition: reporting that patiently digs out hidden facts, often over months of work
+    use_cases:
+      - The scandal surfaced only because two reporters spent a year on old-fashioned investigative journalism.
+      - Investigative journalism is expensive — which is exactly why so little of it survives.
+    collocations: an investigative reporter / team / piece
+    register: "Neutral; the prestige end of the trade"
+  - term: an eyewitness account
+    tag: neutral
+    definition: a description of an event given by somebody who personally saw it happen
+    use_cases:
+      - Eyewitness accounts of the crash disagreed on almost every detail.
+      - The documentary rests on a single eyewitness account, which should worry you.
+    collocations: a first-hand / conflicting account · according to eyewitnesses
+    register: "Neutral-legal; close cousin: a first-hand account"
+  - term: a press release
+    tag: neutral
+    definition: an official statement written by an organisation for journalists to quote
+    use_cases:
+      - Half the business section that day had been rewritten from press releases.
+      - The lab announced the result in a press release before the paper had passed review.
+    collocations: issue / put out a press release
+    register: "Neutral-PR; churnalism is the insult for reporting built on them"
+  - term: off the record
+    tag: idiom
+    definition: said to a journalist on condition that it will not be published or attributed
+    use_cases:
+      - Off the record, the aide admitted the campaign was in serious trouble.
+      - Nothing is ever truly off the record with a politician in the room.
+    collocations: speak off the record · go on the record (the opposite)
+    register: "Journalistic idiom; the on-the-record / off-the-record line is a professional contract"
+  - term: hold someone to account
+    tag: formal
+    definition: to force a person or institution to explain and answer for their actions
+    use_cases:
+      - A free press exists to hold power to account.
+      - Shareholders finally held the board to account for two years of losses.
+    collocations: hold power / the government to account · accountability
+    register: "Formal-journalistic; noun: accountability"
+  - term: the news cycle
+    tag: journalistic
+    definition: the constant loop in which stories appear, peak and are replaced by newer ones
+    use_cases:
+      - The minister's gaffe survived exactly one news cycle and vanished.
+      - The 24-hour news cycle rewards speed over accuracy, every single day.
+    collocations: the 24-hour news cycle · dominate the news cycle
+    register: "Media-analysis register; usually with the definite article"
+  # ── Truth & verification ───────────────────────────────────────
+  - term: a credible source
+    tag: neutral
+    definition: a person or publication whose information can reasonably be trusted
+    use_cases:
+      - The claim came from one anonymous post, not from any credible source.
+      - Two credible sources confirmed the figure independently before we ran it.
+    collocations: a reliable / well-placed / anonymous source · cite a source
+    register: "Neutral; in journalism a source is a person — protect yours"
+  - term: verify
+    tag: formal
+    definition: to check carefully that something is true or accurate before accepting it
+    use_cases:
+      - The photo could not be verified, so the desk held it back.
+      - Verify the quote with the person who supposedly said it — every time.
+    collocations: verify a claim / a report / sb's identity · independently verified
+    register: "Formal-procedural; noun: verification"
+  - term: fact-check
+    tag: neutral
+    definition: to test the factual claims in a text or speech, usually publishing what you find
+    use_cases:
+      - The debate was fact-checked live, claim by claim.
+      - Nobody fact-checks a story that confirms what they already believe.
+    collocations: a fact-checker · a fact-checking site
+    register: "Modern journalistic; a child of the misinformation era"
+  - term: refute a claim
+    tag: formal
+    definition: to prove that a statement is wrong
+    use_cases:
+      - The timestamps alone refute the claim that she was in the building.
+      - He angrily denied the story, but he never actually refuted it.
+    collocations: refute an allegation / an argument / a theory
+    register: "Formal; careful writers keep refute (disprove) apart from deny (say it is false)"
+  - term: corroborate
+    tag: formal
+    definition: to confirm somebody's account by providing independent supporting evidence
+    use_cases:
+      - Phone records corroborated the witness's version of the evening.
+      - No second source could corroborate the story, so the story died.
+    collocations: corroborate a story / an account / a witness
+    register: "Formal-legal; everyday alternative: back up"
+  - term: unsubstantiated
+    tag: formal
+    definition: stated without any evidence to support it
+    use_cases:
+      - The report recycles unsubstantiated rumours about the judge's finances.
+      - Unsubstantiated claims travel faster than the corrections that chase them.
+    collocations: unsubstantiated claims / allegations / rumours
+    register: "Formal-legal; substantiate is the positive verb"
+  - term: impartial
+    tag: formal
+    definition: treating all sides equally, without favouring any of them
+    use_cases:
+      - Public broadcasters are required by law to remain impartial during election campaigns.
+      - No referee is perfectly impartial, but the good ones get close.
+    collocations: impartial coverage / advice / observer · strict impartiality
+    register: "Formal; near-synonyms: unbiased, even-handed"
+  - term: biased
+    tag: neutral
+    definition: unfairly favouring one side because of your own opinions or interests
+    use_cases:
+      - Readers on both sides called the same article biased — against them.
+      - The poll was biased towards city voters and missed the result by six points.
+    collocations: biased against / towards / in favour of sb · a biased account
+    register: "Neutral; noun: bias, as in confirmation bias"
+  - term: allegedly
+    tag: legal
+    definition: according to what people claim, although it has not been proved
+    use_cases:
+      - The official allegedly demanded a share of every contract he signed.
+      - The photos, allegedly taken last spring, cannot in fact be dated.
+    collocations: an alleged offence · an allegation · allege that
+    register: "Legal-journalistic; the adverb that keeps newspapers out of court"
+  - term: misinformation
+    tag: neutral
+    definition: false information spread by people who believe it is true
+    use_cases:
+      - Most health misinformation is shared by worried relatives, not by trolls.
+      - Correcting misinformation often ends up spreading it further.
+    collocations: spread / combat / counter misinformation
+    register: "Neutral; the mistake is honest — contrast disinformation"
+  - term: disinformation
+    tag: formal
+    definition: false information created and spread deliberately in order to deceive
+    use_cases:
+      - The leak had been seeded with disinformation to discredit the genuine documents.
+      - State disinformation campaigns target trust itself, not any single fact.
+    collocations: a disinformation campaign / operation
+    register: "Formal-political; the deceit is the point — contrast misinformation"
+  # ── Spin & manipulation ────────────────────────────────────────
+  - term: spin
+    tag: journalistic
+    definition: a way of presenting information that favours one side without technically lying
+    use_cases:
+      - The job cuts were announced with the usual spin about efficiency and renewal.
+      - Put whatever spin on it you like — the numbers still fell.
+    collocations: put a positive spin on sth · a spin doctor
+    register: "Journalistic; a spin doctor is a professional presenter of bad news"
+  - term: clickbait
+    tag: informal
+    definition: online content with a deliberately exaggerated headline, designed to be clicked rather than to inform
+    use_cases:
+      - The study was serious; the clickbait headline about killer coffee was not.
+      - Clickbait works — that is the genuinely depressing part.
+    collocations: a clickbait headline / title · pure clickbait
+    register: "Informal-digital; the currency it earns is attention, not trust"
+  - term: sensationalist
+    tag: journalistic
+    definition: presenting news in a deliberately shocking or exciting way at the expense of accuracy
+    use_cases:
+      - Sensationalist coverage of the trial made finding an unbiased jury impossible.
+      - The channel grew rich on sensationalist crime reporting.
+    collocations: sensationalist headlines / coverage · sensationalism
+    register: "Critical-journalistic; noun: sensationalism"
+  - term: propaganda
+    tag: formal
+    definition: one-sided information, often from a government, spread to shape what people believe
+    use_cases:
+      - The broadcasts mixed weather forecasts with straightforward propaganda.
+      - Each side calls the other side's coverage propaganda; both are occasionally right.
+    collocations: state propaganda · a propaganda machine / war
+    register: "Formal-political; always disapproving"
+  - term: a smear campaign
+    tag: journalistic
+    definition: an organised attempt to destroy somebody's reputation with damaging and usually unfair stories
+    use_cases:
+      - She dismissed the coverage as a smear campaign funded by her competitors.
+      - The smear campaign worked - the allegations were false, but the doubt stuck.
+    collocations: run / mount a smear campaign · smear sb
+    register: "Journalistic-political; smear alone works as both verb and noun"
+  - term: scaremongering
+    tag: journalistic
+    definition: deliberately spreading frightening stories or exaggerated warnings to influence people
+    use_cases:
+      - Doctors condemned the vaccine coverage as reckless scaremongering.
+      - Both campaigns accused each other of scaremongering about the economy.
+    collocations: accuse sb of scaremongering · a scaremonger
+    register: "British-journalistic; American English often prefers fearmongering"
+  - term: blow something out of proportion
+    tag: idiom
+    definition: to treat a small problem as if it were far more serious than it really is
+    use_cases:
+      - One rude email was blown out of proportion into a resignation story.
+      - The press blew the incident wildly out of proportion, as the press does.
+    collocations: blow sth out of all proportion · out of proportion to sth
+    register: "Neutral idiom; formal alternative: exaggerate"
+  - term: a hidden agenda
+    tag: idiom
+    definition: a secret motive behind actions that are presented as having a different purpose
+    use_cases:
+      - Readers suspected a hidden agenda behind the paper's sudden interest in the mayor.
+      - Ask who funded the study before you rule out a hidden agenda.
+    collocations: suspect / pursue a hidden agenda · set the agenda
+    register: "Neutral; agenda alone — the set of topics somebody wants discussed"
+  - term: frame
+    tag: academic
+    definition: to present facts in a particular way that shapes how people understand them
+    use_cases:
+      - Each paper framed the protest differently — a mob in one, a vigil in the other.
+      - How you frame the question decides half the answers you will get.
+    collocations: frame sth as sth · framing · a frame
+    register: "Media-studies register; the noun framing is the analyst's word"
+  - term: an echo chamber
+    tag: journalistic
+    definition: an environment, especially online, where people only ever meet opinions like their own
+    use_cases:
+      - Her feed had become an echo chamber in which every doubt was instantly agreed with.
+      - Leaving the echo chamber costs comfort, which is why so few people do.
+    collocations: a partisan / social-media echo chamber · a filter bubble
+    register: "Media-analysis register; cousin: a filter bubble"
+  - term: take something at face value
+    tag: idiom
+    definition: to accept something as true simply because of how it looks, without checking
+    use_cases:
+      - Never take a viral screenshot at face value.
+      - Investors took the growth figures at face value and paid dearly for it.
+    collocations: accept sth at face value · at face value
+    register: "Neutral idiom; the face value is literally the number printed on a coin"
+  - term: stoke outrage
+    tag: journalistic
+    definition: to deliberately feed people's anger so that it grows stronger
+    use_cases:
+      - The account existed for one purpose - to stoke outrage about immigration.
+      - Outrage, once stoked, needs fresh fuel every morning.
+    collocations: stoke fear / anger / resentment · fuel outrage
+    register: "Journalistic; the image is feeding a fire — you stoke a furnace"
+  # ── Exposure & suppression ─────────────────────────────────────
+  - term: censorship
+    tag: formal
+    definition: official control that removes or blocks material considered unacceptable to publish
+    use_cases:
+      - The film survived three rounds of censorship with its ending intact.
+      - Self-censorship does the censor's work for free.
+    collocations: state / military censorship · impose / lift censorship
+    register: "Formal-political; verb: censor — the person is also the censor"
+  - term: hush up
+    tag: phrasal
+    definition: to stop people from finding out about something embarrassing or scandalous
+    use_cases:
+      - The board hushed up the data breach for eleven months.
+      - Affairs at that level do not stay hushed up for long.
+    collocations: hush up a scandal / an affair · hush money
+    register: "Informal-phrasal; formal alternatives: suppress, conceal"
+  - term: a cover-up
+    tag: neutral
+    definition: an organised attempt, usually by people in power, to hide the truth about something
+    use_cases:
+      - The crime was bad; the cover-up is what ended the presidency.
+      - Every week of delay in publishing the report fed talk of a cover-up.
+    collocations: allege / expose a cover-up · cover sth up
+    register: "Journalistic; the verb is cover up, the noun keeps the hyphen"
+  - term: a whistle-blower
+    tag: neutral
+    definition: an employee who reports illegal or dishonest activity inside their own organisation
+    use_cases:
+      - The scheme collapsed after a whistle-blower posted the invoices online.
+      - Whistle-blower protection laws exist because retaliation is the norm.
+    collocations: blow the whistle on sth · whistle-blower protection
+    register: "Neutral-legal; the idiom underneath is blow the whistle on"
+  - term: leak
+    tag: neutral
+    definition: to deliberately give secret information to journalists without permission; also the information itself
+    use_cases:
+      - Somebody leaked the draft budget a full week before the announcement.
+      - The memo reached three newsrooms in one afternoon — a coordinated leak.
+    collocations: leak a document / a memo to the press · a leaked recording
+    register: "Neutral-journalistic; both verb and noun, unlike the kitchen kind"
+  - term: suppress
+    tag: formal
+    definition: to use power to stop information from being published or becoming known
+    use_cases:
+      - The regime suppressed all reporting from the region for a month.
+      - Internal research on the app's effects had been quietly suppressed.
+    collocations: suppress a report / evidence / dissent
+    register: "Formal; close pair: withhold (keep back) vs suppress (crush)"
+  - term: endorse
+    tag: formal
+    definition: to publicly state your official support for a person, product or idea
+    use_cases:
+      - The paper broke with a century of tradition and endorsed no candidate at all.
+      - She was paid to endorse the app and somehow forgot to mention it.
+    collocations: endorse a candidate / a product · an endorsement
+    register: "Formal-public; in advertising, an endorsement is paid support"
+  - term: go viral
+    tag: informal
+    definition: to spread extremely fast across the internet as people share it with each other
+    use_cases:
+      - The clip went viral before anyone had checked where it was filmed.
+      - Going viral is a lottery ticket, not a strategy.
+    collocations: a viral video / post · virality
+    register: "Informal-digital; the underlying metaphor is infection"
+  - term: a backlash
+    tag: neutral
+    definition: a strong angry public reaction against something, especially a recent change or statement
+    use_cases:
+      - The rebrand provoked such a backlash that it was reversed within a week.
+      - Expect a backlash against automated moderation the first time it fails publicly.
+    collocations: provoke / trigger / face a backlash · a backlash against sth
+    register: "Journalistic-neutral; the anger arrives after the event, like the word says"
+  - term: retract a statement
+    tag: formal
+    definition: to formally withdraw something you said or published, admitting it was wrong
+    use_cases:
+      - The paper retracted the story and apologised to the family on page one.
+      - He retracted the accusation, but the clip of him making it lives on.
+    collocations: retract a claim / an article · issue a retraction
+    register: "Formal-legal; noun: retraction"

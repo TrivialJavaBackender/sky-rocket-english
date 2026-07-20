@@ -1,0 +1,559 @@
+# Diagnostic · 60 Use of English items — one probe set across all 15 grammar topics
+# of the course (M01–M15), taken in Week 0 before any module is studied.
+#
+# Design: exactly 4 items per topic, each topic probed by at least two different
+# formats so that a format-specific weakness cannot masquerade as a grammar gap.
+# Formats 1–7 of the catalogue; reading_comprehension is excluded because a
+# checkpoint package carries no reading_text (sync passes reading_text_id = null).
+#
+# Format spread: 14 open_cloze · 12 key_word_transformation · 11 mc_cloze ·
+#                10 grammar_drill · 7 error_correction · 6 word_formation = 60
+#
+# NOTE ON ATTRIBUTION: checkpoint exercises cannot carry `grammar_point` —
+# grammar_point.module_id is NOT NULL and syncCheckpoint passes an empty map,
+# so any value would only produce a sync warning and a NULL column. The topic is
+# therefore carried in the explanation prefix ("M05 · Advanced conditionals — …"),
+# which keeps the gap map derivable by module.
+#
+# Vocabulary is deliberately general: this test is sat before any module, so no
+# item depends on course lexis. What is being measured is grammar, not memory.
+#
+# review_pool is empty by design — a diagnostic is sat once and is not a source
+# of spaced review items.
+
+core:
+  # ══════════════ M01 · Tenses and aspect ══════════════
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "She "
+      post: " for the same firm for six years when it was finally sold."
+      prompt: WORK
+      options: [worked, had been working, has been working, was working]
+      answer: 1
+    explanation: "M01 · Tenses and aspect — The selling is a past event, and the six years run up to it, so the frame is past perfect continuous: had been working. Has been working would anchor the period to now, which the past-tense was sold rules out."
+  - type: open_cloze
+    group: reading
+    content:
+      pre: "By this time next year she "
+      post: " have been teaching for a decade."
+      answers: [will]
+      answer_shown: will
+    explanation: "M01 · Tenses and aspect — By this time next year sets a future vantage point, and the span reaching it takes the future perfect continuous: will have been teaching. Only the auxiliary will fits the gap."
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: I last saw him in 2019.
+      key: SINCE
+      pre: "I "
+      post: " 2019."
+      answers: [haven't seen him since, have not seen him since]
+      answer_shown: haven't seen him since
+      hint: 3–6 words, including the key word
+    explanation: "M01 · Tenses and aspect — I last saw him in 2019 means the not-seeing continues to the present, which is the present perfect with since. The negative is obligatory: since marks the starting point of a state that still holds."
+  - type: error_correction
+    group: grammar
+    content: {words: [I, am, working, for, this, company, since, "2021."], wrong: 1, correction: "am → have been"}
+    explanation: "M01 · Tenses and aspect — Since 2021 names a past starting point that reaches the present, which English marks with the perfect: have been working. The present continuous cannot span from the past to now."
+
+  # ══════════════ M02 · Passive and causative ══════════════
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "The report "
+      post: " by the committee before it was leaked to the press."
+      prompt: APPROVE
+      options: [had approved, was approving, has been approved, had been approved]
+      answer: 3
+    explanation: "M02 · Passive and causative — The approving happened before the leaking, so the earlier past takes the past perfect, and the report receives the action, so the voice is passive: had been approved. Had approved would make the report the approver."
+  - type: open_cloze
+    group: reading
+    content:
+      pre: "It "
+      post: " widely believed that the drug is safe, though the trials say otherwise."
+      answers: [is]
+      answer_shown: is
+    explanation: "M02 · Passive and causative — This is the impersonal passive: it is believed that…, a way of reporting an opinion without naming who holds it. The dummy subject it requires a form of be before the participle."
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: Somebody stole her bicycle last night.
+      key: HAD
+      pre: "She "
+      post: " last night."
+      answers: [had her bicycle stolen]
+      answer_shown: had her bicycle stolen
+      hint: 3–6 words, including the key word
+    explanation: "M02 · Passive and causative — When something is done to your property by somebody else, English uses have + object + past participle: had her bicycle stolen. The causative here reports misfortune, not arrangement."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "The findings are "
+      post: " to have been exaggerated by the original research team."
+      options: [told, spoken, said, talked]
+      answer: 2
+    explanation: "M02 · Passive and causative — Passive reporting uses be said to: the findings are said to have been exaggerated. Tell requires a personal object (told us), and speak and talk do not take this pattern at all."
+
+  # ══════════════ M03 · Reported speech and reporting verbs ══════════════
+  - type: open_cloze
+    group: reading
+    content:
+      pre: "He denied "
+      post: " anything about the missing files."
+      answers: [knowing]
+      answer_shown: knowing
+    explanation: "M03 · Reported speech — Deny is followed by an -ing form, never by an infinitive or a to-clause. Denied to know is not English; denied knowing is the only pattern available."
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: "'I didn't take the money,' he said."
+      key: DENIED
+      pre: "He "
+      post: " the money."
+      answers: [denied taking, denied having taken]
+      answer_shown: denied taking
+      hint: 2–5 words, including the key word
+    explanation: "M03 · Reported speech — A denial of a past act reports as deny + -ing: denied taking the money. Denied having taken is also correct and makes the earlier time explicit; both avoid the impossible denied to take."
+  - type: error_correction
+    group: grammar
+    content: {words: [She, suggested, me, to, call, the, office, on, "Monday."], wrong: 2, correction: "me to call → that I call"}
+    explanation: "M03 · Reported speech — Suggest never takes an object + infinitive. It takes a that-clause (suggested that I call) or an -ing form (suggested calling), and this is one of the most persistent errors at C1."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "The minister "
+      post: " the committee of misleading the public over the figures."
+      options: [accused, blamed, denied, criticised]
+      answer: 0
+    explanation: "M03 · Reported speech — Accuse selects of + -ing: accused the committee of misleading. Blame takes for, criticise takes for, and deny takes no personal object at all — each reporting verb locks to its own preposition."
+
+  # ══════════════ M04 · Gerund vs infinitive ══════════════
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Halfway through the lecture he stopped "
+      post: " notes and simply listened."
+      prompt: TAKE
+      options: [taking, to take, take, having taken]
+      answer: 0
+    explanation: "M04 · Gerund vs infinitive — Stop + -ing ends the activity itself, which is what and simply listened confirms. Stop + to-infinitive would mean he interrupted something else in order to start writing."
+  - type: open_cloze
+    group: reading
+    content:
+      pre: "I look forward "
+      post: " hearing from you at your earliest convenience."
+      answers: [to]
+      answer_shown: to
+    explanation: "M04 · Gerund vs infinitive — In look forward to, the word to is a preposition, which is why an -ing form follows it. Test it with a noun: look forward to your reply is natural, so to is not an infinitive marker here."
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: I am sorry that I did not apply for the post earlier.
+      key: HAVING
+      pre: "I regret "
+      post: " for the post earlier."
+      answers: [not having applied]
+      answer_shown: not having applied
+      hint: 3–5 words, including the key word
+    explanation: "M04 · Gerund vs infinitive — Regret about a finished past takes the -ing form, and having + past participle places it clearly earlier. The negative particle sits in front of the gerund: not having applied."
+  - type: error_correction
+    group: grammar
+    content: {words: [The, teacher, made, us, to, learn, the, whole, list, by, "heart."], wrong: 4, correction: "to learn → learn"}
+    explanation: "M04 · Gerund vs infinitive — Make takes a bare infinitive in the active: made us learn. The to reappears only in the passive — we were made to learn — and confusing the two is the classic error with this verb."
+
+  # ══════════════ M05 · Advanced conditionals ══════════════
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: ""
+      post: " in 2005, the correction would have cost a fraction of today's price."
+      prompt: ACT
+      options: ["If we would have acted", "Have we acted", "Had we acted", "Should we act"]
+      answer: 2
+    explanation: "M05 · Advanced conditionals — Formal English drops if and inverts the auxiliary: Had we acted. If we would have acted is never correct in the if-clause, and should we act points to a future possibility, not a missed past one."
+  - type: open_cloze
+    group: reading
+    content:
+      pre: ""
+      post: " it not for the scholarship, she would have left the course in the first term."
+      answers: [Were, were]
+      answer_shown: Were
+    explanation: "M05 · Advanced conditionals — Were it not for is the inverted, formal equivalent of if it were not for, used to name the one thing that prevented an outcome. The subjunctive were is fixed here and does not change for person."
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: We did not meter the wells in the 1980s, so the water table is out of reach now.
+      key: HAD
+      pre: "If we "
+      post: " the wells in the 1980s, the water table would still be within reach."
+      answers: [had metered]
+      answer_shown: had metered
+      hint: 2–4 words, including the key word
+    explanation: "M05 · Advanced conditionals — This is a mixed conditional: a past cause with a present result, so the if-clause is past perfect and the main clause is would + infinitive. Would still be, not would have been, because the consequence is felt today."
+  - type: error_correction
+    group: grammar
+    content: {words: [If, it, will, rain, tomorrow, we, will, cancel, the, "match."], wrong: 2, correction: "will rain → rains"}
+    explanation: "M05 · Advanced conditionals — The if-clause of a first conditional takes the present simple even though it refers to the future: if it rains. Will belongs in the main clause only, and doubling it is a direct transfer from languages that mark the future in both halves."
+
+  # ══════════════ M06 · Unreal past and subjunctive ══════════════
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "It is high time the department "
+      post: " what two decades of cuts have cost."
+      prompt: ADMIT
+      options: [admits, to admit, will admit, admitted]
+      answer: 3
+    explanation: "M06 · Unreal past and subjunctive — It is high time is followed by an unreal past: the department admitted. The past form here carries no past meaning at all — it signals that the action is overdue and has not happened."
+  - type: open_cloze
+    group: reading
+    content:
+      pre: "I wish I "
+      post: " known about the grant before the deadline passed."
+      answers: [had]
+      answer_shown: had
+    explanation: "M06 · Unreal past and subjunctive — Regret about a finished past takes wish + past perfect: wish I had known. Wish I knew would refer to a present state of ignorance, which the passed deadline rules out."
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: I am sorry that I did not study medicine.
+      key: WISH
+      pre: "I "
+      post: " medicine."
+      answers: [wish I had studied]
+      answer_shown: wish I had studied
+      hint: 3–5 words, including the key word
+    explanation: "M06 · Unreal past and subjunctive — Wish reaches back to an unchangeable past with the past perfect: wish I had studied. Wish I studied would describe a present habit the speaker wants, not a past decision they regret."
+  - type: error_correction
+    group: grammar
+    content: {words: [The, committee, demanded, that, the, report, goes, to, every, "household."], wrong: 6, correction: "goes → go"}
+    explanation: "M06 · Unreal past and subjunctive — Verbs of demanding and requesting take the subjunctive in the that-clause: demanded that the report go. The subjunctive is the bare verb and ignores person and number entirely, so the -s cannot appear."
+
+  # ══════════════ M07 · Modality: deduction and certainty ══════════════
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "She "
+      post: " the message — her phone had been off since Friday."
+      prompt: SEE
+      options: ["mustn't have seen", "can't have seen", "couldn't see", "can't see"]
+      answer: 1
+    explanation: "M07 · Modality — A confident negative deduction about the past is can't have + past participle: can't have seen. Mustn't have is not used for deduction in English, and mustn't on its own expresses prohibition instead."
+  - type: open_cloze
+    group: reading
+    content:
+      pre: "You "
+      post: " have told her — she had already read it in the minutes."
+      answers: [needn't, need]
+      answer_shown: needn't
+    explanation: "M07 · Modality — Needn't have told reports an action that was performed but turned out to be unnecessary. Didn't need to tell would suggest the telling never happened, which the context contradicts."
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: I am certain that he forgot the appointment.
+      key: MUST
+      pre: "He "
+      post: " the appointment."
+      answers: [must have forgotten]
+      answer_shown: must have forgotten
+      hint: 3–4 words, including the key word
+    explanation: "M07 · Modality — Certainty about a past event is must have + past participle: must have forgotten. Must forget would describe a present habit, and had to forget would report an obligation rather than a deduction."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "He may "
+      post: " be right about the timing, though the rest of his argument collapses."
+      options: [very, quite, much, well]
+      answer: 3
+    explanation: "M07 · Modality — May well is a fixed collocation meaning there is a fair chance. May very, may quite and may much are not possible: only well can grade may in this way."
+
+  # ══════════════ M08 · Relative and participle clauses ══════════════
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: ""
+      post: " finished the report at two in the morning, she slept until noon."
+      prompt: HAVE
+      options: [Have, Had, Having, Being]
+      answer: 2
+    explanation: "M08 · Relative and participle clauses — A perfect participle clause gives the earlier of two actions: Having finished the report, she slept. The subject of both halves must be the same person, which it is here."
+  - type: open_cloze
+    group: reading
+    content:
+      pre: "The issues raised at the meeting, most "
+      post: " which were technical, took an hour to resolve."
+      answers: [of]
+      answer_shown: of
+    explanation: "M08 · Relative and participle clauses — Quantifier + of + which is the formal way to comment on part of a previously mentioned set: most of which were technical. Most which is not possible; the preposition is obligatory."
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: The report was published last week. It contains three factual errors.
+      key: WHICH
+      pre: "The report, "
+      post: " last week, contains three factual errors."
+      answers: [which was published]
+      answer_shown: which was published
+      hint: 2–4 words, including the key word
+    explanation: "M08 · Relative and participle clauses — A non-defining relative clause sits between commas and adds information about an already identified thing. The report is unique here, so the clause cannot be defining and which, not that, is required."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: ""
+      post: " with a deadline they cannot move, most people work considerably faster."
+      options: [Facing, Faced, Face, "To face"]
+      answer: 1
+    explanation: "M08 · Relative and participle clauses — Faced with is a passive participle clause: the people receive the pressure rather than performing it. Facing would make them the agent, which changes the meaning and breaks the fixed phrase faced with."
+
+  # ══════════════ M09 · Clefts and emphasis ══════════════
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: ""
+      post: " ruined the film for me was the ending, not the acting."
+      prompt: WHAT
+      options: [What, That, It, Which]
+      answer: 0
+    explanation: "M09 · Clefts and emphasis — A wh-cleft opens with what and postpones the important information to the end: What ruined the film was the ending. That and which cannot start a sentence in this pattern."
+  - type: open_cloze
+    group: reading
+    content:
+      pre: "It was the ending "
+      post: " ruined the film, not the acting."
+      answers: [that, which]
+      answer_shown: that
+    explanation: "M09 · Clefts and emphasis — An it-cleft splits the sentence to spotlight one element: It was the ending that ruined the film. The linking word is that, and it is fixed regardless of whether the highlighted element is a person or a thing."
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: I object to the tone of the letter rather than its content.
+      key: WHAT
+      pre: ""
+      post: " is the tone of the letter, not its content."
+      answers: [What I object to]
+      answer_shown: What I object to
+      hint: 3–5 words, including the key word
+    explanation: "M09 · Clefts and emphasis — The wh-cleft moves the objection into a noun clause and holds the point back: What I object to is the tone. The stranded preposition to stays with object, which is where its meaning lives."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "I "
+      post: " warn you about the deadline, but you were not listening."
+      options: [did, do, have, was]
+      answer: 0
+    explanation: "M09 · Clefts and emphasis — Emphatic do in the past is did + bare infinitive: I did warn you. It insists on the truth of something the listener has denied or forgotten, and the main verb loses its own past marking."
+
+  # ══════════════ M10 · Inversion after negative adverbials ══════════════
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Not only "
+      post: " the deadline, he also blamed the rest of the team."
+      prompt: MISS
+      options: ["he missed", "he did miss", "missed he", "did he miss"]
+      answer: 3
+    explanation: "M10 · Inversion — A negative adverbial in front position forces auxiliary inversion: Not only did he miss. The subject follows the auxiliary, exactly as in a question, and the main verb returns to its bare form."
+  - type: open_cloze
+    group: reading
+    content:
+      pre: "No sooner "
+      post: " she arrived than the power failed across the whole building."
+      answers: [had]
+      answer_shown: had
+    explanation: "M10 · Inversion — No sooner is followed by an inverted past perfect and is completed by than, not when: No sooner had she arrived than… The pairing of the two halves is fixed."
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: She had hardly sat down when the phone rang.
+      key: HARDLY
+      pre: ""
+      post: " down when the phone rang."
+      answers: [Hardly had she sat]
+      answer_shown: Hardly had she sat
+      hint: 3–5 words, including the key word
+    explanation: "M10 · Inversion — Fronting hardly triggers inversion of the past perfect auxiliary: Hardly had she sat down. Hardly pairs with when, in contrast to no sooner, which pairs with than."
+  - type: error_correction
+    group: grammar
+    content: {words: [Never, before, I, have, seen, such, a, badly, written, "report."], wrong: 2, correction: "I have → have I"}
+    explanation: "M10 · Inversion — Never before in front position requires the auxiliary to precede the subject: Never before have I seen. Leaving the ordinary statement order after a fronted negative is the standard error with this structure."
+
+  # ══════════════ M11 · Nominalisation and formal register ══════════════
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Their "
+      post: " to comply with the safety regulations resulted in a substantial fine."
+      prompt: FAIL
+      answers: [failure]
+      answer_shown: failure
+    explanation: "M11 · Nominalisation — Formal written English prefers a noun where speech uses a verb: they failed to comply becomes their failure to comply. The noun keeps the same infinitive complement after it."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "The report calls for far greater "
+      post: " in the way public money is allocated."
+      prompt: TRANSPARENT
+      answers: [transparency]
+      answer_shown: transparency
+    explanation: "M11 · Nominalisation — The adjective transparent becomes the abstract noun transparency, which is what greater must modify. Adjectives cannot follow a comparative quantifier like greater."
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: They failed to comply with the regulations, and this led to a fine.
+      key: FAILURE
+      pre: "Their "
+      post: " the regulations led to a fine."
+      answers: [failure to comply with]
+      answer_shown: failure to comply with
+      hint: 3–5 words, including the key word
+    explanation: "M11 · Nominalisation — Turning the clause into a noun phrase compresses the sentence and raises the register: their failure to comply with. The dependent preposition with survives the change and must be kept."
+  - type: open_cloze
+    group: reading
+    content:
+      pre: "The scheme was suspended in "
+      post: " of the new evidence submitted by the inspectors."
+      answers: [light, view]
+      answer_shown: light
+    explanation: "M11 · Nominalisation and formal register — In light of and in view of are complex prepositions meaning because of, both belonging to formal written English. The noun inside the phrase is fixed and cannot be varied."
+
+  # ══════════════ M12 · Ellipsis, substitution and discourse markers ══════════════
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "'I have never been to Japan.' '"
+      post: ", and I have no particular wish to go.'"
+      prompt: NEITHER
+      options: ["Neither I have", "Neither have I", "Neither do I", "So have I"]
+      answer: 1
+    explanation: "M12 · Ellipsis and substitution — Agreeing with a negative statement uses neither + inverted auxiliary, and the auxiliary must match the original: have been, so neither have I. So have I would agree with a positive statement instead."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "It rained without stopping for six days. "
+      post: ", the festival went ahead exactly as planned."
+      options: [Moreover, Therefore, Nevertheless, Hence]
+      answer: 2
+    explanation: "M12 · Discourse markers — The second sentence contradicts the expectation set by the first, which calls for a concessive marker: Nevertheless. Moreover adds, while therefore and hence draw a consequence — the opposite relation."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "She spoke "
+      post: " about a childhood she had never previously discussed in public."
+      prompt: ELOQUENT
+      answers: [eloquently]
+      answer_shown: eloquently
+    explanation: "M12 · Ellipsis and substitution — The gap modifies the verb spoke, so the adjective eloquent has to become the adverb eloquently. Only an adverb can occupy this slot after a verb of manner."
+  - type: open_cloze
+    group: reading
+    content:
+      pre: "I asked her to sign the form, and she did "
+      post: " without reading a single line of it."
+      answers: [so]
+      answer_shown: so
+    explanation: "M12 · Ellipsis and substitution — Do so substitutes for a whole verb phrase already mentioned, avoiding the repetition of signed the form. It belongs to a more formal register than the bare did."
+
+  # ══════════════ M13 · Hedging and concession ══════════════
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "The evidence for a causal link is "
+      post: " inconclusive, and the authors say so themselves."
+      prompt: ARGUE
+      answers: [arguably]
+      answer_shown: arguably
+    explanation: "M13 · Hedging — Arguably softens a claim to something that can be defended rather than proved. The gap modifies the adjective inconclusive, so the adverb form is required."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: ""
+      post: ", the scheme has some merit, but nobody has yet costed it properly."
+      prompt: PRESUME
+      answers: [Presumably]
+      answer_shown: Presumably
+    explanation: "M13 · Hedging — Presumably marks an assumption the speaker believes but cannot verify. As a sentence adverb it stands at the front, separated by a comma, and comments on the whole clause."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: ""
+      post: " hard you try, some processes simply cannot be rushed."
+      options: [Whatever, However, Whichever, Whenever]
+      answer: 1
+    explanation: "M13 · Concession — However + adjective or adverb means no matter how: However hard you try. Whatever and whichever stand in for nouns, and whenever concerns time, so none of them can grade the adverb hard."
+  - type: open_cloze
+    group: reading
+    content:
+      pre: "Much "
+      post: " I admire her earlier work, I cannot support this particular proposal."
+      answers: [as]
+      answer_shown: as
+    explanation: "M13 · Concession — Much as I admire is a formal concessive opening meaning although I very much admire. The pattern is fixed and cannot be replaced by much although or much though in this position."
+
+  # ══════════════ M14 · Precision: prepositions, comparison, quantifiers ══════════════
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "The outcome of the whole experiment is entirely dependent "
+      post: " the weather in the first week."
+      options: [of, from, to, on]
+      answer: 3
+    explanation: "M14 · Dependent prepositions — Dependent selects on, and no other preposition is possible: dependent on the weather. The related noun and adverb keep the same partner in dependence on and independently of."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "The revised version is "
+      post: " better than the original, which nobody could follow."
+      options: [far, very, "much more", so]
+      answer: 0
+    explanation: "M14 · Comparison — Comparatives are graded by far, much or considerably, not by very: far better. Much more better doubles the comparative marker, and so better is not possible without a following that-clause."
+  - type: error_correction
+    group: grammar
+    content: {words: [The, reliability, of, the, results, depends, of, the, sample, "size."], wrong: 6, correction: "of → on"}
+    explanation: "M14 · Dependent prepositions — Depend takes on: depends on the sample size. Depend of is a direct transfer from languages whose equivalent verb governs a genitive, and it is among the most persistent C1 slips."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "The new model is "
+      post: " more efficient than the one it replaces, though it costs twice as much."
+      prompt: CONSIDER
+      answers: [considerably]
+      answer_shown: considerably
+    explanation: "M14 · Comparison — The gap grades the comparative more efficient, which requires an adverb of degree: considerably. Considerable is an adjective and cannot modify another adjective phrase."
+
+  # ══════════════ M15 · The architecture of complex writing ══════════════
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: The costs rose sharply, and the project was therefore abandoned.
+      key: RESULT
+      pre: "The project was abandoned "
+      post: " the sharp rise in costs."
+      answers: [as a result of]
+      answer_shown: as a result of
+      hint: 3–5 words, including the key word
+    explanation: "M15 · Cohesion — A complex preposition links cause to effect inside a single clause: as a result of the sharp rise. Note that the verb rose has to become the noun rise, because a preposition cannot be followed by a clause."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "The trial failed to show any benefit; "
+      post: ", the drug was withdrawn from the market."
+      options: [whereas, albeit, consequently, notwithstanding]
+      answer: 2
+    explanation: "M15 · Cohesion — The semicolon joins two related independent clauses and the second states the outcome, so a consequential adverb is needed: consequently. Whereas contrasts, albeit concedes within a phrase, and notwithstanding requires a noun after it."
+  - type: open_cloze
+    group: reading
+    content:
+      pre: "Two separate factors explain the delay. The first of "
+      post: " is the collapse of the original funding agreement."
+      answers: [these, them]
+      answer_shown: these
+    explanation: "M15 · Cohesion — Reference chains hold a paragraph together: these points back to two separate factors in the previous sentence. Without it, the second sentence would have to repeat the whole noun phrase."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "The early results were disappointing, "
+      post: " the team pressed on with the second phase."
+      options: [however, yet, nevertheless, therefore]
+      answer: 1
+    explanation: "M15 · Punctuation and run-on sentences — Only a coordinating conjunction can join two independent clauses after a comma, and yet is one. However and nevertheless are adverbs, so placing either here would create a comma splice that needs a semicolon instead."
+
+review_pool: []

@@ -65,6 +65,53 @@ export async function startExerciseSet(params: StartExerciseSetParams): Promise<
   return rows.map(toPublicExercise);
 }
 
+export interface SetProgressDTO {
+  /** Per-item correctness for the run in progress; null = not yet answered. Index-aligned with the set. */
+  results: Array<boolean | null>;
+  /** First unanswered index — where "Resume" should reopen the player. */
+  resumeIndex: number;
+  answered: number;
+  total: number;
+}
+
+/**
+ * UC-09: how far into this set the learner already is, so an interrupted run
+ * can be resumed instead of restarted. Every answer is already persisted as an
+ * `exercise_attempt`; what was missing was reading them back, since the player
+ * held its position only in component state and lost it on close.
+ *
+ * Distinguishing the *current* run from earlier ones is done by attempt count
+ * rather than by timestamps, which needs no extra table: take the minimum
+ * attempt count across the whole set (0 on a first run, N after N complete
+ * runs) and treat anything above that minimum as answered in the run in
+ * progress. A finished set has a flat count everywhere, so it correctly reports
+ * zero progress and the next launch starts a clean retake.
+ *
+ * Known edge: if a set is re-synced with *new* items added, the newcomers sit
+ * at 0 while the rest sit at N, so the older items read as already answered for
+ * one run. It self-corrects after that run and never loses data.
+ */
+export async function computeSetProgress(
+  userId: number,
+  exercises: PublicExerciseDTO[],
+  context: AttemptContext,
+): Promise<SetProgressDTO> {
+  const total = exercises.length;
+  const empty: SetProgressDTO = { results: exercises.map(() => null), resumeIndex: 0, answered: 0, total };
+  if (total === 0) return empty;
+
+  const tallies = await exerciseRepo.getAttemptTallies(userId, exercises.map((e) => e.id), context);
+  const counts = exercises.map((e) => tallies.get(e.id)?.count ?? 0);
+  const base = Math.min(...counts);
+
+  const results = exercises.map((e, i) => (counts[i] > base ? (tallies.get(e.id)?.lastIsCorrect ?? null) : null));
+  const answered = results.filter((r) => r !== null).length;
+  if (answered === 0) return empty;
+
+  const firstUnanswered = results.findIndex((r) => r === null);
+  return { results, resumeIndex: firstUnanswered === -1 ? 0 : firstUnanswered, answered, total };
+}
+
 export interface ReviewSlotItemDTO {
   queueItemId: number;
   exercise: PublicExerciseDTO;

@@ -1,0 +1,29 @@
+kind: extra
+kicker: TWO REPORTS
+title: One Vote, Two Front Pages
+meta: ≈ 3 min · one event, two framings — the facts agree, the stories do not
+word_count: 477
+body:
+  - - t: "On the last Thursday of March, Aldbury's council voted seven to six to let a data-centre company build beside the town reservoir. Around two hundred people gathered outside the hall; the police made one arrest. The two reports below describe that same evening, and every checkable fact in them is identical. One of these papers endorsed the scheme when it was first announced; the other has campaigned against it for a year. Read both, and watch what the facts are wearing."
+  - - t: "REPORT ONE · THE ALDBURY COURIER — 'Council faces down protest mob to secure 400 jobs'"
+  - - t: "Councillors defied a noisy crowd of activists on Thursday night to approve the Fenwood data centre, ending months of delay to a project that will bring the town four hundred jobs. Members were "
+    - g: heckle
+    - t: "d as they arrived, and proceedings were twice interrupted by chanting from the public gallery before the mayor ordered it cleared. Police confirmed that one demonstrator had been arrested after refusing to move from the doors."
+  - - t: "The company's spokesman welcomed the decision and said the centre had been designed to recycle most of its cooling water — figures he insisted had been independently verified. Council leader Diane Mercer praised colleagues for refusing to be intimidated by what she called scaremongering from campaigners, many of them bussed in from outside the town. 'We were elected to weigh evidence, not volume,' she told reporters. The vote, she noted, followed two public consultations and a hydrology review — coverage of which, she added, some outlets had declined to print."
+  - - t: "REPORT TWO · THE VALLEY HERALD — 'Residents' water fears brushed aside as council forces vote through'"
+  - - t: "A candlelit "
+    - g: vigil
+    - t: " by some two hundred residents — teachers, farmers and families with children on their shoulders — failed on Thursday night to persuade Aldbury council to pause the Fenwood data centre, a project that will draw on the same reservoir that supplies the town. One eyewitness account described stewards keeping the crowd clear of the doors even as a lone protester was led away by police."
+  - - t: "Organisers denied obstructing anyone and accused the council of hushing up its own consultant's report, which allegedly warns that the aquifer is already under stress in dry summers; the council has declined to release the document in full. The mayor, who is reported to have met the company's directors privately in January, refused to take questions after the vote. A hydrologist who reviewed the published figures urged the council to release the raw data, saying the recycling claims could not be verified from the summary alone."
+  - - t: "Same evening, same vote, same arithmetic. One paper counted a mob; the other counted families. Neither report contains a false sentence — the framing does the work a lie would normally do. Ask which paper's coverage strikes you as biased, and notice how fast you answered: that reflex, not either newsroom, is what this module is training."
+glosses:
+  - key: heckle
+    term: heckle
+    pos_label: verb
+    definition: to interrupt a public speaker with loud, aggressive comments or shouting
+    example: The candidate was heckled so relentlessly that she abandoned the speech.
+  - key: vigil
+    term: vigil
+    pos_label: noun
+    definition: a quiet gathering, often by candlelight, held to protest or to remember someone
+    example: Neighbours held an all-night vigil outside the closed maternity ward.

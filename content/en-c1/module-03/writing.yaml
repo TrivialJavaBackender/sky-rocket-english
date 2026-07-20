@@ -1,0 +1,56 @@
+mode: writing
+genre: opinion article
+prompt: |
+  You have seen this call for contributions on the website of an international
+  current-affairs magazine:
+
+  > **ARTICLES WANTED — THE ANONYMITY DEBATE**
+  > After another week of abuse, harassment and viral falsehoods, one demand keeps
+  > returning: social media platforms should verify the identity behind every
+  > single account. Supporters say it would end the worst behaviour overnight.
+  > Critics warn it would silence the people who most need to speak.
+  > **Should social media platforms verify every account?**
+  > Tell us what you think — and tell us why the other side is wrong.
+
+  Write your **opinion article** in **220–260 words**.
+
+  Report what each side actually claims rather than asserting it yourself: use
+  reporting verbs whose pattern carries your verdict (urge, deny, accuse, concede,
+  insist), and use passive reporting for anything unverified (is alleged to have,
+  is said to be). Take a clear position and hold it to the last line.
+model_answer: |
+  Every few months, after a particularly ugly wave of abuse, campaigners urge the
+  platforms to verify every account, and the argument sounds unanswerable: make
+  people prove who they are, and the worst of them will behave. I understand the
+  impulse. I do not think it survives contact with the evidence.
+
+  The case for verification rests on a claim nobody has ever properly
+  corroborated — that anonymity causes cruelty. Researchers who study harassment
+  report that a great deal of it arrives from named accounts, posted by people
+  entirely comfortable being seen. The costs, meanwhile, fall on those least able
+  to absorb them. A whistle-blower who wants to leak evidence of a cover-up, a
+  teenager in an intolerant household, a reporter working off the record where the
+  state decides what counts as misinformation — each depends on the option of
+  being nobody in particular.
+
+  There is also the quieter question of who holds the database. A company that
+  knows the legal identity behind every post has built the most efficient
+  instrument of censorship ever handed to a private business, and several
+  governments are alleged to have requested exactly that access. The platforms
+  deny sharing it. They would.
+
+  None of this argues for doing nothing. Platforms could offer verification as a
+  choice, let users filter out unverified replies, and finally be held to account
+  for how slowly they act on reports.
+
+  Verify the claims, not the people. The damage was never done by the name at the
+  top of the post.
+checklist:
+  - The opening states the debate and your position within the first three sentences
+  - Reporting verbs are chosen for their pattern and their verdict (urge sb to, deny doing, accuse sb of, concede that)
+  - At least one passive reporting structure appears (is alleged to have, is said to be) for anything unverified
+  - Backshift is handled correctly wherever a past reporting verb governs the clause
+  - The strongest counter-argument is stated fairly, then answered — not ignored
+  - At least four module lexemes are used naturally (a credible source, corroborate, misinformation, censorship, off the record, hold to account)
+  - "The register is opinion-column English: confident and personal, but never chatty or abusive"
+  - Length is 220–260 words and the final line lands the argument rather than summarising it

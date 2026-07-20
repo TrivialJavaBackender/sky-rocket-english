@@ -1,0 +1,869 @@
+# Module 04 · Education & Learning — exercises
+# core: 10 grammar_drill · 8 error_correction · 8 key_word_transformation ·
+#       8 open_cloze · 6 reading_comprehension · 8 mc_cloze · 10 collocation_match · 8 word_formation  = 66
+# review_pool: 5 gd · 4 ec · 4 kwt · 4 oc · 1 rc · 4 mc · 4 cm · 4 wf  = 30
+# Answer indices are deliberately spread across positions — no runs of 3+.
+core:
+  # ── grammar_drill × 10 · group grammar ─────────────────────────
+  - type: grammar_drill
+    group: grammar
+    grammar_point: Verbs that change meaning (remember / forget / regret / stop / try / mean / go on)
+    content:
+      pre: "Halfway through the lecture he "
+      post: " notes and simply listened instead."
+      prompt: STOP
+      options: [stopped to take, stopped taking, stopped take, stopped having taken]
+      answer: 1
+    explanation: "Stop + -ing ends the activity itself — the note-taking is what finished. Stopped to take would mean he interrupted something else in order to start writing, which is the opposite of listening instead."
+  - type: grammar_drill
+    group: grammar
+    grammar_point: Verbs that change meaning (remember / forget / regret / stop / try / mean / go on)
+    content:
+      pre: "Remember "
+      post: " the essay before midnight — the portal closes on time."
+      prompt: HAND
+      options: [handing in, having handed in, hand in, to hand in]
+      answer: 3
+    explanation: "Remember + to-infinitive points forward to a duty you must not forget. Remember handing in would report a memory of an act already completed, which makes no sense as a warning about a deadline still ahead."
+  - type: grammar_drill
+    group: grammar
+    grammar_point: let and make in the passive
+    content:
+      pre: "After the leak, the whole year "
+      post: " the paper again in September."
+      prompt: MAKE
+      options: [was made to sit, made to sit, was made sit, was making to sit]
+      answer: 0
+    explanation: "Make takes a bare infinitive in the active (they made us sit) but the passive restores the to: was made to sit. This single pair is the most heavily tested point of the whole structure."
+  - type: grammar_drill
+    group: grammar
+    grammar_point: to as a preposition (look forward to doing, be used to doing)
+    content:
+      pre: "I look forward "
+      post: " from the admissions office next week."
+      prompt: HEAR
+      options: [to hear, to have heard, to hearing, hearing]
+      answer: 2
+    explanation: "In look forward to, the word to is a preposition, so an -ing form must follow. Test it by putting a noun in the gap — look forward to your reply is perfectly natural, which proves to is not an infinitive marker here."
+  - type: grammar_drill
+    group: grammar
+    grammar_point: Verb + object + infinitive
+    content:
+      pre: "The tutor encouraged "
+      post: " the paper in August rather than repeating the year."
+      prompt: RESIT
+      options: [her resit, her to resit, that she resits, her resitting]
+      answer: 1
+    explanation: "Encourage, like advise, persuade and want, takes object + to-infinitive: encouraged her to resit. English has no encouraged that she resits pattern — the person comes first and the to-infinitive follows."
+  - type: grammar_drill
+    group: grammar
+    grammar_point: Perfect and passive -ing forms (deny having done, need doing)
+    content:
+      pre: "He denied "
+      post: " in the earlier paper, and the panel eventually believed him."
+      prompt: CHEAT
+      options: [having cheated, to have cheated, to cheat, have cheated]
+      answer: 0
+    explanation: "Deny is followed by an -ing form, never an infinitive, and having + past participle places the act clearly earlier than the denial. Denied cheating is also correct; denied to cheat is not English."
+  - type: grammar_drill
+    group: grammar
+    grammar_point: to as a preposition (look forward to doing, be used to doing)
+    content:
+      pre: "After two terms abroad she still isn't used "
+      post: " in her third language."
+      prompt: STUDY
+      options: [to study, study, studied, to studying]
+      answer: 3
+    explanation: "Be used to means be accustomed to, and its to is a preposition — so an -ing form follows. Keep it apart from used to study, the past habit, which has no form of be in front of it."
+  - type: grammar_drill
+    group: grammar
+    grammar_point: Perfect and passive -ing forms (deny having done, need doing)
+    content:
+      pre: "This chapter still needs "
+      post: " before anyone else reads it."
+      prompt: REWRITE
+      options: [to rewrite, rewrite, rewriting, having rewritten]
+      answer: 2
+    explanation: "After need, the -ing form carries a passive meaning: needs rewriting = needs to be rewritten. Needs to rewrite would make the chapter the writer rather than the thing written."
+  - type: grammar_drill
+    group: grammar
+    grammar_point: Verb + object + infinitive
+    content:
+      pre: "The invigilator let "
+      post: " a dictionary during the second half of the exam."
+      prompt: USE
+      options: [us use, us to use, that we use, us using]
+      answer: 0
+    explanation: "Let is one of the five verbs taking a bare infinitive in the active — let us use. Let us to use is always wrong, and in the passive English abandons let altogether in favour of we were allowed to use."
+  - type: grammar_drill
+    group: grammar
+    grammar_point: Verbs that change meaning (remember / forget / regret / stop / try / mean / go on)
+    content:
+      pre: "She went on "
+      post: " the department five years after graduating."
+      prompt: RUN
+      options: [running, run, having run, to run]
+      answer: 3
+    explanation: "Go on + to-infinitive moves the story to a new stage in a career. Go on running would mean she simply carried on doing what she was already doing, which the five-year gap rules out."
+  # ── error_correction × 8 · group grammar ───────────────────────
+  - type: error_correction
+    group: grammar
+    grammar_point: Verb + object + infinitive
+    content: {words: [The, teacher, made, us, to, learn, fifty, words, a, "week."], wrong: 4, correction: "to learn → learn"}
+    explanation: "Make takes a bare infinitive in the active: made us learn. The to belongs only to the passive version — we were made to learn fifty words a week."
+  - type: error_correction
+    group: grammar
+    grammar_point: Verb + object + infinitive
+    content: {words: [I, want, that, you, read, this, chapter, before, "Friday."], wrong: 2, correction: "that you read → you to read"}
+    explanation: "English has no want that clause. Wishes and requests use object + to-infinitive: I want you to read this chapter. The same frame serves expect, advise and would like."
+  - type: error_correction
+    group: grammar
+    grammar_point: to as a preposition (look forward to doing, be used to doing)
+    content: {words: [I, look, forward, to, hear, from, you, very, "soon."], wrong: 4, correction: "hear → hearing"}
+    explanation: "The to in look forward to is a preposition, so it must be followed by an -ing form: look forward to hearing. This is the single commonest error in English email sign-offs."
+  - type: error_correction
+    group: grammar
+    grammar_point: to as a preposition (look forward to doing, be used to doing)
+    content: {words: [I, am, used, to, get, up, at, six, "now."], wrong: 4, correction: "get → getting"}
+    explanation: "Be used to means be accustomed to and takes an -ing form: am used to getting up. Only the past-habit structure used to get up, with no form of be, takes the bare infinitive."
+  - type: error_correction
+    group: grammar
+    grammar_point: Verbs that change meaning (remember / forget / regret / stop / try / mean / go on)
+    content: {words: [She, stopped, to, smoke, three, years, ago, and, feels, "better."], wrong: 2, correction: "to smoke → smoking"}
+    explanation: "Stop + -ing ends the habit: stopped smoking. As written, the sentence says she paused in order to have a cigarette — grammatically fine, but the opposite of giving up."
+  - type: error_correction
+    group: grammar
+    grammar_point: let and make in the passive
+    content: {words: [We, were, allowed, using, dictionaries, in, the, second, "half."], wrong: 3, correction: "using → to use"}
+    explanation: "Be allowed is followed by a to-infinitive: were allowed to use. The -ing form would need a preposition in front of it, and allowed has none."
+  - type: error_correction
+    group: grammar
+    grammar_point: Perfect and passive -ing forms (deny having done, need doing)
+    content: {words: [He, denied, to, have, cheated, in, the, earlier, "paper."], wrong: 2, correction: "to have cheated → having cheated"}
+    explanation: "Deny never takes an infinitive. The gerund carries the report, and having + past participle marks the earlier time: denied having cheated."
+  - type: error_correction
+    group: grammar
+    grammar_point: Verb + object + infinitive
+    content: {words: [The, diagram, helped, me, grasping, the, whole, "argument."], wrong: 4, correction: "grasping → grasp"}
+    explanation: "Help takes an infinitive with or without to — helped me grasp or helped me to grasp. It is the one verb in this family relaxed about to, but the -ing form is not an option."
+  # ── key_word_transformation × 8 · group grammar ────────────────
+  # The last two revise earlier modules (M1 perfect aspect, M3 passive reporting) and stay untagged.
+  - type: key_word_transformation
+    group: grammar
+    grammar_point: Verbs that change meaning (remember / forget / regret / stop / try / mean / go on)
+    content:
+      s1: He no longer takes notes in lectures.
+      key: STOPPED
+      pre: "He "
+      post: " in lectures."
+      answers: [has stopped taking notes, stopped taking notes]
+      answer_shown: has stopped taking notes
+      hint: 3–6 words, including the key word
+    explanation: "No longer does something = has stopped doing it. Stop is followed by the -ing form when the activity itself has ended."
+  - type: key_word_transformation
+    group: grammar
+    grammar_point: let and make in the passive
+    content:
+      s1: The invigilators wouldn't let us use dictionaries.
+      key: ALLOWED
+      pre: "We "
+      post: " dictionaries."
+      answers: [were not allowed to use, weren't allowed to use]
+      answer_shown: were not allowed to use
+      hint: 3–6 words, including the key word
+    explanation: "Let has no ordinary passive, so English switches to be allowed to. The to-infinitive is obligatory after allowed."
+  - type: key_word_transformation
+    group: grammar
+    grammar_point: to as a preposition (look forward to doing, be used to doing)
+    content:
+      s1: Studying in a second language still feels strange to her.
+      key: USED
+      pre: "She still "
+      post: " in a second language."
+      answers: [isn't used to studying, is not used to studying]
+      answer_shown: isn't used to studying
+      hint: 3–6 words, including the key word
+    explanation: "Be used to = be accustomed to, and its to is a preposition, so the -ing form follows: isn't used to studying."
+  - type: key_word_transformation
+    group: grammar
+    grammar_point: Verb + object + infinitive
+    content:
+      s1: "'You really should resit the paper,' the tutor told her."
+      key: ENCOURAGED
+      pre: "The tutor "
+      post: " the paper."
+      answers: [encouraged her to resit]
+      answer_shown: encouraged her to resit
+      hint: 3–6 words, including the key word
+    explanation: "Advice reported as persuasion takes encourage + object + to-infinitive. The person comes first, then the to-infinitive."
+  - type: key_word_transformation
+    group: grammar
+    grammar_point: Perfect and passive -ing forms (deny having done, need doing)
+    content:
+      s1: He insisted that he had not cheated in the earlier paper.
+      key: DENIED
+      pre: "He "
+      post: " in the earlier paper."
+      answers: [denied having cheated, denied cheating]
+      answer_shown: denied having cheated
+      hint: 3–6 words, including the key word
+    explanation: "Deny takes an -ing form, and having + past participle makes the earlier time explicit. Both denied having cheated and denied cheating are correct."
+  - type: key_word_transformation
+    group: grammar
+    grammar_point: Verbs that change meaning (remember / forget / regret / stop / try / mean / go on)
+    content:
+      s1: Five years after graduating she became head of the department.
+      key: WENT
+      pre: "She "
+      post: " the department five years after graduating."
+      answers: [went on to head, went on to run, went on to lead]
+      answer_shown: went on to head
+      hint: 3–6 words, including the key word
+    explanation: "Go on + to-infinitive marks the next stage of a career. Go on heading would mean she carried on doing what she was already doing."
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: People say the new curriculum was designed in six weeks.
+      key: SAID
+      pre: "The new curriculum "
+      post: " in six weeks."
+      answers: [is said to have been designed]
+      answer_shown: is said to have been designed
+      hint: 3–6 words, including the key word
+    explanation: "Module 3 revision — passive reporting. People say that X was done becomes X is said to have been done: the perfect infinitive pushes the designing back before the reporting, and the passive keeps the curriculum as the thing designed."
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: She enrolled on the course in 2021 and has not left it since.
+      key: BEEN
+      pre: "She "
+      post: " on the course since 2021."
+      answers: [has been enrolled]
+      answer_shown: has been enrolled
+      hint: 3–6 words, including the key word
+    explanation: "Module 1 revision — perfect aspect. Since 2021 marks a past starting point that reaches the present, so the present perfect is obligatory; the passive keeps her as the one enrolled."
+  # ── open_cloze × 8 · group reading ─────────────────────────────
+  - type: open_cloze
+    group: reading
+    grammar_point: to as a preposition (look forward to doing, be used to doing)
+    content:
+      pre: "I look forward "
+      post: " hearing from the admissions office next week."
+      answers: [to]
+      answer_shown: to
+    explanation: "Look forward TO doing — a fixed phrase ending in a preposition, which is exactly why the -ing form follows it."
+  - type: open_cloze
+    group: reading
+    grammar_point: let and make in the passive
+    content:
+      pre: "Candidates were not "
+      post: " to use dictionaries in the second half of the paper."
+      answers: [allowed, permitted]
+      answer_shown: allowed
+    explanation: "Let has no ordinary passive, so permission becomes be ALLOWED to. Permitted works identically and is a shade more formal."
+  - type: open_cloze
+    group: reading
+    grammar_point: Perfect and passive -ing forms (deny having done, need doing)
+    content:
+      pre: "He denied "
+      post: " cheated, and produced two witnesses to prove it."
+      answers: [having]
+      answer_shown: having
+    explanation: "Deny + HAVING + past participle pushes the gerund back to a time earlier than the denial itself."
+  - type: open_cloze
+    group: reading
+    grammar_point: Perfect and passive -ing forms (deny having done, need doing)
+    content:
+      pre: "The whole chapter needs "
+      post: " before anyone else reads it."
+      answers: [rewriting, revising, reworking]
+      answer_shown: rewriting
+    explanation: "After need, an -ing form carries a passive meaning: needs REWRITING = needs to be rewritten."
+  - type: open_cloze
+    group: reading
+    grammar_point: Verbs that change meaning (remember / forget / regret / stop / try / mean / go on)
+    content:
+      pre: "She went "
+      post: " to run the department five years after graduating."
+      answers: [on]
+      answer_shown: on
+    explanation: "Go ON to do something = move to the next stage. Without on, the sentence loses the sense of a career advancing."
+  - type: open_cloze
+    group: reading
+    grammar_point: Perfect and passive -ing forms (deny having done, need doing)
+    content:
+      pre: "It is well "
+      post: " revisiting this topic nearer the exam."
+      answers: [worth]
+      answer_shown: worth
+    explanation: "Be WORTH + -ing — another structure where the -ing form carries a passive meaning: worth revisiting = worth being revisited."
+  - type: open_cloze
+    group: reading
+    grammar_point: to as a preposition (look forward to doing, be used to doing)
+    content:
+      pre: "I'd "
+      post: " study at night than revise in the morning."
+      answers: [rather, sooner]
+      answer_shown: rather
+    explanation: "Would RATHER takes a bare infinitive with no to at all — a useful contrast with prefer studying to revising, which takes -ing on both sides."
+  - type: open_cloze
+    group: reading
+    grammar_point: Perfect and passive -ing forms (deny having done, need doing)
+    content:
+      pre: "Having "
+      post: " taught by rote for a decade, he found open questions terrifying."
+      answers: [been]
+      answer_shown: been
+    explanation: "Having BEEN + past participle is the perfect passive gerund: he received the teaching, and it happened before the difficulty described."
+  # ── reading_comprehension × 6 · group reading ──────────────────
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Within twenty minutes he had lost roughly forty per cent of a freshly learnt list. Within a day, two thirds. The curve fell off a cliff and then flattened into a long, thin tail of the few items that somehow stayed."
+      q: What does the shape of Ebbinghaus's curve show?
+      options:
+        - Most forgetting happens very quickly, and then slows down.
+        - Forgetting continues at a steady rate for months.
+        - Meaningless material is remembered better than meaningful material.
+        - Nothing at all survives beyond the first day.
+      answer: 0
+    explanation: "Forty per cent gone in twenty minutes and two thirds in a day, followed by a flattening tail, describes rapid early loss that then decelerates. The tail explicitly contains items that stayed, so option 3 is contradicted."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Read a chapter four times in one evening and it grows smoother, easier, more familiar with each pass. You feel yourself absorbing information at speed, and that fluency feels like knowledge. Robert Bjork, the psychologist who has spent a career on this problem, calls the whole family of effective study methods desirable difficulties — techniques that make the session feel worse and the memory last longer. Students, asked to choose, reliably pick the method that feels best. They are choosing the smooth road that leads nowhere."
+      q: Why do students choose ineffective study methods, according to the writer?
+      options:
+        - They have never been told which methods work.
+        - The effective methods take significantly more total time.
+        - They mistake the ease of rereading for evidence of learning.
+        - Their teachers actively recommend rereading.
+      answer: 2
+    explanation: "The passage says fluency feels like knowledge — the sensation of ease is misread as proof of learning. Nothing is said about total time or about teachers' advice."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "The material is now less familiar each time you return to it; you have to fight a little to retrieve it. That fight is the mechanism. Reviewing something just as it starts to slip — the principle behind spaced repetition — forces the brain to reconstruct the memory rather than merely recognise it, and reconstruction is what makes the trace durable."
+      q: According to the passage, what makes spaced review effective?
+      options:
+        - The total number of hours spent studying increases.
+        - The effort of retrieving a fading memory strengthens it.
+        - Material is easier to recognise on each new attempt.
+        - Reviews are scheduled at fixed daily intervals.
+      answer: 1
+    explanation: "The fight to retrieve something slipping away is named directly as the mechanism, and reconstruction is contrasted with mere recognition. The hours are the same, only redistributed."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "In one much-replicated study, students who read a passage once and then tested themselves three times remembered dramatically more a week later than students who read the same passage four times — although at the moment of study, the rereaders were confident they had learnt more. They had, briefly."
+      q: What does the phrase 'They had, briefly' concede?
+      options:
+        - The rereaders had in fact studied for longer.
+        - The rereaders never really learnt the passage at all.
+        - The testing group felt more confident throughout.
+        - The rereaders' advantage was real but did not last.
+      answer: 3
+    explanation: "The concession grants that the rereaders genuinely had learnt more — but only for a short time, which is why Ebbinghaus's cliff arrives in the next sentence."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "None of this makes rote learning worthless. Some material genuinely has to be automatic — the multiplication tables, the irregular verbs, the safety checklist — and repetition is how you master a skill that has to run without attention. The error is treating it as the whole of study rather than the floor of it."
+      q: What is the writer's position on rote learning?
+      options:
+        - It should be removed from schools entirely.
+        - It is the most efficient method for any subject.
+        - It is necessary for some material but insufficient on its own.
+        - It works only for students with a natural aptitude.
+      answer: 2
+    explanation: "Repetition is credited with delivering genuine automaticity, so it is not dismissed; calling it the floor rather than the whole of study marks it as necessary but not sufficient."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "What I remember now is not the curriculum. It is the two or three occasions when I had to put theory into practice and discovered how thin the theory had been. A summer placement where I was expected to build something and could not. A seminar where a first-year student asked why a formula worked and I realised I had never known — I had committed it to memory and gone on collecting marks. Those afternoons were humiliating, and they are the only afternoons that stuck."
+      q: Why does the graduate value those particular afternoons?
+      options:
+        - They exposed what he did not actually understand.
+        - They were the only enjoyable moments of the degree.
+        - They earned him the highest marks of his course.
+        - They persuaded him to change subject.
+      answer: 0
+    explanation: "Discovering how thin the theory had been is precisely the exposure of a knowledge gap, and he calls the experience humiliating — the opposite of enjoyable or high-scoring."
+  # ── mc_cloze × 8 · group vocab ─────────────────────────────────
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "Multiplication tables are one of the few things "
+      post: " genuinely does well."
+      options: [peer assessment, grade inflation, rote learning, higher education]
+      answer: 2
+    explanation: "Rote learning — repetition until reproduction is automatic — is exactly what tables require. Grade inflation is about marks rising, and peer assessment is students judging each other's work."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "It took me an entire term to "
+      post: " statistical inference."
+      options: [get to grips with, keep up with, live up to, brush up on]
+      answer: 0
+    explanation: "Get to grips with something = begin to understand and handle something difficult. Brush up on implies reviving a skill you already had, which the whole term of struggle rules out."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "Bright children "
+      post: " for social reasons far more often than for academic ones."
+      options: [excel, graduate, consolidate, underachieve]
+      answer: 3
+    explanation: "Underachieve = perform below your evident ability, which is what makes the observation about bright children worth making. Excel would say the opposite."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "Two weeks of illness and she could no longer "
+      post: " the class."
+      options: [fall behind, keep up with, drop out of, sit]
+      answer: 1
+    explanation: "Keep up with the class = progress at the same speed as everyone else. Fall behind is the result, not something you fail to do — and it takes with only before the work, not the people."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "I need to "
+      post: " my German before the conference in Vienna."
+      options: [brush up on, pick up, cram for, take in]
+      answer: 0
+    explanation: "Brush up on = improve a skill you once had and have partly forgotten, which fits a language being readied for reuse. Pick up would mean acquiring it informally for the first time."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "The first month in the lab was "
+      post: " for everyone who joined that autumn."
+      options: [a knowledge gap, a high achiever, a steep learning curve, grade inflation]
+      answer: 2
+    explanation: "A steep learning curve = a period in which you must learn a great deal very quickly. A knowledge gap is one specific thing you do not know, not a whole demanding period."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "She showed an early "
+      post: " for languages that the school did nothing to develop."
+      options: [plateau, aptitude, enrolment, transcript]
+      answer: 1
+    explanation: "An aptitude for something is a natural ability to learn it — and the preposition is always for, never to. A plateau is where progress stops, the reverse of early promise."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "He "
+      post: " conversational Portuguese from his colleagues in about six months."
+      options: [committed, crammed, internalised, picked up]
+      answer: 3
+    explanation: "Pick something up = learn it informally, without being taught, which is what absorbing a language from colleagues means. Cram involves deliberate last-minute study for an exam."
+  # ── collocation_match × 10 · group vocab ───────────────────────
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [rote, spaced, vocational, extracurricular]
+      right: [training, activities, learning, repetition]
+      pairs: {0: 2, 1: 3, 2: 0, 3: 1}
+    explanation: "Rote learning, spaced repetition, vocational training, extracurricular activities — four fixed compounds of education English, each locked to one partner."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [cram for, enrol on, graduate from, drop out of]
+      right: [university, an exam, a course, medical school]
+      pairs: {0: 1, 1: 2, 2: 0, 3: 3}
+    explanation: "Cram for an exam, enrol on a course, graduate from university, drop out of medical school — the prepositions are fixed and each verb selects its own kind of object."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [grasp, retain, commit, jog]
+      right: [your memory, information, a concept, something to memory]
+      pairs: {0: 2, 1: 1, 2: 3, 3: 0}
+    explanation: "Grasp a concept, retain information, commit something to memory, jog your memory — four verbs of learning, each with a single natural object."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [keep up with, fall behind, live up to, hit]
+      right: [expectations, a plateau, the class, with your coursework]
+      pairs: {0: 2, 1: 3, 2: 0, 3: 1}
+    explanation: "Keep up with the class, fall behind with your coursework, live up to expectations, hit a plateau. Note that fall behind takes with before the work but nothing before the people."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [tuition, grade, higher, lifelong]
+      right: [inflation, learning, education, fees]
+      pairs: {0: 3, 1: 0, 2: 2, 3: 1}
+    explanation: "Tuition fees, grade inflation, higher education, lifelong learning — four compounds that dominate any article about education policy."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [put theory, burn, brush up, get to grips]
+      right: [the midnight oil, with a subject, into practice, on your German]
+      pairs: {0: 2, 1: 0, 2: 3, 3: 1}
+    explanation: "Put theory into practice, burn the midnight oil, brush up on your German, get to grips with a subject — fixed idioms whose prepositions cannot be swapped."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [award, show, master, identify]
+      right: [a knowledge gap, a scholarship, aptitude, a skill]
+      pairs: {0: 1, 1: 2, 2: 3, 3: 0}
+    explanation: "Award a scholarship, show aptitude, master a skill, identify a knowledge gap — the verb tells you which stage of a learner's progress is meant."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [constructive, peer, self-directed, national]
+      right: [assessment, curriculum, feedback, learning]
+      pairs: {0: 2, 1: 0, 2: 3, 3: 1}
+    explanation: "Constructive feedback, peer assessment, self-directed learning, the national curriculum — each adjective has one habitual partner in educational English."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [excel at, procrastinate over, absorb, consolidate]
+      right: [knowledge, an essay, information, a subject]
+      pairs: {0: 3, 1: 1, 2: 2, 3: 0}
+    explanation: "Excel at a subject, procrastinate over an essay, absorb information, consolidate knowledge — note that procrastinate needs over or about before its object."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [a steep, a high, trial and, a flair]
+      right: [error, learning curve, for languages, achiever]
+      pairs: {0: 1, 1: 3, 2: 0, 3: 2}
+    explanation: "A steep learning curve, a high achiever, trial and error, a flair for languages. Trial and error is fixed in that order, and flair always takes for."
+  # ── word_formation × 8 · group vocab ───────────────────────────
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "The school is full of high "
+      post: " who have never once been allowed to fail."
+      prompt: ACHIEVE
+      answers: [achievers]
+      answer_shown: achievers
+    explanation: "After high the gap wants a plural noun for people: achievers. High achievers is a fixed compound of educational English."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Long-term "
+      post: " depends far more on spacing than on total hours studied."
+      prompt: RETAIN
+      answers: [retention]
+      answer_shown: retention
+    explanation: "The subject position needs the abstract noun: retention. Note the spelling change — retain loses its a and takes -tion."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Course "
+      post: " has doubled since the fees were cut."
+      prompt: ENROL
+      answers: [enrolment, enrollment]
+      answer_shown: enrolment
+    explanation: "The noun of the process is enrolment — one l in British English, two in American. Course enrolment is what rises and falls with fees."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "He chose "
+      post: " training over a degree and was earning three years earlier."
+      prompt: VOCATION
+      answers: [vocational]
+      answer_shown: vocational
+    explanation: "Before training the gap needs an adjective: vocational. Vocational training is the standard contrast with the academic route."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Her "
+      post: " record was flawless and told her supervisor almost nothing."
+      prompt: ACADEMY
+      answers: [academic]
+      answer_shown: academic
+    explanation: "Between her and record the gap wants an adjective: academic. The stress moves to the second syllable — a-CA-demic."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Chronic "
+      post: " is usually a fear of the standard you have set yourself."
+      prompt: PROCRASTINATE
+      answers: [procrastination]
+      answer_shown: procrastination
+    explanation: "After the adjective chronic the gap needs the abstract noun: procrastination. The verb would leave the sentence without a subject."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Debating was the only "
+      post: " commitment he kept up after the exams began."
+      prompt: CURRICULUM
+      answers: [extracurricular]
+      answer_shown: extracurricular
+    explanation: "The gap needs an adjective meaning outside the taught course, which requires the prefix as well as the suffix: extracurricular."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Good testing exposes "
+      post: " gaps early, while they are still cheap to fix."
+      prompt: KNOW
+      answers: [knowledge]
+      answer_shown: knowledge
+    explanation: "Before gaps the gap wants a noun used attributively: knowledge gaps. Note the spelling — know keeps its w and adds -ledge."
+review_pool:
+  # ── grammar_drill × 5 ──────────────────────────────────────────
+  - type: grammar_drill
+    group: grammar
+    grammar_point: Verbs that change meaning (remember / forget / regret / stop / try / mean / go on)
+    content:
+      pre: "Try "
+      post: " it aloud — it often helps."
+      prompt: READ
+      options: [to read, reading, read, having read]
+      answer: 1
+    explanation: "Try + -ing suggests an experiment worth attempting. Try to read would frame the reading itself as difficult to achieve."
+  - type: grammar_drill
+    group: grammar
+    grammar_point: let and make in the passive
+    content:
+      pre: "The candidate "
+      post: " the hall twenty minutes early."
+      prompt: SEE
+      options: [was seen leave, was seen to leave, saw to leave, was seeing leave]
+      answer: 1
+    explanation: "Verbs of perception keep to in the passive: was seen to leave. The active would drop it — I saw him leave."
+  - type: grammar_drill
+    group: grammar
+    grammar_point: to as a preposition (look forward to doing, be used to doing)
+    content:
+      pre: "When it comes "
+      post: ", everyone believes in their own method."
+      prompt: REVISE
+      options: [to revising, to revise, revising, revise]
+      answer: 0
+    explanation: "When it comes to ends in a preposition, so the -ing form follows: when it comes to revising."
+  - type: grammar_drill
+    group: grammar
+    grammar_point: Verbs that change meaning (remember / forget / regret / stop / try / mean / go on)
+    content:
+      pre: "A doctorate "
+      post: " up your twenties, and nobody says so at the open day."
+      prompt: GIVE
+      options: [means to give, means giving, means give, meant giving]
+      answer: 1
+    explanation: "Mean + -ing = involve or entail, and the subject here is a thing, not a person. Mean to give would report an intention, which a doctorate cannot have."
+  - type: grammar_drill
+    group: grammar
+    grammar_point: Verb + object + infinitive
+    content:
+      pre: "I saw him "
+      post: " the answers from the next desk."
+      prompt: COPY
+      options: [to copy, copied, copying, to copying]
+      answer: 2
+    explanation: "A perception verb plus -ing catches the action mid-flow: saw him copying. The bare infinitive saw him copy would mean you watched the whole act from start to finish."
+  # ── error_correction × 4 ───────────────────────────────────────
+  - type: error_correction
+    group: grammar
+    grammar_point: let and make in the passive
+    content: {words: [We, were, let, use, our, notes, in, the, "test."], wrong: 2, correction: "were let → were allowed to"}
+    explanation: "Let has no ordinary passive. Permission in the passive is expressed with be allowed to use."
+  - type: error_correction
+    group: grammar
+    grammar_point: Verbs that change meaning (remember / forget / regret / stop / try / mean / go on)
+    content: {words: [I, regret, to, drop, out, of, the, course, last, "year."], wrong: 2, correction: "to drop → dropping"}
+    explanation: "Regret + -ing looks back at something you are sorry about. Regret to do belongs to formal announcements — we regret to inform you."
+  - type: error_correction
+    group: grammar
+    grammar_point: to as a preposition (look forward to doing, be used to doing)
+    content: {words: [She, objects, to, be, tested, every, single, "week."], wrong: 3, correction: "be → being"}
+    explanation: "Object to ends in a preposition, so a gerund follows — and the passive gerund is being tested."
+  - type: error_correction
+    group: grammar
+    grammar_point: Perfect and passive -ing forms (deny having done, need doing)
+    content: {words: [These, lecture, notes, need, to, revise, before, "Monday."], wrong: 5, correction: "to revise → revising"}
+    explanation: "Need + -ing carries a passive meaning: need revising = need to be revised. As written, the notes would be doing the revising."
+  # ── key_word_transformation × 4 ────────────────────────────────
+  - type: key_word_transformation
+    group: grammar
+    grammar_point: Verbs that change meaning (remember / forget / regret / stop / try / mean / go on)
+    content:
+      s1: I am sorry I never learnt a second language properly.
+      key: REGRET
+      pre: "I "
+      post: " a second language properly."
+      answers: [regret never learning, regret never having learnt]
+      answer_shown: regret never learning
+      hint: 3–6 words, including the key word
+    explanation: "Regret + -ing looks back at the past. The perfect gerund having learnt is also correct and slightly more formal."
+  - type: key_word_transformation
+    group: grammar
+    grammar_point: Verb + object + infinitive
+    content:
+      s1: My supervisor said I should submit the draft on Friday.
+      key: ADVISED
+      pre: "My supervisor "
+      post: " the draft on Friday."
+      answers: [advised me to submit]
+      answer_shown: advised me to submit
+      hint: 3–6 words, including the key word
+    explanation: "Advice becomes advise + object + to-infinitive. English has no advised that I submit pattern in everyday use."
+  - type: key_word_transformation
+    group: grammar
+    grammar_point: to as a preposition (look forward to doing, be used to doing)
+    content:
+      s1: Early starts no longer bother her.
+      key: USED
+      pre: "She "
+      post: " early now."
+      answers: [is used to starting, has got used to starting]
+      answer_shown: is used to starting
+      hint: 3–6 words, including the key word
+    explanation: "Be used to + -ing describes something that has stopped feeling strange. The to is a preposition, hence the gerund."
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: An external examiner marks every dissertation for the department.
+      key: HAS
+      pre: "The department "
+      post: " by an external examiner."
+      answers: [has every dissertation marked]
+      answer_shown: has every dissertation marked
+      hint: 3–6 words, including the key word
+    explanation: "Module 2 revision — the causative. Work arranged but performed by somebody else takes have + object + past participle."
+  # ── open_cloze × 4 ─────────────────────────────────────────────
+  - type: open_cloze
+    group: reading
+    grammar_point: Verbs that change meaning (remember / forget / regret / stop / try / mean / go on)
+    content:
+      pre: "On the way home she stopped "
+      post: " buy a notebook for the new term."
+      answers: [to]
+      answer_shown: to
+    explanation: "Stop TO do = interrupt one activity in order to begin another. Stop buying would mean she gave up purchasing notebooks altogether."
+  - type: open_cloze
+    group: reading
+    grammar_point: let and make in the passive
+    content:
+      pre: "First-year students are made "
+      post: " attend every seminar in the first term."
+      answers: [to]
+      answer_shown: to
+    explanation: "Make takes a bare infinitive in the active but the passive restores TO: are made to attend."
+  - type: open_cloze
+    group: reading
+    grammar_point: to as a preposition (look forward to doing, be used to doing)
+    content:
+      pre: "She is committed "
+      post: " finishing the thesis before September."
+      answers: [to]
+      answer_shown: to
+    explanation: "Be committed TO is another fixed phrase ending in a preposition, which is why finishing rather than finish follows."
+  - type: open_cloze
+    group: reading
+    grammar_point: Perfect and passive -ing forms (deny having done, need doing)
+    content:
+      pre: "She hated "
+      post: " made to read aloud in front of the class."
+      answers: [being]
+      answer_shown: being
+    explanation: "The passive gerund is BEING + past participle, and the passive of make brings back its to — being made to read."
+  # ── reading_comprehension × 1 ──────────────────────────────────
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Exam systems reward what can be produced on a single morning in May, no curriculum has ever found room to teach students how to study, and cramming is beautifully adapted to exactly that. A student who crams is not being irrational; they are responding rather precisely to the incentive in front of them."
+      q: What point is the writer making about students who cram?
+      options:
+        - They are lazier than students who space their study.
+        - They behave sensibly given how they are assessed.
+        - They have misunderstood the research on memory.
+        - They perform worse in exams than other students.
+      answer: 1
+    explanation: "Not being irrational and responding precisely to the incentive place the blame on the assessment system rather than on the student's character or knowledge."
+  # ── mc_cloze × 4 ───────────────────────────────────────────────
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "Nearly a fifth of the cohort "
+      post: " before the second year even began."
+      options: [graduated, dropped out, enrolled, resat]
+      answer: 1
+    explanation: "Drop out = leave a course before finishing it, which is what leaving before the second year means. Resit refers to taking an exam again, not to leaving."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "Every language learner "
+      post: " somewhere around the upper-intermediate stage."
+      options: [hits a plateau, burns the midnight oil, sits an exam, jogs their memory]
+      answer: 0
+    explanation: "Hit a plateau = stop making noticeable progress despite continuing to work, which is exactly what the upper-intermediate stage is famous for."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "The placement is where students finally "
+      post: "."
+      options: [fall behind, cram for an exam, put theory into practice, underachieve]
+      answer: 2
+    explanation: "Put theory into practice = apply in a real situation what you have learnt in the classroom, which is what a work placement is for."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "Good testing exposes "
+      post: " early, while they are still cheap to fix."
+      options: [scholarships, tuition fees, extracurricular activities, knowledge gaps]
+      answer: 3
+    explanation: "A knowledge gap is something important you do not know inside a subject you otherwise understand — precisely what a test is designed to reveal."
+  # ── collocation_match × 4 ──────────────────────────────────────
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [sit, resit, pass, fail]
+      right: [the paper in August, an exam, a module, your finals]
+      pairs: {0: 3, 1: 0, 2: 1, 3: 2}
+    explanation: "Sit your finals, resit the paper in August, pass an exam, fail a module — the whole examination cycle in four verbs."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [win, receive, act on, close]
+      right: [constructive feedback, a knowledge gap, a scholarship, an offer]
+      pairs: {0: 2, 1: 3, 2: 0, 3: 1}
+    explanation: "Win a scholarship, receive an offer, act on constructive feedback, close a knowledge gap — each verb selects its own object."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [a natural, a chronic, a lifelong, a steep]
+      right: [learner, learning curve, flair, procrastinator]
+      pairs: {0: 2, 1: 3, 2: 0, 3: 1}
+    explanation: "A natural flair, a chronic procrastinator, a lifelong learner, a steep learning curve — four adjective-noun pairs that travel together."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [by trial, by rote, in theory, on the]
+      right: [curriculum, and error, but not in practice, rather than by understanding]
+      pairs: {0: 1, 1: 3, 2: 2, 3: 0}
+    explanation: "By trial and error, by rote rather than by understanding, in theory but not in practice, on the curriculum — fixed prepositional phrases of education English."
+  # ── word_formation × 4 ─────────────────────────────────────────
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Bright pupils who "
+      post: " are usually bored rather than incapable."
+      prompt: ACHIEVE
+      answers: [underachieve]
+      answer_shown: underachieve
+    explanation: "The sense required is performing below your ability, which needs the prefix as well as the verb: underachieve."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Memory "
+      post: " happens largely during deep sleep."
+      prompt: CONSOLIDATE
+      answers: [consolidation]
+      answer_shown: consolidation
+    explanation: "After the noun memory the gap wants another noun to complete the compound: memory consolidation."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "The department was praised for the "
+      post: " of its new assessment design."
+      prompt: CLEAR
+      answers: [clarity]
+      answer_shown: clarity
+    explanation: "After the and before of the gap needs an abstract noun: clarity. Clearness exists but is vanishingly rare in this collocation."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Learner "
+      post: " is the goal of every self-directed course."
+      prompt: AUTONOMOUS
+      answers: [autonomy]
+      answer_shown: autonomy
+    explanation: "The subject position needs the noun: autonomy. Learner autonomy is the standard term for students directing their own study."

@@ -1,0 +1,904 @@
+# Module 03 · Media & Communication — exercises
+# core: 10 grammar_drill · 8 error_correction · 8 key_word_transformation ·
+#       8 open_cloze · 6 reading_comprehension · 8 mc_cloze · 10 collocation_match · 8 word_formation  = 66
+# review_pool: 5 gd · 4 ec · 4 kwt · 4 oc · 1 rc · 4 mc · 4 cm · 4 wf  = 30
+# Answer indices are deliberately spread across positions — no runs of 3+.
+core:
+  # ── grammar_drill × 10 · group grammar ─────────────────────────
+  - type: grammar_drill
+    group: grammar
+    grammar_point: Tense backshift — and when it is not needed
+    content:
+      pre: "After the meeting, he assured us he "
+      post: " the source completely."
+      prompt: TRUST
+      options: [trusts, is trusting, trusted, will trust]
+      answer: 2
+    explanation: "Assured is a past reporting verb, so the original present simple (I trust the source) steps one tense back: trusted. Keeping the present would only be possible with a present reporting verb or a still-true fact the speaker vouches for."
+  - type: grammar_drill
+    group: grammar
+    grammar_point: Reporting verb patterns (deny doing, accuse sb of, urge sb to)
+    content:
+      pre: "The spokesman flatly denied "
+      post: " the recording to the press."
+      prompt: LEAK
+      options: [leaking, to leak, leak, for leaking]
+      answer: 0
+    explanation: "Deny takes -ing: denied leaking. The to-infinitive is this verb's forbidden pattern, and for + -ing belongs to blame and criticise, not deny."
+  - type: grammar_drill
+    group: grammar
+    grammar_point: Passive reporting (is alleged to / is rumoured to have)
+    content:
+      pre: "The network "
+      post: " about the fabricated interview for months."
+      prompt: KNOW
+      options: [alleges to know, is alleging to have known, is alleged to know, is alleged to have known]
+      answer: 3
+    explanation: "The knowing happened before the reporting, so the passive frame needs the perfect infinitive: is alleged to have known. Is alleged to know would report a present state, and the active forms make the network the accuser rather than the accused."
+  - type: grammar_drill
+    group: grammar
+    grammar_point: Questions, requests and advice in reported speech
+    content:
+      pre: "Live on air, she asked the minister why "
+      post: " the report for six weeks."
+      prompt: SUPPRESS
+      options: [did he suppress, he had suppressed, had he suppressed, does he suppress]
+      answer: 1
+    explanation: "A reported question keeps statement word order and backshifts: why he had suppressed. The inversions with did and had are direct-question grammar, which reported speech abandons at the door."
+  - type: grammar_drill
+    group: grammar
+    grammar_point: Tense backshift — and when it is not needed
+    content:
+      pre: "The style guide says the paper "
+      post: " both sides of every dispute — no exceptions, no expiry date."
+      prompt: COVER
+      options: [covered, had covered, covers, was covering]
+      answer: 2
+    explanation: "Says is a present reporting verb, so nothing shifts: the paper covers. Backshift is triggered by past reporting verbs only — a live rule reported live keeps its present tense."
+  - type: grammar_drill
+    group: grammar
+    grammar_point: Reporting verb patterns (deny doing, accuse sb of, urge sb to)
+    content:
+      pre: "Campaigners urged the platform "
+      post: " every advertiser's identity."
+      prompt: VERIFY
+      options: [to verify, verifying, verify, on verifying]
+      answer: 0
+    explanation: "Urge presses somebody towards an action and takes object + to-infinitive: urged the platform to verify. The -ing forms belong to other verb families — deny doing, insist on doing — not to the pressure verbs."
+  - type: grammar_drill
+    group: grammar
+    grammar_point: Patterns with suggest (and recommend)
+    content:
+      pre: "Her editor suggested "
+      post: " the quote until the lawyer had seen it."
+      prompt: HOLD
+      options: [to hold, holding, hold, to holding]
+      answer: 1
+    explanation: "Suggest never takes a to-infinitive — only -ing or a that-clause: suggested holding. This is the verb's defining trap, and the exam knows it."
+  - type: grammar_drill
+    group: grammar
+    grammar_point: Reporting verb patterns (deny doing, accuse sb of, urge sb to)
+    content:
+      pre: "The blogger accused the channel "
+      post: " the protest footage."
+      prompt: DOCTOR
+      options: [to doctor, doctoring, for doctoring, of doctoring]
+      answer: 3
+    explanation: "Accuse is welded to of + -ing: accused the channel of doctoring. For + -ing belongs to blame and criticise — the two prepositions mark different verbs and are never interchangeable."
+  - type: grammar_drill
+    group: grammar
+    grammar_point: Reporting verb patterns (deny doing, accuse sb of, urge sb to)
+    content:
+      pre: "The editor insisted "
+      post: " the raw footage before the piece could air."
+      prompt: SEE
+      options: [on seeing, to see, seeing, in seeing]
+      answer: 0
+    explanation: "Insist runs on the preposition on plus -ing: insisted on seeing. The bare gerund is not enough — the on is part of the verb — and the to-infinitive is the one pattern insist refuses."
+  - type: grammar_drill
+    group: grammar
+    grammar_point: Tense backshift — and when it is not needed
+    content:
+      pre: "The anchor promised viewers the channel "
+      post: " a full correction the next day."
+      prompt: RUN
+      options: [will run, runs, would run, would have run]
+      answer: 2
+    explanation: "Promised is past, so will backshifts to would: the channel would run a correction. Would have run would mean the correction never happened — a meaning the sentence does not license."
+  # ── error_correction × 8 · group grammar ───────────────────────
+  - type: error_correction
+    group: grammar
+    grammar_point: Reporting verb patterns (deny doing, accuse sb of, urge sb to)
+    content:
+      words: [The, producer, said, me, the, interview, was, off.]
+      wrong: 2
+      correction: said → told
+    explanation: "Say never takes the listener as its object — it is told me or said to me. Tell demands the person; say refuses it. One verb per job."
+  - type: error_correction
+    group: grammar
+    grammar_point: Questions, requests and advice in reported speech
+    content:
+      words: [She, asked, what, did, the, editor, want, changed.]
+      wrong: 3
+      correction: did the editor want → the editor wanted
+    explanation: "A reported question is a statement about a question: the auxiliary did and the inversion both disappear. What the editor wanted — the wh-word survives, the question grammar does not."
+  - type: error_correction
+    group: grammar
+    grammar_point: Tense backshift — and when it is not needed
+    content:
+      words: [He, promised, the, correction, will, appear, the, next, day.]
+      wrong: 4
+      correction: will → would
+    explanation: "Promised sets a past reporting frame, and the next day confirms the shifted perspective — so will must backshift to would. Keeping will would need a promise reported in the present."
+  - type: error_correction
+    group: grammar
+    grammar_point: Patterns with suggest (and recommend)
+    content:
+      words: [The, ombudsman, suggested, to, retract, the, claim, at, once.]
+      wrong: 3
+      correction: to retract → retracting
+    explanation: "Suggest cannot be followed by a to-infinitive — only by -ing or a that-clause: suggested retracting, or suggested that the claim be retracted. The infinitive pattern belongs to advise and urge, which need an object first."
+  - type: error_correction
+    group: grammar
+    grammar_point: Reporting verb patterns (deny doing, accuse sb of, urge sb to)
+    content:
+      words: [Even, under, pressure, the, reporters, insisted, in, protecting, their, sources.]
+      wrong: 6
+      correction: in → on
+    explanation: "Insist takes on + -ing: insisted on protecting. The preposition is fixed by the verb, not by meaning — in feels logical and is simply wrong."
+  - type: error_correction
+    group: grammar
+    grammar_point: Reporting verb patterns (deny doing, accuse sb of, urge sb to)
+    content:
+      words: [Critics, accused, the, tabloid, for, stoking, panic, about, crime.]
+      wrong: 4
+      correction: for → of
+    explanation: "Accuse somebody OF doing something — the of is welded to the verb. For + -ing marks blame and criticise; swap the prepositions and both phrases collapse."
+  - type: error_correction
+    group: grammar
+    grammar_point: Passive reporting (is alleged to / is rumoured to have)
+    content:
+      words: [He, is, rumoured, that, he, funded, the, smear, campaign.]
+      wrong: 3
+      correction: that he funded → to have funded
+    explanation: "With a personal subject, passive reporting takes an infinitive: he is rumoured to have funded. The that-clause belongs to the other frame — It is rumoured that he funded — and the two frames never mix."
+  - type: error_correction
+    group: grammar
+    grammar_point: Reporting verb patterns (deny doing, accuse sb of, urge sb to)
+    content:
+      words: [The, candidate, urged, supporters, ignoring, the, hostile, coverage.]
+      wrong: 4
+      correction: ignoring → to ignore
+    explanation: "Urge takes object + to-infinitive: urged supporters to ignore. The -ing form would need a different verb family altogether — suggest ignoring, deny ignoring — none of which carry urge's pressure."
+  # ── key_word_transformation × 8 · group grammar ────────────────
+  - type: key_word_transformation
+    group: grammar
+    grammar_point: Reporting verb patterns (deny doing, accuse sb of, urge sb to)
+    content:
+      s1: "'I did not leak the memo to the press,' said the aide."
+      key: DENIED
+      pre: "The aide "
+      post: " to the press."
+      answers: [denied leaking the memo, denied having leaked the memo]
+      hint: 3–6 words, including the key word
+      answer_shown: denied leaking the memo
+    explanation: "A direct denial compresses into deny + -ing: denied leaking the memo. The perfect gerund (denied having leaked) is equally correct and one shade more formal."
+  - type: key_word_transformation
+    group: grammar
+    grammar_point: Reporting verb patterns (deny doing, accuse sb of, urge sb to)
+    content:
+      s1: "'You doctored the footage,' the blogger told the channel."
+      key: ACCUSED
+      pre: "The blogger "
+      post: " the footage."
+      answers: [accused the channel of doctoring]
+      hint: 3–6 words, including the key word
+      answer_shown: accused the channel of doctoring
+    explanation: "A direct accusation becomes accuse + object + of + -ing: accused the channel of doctoring. The reporting verb swallows the quotation and keeps its preposition."
+  - type: key_word_transformation
+    group: grammar
+    grammar_point: Reporting verb patterns (deny doing, accuse sb of, urge sb to)
+    content:
+      s1: "'Please verify every account,' campaigners told the platform."
+      key: URGED
+      pre: "Campaigners "
+      post: " every account."
+      answers: [urged the platform to verify]
+      hint: 3–6 words, including the key word
+      answer_shown: urged the platform to verify
+    explanation: "A pressing request reports as urge + object + to-infinitive: urged the platform to verify. The please disappears — the verb urge now carries all the pressure."
+  - type: key_word_transformation
+    group: grammar
+    grammar_point: Passive reporting (is alleged to / is rumoured to have)
+    content:
+      s1: It is rumoured that the tycoon bought the paper's silence.
+      key: HAVE
+      pre: "The tycoon is rumoured "
+      post: " the paper's silence."
+      answers: [to have bought]
+      hint: 3–6 words, including the key word
+      answer_shown: to have bought
+    explanation: "Switching from It is rumoured that to a personal subject demands the infinitive — and since the buying came before the rumour, the perfect infinitive: is rumoured to have bought."
+  - type: key_word_transformation
+    group: grammar
+    grammar_point: Questions, requests and advice in reported speech
+    content:
+      s1: "'Why did you spike the story?' she asked the editor."
+      key: WHY
+      pre: "She asked the editor "
+      post: " the story."
+      answers: [why he had spiked, why she had spiked, why they had spiked]
+      hint: 3–6 words, including the key word
+      answer_shown: why he had spiked
+    explanation: "The reported question drops the inversion and backshifts: why he had spiked. Did you spike (direct) → he had spiked (reported) — the auxiliary did dissolves into the past perfect."
+  - type: key_word_transformation
+    group: grammar
+    grammar_point: Patterns with suggest (and recommend)
+    content:
+      s1: "'Let's wait for a second source,' said the producer."
+      key: SUGGESTED
+      pre: "The producer "
+      post: " a second source."
+      answers: [suggested waiting for]
+      hint: 3–6 words, including the key word
+      answer_shown: suggested waiting for
+    explanation: "Let's proposals report as suggest + -ing: suggested waiting for. No to-infinitive, and no object before the gerund — suggest refuses both."
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: She intended to publish her sources, but her lawyer talked her out of it.
+      key: GOING
+      pre: "She "
+      post: " her sources, but her lawyer talked her out of it."
+      answers: [was going to publish]
+      hint: 3–6 words, including the key word
+      answer_shown: was going to publish
+    explanation: "Spiral review from Module 1: a past intention that never happened is was going to + infinitive — the future in the past, with the overturning but built into the sentence."
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: An outside agency checks every quotation for the magazine.
+      key: HAS
+      pre: "The magazine "
+      post: " by an outside agency."
+      answers: [has every quotation checked]
+      hint: 3–6 words, including the key word
+      answer_shown: has every quotation checked
+    explanation: "Spiral review from Module 2: work arranged and done by somebody else is causative have + object + past participle — has every quotation checked. The agency survives in the by-phrase."
+  # ── open_cloze × 8 · group reading ─────────────────────────────
+  - type: open_cloze
+    group: reading
+    grammar_point: Questions, requests and advice in reported speech
+    content:
+      pre: "She asked "
+      post: " the footage had been verified before broadcast."
+      answers: [whether, if]
+      answer_shown: whether
+    explanation: "A reported yes/no question needs whether or if — and then statement word order. Whether is the safer of the two in formal writing, especially before or not."
+  - type: open_cloze
+    group: reading
+    grammar_point: Passive reporting (is alleged to / is rumoured to have)
+    content:
+      pre: "The owner is alleged "
+      post: " have approved the payments personally."
+      answers: [to]
+      answer_shown: to
+    explanation: "Is alleged TO have approved — passive reporting always runs on the to-infinitive, here in its perfect form because the approving came earlier."
+  - type: open_cloze
+    group: reading
+    grammar_point: Reporting verb patterns (deny doing, accuse sb of, urge sb to)
+    content:
+      pre: "The editor insisted "
+      post: " running the correction on the front page."
+      answers: [on]
+      answer_shown: on
+    explanation: "Insist ON + -ing: insisted on running. The preposition is part of the verb's fixed pattern — no on, no sentence."
+  - type: open_cloze
+    group: reading
+    grammar_point: Reporting verb patterns (deny doing, accuse sb of, urge sb to)
+    content:
+      pre: "Critics accused the network "
+      post: " burying the story for a week."
+      answers: [of]
+      answer_shown: of
+    explanation: "Accuse somebody OF + -ing — accused the network of burying. The of belongs to accuse the way for belongs to blame; each verb owns exactly one preposition."
+  - type: open_cloze
+    group: reading
+    grammar_point: Reporting verb patterns (deny doing, accuse sb of, urge sb to)
+    content:
+      pre: "He warned readers "
+      post: " to take the poll at face value."
+      answers: [not]
+      answer_shown: not
+    explanation: "Negative advice slots not before the to-infinitive: warned readers not to take. English never splits it into to don't or to not in careful prose."
+  - type: open_cloze
+    group: reading
+    grammar_point: Tense backshift — and when it is not needed
+    content:
+      pre: "The reporter said the leak "
+      post: " come from inside the ministry itself."
+      answers: [had]
+      answer_shown: had
+    explanation: "The leaking happened before the saying, so reported speech reaches for the past perfect: the leak had come. The backshifted auxiliary is the only word that fits the gap."
+  - type: open_cloze
+    group: reading
+    grammar_point: Passive reporting (is alleged to / is rumoured to have)
+    content:
+      pre: "It "
+      post: " claimed at the time that the interview had been paid for."
+      answers: [was]
+      answer_shown: was
+    explanation: "At the time anchors the claim in the past: It WAS claimed that. The impersonal frame from Module 2 returns here with its tense chosen by the time phrase."
+  - type: open_cloze
+    group: reading
+    grammar_point: Patterns with suggest (and recommend)
+    content:
+      pre: "The board suggested "
+      post: " the interview be postponed until the review had finished."
+      answers: [that]
+      answer_shown: that
+    explanation: "Suggested THAT the interview be postponed — the subjunctive frame, with the bare be as its fingerprint. This is the pattern Module 6 will build on."
+  # ── reading_comprehension × 6 · group reading ──────────────────
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Nobody involved was lying, exactly. An account farming engagement had found a dramatic picture; an audience primed for anger supplied the caption; the platform's machinery did the rest. The outrage was real. Almost everything underneath it had been manufactured."
+      q: What does the writer suggest about the burning-bus episode?
+      options:
+        - Everyone involved knew the photograph was fake.
+        - It was produced by a system, not by a single liar.
+        - The outrage it caused was itself faked.
+        - The platform quickly removed the picture.
+      answer: 1
+    explanation: "'Nobody was lying, exactly' rules out a single deceiver, and the account–audience–machinery chain distributes the blame across a system. The outrage is explicitly called real; only what fed it was manufactured."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "A sensationalist front page once had to get past an editor, a lawyer and a printing press; a clickbait headline gets past nothing but an A/B test."
+      q: What contrast is the writer drawing?
+      options:
+        - Between print journalism and honest journalism.
+        - Between expensive and cheap production methods.
+        - Between lawyers' and editors' views of headlines.
+        - Between old and new obstacles standing before publication.
+      answer: 3
+    explanation: "The sentence lists the filters a story once had to pass — editor, lawyer, press — against the single automated test that remains. It is about gatekeeping, not honesty or cost."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Its chief executive — who is alleged to have read the key study within a month of its completion — told a congressional committee that the research had been preliminary and that no simple metric could capture a feeling."
+      q: What does the writer imply about the chief executive's testimony?
+      options:
+        - It played down research he had probably seen early on.
+        - It proved he had never read the internal study.
+        - It corrected an earlier statement to the committee.
+        - It revealed a new metric for measuring feelings.
+      answer: 0
+    explanation: "The aside — alleged to have read the study within a month — sits pointedly against the dismissive testimony that follows: preliminary, unmeasurable. The implication is minimisation by somebody well informed, not ignorance."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "One media historian I interviewed said the penny press had been manufacturing outrage long before anyone thought to measure it — what had changed, she added, was the feedback loop."
+      q: According to the historian, what is genuinely new?
+      options:
+        - The existence of outrage-driven journalism.
+        - The moral standards of newspaper owners.
+        - The speed and precision with which anger is measured.
+        - The public's appetite for indignation.
+      answer: 2
+    explanation: "The historian concedes the practice is old — long before anyone thought to measure it — and locates the novelty in the feedback loop: measurement itself. Appetite and owners' morals are not what she says has changed."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "And a public trained to take nothing at face value does not become sceptical, it becomes cynical — treating every credible source and every anonymous account as equally suspect, which suits the manufacturers perfectly."
+      q: Why does universal distrust suit the manufacturers?
+      options:
+        - Because cynics share content more often than sceptics.
+        - Because it drives readers back to credible sources.
+        - Because anonymous accounts are easier to run.
+        - Because it erases the advantage truthful sources should have.
+      answer: 3
+    explanation: "If every source is equally suspect, a credible outlet loses exactly what made it valuable — the trust gap between it and an anonymous account closes. Nothing in the passage claims cynics share more; the levelling itself is the prize."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "It is tempting to reach for the censor, and it would not work: manufactured outrage cannot be hushed up or banned out of existence, because its factory floor is us. Every share is a shift worked for free."
+      q: What is the writer's argument against censorship here?
+      options:
+        - Censors tend to be the worst offenders themselves.
+        - The system runs on ordinary readers, who cannot be banned.
+        - Banning content only makes it more attractive.
+        - No censor could review so much content in time.
+      answer: 1
+    explanation: "'Its factory floor is us' places the machinery inside the audience itself — you cannot ban the workforce when the workforce is everyone. The forbidden-fruit and workload arguments are never made."
+  # ── mc_cloze × 8 · group vocab ─────────────────────────────────
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "The verdict received wall-to-wall "
+      post: " on every channel for a week."
+      options: [broadcasting, circulation, publicity, coverage]
+      answer: 3
+    explanation: "Wall-to-wall coverage — reporting that fills every screen — is the fixed collocation. Circulation counts copies sold, publicity is what PR buys, and broadcasting names the industry, not the reporting of one story."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "The clip went "
+      post: " within hours, racking up two million shares before midnight."
+      options: [wild, viral, epidemic, contagious]
+      answer: 1
+    explanation: "Go viral — spread like an infection across the internet — is welded to viral. Contagious and epidemic carry the same metaphor but refuse the verb go; going wild is what crowds do, not clips."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "No one has yet managed to "
+      post: " the claim — plenty have shouted at it."
+      options: [refute, refuse, resist, refrain]
+      answer: 0
+    explanation: "Refute a claim means disprove it with evidence — which is precisely what the shouting has not done. Refuse takes offers, refrain takes from, and resist would need temptation, not an argument."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "The board tried to "
+      post: " the scandal, but the auditors talked."
+      options: [wrap up, ease up, hush up, let up]
+      answer: 2
+    explanation: "Hush up a scandal — keep it from becoming known — is the module's phrasal verb of concealment. Wrap up means finish, and ease up and let up mean become less intense; none of them hide anything."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "Three former editors publicly "
+      post: " her bid for the press regulator's job."
+      options: [subscribed, endorsed, testified, vouched]
+      answer: 1
+    explanation: "Endorse — publicly declare support for a person or candidacy — takes a direct object. Subscribed and testified need to, vouched needs for; only endorsed connects straight to the bid."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "Voters dismissed the minister's explanation as pure "
+      post: " — nobody was fooled, and nobody was surprised."
+      options: [twist, whirl, rotation, spin]
+      answer: 3
+    explanation: "Spin is presentation engineered to favour one side without technically lying — the political sense lives only in this word. Twist, whirl and rotation describe motion and never take this meaning."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "The headline promised a miracle diet; the article was standard "
+      post: " with no study behind it."
+      options: [clickbait, wordplay, shorthand, small talk]
+      answer: 0
+    explanation: "A headline engineered to be clicked rather than to inform is clickbait — the gap between promise and article is its signature. Wordplay, shorthand and small talk name other things entirely."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "She called the coverage an orchestrated "
+      post: " campaign designed to keep her off the ballot."
+      options: [stain, smudge, smear, blot]
+      answer: 2
+    explanation: "A smear campaign — an organised effort to wreck a reputation — is fixed on smear, which works as noun and verb. The other dirty marks never made it into political vocabulary."
+  # ── collocation_match × 10 · group vocab ───────────────────────
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [break, run, make, hold]
+      right: [the government to account, headlines, the story first, a correction]
+      pairs: {0: 2, 1: 3, 2: 1, 3: 0}
+    explanation: "Break the story first, run a correction, make headlines, hold the government to account — four verbs from the newsroom, each bound to its own object."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [a credible, an eyewitness, a press, a hidden]
+      right: [account, agenda, source, release]
+      pairs: {0: 2, 1: 0, 2: 3, 3: 1}
+    explanation: "A credible source, an eyewitness account, a press release, a hidden agenda — adjective and noun select each other; a credible agenda and a hidden release name nothing."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [go, stoke, refute, blow]
+      right: [a claim, outrage, things out of proportion, viral]
+      pairs: {0: 3, 1: 1, 2: 0, 3: 2}
+    explanation: "Go viral, stoke outrage, refute a claim, blow things out of proportion — the four verbs of the outrage economy, none of them transferable."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [take the poll at, speak strictly off, put a positive spin, blow the row out of]
+      right: [on the figures, all proportion, face value, the record]
+      pairs: {0: 2, 1: 3, 2: 0, 3: 1}
+    explanation: "Take something at face value, speak off the record, put a spin on the figures, blow something out of all proportion — learn the tail with the head; the fragments are useless apart."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [issue, leak, retract, endorse]
+      right: [a candidate, a press release, a memo to the press, a false claim]
+      pairs: {0: 1, 1: 2, 2: 3, 3: 0}
+    explanation: "Issue a press release, leak a memo to the press, retract a false claim, endorse a candidate — the same document world, four different verbs, one correct object each."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [investigative, impartial, sensationalist, unsubstantiated]
+      right: [rumours, journalism, headlines, coverage]
+      pairs: {0: 1, 1: 3, 2: 2, 3: 0}
+    explanation: "Investigative journalism, impartial coverage, sensationalist headlines, unsubstantiated rumours — the adjectives of praise and blame in media criticism, each with its natural noun."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [echo, smear, filter, hush]
+      right: [money, chamber, campaign, bubble]
+      pairs: {0: 1, 1: 2, 2: 3, 3: 0}
+    explanation: "An echo chamber, a smear campaign, a filter bubble, hush money — four compounds of the manipulation lexicon; swap the halves and every one collapses."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [hush up, blow the whistle on, hold power, dominate]
+      right: [to account, the news cycle, an affair, wrongdoing]
+      pairs: {0: 2, 1: 3, 2: 0, 3: 1}
+    explanation: "Hush up an affair, blow the whistle on wrongdoing, hold power to account, dominate the news cycle — two verbs of concealment against two verbs of exposure."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [spread, counter, impose, corroborate]
+      right: [censorship, an eyewitness account, misinformation, disinformation]
+      pairs: {0: 2, 1: 3, 2: 0, 3: 1}
+    explanation: "Spread misinformation, counter disinformation, impose censorship, corroborate an eyewitness account — the verbs sort the honest mistake from the deliberate lie and the cure from the disease."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [the 24-hour news, a state-run, a front-page, a well-placed]
+      right: [source, cycle, outlet, scoop]
+      pairs: {0: 1, 1: 2, 2: 3, 3: 0}
+    explanation: "The 24-hour news cycle, a state-run outlet, a front-page scoop, a well-placed source — four fixtures of media English; a well-placed cycle spins nowhere."
+  # ── word_formation × 8 · group vocab ───────────────────────────
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "The playwright spent half his career dodging state "
+      post: "."
+      prompt: CENSOR
+      answers: [censorship]
+      answer_shown: censorship
+    explanation: "After state the gap wants the abstract noun: censorship — the system, not the person. The censor is the official; the -ship suffix builds the institution."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Critics savaged the channel's "
+      post: " coverage of the kidnapping — grief repackaged as entertainment."
+      prompt: SENSATION
+      answers: [sensationalist]
+      answer_shown: sensationalist
+    explanation: "The critical adjective is sensationalist — deliberately shocking at the expense of accuracy. Watch the trap: sensational means thrilling or excellent and would turn the criticism into a compliment."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "One fabricated interview cost the magazine its "
+      post: " overnight."
+      prompt: CREDIBLE
+      answers: [credibility]
+      answer_shown: credibility
+    explanation: "After its the gap is a noun: credibility — the quality of being believed. The -ity suffix converts the adjective, and the possessive rules out anything else."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "The charter obliges the broadcaster to maintain strict "
+      post: " during election periods."
+      prompt: PARTIAL
+      answers: [impartiality]
+      answer_shown: impartiality
+    explanation: "Maintain strict + noun, and the sense must be neutral-to-all-sides: im + partial + ity. The double move — negative prefix plus noun suffix — is exactly the C1 word-formation trap."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "The minister resigned over "
+      post: " of bribery that he continues to deny."
+      prompt: ALLEGE
+      answers: [allegations]
+      answer_shown: allegations
+    explanation: "Over + noun, and unproved accusations of bribery come in the plural: allegations. Note the spelling shift — allege ends -ege, the noun takes -egation."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Health agencies spent the pandemic firefighting online "
+      post: " about vaccines."
+      prompt: INFORM
+      answers: [misinformation, disinformation]
+      answer_shown: misinformation
+    explanation: "The gap needs a negative noun: mis + information — falsehood spread in good faith. Disinformation also fits and is also accepted; the dis- version implies deliberate deceit."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "New accounts must pass identity "
+      post: " before they can post links."
+      prompt: VERIFY
+      answers: [verification]
+      answer_shown: verification
+    explanation: "Identity + noun: verification — the checking process. The verb verify swaps its -y for -ication, the same move as apply → application."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Coverage of the couple's divorce was pure "
+      post: " dressed up as news."
+      prompt: SPECULATE
+      answers: [speculation]
+      answer_shown: speculation
+    explanation: "Pure + noun: speculation — guessing presented as reporting. The -ion suffix converts the verb; speculating would need a different frame, and the adjective speculative cannot follow pure here."
+review_pool:
+  # ── grammar_drill × 5 ──────────────────────────────────────────
+  - type: grammar_drill
+    group: grammar
+    grammar_point: Tense backshift — and when it is not needed
+    content:
+      pre: "The stringer said the crowd "
+      post: " long before the cameras arrived."
+      prompt: GATHER
+      options: [gathers, had gathered, has gathered, would gather]
+      answer: 1
+    explanation: "The gathering happened before the saying, and long before seals it: past perfect — had gathered. The present forms break the past frame, and would gather points forwards, not back."
+  - type: grammar_drill
+    group: grammar
+    grammar_point: Passive reporting (is alleged to / is rumoured to have)
+    content:
+      pre: "For years the tabloid "
+      post: " its rivals' voicemails."
+      prompt: HACK
+      options: [alleges to hack, is alleging to have hacked, is alleged to hack, is alleged to have hacked]
+      answer: 3
+    explanation: "For years places the hacking in the past, so the passive report needs the perfect infinitive: is alleged to have hacked. The active forms would make the tabloid its own accuser."
+  - type: grammar_drill
+    group: grammar
+    grammar_point: Patterns with suggest (and recommend)
+    content:
+      pre: "Her lawyer suggested "
+      post: " until the injunction had been lifted."
+      prompt: WAIT
+      options: [waiting, to wait, wait, that waiting]
+      answer: 0
+    explanation: "Suggest + -ing: suggested waiting. The to-infinitive is the one pattern suggest refuses, however natural it feels after advise and urge."
+  - type: grammar_drill
+    group: grammar
+    grammar_point: Questions, requests and advice in reported speech
+    content:
+      pre: "The judge told photographers "
+      post: " the courtroom at once."
+      prompt: LEAVE
+      options: [leaving, that they leave, to leave, leave]
+      answer: 2
+    explanation: "A reported command is tell + object + to-infinitive: told photographers to leave. The bare and -ing forms belong to other verbs — and the that-clause would need should to survive."
+  - type: grammar_drill
+    group: grammar
+    grammar_point: Tense backshift — and when it is not needed
+    content:
+      pre: "The editor promised the source her name "
+      post: " out of the story."
+      prompt: KEEP
+      options: [will be kept, would be kept, is kept, would keep]
+      answer: 1
+    explanation: "Promised backshifts will to would, and the name receives the action, so the passive completes it: would be kept. Would keep needs a keeper as subject — and the name cannot keep anything."
+  # ── error_correction × 4 ───────────────────────────────────────
+  - type: error_correction
+    group: grammar
+    grammar_point: Reporting verb patterns (deny doing, accuse sb of, urge sb to)
+    content:
+      words: [The, agency, denied, to, use, unverified, footage.]
+      wrong: 3
+      correction: to use → using
+    explanation: "Deny takes -ing, never the to-infinitive: denied using. The infinitive after deny is the single most common reporting-verb slip at this level."
+  - type: error_correction
+    group: grammar
+    grammar_point: Reporting verb patterns (deny doing, accuse sb of, urge sb to)
+    content:
+      words: [She, told, that, the, interview, had, been, cancelled.]
+      wrong: 1
+      correction: told → said
+    explanation: "Tell demands a person as its object — told us that. Without a listener, the verb must be said: she said that the interview had been cancelled. The two verbs split the work between them."
+  - type: error_correction
+    group: grammar
+    grammar_point: Questions, requests and advice in reported speech
+    content:
+      words: [The, editor, asked, where, was, the, missing, transcript.]
+      wrong: 4
+      correction: was the missing transcript → the missing transcript was
+    explanation: "Reported questions keep statement order: asked where the missing transcript was. The inversion belongs to the direct question and dies with the quotation marks."
+  - type: error_correction
+    group: grammar
+    grammar_point: Passive reporting (is alleged to / is rumoured to have)
+    content:
+      words: [The, network, is, said, that, it, paid, for, access.]
+      wrong: 4
+      correction: that it paid → to have paid
+    explanation: "A personal subject takes the infinitive frame: the network is said to have paid. The that-clause needs the empty subject — It is said that the network paid — and the two frames never mix."
+  # ── key_word_transformation × 4 ────────────────────────────────
+  - type: key_word_transformation
+    group: grammar
+    grammar_point: Reporting verb patterns (deny doing, accuse sb of, urge sb to)
+    content:
+      s1: "'I never once endorsed the product,' the influencer said."
+      key: HAVING
+      pre: "The influencer denied "
+      post: " the product."
+      answers: [ever having endorsed, having ever endorsed]
+      hint: 3–6 words, including the key word
+      answer_shown: ever having endorsed
+    explanation: "An emphatic denial about the past takes the perfect gerund: denied ever having endorsed. Never once in the quotation survives as ever inside the denial."
+  - type: key_word_transformation
+    group: grammar
+    grammar_point: Questions, requests and advice in reported speech
+    content:
+      s1: "'Could you send over the transcript?' the producer asked the intern."
+      key: ASKED
+      pre: "The producer "
+      post: " over the transcript."
+      answers: [asked the intern to send]
+      hint: 3–6 words, including the key word
+      answer_shown: asked the intern to send
+    explanation: "A polite request reports as ask + object + to-infinitive: asked the intern to send. Could you dissolves — the verb ask now carries the politeness."
+  - type: key_word_transformation
+    group: grammar
+    grammar_point: Passive reporting (is alleged to / is rumoured to have)
+    content:
+      s1: It is rumoured that the deal was hushed up at board level.
+      key: BEEN
+      pre: "The deal is rumoured "
+      post: " up at board level."
+      answers: [to have been hushed]
+      hint: 3–6 words, including the key word
+      answer_shown: to have been hushed
+    explanation: "The personal-subject frame stacks the perfect and the passive into one infinitive: is rumoured to have been hushed up. Each piece is load-bearing — drop been and the deal did the hushing."
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: They gave the whistle-blower no warning before naming her.
+      key: WAS
+      pre: "The whistle-blower "
+      post: " warning before being named."
+      answers: [was given no]
+      hint: 3–6 words, including the key word
+      answer_shown: was given no
+    explanation: "Spiral review from Module 2: give passivises on the person — the whistle-blower was given no warning. The thing given stays after the verb, exactly where the active left it."
+  # ── open_cloze × 4 ─────────────────────────────────────────────
+  - type: open_cloze
+    group: reading
+    grammar_point: Reporting verb patterns (deny doing, accuse sb of, urge sb to)
+    content:
+      pre: "The minister refused "
+      post: " comment on the leaked recording."
+      answers: [to]
+      answer_shown: to
+    explanation: "Refuse goes straight to the to-infinitive: refused to comment. No object intervenes — the refuser and the non-commenter are the same person."
+  - type: open_cloze
+    group: reading
+    grammar_point: Questions, requests and advice in reported speech
+    content:
+      pre: "She wondered "
+      post: " the source had developed second thoughts."
+      answers: [whether, if]
+      answer_shown: whether
+    explanation: "Wonder reports a silent yes/no question, so it takes whether or if plus statement order: wondered whether the source had. The backshifted past perfect follows naturally."
+  - type: open_cloze
+    group: reading
+    grammar_point: Reporting verb patterns (deny doing, accuse sb of, urge sb to)
+    content:
+      pre: "The channel later apologised "
+      post: " running the doctored clip."
+      answers: [for]
+      answer_shown: for
+    explanation: "Apologise FOR + -ing: apologised for running. The preposition belongs to the verb — and note it is accuse of but apologise for; each verb keeps its own."
+  - type: open_cloze
+    group: reading
+    grammar_point: Reporting verb patterns (deny doing, accuse sb of, urge sb to)
+    content:
+      pre: "Only on the third day did the paper admit "
+      post: " paying the family for access."
+      answers: [to]
+      answer_shown: to
+    explanation: "Admit TO + -ing: admitted to paying. Here to is a preposition, not an infinitive marker — which is why the -ing follows it. Admit paying, without to, is also correct English, but the gap demands the preposition."
+  # ── reading_comprehension × 1 ──────────────────────────────────
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Organisers denied obstructing anyone and accused the council of hushing up its own consultant's report, which allegedly warns that the aquifer is already under stress in dry summers; the council has declined to release the document in full."
+      q: What can safely be concluded from this sentence?
+      options:
+        - The consultant's report proves the aquifer is under stress.
+        - The organisers physically blocked the council doors.
+        - The report's warning remains an unverified claim.
+        - The council has published the document in full.
+      answer: 2
+    explanation: "Allegedly warns and the unreleased document mean the warning cannot be checked — it stays a claim. The denial is reported, not disproved, and the council has declined, not agreed, to publish."
+  # ── mc_cloze × 4 ───────────────────────────────────────────────
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "Recommendation feeds trap users in ideological "
+      post: " where disagreement simply never arrives."
+      options: [corridors, mirrors, echo chambers, theatres]
+      answer: 2
+    explanation: "An echo chamber is the space where you only ever hear your own opinions repeated back — the fixed term of media analysis. The other spaces echo nothing."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "The fraud came to light only when a "
+      post: " in the finance team went to the press."
+      options: [whistle-blower, bell-ringer, horn-blower, alarm-raiser]
+      answer: 0
+    explanation: "A whistle-blower is the insider who reports wrongdoing in their own organisation — the only one of the four that is a real word of English. The idiom underneath is blow the whistle on something."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "Epidemiologists dismissed the segment as pure "
+      post: " — the risk it described affects one person in a million."
+      options: [daydreaming, moralising, sightseeing, scaremongering]
+      answer: 3
+    explanation: "Scaremongering — spreading exaggerated warnings to frighten people — is the word the one-in-a-million figure demands. Moralising lectures, daydreaming drifts; neither frightens anyone."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "The advert provoked such a "
+      post: " that it was pulled within twenty-four hours."
+      options: [backdrop, backlash, backlog, backdate]
+      answer: 1
+    explanation: "Provoke a backlash — a wave of angry public reaction — is the fixed pairing. The rhyming back- words name scenery, queues and paperwork, none of which pull adverts."
+  # ── collocation_match × 4 ──────────────────────────────────────
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [spread, hush, refute, stoke]
+      right: [up the affair, resentment, disinformation, an allegation]
+      pairs: {0: 2, 1: 0, 2: 3, 3: 1}
+    explanation: "Spread disinformation, hush up the affair, refute an allegation, stoke resentment — four verbs of the information war, each with its own target."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [a front-page, an off-the-record, a viral, a biased]
+      right: [briefing, clip, scoop, account]
+      pairs: {0: 2, 1: 0, 2: 1, 3: 3}
+    explanation: "A front-page scoop, an off-the-record briefing, a viral clip, a biased account — compound adjectives choose their nouns; an off-the-record scoop would be a contradiction in terms."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [hold power, blow the whistle, set, shape]
+      right: [the agenda, public opinion, to account, on wrongdoing]
+      pairs: {0: 2, 1: 3, 2: 0, 3: 1}
+    explanation: "Hold power to account, blow the whistle on wrongdoing, set the agenda, shape public opinion — what journalism does at its best and its most dangerous, in four fixed phrases."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [a spin, wall-to-wall, state, online]
+      right: [censorship, doctor, misinformation, coverage]
+      pairs: {0: 1, 1: 3, 2: 0, 3: 2}
+    explanation: "A spin doctor, wall-to-wall coverage, state censorship, online misinformation — each modifier has exactly one home; a spin censorship treats nothing."
+  # ── word_formation × 4 ─────────────────────────────────────────
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Trust in mainstream "
+      post: " has been falling for a decade."
+      prompt: JOURNAL
+      answers: [journalism]
+      answer_shown: journalism
+    explanation: "After mainstream the gap wants the profession as a noun: journalism. The journalist is the person; the -ism builds the trade itself."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "The statement was a flat "
+      post: " of any wrongdoing whatsoever."
+      prompt: DENY
+      answers: [denial]
+      answer_shown: denial
+    explanation: "A flat + noun: denial — the y of deny becomes i before -al. A flat denial is itself a fixed collocation: total, unqualified, and usually suspicious."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Reviewers called the editing deliberately "
+      post: " — key answers were cut mid-sentence."
+      prompt: MANIPULATE
+      answers: [manipulative]
+      answer_shown: manipulative
+    explanation: "Deliberately + adjective: manipulative — designed to control what people conclude. The -ive suffix builds the adjective; manipulated would describe the footage, not the editing style."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Decades of official spin have bred a deep public "
+      post: " of ministerial statements."
+      prompt: TRUST
+      answers: [distrust, mistrust]
+      answer_shown: distrust
+    explanation: "A deep public + negative noun: distrust. Mistrust is also accepted — the two are near-twins, though distrust is the stronger and more reasoned suspicion."

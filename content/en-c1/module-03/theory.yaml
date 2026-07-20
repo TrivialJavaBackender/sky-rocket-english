@@ -1,0 +1,143 @@
+# Module 03 · Media & Communication — grammar spotlights + watchouts + cloze cards
+spotlights:
+  - title: "Backshift: one step into the past"
+    intro: "When the reporting verb is past — said, told, admitted — the original tenses usually take one step back. The mechanics are simple; the C1 skill is knowing when to stop applying them."
+    items:
+      - form: present simple → past simple
+        example: "'I trust the source.' → He said he trusted the source."
+        note: The reporter stands in the past and describes the words from there — one step back.
+      - form: present perfect & past simple → past perfect
+        example: "'We have checked it twice.' → She said they had checked it twice."
+        note: Both earlier tenses collapse into the past perfect; the sequence, not the original form, is what survives.
+      - form: will → would · can → could · may → might
+        example: "'The story will run on Friday.' → He promised the story would run on Friday."
+        note: Modal backshift. Must (obligation) becomes had to; must (deduction) stays must.
+      - form: no shift after a present reporting verb
+        example: The paper says the figures are wrong.
+        note: Says, claims, insists in the present tense report live claims — the tenses stay exactly where they were.
+      - form: no shift for what is still true
+        example: She told me the office is next to the station.
+        note: Backshift is optional when the fact still holds and you vouch for it. Shifting (was) is never wrong — it is just more distant.
+      - form: no shift for would, could, should, might, past perfect
+        example: "'I would never name a source.' → He said he would never name a source."
+        note: These forms are already at the bottom of the staircase; there is no further step back.
+      - form: time and place words move too
+        example: "'We'll publish tomorrow.' → They said they would publish the next day."
+        note: today → that day · tomorrow → the next day · here → there · this → that. The deixis shifts with the tenses.
+  - title: "Reporting verbs: the pattern is the meaning"
+    intro: "Said and told carry the words; reporting verbs carry the drama — accusation, refusal, pressure. Each verb is welded to its grammar pattern, and the wrong pattern is a grammar error, not a style slip."
+    items:
+      - form: verb + -ing — deny, admit, regret
+        example: The minister denied leaking the memo.
+        note: The reported action becomes a gerund. For an earlier event, the perfect gerund sharpens it — denied having leaked.
+      - form: verb + sb + of + -ing — accuse, suspect
+        example: The editorial accused the network of manufacturing outrage.
+        note: The preposition of is part of the verb. Blame takes for; the two prepositions are not interchangeable.
+      - form: verb + sb + to-infinitive — urge, advise, warn, remind
+        example: Campaigners urged the platform to verify every account.
+        note: Verbs that press somebody towards an action. The negative slots in before to — warned readers not to share it.
+      - form: verb + on + -ing — insist
+        example: The editor insisted on seeing the raw footage.
+        note: Insist on doing, or insist that + clause. Never insist to do — the infinitive is this verb's one forbidden pattern.
+      - form: verb + that — claim, allege, concede, acknowledge
+        example: The chief executive conceded that the metric had backfired.
+        note: The that-family. Concede is an admission made under pressure — the reporting verb of losing an argument slowly.
+      - form: verb + to-infinitive — refuse, offer, agree, threaten
+        example: The source refused to comment on the record.
+        note: Reporter and doer are the same person, so no object appears — the verb goes straight to the infinitive.
+  - title: "Passive reporting: is alleged to"
+    intro: "News English constantly reports claims that nobody will own. Module 2 gave you it is said that; journalism sharpens the same machine into a tool for unproven accusations — with alleged as the flagship."
+    items:
+      - form: subject + is alleged / claimed / rumoured to + infinitive
+        example: The fund is alleged to channel money to three friendly outlets.
+        note: A present, unproven claim about a present state. The accusers stay conveniently offstage.
+      - form: is alleged to have + past participle
+        example: The tycoon is alleged to have funded the smear campaign.
+        note: The perfect infinitive pushes the reported act into the past — the libel lawyer's favourite tense.
+      - form: It is alleged that + clause
+        example: It is alleged that the meeting was never minuted.
+        note: Same content, heavier frame. Choose it when the claim needs a full clause of its own.
+      - form: allegedly / reportedly — the adverb shortcut
+        example: The clip was allegedly filmed two years earlier.
+        note: One word buys the same legal distance as the whole construction — the fastest hedge in journalism.
+  - title: Questions, requests and advice
+    intro: "Direct speech has three moods — question, command, appeal. Reported speech folds them all into statements, and word order is where learners get caught."
+    items:
+      - form: asked if / whether + statement order
+        example: She asked whether the photo had been verified.
+        note: A yes/no question needs if or whether — and loses its inversion, its do and its question mark.
+      - form: asked + wh-word + statement order
+        example: He asked why the story had run without a second source.
+        note: The wh-word survives; the question word order does not. Why the story had run — never why had the story run.
+      - form: told / ordered sb + to-infinitive
+        example: The judge told photographers to leave the courtroom.
+        note: Commands compress into to-infinitives. The commanding verb carries the force; no please survives.
+      - form: asked sb + to-infinitive
+        example: The producer asked the intern to send over the transcript.
+        note: Requests take the same shape as commands, softened only by the verb ask itself.
+      - form: advised / warned sb (not) to
+        example: The lawyer warned the paper not to name the family.
+        note: Negative advice puts not before to — not to name. English never says warned them to not... in careful writing, and never to don't.
+  - title: "Suggest: a grammar of its own"
+    intro: "Suggest looks like urge or advise but refuses their pattern — there is no suggest somebody to do. It offers three frames instead, and the second one opens the door to Module 6."
+    items:
+      - form: suggest + -ing
+        example: The ombudsman suggested retracting the article.
+        note: The quickest frame, used when the doer is obvious from context.
+      - form: suggest (that) + subject + (should) + bare verb
+        example: She suggested that the editor (should) resign.
+        note: "The subjunctive frame — the bare verb survives even after he and she: that he resign. Module 6 builds a whole room on this foundation."
+      - form: suggest + noun + to somebody
+        example: He suggested a quieter headline to the desk.
+        note: The thing suggested is a noun; the person needs to. Suggested me a headline is the classic slip — the person can never be the direct object.
+      - form: recommend behaves the same way
+        example: The panel recommended publishing the raw data.
+        note: Recommend doing, recommend that she (should) be heard, recommend something to somebody — the same three frames, the same trap.
+watchouts:
+  - title: said me instead of told me
+    bad: He said me the interview was off.
+    good: He told me the interview was off.
+    note: Say never takes the listener as its object — it needs to (said to me) or a different verb altogether. Tell demands the person. One Russian verb does both jobs; English splits them permanently.
+  - title: question order in reported questions
+    bad: She asked what did the editor want.
+    good: She asked what the editor wanted.
+    note: A reported question is a statement about a question, so the inversion and the auxiliary do disappear. Russian keeps the original question shape, which is exactly why this error survives to C1.
+  - title: suggested to do
+    bad: He suggested to publish the letter.
+    good: He suggested publishing the letter.
+    note: Suggest never takes a to-infinitive — only -ing or a that-clause. The Russian pattern maps straight onto the infinitive, so this slip needs conscious demolition.
+  - title: insisted to do
+    bad: The minister insisted to see the questions in advance.
+    good: The minister insisted on seeing the questions in advance.
+    note: Insist runs on the preposition on plus -ing, or on a that-clause. The to-infinitive is the one pattern this verb refuses.
+cloze_cards:
+  - text: "He said he {{c1::trusted}} the source — a week later, he didn't."
+    hint: trust — backshift
+    rule: past reporting verb → present simple steps back to past simple
+  - text: "She told reporters the files {{c1::had been stolen}} weeks earlier."
+    hint: steal
+    rule: an earlier past event in reported speech → past perfect (here passive)
+  - text: "The minister denied {{c1::leaking}} the memo."
+    hint: leak
+    rule: deny + -ing — the reported action becomes a gerund
+  - text: "The editorial accused the network {{c1::of manufacturing}} outrage."
+    hint: manufacture
+    rule: accuse somebody OF + -ing; blame takes for, accuse takes of
+  - text: "Campaigners urged the platform {{c1::to verify}} every account."
+    hint: verify
+    rule: urge somebody TO + infinitive — the pressure verbs (urge, advise, warn, remind) share this frame
+  - text: "The editor insisted {{c1::on seeing}} the raw footage before it aired."
+    hint: see
+    rule: insist ON + -ing — never insist to do
+  - text: "The tycoon {{c1::is alleged to have funded}} the smear campaign."
+    hint: allege · fund — unproven, earlier event
+    rule: passive reporting + perfect infinitive → is alleged to have done
+  - text: "He asked why {{c1::the story had run}} without a second source."
+    hint: run — statement order
+    rule: reported wh-question → statement word order + backshift; the inversion disappears
+  - text: "The ombudsman suggested {{c1::retracting}} the article."
+    hint: retract
+    rule: suggest + -ing (or that + subjunctive) — never suggest to do
+  - text: "The paper's lawyers say the claim {{c1::is}} unprovable — so it stays out."
+    hint: be — think before you shift
+    rule: present reporting verb → no backshift; the tenses stay where they were

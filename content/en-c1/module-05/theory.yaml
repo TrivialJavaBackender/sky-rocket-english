@@ -1,0 +1,144 @@
+# Module 05 · Environment & Sustainability — grammar spotlights + watchouts + cloze cards
+spotlights:
+  - title: "Mixed conditionals: when the two halves live in different times"
+    intro: "The three textbook conditionals are tidy because both halves share a time. Real arguments are not tidy. A decision taken in 1985 is still shaping this morning; a permanent fact about somebody explains what they did last year. English handles this by taking the if-clause from one conditional and the main clause from another — and once you see it as two independent choices rather than a fixed pattern, the whole system opens up."
+    items:
+      - form: "if + past perfect → would + infinitive (past condition, present result)"
+        example: If the county had metered its wells in the 1980s, the water table would still be within reach today.
+        note: The commonest mixed type and the one that carries most of the argument in environmental writing. Markers like still, now and today in the main clause are the giveaway that the result is present.
+      - form: "if + past simple → would have + past participle (present condition, past result)"
+        example: If she weren't so attached to the land, she would have sold it in 2018.
+        note: The if-clause states a permanent or current fact — her attachment, his character, the shape of the coastline — and the main clause reports what that fact caused earlier. Was is also heard, but were is the safer written form.
+      - form: "if + past perfect → would be + -ing (past condition, present activity)"
+        example: If we hadn't drained the wetland, the river wouldn't be flooding the town every spring.
+        note: The continuous makes the present result an ongoing situation rather than a single state. Compare wouldn't have flooded, which would confine the whole thing to the past.
+      - form: "the main clause can carry any modal, not only would"
+        example: If the aquifer had been metered, we might not be rationing water now. · If they had listened, this could still be farmland.
+        note: Might, could and should keep the same time structure and simply soften or hedge the claim — essential in essay writing, where would alone sounds absolute.
+      - form: "mixed conditionals invert exactly like the pure ones"
+        example: Had the county acted in 2005, the correction would be a local matter today.
+        note: Everything in the next spotlight applies here too. Inversion is especially natural with the past-to-present type, because the if-clause is already in the past perfect.
+  - title: "Inversion: conditionals with no if at all"
+    intro: "Formal written English can drop if entirely and move the auxiliary in front of the subject instead. There are exactly three patterns, they are commoner in journalism, essays and reports than in speech, and each one is worth about a band of formality on its own. Nothing else changes — the main clause behaves as it always did."
+    items:
+      - form: "Had + subject + past participle (= if + past perfect)"
+        example: Had we acted in 2005, the correction would have cost a fraction of today's price.
+        note: Works for both the third conditional and the past-to-present mixed type. This is the most frequently used of the three by a wide margin.
+      - form: "Were + subject + (to-infinitive) (= if + past simple / if + were to)"
+        example: Were the aquifer to fail completely, the town itself would have to move. · Were I in charge, I would meter every well tomorrow.
+        note: Were + to-infinitive presents the situation as hypothetical and slightly remote. Note that were is used for every person — never Was I in charge.
+      - form: "Were it not for + noun phrase (= if it were not for)"
+        example: Were it not for the retirement scheme, half the growers would already have gone.
+        note: The past version is Had it not been for the retirement scheme. Both are followed by a noun phrase, never by a clause.
+      - form: "Should + subject + bare infinitive (= if … happen to)"
+        example: Should the rains fail again, the district will move to emergency allocation. · Should you need the full data set, it is available from the office.
+        note: This one refers to the future and carries a shade of if by any chance. It is the standard formula in business correspondence — should you have any questions.
+      - form: "negatives are written out in full, never contracted"
+        example: Had we not acted, the aquifer would already be gone. (not Hadn't we acted…)
+        note: An inverted conditional cannot use a contracted negative, because Hadn't we acted is already a question. Put not after the subject and the ambiguity disappears.
+  - title: "Alternatives to if: naming the exact condition"
+    intro: "If states a condition and says nothing about its nature. The connectors below say what kind of condition it is — a requirement, a limit, a single exception, a supposition. Choosing the right one is the fastest way to make a piece of argumentative writing sound precise, and all of them share one rule: no will in the condition itself."
+    items:
+      - form: "provided (that) / providing (that) — a requirement that must be met"
+        example: The nitrates are treatable provided the plant is funded beyond 2030.
+        note: Stronger and more legalistic than if; it signals a condition somebody must satisfy. That is optional and usually dropped in journalism.
+      - form: "as long as / so long as — for the whole period that, and only then"
+        example: A monoculture is a magnificent machine as long as nothing goes wrong with it.
+        note: Carries a sense of duration that provided lacks. It is the natural choice when the condition has to keep holding, not merely be met once.
+      - form: "on condition that — a formal, explicit bargain"
+        example: The developer will buy the licence on condition that the grid connection is approved.
+        note: The most formal member of the family and the one that implies a negotiation between two parties. Common in contracts, reporting and CAE essays.
+      - form: "unless — the negative condition (= if … not, in the sense of except if)"
+        example: Every model ends in the same place unless demand falls by about a third.
+        note: Unless already contains the negative, so the verb after it stays positive. Use if … not, not unless, when the result is unaffected either way — I'll be annoyed if she doesn't come, not unless she comes.
+      - form: "supposing / suppose / assuming (that) — inviting somebody to imagine"
+        example: Supposing the funding stopped tomorrow, what would happen to the villages on tankered water?
+        note: Supposing and suppose belong to speech and to rhetorical questions; assuming is the neutral written equivalent and takes a real, not an unreal, verb form.
+      - form: "in the event of + noun / in the event that + clause — formal and institutional"
+        example: In the event of a third failed harvest, the district will ration what is left.
+        note: The language of notices, insurance policies and emergency plans. Use it once in an essay and never twice.
+  - title: "Consequence without a clause: but for, otherwise, or else"
+    intro: "Sometimes the condition is a single thing rather than a whole event, or the consequence sits in a separate sentence from the condition that produces it. These three structures compress a conditional into a phrase, and each of them is a favourite of examiners because the grammar around them is easy to get wrong."
+    items:
+      - form: "but for + noun phrase (= if it were not for / if it had not been for)"
+        example: But for the aquifer, this plain would never have been farmed at all.
+        note: But for is always followed by a noun phrase — never a clause and never a verb. The result almost always contains would have or would.
+      - form: "otherwise — the consequence if the preceding statement does not happen"
+        example: Cap the wells now; otherwise there will be nothing left to irrigate by 2050.
+        note: Otherwise looks backwards at the whole previous sentence and means if that is not done. Semicolon or full stop before it, comma after it if you pause.
+      - form: "or else — the same job, one register lower and with a threat in it"
+        example: Our data stays with the farmer, or else the whole promise means nothing.
+        note: Or else is spoken and emphatic; otherwise is neutral and writable. In an essay, prefer otherwise.
+      - form: "without + noun phrase — the everyday version of but for"
+        example: Without the subsidy, half these fields would be pasture again.
+        note: Less formal than but for and far commoner in speech. Both can start a sentence, which makes them useful for varying rhythm.
+      - form: "if not for / if it hadn't been for — the unpacked, conversational forms"
+        example: If it hadn't been for the retirement scheme, they would have gone years ago.
+        note: These say exactly what but for and Were it not for say, at a lower register. Knowing all three lets you pitch a sentence rather than merely build it.
+  - title: "in case vs if: precaution or condition"
+    intro: "This pair defeats speakers of most European languages, because a single word usually covers both jobs. English separates them sharply. If introduces the condition under which you will act; in case introduces the reason you are acting now, in advance, whether or not the thing ever happens. Getting it wrong does not sound clumsy — it says the opposite of what you meant."
+    items:
+      - form: "in case + present simple — a precaution taken now against a future possibility"
+        example: She has planted a drought-tolerant variety in case the allocation is cut in the autumn.
+        note: She plants it first. The cut may never come. Never use will after in case, however future the possibility is.
+      - form: "if + present simple — the action happens only when the condition is met"
+        example: She will plant a drought-tolerant variety if the allocation is cut in the autumn.
+        note: Here she plants nothing until the cut is announced. Compare the sentence above and the difference is a whole season of work.
+      - form: "in case + past simple after a past main verb"
+        example: They stored two years of seed in case the harvest failed.
+        note: The tense follows the main verb backwards, exactly as it does in reported speech. No would appears.
+      - form: "in case of + noun phrase (notices and instructions only)"
+        example: "In case of fire, use the stairs. · In case of a third failed harvest, allocation will be reduced."
+        note: In case of is a preposition and takes a noun, and here it does mean if. This is the one place where in case behaves like if, which is precisely why the two get confused.
+watchouts:
+  - title: will inside the condition
+    bad: If the rains will fail again, the district will ration water.
+    good: If the rains fail again, the district will ration water.
+    note: Russian marks the future in both halves of a conditional; English marks it only in the result. The same rule holds after when, unless, provided, as long as, in case and until — the condition takes a present form however clearly future it is. Will appears in an if-clause only when it means willingness (If you will just sign here).
+  - title: would have inside the condition
+    bad: If I would have known about the drawdown, I would never have bought the farm.
+    good: If I had known about the drawdown, I would never have bought the farm. · Had I known about the drawdown, I would never have bought the farm.
+    note: The past perfect carries the unreal past in the if-clause; would belongs exclusively to the result. The inverted version deletes if and moves had to the front, and note that its negative is never contracted — Had I not known, not Hadn't I known.
+  - title: unless with a second negative
+    bad: The aquifer will not recover unless we don't cut demand by a third.
+    good: The aquifer will not recover unless we cut demand by a third.
+    note: Unless already means if … not, so the verb after it must stay positive. Russian and most Slavic languages build this with an explicit negative, which is why the doubling feels natural and is always wrong.
+  - title: in case used to mean if
+    bad: In case it rains tomorrow, we will cancel the survey.
+    good: If it rains tomorrow, we will cancel the survey. · We will take the tarpaulins in case it rains.
+    note: In case introduces a precaution taken in advance, not the condition for acting. The bad sentence claims the survey is being cancelled now, as a preparation for possible rain. Only in case of + noun means if, and that form belongs to notices.
+  - title: but for followed by a clause
+    bad: But for the retirement scheme existed, half the growers would have gone.
+    good: But for the retirement scheme, half the growers would have gone. · Were it not for the retirement scheme, half the growers would have gone.
+    note: But for is a preposition and takes a noun phrase, full stop. If you need a verb, switch to Were it not for, If it were not for or If it hadn't been for, all of which take a clause after them.
+cloze_cards:
+  - text: "If the county had metered its wells in the 1980s, the water table {{c1::would still be}} within reach of an ordinary pump today."
+    hint: be
+    rule: "mixed conditional, past condition → present result: if + past perfect in one half, would + infinitive in the other; still and today mark the result as present"
+  - text: "If she {{c1::weren't}} so attached to the land, she would have sold it to the developer in 2018."
+    hint: be
+    rule: "mixed conditional, present condition → past result: a permanent present fact in the if-clause (past simple) explains an action already completed (would have + past participle)"
+  - text: "{{c1::Had we acted}} in 2005, the correction would have cost a fraction of today's price."
+    hint: act
+    rule: inversion replaces if + past perfect — Had + subject + past participle; the negative is written Had we not acted, never Hadn't we acted
+  - text: "{{c1::Were it not for}} the retirement scheme, half the growers would already have gone."
+    hint: be
+    rule: Were it not for + noun phrase = if it were not for; the past equivalent is Had it not been for, and neither may be followed by a clause
+  - text: "{{c1::Should the rains fail}} for a third spring, the district will move to emergency allocation."
+    hint: fail
+    rule: Should + subject + bare infinitive replaces if in future conditions and adds a sense of if by any chance; the result clause keeps will
+  - text: "The nitrates are treatable {{c1::provided}} the plant is funded beyond 2030."
+    hint: a condition that must be met
+    rule: provided (that) states a requirement rather than a neutral condition; like every conditional connector it takes a present form, never will
+  - text: "Every model ends in the same place {{c1::unless}} demand falls by about a third."
+    hint: if … not
+    rule: unless already contains the negative, so the verb after it stays positive — never unless demand doesn't fall
+  - text: "{{c1::But for}} the aquifer, this plain would never have been farmed at all."
+    hint: two words
+    rule: but for + noun phrase compresses a whole if-clause; it can never be followed by a verb, and the result clause takes would (have)
+  - text: "Cap the wells now; {{c1::otherwise}} there will be nothing left to irrigate by 2050."
+    hint: if that is not done
+    rule: otherwise looks back at the whole previous statement and supplies the consequence of not doing it; or else does the same job in a lower register
+  - text: "She has planted a drought-tolerant variety {{c1::in case}} the allocation is cut in the autumn."
+    hint: as a precaution
+    rule: in case introduces a precaution taken now against a possible future event; if would mean she plants nothing until the cut actually happens

@@ -1,0 +1,162 @@
+# Module 06 · Society & Inequality — grammar spotlights + watchouts + cloze cards
+spotlights:
+  - title: "wish and if only: the past tense that is not about the past"
+    intro: "English marks unreality by moving one step back in time. A present situation you would like to change is described with a past form; a past situation you regret needs the past perfect. Nothing here refers to when something happened — the backshift is a signal that the sentence is imaginary, and it is the single idea behind everything else in this module."
+    items:
+      - form: wish + past simple → a present situation you want to be different
+        example: I wish I lived closer to the college.
+        note: The situation is now, the verb is past. Compare I live an hour away — the past form is doing nothing but marking the sentence as unreal.
+      - form: wish + past perfect → regret about something already finished
+        example: I wish somebody had told me at sixteen how much of it was decided.
+        note: One further step back for a closed past. This is the form for regret proper, and it is the one learners reach for last.
+      - form: wish + would → irritation at somebody else's repeated behaviour
+        example: I wish the council would stop pretending the route was never cut.
+        note: Only for behaviour that could change and somebody else controls. It complains; it does not regret.
+      - form: "wish + could → an ability or permission you lack"
+        example: I wish I could get to parents' evenings.
+        note: Use could, never would, about yourself. I wish I would go is not English — you are the one who decides.
+      - form: were rather than was after wish and if only
+        example: I wish it were as simple as a cheque.
+        note: The subjunctive were is standard in careful and written English for all persons. Was is common in speech and safe informally, but were is what an exam rewards.
+      - form: if only = wish, with more feeling
+        example: If only the bus route had survived.
+        note: The same three time frames as wish, but heavier and more emotional. Often left as a sentence on its own with no main clause at all.
+      - form: "wish + to-infinitive → a formal way of saying want"
+        example: I wish to make a complaint about the eligibility criteria.
+        note: A completely separate structure, and the only one where wish is about the real world. Formal registers only — in speech it sounds severe.
+  - title: would rather and would sooner
+    intro: "Both mean prefer, and both split in two. When the preference is about what you do yourself, they take a bare infinitive with no to anywhere. When it is about what somebody else does, English switches to the same unreal past you have just met after wish — and the meaning becomes a polite instruction."
+    items:
+      - form: would rather / would sooner + bare infinitive (same subject)
+        example: I'd sooner walk than ask him for a lift.
+        note: No to, ever. The comparison is made with than plus another bare infinitive, not with to.
+      - form: would rather + somebody + past simple (different subject)
+        example: I'd rather you didn't mention my name.
+        note: The past form is unreal, not past. This is the standard polite way of asking somebody not to do something, and it is far softer than please don't.
+      - form: would rather + somebody + past perfect (about a finished action)
+        example: I'd rather she hadn't quoted me in the article.
+        note: Regret about what somebody has already done — the same one-step-further-back logic as wish.
+      - form: would rather not + bare infinitive
+        example: I'd rather not comment until the evaluation is published.
+        note: The negative sits before the verb, not after would. I wouldn't rather is not English.
+      - form: would sooner as a slightly stronger, more old-fashioned variant
+        example: Others would sooner redistribute the same money narrowly.
+        note: Interchangeable with would rather in almost every context, and noticeably more common in writing than in speech.
+      - form: "compare: prefer + to-infinitive / prefer + -ing … to -ing"
+        example: I prefer to say nothing. · I prefer walking to waiting.
+        note: Prefer keeps its to; would rather refuses it. Mixing the two produces I'd rather to walk, the commonest error of the pair.
+  - title: "it's (high) time + past"
+    intro: "This structure says that something should already have happened. Like wish, it uses a past form for a present situation, and the past form carries a distinct note of impatience — the speaker is not neutrally proposing an action but complaining that it is overdue."
+    items:
+      - form: it's time + subject + past simple
+        example: It's time the department admitted what the cuts have cost.
+        note: The situation is present and unchanged; the verb is past because the sentence is a criticism, not a report.
+      - form: it's high time / it's about time → stronger impatience
+        example: It is high time the sector stopped mistaking good intentions for evidence.
+        note: High time is the more formal intensifier, about time the more conversational and often sarcastic one.
+      - form: it's time + to-infinitive → no subject, no complaint
+        example: It's time to go.
+        note: With no person named, the ordinary infinitive returns. This is the neutral version, and it says nothing about lateness.
+      - form: it's time for somebody + to-infinitive
+        example: It's time for the council to publish the figures.
+        note: A third pattern with the person restored after for. Neutral in tone, unlike the past-tense version.
+      - form: it was time + past — the whole structure shifted into a narrative
+        example: She decided it was time she said something.
+        note: The past form of the frame does not change the past form of the verb after it. Nothing goes further back.
+  - title: as if and as though + unreal
+    intro: "As if and as though introduce a comparison. The tense you choose after them tells the reader whether you think the comparison is true. A present form means it may well be; a past form means it certainly is not — the same unreal past again, doing the same job."
+    items:
+      - form: as if / as though + past simple → the comparison is untrue
+        example: They talk about us as if we were a problem to be managed.
+        note: We are not a problem; the past form says so. This is the form the module is built on and the one Russian speakers under-use.
+      - form: as if / as though + present → the comparison may be accurate
+        example: It looks as if the funding has been cut again.
+        note: Here the speaker suspects it is true. With look, sound and seem this is much the commoner pattern.
+      - form: as if / as though + past perfect → an untrue comparison with an earlier action
+        example: Each half writes about the other as though it had never lived a mile away.
+        note: One step further back for something supposedly already finished. The town has lived there all along.
+      - form: were, not was, in careful English
+        example: He spends as though money were unlimited.
+        note: The same subjunctive were as after wish. Was is heard constantly in speech; were is the written standard.
+      - form: as though = as if, with no difference in meaning
+        example: She paused as though she were deciding how much to say.
+        note: As though is slightly more formal and more common in writing. Choose either; do not mix them in one sentence.
+      - form: "it's not as if / as though — a fixed argumentative phrase"
+        example: It's not as if anybody asked the residents.
+        note: Used to dismiss an objection before it is made. Extremely common in opinion writing and in spoken argument.
+  - title: "The subjunctive: demand, insist, suggest that it be"
+    intro: "After verbs of demanding, proposing and recommending, English uses a bare verb form that ignores person and tense entirely — he go, she be, it not appear. Module 3 met the first half of this with suggest, whose that-clause refuses an ordinary present tense; this is the whole family. British English often inserts should before the verb, which is why both versions look correct."
+    items:
+      - form: verb + that + subject + bare infinitive
+        example: She spent two years demanding that the department commission an evaluation.
+        note: The trigger verbs are demand, insist, suggest, recommend, propose, request, urge, require. Note commission, not commissions — no -s, whatever the subject.
+      - form: the should variant, standard in British English
+        example: She demanded that the department should commission an evaluation.
+        note: Identical in meaning. The bare form is more formal and more American; the should form is safer in speech and never wrong.
+      - form: adjective frames — it is essential / vital / imperative / crucial that
+        example: Some economists hold that it is essential that support be universal.
+        note: The same bare verb after an adjective of necessity. Be is where it is most visible, and where an ordinary is would be the tell-tale error.
+      - form: noun frames — a demand / proposal / recommendation / request that
+        example: The committee accepted a recommendation that the funding be ring-fenced.
+        note: The noun triggers it just as its verb does. This is the form that appears constantly in minutes, reports and journalism.
+      - form: "the negative: that + not + bare verb"
+        example: The board recommended that the name not be published.
+        note: No do or does anywhere. That he does not go is possible but ordinary; that he not go is the subjunctive.
+      - form: "the passive: that + be + past participle"
+        example: The committee demanded that the report be published in full.
+        note: Bare be, never is or was. This passive version is the single most common shape of the structure in written English.
+      - form: "insist has two meanings, and the grammar separates them"
+        example: He insists that the report be published. · He insists that the report was accurate.
+        note: A bare verb after insist means a demand; an ordinary tense means he is asserting a fact. Same verb, two entirely different sentences.
+watchouts:
+  - title: I wish I will…
+    bad: I wish I will find a job closer to home.
+    good: I wish I could find a job closer to home. · I hope I find a job closer to home.
+    note: Wish never takes will. For an unfulfilled ability use wish + could; if the sentence is genuinely optimistic about the future, the verb you want is hope, which does take will. Russian uses one verb for both, which is exactly why the pair has to be learnt as two.
+  - title: It's time we go
+    bad: It's time we go and see what the scheme actually does.
+    good: It's time we went and saw what the scheme actually does.
+    note: Once a subject appears after it's time, the verb must be past — went, not go. The infinitive survives only with no subject at all (it's time to go) or with for (it's time for us to go). The past form is what supplies the note of impatience.
+  - title: he demanded that he goes
+    bad: The committee demanded that the report goes to every household.
+    good: The committee demanded that the report go to every household. · … should go to every household.
+    note: Demand, insist, suggest, recommend, propose and require take a bare verb in the that-clause — no -s, no tense agreement. Both the bare form and the should form are correct; only the ordinary present is wrong. This is the pattern Module 3 introduced with suggest.
+  - title: as if + present for something untrue
+    bad: Politicians talk about the estate as if it is another country.
+    good: Politicians talk about the estate as if it were another country.
+    note: A present tense after as if tells the reader you believe the comparison might be true. Since the estate is plainly not another country, the sentence needs the unreal past — and were rather than was in careful writing. Reserve as if + present for genuine uncertainty, as in it looks as if the funding has been cut.
+  - title: would rather + to-infinitive
+    bad: I would rather to keep my name out of the article.
+    good: I would rather keep my name out of the article. · I'd rather you didn't use my name.
+    note: Would rather and would sooner take a bare infinitive, never to. The to belongs to prefer, which is a different verb with a different pattern. And when the preference concerns somebody else, the verb moves into the unreal past — I'd rather you didn't, not I'd rather you don't.
+cloze_cards:
+  - text: "I wish somebody {{c1::had told}} me at sixteen how much of it was already decided."
+    hint: tell
+    rule: wish + past perfect = regret about a finished past; wish + past simple would make it a present situation
+  - text: "I wish the council {{c1::would stop}} pretending the bus route was never cut."
+    hint: stop
+    rule: wish + would complains about somebody else's repeated behaviour — never used about yourself
+  - text: "If only it {{c1::were}} as simple as writing a cheque."
+    hint: be
+    rule: if only + past for an unreal present; were is the subjunctive standard for all persons in careful English
+  - text: "I'd rather you {{c1::didn't mention}} my name when you write this up."
+    hint: not mention
+    rule: would rather + somebody + past simple — an unreal past used as a polite request, not a past reference
+  - text: "It is high time the sector {{c1::stopped}} mistaking good intentions for evidence."
+    hint: stop
+    rule: it's (high) time + subject + past simple; the past form carries the impatience
+  - text: "He writes about the estate as if he {{c1::had grown}} up there, which he never did."
+    hint: grow
+    rule: as if + past perfect marks an untrue comparison with an earlier action
+  - text: "They talk about us as though we {{c1::were}} a problem to be managed."
+    hint: be
+    rule: as though + past = the comparison is untrue; were rather than was in careful written English
+  - text: "The committee demanded that the report {{c1::be published}} in full."
+    hint: publish
+    rule: subjunctive after demand — bare be + past participle, never is or was published
+  - text: "It is essential that every child {{c1::have}} a library within walking distance."
+    hint: have
+    rule: it is essential / vital / imperative that + bare verb — no -s, whatever the subject
+  - text: "I'd sooner {{c1::walk}} the three miles than ask him for a lift again."
+    hint: walk
+    rule: would sooner / would rather + bare infinitive about yourself, with than before the alternative — no to anywhere

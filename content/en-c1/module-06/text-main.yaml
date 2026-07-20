@@ -1,0 +1,55 @@
+kind: main
+kicker: LONG-READ
+title: Born on the Wrong Side of Town
+meta: ≈ 7 min · dotted words carry glosses — tap to reveal
+word_count: 1017
+body:
+  - - t: "The 61 bus crosses Ashfield in eleven minutes. It carries passengers from a postcode where men live, on average, to seventy-two, into a postcode where they live to eighty-one. Nine years, eleven minutes, one fare. The borough's public health report records the disparity in a single line and then moves on, as though there were nothing further to be said about it."
+  - - t: "Danielle Marsh has made that journey most mornings for nine years. She is thirty-four, a care worker on a zero-hours contract, and she grew up on the Brackenhill estate, three streets from the stop where she waits in the dark. 'I wish somebody had told me at sixteen how much of it was already decided,' she says. She is not being fatalistic; she is being accurate. Children from a disadvantaged background here are twice as likely to leave school without qualifications."
+  - - t: "The word politicians reach for is "
+    - g: social_mobility
+    - t: ", and every party has promised more of it for thirty years. The data stubbornly shows that the country is no better at moving people out of the income band their parents occupied. Between a quarter and a third of children in Ashfield's northern wards are growing up below "
+    - g: poverty_line
+    - t: ", a proportion barely changed since the steelworks closed."
+  - - t: "A mile south, the same age group has the same local authority, the same curriculum, the same exam board. What it does not have is the same everything else: music lessons, a spare bedroom to revise in, an uncle who can arrange a fortnight at a solicitor's office. None of this appears in a league table, and together it amounts to a head start that compounds for eighteen years. By five, "
+    - g: attainment_gap
+    - t: " between the two halves of the town is already measurable."
+  - - t: "That is what keeps getting lost. There is rarely one barrier to point at and remove, but an accumulation: a bus route cut in 2019, so that the sixth-form college is now an hour away; an unpaid internship in a city nobody on the estate can afford; a means-tested grant whose eligibility criteria exclude any household where a mother works more than sixteen hours. 'People imagine a wall,' says Dr Rehana Sood, who studies deprivation. 'It is not a wall. It is a hundred small tolls, and only some children are asked to pay them.'"
+  - - t: "Sood is careful about what her evidence will carry. Financial hardship explains a great deal, but not everything: some of the most entrenched differences in life chances survive where household incomes are similar. 'If only it were as simple as a cheque. I would rather we admitted that in public than promised what we cannot deliver.'"
+  - - t: "Not everyone accepts the diagnosis, or the vocabulary it arrives in. Gary Whitlock runs a plumbing firm on the north side and left the same school Danielle did. He has heard the estate described in the language of welfare and marginalised communities all his adult life, and he resents it. 'They talk about us as if we were a problem to be managed,' he says. 'Half the lads I employ came off this estate and they are doing fine. What we want is the bus back.' Little of that disagrees with Sood."
+  - - t: "Whitlock's complaint has a name in policy circles. Provision here is famously "
+    - g: postcode_lottery
+    - t: ": two families with identical needs, twelve miles apart, get quite different things depending on which authority's budget survived a decade of austerity. Ashfield's youth services lost sixty per cent of their funding after 2010, and the advice centre that helped residents claim benefits they were entitled to closed in 2016."
+  - - t: "What replaced it is smaller, poorer and more stubborn. Lift, a "
+    - g: grassroots
+    - t: " mentoring scheme, was started in a church hall by two retired teachers and works with three hundred young people a year. It pairs a fifteen-year-old with an adult who does a job the teenager has never heard of, and keeps them in the same room for three years. Its founders have lobbied the council with a persistence bordering on rudeness, and last spring the committee accepted a recommendation that the scheme's funding be ring-fenced until 2029."
+  - - t: "Its results are hard to isolate and easy to believe in, which is the problem. Marianne Okoro taught in Ashfield for twenty-two years and now advocates for the scheme nationally. She has spent two years demanding that the department commission an independent evaluation. 'I am not asking anybody to take my word for it,' she says. 'I am insisting that somebody finally count. It is high time the sector stopped mistaking good intentions for evidence.'"
+  - - t: "Behind all of it sits a design argument no amount of goodwill settles. Some economists hold that it is essential that support be universal, since means-tested schemes stigmatise the people they reach and miss everybody just above the threshold. Others would sooner redistribute the same money narrowly, because a pound spent on a household that does not need it is a pound denied to a child who does. Both sides say they are levelling the playing field; they disagree about where the field is."
+  - - t: "There is also the question of what a town loses when it separates. Cohesion, sociologists argue, depends less on how people feel about one another than on whether they ever meet: the same school gate, the same waiting room, the same five-a-side pitch. Ashfield's two halves once integrated at the steelworks, which employed four thousand people and closed in 1993. Nothing replaced it. Each half now writes about the other online as though it had never lived a mile away."
+  - - t: "Danielle's daughter is eleven and started at the school on the north side in September. Danielle wishes the rota would let her get to parents' evenings; the shifts rarely cooperate. She is wary of the word aspiration, which she has mostly heard from people explaining what she lacks. Asked what would genuinely help, she thinks for a while, then says something no policy document has quite managed. 'Make it so that where she is from is the least interesting thing about her.' The 61 still takes eleven minutes."
+glosses:
+  - key: social_mobility
+    term: social mobility
+    pos_label: noun phrase
+    definition: the ability of people to move into a higher or lower social and economic position than their parents held
+    example: Social mobility has stalled for three decades, whichever measure you use.
+  - key: poverty_line
+    term: the poverty line
+    pos_label: noun phrase
+    definition: the official income level below which a household is counted as poor
+    example: A third of the children in the borough are growing up below the poverty line.
+  - key: attainment_gap
+    term: the attainment gap
+    pos_label: noun phrase
+    definition: the persistent difference in exam results between poorer pupils and their better-off classmates
+    example: The attainment gap opens before school starts and rarely closes afterwards.
+  - key: postcode_lottery
+    term: a postcode lottery
+    pos_label: noun phrase
+    definition: a situation in which the quality of a public service depends on where you happen to live rather than on what you need
+    example: Cancer waiting times are a postcode lottery, and everybody in the health service knows it.
+  - key: grassroots
+    term: grassroots
+    pos_label: adjective
+    definition: organised by ordinary people at a local level rather than by a government or a large organisation
+    example: The campaign began as a grassroots effort run from somebody's kitchen.

@@ -1,0 +1,367 @@
+# Module 04 · Education & Learning — 45 lexemes in four domains:
+# learning & memory (12) · aptitude & achievement (11) · institutions & credentials (11) · study habits & lifelong learning (11)
+entries:
+  # ── Learning & memory ──────────────────────────────────────────
+  - term: rote learning
+    tag: neutral
+    definition: learning by repeating something many times until you can reproduce it, without necessarily understanding it
+    use_cases:
+      - Multiplication tables are one of the few things rote learning genuinely does well.
+      - The syllabus rewards rote learning, so students memorise essays they cannot explain.
+    collocations: rely on / move beyond rote learning · rote memorisation
+    register: "Neutral, usually mildly critical; contrast: learning by heart (neutral)"
+  - term: grasp a concept
+    tag: neutral
+    definition: to understand an idea properly for the first time
+    use_cases:
+      - Once you grasp the concept of compound interest, the rest of the course is arithmetic.
+      - He had memorised the formula for years without ever grasping the concept behind it.
+    collocations: grasp / struggle to grasp a concept · a firm grasp of sth
+    register: "Neutral; stronger than understand — implies the idea finally clicked"
+  - term: retain information
+    tag: formal
+    definition: to keep information in your memory over time
+    use_cases:
+      - We retain far more information from material we have had to explain to somebody else.
+      - Sleep is when the brain decides which of the day's information to retain.
+    collocations: retain / lose information · retention rate · long-term retention
+    register: "Formal-academic; everyday alternative: remember things"
+  - term: cram for an exam
+    tag: informal
+    definition: to study very intensively just before an exam, after neglecting the subject
+    use_cases:
+      - She crammed for the exam all night and could not remember a word of it by Friday.
+      - Cramming works for Thursday and fails for the rest of your life.
+    collocations: cram for a test · a cramming session · last-minute cramming
+    register: "Informal but universal; formal equivalent: intensive last-minute revision"
+  - term: a steep learning curve
+    tag: idiom
+    definition: a situation in which you have to learn a great deal very quickly
+    use_cases:
+      - The first month in the lab was a steep learning curve for everyone.
+      - Nobody warned me about the steep learning curve that comes with teaching your own subject.
+    collocations: face / be on a steep learning curve
+    register: "Neutral-idiomatic; note the meaning has drifted — literally a steep curve means fast learning, but everyone uses it to mean difficult"
+  - term: commit something to memory
+    tag: formal
+    definition: to deliberately learn something so that you can recall it later
+    use_cases:
+      - Actors commit whole scripts to memory and forget them within weeks of closing night.
+      - She committed the safety checklist to memory rather than trusting the printout.
+    collocations: commit a speech / a list / a formula to memory
+    register: "Formal; everyday alternative: learn sth by heart"
+  - term: spaced repetition
+    tag: academic
+    definition: a study method in which you review material at increasing intervals, just before you would forget it
+    use_cases:
+      - Spaced repetition turns twenty minutes a day into knowledge that survives for years.
+      - The app schedules reviews by spaced repetition, so difficult cards come round more often.
+    collocations: use / be based on spaced repetition · spacing effect · a review interval
+    register: Academic-technical; the underlying research effect is called the spacing effect
+  - term: consolidate
+    tag: academic
+    definition: to make new knowledge firmer and more permanent, usually by revisiting or using it
+    use_cases:
+      - The brain consolidates the day's learning during deep sleep.
+      - A week of practice consolidated everything the lecture had only introduced.
+    collocations: consolidate knowledge / learning / memories · memory consolidation
+    register: Academic; also used in business English with a different sense (merge)
+  - term: jog your memory
+    tag: idiom
+    definition: to cause you to remember something you had temporarily forgotten
+    use_cases:
+      - I read the first line of my notes to jog my memory and the whole argument came back.
+      - Photographs jog the memory in a way that written diaries somehow do not.
+    collocations: jog sb's memory · a memory jogger
+    register: Informal-idiomatic; the object is always the memory, not the fact
+  - term: internalise
+    tag: academic
+    definition: to absorb a rule or idea so completely that you use it without thinking
+    use_cases:
+      - After a year abroad she had internalised the article system and stopped translating.
+      - Rules you have internalised feel like intuition, which is why they are hard to teach.
+    collocations: internalise a rule / a norm / feedback
+    register: "Academic; British spelling -ise, American -ize"
+  - term: trial and error
+    tag: idiom
+    definition: a way of learning something by trying different methods and discarding the ones that fail
+    use_cases:
+      - Most of what I know about teaching came from trial and error, not from the training.
+      - By trial and error, the team worked out which variable was breaking the model.
+    collocations: by / through trial and error · a trial-and-error approach
+    register: Neutral-idiomatic; fixed order — never error and trial
+  - term: absorb information
+    tag: neutral
+    definition: to take in and understand new information, especially in quantity
+    use_cases:
+      - There is a limit to how much information anyone can absorb in a ninety-minute lecture.
+      - Children absorb pronunciation from the people around them without any effort at all.
+    collocations: absorb information / detail / a language · absorb sth effortlessly
+    register: Neutral; implies passive, unforced intake
+  # ── Aptitude & achievement ─────────────────────────────────────
+  - term: aptitude
+    tag: formal
+    definition: a natural ability to learn or do something well
+    use_cases:
+      - She showed an early aptitude for languages that the school did nothing to develop.
+      - Aptitude tests predict rather less about performance than the people who sell them claim.
+    collocations: an aptitude for sth · show / display aptitude · an aptitude test
+    register: "Formal; note the preposition is for, never to"
+  - term: underachieve
+    tag: formal
+    definition: to perform less well than your ability suggests you should
+    use_cases:
+      - Bright children underachieve for social reasons far more often than for academic ones.
+      - He left school as a spectacular underachiever and finished a doctorate at forty.
+    collocations: underachieve at school · an underachiever · chronic underachievement
+    register: "Formal-educational; opposite: overachieve (often mildly ironic)"
+  - term: excel at something
+    tag: formal
+    definition: to be extremely good at a particular activity or subject
+    use_cases:
+      - She excelled at the subjects nobody in her family had ever studied.
+      - A school that excels at exams does not necessarily excel at teaching.
+    collocations: excel at / in a subject · excel yourself
+    register: "Formal; at for activities, in for fields (excel in mathematics)"
+  - term: a flair for something
+    tag: neutral
+    definition: a natural talent for doing something well and stylishly
+    use_cases:
+      - He has a real flair for explaining difficult ideas to people who are afraid of them.
+      - A flair for the subject is no substitute for turning up to the seminars.
+    collocations: have / show a flair for sth · a natural flair
+    register: Neutral; warmer and more stylistic than aptitude
+  - term: keep up with
+    tag: neutral
+    definition: to manage to learn or progress at the same speed as others
+    use_cases:
+      - Two weeks of illness and she could no longer keep up with the class.
+      - Keeping up with the reading list is a full-time occupation in itself.
+    collocations: keep up with the class / the workload / the pace
+    register: Neutral; the opposite of fall behind
+  - term: fall behind
+    tag: neutral
+    definition: to make less progress than the others in your group, so that you are left at an earlier stage
+    use_cases:
+      - Students who fall behind in the first term rarely catch up without help.
+      - He fell behind with his coursework and was too embarrassed to say so.
+    collocations: fall behind with sth · fall behind the rest of the class · catch up
+    register: Neutral; with before the work, behind before the people
+  - term: live up to expectations
+    tag: neutral
+    definition: to be as good as people expected you to be
+    use_cases:
+      - The course never quite lived up to the expectations the prospectus had created.
+      - Being the clever one in the family means spending years trying to live up to it.
+    collocations: live up to expectations / the hype / your reputation · fail to live up to sth
+    register: "Neutral; note live up to, not correspond to expectations"
+  - term: master a skill
+    tag: neutral
+    definition: to learn a skill so thoroughly that you can use it with complete confidence
+    use_cases:
+      - It takes about ten years to master an instrument and about ten minutes to enjoy one.
+      - She had mastered the technique long before she could explain how it worked.
+    collocations: master a skill / a language / a technique · mastery of sth
+    register: Neutral; implies a finished process, unlike learn
+  - term: hit a plateau
+    tag: idiom
+    definition: to reach a stage where you stop making noticeable progress despite continuing to work
+    use_cases:
+      - Every language learner hits a plateau somewhere around the upper-intermediate stage.
+      - We had hit a plateau, so the coach changed the training entirely.
+    collocations: hit / reach a plateau · plateau out · break through a plateau
+    register: Neutral-idiomatic; also a verb — progress plateaued in March
+  - term: a high achiever
+    tag: neutral
+    definition: somebody who consistently performs at a very high level, especially academically
+    use_cases:
+      - The school is full of high achievers who have never once been allowed to fail.
+      - High achievers often struggle most with the first subject that resists them.
+    collocations: a high / low achiever · high-achieving students
+    register: Neutral-educational; can carry a faint note of pressure
+  - term: grade inflation
+    tag: academic
+    definition: the tendency for the same standard of work to be awarded higher marks than in the past
+    use_cases:
+      - Grade inflation makes it harder for employers to tell candidates apart.
+      - The department denies that grade inflation explains its remarkable results.
+    collocations: grade inflation · inflated grades · maintain standards
+    register: Academic-journalistic; usually critical
+  # ── Institutions & credentials ─────────────────────────────────
+  - term: curriculum
+    tag: formal
+    definition: the whole set of subjects and content taught by a school or on a course
+    use_cases:
+      - Financial literacy has been added to the curriculum in about half the region's schools.
+      - A crowded curriculum leaves no room for the digressions students remember.
+    collocations: the national curriculum · on / off the curriculum · curriculum design
+    register: "Formal; plural curricula; contrast with syllabus (one course's content)"
+  - term: tuition fees
+    tag: formal
+    definition: the money charged by a university or college for teaching
+    use_cases:
+      - Tuition fees tripled in a decade, and applications from mature students collapsed.
+      - She took a second job to cover her tuition fees without borrowing.
+    collocations: pay / raise / waive tuition fees · a fee waiver
+    register: "Formal; British usage — in American English usually just tuition"
+  - term: drop out
+    tag: informal
+    definition: to leave a course of study before finishing it
+    use_cases:
+      - Nearly a fifth of the cohort dropped out before the second year.
+      - He dropped out of engineering, retrained as a nurse, and never regretted it.
+    collocations: drop out of a course / university · a dropout · the dropout rate
+    register: "Informal as a verb; the noun a dropout can be judgemental — formal alternative: withdraw from a course"
+  - term: extracurricular
+    tag: formal
+    definition: describing activities organised by a school but not part of the taught course
+    use_cases:
+      - Universities say they value extracurricular activities and then ask about your grades.
+      - Debating was the only extracurricular commitment he kept up after the exams.
+    collocations: extracurricular activities / commitments · take part in sth extracurricular
+    register: Formal-educational; almost always used before a noun
+  - term: enrol on a course
+    tag: formal
+    definition: to officially join a course of study
+    use_cases:
+      - Four hundred students enrolled on the new data course in its first term.
+      - You can enrol on the evening programme at any point before October.
+    collocations: enrol on / in a course · enrol at a university · enrolment
+    register: "Formal; British enrol on, American enroll in — one l or two accordingly"
+  - term: sit an exam
+    tag: neutral
+    definition: to take an official examination
+    use_cases:
+      - She sat the entrance exam twice and was accepted on the second attempt.
+      - Candidates sitting the exam abroad take it at the same hour, whatever the local time.
+    collocations: sit / take / pass / fail an exam
+    register: "British-neutral; American English prefers take an exam"
+  - term: resit an exam
+    tag: neutral
+    definition: to take an exam again after failing it or after a disappointing result
+    use_cases:
+      - He resat the paper in August and improved by two grades.
+      - The rules allow you to resit only once, so the second attempt matters.
+    collocations: resit an exam / a paper · a resit
+    register: British-educational; also a noun — she has a resit in September
+  - term: a scholarship
+    tag: neutral
+    definition: an award of money that pays for somebody's education, usually given for ability or need
+    use_cases:
+      - A scholarship covered her fees, though not the cost of living in the city.
+      - The foundation awards twelve scholarships a year to students from state schools.
+    collocations: win / award / hold a scholarship · a full scholarship · a scholarship holder
+    register: "Neutral; contrast with a grant (need-based) and a bursary (British, need-based)"
+  - term: vocational training
+    tag: formal
+    definition: education that teaches the practical skills needed for a specific job
+    use_cases:
+      - Countries with respected vocational training have far lower youth unemployment.
+      - He chose vocational training over a degree and was earning three years earlier.
+    collocations: vocational training / qualifications / courses · a vocational route
+    register: "Formal; contrast: academic route"
+  - term: higher education
+    tag: formal
+    definition: education at university level, after school
+    use_cases:
+      - Higher education absorbs a third of the department's entire budget.
+      - The first person in her family to enter higher education, she arrived knowing none of the rules.
+    collocations: enter / go into higher education · the higher education sector · further education
+    register: "Formal; further education in Britain means post-16 non-degree study — a different thing"
+  - term: graduate from
+    tag: neutral
+    definition: to complete a university degree successfully
+    use_cases:
+      - She graduated from Leeds with a degree she has never once used professionally.
+      - Graduating in a recession shaped that entire cohort's expectations.
+    collocations: graduate from a university · graduate in a subject · a graduate
+    register: "Neutral; the preposition is from for the institution, in for the subject"
+  # ── Study habits & lifelong learning ───────────────────────────
+  - term: lifelong learning
+    tag: formal
+    definition: the practice of continuing to learn new things throughout your adult life
+    use_cases:
+      - Lifelong learning stops being a slogan the moment your industry disappears.
+      - The library runs lifelong learning courses for anybody over fifty.
+    collocations: lifelong learning · a lifelong learner · continuing professional development
+    register: Formal-institutional; common in policy documents
+  - term: self-directed learning
+    tag: academic
+    definition: learning that you plan, organise and assess yourself, without a teacher directing it
+    use_cases:
+      - "Self-directed learning demands the one skill schools rarely teach: knowing what you do not know."
+      - Half the course is self-directed learning, which suits some students and defeats others.
+    collocations: self-directed / independent / autonomous learning · learner autonomy
+    register: Academic-educational
+  - term: get to grips with something
+    tag: idiom
+    definition: to begin to understand and deal with something difficult
+    use_cases:
+      - It took me a whole term to get to grips with statistical inference.
+      - Before you get to grips with the theory, do twenty of the problems.
+    collocations: get to grips with a subject / a problem · come to grips with sth
+    register: "British-idiomatic; American English prefers come to grips with"
+  - term: constructive feedback
+    tag: formal
+    definition: comments on somebody's work that point out weaknesses in a way that helps them improve
+    use_cases:
+      - Constructive feedback tells you what to do next, not merely what went wrong.
+      - She gave the essay two pages of constructive feedback and a disappointing mark.
+    collocations: give / receive / act on constructive feedback · critical feedback
+    register: "Formal-professional; opposite: destructive criticism"
+  - term: procrastinate
+    tag: formal
+    definition: to keep delaying something you ought to be doing, usually because it is unpleasant
+    use_cases:
+      - I procrastinated for three weeks and then wrote the chapter in two days.
+      - Students procrastinate most over the tasks whose standards they care about.
+    collocations: procrastinate over / about sth · chronic procrastination
+    register: Formal-neutral; the noun procrastination is more common in writing
+  - term: burn the midnight oil
+    tag: idiom
+    definition: to work or study very late into the night
+    use_cases:
+      - He burnt the midnight oil for a fortnight and passed by three marks.
+      - There is no prize for burning the midnight oil if you sleep through the exam.
+    collocations: burn the midnight oil
+    register: Idiomatic-neutral; fixed phrase, never adapted
+  - term: put theory into practice
+    tag: neutral
+    definition: to apply something you have learnt in a real situation
+    use_cases:
+      - The placement is where students finally put theory into practice.
+      - Everything sounded straightforward until we tried to put the theory into practice.
+    collocations: put theory into practice · in theory / in practice · practical application
+    register: Neutral; a fixed contrast pair with in theory
+  - term: peer assessment
+    tag: academic
+    definition: a system in which students judge and comment on each other's work
+    use_cases:
+      - Peer assessment teaches students the criteria faster than any rubric does.
+      - The seminar uses peer assessment, so you will be marking three essays yourself.
+    collocations: peer assessment / feedback / review · assess sb's work
+    register: Academic-educational
+  - term: a knowledge gap
+    tag: formal
+    definition: something important that you do not know within a subject you otherwise understand
+    use_cases:
+      - Good testing exposes knowledge gaps early, while they are still cheap to fix.
+      - She had a serious knowledge gap around statistics and had built a career on hiding it.
+    collocations: identify / expose / fill / close a knowledge gap
+    register: Formal-educational
+  - term: brush up on something
+    tag: informal
+    definition: to improve a skill you once had but have partly forgotten
+    use_cases:
+      - I need to brush up on my German before the conference in Vienna.
+      - She spent August brushing up on the maths she had abandoned at eighteen.
+    collocations: brush up on a language / your skills
+    register: "Informal; implies revival, not first-time learning"
+  - term: pick something up
+    tag: informal
+    definition: to learn something informally, without being taught
+    use_cases:
+      - He picked up conversational Portuguese from his colleagues in about six months.
+      - Children pick up the accent of the playground, never the accent of the parents.
+    collocations: pick up a language / an accent / a habit · pick sth up quickly
+    register: "Informal; contrast with study — implies effortless, incidental learning"

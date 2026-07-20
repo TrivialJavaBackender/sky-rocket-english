@@ -1,0 +1,42 @@
+kind: main
+kicker: LONG-READ
+title: Manufacturing Outrage
+meta: ≈ 6 min · dotted words carry glosses — tap to reveal
+word_count: 832
+body:
+  - - t: "The bus was not on fire. The photograph that went viral one Tuesday last spring — shared ninety thousand times before lunch — showed a training exercise from 2014, filmed in another country. By the time a fact-checking site traced the original, the image had been viewed eleven million times; the correction, posted that evening, reached a little over two hundred thousand people. Nobody involved was lying, exactly. An account farming "
+    - g: engagement
+    - t: " had found a dramatic picture; an audience primed for anger supplied the caption; the platform's machinery did the rest. The outrage was real. Almost everything underneath it had been manufactured."
+  - - t: "Researchers who study the attention economy say the machinery is not new — only faster, and better paid. A sensationalist front page once had to get past an editor, a lawyer and a printing press; a clickbait headline gets past nothing but an A/B test. Recommendation systems exist to "
+    - g: amplify
+    - t: " whatever keeps people scrolling, and nothing keeps people scrolling like indignation. Feeds narrow into echo chambers, the 24-hour news cycle strips the context from every story it touches, and accounts on every side of every question have learned to stoke outrage on schedule — because anger, efficiently harvested, is the cheapest way to "
+    - g: monetise
+    - t: " attention ever invented."
+  - - t: "What that model does to public life stopped being guesswork two years ago, when a whistle-blower walked out of one of the big platforms carrying three years of internal research. Insiders alleged that executives had known since 2019 that the ranking system rewarded "
+    - g: vitriol
+    - t: ", and the leaked studies appeared to corroborate them in the company's own charts. The company denied designing for anger and accused the press of quoting selectively. Its chief executive — who is alleged to have read the key study within a month of its completion — told a congressional committee that the research had been preliminary and that no simple metric could capture a feeling. One vice-president, speaking off the record, conceded that the dashboard had become a master rather than a tool; the firm was meanwhile reported to have shelved the proposed fixes after costing them at seven per cent of daily engagement. When a senator asked why the fixes had never shipped, the answer ran to four hundred words and said nothing at all."
+  - - t: "None of this would have shocked the press barons of a century ago, who understood the market for indignation perfectly. Their papers mounted smear campaigns against inconvenient politicians, hushed up the sins of their owners' friends and dressed circulation wars as moral crusades; state propaganda later industrialised the same tricks. One media historian I interviewed said the penny press had been manufacturing outrage long before anyone thought to measure it — what had changed, she added, was the feedback loop. An editor guessed what would enrage; a ranking system knows, to the second decimal place, and it never stops learning. Yesterday's spin was a craft. Today's is an experiment that never ends."
+  - - t: "The vocabulary we reach for matters, because the machine launders one thing into another. Misinformation is falsehood spread in good faith — your uncle sharing the burning bus. Disinformation is falsehood built to deceive, seeded by people who know precisely what they are doing. Most of what the outrage economy actually moves is neither: it is framing — true facts, selectively lit. A genuine quotation cropped mid-sentence is not a lie; an unsubstantiated rumour repeated as a question is not a claim. And a public trained to take nothing at face value does not become sceptical, it becomes cynical — treating every credible source and every anonymous account as equally suspect, which suits the manufacturers perfectly."
+  - - t: "The remedies on the table are unglamorous, and most of them are old. Researchers have urged the platforms to open their ranking systems to independent audit, and a few have suggested treating engineered outrage as a pollutant — an industrial by-product to be measured and priced. European regulators now insist on annual risk assessments, and their auditors have started asking the only question that matters: what does the machine reward? Newsrooms, for their part, are relearning the disciplines the feed abolished — verify before you run a story, corroborate before you name, let the rival outlet have the scoop that is too good to check. Impartial coverage will never be as profitable as fury. That was always the case; the difference is that fury now has better distribution."
+  - - t: "It is tempting to reach for the censor, and it would not work: manufactured outrage cannot be hushed up or banned out of existence, because its factory floor is us. Every share is a shift worked for free. The bus was not on fire, and the next one will not be either — but somebody will profit from the smoke, unless the reader learns to ask, one beat before forwarding, the oldest question in journalism: who is telling me this, and what do they want me to feel? Outrage is manufactured. Attention is the raw material. Supply is entirely, maddeningly, ours to withhold."
+glosses:
+  - key: engagement
+    term: engagement
+    pos_label: noun · metrics register
+    definition: the measurable attention users give to content — clicks, shares, comments and time spent
+    example: The redesign doubled engagement but halved how much anyone actually read.
+  - key: amplify
+    term: amplify
+    pos_label: verb
+    definition: to make something louder or stronger — here, to push content to far more people than would find it naturally
+    example: The algorithm amplifies posts that provoke replies, whatever their accuracy.
+  - key: monetise
+    term: monetise
+    pos_label: verb · business register
+    definition: to turn something into a source of money
+    example: The site monetises free users by selling their attention to advertisers.
+  - key: vitriol
+    term: vitriol
+    pos_label: noun · formal
+    definition: extremely bitter and cruel language; the old word for sulphuric acid
+    example: The comment section filled with vitriol within an hour of publication.

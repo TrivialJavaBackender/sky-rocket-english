@@ -1,0 +1,86 @@
+# Diagnostic production task. The plan specifies both an essay and a recorded
+# monologue, but a checkpoint package supports a single writing.yaml (sync
+# hardcodes position 1), so both are carried here as Part 1 and Part 2.
+# Sat cold, before Module 1 — this is a baseline sample, not an exercise.
+mode: writing
+genre: diagnostic essay and recorded monologue
+prompt: |
+  This is a baseline. Nothing here is marked and nothing is unlocked by it:
+  the point is to capture what your English looks like before the course, so
+  that the same two tasks at the end have something honest to be compared with.
+  Write and speak at your natural level. Do not look anything up, do not use a
+  dictionary or a translator, and do not redraft. Sit both parts in one session
+  and keep to the timings.
+
+  ## Part 1 · Essay — 40 minutes, 220–260 words
+
+  Your class has watched a panel discussion about whether schools should still
+  require every student to learn a foreign language. You have made the notes
+  below.
+
+  Points raised:
+  · translation technology
+  · understanding another culture
+  · career opportunities
+
+  Some opinions expressed:
+  'Why spend six years on something an app does instantly?'
+  'You cannot get inside a culture through a machine.'
+  'Employers say they want it, but they rarely pay more for it.'
+
+  Write an essay discussing TWO of the points in your notes. Explain which of
+  the two you consider more important, and give reasons for your opinion. You
+  may use the opinions above, but do not copy them word for word.
+
+  ## Part 2 · Recorded monologue — 2 minutes, one take
+
+  Take one minute to plan, then record two minutes without stopping. Do not
+  script it and do not restart — a recovered stumble is more informative than a
+  clean second attempt.
+
+  TOPIC: A skill you have tried to learn as an adult.
+
+  Cover, in any order: what it was and why you started; how you went about it;
+  where you got stuck; and whether you would advise somebody else to try.
+
+  ## Afterwards
+
+  Compare your essay with the model answer below — not to score yourself, but
+  to notice which structures you avoided. Then listen to your recording once
+  and write down every point where you hesitated, restarted or reached for a
+  word you did not have. Keep both files. Those hesitations are the first
+  entries in your error map, and the course is built to close them.
+model_answer: |
+  Now that a phone can translate a conversation in real time, the case for
+  spending years on a foreign language has to be made again rather than
+  assumed. Of the points raised, the technological argument and the cultural
+  one seem to me the most serious.
+
+  It would be dishonest to pretend that translation software has not changed
+  the picture. For ordering a meal, reading a timetable or handling a routine
+  email, it is faster and more accurate than a student with six years of
+  lessons behind them. If the only purpose of language teaching were the
+  transfer of information, the sceptics would have won the argument outright.
+
+  That, however, is precisely what the second point disputes. Understanding a
+  culture is not the same as decoding its sentences. A machine can tell you
+  what somebody said; it cannot tell you why the room went quiet afterwards,
+  or why a particular word was chosen instead of its neighbour. Anyone who has
+  learnt a language properly will recognise the moment when a joke stops
+  needing to be explained. Nothing about that experience is retrievable from
+  an application, however sophisticated it becomes.
+
+  In my view the cultural argument is the stronger of the two, though not for
+  sentimental reasons. Technology removes the difficulty of communication
+  while leaving the difficulty of understanding entirely intact. Schools that
+  abandon languages on the grounds that software has solved the problem will
+  have solved only the easier half of it.
+checklist:
+  - Essay is 220–260 words and discusses exactly two of the three points
+  - Essay states clearly which of the two points is more important, and why
+  - Essay keeps a consistently formal, impersonal register with no contractions
+  - Essay is organised in paragraphs with a visible line of argument, not a list
+  - Monologue runs the full two minutes in one take, without a restart
+  - Monologue covers all four prompts rather than expanding only the first
+  - Both parts were produced without a dictionary, translator or second draft
+  - Hesitations, restarts and missing words are written down afterwards as the first error-map entries

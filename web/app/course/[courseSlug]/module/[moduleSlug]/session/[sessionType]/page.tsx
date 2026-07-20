@@ -278,6 +278,7 @@ async function ActiveStepPanel({
             stepId={stepId}
             moduleId={moduleId}
             isModuleQuiz={false}
+            progress={await exerciseSetUseCase.computeSetProgress(userId, slot.map((s) => s.exercise), 'review_slot')}
           />
         </Card>
       );
@@ -317,6 +318,7 @@ async function ActiveStepPanel({
             isModuleQuiz={false}
             readingTitle={readingTitle}
             readingParagraphs={readingParagraphs}
+            progress={await exerciseSetUseCase.computeSetProgress(userId, items, 'session')}
           />
         </Card>
       );
@@ -388,6 +390,7 @@ async function ActiveStepPanel({
             stepId={stepId}
             moduleId={moduleId}
             isModuleQuiz
+            progress={await exerciseSetUseCase.computeSetProgress(userId, items, 'module_quiz')}
           />
         </Card>
       );

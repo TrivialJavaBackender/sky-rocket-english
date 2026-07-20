@@ -1,0 +1,102 @@
+# Checkpoint A production task + debrief. The scenario is chosen so that all four
+# modules of Block A are needed to answer it properly: a sequence of past events
+# (M01), what was arranged and done to you (M02), what the document claims and
+# what was actually said (M03), and the verb patterns of requesting and
+# recommending (M04).
+mode: writing
+genre: formal email of complaint
+prompt: |
+  Written under exam conditions: 40 minutes, 220–260 words, no dictionary and no
+  second draft. Sit it straight after the 40 test items, in the same session.
+
+  ## The task
+
+  You took part in a twelve-week professional development programme run by an
+  external provider. Last week the provider circulated a summary of the
+  programme to all participants, and it will shortly be sent to people applying
+  for next year's intake. Two things in it are wrong:
+
+  · it states that every session was delivered by outside specialists — in fact
+    several were run by the provider's own staff, and two were cancelled at
+    short notice and never rescheduled;
+  · it reports that participants described the workload as manageable — when
+    you were asked in the final session, most of you said the opposite.
+
+  Write a formal email to the programme director. Set out what actually
+  happened, explain why the summary should not go out to applicants in its
+  present form, and say what you would like to be done about it.
+
+  Do not accuse anyone of dishonesty: the register you are aiming for is firm
+  and factual, and it is more persuasive than indignation.
+
+  ## Deliberately deploy
+
+  This is a checkpoint, so the grammar of the whole block should be visible:
+  · M01 — narrative tenses for the sequence of events (had been running, was
+    going to be rescheduled);
+  · M02 — passives and the causative for what was arranged and done (were
+    delivered, was circulated, had the sessions cancelled);
+  · M03 — reported speech for what the summary claims and what was actually
+    said, with the backshift the past reporting verb requires;
+  · M04 — the verb patterns of requesting and recommending, including at least
+    one phrase where to is a preposition (look forward to hearing).
+
+  ## Afterwards · debrief
+
+  Mark the 40 items first and work out the percentage. The pass mark is 75%,
+  which is 30 out of 40. Then, before reading the model answer:
+
+  1. Sort every miss by the module named at the start of its explanation. Four
+     misses spread across four modules is noise; three in one module is a gap.
+  2. For each gap, reread that module's watchouts and redo the exercises you got
+     wrong rather than the whole set.
+  3. Add each miss to the error map as error → rule → card, and check whether
+     any of them repeat mistakes you already made in the diagnostic. Those are
+     the ones that will not fix themselves.
+  4. Only then compare your email with the model answer, looking specifically
+     for structures you avoided rather than errors you made.
+
+  Below 75%: take a revision week before starting Module 5 — a card marathon on
+  the weak tags plus the failed items — and sit the checkpoint again.
+model_answer: |
+  Dear Dr Halloran,
+
+  I am writing about the summary of the Spring Leadership Programme that was
+  circulated to participants last Friday. Having taken part in the programme
+  from beginning to end, I believe the document misrepresents it in two
+  respects, and I am concerned that it is about to be sent to next year's
+  applicants.
+
+  The summary states that every session was delivered by external specialists.
+  In fact, four of the eleven sessions were run by your own staff, and a
+  further two were cancelled at short notice and never rescheduled. I had been
+  looking forward to the negotiation module in particular; it is the one
+  session I have had no opportunity to attend.
+
+  More seriously, the summary reports that participants described the workload
+  as manageable. When we were asked about this in the final week, most of us
+  said the opposite. Several colleagues had been working late throughout the
+  course, and one withdrew altogether in week five. I raised the point at the
+  time and was assured that it would be recorded.
+
+  I appreciate that a short summary cannot capture every detail, and I am not
+  suggesting that anything was done deliberately. Nevertheless, a document
+  written for prospective applicants ought to reflect what actually took place.
+
+  I would therefore be grateful if the summary could be amended before it is
+  circulated more widely, and if the two cancelled sessions could either be
+  rescheduled or refunded. I am happy to provide the notes I took at the time.
+
+  I look forward to hearing from you.
+
+  Yours sincerely,
+  R. Okonjo
+checklist:
+  - 220–260 words, written in 40 minutes without a dictionary or a second draft
+  - Opens and closes in a consistently formal register, with no contractions
+  - Corrects both inaccuracies and states clearly what is being requested
+  - Firm and factual throughout, without accusing anyone of dishonesty
+  - Uses narrative tenses to order the events, including one past perfect form
+  - Uses at least three passives, and the causative where something was arranged
+  - Reports the summary's claims and the participants' words with correct backshift
+  - Includes one phrase where to is a preposition, followed by an -ing form

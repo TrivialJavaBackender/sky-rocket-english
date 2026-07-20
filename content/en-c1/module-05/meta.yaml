@@ -1,0 +1,36 @@
+slug: m05
+title: Environment & Sustainability
+standfirst: Mixed conditionals in both directions, inversion without if and the whole family of if-alternatives · 45 lexemes with use cases · a CAE Part 1 essay.
+goals:
+  - text: Build mixed conditionals in both directions, matching each half of the sentence to its own time
+    achieved_by: workout
+  - text: Drop if altogether and invert instead — Had we acted, Were it not for, Should you need
+    achieved_by: workout
+  - text: Name the exact condition with provided, as long as, on condition that, unless, but for and otherwise
+    achieved_by: workout
+  - text: Keep in case and if apart, in both directions, without stopping to think
+    achieved_by: workout
+  - text: Deploy 45 high-value climate, resource and consequence lexemes in your own sentences
+    achieved_by: input
+  - text: Write a balanced CAE Part 1 essay of 220–260 words in a formal, impersonal register
+    achieved_by: output
+grammar_points:
+  - Mixed conditionals in both directions
+  - Inversion in conditionals (Had…, Were it not for…, Should…)
+  - Alternatives to if (provided, as long as, on condition that, unless, supposing)
+  - but for, otherwise and or else
+  - in case vs if
+texts:
+  - kind: main
+    title: The Last Harvest
+    word_count: 1062
+  - kind: extra
+    title: Nothing We Build Will Outlast the Soil
+    word_count: 360
+production:
+  mode: writing
+  genre: CAE Writing Part 1 essay
+cards:
+  vocab: 45
+  grammar_cloze: 10
+  transformation: 8

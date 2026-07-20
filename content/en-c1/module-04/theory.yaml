@@ -1,0 +1,135 @@
+# Module 04 · Education & Learning — grammar spotlights + watchouts + cloze cards
+spotlights:
+  - title: "Verbs that change meaning: two verbs wearing one coat"
+    intro: "Most verbs simply prefer -ing or to and that is the end of it. A small, high-value group takes both — and means something entirely different each way. The rule behind almost all of them: the -ing form looks backwards at something real that happened; the to-infinitive looks forwards at something still to come."
+    items:
+      - form: remember doing (memory of a past act) · remember to do (not forget a duty)
+        example: I remember posting the letter. · Remember to post the letter.
+        note: The -ing act is already done and sits in your memory; the to-act is still waiting. Same for forget — I'll never forget meeting her vs I forgot to meet her.
+      - form: regret doing (be sorry about the past) · regret to do (be sorry to announce now)
+        example: She regrets dropping out. · We regret to inform you that your application was unsuccessful.
+        note: Regret to appears with a tiny set of announcing verbs — inform, tell, say, announce — and is the language of bad news in formal letters.
+      - form: stop doing (end the activity) · stop to do (interrupt in order to do sth else)
+        example: He stopped taking notes. · He stopped to take notes.
+        note: The single most useful contrast in this module. Stopped taking = the note-taking ended. Stopped to take = the walking ended so that note-taking could start.
+      - form: try doing (experiment with a method) · try to do (attempt something difficult)
+        example: Try reading it aloud. · Try to read the whole chapter tonight.
+        note: Try doing offers a suggestion worth an experiment; try to do admits the thing may not succeed.
+      - form: mean doing (involve, entail) · mean to do (intend)
+        example: A doctorate means giving up your twenties. · I meant to revise, but I slept.
+        note: With mean doing the subject is usually a thing, not a person — the course means, the job means.
+      - form: go on doing (continue) · go on to do (move to the next stage)
+        example: She went on talking for an hour. · She went on to run the department.
+        note: Continue is one activity extended; the next stage is a new one begun.
+      - form: need doing (passive sense) · need to do (active duty)
+        example: This essay needs rewriting. · You need to rewrite this essay.
+        note: Needs rewriting means needs to be rewritten — English lets the -ing form carry a passive meaning after need, want and be worth.
+  - title: Verb + object + infinitive
+    intro: "English very often reports wanting, allowing and forcing with a person followed by a to-infinitive — a structure Russian usually builds with a that-clause instead. Learning the frame is worth more than learning the verbs one at a time."
+    items:
+      - form: want / expect / advise / encourage / allow / force / persuade + object + to-infinitive
+        example: The tutor encouraged her to resit the paper.
+        note: The person comes first, the to-infinitive second. There is no I want that she resits — English has no want that clause at all.
+      - form: make / let / hear / see / feel + object + bare infinitive
+        example: They made us learn the whole list by heart. · She let me borrow her notes.
+        note: These five drop the to. Made us to learn is the classic error and it is always wrong in the active.
+      - form: help + object + (to) infinitive
+        example: The diagram helped me (to) grasp the concept.
+        note: Help is the one verb genuinely relaxed about to — both forms are correct, and the bare form is now more common.
+      - form: verbs of perception + -ing (an action in progress) vs bare infinitive (the complete act)
+        example: I saw him copying the answers. · I saw him copy the answers.
+        note: Copying = caught mid-act; copy = you watched the whole thing from beginning to end.
+  - title: "let and make in the passive"
+    intro: "The bare infinitive after make and let survives only in the active. Put those sentences into the passive and English changes the rules — differently for each verb."
+    items:
+      - form: make somebody do → somebody be made to do
+        example: We were made to sit the test again.
+        note: "The to reappears in the passive. This is the single most tested point of the pair: made to, always, in the passive."
+      - form: let has no ordinary passive — English switches to be allowed to
+        example: "We were allowed to use dictionaries. (not: We were let use…)"
+        note: Was let is only heard in fixed phrases like be let off or be let go. For permission, the passive is be allowed to.
+      - form: verbs of perception keep to in the passive as well
+        example: He was seen to leave the exam hall early.
+        note: Active I saw him leave; passive he was seen to leave. Formal and typical of reports and evidence.
+  - title: "to as a preposition: the trap that never stops working"
+    intro: "The word to does two unrelated jobs. In to study it introduces an infinitive. In look forward to it is a preposition — and every preposition in English is followed by a noun or an -ing form. Nothing marks the difference except the phrase itself, which is why these must be learnt as whole items."
+    items:
+      - form: look forward to + -ing
+        example: I look forward to hearing from you.
+        note: The commonest email sign-off in English, and the commonest place to write look forward to hear. Test it by putting a noun in the gap — look forward to the holiday works, so it is a preposition.
+      - form: be / get used to + -ing (be accustomed to)
+        example: She still isn't used to studying in a second language.
+        note: Distinct from used to do, which is a past habit — I used to study here. Be used to has a form of be in front of it; the past-habit one never does.
+      - form: object to · be committed to · resort to · be devoted to · in addition to · when it comes to
+        example: When it comes to revising, everyone believes their own method.
+        note: A closed list worth memorising as phrases. Each one ends in a preposition, so each one takes -ing.
+      - form: prefer / would rather — the other comparison trap
+        example: I prefer studying at night to working in the morning. · I'd rather study at night.
+        note: Prefer takes -ing … to -ing; would rather takes a bare infinitive with no to at all.
+  - title: "Perfect and passive -ing forms: pushing the gerund into the past"
+    intro: "A gerund has no tense of its own, so it takes the time of the main verb. When you need it to refer to something clearly earlier, add having; when the subject is the receiver rather than the doer, add being."
+    items:
+      - form: deny / admit / regret / recall + having + past participle
+        example: He denied having cheated in the earlier paper.
+        note: The perfect form makes the earlier time explicit. Denied cheating is also correct and far commoner in speech — having is the formal, unambiguous option.
+      - form: being + past participle (passive gerund)
+        example: She hated being made to read aloud in class.
+        note: The subject receives the action. Note being made to — the passive of make brings back its to even inside a gerund.
+      - form: having been + past participle (perfect passive gerund)
+        example: Having been taught by rote, he found open questions terrifying.
+        note: Typical of formal written English at the front of a sentence, giving the earlier cause.
+      - form: need / want / be worth + -ing with passive meaning
+        example: These notes need rewriting and the whole topic is worth revisiting.
+        note: "No passive marker appears, yet the meaning is passive: need to be rewritten, worth being revisited."
+watchouts:
+  - title: made somebody to do in the active
+    bad: The teacher made us to learn fifty words a week.
+    good: The teacher made us learn fifty words a week.
+    note: Make, let, see, hear and feel take the bare infinitive in the active. The to comes back only in the passive — we were made to learn. Remembering that one pair solves both halves.
+  - title: I want that you…
+    bad: I want that you read this chapter before Friday.
+    good: I want you to read this chapter before Friday.
+    note: Russian reports wishes with a that-clause; English uses object + to-infinitive after want, expect, advise, would like. There is no want that construction in English at all.
+  - title: look forward to hear
+    bad: I look forward to hear from you.
+    good: I look forward to hearing from you.
+    note: Here to is a preposition, not an infinitive marker, so an -ing form must follow. Substitute a noun to test it — look forward to your reply is fine, which proves the point.
+  - title: used to do vs be used to doing
+    bad: I am used to get up at six when I was a student.
+    good: I used to get up at six when I was a student. · I am used to getting up at six.
+    note: Two different structures that happen to share three letters. Used to + bare infinitive = a past habit that has stopped. Be / get used to + -ing = be accustomed to something. If there is a form of be in front, an -ing form must follow.
+  - title: stop to do when you mean stop doing
+    bad: I stopped to smoke three years ago.
+    good: I stopped smoking three years ago.
+    note: Stop doing ends the activity; stop to do interrupts one activity to begin another. The wrong choice here says you paused in order to have a cigarette — the opposite of what was meant.
+cloze_cards:
+  - text: "He {{c1::stopped taking}} notes halfway through and just listened instead."
+    hint: take
+    rule: stop + -ing ends the activity itself; stop + to-infinitive would mean he paused in order to start taking notes
+  - text: "Remember {{c1::to hand}} in the essay before midnight — the portal closes on time."
+    hint: hand
+    rule: remember + to-infinitive = a duty still ahead; remember + -ing would report a memory of already doing it
+  - text: "We were {{c1::made to sit}} the whole paper again after the leak."
+    hint: sit
+    rule: make + bare infinitive in the active, but the passive restores to — be made to do
+  - text: "Students {{c1::were allowed to use}} dictionaries in the second half of the exam."
+    hint: allow
+    rule: let has no ordinary passive; English switches to be allowed to for permission
+  - text: "I'm looking forward to {{c1::hearing}} the results on Thursday."
+    hint: hear
+    rule: to in look forward to is a preposition, so an -ing form follows
+  - text: "She still isn't used to {{c1::studying}} in her third language."
+    hint: study
+    rule: be / get used to + -ing = be accustomed to; contrast the past habit used to study
+  - text: "The tutor encouraged her {{c1::to resit}} the paper in August."
+    hint: resit
+    rule: encourage / advise / persuade / want take object + to-infinitive — never a that-clause
+  - text: "He denied {{c1::having cheated}} in the earlier paper, and the panel believed him."
+    hint: cheat
+    rule: deny + having + past participle pushes the gerund back to an earlier time
+  - text: "This chapter {{c1::needs rewriting}} before anyone else reads it."
+    hint: rewrite
+    rule: need + -ing carries a passive meaning — needs to be rewritten
+  - text: "She went on {{c1::to run}} the department five years after graduating."
+    hint: run
+    rule: go on + to-infinitive moves to the next stage; go on + -ing would mean she simply continued

@@ -70,6 +70,8 @@ export function ExercisePlayer({
   onFinished,
   readingTitle,
   readingParagraphs,
+  initialResults,
+  initialIndex = 0,
 }: {
   items: PublicExerciseDTO[];
   context: AttemptContext;
@@ -79,9 +81,18 @@ export function ExercisePlayer({
   /** Fix 3: reading_comprehension exercise sets otherwise strand the learner without the text they're being quizzed on — a collapsed-by-default panel above the exercise Card lets them pull it back up without leaving the player. */
   readingTitle?: string;
   readingParagraphs?: string[];
+  /**
+   * Resume support (UC-09): correctness already recorded for this run, so the
+   * dots come back painted, and the index to reopen at. Both come from
+   * `computeSetProgress` — the player itself stays stateless about persistence.
+   */
+  initialResults?: Array<boolean | null>;
+  initialIndex?: number;
 }) {
-  const [i, setI] = useState(0);
-  const [results, setResults] = useState<Array<boolean | null>>(() => items.map(() => null));
+  const [i, setI] = useState(() => (initialIndex > 0 && initialIndex < items.length ? initialIndex : 0));
+  const [results, setResults] = useState<Array<boolean | null>>(() =>
+    initialResults && initialResults.length === items.length ? initialResults : items.map(() => null),
+  );
   const [attempts, setAttempts] = useState<ExercisePlayerAttempt[]>([]);
   const [phase, setPhase] = useState<'ans' | 'chk'>('ans');
   const [current, setCurrent] = useState<GradedState | null>(null);

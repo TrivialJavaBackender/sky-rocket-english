@@ -1,0 +1,368 @@
+# Module 06 · Society & Inequality — 45 lexemes in four domains:
+# inequality & disadvantage (12) · social policy & the state (11) ·
+# discrimination, inclusion & cohesion (11) · activism, advocacy & change (11)
+entries:
+  # ── Inequality & disadvantage ──────────────────────────────────
+  - term: disparity
+    tag: formal
+    definition: a clear and usually unfair difference between two groups in what they have or receive
+    use_cases:
+      - The report records a nine-year disparity in life expectancy between two neighbouring postcodes.
+      - Pay disparities within the company survived three separate reviews.
+    collocations: a wide / glaring / persistent disparity · a disparity in income · disparities between regions
+    register: "Formal-statistical; softer and more neutral than inequality, which carries a judgement"
+  - term: a disadvantaged background
+    tag: neutral
+    definition: family circumstances in which a child grows up with less money, security or opportunity than most
+    use_cases:
+      - Pupils from a disadvantaged background are twice as likely to leave school without qualifications.
+      - He is careful never to describe his own upbringing as disadvantaged.
+    collocations: come from / children from a disadvantaged background · socially disadvantaged
+    register: "Neutral-institutional; the accepted term in policy writing, where deprived sounds blunter"
+  - term: the poverty line
+    tag: formal
+    definition: the official income level below which a household is counted as poor
+    use_cases:
+      - A third of the children in the borough are growing up below the poverty line.
+      - Two wages now lift a family only just above the poverty line.
+    collocations: below / above / on the poverty line · lift sb out of poverty · the poverty threshold
+    register: Formal-statistical; always the poverty line, never a poverty line
+  - term: social mobility
+    tag: formal
+    definition: the ability of people to move into a higher or lower social and economic position than their parents held
+    use_cases:
+      - Social mobility has stalled for three decades, whichever measure you use.
+      - The scheme was sold as a ladder of social mobility and funded for eighteen months.
+    collocations: upward / downward social mobility · improve / stall social mobility · a social mobility index
+    register: "Formal-political; upward is assumed unless downward is stated"
+  - term: the attainment gap
+    tag: formal
+    definition: the persistent difference in exam results between poorer pupils and their better-off classmates
+    use_cases:
+      - The attainment gap opens before school starts and rarely closes afterwards.
+      - Two years of disruption widened the attainment gap in every subject measured.
+    collocations: close / narrow / widen the attainment gap · the disadvantage gap
+    register: Formal-educational; British policy English, where American English says the achievement gap
+  - term: deprivation
+    tag: formal
+    definition: the condition of not having the money, housing or services considered necessary for a decent life
+    use_cases:
+      - Three wards in the town sit in the most deprived tenth of the country.
+      - Deprivation is measured by more than income — housing, health and access all count.
+    collocations: material / urban / rural deprivation · levels of deprivation · a deprived area
+    register: "Formal-administrative; the adjective deprived is common, the noun almost entirely official"
+  - term: marginalised
+    tag: formal
+    definition: pushed to the edges of society, so that your needs and opinions are routinely ignored
+    use_cases:
+      - Communities described as marginalised are rarely asked what they would prefer.
+      - Older applicants say they have been quietly marginalised in every recruitment round.
+    collocations: a marginalised group / community · feel marginalised · marginalise sb
+    register: "Formal-sociological; British spelling -ised, American -ized. Some object to the passive framing"
+  - term: life chances
+    tag: formal
+    definition: the opportunities a person has to improve their health, education and income over a lifetime
+    use_cases:
+      - Where a child is born still shapes their life chances more than anything they do at school.
+      - Free childcare improves life chances more cheaply than almost any later intervention.
+    collocations: improve / shape / determine sb's life chances · unequal life chances
+    register: "Formal-sociological; always plural, and never used of one specific opportunity"
+  - term: entrenched
+    tag: formal
+    definition: so firmly established over a long period that it is extremely difficult to change
+    use_cases:
+      - The most entrenched differences survive in places where incomes are broadly similar.
+      - Attitudes to class in this country are entrenched rather than deliberate.
+    collocations: deeply entrenched · entrenched inequality / poverty / attitudes · become entrenched
+    register: Formal; nearly always negative — nobody speaks of entrenched generosity
+  - term: a head start
+    tag: neutral
+    definition: an advantage at the beginning that makes later success easier
+    use_cases:
+      - Tutoring and a quiet room to work in amount to a head start that compounds for years.
+      - She had a head start in the language and still had to work at the accent.
+    collocations: give sb / have / gain a head start · a head start in life / over sb
+    register: Neutral-idiomatic; the preposition is in for the field, over for the rival
+  - term: financial hardship
+    tag: formal
+    definition: serious difficulty caused by not having enough money for essentials
+    use_cases:
+      - The fund exists to help students facing sudden financial hardship.
+      - Financial hardship explains a great deal about the figures, but not everything.
+    collocations: face / experience / suffer financial hardship · a hardship fund · severe hardship
+    register: "Formal-institutional; hardship alone is stronger and slightly literary"
+  - term: a postcode lottery
+    tag: idiom
+    definition: a situation in which the quality of a public service depends on where you happen to live rather than on what you need
+    use_cases:
+      - Cancer waiting times are a postcode lottery, and everybody in the health service knows it.
+      - Councils reject the phrase postcode lottery and call it local decision-making.
+    collocations: a postcode lottery in care / funding · become a postcode lottery
+    register: "British-journalistic idiom; usually critical, and instantly recognisable in the UK press"
+  # ── Social policy & the state ──────────────────────────────────
+  - term: welfare
+    tag: formal
+    definition: money and practical help provided by the state to people who need it
+    use_cases:
+      - He has heard his neighbourhood described in the language of welfare all his adult life.
+      - Welfare spending rises in a recession whatever any government intends.
+    collocations: the welfare state · welfare spending / reform / benefits · be on welfare
+    register: "Formal; in Britain welfare means the whole system, in America it often means cash benefits alone and can be pejorative"
+  - term: a safety net
+    tag: idiom
+    definition: a system of state help that prevents people from falling into serious hardship
+    use_cases:
+      - Unemployment benefit is the safety net most people never expect to need.
+      - Two decades of reform left the safety net with rather large holes in it.
+    collocations: a social safety net · provide / strengthen / tear holes in the safety net
+    register: Idiomatic but standard in policy English; the metaphor is never explained
+  - term: means-tested
+    tag: formal
+    definition: given only to people whose income and savings are below a set level
+    use_cases:
+      - A means-tested grant excludes any household where a mother works more than sixteen hours.
+      - Critics argue that means-tested schemes stigmatise the people they are meant to reach.
+    collocations: a means-tested benefit / grant · means-testing · universal provision
+    register: "Formal-administrative; the direct opposite is universal, and the pair frames most welfare debate"
+  - term: redistribute wealth
+    tag: formal
+    definition: to move money from richer people to poorer ones, usually through taxation and benefits
+    use_cases:
+      - Some would sooner redistribute the same money narrowly than spread it thinly.
+      - Every tax system redistributes wealth; the argument is only ever about how much.
+    collocations: redistribute wealth / income · redistribution · a redistributive policy
+    register: Formal-economic; politically loaded in some countries and entirely technical in others
+  - term: subsidise
+    tag: formal
+    definition: to pay part of the cost of something so that people can buy or use it more cheaply
+    use_cases:
+      - The council subsidises bus travel for anyone still in full-time education.
+      - Heavily subsidised childcare turned out to pay for itself in tax receipts.
+    collocations: subsidise transport / housing / childcare · a subsidy · heavily subsidised
+    register: "Formal-economic; British -ise, American -ize; the noun is a subsidy"
+  - term: affordable housing
+    tag: formal
+    definition: homes priced low enough for people on ordinary or low incomes to rent or buy
+    use_cases:
+      - The development promised forty affordable homes and delivered eleven.
+      - Affordable housing has a legal definition that almost nobody outside planning understands.
+    collocations: build / provide / a shortage of affordable housing · social housing
+    register: "Formal-planning; social housing is state-owned, affordable housing merely price-capped"
+  - term: austerity
+    tag: formal
+    definition: a government policy of cutting public spending sharply in order to reduce debt
+    use_cases:
+      - Youth services lost sixty per cent of their funding over a decade of austerity.
+      - Whether austerity worked is still argued about by people who agree on the figures.
+    collocations: a decade / a programme of austerity · austerity measures / cuts · post-austerity
+    register: "Formal-political; in Britain it names a specific period after 2010, and the word carries that history"
+  - term: claim benefits
+    tag: neutral
+    definition: to apply for and receive money that the state provides to people in need
+    use_cases:
+      - The advice centre helped residents claim benefits they were already entitled to.
+      - He worked all his life and never claimed a penny, which he mentions often.
+    collocations: claim / receive benefits · a claimant · a benefit claim · be entitled to sth
+    register: "Neutral-administrative; the verb is claim, not take or get, in any official context"
+  - term: eligibility criteria
+    tag: formal
+    definition: the conditions somebody must meet in order to qualify for help or a place on a scheme
+    use_cases:
+      - The eligibility criteria exclude any household with savings above a low threshold.
+      - Half the families who qualify never apply, because the criteria are impossible to read.
+    collocations: meet / fail / tighten the eligibility criteria · be eligible for sth
+    register: "Formal-bureaucratic; almost always plural, and the adjective is eligible for"
+  - term: ring-fence funding
+    tag: formal
+    definition: to protect money for one specific purpose so that it cannot be spent on anything else
+    use_cases:
+      - The committee agreed that the scheme's funding be ring-fenced until 2029.
+      - Budgets that are not ring-fenced tend to disappear into the general fund within a year.
+    collocations: ring-fence a budget / funding / spending · ring-fenced money
+    register: British-administrative; standard in Whitehall and local government, rarer in American English
+  - term: tackle inequality
+    tag: neutral
+    definition: to make a serious and organised attempt to reduce unfairness between groups
+    use_cases:
+      - Every manifesto promises to tackle inequality and few define which kind.
+      - Tackling child poverty turns out to be cheaper than paying for its consequences.
+    collocations: tackle inequality / poverty / discrimination · address / combat inequality
+    register: "Neutral-political; tackle is the everyday verb, address the formal one, combat the strongest"
+  # ── Discrimination, inclusion & cohesion ───────────────────────
+  - term: discrimination
+    tag: formal
+    definition: unfair treatment of a person or group because of who they are rather than what they do
+    use_cases:
+      - Discrimination against older applicants is illegal and almost impossible to prove.
+      - The tribunal found no discrimination, and the department changed its process anyway.
+    collocations: discrimination against sb · racial / age / indirect discrimination · face discrimination
+    register: "Formal-legal; the preposition is against for the victim, on grounds of for the reason"
+  - term: cohesion
+    tag: formal
+    definition: the sense of connection that holds a community together and makes people trust one another
+    use_cases:
+      - Cohesion depends less on how people feel about one another than on whether they ever meet.
+      - The closure of the works removed the one place where the town's two halves mixed.
+    collocations: social / community cohesion · build / undermine / erode cohesion · a cohesive society
+    register: "Formal-sociological; social cohesion is the standard collocation, and the adjective is cohesive"
+  - term: integrate
+    tag: neutral
+    definition: to become, or help somebody become, a full part of a community rather than living separately from it
+    use_cases:
+      - The town's two halves once integrated at the steelworks and have not mixed since.
+      - Programmes that integrate newcomers work best when both sides have something to do together.
+    collocations: integrate into society · fully / poorly integrated · integration
+    register: "Neutral, though politically charged in migration debates; contrast assimilate, which implies giving up your own culture"
+  - term: level the playing field
+    tag: idiom
+    definition: to change the rules or conditions so that everybody competes on equal terms
+    use_cases:
+      - Free childcare does more to level the playing field than any speech about aspiration.
+      - Both sides claim to be levelling the playing field; they disagree about where the field is.
+    collocations: level the playing field · a level playing field · an uneven playing field
+    register: Idiomatic-neutral; equally common in business and social policy, and slightly overused in both
+  - term: inclusive
+    tag: neutral
+    definition: deliberately designed so that nobody is left out, whatever their background or ability
+    use_cases:
+      - The scheme was built to be as inclusive as possible and turns nobody away.
+      - Calling a policy inclusive is easy; the test is who is still missing from the room.
+    collocations: an inclusive society / curriculum / workplace · inclusion · socially inclusive
+    register: "Neutral-institutional; the noun is inclusion, and its opposite pair is exclusion"
+  - term: prejudice
+    tag: neutral
+    definition: an opinion about a group formed before you know anything about them, and held despite the evidence
+    use_cases:
+      - Prejudice about accents survives in interviews long after it disappears from the policy.
+      - She had expected hostility and met something quieter and harder to name.
+    collocations: racial / class prejudice · overcome / confront prejudice · be prejudiced against sb
+    register: "Neutral-formal; prejudice is the attitude, discrimination the act that follows from it"
+  - term: pigeonhole somebody
+    tag: informal
+    definition: to decide unfairly that somebody belongs to one narrow category and treat them accordingly
+    use_cases:
+      - She was pigeonholed as a local reporter and never offered anything else.
+      - Stop pigeonholing an entire postcode — some of us are angry, most of us are just busy.
+    collocations: pigeonhole sb as sth · be pigeonholed · resist being pigeonholed
+    register: "Informal-idiomatic; more personal and more resented than categorise"
+  - term: segregation
+    tag: formal
+    definition: the separation of groups of people so that they live, study or work apart from each other
+    use_cases:
+      - Nobody planned the segregation of the two estates; the bus timetable did it for them.
+      - Residential segregation shows up in school rolls a decade later.
+    collocations: racial / residential / social segregation · segregated schools · desegregation
+    register: "Formal-sociological; historically specific in the US and South Africa, so use it carefully elsewhere"
+  - term: unconscious bias
+    tag: formal
+    definition: a preference for or against a group that influences your decisions without your noticing
+    use_cases:
+      - Unconscious bias training is popular with employers and unimpressive in the trial data.
+      - Anonymous applications remove one kind of unconscious bias and leave several others.
+    collocations: unconscious / implicit bias · bias against sb · bias training
+    register: Formal-organisational; a term of art from psychology, now standard in HR English
+  - term: shut somebody out
+    tag: informal
+    definition: to prevent somebody from taking part in something they have a reasonable claim to join
+    use_cases:
+      - Unpaid internships shut out anybody who cannot live rent-free in the capital.
+      - She never argued that she had been shut out; she simply stopped applying.
+    collocations: shut sb out of the labour market / the profession · feel shut out
+    register: "Informal-idiomatic; more concrete and more angry than exclude"
+  - term: underrepresented
+    tag: formal
+    definition: present in much smaller numbers than the group's share of the population would suggest
+    use_cases:
+      - Women remain badly underrepresented on the council's planning committee.
+      - State-school applicants are underrepresented at every stage after the interview.
+    collocations: underrepresented in / on sth · an underrepresented group · underrepresentation
+    register: "Formal-statistical; usually written as one word, and the opposite is overrepresented"
+  # ── Activism, advocacy & change ────────────────────────────────
+  - term: grassroots
+    tag: neutral
+    definition: organised by ordinary people at a local level rather than by a government or a large organisation
+    use_cases:
+      - The campaign began as a grassroots effort run from somebody's kitchen.
+      - Grassroots schemes are cheap, stubborn and almost impossible to evaluate properly.
+    collocations: a grassroots campaign / movement / organisation · at grassroots level
+    register: "Neutral-journalistic; nearly always used before a noun, and the plural form never changes"
+  - term: advocate for
+    tag: formal
+    definition: to argue publicly and persistently in support of a cause or a group of people
+    use_cases:
+      - She taught for twenty-two years and now advocates for the scheme nationally.
+      - Advocating for tenants is slower work than anybody expects when they start.
+    collocations: advocate for a cause / for change · an advocate of sth · advocacy
+    register: "Formal; note the two forms — advocate for somebody, but an advocate of an idea"
+  - term: lobby
+    tag: neutral
+    definition: to try to persuade politicians or officials to make a decision that favours your cause
+    use_cases:
+      - Its founders lobbied the council with a persistence bordering on rudeness.
+      - Charities lobby quietly; industries lobby with lawyers.
+    collocations: lobby the government / MPs · a lobby group · lobbying · a lobbyist
+    register: "Neutral, though the noun lobbyist often carries suspicion; no preposition before the object"
+  - term: mobilise
+    tag: formal
+    definition: to get a large number of people organised and ready to act together
+    use_cases:
+      - The union mobilised four thousand members in under a fortnight.
+      - Anger mobilises people quickly and keeps them for about six weeks.
+    collocations: mobilise support / voters / volunteers · mobilisation
+    register: "Formal; borrowed from military English, and it still implies scale and speed"
+  - term: a pressure group
+    tag: neutral
+    definition: an organisation that campaigns to change a particular law or policy
+    use_cases:
+      - A small pressure group can shift a debate long before it wins a vote.
+      - The pressure group has no members, three staff and an unreasonable amount of influence.
+    collocations: a pressure / campaign / interest group · form a pressure group
+    register: "British-political; American English usually says an advocacy group or an interest group"
+  - term: speak out against
+    tag: neutral
+    definition: to state publicly that you think something is wrong, when staying silent would be easier
+    use_cases:
+      - Two governors spoke out against the closure and were not reappointed.
+      - Speaking out costs more in a small town, which is why it means more there.
+    collocations: speak out against injustice / a decision · speak up for sb
+    register: "Neutral; speak out against opposes something, speak up for defends somebody"
+  - term: raise awareness
+    tag: neutral
+    definition: to make more people notice and understand a problem
+    use_cases:
+      - The volunteers have raised more awareness of what actually helps than any consultation.
+      - Raising awareness is the easy half; the hard half arrives afterwards.
+    collocations: raise awareness of / about sth · an awareness campaign · public awareness
+    register: Neutral-institutional; so common in charity English that it can sound like filler
+  - term: a vested interest
+    tag: formal
+    definition: a personal or financial reason for wanting a situation to stay as it is
+    use_cases:
+      - Everyone in the room had a vested interest in the figures being wrong.
+      - Reform is slow because the people it would cost have the loudest voices.
+    collocations: have a vested interest in sth · vested interests · a conflict of interest
+    register: "Formal; the plural vested interests can mean the powerful groups themselves"
+  - term: hold somebody to account
+    tag: formal
+    definition: to force a person or organisation to explain and take responsibility for what they have done
+    use_cases:
+      - Nobody has been held to account for a decision that cost the borough four hundred homes.
+      - Journalism that holds power to account is expensive and nobody wants to pay for it.
+    collocations: hold sb to account · hold sb accountable for sth · accountability
+    register: "Formal-political; British English prefers to account, American English accountable"
+  - term: gain traction
+    tag: neutral
+    definition: to start to attract real support and make visible progress
+    use_cases:
+      - The petition gained traction only after a national paper picked it up.
+      - Ideas gain traction in this field roughly a decade after the evidence does.
+    collocations: gain / lose / gather traction · an idea gains traction
+    register: Neutral-journalistic; a metaphor from tyres, now standard in campaign and business English
+  - term: push for reform
+    tag: neutral
+    definition: to press hard and repeatedly for an important change in a system or law
+    use_cases:
+      - Tenants' groups have pushed for reform of the licensing rules since 2018.
+      - He pushed for reform from inside the department for eleven years.
+    collocations: push for reform / change · press for sth · a push for reform
+    register: "Neutral; push for is more informal and more persistent-sounding than call for"

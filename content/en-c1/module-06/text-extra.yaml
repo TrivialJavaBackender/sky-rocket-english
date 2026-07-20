@@ -1,0 +1,31 @@
+kind: extra
+kicker: LETTERS TO THE EDITOR
+title: Three Readers Reply
+meta: ≈ 4 min · three positions on one town — dotted words carry glosses
+word_count: 401
+body:
+  - - t: "Your report on Ashfield described, with unusual patience, something I watched for twenty-eight years from a reception classroom. By the time a child from a disadvantaged background arrived at five, the attainment gap was already wide enough to predict where they would be at sixteen. We were then asked to close it on a budget that shrank every year. It is essential that early-years funding be ring-fenced before anything else in the education settlement, and it is high time somebody said so in an election year rather than after one. If only we had spent on three-year-olds a tenth of what we later spend on their exam results. I know of nothing else that improves "
+    - g: life_chances
+    - t: " so cheaply, or so quietly. — Margaret Ellison, retired head teacher, Sheffield"
+  - - t: "I read the same article and recognised almost none of my own town in it. I have run a joinery business here for twenty-two years and I employ nine people, seven of whom grew up on estates exactly like the one you describe. Nobody handed them anything. My worry with pieces of this kind is that they discuss a whole community as if it were waiting to be rescued, which is not how anybody I know sees themselves. Of course "
+    - g: safety_net
+    - t: " matters, and I have never argued that people should not claim benefits they are owed. But I would rather my taxes went on a decent bus service and on affordable housing than on another conference about tackling inequality. Please stop writing about us in the passive voice. — Gordon Pike, Doncaster"
+  - - t: "I am twenty-two and I grew up on an estate three miles from the one in your piece, so let me say the obvious. Everybody in that article was talking about us and almost nobody was talking to us. I wish journalists would ring the youth club before they ring the councillor. The volunteers who run ours have raised more awareness of what actually helps than any consultation I was invited to, and without a budget — that is what grassroots work looks like when nobody is watching. We are perfectly capable of speaking out and of holding the council to account. So please stop "
+    - g: pigeonhole
+    - t: " an entire postcode as marginalised. Some of us are angry, most of us are simply busy. Treat us as if we were people with opinions, because we are. — Aisha Rahman, Leeds"
+glosses:
+  - key: life_chances
+    term: life chances
+    pos_label: noun phrase
+    definition: the opportunities a person has to improve their health, education and income over a lifetime
+    example: Where a child is born still shapes their life chances more than anything they do at school.
+  - key: safety_net
+    term: a safety net
+    pos_label: noun phrase
+    definition: a system of state help that prevents people from falling into serious hardship
+    example: Unemployment benefit is the safety net most people never expect to need.
+  - key: pigeonhole
+    term: pigeonholing
+    pos_label: verb
+    definition: deciding unfairly that somebody belongs to one narrow category and treating them accordingly
+    example: She was pigeonholed as a local reporter and never offered anything else.

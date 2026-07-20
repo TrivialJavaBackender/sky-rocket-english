@@ -1,0 +1,367 @@
+# Module 05 · Environment & Sustainability — 45 lexemes in four domains:
+# climate & emissions (12) · land, water & resources (11) · damage, cause & consequence (11) · policy, action & sustainable living (11)
+entries:
+  # ── Climate & emissions ────────────────────────────────────────
+  - term: carbon footprint
+    tag: neutral
+    definition: the total amount of greenhouse gas that a person, product or organisation is responsible for releasing
+    use_cases:
+      - One transatlantic flight can outweigh a whole year of careful recycling in your carbon footprint.
+      - The firm now measures the carbon footprint of every product down to the packaging.
+    collocations: reduce / shrink / measure your carbon footprint · a low-carbon footprint
+    register: "Neutral-journalistic; the technical measure behind it is CO2 equivalent"
+  - term: curb emissions
+    tag: formal
+    definition: to limit the amount of harmful gases released, usually by regulation rather than by choice
+    use_cases:
+      - The agreement commits forty countries to curbing emissions from shipping by 2035.
+      - Curbing emissions now is cheaper than adapting later to what they cause.
+    collocations: curb / cut / slash emissions · curb demand / spending
+    register: "Formal-journalistic; curb is stronger than reduce — it implies a deliberate brake"
+  - term: greenhouse gases
+    tag: neutral
+    definition: the gases that trap heat in the atmosphere and warm the planet, chiefly carbon dioxide and methane
+    use_cases:
+      - Agriculture releases greenhouse gases that no power station could account for.
+      - Methane leaves the atmosphere faster than carbon dioxide but traps far more heat while it is there.
+    collocations: greenhouse gas emissions · trap heat · the greenhouse effect
+    register: Neutral-technical; almost always plural, and often shortened to greenhouse gas before a noun
+  - term: offset emissions
+    tag: neutral
+    definition: to compensate for the emissions you produce by paying for a reduction somewhere else
+    use_cases:
+      - The airline offsets each flight by funding tree planting that takes forty years to work.
+      - Offsetting is only honest if the reduction would not have happened anyway.
+    collocations: offset your emissions / your carbon · a carbon offset · an offsetting scheme
+    register: Neutral-commercial; frequently used sceptically in journalism
+  - term: net zero
+    tag: formal
+    definition: the point at which the greenhouse gas a country or company releases is balanced by the amount it removes
+    use_cases:
+      - Sixty per cent of the world's economy is now covered by some kind of net zero pledge.
+      - Reaching net zero is arithmetic, not atmosphere — nothing stops being emitted, it is merely cancelled.
+    collocations: reach / commit to net zero · a net-zero target / pledge
+    register: "Policy-journalistic; hyphenated before a noun — a net-zero target"
+  - term: a tipping point
+    tag: neutral
+    definition: the moment at which a small further change pushes a system irreversibly into a new state
+    use_cases:
+      - Scientists argue about where the tipping point lies, not about whether there is one.
+      - The reef passed its tipping point quietly, in a summer when nobody was measuring.
+    collocations: reach / pass / cross a tipping point · a climate tipping point
+    register: "Neutral-scientific, now standard in general journalism; the article is obligatory — a tipping point"
+  - term: decarbonise
+    tag: formal
+    definition: to remove fossil fuels from an industry or an economy so that it runs without releasing carbon
+    use_cases:
+      - Decarbonising the electricity grid turned out to be the easy half of the problem.
+      - Cement and steel are the two industries nobody yet knows how to decarbonise cheaply.
+    collocations: decarbonise the grid / heating / heavy industry · decarbonisation
+    register: "Formal-technical; British -ise, American -ize"
+  - term: fossil fuels
+    tag: neutral
+    definition: coal, oil and gas, formed underground over millions of years and burnt for energy
+    use_cases:
+      - Governments still spend more subsidising fossil fuels than they spend replacing them.
+      - The plant was built to burn fossil fuels and cannot easily be converted to anything else.
+    collocations: burn / subsidise / move away from fossil fuels · a fossil-fuel economy
+    register: Neutral-technical; used in the plural, and hyphenated before a noun
+  - term: a feedback loop
+    tag: academic
+    definition: a process in which a change produces an effect that then increases the original change
+    use_cases:
+      - Melting ice exposes dark water, the water absorbs more heat, and the melting accelerates — a textbook feedback loop.
+      - Debt and low investment trap poor districts in the same feedback loop as degraded land.
+    collocations: a positive / vicious feedback loop · trigger / break a feedback loop
+    register: "Academic-scientific; note that a positive feedback loop means self-reinforcing, not beneficial"
+  - term: extreme weather events
+    tag: formal
+    definition: unusually severe storms, floods, heatwaves or droughts, considered together as a class
+    use_cases:
+      - Insurers reprice whole regions after two or three extreme weather events in a decade.
+      - Extreme weather events do not create the shortage so much as expose one that was already there.
+    collocations: the frequency / severity of extreme weather events · weather extremes
+    register: Formal-journalistic; the plural is standard in reporting and policy
+  - term: rising sea levels
+    tag: neutral
+    definition: the gradual increase in the height of the oceans as ice melts and warm water expands
+    use_cases:
+      - Rising sea levels threaten the drinking water long before they threaten the houses.
+      - Three metres of sea-level rise is a different planet, not a worse version of this one.
+    collocations: rising sea levels · sea-level rise · coastal flooding / erosion
+    register: "Neutral; as a compound noun the phrase inverts — sea-level rise is accelerating"
+  - term: climate resilience
+    tag: formal
+    definition: the ability of a place, a crop or a community to survive climate shocks without lasting damage
+    use_cases:
+      - Building climate resilience means having something to fall back on in a bad year.
+      - A district with one crop and one well has no climate resilience at all.
+    collocations: build / invest in climate resilience · a resilient grid / variety
+    register: Formal-policy; the practical goal of adaptation, as distinct from mitigation
+  # ── Land, water & resources ────────────────────────────────────
+  - term: resource depletion
+    tag: formal
+    definition: the using up of a natural resource faster than it can be replaced
+    use_cases:
+      - Resource depletion rarely announces itself; it shows up as a well that has to be drilled deeper.
+      - The report treats the depletion of groundwater as the region's single most urgent problem.
+    collocations: resource depletion · deplete stocks / reserves / an aquifer · severely depleted
+    register: "Formal-technical; the verb is often passive — stocks are badly depleted"
+  - term: biodiversity loss
+    tag: formal
+    definition: the disappearance of species and of variety within an ecosystem
+    use_cases:
+      - Biodiversity loss is harder to reverse than pollution, because nothing can be switched back on.
+      - The hedgerows went in one afternoon and the biodiversity loss took thirty years to measure.
+    collocations: halt / reverse / accelerate biodiversity loss · a biodiversity hotspot
+    register: Formal-scientific; now standard in policy documents and journalism alike
+  - term: habitat destruction
+    tag: formal
+    definition: the damaging or removal of the natural places in which species live
+    use_cases:
+      - Habitat destruction, not hunting, is what empties a landscape of birds.
+      - Roads cause less habitat destruction than farming and far more fragmentation.
+    collocations: habitat destruction / loss / fragmentation · destroy / restore a habitat
+    register: Formal-scientific; fragmentation is the milder relative — cut up rather than removed
+  - term: deforestation
+    tag: formal
+    definition: the clearing of forest, usually to make room for farmland, timber or roads
+    use_cases:
+      - Large-scale deforestation in the uplands changed how the whole catchment holds rain.
+      - Deforestation slowed for two years and then resumed the moment beef prices recovered.
+    collocations: large-scale / illegal deforestation · the rate of deforestation · reforestation
+    register: Formal; the reverse process is reforestation, the planting of forest afforestation
+  - term: soil degradation
+    tag: formal
+    definition: the slow loss of a soil's fertility and structure through overuse, erosion or compaction
+    use_cases:
+      - Soil degradation is slow enough that no single season ever looks like a crisis.
+      - A third of the world's farmland shows measurable degradation, and almost none of it is visible from a road.
+    collocations: soil degradation / erosion / compaction · degraded land · restore the soil
+    register: Formal-agricultural; the everyday symptom is simply thinner crops
+  - term: water scarcity
+    tag: formal
+    definition: a situation in which there is not enough clean fresh water to meet a region's needs
+    use_cases:
+      - Acute water scarcity moves people long before it kills crops.
+      - The city treats water scarcity as an engineering problem and the farmers treat it as an inheritance problem.
+    collocations: acute / chronic water scarcity · water stress / shortages
+    register: "Formal-policy; water stress is the milder official term for the same trend"
+  - term: arable land
+    tag: formal
+    definition: land that is suitable for ploughing and growing crops
+    use_cases:
+      - Draining the wet corners gained the estate four per cent more arable land and cost it every wading bird.
+      - Arable land is being lost to building at roughly the rate it is being gained from forest.
+    collocations: arable land / farming / crops · fertile / marginal land
+    register: "Formal-agricultural; contrast with pasture, which is grazed rather than ploughed"
+  - term: an aquifer
+    tag: academic
+    definition: a layer of rock or gravel below ground that holds water which can be pumped to the surface
+    use_cases:
+      - The aquifer under the plain was laid down while the last ice sheets were retreating.
+      - Once an aquifer has been drained and the clay has compacted, it will not refill.
+    collocations: pump / drain / recharge / deplete an aquifer · groundwater · the water table
+    register: Academic-hydrological; recharge is the technical word for refilling by rainfall
+  - term: crop yields
+    tag: formal
+    definition: the quantity of a crop harvested from a given area of land
+    use_cases:
+      - Crop yields fell by about one per cent a year, which is too little for anyone to argue about.
+      - Fertiliser lifted yields for a generation and then stopped lifting them at all.
+    collocations: crop yields rise / fall / collapse · boost / depress yields · yield per hectare
+    register: Technical-agricultural; usually plural in general writing
+  - term: a monoculture
+    tag: formal
+    definition: the practice of growing a single crop over a large area, season after season
+    use_cases:
+      - A monoculture is a magnificent machine as long as nothing goes wrong with it.
+      - Breaking the monoculture cost the farm nine per cent of its income and saved its soil.
+    collocations: a monoculture · monoculture farming · crop rotation / diversity
+    register: "Formal-agricultural, usually critical; the opposite practice is crop rotation"
+  - term: overfishing
+    tag: neutral
+    definition: catching fish faster than the population can reproduce
+    use_cases:
+      - Overfishing is invisible until the boats come back empty, which is exactly the problem.
+      - Two decades of overfishing were undone, remarkably, by six years of enforced quotas.
+    collocations: overfishing · fish stocks collapse / recover · a fishing quota
+    register: Neutral-technical; the same over- prefix produces overgrazing and over-extraction
+  # ── Damage, cause & consequence ────────────────────────────────
+  - term: irreversible damage
+    tag: formal
+    definition: harm that cannot be undone, whatever is done afterwards
+    use_cases:
+      - Once the clay compacts, the loss is irreversible damage on any human timescale.
+      - The court found that irreversible damage had been done to the estuary and fined the company anyway.
+    collocations: do / cause irreversible damage · irreversible / reversible change
+    register: "Formal; note the verb — you do damage, you never make damage"
+  - term: contaminate
+    tag: formal
+    definition: to make water, soil or food unsafe by adding a harmful substance to it
+    use_cases:
+      - Nitrates from the fields have contaminated the shallow groundwater two villages drink from.
+      - The site remains too contaminated to build on and too expensive to clean.
+    collocations: contaminate groundwater / a food chain / a site · heavily contaminated · contamination
+    register: "Formal-technical; pollute is the everyday word, contaminate the one used when something has been made unsafe"
+  - term: a knock-on effect
+    tag: neutral
+    definition: an indirect result that appears when one change sets off another
+    use_cases:
+      - Removing the wetland had knock-on effects on flooding forty kilometres downstream.
+      - The quota had an immediate knock-on effect on the price of everything else in the market.
+    collocations: a knock-on effect on sth · have knock-on effects
+    register: "British-neutral; American English prefers a ripple effect"
+  - term: agricultural run-off
+    tag: formal
+    definition: rain water that washes fertiliser and chemicals off farmland into rivers and groundwater
+    use_cases:
+      - Agricultural run-off, not sewage, is what turns the river green every June.
+      - Half the nitrogen applied to the field leaves it again as run-off within a fortnight.
+    collocations: agricultural / urban run-off · run-off from the fields · nitrate levels
+    register: "Technical-environmental; hyphenated as a noun, two words as a verb — the water runs off"
+  - term: exacerbate
+    tag: formal
+    definition: to make a situation that is already bad noticeably worse
+    use_cases:
+      - Each dry year exacerbates the next, because the compacted ground stores less of the rain that does fall.
+      - The subsidy was designed to relieve the shortage and has quietly exacerbated it.
+    collocations: exacerbate a problem / a shortage / tensions · be exacerbated by sth
+    register: "Formal-written; everyday alternative: make worse. Never used of good things"
+  - term: take a toll on
+    tag: idiom
+    definition: to cause gradual, accumulating damage to something
+    use_cases:
+      - Four dry springs have taken a toll on more than the wheat.
+      - Night shifts take a heavy toll on the body, whatever the pay makes up for.
+    collocations: take a toll on health / the land · take a heavy toll · the toll of sth
+    register: Neutral-idiomatic; the damage is cumulative rather than sudden
+  - term: an unintended consequence
+    tag: formal
+    definition: a result of a policy or an action that nobody planned or foresaw
+    use_cases:
+      - The collapse of the aquifer was nobody's plan; it was the unintended consequence of a hundred sensible decisions.
+      - Cheap loans for wells had the unintended consequence of making water look free.
+    collocations: an unintended consequence of sth · the law of unintended consequences
+    register: Formal; frequently ironic in journalism
+  - term: at the expense of
+    tag: formal
+    definition: causing loss or harm to something else as the price of a gain
+    use_cases:
+      - The valley grew rich at the expense of everyone who would farm it after them.
+      - Speed was achieved at the expense of accuracy, as it usually is.
+    collocations: at the expense of the environment / of quality / of future generations
+    register: Formal-neutral; the phrase always signals a trade-off, never a simple cost
+  - term: leach into
+    tag: academic
+    definition: to pass slowly out of soil or waste and into the water around it
+    use_cases:
+      - Whatever the rivers did not carry away leached into the shallow groundwater instead.
+      - Metals from the old tip are still leaching into the stream thirty years after it closed.
+    collocations: leach into groundwater / the water table · leach out of sth · leaching
+    register: Academic-environmental; the movement is slow and, crucially, invisible
+  - term: ecosystem collapse
+    tag: formal
+    definition: the point at which an ecosystem loses so many species that it stops functioning
+    use_cases:
+      - Ecosystem collapse is not a dramatic event; it is the moment nothing replaces what has gone.
+      - The lake is two bad summers away from ecosystem collapse, according to the survey.
+    collocations: ecosystem collapse · an ecosystem collapses / recovers · a food web
+    register: Formal-scientific; stronger and more sudden than degradation
+  - term: hazardous waste
+    tag: formal
+    definition: waste that is dangerous to health or the environment and must be handled and stored separately
+    use_cases:
+      - The site must be cleared of hazardous waste before anything can be built on it.
+      - Exporting hazardous waste to countries with weaker rules is legal, cheap and indefensible.
+    collocations: hazardous / toxic waste · waste disposal · dispose of waste safely
+    register: Formal-legal; hazardous is the word used in regulations, toxic the word used in headlines
+  # ── Policy, action & sustainable living ────────────────────────
+  - term: mitigate
+    tag: formal
+    definition: to make the effects of something harmful less severe
+    use_cases:
+      - Nothing on this plain can be mitigated at the scale of a single farm.
+      - The bank is required to mitigate the risk, not to eliminate it.
+    collocations: mitigate the effects / the impact / a risk · mitigation measures
+    register: "Formal; in climate policy mitigation means cutting emissions, while adaptation means living with the consequences"
+  - term: phase out
+    tag: neutral
+    definition: to stop using something gradually, over a planned period, rather than all at once
+    use_cases:
+      - The government has promised to phase out coal-fired power by 2035.
+      - They phased the older boilers out one district at a time, which nobody noticed and everybody paid for.
+    collocations: phase out coal / subsidies / a product · phase sth in · a phase-out
+    register: "Neutral-policy; separable — phase it out, never phase out it"
+  - term: renewable
+    tag: neutral
+    definition: describing energy from a source that does not run out, such as wind, sunlight or water
+    use_cases:
+      - Two of her neighbours sold their water licences and now generate renewable power instead of wheat.
+      - Renewables became the cheapest electricity in most of the world without anybody quite announcing it.
+    collocations: renewable energy / sources · renewables · non-renewable
+    register: "Neutral-technical; as a plural noun, renewables means the sources or the industry itself"
+  - term: environmentally sound
+    tag: formal
+    definition: not causing damage to the environment when judged honestly rather than in advertising
+    use_cases:
+      - We have watched environmentally sound ideas die of virtue because nobody costed them.
+      - The design is environmentally sound and about eleven per cent more expensive.
+    collocations: environmentally sound / friendly / damaging · sound practice / reasoning
+    register: "Formal; sound here means well-founded, the same sense as in sound reasoning"
+  - term: carbon pricing
+    tag: formal
+    definition: a system that makes companies pay for every tonne of carbon they release
+    use_cases:
+      - Carbon pricing works when a tonne is a tonne; offsetting works when a tonne is a story.
+      - Carbon pricing changes the arithmetic of a season rather than the law of a decade.
+    collocations: carbon pricing · a carbon tax / market · put a price on carbon
+    register: Formal-economic; the two instruments are a carbon tax and an emissions trading scheme
+  - term: a subsidy
+    tag: formal
+    definition: money paid by a government to keep a price low or an industry alive
+    use_cases:
+      - A subsidy paid by the hectare turned a patchwork of small fields into one crop to the horizon.
+      - Fuel subsidies are the easiest thing in politics to introduce and the hardest to withdraw.
+    collocations: a fuel / farm subsidy · subsidise sth · scrap / withdraw subsidies
+    register: "Formal-economic; the verb is subsidise and the adjective subsidised"
+  - term: scale up
+    tag: neutral
+    definition: to increase the size of something that has already worked on a small scale
+    use_cases:
+      - We intend to scale up, and we know what that usually does to a promise.
+      - The pilot scheme worked on nine farms and failed the moment it was scaled up to nine hundred.
+    collocations: scale up production / a pilot scheme · scale sth back · scalable
+    register: Neutral-business; the useful opposite is scale back, meaning reduce deliberately
+  - term: a circular economy
+    tag: formal
+    definition: an economic model in which products are repaired, reused and recycled instead of thrown away
+    use_cases:
+      - A circular economy designs out waste instead of finding somewhere to put it.
+      - Circular economy rules would make the manufacturer, not the buyer, responsible for the last stage.
+    collocations: a circular / linear economy · design out waste · a closed loop
+    register: "Formal-policy; the thing it replaces is the linear economy — take, make, throw away"
+  - term: greenwashing
+    tag: informal
+    definition: making a company or a product look environmentally responsible without changing very much
+    use_cases:
+      - The campaign was pure greenwashing — a new logo, a recycled label and the same factory.
+      - Most offsetting, the manifesto argues, is greenwashing with a certificate attached.
+    collocations: greenwashing · accuse a firm of greenwashing · a greenwashed claim
+    register: Informal-journalistic; always critical, and now used in advertising law
+  - term: cut back on
+    tag: informal
+    definition: to reduce the amount of something you use or do
+    use_cases:
+      - Growers are being asked to cut back on the one input that makes the arithmetic work.
+      - She cut back on flying, kept the car, and calculated afterwards that she had it backwards.
+    collocations: cut back on meat / flights / water use · cutbacks
+    register: "Informal-neutral; contrast with cut out, which means stop completely"
+  - term: environmental stewardship
+    tag: formal
+    definition: the responsible care of land and resources on behalf of the people who will come after you
+    use_cases:
+      - Environmental stewardship, in a system built like that, means asking one farmer to bear a cost everybody shares.
+      - The scheme pays for stewardship rather than for output, which took forty years to think of.
+    collocations: environmental stewardship · a steward of the land · a stewardship scheme
+    register: Formal-institutional; carries a moral rather than a legal obligation

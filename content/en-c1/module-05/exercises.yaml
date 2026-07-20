@@ -1,0 +1,873 @@
+# Module 05 · Environment & Sustainability — exercises
+# core: 10 grammar_drill · 8 error_correction · 8 key_word_transformation ·
+#       8 open_cloze · 6 reading_comprehension · 8 mc_cloze · 10 collocation_match · 8 word_formation  = 66
+# review_pool: 5 gd · 4 ec · 4 kwt · 4 oc · 1 rc · 4 mc · 4 cm · 4 wf  = 30
+# Answer indices are deliberately spread across positions — no runs of 3+.
+# core grammar_drill answers:        2 0 3 1 0 2 1 3 0 2
+# core mc_cloze answers:             1 3 0 2 3 1 2 0
+# core reading_comprehension:        2 0 1 3 0 2
+# core error_correction wrong:       3 2 7 5 0 1 9 11
+core:
+  # ── grammar_drill × 10 · group grammar ─────────────────────────
+  - type: grammar_drill
+    group: grammar
+    grammar_point: Mixed conditionals in both directions
+    content:
+      pre: "If the county had metered its wells in the 1980s, the water table "
+      post: " within reach of an ordinary pump today."
+      prompt: BE
+      options: [would have been, will be, would still be, had been]
+      answer: 2
+    explanation: "A past condition with a present result is the past-to-present mixed conditional: if + past perfect in one half, would + infinitive in the other. Would have been would confine the whole thing to the past, but today anchors the result firmly in the present."
+  - type: grammar_drill
+    group: grammar
+    grammar_point: Mixed conditionals in both directions
+    content:
+      pre: "If she "
+      post: " so attached to the land, she would have sold it to the developer in 2018."
+      prompt: BE
+      options: [weren't, hadn't been, isn't, wasn't being]
+      answer: 0
+    explanation: "Her attachment is a permanent present fact, so the if-clause takes the past simple and the result takes would have + past participle. Hadn't been would place the attachment in the past too, which the sentence does not mean — she is still attached today."
+  - type: grammar_drill
+    group: grammar
+    grammar_point: Inversion in conditionals (Had…, Were it not for…, Should…)
+    content:
+      pre: ""
+      post: " in 2005, the correction would have cost a fraction of today's price."
+      prompt: ACT
+      options: [If we would have acted, Hadn't we acted, We had acted, Had we acted]
+      answer: 3
+    explanation: "Inversion replaces if + past perfect with Had + subject + past participle. Hadn't we acted is impossible because a contracted negative turns the clause into a question — an inverted conditional writes the negative out in full as Had we not acted."
+  - type: grammar_drill
+    group: grammar
+    grammar_point: Inversion in conditionals (Had…, Were it not for…, Should…)
+    content:
+      pre: ""
+      post: " the retirement scheme, half the growers would already have gone."
+      prompt: BE
+      options: [Were not it for, Were it not for, Was it not for, Were it not]
+      answer: 1
+    explanation: "The fixed formula is Were it not for + noun phrase, the inverted equivalent of if it were not for. Was it not for is wrong because this structure keeps were for every subject, and Were not it for scrambles the word order of the fixed phrase."
+  - type: grammar_drill
+    group: grammar
+    grammar_point: Inversion in conditionals (Had…, Were it not for…, Should…)
+    content:
+      pre: ""
+      post: " for a third consecutive spring, the district will ration what is left."
+      prompt: FAIL
+      options: [Should the rains fail, Should the rains to fail, If the rains will fail, Would the rains fail]
+      answer: 0
+    explanation: "Should + subject + bare infinitive replaces if in a future condition and adds a sense of if by any chance. If the rains will fail is the classic error — the condition never takes will, however clearly future it is."
+  - type: grammar_drill
+    group: grammar
+    grammar_point: Alternatives to if (provided, as long as, on condition that, unless, supposing)
+    content:
+      pre: "Every model the university has run ends in the same place unless demand "
+      post: " by about a third."
+      prompt: FALL
+      options: [will fall, would fall, falls, fell]
+      answer: 2
+    explanation: "Unless behaves exactly like if for tense: a present form carries a future meaning, so falls is required. Will fall is impossible inside the condition, and would fall would make the whole sentence hypothetical rather than a real prediction."
+  - type: grammar_drill
+    group: grammar
+    grammar_point: Alternatives to if (provided, as long as, on condition that, unless, supposing)
+    content:
+      pre: "The nitrates are treatable provided the plant "
+      post: " funded beyond the end of the decade."
+      prompt: REMAIN
+      options: [will remain, remains, would remain, remained]
+      answer: 1
+    explanation: "Provided introduces a requirement and takes a present form for future time, giving remains. Will remain breaks the no-will-in-the-condition rule that governs if, unless, provided, as long as and in case alike."
+  - type: grammar_drill
+    group: grammar
+    grammar_point: in case vs if
+    content:
+      pre: "She has planted a drought-tolerant variety in case the allocation "
+      post: " in the autumn."
+      prompt: CUT
+      options: [will be cut, would be cut, cuts, is cut]
+      answer: 3
+    explanation: "In case takes a present form, and the allocation receives the action, so the passive is cut is needed. Will be cut is wrong for the same reason it is wrong after if, and cuts would make the allocation the thing doing the cutting."
+  - type: grammar_drill
+    group: grammar
+    grammar_point: but for, otherwise and or else
+    content:
+      pre: "But for the aquifer, this plain "
+      post: " farmed at all."
+      prompt: BE
+      options: [would never have been, will never be, would never be, had never been]
+      answer: 0
+    explanation: "But for + noun phrase compresses an unreal past condition, so the result clause takes would have + past participle. Would never be would describe an unreal present, but the farming of the plain began seventy years ago and is over."
+  - type: grammar_drill
+    group: grammar
+    grammar_point: Alternatives to if (provided, as long as, on condition that, unless, supposing)
+    content:
+      pre: "The developer will buy the licence on condition that the grid connection "
+      post: " before the tariff changes."
+      prompt: APPROVE
+      options: [will be approved, would be approved, is approved, approves]
+      answer: 2
+    explanation: "On condition that states an explicit bargain and, like every conditional connector, takes a present form: is approved. Approves is wrong because the connection is the thing approved, not the body doing the approving."
+  # ── error_correction × 8 · group grammar ───────────────────────
+  - type: error_correction
+    group: grammar
+    grammar_point: Alternatives to if (provided, as long as, on condition that, unless, supposing)
+    content: {words: [If, the, rains, will, fail, "again,", the, district, will, ration, "water."], wrong: 3, correction: "will fail → fail"}
+    explanation: "English marks the future once, in the result clause, and never inside the condition. The if-clause takes a present form however clearly future the meaning is — if the rains fail again, the district will ration water."
+  - type: error_correction
+    group: grammar
+    grammar_point: Mixed conditionals in both directions
+    content: {words: [If, I, would, have, known, about, the, "drawdown,", I, would, never, have, bought, the, "farm."], wrong: 2, correction: "would have known → had known"}
+    explanation: "The unreal past belongs in the if-clause as a past perfect, and would belongs exclusively to the result. Had I known is the inverted version of the same correction, and both are preferable to the doubled would."
+  - type: error_correction
+    group: grammar
+    grammar_point: Alternatives to if (provided, as long as, on condition that, unless, supposing)
+    content: {words: [The, aquifer, will, not, "recover", unless, we, "don't", cut, demand, by, a, "third."], wrong: 7, correction: "don't cut → cut"}
+    explanation: "Unless already means if not, so the verb following it stays positive. The doubled negative here says the opposite of what is meant — that the aquifer recovers only when demand is left alone."
+  - type: error_correction
+    group: grammar
+    grammar_point: but for, otherwise and or else
+    content: {words: [But, for, the, retirement, scheme, "existed,", half, the, growers, would, have, "gone."], wrong: 5, correction: "existed → delete it (but for takes only a noun phrase)"}
+    explanation: "But for is a preposition and can only be followed by a noun phrase, never by a verb. If a clause is needed, the structure has to change to Were it not for the retirement scheme or If it had not been for the retirement scheme."
+  - type: error_correction
+    group: grammar
+    grammar_point: in case vs if
+    content: {words: [In, case, it, rains, "tomorrow,", we, will, cancel, the, "survey."], wrong: 0, correction: "In case → If"}
+    explanation: "In case introduces a precaution taken in advance, so this sentence claims the survey is being cancelled now as a preparation for possible rain. The condition under which something will happen is expressed with if."
+  - type: error_correction
+    group: grammar
+    grammar_point: Inversion in conditionals (Had…, Were it not for…, Should…)
+    content: {words: [Had, not, we, acted, in, "2005,", the, correction, would, have, been, "cheap."], wrong: 1, correction: "Had not we → Had we not"}
+    explanation: "In an inverted conditional the auxiliary comes first, then the subject, and only then not. Hadn't we acted is not an option either, because a contracted negative in front of the subject reads as a question."
+  - type: error_correction
+    group: grammar
+    grammar_point: Mixed conditionals in both directions
+    content: {words: [If, we, "hadn't", drained, the, "wetland,", the, river, "wouldn't", have, been, so, low, "today."], wrong: 9, correction: "wouldn't have been → wouldn't be"}
+    explanation: "Today places the result in the present, so the main clause needs would + infinitive while the if-clause keeps the past perfect. As written, both halves sit in the past and the sentence stops describing the river as it is now."
+  - type: error_correction
+    group: grammar
+    grammar_point: Alternatives to if (provided, as long as, on condition that, unless, supposing)
+    content: {words: [The, plant, can, treat, the, nitrates, as, long, as, the, funding, will, "continue."], wrong: 11, correction: "will continue → continues"}
+    explanation: "As long as belongs to the same family as if and provided, so the condition takes a present form for future time. The future is already signalled by can treat in the main clause and does not need marking twice."
+  # ── key_word_transformation × 8 · group grammar ────────────────
+  # The last two revise earlier modules (M2 causative, M4 gerund) and stay untagged.
+  - type: key_word_transformation
+    group: grammar
+    grammar_point: Mixed conditionals in both directions
+    content:
+      s1: We did not meter the wells in the 1980s, so the water table is out of reach now.
+      key: HAD
+      pre: "If we "
+      post: " the wells in the 1980s, the water table would still be within reach now."
+      answers: [had metered]
+      answer_shown: had metered
+      hint: 2–4 words, including the key word
+    explanation: "A cause in the past with a consequence in the present is the past-to-present mixed conditional. The if-clause takes the past perfect while the result clause stays in would + infinitive, exactly as the word now demands."
+  - type: key_word_transformation
+    group: grammar
+    grammar_point: Mixed conditionals in both directions
+    content:
+      s1: She is attached to the land, so she did not sell it to the developer in 2018.
+      key: WEREN'T
+      pre: "If she "
+      post: " to the land, she would have sold it to the developer in 2018."
+      answers: [weren't so attached, weren't attached]
+      answer_shown: weren't so attached
+      hint: 3–5 words, including the key word
+    explanation: "Here the direction reverses: a permanent present fact explains an action that was or was not taken in the past. The if-clause therefore takes the past simple and the result clause takes would have sold."
+  - type: key_word_transformation
+    group: grammar
+    grammar_point: Inversion in conditionals (Had…, Were it not for…, Should…)
+    content:
+      s1: If the rains fail again next spring, the district will ration water.
+      key: SHOULD
+      pre: ""
+      post: " again next spring, the district will ration water."
+      answers: [Should the rains fail]
+      answer_shown: Should the rains fail
+      hint: 3–5 words, including the key word
+    explanation: "Should + subject + bare infinitive is the formal replacement for if in a future condition. Note that the infinitive is bare — Should the rains to fail is never possible — and that the result clause keeps will."
+  - type: key_word_transformation
+    group: grammar
+    grammar_point: Inversion in conditionals (Had…, Were it not for…, Should…)
+    content:
+      s1: The retirement scheme is the only reason half the growers are still here.
+      key: WERE
+      pre: ""
+      post: " the retirement scheme, half the growers would already have gone."
+      answers: [Were it not for]
+      answer_shown: Were it not for
+      hint: 3–5 words, including the key word
+    explanation: "Were it not for + noun phrase is the inverted form of if it were not for and marks a single decisive exception. The past-tense variant, Had it not been for, would also be possible if the scheme had already ended."
+  - type: key_word_transformation
+    group: grammar
+    grammar_point: but for, otherwise and or else
+    content:
+      s1: This plain would never have been farmed if the aquifer had not been there.
+      key: BUT
+      pre: ""
+      post: " the aquifer, this plain would never have been farmed."
+      answers: [But for]
+      answer_shown: But for
+      hint: 2–3 words, including the key word
+    explanation: "But for + noun phrase compresses an entire unreal condition into two words. It cannot be followed by a verb, which is why the aquifer had not been there has to disappear altogether in the rewrite."
+  - type: key_word_transformation
+    group: grammar
+    grammar_point: in case vs if
+    content:
+      s1: She planted a drought-tolerant variety because the allocation might be cut in the autumn.
+      key: CASE
+      pre: "She planted a drought-tolerant variety "
+      post: " cut in the autumn."
+      answers: [in case the allocation was, in case the allocation is]
+      answer_shown: in case the allocation was
+      hint: 4–6 words, including the key word
+    explanation: "In case names a precaution taken in advance against something that may never happen, which is precisely why she planted first. Using if here would mean she planted nothing until the cut was actually announced."
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: A contractor drills all the district's wells for it.
+      key: HAS
+      pre: "The district "
+      post: " by a contractor."
+      answers: [has all its wells drilled, has its wells drilled]
+      answer_shown: has all its wells drilled
+      hint: 4–6 words, including the key word
+    explanation: "Module 2 revision — the causative. Work that somebody arranges but does not perform takes have + object + past participle, so the district has its wells drilled rather than drilling them itself."
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: If you join the scheme, you have to give up your licence permanently.
+      key: MEANS
+      pre: "Joining the scheme "
+      post: " your licence permanently."
+      answers: [means giving up]
+      answer_shown: means giving up
+      hint: 3–5 words, including the key word
+    explanation: "Module 4 revision — verbs that change meaning. Mean + -ing means involve or entail and takes a thing as its subject; mean + to-infinitive would report an intention, which a scheme cannot have."
+  # ── open_cloze × 8 · group reading ─────────────────────────────
+  - type: open_cloze
+    group: reading
+    grammar_point: Inversion in conditionals (Had…, Were it not for…, Should…)
+    content:
+      pre: ""
+      post: " we acted in 2005, the correction would have cost a fraction of today's price."
+      answers: [Had]
+      answer_shown: Had
+    explanation: "HAD + subject + past participle is the inverted form of if we had acted. Nothing else fits, because the result clause would have cost fixes the sentence as an unreal past condition."
+  - type: open_cloze
+    group: reading
+    grammar_point: Inversion in conditionals (Had…, Were it not for…, Should…)
+    content:
+      pre: ""
+      post: " it not for the retirement scheme, half the growers would already have gone."
+      answers: [Were]
+      answer_shown: Were
+    explanation: "WERE it not for is a fixed formula that never varies for person or number. Was would be a natural guess and is simply not used in this structure."
+  - type: open_cloze
+    group: reading
+    grammar_point: Inversion in conditionals (Had…, Were it not for…, Should…)
+    content:
+      pre: ""
+      post: " you need the full data set, it is available from the district office."
+      answers: [Should]
+      answer_shown: Should
+    explanation: "SHOULD + subject + bare infinitive is the polite, formal conditional of correspondence and notices — should you have any questions. It replaces if and adds the sense of if by any chance."
+  - type: open_cloze
+    group: reading
+    grammar_point: Alternatives to if (provided, as long as, on condition that, unless, supposing)
+    content:
+      pre: "The nitrates are treatable "
+      post: " that the plant is funded beyond 2030."
+      answers: [provided, providing, assuming]
+      answer_shown: provided
+    explanation: "PROVIDED that states a requirement rather than a neutral condition, and providing and assuming work the same way. If would fit grammatically but would lose the sense of a condition somebody has to satisfy."
+  - type: open_cloze
+    group: reading
+    grammar_point: Alternatives to if (provided, as long as, on condition that, unless, supposing)
+    content:
+      pre: "Every model ends in the same place "
+      post: " demand falls by about a third."
+      answers: [unless]
+      answer_shown: unless
+    explanation: "UNLESS packs if not into a single word, which is why the verb after it stays positive. If alone would reverse the meaning, making the collapse depend on demand falling rather than on its failing to fall."
+  - type: open_cloze
+    group: reading
+    grammar_point: but for, otherwise and or else
+    content:
+      pre: ""
+      post: " for the aquifer, this plain would never have been farmed at all."
+      answers: [But]
+      answer_shown: But
+    explanation: "BUT for + noun phrase is the compressed form of if it had not been for. Without would also make sense here, but the gap is followed by for, which only but takes in this structure."
+  - type: open_cloze
+    group: reading
+    grammar_point: but for, otherwise and or else
+    content:
+      pre: "Cap the wells now; "
+      post: " there will be nothing left to irrigate by 2050."
+      answers: [otherwise]
+      answer_shown: otherwise
+    explanation: "OTHERWISE looks back at the whole preceding sentence and supplies the consequence of not doing it. Unless cannot go here because the clause after the gap is a full independent prediction, not a condition."
+  - type: open_cloze
+    group: reading
+    grammar_point: in case vs if
+    content:
+      pre: "She has planted a drought-tolerant variety in "
+      post: " the allocation is cut in the autumn."
+      answers: [case]
+      answer_shown: case
+    explanation: "In CASE introduces a precaution taken now against a possible future event. In case of would also exist but requires a noun after it, and here a full clause follows."
+  # ── reading_comprehension × 6 · group reading ──────────────────
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Beneath it lies an aquifer, a bed of saturated gravel laid down while the last ice sheets were retreating, and since the first irrigation licences were granted in the 1950s the district has drawn water out of it roughly twenty times faster than rain puts it back. Hydrologists call that an overdraft. The textbooks call it resource depletion. Farmers here call it Tuesday. If the county had metered its wells when the first drawdown maps were published, the water table would still be within reach of an ordinary pump today; it did not, and it is not."
+      q: What does the writer suggest about the county's decision not to meter the wells?
+      options:
+        - It was taken before anybody understood the risk involved.
+        - It made very little difference to the level of the water table.
+        - It is the reason the water table is now beyond an ordinary pump.
+        - It was reversed as soon as the drawdown maps appeared.
+      answer: 2
+    explanation: "The mixed conditional links a past failure directly to a present state — the table would still be within reach today, and it is not. Option 0 is ruled out by the existence of the drawdown maps, which show the risk was already documented."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "A monoculture is a magnificent machine as long as nothing goes wrong with it. Pull out the hedgerows, drain the wet corners, and you gain four per cent more arable land and lose the insects, the birds that ate them and the fungal networks that held the ground together. The biodiversity loss was invisible from the cab of a tractor, and so was the habitat destruction that produced it. So was the soil degradation that followed, arriving at perhaps one per cent of crop yields a year — a figure too small to argue about until thirty of them had been added up."
+      q: Why did the damage described go unchallenged for so long?
+      options:
+        - Each year's loss was too small to notice or dispute.
+        - Farmers had been told that the hedgerows were worthless.
+        - The authorities forbade any public discussion of yields.
+        - Crop yields actually rose throughout the whole period.
+      answer: 0
+    explanation: "The damage is described as invisible from the tractor and as a figure too small to argue about until thirty years of it were added up. Option 3 contradicts the passage outright, since the yields are falling, not rising."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Had the county acted in 2005, when the first serious report landed on the desk of a committee that met twice a year, the correction would have cost about the price of a bypass. Delay is never free. It is simply invoiced later, and the invoice is presented to people who did not order the meal."
+      q: What does the image of the invoice convey?
+      options:
+        - The correction has in fact already been paid for in full.
+        - The cost of waiting is borne by a later generation.
+        - The committee was personally charged for its own mistake.
+        - Nobody is now able to calculate what the delay has cost.
+      answer: 1
+    explanation: "People who did not order the meal are those who had no part in the decision but receive the bill, which is the writer's point about who pays for delay. The passage in fact prices the missed correction, so option 3 is contradicted."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "As the water is drawn down, the clay layers between the gravel compact under the weight of the ground above them, and the pore space that once held the water closes for good. The loss is irreversible damage on any timescale that matters to a family, a county or a country. Worse, it is a feedback loop: a compacted aquifer stores less of the rain that does fall, so each dry year exacerbates the next."
+      q: Why does the writer describe the process as a feedback loop?
+      options:
+        - Because the rainfall arrives in cycles of several years.
+        - Because farmers respond to each dry year by pumping less.
+        - Because the compacted clay will eventually expand again.
+        - Because the damage itself makes further damage more likely.
+      answer: 3
+    explanation: "A compacted aquifer stores less rain, which deepens the compaction — the effect feeds back into its own cause. Option 2 is directly contradicted by closes for good, which is what makes the damage irreversible."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Marta has planted twelve hectares of a drought-tolerant variety this year in case the allocation is cut in the autumn — not because she expects it, but because twelve hectares is what she can afford to be wrong about."
+      q: Why has Marta planted the drought-tolerant variety?
+      options:
+        - As a precaution whose cost she can absorb if it proves unnecessary.
+        - Because she is confident that the allocation will be reduced.
+        - Because the variety produces higher yields than ordinary wheat.
+        - Because the district has instructed every grower to plant it.
+      answer: 0
+    explanation: "In case signals a precaution taken in advance, and the sentence says explicitly that she does not expect the cut. Option 1 is ruled out by not because she expects it, which is the whole point of the distinction between in case and if."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "We do not sell offsets. Offsetting lets somebody else's balance sheet cancel your emissions, and unless the reduction would genuinely not have happened without your money, it is arithmetic rather than repair. Carbon pricing works when a tonne is a tonne; offsetting works when a tonne is a story."
+      q: On what condition would the writers accept that an offset was genuine?
+      options:
+        - If the buyer's own emissions had already been measured accurately.
+        - If the price per tonne were set by a government rather than a market.
+        - If the reduction would not have occurred without the payment.
+        - If the money were spent in the same country as the emissions.
+      answer: 2
+    explanation: "The unless clause names the single test the writers apply — the reduction must be one that would not otherwise have happened. Price-setting and geography are never mentioned as criteria anywhere in the passage."
+  # ── mc_cloze × 8 · group vocab ─────────────────────────────────
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "Nitrates washed off the fields have "
+      post: " the shallow groundwater that two villages drink from."
+      options: [mitigated, contaminated, decarbonised, offset]
+      answer: 1
+    explanation: "Contaminate means to make water or soil unsafe by adding a harmful substance, which is exactly what nitrates in a drinking supply do. Mitigate would mean the opposite — reducing the severity of a problem rather than creating one."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "Scientists argue about where "
+      post: " lies, not about whether there is one."
+      options: [a subsidy, a monoculture, an aquifer, a tipping point]
+      answer: 3
+    explanation: "A tipping point is the threshold beyond which a system shifts irreversibly, and it is the only one of these that can be located on a scale in this way. An aquifer is a physical body of water underground, not a threshold."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "The government has promised to "
+      post: " coal-fired power stations by 2035."
+      options: [phase out, cut back, take a toll on, scale up]
+      answer: 0
+    explanation: "Phase out means to withdraw something gradually over a planned period, which is what a dated commitment describes. Cut back is close but needs on before its object and implies reduction rather than complete removal."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "Growing one crop to the horizon produces high yields and severe "
+      post: "."
+      options: [climate resilience, carbon pricing, biodiversity loss, environmental stewardship]
+      answer: 2
+    explanation: "Biodiversity loss is the disappearance of species and variety, and a single crop over a large area is its textbook cause. Climate resilience is what such a landscape lacks, so it cannot be produced by it."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "The campaign turned out to be pure "
+      post: " — a new logo, a recycled label and the same factory."
+      options: [carbon pricing, stewardship, resource depletion, greenwashing]
+      answer: 3
+    explanation: "Greenwashing is making a company look environmentally responsible without changing much, which the logo-and-label detail illustrates precisely. Resource depletion refers to using up a natural resource, not to misleading presentation."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "Four consecutive dry summers have "
+      post: " the whole valley, not merely this year's wheat."
+      options: [offset, taken a toll on, scaled up, phased out]
+      answer: 1
+    explanation: "Take a toll on describes gradual, accumulating damage, which is what four successive dry years inflict. Phase out would imply a deliberate, planned withdrawal, and nobody plans a drought."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "Having to drill deeper every year is the clearest possible sign of "
+      post: "."
+      options: [a feedback loop, carbon pricing, resource depletion, a circular economy]
+      answer: 2
+    explanation: "Resource depletion is the using up of a resource faster than it is replaced, and a falling water table is its most literal symptom. A feedback loop describes a self-reinforcing mechanism rather than the exhaustion of a stock."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "Melting ice exposes dark water, which absorbs more heat and melts more ice — a textbook "
+      post: "."
+      options: [feedback loop, knock-on effect, unintended consequence, tipping point]
+      answer: 0
+    explanation: "A feedback loop is a process whose effect returns to strengthen its own cause, which is exactly what this description traces. A knock-on effect passes damage on to something else and does not come back round to where it began."
+  # ── collocation_match × 10 · group vocab ───────────────────────
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [carbon, biodiversity, habitat, soil]
+      right: [degradation, footprint, destruction, loss]
+      pairs: {0: 1, 1: 3, 2: 2, 3: 0}
+    explanation: "Carbon footprint, biodiversity loss, habitat destruction, soil degradation — four fixed compounds that carry most of the vocabulary of environmental reporting, each locked to a single partner."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [curb, offset, phase out, scale up]
+      right: [emissions, coal-fired power, a pilot scheme, your flights]
+      pairs: {0: 0, 1: 3, 2: 1, 3: 2}
+    explanation: "Curb emissions, offset your flights, phase out coal-fired power, scale up a pilot scheme. Note that phase out and scale up are separable phrasal verbs, so phase it out is correct and phase out it is not."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [renewable, arable, hazardous, extreme]
+      right: [waste, land, weather events, energy]
+      pairs: {0: 3, 1: 1, 2: 0, 3: 2}
+    explanation: "Renewable energy, arable land, hazardous waste, extreme weather events — four adjectives with one habitual partner apiece. Hazardous is the word regulations use where headlines prefer toxic."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [deplete, contaminate, restore, recharge]
+      right: [an aquifer, a habitat, groundwater, fish stocks]
+      pairs: {0: 3, 1: 2, 2: 1, 3: 0}
+    explanation: "Deplete fish stocks, contaminate groundwater, restore a habitat, recharge an aquifer. Recharge is the technical verb for refilling underground water by rainfall and is used for nothing else in this field."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [a tipping, a feedback, a knock-on, an unintended]
+      right: [consequence, loop, effect, point]
+      pairs: {0: 3, 1: 1, 2: 2, 3: 0}
+    explanation: "A tipping point, a feedback loop, a knock-on effect, an unintended consequence — four nouns of causation. Each takes an article, and none of them can be swapped without changing what kind of cause is meant."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [water, crop, resource, ecosystem]
+      right: [yields, depletion, scarcity, collapse]
+      pairs: {0: 2, 1: 0, 2: 1, 3: 3}
+    explanation: "Water scarcity, crop yields, resource depletion, ecosystem collapse. Collapse is reserved for the sudden failure of a whole system, while depletion describes a stock being drawn down over time."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [take a toll, cut back, at the expense, leach]
+      right: [into the water table, on the soil, on flights, of everything else]
+      pairs: {0: 1, 1: 2, 2: 3, 3: 0}
+    explanation: "Take a toll on the soil, cut back on flights, at the expense of everything else, leach into the water table — four expressions whose prepositions are fixed and cannot be reasoned out from the meaning."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [environmentally, net, circular, climate]
+      right: [zero, resilience, sound, economy]
+      pairs: {0: 2, 1: 0, 2: 3, 3: 1}
+    explanation: "Environmentally sound, net zero, a circular economy, climate resilience — the four phrases that dominate sustainability policy. Sound here means well-founded, the same sense as in sound reasoning."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [scrap, put a price on, accuse a firm of, mitigate]
+      right: [greenwashing, carbon, the effects, fossil-fuel subsidies]
+      pairs: {0: 3, 1: 1, 2: 0, 3: 2}
+    explanation: "Scrap fossil-fuel subsidies, put a price on carbon, accuse a firm of greenwashing, mitigate the effects. Mitigate always takes an object such as effects, impact or risk — never a whole situation."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [exacerbate, dispose of, halt, boost]
+      right: [crop yields, a shortage, hazardous waste safely, biodiversity loss]
+      pairs: {0: 1, 1: 2, 2: 3, 3: 0}
+    explanation: "Exacerbate a shortage, dispose of hazardous waste safely, halt biodiversity loss, boost crop yields. Exacerbate is used only of things that are already bad, which is why it cannot take yields."
+  # ── word_formation × 8 · group vocab ───────────────────────────
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Cheap water made the district rich and taught it nothing whatever about "
+      post: "."
+      prompt: SUSTAIN
+      answers: [sustainability]
+      answer_shown: sustainability
+    explanation: "After the preposition about the gap needs an abstract noun: sustainability. The adjective sustainable would leave the preposition without anything to govern."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "The report treats groundwater "
+      post: " as the region's single most urgent problem."
+      prompt: DEPLETE
+      answers: [depletion]
+      answer_shown: depletion
+    explanation: "The gap completes a compound noun serving as the object of treats, so the noun depletion is required. Note that the verb loses its final e before -ion."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Biological "
+      post: " is a great deal easier to destroy than to design."
+      prompt: DIVERSE
+      answers: [diversity]
+      answer_shown: diversity
+    explanation: "The subject position needs an abstract noun: diversity. The stress shifts to the second syllable, and the same root gives the compound biodiversity."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Once the clay has compacted, the loss is "
+      post: " on any human timescale."
+      prompt: REVERSE
+      answers: [irreversible]
+      answer_shown: irreversible
+    explanation: "The sense required is cannot be undone, which needs both the negative prefix and the adjective suffix: irreversible. Note that this root takes ir- rather than un- or in-."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Two of her neighbours sold their licences and now generate "
+      post: " power where their beans used to be."
+      prompt: RENEW
+      answers: [renewable]
+      answer_shown: renewable
+    explanation: "Before the noun power the gap wants an adjective: renewable. As a plural noun, renewables would refer to the sources or the industry and could not sit in front of another noun here."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Nitrate "
+      post: " of the village supply was confirmed in the spring of 2021."
+      prompt: CONTAMINATE
+      answers: [contamination]
+      answer_shown: contamination
+    explanation: "The subject of was confirmed must be a noun, so the verb becomes contamination. The final e of the verb disappears before -ion, exactly as in depletion."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Large-scale "
+      post: " in the uplands changed the way the whole catchment holds rain."
+      prompt: FOREST
+      answers: [deforestation]
+      answer_shown: deforestation
+    explanation: "The gap needs a noun meaning the clearing of forest, which requires the prefix as well as the suffix: deforestation. Reforestation would mean the opposite process — planting it back."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "The site has to be cleared of "
+      post: " waste before anything can be built on it."
+      prompt: HAZARD
+      answers: [hazardous]
+      answer_shown: hazardous
+    explanation: "Before the noun waste the gap wants an adjective: hazardous. This is the term used in regulations, where journalism would reach for toxic."
+review_pool:
+  # ── grammar_drill × 5 ──────────────────────────────────────────
+  - type: grammar_drill
+    group: grammar
+    grammar_point: Alternatives to if (provided, as long as, on condition that, unless, supposing)
+    content:
+      pre: "They will approve the connection on condition that the developer "
+      post: " the access road."
+      prompt: REBUILD
+      options: [will rebuild, rebuilds, would rebuild, rebuilt]
+      answer: 1
+    explanation: "On condition that takes a present form for future time, giving rebuilds. Will rebuild breaks the rule that no conditional connector allows will inside the condition itself."
+  - type: grammar_drill
+    group: grammar
+    grammar_point: Alternatives to if (provided, as long as, on condition that, unless, supposing)
+    content:
+      pre: "The land will recover as long as nobody "
+      post: " it for a decade."
+      prompt: PLOUGH
+      options: [will plough, would plough, has ploughed, ploughs]
+      answer: 3
+    explanation: "As long as introduces a condition that must keep holding, and it takes a present form: ploughs. Has ploughed would place the ploughing before the recovery rather than during the ten years in question."
+  - type: grammar_drill
+    group: grammar
+    grammar_point: Mixed conditionals in both directions
+    content:
+      pre: "If the soil "
+      post: " so badly degraded, last autumn's rain would have been enough."
+      prompt: BE
+      options: [weren't, hadn't been, isn't, wouldn't be]
+      answer: 0
+    explanation: "The soil's condition is a present fact and the result belongs to last autumn, so this is the present-to-past mixed conditional: past simple in the if-clause, would have been in the result. Hadn't been would wrongly confine the degradation to the past."
+  - type: grammar_drill
+    group: grammar
+    grammar_point: Inversion in conditionals (Had…, Were it not for…, Should…)
+    content:
+      pre: ""
+      post: " the aquifer to fail completely, the town itself would have to move."
+      prompt: BE
+      options: [If were, Should be, Were, Was]
+      answer: 2
+    explanation: "Were + subject + to-infinitive is the inverted form of if the aquifer were to fail and presents the situation as remote. Was is never used in this structure, whatever the subject."
+  - type: grammar_drill
+    group: grammar
+    grammar_point: in case vs if
+    content:
+      pre: "They stored two years of seed in case the harvest "
+      post: " a second time."
+      prompt: FAIL
+      options: [will fail, failed, would fail, has failed]
+      answer: 1
+    explanation: "After a past main verb, in case takes the past simple — the tense shifts backwards exactly as it does in reported speech. Would fail is wrong because no conditional connector is ever followed by would."
+  # ── error_correction × 4 ───────────────────────────────────────
+  - type: error_correction
+    group: grammar
+    grammar_point: Alternatives to if (provided, as long as, on condition that, unless, supposing)
+    content: {words: [The, scheme, continues, provided, that, the, district, will, meet, its, "targets."], wrong: 7, correction: "will meet → meets"}
+    explanation: "Provided that behaves exactly like if and takes a present form for future time. The futurity is already carried by the main clause and does not need marking a second time."
+  - type: error_correction
+    group: grammar
+    grammar_point: in case vs if
+    content: {words: [Take, a, spare, filter, in, case, of, the, pump, fails, on, the, far, "field."], wrong: 6, correction: "in case of → in case"}
+    explanation: "In case of is a preposition and must be followed by a noun, as in in case of fire. When a full clause follows, the correct form is plain in case."
+  - type: error_correction
+    group: grammar
+    grammar_point: Inversion in conditionals (Had…, Were it not for…, Should…)
+    content: {words: [Had, I, have, known, about, the, "drawdown,", I, would, never, have, bought, the, "farm."], wrong: 2, correction: "have known → known"}
+    explanation: "Inversion already supplies the auxiliary, so Had is followed directly by the past participle. The extra have is a spoken slip that duplicates the perfect and has no place in writing."
+  - type: error_correction
+    group: grammar
+    grammar_point: but for, otherwise and or else
+    content: {words: [Otherwise, we, cap, the, wells, "now,", there, will, be, nothing, to, "irrigate."], wrong: 0, correction: "Otherwise we cap → Unless we cap"}
+    explanation: "Otherwise is not a conjunction and cannot introduce a condition; it follows a statement and gives the consequence of not carrying it out. To open with a condition here, the sentence needs unless or if we do not."
+  # ── key_word_transformation × 4 ────────────────────────────────
+  - type: key_word_transformation
+    group: grammar
+    grammar_point: Alternatives to if (provided, as long as, on condition that, unless, supposing)
+    content:
+      s1: The nitrates can be treated, but only if the plant is funded beyond 2030.
+      key: PROVIDED
+      pre: "The nitrates can be treated "
+      post: " beyond 2030."
+      answers: [provided the plant is funded, provided that the plant is funded]
+      answer_shown: provided the plant is funded
+      hint: 4–6 words, including the key word
+    explanation: "But only if signals a requirement rather than a neutral condition, which is precisely the work provided (that) does. The that is optional and is usually dropped in journalism."
+  - type: key_word_transformation
+    group: grammar
+    grammar_point: but for, otherwise and or else
+    content:
+      s1: If we do not cap the wells now, there will be nothing to irrigate by 2050.
+      key: OTHERWISE
+      pre: "Cap the wells now; "
+      post: " to irrigate by 2050."
+      answers: [otherwise there will be nothing]
+      answer_shown: otherwise there will be nothing
+      hint: 4–6 words, including the key word
+    explanation: "Otherwise converts a negative condition into a consequence attached to the preceding instruction. The condition disappears entirely and the imperative carries it instead."
+  - type: key_word_transformation
+    group: grammar
+    grammar_point: Inversion in conditionals (Had…, Were it not for…, Should…)
+    content:
+      s1: If the tariff had not changed, the developer would still be interested.
+      key: HAD
+      pre: ""
+      post: " changed, the developer would still be interested."
+      answers: [Had the tariff not]
+      answer_shown: Had the tariff not
+      hint: 3–5 words, including the key word
+    explanation: "Inversion puts the auxiliary before the subject and leaves not after it — Had the tariff not changed. Hadn't the tariff changed is impossible, since a contracted negative in front of the subject forms a question."
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: She intended to sell the land in 2018 but changed her mind at the last moment.
+      key: GOING
+      pre: "She "
+      post: " the land in 2018 but changed her mind at the last moment."
+      answers: [was going to sell]
+      answer_shown: was going to sell
+      hint: 3–5 words, including the key word
+    explanation: "Module 1 revision — future in the past. An intention formed earlier and not carried out takes was going to + infinitive, which reports the plan from a point in the past and implies that it came to nothing."
+  # ── open_cloze × 4 ─────────────────────────────────────────────
+  - type: open_cloze
+    group: reading
+    grammar_point: Alternatives to if (provided, as long as, on condition that, unless, supposing)
+    content:
+      pre: ""
+      post: " that the grid connection is approved, the developer will buy the licence."
+      answers: [Provided, Providing, Assuming]
+      answer_shown: Provided
+    explanation: "PROVIDED that opens a requirement that has to be satisfied before the main clause can follow. Assuming works too, though it presents the condition as a working supposition rather than a demand."
+  - type: open_cloze
+    group: reading
+    grammar_point: Alternatives to if (provided, as long as, on condition that, unless, supposing)
+    content:
+      pre: "The land will recover as "
+      post: " as nobody ploughs it for a decade."
+      answers: [long]
+      answer_shown: long
+    explanation: "As LONG as adds a sense of duration that provided lacks — the condition must hold for the whole period, not merely be met once."
+  - type: open_cloze
+    group: reading
+    grammar_point: but for, otherwise and or else
+    content:
+      pre: "The data stays with the farmer, or "
+      post: " the whole promise means nothing."
+      answers: [else]
+      answer_shown: else
+    explanation: "Or ELSE does the same job as otherwise at a lower register and with a note of threat in it. In formal writing, otherwise is the safer choice."
+  - type: open_cloze
+    group: reading
+    grammar_point: Inversion in conditionals (Had…, Were it not for…, Should…)
+    content:
+      pre: ""
+      post: " the aquifer to fail completely, the town itself would have to move."
+      answers: [Were]
+      answer_shown: Were
+    explanation: "WERE + subject + to-infinitive is the inverted equivalent of if the aquifer were to fail, and it makes the possibility sound remote. Was is not used here for any subject."
+  # ── reading_comprehension × 1 ──────────────────────────────────
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Irrigation did not make the land fertile. It borrowed fertility from underneath it, at the expense of every farmer who would come after, and called the loan income."
+      q: What does the writer mean by saying that irrigation called the loan income?
+      options:
+        - The farmers were paid interest on the water they extracted.
+        - The irrigation scheme itself was funded entirely by borrowing.
+        - What was really being drawn from a finite store was treated as earnings.
+        - The rain restored the fertility of the land in full every year.
+      answer: 2
+    explanation: "A loan has to be repaid, while income does not, so calling one the other disguises a stock being run down as a profit being made. Option 1 mistakes the metaphor for a literal statement about how the scheme was financed."
+  # ── mc_cloze × 4 ───────────────────────────────────────────────
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "Half of the region's fish stocks have collapsed after three decades of "
+      post: "."
+      options: [deforestation, greenwashing, carbon pricing, overfishing]
+      answer: 3
+    explanation: "Overfishing is catching fish faster than the population can reproduce, which is what empties a stock over decades. Deforestation concerns forest rather than fisheries and cannot explain the collapse described."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "A "
+      post: " repairs, reuses and recycles instead of throwing things away."
+      options: [monoculture, circular economy, feedback loop, carbon footprint]
+      answer: 1
+    explanation: "A circular economy is defined by keeping materials in use rather than discarding them, which is exactly the list given. A carbon footprint is a measurement, not a model of production."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "Governments have been urged to "
+      post: " the fuel subsidies that make the problem worse."
+      options: [contaminate, exacerbate, phase out, leach]
+      answer: 2
+    explanation: "Phase out means to withdraw something gradually over a planned period, which is what is being urged here. Exacerbate would mean making the problem worse, and the subsidies are already doing that."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "The scheme pays farmers to treat the land as something held in trust, which is the oldest idea in "
+      post: "."
+      options: [environmental stewardship, resource depletion, habitat destruction, water scarcity]
+      answer: 0
+    explanation: "Environmental stewardship is the responsible care of land on behalf of those who come after, and held in trust is its defining image. The other three name problems rather than the principle of care."
+  # ── collocation_match × 4 ──────────────────────────────────────
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [greenhouse, fossil, arable, hazardous]
+      right: [fuels, waste, gases, land]
+      pairs: {0: 2, 1: 0, 2: 3, 3: 1}
+    explanation: "Greenhouse gases, fossil fuels, arable land, hazardous waste. The first two are almost always plural, and both are hyphenated when placed in front of another noun."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [reach, cross, trigger, halt]
+      right: [biodiversity loss, net zero, a feedback loop, a tipping point]
+      pairs: {0: 1, 1: 3, 2: 2, 3: 0}
+    explanation: "Reach net zero, cross a tipping point, trigger a feedback loop, halt biodiversity loss — the verb tells you whether a target, a threshold, a mechanism or a trend is meant."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [severely, large-scale, chronic, heavily]
+      right: [deforestation, depleted, contaminated, water scarcity]
+      pairs: {0: 1, 1: 0, 2: 3, 3: 2}
+    explanation: "Severely depleted, large-scale deforestation, chronic water scarcity, heavily contaminated. Chronic marks a condition that persists, while severely and heavily grade how far something has gone."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [do, put a price on, cut back on, dispose of]
+      right: [hazardous waste, irreversible damage, carbon, meat and flights]
+      pairs: {0: 1, 1: 2, 2: 3, 3: 0}
+    explanation: "Do irreversible damage, put a price on carbon, cut back on meat and flights, dispose of hazardous waste. English does damage and never makes it, which is worth memorising as a fixed pair."
+  # ── word_formation × 4 ─────────────────────────────────────────
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "The district needs a genuinely "
+      post: " rate of extraction, not a slower version of the present one."
+      prompt: SUSTAIN
+      answers: [sustainable]
+      answer_shown: sustainable
+    explanation: "Between an adverb and the noun rate the gap wants an adjective: sustainable. The noun sustainability could not be modified by genuinely in this position."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Soil "
+      post: " is slow enough that no single season ever looks like a crisis."
+      prompt: DEGRADE
+      answers: [degradation]
+      answer_shown: degradation
+    explanation: "The gap completes a compound noun acting as the subject, so degradation is required. Note the vowel change — degrade becomes degradation, not degradement."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "The run-off carries "
+      post: " that the treatment plant was never designed to remove."
+      prompt: POLLUTE
+      answers: [pollutants]
+      answer_shown: pollutants
+    explanation: "The object of carries must be a plural noun for the substances themselves: pollutants. Pollution is uncountable and could not be the thing a plant is designed to remove item by item."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Climate "
+      post: " means having something to fall back on in a bad year."
+      prompt: RESILIENT
+      answers: [resilience]
+      answer_shown: resilience
+    explanation: "The subject position needs the abstract noun: resilience. The adjective resilient would require a noun after it, and climate resilient means something different again."

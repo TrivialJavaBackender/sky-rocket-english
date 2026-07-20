@@ -1,0 +1,52 @@
+kind: main
+kicker: LONG-READ
+title: Why Cramming Fails
+meta: ≈ 7 min · dotted words carry glosses — tap to reveal
+word_count: 1035
+body:
+  - - t: "In the summer of 1885, a German psychologist sat alone in a room and began learning nonsense. Hermann Ebbinghaus had invented a set of meaningless syllables — WID, ZOF, KEL — precisely because they carried no meaning that could help him. He committed list after list to memory, waited, and then measured how much survived. What he produced was the first honest picture of forgetting, and it is not flattering. Within twenty minutes he had lost roughly forty per cent of a freshly learnt list. Within a day, two thirds. The curve fell off a cliff and then flattened into a long, thin tail of the few items that somehow stayed."
+  - - t: "Every student has met that cliff, usually at about two in the morning, after a fortnight spent procrastinating and one heroic decision to burn the midnight oil. You "
+    - g: cram
+    - t: " for an exam, you sit it, you pass it, and by the following term the material has gone as completely as if you had never opened the book. The uncomfortable finding of the last forty years of memory research is that this is not a failure of effort or of aptitude. It is the predictable result of doing exactly what feels most productive."
+  - - t: "The trouble is that our sense of learning is calibrated to the wrong signal. Read a chapter four times in one evening and it grows smoother, easier, more familiar with each pass. You feel yourself absorbing information at speed, and that fluency feels like knowledge. Robert Bjork, the psychologist who has spent a career on this problem, calls the whole family of effective study methods "
+    - g: desirable_difficulties
+    - t: " — techniques that make the session feel worse and the memory last longer. Students, asked to choose, reliably pick the method that feels best. They are choosing the smooth road that leads nowhere."
+  - - t: "Consider what happens when you space the same total effort out. Instead of four hours the night before, you spend twenty minutes a day for twelve days. The material is now less familiar each time you return to it; you have to fight a little to retrieve it. That fight is the mechanism. Reviewing something just as it starts to slip — the principle behind "
+    - g: spaced_repetition
+    - t: " — forces the brain to reconstruct the memory rather than merely recognise it, and reconstruction is what makes the trace durable. The same hours, redistributed, can more than double how much you retain a month later — and they tend to dissolve the feeling of having hit a plateau, which is usually a description of a method rather than of a ceiling."
+  - - t: "Testing works the same way, and is even more badly misunderstood. Most students treat a test as a thermometer: something that measures learning without changing it. It does not. Trying to recall an answer, even unsuccessfully, strengthens the memory more than rereading the material ever will, and it supplies the constructive feedback that a fourth reading never can. In one much-replicated study, students who read a passage once and then tested themselves three times remembered dramatically more a week later than students who read the same passage four times — although at the moment of study, the rereaders were confident they had learnt more. They had, briefly. Then Ebbinghaus's cliff arrived."
+  - - t: "None of this makes "
+    - g: rote_learning
+    - t: " worthless. Some material genuinely has to be automatic — the multiplication tables, the irregular verbs, the safety checklist — and repetition is how you master a skill that has to run without attention. The error is treating it as the whole of study rather than the floor of it. A student who has memorised a definition without grasping the concept behind it has bought something that cannot be spent anywhere else: it answers the question that was asked and no other version of it."
+  - - t: "Which brings us to the thing schools rarely teach. Learning well depends on knowing what you do not know, and human beings are systematically bad at this. Familiarity masquerades as understanding. You recognise the diagram, so you believe you could draw it; you follow the worked example, so you believe you could solve the next one. Every teacher has watched a student keep up with the lectures effortlessly and then fall behind the moment the problems stopped resembling the ones on the board. The knowledge gaps were there all along, hidden underneath a comfortable feeling of following along."
+  - - t: "The remedies are unglamorous and well established, and every one of them belongs to self-directed learning rather than to any syllabus. Close the book and try to explain the idea to somebody who does not know it. Do the problems before you feel ready: put theory into practice by trial and error, while being wrong is still free. Interleave subjects rather than blocking them, so that each session forces you to work out which method applies rather than applying the same one thirty times. Sleep, which lets the brain quietly "
+    - g: consolidate
+    - t: " the day's material and decide what to keep. None of it feels like progress while you are doing it, and all of it survives the term."
+  - - t: "There is a broader point here about how learning is judged. Exam systems reward what can be produced on a single morning in May, no curriculum has ever found room to teach students how to study, and cramming is beautifully adapted to exactly that. A student who crams is not being irrational; they are responding rather precisely to the incentive in front of them. It is the incentive that is wrong. When the measurement happens once and the knowledge is never needed again, the system is quietly teaching students that forgetting is free."
+  - - t: "It is not, of course. The bill simply arrives later — in the second year that assumes the first, in the job that assumes the degree, in the language you studied for six years and cannot use in a taxi. Whatever lifelong learning is supposed to mean, it cannot mean rebuilding the foundations every September. Ebbinghaus, learning his nonsense syllables in an empty room, was measuring the cost of that arrangement a century before anybody built an education system around ignoring it. The curve he drew is still there, still steep, still waiting at about two in the morning."
+glosses:
+  - key: cram
+    term: cram
+    pos_label: verb
+    definition: to study very intensively just before an exam, after neglecting the subject
+    example: She crammed for the exam all night and remembered almost none of it by Friday.
+  - key: desirable_difficulties
+    term: desirable difficulties
+    pos_label: noun phrase
+    definition: study conditions that feel harder and slow you down at the time, but produce longer-lasting learning
+    example: Spacing and self-testing are desirable difficulties — unpleasant now, effective later.
+  - key: spaced_repetition
+    term: spaced repetition
+    pos_label: noun phrase
+    definition: a study method in which you review material at increasing intervals, just before you would forget it
+    example: The app schedules reviews by spaced repetition, so difficult cards come round more often.
+  - key: rote_learning
+    term: rote learning
+    pos_label: noun phrase
+    definition: learning by repeating something many times until you can reproduce it, without necessarily understanding it
+    example: Multiplication tables are one of the few things rote learning genuinely does well.
+  - key: consolidate
+    term: consolidate
+    pos_label: verb
+    definition: to make new knowledge firmer and more permanent, usually by revisiting or using it
+    example: The brain consolidates the day's learning during deep sleep.

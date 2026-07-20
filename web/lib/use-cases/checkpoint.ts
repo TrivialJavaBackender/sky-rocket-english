@@ -5,7 +5,7 @@ import * as courseRepo from '../repositories/course.repo';
 import * as moduleRepo from '../repositories/module.repo';
 import * as writingRepo from '../repositories/writing.repo';
 import { checkpointStatusOnAttempt, moduleStatusOnPriorModuleCompleted } from '../domain/module-state';
-import { startExerciseSet, type PublicExerciseDTO } from './exercise-set';
+import { startExerciseSet, computeSetProgress, type PublicExerciseDTO, type SetProgressDTO } from './exercise-set';
 import type { CheckpointStatus } from '../domain/types';
 import type { WritingTaskDTO } from '../repositories/writing.repo';
 
@@ -25,6 +25,54 @@ export async function getCheckpointSet(checkpointId: number): Promise<Checkpoint
     writingRepo.getWritingTaskForCheckpoint(checkpointId),
   ]);
   return { checkpointId, title: checkpoint.title, passMark: checkpoint.passMark, exercises, writingTask };
+}
+
+export interface CheckpointPageDTO extends CheckpointSetDTO {
+  slug: string;
+  kind: 'diagnostic' | 'block' | 'final';
+  status: CheckpointStatus;
+  bestScore: number | null;
+  /** How far into the current run the learner is, so a 40/60-item sitting can be resumed. */
+  progress: SetProgressDTO;
+}
+
+export type GetCheckpointResult =
+  | { kind: 'ok'; checkpoint: CheckpointPageDTO }
+  | { kind: 'locked'; title: string }
+  | { kind: 'not_found' };
+
+/**
+ * UC-18/19 page loader: resolve a checkpoint by slug and apply the same access
+ * rule the course map displays, so the map and the page can never disagree.
+ *
+ * The effective status defaults exactly as `getCourseMap` defaults it: a
+ * diagnostic with no attempt row is `available` (no gate — `pass_mark=null`,
+ * §1.5), while a block/final checkpoint with no row is `locked` until
+ * `closeModule` marks it available on block completion (session.ts). `passed`
+ * and `failed` both stay open, matching the map's "retake available" label.
+ */
+export async function getCheckpointForUser(
+  userId: number,
+  courseSlug: string,
+  checkpointSlug: string,
+): Promise<GetCheckpointResult> {
+  const course = await courseRepo.getCourseBySlug(courseSlug);
+  if (!course) return { kind: 'not_found' };
+  const checkpoint = await courseRepo.getCheckpointBySlug(course.id, checkpointSlug);
+  if (!checkpoint) return { kind: 'not_found' };
+
+  const state = (await courseRepo.getUserCheckpointStates(userId, [checkpoint.id])).get(checkpoint.id);
+  const status: CheckpointStatus = state?.status ?? (checkpoint.kind === 'diagnostic' ? 'available' : 'locked');
+  if (status === 'locked') return { kind: 'locked', title: checkpoint.title };
+
+  const set = await getCheckpointSet(checkpoint.id);
+  if (!set) return { kind: 'not_found' };
+  const progress = await computeSetProgress(userId, set.exercises, 'checkpoint');
+
+  return {
+    kind: 'ok',
+    checkpoint: { ...set, slug: checkpoint.slug, kind: checkpoint.kind, status, bestScore: state?.bestScore ?? null, progress },
+  };
 }
 
 export interface FinishCheckpointResult {

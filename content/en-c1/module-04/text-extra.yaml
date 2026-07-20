@@ -1,0 +1,26 @@
+kind: extra
+kicker: GRADUATE COLUMN
+title: Everything I Learnt After I Stopped Studying
+meta: ≈ 3 min · a graduate looks back — dotted words carry glosses
+word_count: 354
+body:
+  - - t: "I graduated from a good university with a good degree in a subject I can no longer discuss for more than four minutes. This is not a complaint. It took me most of a decade to work out what had actually happened during those three years, and the answer turned out to be more interesting than the disappointment."
+  - - t: "I was, by any measure the institution used, "
+    - g: high_achiever
+    - t: ". I had an obvious aptitude for the subject, I never once fell behind, and I had learnt by about fifteen that I could reproduce almost anything on demand for a morning. The system asked me to sit exams; I was extremely good at sitting exams. Nobody, at any point, made me explain a single idea to somebody who did not already know it."
+  - - t: "What I remember now is not the curriculum. It is the two or three occasions when I had to put theory into practice and discovered how thin the theory had been. A summer placement where I was expected to build something and could not. A seminar where a first-year student asked why a formula worked and I realised I had never known — I had committed it to memory and gone on collecting marks. Those afternoons were humiliating, and they are the only afternoons that stuck."
+  - - t: "Since then I have learnt more, and more permanently, from things that carried no assessment at all: a language picked up badly from colleagues, a craft learnt by trial and error, a subject I got to grips with because I needed it on a Tuesday. All of it slow. None of it examined. Every bit of it still here."
+  - - t: "I am not arguing against universities, and I would resent anyone who used this column to. But I would tell an eighteen-year-old two things. Find out early what you cannot yet do, and go looking for it rather than waiting to be tested on it. And treat "
+    - g: lifelong_learning
+    - t: " as a description of how knowledge behaves rather than a phrase in a prospectus. The degree is a beginning that the ceremony is very careful to make look like an ending."
+glosses:
+  - key: high_achiever
+    term: a high achiever
+    pos_label: noun phrase
+    definition: somebody who consistently performs at a very high level, especially academically
+    example: The school is full of high achievers who have never been allowed to fail.
+  - key: lifelong_learning
+    term: lifelong learning
+    pos_label: noun phrase
+    definition: the practice of continuing to learn new things throughout your adult life
+    example: Lifelong learning stops being a slogan the moment your industry disappears.

@@ -15,21 +15,27 @@ export function CourseMap({ map }: { map: CourseMapDTO }) {
         {totalModules} modules in {map.blocks.length} blocks. Each block's checkpoint gates the next.
       </p>
 
+      {/* The diagnostic has no gate (pass_mark=null, §1.5), so it is always open. */}
       {map.diagnostic && (
-        <div className="mb-3.5 flex items-center justify-between rounded-xl border border-border bg-bg-card px-4 py-3 text-[14px]">
+        <Link
+          href={`/course/${map.courseSlug}/checkpoint/${map.diagnostic.slug}`}
+          className="mb-3.5 flex items-center justify-between rounded-xl border border-border bg-bg-card px-4 py-3 text-[14px] text-fg no-underline transition-colors hover:bg-bg-faint"
+        >
           <span className="font-semibold">Diagnostic · {map.diagnostic.title}</span>
-          <span className="tabular-nums text-fg-muted">{map.diagnostic.status === 'passed' && map.diagnostic.bestScore != null ? `done · ${map.diagnostic.bestScore}%` : 'not taken yet'}</span>
-        </div>
+          <span className="tabular-nums text-fg-muted">
+            {map.diagnostic.status === 'passed' && map.diagnostic.bestScore != null ? `done · ${map.diagnostic.bestScore}%` : 'not taken yet'} →
+          </span>
+        </Link>
       )}
 
       {map.blocks.map((block) => (
-        <BlockSection key={block.slug} block={block} />
+        <BlockSection key={block.slug} block={block} courseSlug={map.courseSlug} />
       ))}
     </div>
   );
 }
 
-function BlockSection({ block }: { block: CourseMapBlockDTO }) {
+function BlockSection({ block, courseSlug }: { block: CourseMapBlockDTO; courseSlug: string }) {
   return (
     <section className="mb-3.5 overflow-hidden rounded-xl border border-border bg-bg-card">
       <header className="flex items-center gap-2.5 px-[18px] pb-3 pt-3.5">
@@ -54,7 +60,7 @@ function BlockSection({ block }: { block: CourseMapBlockDTO }) {
           </>
         );
         return open ? (
-          <Link key={m.slug} href={`/course/en-c1/module/${m.slug}`} className={`${rowClass} no-underline`}>
+          <Link key={m.slug} href={`/course/${courseSlug}/module/${m.slug}`} className={`${rowClass} no-underline`}>
             {content}
           </Link>
         ) : (
@@ -63,12 +69,12 @@ function BlockSection({ block }: { block: CourseMapBlockDTO }) {
           </div>
         );
       })}
-      {block.checkpoint && <CheckpointFooter checkpoint={block.checkpoint} block={block} />}
+      {block.checkpoint && <CheckpointFooter checkpoint={block.checkpoint} block={block} courseSlug={courseSlug} />}
     </section>
   );
 }
 
-function CheckpointFooter({ checkpoint, block }: { checkpoint: CourseMapCheckpointDTO; block: CourseMapBlockDTO }) {
+function CheckpointFooter({ checkpoint, block, courseSlug }: { checkpoint: CourseMapCheckpointDTO; block: CourseMapBlockDTO; courseSlug: string }) {
   const passed = checkpoint.status === 'passed';
   let detail: string;
   if (passed) detail = `passed · ${checkpoint.bestScore}%`;
@@ -76,10 +82,28 @@ function CheckpointFooter({ checkpoint, block }: { checkpoint: CourseMapCheckpoi
   else if (checkpoint.status === 'available') detail = `available now${checkpoint.passMark != null ? ` · pass mark ${checkpoint.passMark}%` : ''}`;
   else detail = `locked — complete every module above${checkpoint.passMark != null ? ` · pass mark ${checkpoint.passMark}%` : ''}`;
 
-  return (
-    <div className="flex items-center gap-3 border-t border-border-faint px-[18px] py-3" style={{ background: passed ? block.tint : 'var(--bg-faint)', color: passed ? 'var(--fg)' : 'var(--fg-subtle)' }}>
+  // Openable in exactly the states the checkpoint page itself admits: anything
+  // but `locked` (which the page would bounce back here anyway).
+  const open = checkpoint.status !== 'locked';
+  const className = 'flex items-center gap-3 border-t border-border-faint px-[18px] py-3';
+  const style = { background: passed ? block.tint : 'var(--bg-faint)', color: passed ? 'var(--fg)' : 'var(--fg-subtle)' };
+  const content = (
+    <>
       <span className="text-sm font-semibold">{checkpoint.title}</span>
-      <span className="ml-auto text-right text-[13px] tabular-nums">{detail}</span>
+      <span className="ml-auto text-right text-[13px] tabular-nums">
+        {detail}
+        {open && ' →'}
+      </span>
+    </>
+  );
+
+  return open ? (
+    <Link href={`/course/${courseSlug}/checkpoint/${checkpoint.slug}`} className={`${className} no-underline transition-opacity hover:opacity-80`} style={style}>
+      {content}
+    </Link>
+  ) : (
+    <div className={className} style={style}>
+      {content}
     </div>
   );
 }

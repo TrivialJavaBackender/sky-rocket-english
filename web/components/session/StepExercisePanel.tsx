@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import type { AttemptContext } from '@/lib/domain/types';
-import type { PublicExerciseDTO } from '@/lib/use-cases/exercise-set';
+import type { PublicExerciseDTO, SetProgressDTO } from '@/lib/use-cases/exercise-set';
 import { ExercisePlayer, type ExercisePlayerSummary } from '@/components/player/ExercisePlayer';
 import { Button } from '@/components/ui/Button';
 import { advanceStep, closeModule } from '@/app/actions/sessions';
@@ -27,6 +27,7 @@ export function StepExercisePanel({
   isModuleQuiz,
   readingTitle,
   readingParagraphs,
+  progress,
 }: {
   items: PublicExerciseDTO[];
   context: AttemptContext;
@@ -38,9 +39,19 @@ export function StepExercisePanel({
   /** Fix 3: the close-read text, passed through to `ExercisePlayer` so a reading_comprehension exercise_set can show it without leaving the player. */
   readingTitle?: string;
   readingParagraphs?: string[];
+  /** Resume support (UC-09) — see `computeSetProgress`. Absent means "always start fresh". */
+  progress?: SetProgressDTO;
 }) {
   const [open, setOpen] = useState(false);
+  const [fresh, setFresh] = useState(false);
   const { pending, run } = useActionRefresh();
+
+  const partway = !!progress && progress.answered > 0 && progress.answered < progress.total;
+
+  function launch(startFresh: boolean) {
+    setFresh(startFresh);
+    setOpen(true);
+  }
 
   async function handleFinished(summary: ExercisePlayerSummary) {
     if (isModuleQuiz) {
@@ -56,9 +67,23 @@ export function StepExercisePanel({
 
   return (
     <>
-      <Button size="block" onClick={() => setOpen(true)} disabled={pending}>
-        {startLabel}
+      {partway && (
+        <div className="mb-2.5 text-[13.5px] text-fg-muted">
+          {progress!.answered} of {progress!.total} answered — your answers are saved as you go.
+        </div>
+      )}
+      <Button size="block" onClick={() => launch(!partway)} disabled={pending}>
+        {partway ? `Resume · item ${progress!.resumeIndex + 1} of ${progress!.total}` : startLabel}
       </Button>
+      {partway && (
+        <button
+          onClick={() => launch(true)}
+          disabled={pending}
+          className="mt-2.5 w-full text-[13.5px] font-semibold text-fg-muted underline underline-offset-2 hover:text-fg"
+        >
+          Start over from item 1
+        </button>
+      )}
       {open && (
         <ExercisePlayer
           items={items}
@@ -68,6 +93,8 @@ export function StepExercisePanel({
           onClose={() => run(async () => setOpen(false))}
           readingTitle={readingTitle}
           readingParagraphs={readingParagraphs}
+          initialResults={fresh || !progress ? undefined : progress.results}
+          initialIndex={fresh || !progress ? 0 : progress.resumeIndex}
         />
       )}
     </>

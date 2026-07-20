@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import { getCurrentUserId } from '@/lib/current-user';
 import { getUnit, type ReadingWithGlossesDTO } from '@/lib/use-cases/unit';
-import { startExerciseSet, type PublicExerciseDTO } from '@/lib/use-cases/exercise-set';
+import { startExerciseSet, computeSetProgress, type PublicExerciseDTO, type SetProgressDTO } from '@/lib/use-cases/exercise-set';
 import type { ExerciseGroup } from '@/lib/domain/types';
 import { LinkButton } from '@/components/ui/LinkButton';
 import { UnitHeader } from '@/components/unit/UnitHeader';
@@ -29,8 +29,11 @@ export default async function UnitPage({ params }: { params: Promise<{ courseSlu
   if (!unit) notFound();
 
   const exerciseSets: Partial<Record<ExerciseGroup, PublicExerciseDTO[]>> = {};
+  const practiceProgress: Partial<Record<ExerciseGroup, SetProgressDTO>> = {};
   for (const l of unit.launchers) {
-    exerciseSets[l.key] = await startExerciseSet({ moduleId: unit.moduleId, groupKey: l.key, pool: 'core' });
+    const set = await startExerciseSet({ moduleId: unit.moduleId, groupKey: l.key, pool: 'core' });
+    exerciseSets[l.key] = set;
+    practiceProgress[l.key] = await computeSetProgress(userId, set, 'practice');
   }
 
   return (
@@ -86,7 +89,7 @@ export default async function UnitPage({ params }: { params: Promise<{ courseSlu
       )}
 
       <ReferenceSection title="Free practice" detail="Exercise sets outside the weekly protocol">
-        <UnitLaunchers launchers={unit.launchers} exerciseSets={exerciseSets} moduleTitle={unit.title} />
+        <UnitLaunchers launchers={unit.launchers} exerciseSets={exerciseSets} progressByGroup={practiceProgress} moduleTitle={unit.title} />
       </ReferenceSection>
     </div>
   );
