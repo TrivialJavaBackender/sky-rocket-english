@@ -13,6 +13,10 @@
  * call site (CourseMap, ProgressBars, StatusTag), never hardcoded.
  */
 :root {
+  /* Forces light native UI (scrollbars, form controls) regardless of OS
+   * dark-mode preference — see the no-dark-theme note below. */
+  color-scheme: light;
+
   /* surfaces */
   --bg: #f7f5f0;
   --bg-card: #ffffff;
@@ -53,91 +57,9 @@
   --shadow-pop: 0 8px 24px rgba(32, 35, 42, 0.08);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #1c1d1a;
-    --bg-card: #24251f;
-    --bg-soft: #201f1b;
-    --bg-faint: #33332b;
-    --ink: #f2f1ea;
-    --fg: #f2f1ea;
-    --fg-muted: #b9b6a8;
-    --fg-subtle: #9c9686;
-    --fg-faint: #837d6d;
-    --fg-faintest: #6b6656;
-    --border: #3a3a30;
-    --border-faint: #2d2d26;
-    --green: #4fae78;
-    --green-text: #8fd8ac;
-    --green-soft: #1c2e21;
-    --green-border: #2f4a37;
-    --red: #d9695a;
-    --red-text: #f0a89c;
-    --red-soft: #3a2320;
-    --red-border: #5a332c;
-    --link: #7ea6dd;
-    --link-hover: #a5c2e8;
-    --selection: #2a3d2e;
-    --shadow-card: 0 2px 10px rgba(0, 0, 0, 0.28);
-    --shadow-pop: 0 8px 24px rgba(0, 0, 0, 0.4);
-  }
-}
-
-:root[data-theme='dark'] {
-  --bg: #1c1d1a;
-  --bg-card: #24251f;
-  --bg-soft: #201f1b;
-  --bg-faint: #33332b;
-  --ink: #f2f1ea;
-  --fg: #f2f1ea;
-  --fg-muted: #b9b6a8;
-  --fg-subtle: #9c9686;
-  --fg-faint: #837d6d;
-  --fg-faintest: #6b6656;
-  --border: #3a3a30;
-  --border-faint: #2d2d26;
-  --green: #4fae78;
-  --green-text: #8fd8ac;
-  --green-soft: #1c2e21;
-  --green-border: #2f4a37;
-  --red: #d9695a;
-  --red-text: #f0a89c;
-  --red-soft: #3a2320;
-  --red-border: #5a332c;
-  --link: #7ea6dd;
-  --link-hover: #a5c2e8;
-  --selection: #2a3d2e;
-  --shadow-card: 0 2px 10px rgba(0, 0, 0, 0.28);
-  --shadow-pop: 0 8px 24px rgba(0, 0, 0, 0.4);
-}
-
-:root[data-theme='light'] {
-  --bg: #f7f5f0;
-  --bg-card: #ffffff;
-  --bg-soft: #fbfaf7;
-  --bg-faint: #efece4;
-  --ink: #23262e;
-  --fg: #20232a;
-  --fg-muted: #6e6a5e;
-  --fg-subtle: #8a8478;
-  --fg-faint: #a09a8c;
-  --fg-faintest: #b9b3a4;
-  --border: #e5e2da;
-  --border-faint: #efece4;
-  --green: #2e7d4f;
-  --green-text: #25623e;
-  --green-soft: #e8f1eb;
-  --green-border: #cfe2d4;
-  --red: #b23a2e;
-  --red-text: #8f2e23;
-  --red-soft: #f6e8e6;
-  --red-border: #e5c6c1;
-  --link: #2e5f9e;
-  --link-hover: #22497d;
-  --selection: #dce9df;
-  --shadow-card: 0 2px 10px rgba(32, 35, 42, 0.04);
-  --shadow-pop: 0 8px 24px rgba(32, 35, 42, 0.08);
-}
+/* Dark theme is intentionally not supported — the app must render with
+ * these tokens regardless of OS `prefers-color-scheme`. Do not reintroduce
+ * a `@media (prefers-color-scheme: dark)` override here. */
 
 * {
   box-sizing: border-box;

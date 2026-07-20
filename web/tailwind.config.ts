@@ -2,16 +2,16 @@ import type { Config } from 'tailwindcss';
 import typography from '@tailwindcss/typography';
 
 // Design tokens ported from docs/design/skyrocket/Skyrocket.dc.html (ARCHITECTURE.md
-// §9 stage 4). Values live as CSS vars in app/globals.css (light/dark aware);
-// this file only wires Tailwind utility names to them. Block/course colors
-// are NOT here — they come from the DB per §8 D4 and are applied inline.
+// §9 stage 4). Values live as CSS vars in app/globals.css (light theme only —
+// dark mode is intentionally unsupported); this file only wires Tailwind
+// utility names to them. Block/course colors are NOT here — they come from
+// the DB per §8 D4 and are applied inline.
 const config: Config = {
   content: [
     './app/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './lib/**/*.{js,ts,jsx,tsx,mdx}',
   ],
-  darkMode: ['class', '[data-theme="dark"]'],
   theme: {
     // The mockup switches SideRail/BottomNav at window.innerWidth >= 980
     // (ARCHITECTURE §7.1). Named "desktop" so `desktop:` reads like the spec.
