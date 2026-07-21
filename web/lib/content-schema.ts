@@ -1,4 +1,5 @@
 import { z } from 'zod';
+import { isDeterminateGap, OPEN_CLASS_ANSWER_THRESHOLD } from './content-gap-words';
 
 /**
  * Zod schemas for the content package format (content/en-c1/README.md).
@@ -95,7 +96,13 @@ export type Watchout = z.infer<typeof WatchoutSchema>;
 // transformation cards from the core key_word_transformation exercises.
 export const ClozeCardSchema = z.object({
   text: z.string().min(1),
-  hint: z.string().optional(),
+  // Required, not optional: sync derives these into open_cloze exercises
+  // (clozeCardToExercise), where the gapped span is always a lexically chosen
+  // verb phrase — "She ___ here since 2019" stays ambiguous until the base
+  // form fixes it. The derivation builds its content object directly instead
+  // of parsing it, so OpenClozeContentSchema's determinacy rule never sees
+  // these; enforcing the hint here is what keeps that path honest.
+  hint: z.string().min(1),
   rule: z.string().min(1),
 });
 export type ClozeCard = z.infer<typeof ClozeCardSchema>;
@@ -163,17 +170,37 @@ export const ReadingComprehensionContentSchema = z.object({
 });
 export type ReadingComprehensionContent = z.infer<typeof ReadingComprehensionContentSchema>;
 
-export const OpenClozeContentSchema = z.object({
-  pre: z.string(),
-  post: z.string(),
-  // Base form shown before answering, as in a coursebook's "(work)". Optional:
-  // classic open cloze gives no prompt, but the drills derived from
-  // theory.cloze_cards need one — "She ___ here since 2019" has several
-  // grammatical answers until you fix the verb.
-  hint: z.string().optional(),
-  answers: z.array(z.string().min(1)).min(1),
-  answer_shown: z.string().min(1),
-});
+export const OpenClozeContentSchema = z
+  .object({
+    pre: z.string(),
+    post: z.string(),
+    // Base form shown before answering, as in a coursebook's "(work)". Optional:
+    // classic open cloze gives no prompt, but the drills derived from
+    // theory.cloze_cards need one — "She ___ here since 2019" has several
+    // grammatical answers until you fix the verb.
+    hint: z.string().optional(),
+    answers: z.array(z.string().min(1)).min(1),
+    answer_shown: z.string().min(1),
+  })
+  // Determinacy rule (content/en-c1/README.md): a gap the learner cannot
+  // recover is a guessing game, not a test. Closed-class and fixed-frame
+  // answers are forced by the sentence; a lexical content word is not, so it
+  // needs either a base-form `hint` or an exhaustive `answers` set.
+  .superRefine((content, ctx) => {
+    if (content.hint) return;
+    if (isDeterminateGap(content.answers)) return;
+    if (content.answers.length >= OPEN_CLASS_ANSWER_THRESHOLD) return;
+    ctx.addIssue({
+      code: z.ZodIssueCode.custom,
+      path: ['hint'],
+      message:
+        `open_cloze answer "${content.answer_shown}" is a content word, so "${content.pre}___${content.post}" ` +
+        `has more than one defensible answer. Add \`hint\` with the dictionary base form (e.g. hint: know for "knowing"), ` +
+        `or list every member of the class in \`answers\` if grammar pins the class but not the word ` +
+        `(≥${OPEN_CLASS_ANSWER_THRESHOLD} entries). If the word really is recoverable from a fixed frame, ` +
+        `add its head to FIXED_FRAME_HEADS in lib/content-gap-words.ts.`,
+    });
+  });
 export type OpenClozeContent = z.infer<typeof OpenClozeContentSchema>;
 
 export const WordFormationContentSchema = z.object({

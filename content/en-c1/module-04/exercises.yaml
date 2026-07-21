@@ -258,6 +258,7 @@ core:
     content:
       pre: "Candidates were not "
       post: " to use dictionaries in the second half of the paper."
+      hint: allow
       answers: [allowed, permitted]
       answer_shown: allowed
     explanation: "Let has no ordinary passive, so permission becomes be ALLOWED to. Permitted works identically and is a shade more formal."
@@ -276,6 +277,7 @@ core:
     content:
       pre: "The whole chapter needs "
       post: " before anyone else reads it."
+      hint: rewrite
       answers: [rewriting, revising, reworking]
       answer_shown: rewriting
     explanation: "After need, an -ing form carries a passive meaning: needs REWRITING = needs to be rewritten."

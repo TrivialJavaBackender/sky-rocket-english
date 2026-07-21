@@ -31,14 +31,19 @@ const RATINGS: { rating: Rating; label: string; interval: string; accent?: 'red'
  * each grade is one `reviewFlashcard` server action call (SM-2, §6.4).
  */
 export function FlashcardPlayer({ cards, backHref }: { cards: DueCardViewDTO[]; backHref: string }) {
+  // Grading calls `revalidatePath`, which refetches this dynamic route and hands
+  // us a `cards` prop that no longer holds the card just graded. Advancing the
+  // index on top of that shrinking list would skip a card per grade, so the run
+  // works off a snapshot taken when the player mounted.
+  const [deck] = useState(cards);
   const [i, setI] = useState(0);
   const [side, setSide] = useState<'front' | 'back'>('front');
-  const [done, setDone] = useState(cards.length === 0);
+  const [done, setDone] = useState(deck.length === 0);
   const [gradedCount, setGradedCount] = useState(0);
   const [grading, setGrading] = useState(false);
   const router = useRouter();
 
-  const card = cards[Math.min(i, cards.length - 1)];
+  const card = deck[i];
 
   async function grade(rating: Rating) {
     if (!card || grading) return;
@@ -46,7 +51,7 @@ export function FlashcardPlayer({ cards, backHref }: { cards: DueCardViewDTO[]; 
     await reviewFlashcard(card.flashcardId, rating);
     setGrading(false);
     setGradedCount((n) => n + 1);
-    if (i + 1 >= cards.length) {
+    if (i + 1 >= deck.length) {
       setDone(true);
     } else {
       setI(i + 1);
@@ -86,7 +91,7 @@ export function FlashcardPlayer({ cards, backHref }: { cards: DueCardViewDTO[]; 
           </button>
           <div className="flex-1 text-center text-[13px] font-semibold text-fg-muted">Daily review</div>
           <div className="text-[12.5px] font-semibold tabular-nums text-fg-subtle">
-            {i + 1} / {cards.length}
+            {i + 1} / {deck.length}
           </div>
         </div>
         <div

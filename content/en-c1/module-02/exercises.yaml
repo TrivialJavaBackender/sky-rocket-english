@@ -272,6 +272,7 @@ core:
     content:
       pre: "It is widely "
       post: " that the outage was caused by a single faulty switch."
+      hint: believe
       answers: [believed, thought, assumed]
       answer_shown: believed
     explanation: "It is widely believed / thought that + clause — the impersonal passive that reports a general opinion without naming anyone who holds it."
@@ -290,6 +291,7 @@ core:
     content:
       pre: "You should get your eyes "
       post: " before you renew your licence."
+      hint: test
       answers: [tested, checked, examined]
       answer_shown: tested
     explanation: "Causative get + object + past participle: get your eyes tested — you arrange it, the optician does it. The bare or -ing forms would make you the examiner."

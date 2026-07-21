@@ -302,9 +302,9 @@ core:
     content:
       pre: "It is "
       post: " that every child have a safe route to school."
-      answers: [essential, vital, imperative, crucial]
+      answers: [essential, vital, imperative, crucial, important, necessary]
       answer_shown: essential
-    explanation: "An adjective of necessity — ESSENTIAL, vital, imperative — is what licenses the bare have in the that-clause. Adjectives like obvious or likely take an ordinary tense instead."
+    explanation: "An adjective of necessity — ESSENTIAL, vital, imperative, important, necessary — is what licenses the bare have in the that-clause. Adjectives like obvious or likely take an ordinary tense instead."
   - type: open_cloze
     group: reading
     grammar_point: would rather and would sooner
@@ -751,6 +751,7 @@ review_pool:
     content:
       pre: "I'd rather we "
       post: " that in public than promised what we cannot deliver."
+      hint: admit
       answers: [admitted]
       answer_shown: admitted
     explanation: "Would rather + subject + past simple is unreal, not past — the admission has not been made. Than introduces the rejected alternative."

@@ -100,6 +100,7 @@ core:
     content:
       pre: "He denied "
       post: " anything about the missing files."
+      hint: know
       answers: [knowing]
       answer_shown: knowing
     explanation: "M03 · Reported speech — Deny is followed by an -ing form, never by an infinitive or a to-clause. Denied to know is not English; denied knowing is the only pattern available."
@@ -244,7 +245,8 @@ core:
     content:
       pre: "You "
       post: " have told her — she had already read it in the minutes."
-      answers: [needn't, need]
+      hint: need
+      answers: [needn't, need not]
       answer_shown: needn't
     explanation: "M07 · Modality — Needn't have told reports an action that was performed but turned out to be unnecessary. Didn't need to tell would suggest the telling never happened, which the context contradicts."
   - type: key_word_transformation

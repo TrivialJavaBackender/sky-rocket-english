@@ -70,7 +70,7 @@ watchouts:
     note: A past starting point needs the perfect to reach the present.
 cloze_cards:                           # 10 шт. → exercise(open_cloze, pool=review)
   - text: "She {{c1::has been working}} here since 2019 — and she still loves it."
-    hint: work                         # опционально
+    hint: work                         # обязательно — базовая форма ответа
     rule: since + past starting point → present perfect; continuous for ongoing activity
 ```
 
@@ -126,6 +126,34 @@ core:                                  # ровно: 8 mc_cloze · 8 open_cloze 
     explanation: …
 review_pool: []                        # 30 смешанных коротких заданий той же формы
 ```
+
+#### Правило восстановимости пропуска (open_cloze)
+
+Пропуск честен, только если ответ **восстанавливается из предложения**. Иначе это угадайка: «He denied ▁▁▁ anything about the missing files» одинаково допускает *knowing*, *taking*, *hearing*, *saying*.
+
+| Что в пропуске | Подсказка | Пример |
+|---|---|---|
+| Служебное слово (предлог, союз, артикль, вспомогательный, модальный, местоимение, частица) | не нужна — грамматика вынуждает ответ | `All complaints are dealt ▁▁▁ by an ombudsman.` → `with` |
+| Знаменательное слово в устойчивой рамке | не нужна — рамку задаёт окружение | `It is well ▁▁▁ revisiting.` → `worth` |
+| Класс задан грамматикой, слово — нет | не нужна, но `answers` перечисляет **весь** класс (≥4) | `It is ▁▁▁ that every child have…` → essential, vital, imperative, crucial, important, necessary |
+| Знаменательное слово, выбранное лексически | **`hint` обязателен** — словарная базовая форма | `He denied ▁▁▁ anything…` → `hint: know` |
+
+```yaml
+  - type: open_cloze
+    group: reading
+    content:
+      pre: "He denied "
+      post: " anything about the missing files."
+      hint: know                       # ← базовая форма, рендерится чипом над строкой
+      answers: [knowing]
+      answer_shown: knowing
+```
+
+Подсказка — это **базовая форма ответа**, а не название части речи: писать `preposition`/`auxiliary` не нужно. Служебные пропуски идут без подсказки намеренно — это формат CAE Reading & Use of English Part 2 (`docs/PLAN.md` §6), и ослаблять его метками класса нельзя.
+
+Правило проверяется автоматически: `OpenClozeContentSchema` (`web/lib/content-schema.ts`) валит sync, если знаменательный ответ идёт без `hint` и без полного набора `answers`. Списки служебных слов и устойчивых рамок — `web/lib/content-gap-words.ts`; новая рамка добавляется туда, и добавление — это утверждение, что контекст её вынуждает.
+
+Отдельно: `answers` должен содержать **все** валидные варианты. `were not ▁▁▁ to use dictionaries` без `supposed`, `It is ▁▁▁ that every child have` без `important` и `necessary` — это не строгость, а ложные ошибки в грейдинге.
 
 ### writing.yaml → `writing_task`
 ```yaml
