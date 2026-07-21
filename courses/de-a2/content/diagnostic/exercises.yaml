@@ -1,35 +1,65 @@
-# Einstufungstest de-a2 — 40 Aufgaben.
-# Aufgabe 1–3 sind das Grammatik-Wörterbuch: Sie führen die Fachwörter ein, die
-# alle Module danach benutzen (courses/de-a2/PLAN.md §5). Danach 37 Aufgaben quer
-# durch den Stoff A1 → A2 — kein Test zum Bestehen, sondern eine Landkarte der Lücken.
+# Einstufungstest de-a2 — Grammatik-Wörterbuch (6) + 40 Aufgaben.
+# Aufgabe 1–6 sind das Grammatik-Wörterbuch: Sie führen die 24 Fachwörter ein,
+# die alle Module danach benutzen (courses/de-a2/PLAN.md §5). Kein Modul benutzt
+# ein Fachwort, das hier fehlt. Jede Aufgabe nimmt einen Bereich: Wortarten,
+# das Nomen, die Verbform, die Konjugation, der Satz, Formen und Zeiten.
+# Danach 40 Aufgaben quer durch den Stoff A1 → A2 — kein Test zum Bestehen,
+# sondern eine Landkarte der Lücken.
 core:
   # ───────────────────────── Grammatik-Wörterbuch ─────────────────────────
   - type: collocation_match
     group: grammar
     id: diag-woerterbuch-1
     content:
-      left: [das Nomen, das Verb, der Artikel, der Plural]
-      right: ["der, die, das", "das Haus, das Kind, die Stadt", "zwei Häuser, drei Kinder", "gehen, lernen, arbeiten"]
-      pairs: { 0: 1, 1: 3, 2: 0, 3: 2 }
-    explanation: "Das Nomen ist ein Ding oder eine Person. Das Verb ist die Aktion. Der Artikel steht vor dem Nomen. Der Plural bedeutet: mehr als eins."
+      left: [das Nomen, das Verb, das Adjektiv, das Adverb]
+      right: ["gehen, lernen, arbeiten", "gern, oft, immer", "das Haus, das Kind, die Stadt", "gut, klein, neu"]
+      pairs: { 0: 2, 1: 0, 2: 3, 3: 1 }
+    explanation: "Das Nomen ist ein Ding oder eine Person. Das Verb ist die Aktion. Das Adjektiv beschreibt ein Nomen. Das Adverb sagt, wie oft oder wie gern man etwas macht."
 
   - type: collocation_match
     group: grammar
     id: diag-woerterbuch-2
     content:
-      left: [die Endung, der Hauptsatz, der Nebensatz, das Fragewort]
-      right: ["Ich lerne Deutsch.", "wer, wo, wie, warum", "…, weil ich müde bin.", "lern-e, lern-st, lern-t"]
-      pairs: { 0: 3, 1: 0, 2: 2, 3: 1 }
-    explanation: "Die Endung steht am Ende vom Verb. Der Hauptsatz kann allein stehen. Der Nebensatz beginnt mit weil, dass oder wenn. Das Fragewort beginnt eine Frage."
+      left: [der Artikel, das Genus, der Singular, der Plural]
+      right: ["ein Kind, ein Buch", "zwei Kinder, drei Bücher", "der, die, das", "der Tisch, die Lampe, das Buch"]
+      pairs: { 0: 2, 1: 3, 2: 0, 3: 1 }
+    explanation: "Der Artikel steht vor dem Nomen. Das Genus ist der, die oder das — jedes Nomen hat eins. Der Singular bedeutet nur eins, der Plural mehr als eins."
 
   - type: collocation_match
     group: grammar
     id: diag-woerterbuch-3
     content:
-      left: [der Kasus, das Partizip, die Vergangenheit, das Adjektiv]
-      right: ["Nominativ, Akkusativ, Dativ", "gut, klein, neu", "Gestern habe ich gelernt.", "gelernt, gemacht, gefahren"]
-      pairs: { 0: 0, 1: 3, 2: 2, 3: 1 }
-    explanation: "Der Kasus zeigt die Rolle vom Nomen im Satz. Das Partizip braucht man für die Vergangenheit. Das Adjektiv beschreibt ein Nomen."
+      left: [der Stamm, die Endung, der Infinitiv, das Präsens]
+      right: ["Heute lerne ich Deutsch.", "lern- in lernen, wohn- in wohnen", "lernen, wohnen, kommen", "-e, -st, -t in lerne, lernst, lernt"]
+      pairs: { 0: 1, 1: 3, 2: 2, 3: 0 }
+    explanation: "Der Stamm ist das Verb ohne Endung. Die Endung steht am Ende und zeigt die Person. Der Infinitiv steht im Wörterbuch. Das Präsens ist die Zeit für heute und jetzt."
+
+  - type: collocation_match
+    group: grammar
+    id: diag-woerterbuch-4
+    content:
+      left: [das Personalpronomen, die Person, regelmäßig, unregelmäßig]
+      right: ["lernen: ich lerne, du lernst, er lernt", "1. Person ich, 2. Person du, 3. Person er", "ich, du, er, wir, ihr, sie", "sein: ich bin, du bist, er ist"]
+      pairs: { 0: 2, 1: 1, 2: 0, 3: 3 }
+    explanation: "Das Personalpronomen steht für eine Person. Die Person zeigt, wer spricht. Regelmäßige Verben folgen immer der gleichen Regel, unregelmäßige nicht."
+
+  - type: collocation_match
+    group: grammar
+    id: diag-woerterbuch-5
+    content:
+      left: [der Hauptsatz, der Nebensatz, das Subjekt, das Fragewort]
+      right: ["Anna in: Anna kommt aus Spanien.", "wer, wo, wie, warum", "Ich lerne Deutsch.", "…, weil ich müde bin."]
+      pairs: { 0: 2, 1: 3, 2: 0, 3: 1 }
+    explanation: "Der Hauptsatz kann allein stehen. Der Nebensatz beginnt mit weil, dass oder wenn. Das Subjekt macht die Aktion. Das Fragewort beginnt eine Frage."
+
+  - type: collocation_match
+    group: grammar
+    id: diag-woerterbuch-6
+    content:
+      left: [der Kasus, das Partizip, die Vergangenheit, trennbar]
+      right: ["Gestern habe ich gelernt.", "Nominativ, Akkusativ, Dativ", "Ich stehe um acht Uhr auf.", "gelernt, gemacht, gefahren"]
+      pairs: { 0: 1, 1: 3, 2: 0, 3: 2 }
+    explanation: "Der Kasus zeigt die Rolle vom Nomen im Satz. Das Partizip braucht man für die Vergangenheit. Ein trennbares Verb hat zwei Teile: Ich stehe … auf."
 
   # ───────────────────────── Wortschatz ─────────────────────────
   - type: collocation_match
@@ -128,6 +158,15 @@ core:
       options: [muss, müssen, müsst, musst]
       answer: 3
     explanation: "du + Modalverb müssen = du musst. Das zweite Verb steht im Infinitiv am Ende: du musst arbeiten."
+
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Der Kurs beginnt "
+      post: " 18 Uhr und dauert zwei Stunden."
+      options: [in, am, um, an]
+      answer: 2
+    explanation: "Für die Uhrzeit benutzt man um: um 18 Uhr, um halb acht. am steht vor dem Tag: am Montag."
 
   # ───────────────────────── Lückentext ─────────────────────────
   - type: open_cloze
@@ -281,6 +320,16 @@ core:
       answer: 1
     explanation: "Für sein benutzt man im Deutschen lieber das Präteritum: ich war. Das klingt natürlicher als ich bin gewesen."
 
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: ""
+      post: " Sie bitte langsam! Ich verstehe Sie nicht."
+      prompt: SPRECHEN
+      options: [Sprich, Sprecht, Sprechen, Spricht]
+      answer: 2
+    explanation: "Die höfliche Bitte an eine fremde Person: Verb + Sie. Sprechen Sie bitte langsam! Zu du gehört Sprich langsam!"
+
   # ───────────────────────── Fehlersuche ─────────────────────────
   - type: error_correction
     group: grammar
@@ -354,6 +403,16 @@ core:
       answers: [Ärztin]
       answer_shown: Ärztin
     explanation: "Die weibliche Form vom Beruf endet auf -in: der Arzt → die Ärztin, der Lehrer → die Lehrerin."
+
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Heute ist der "
+      post: " Mai."
+      prompt: drei
+      answers: [dritte]
+      answer_shown: dritte
+    explanation: "Im Datum steht die Ordinalzahl: der dritte Mai. Von 2 bis 19 heißt die Endung -te, ab 20 heißt sie -ste."
 
   # ───────────────────────── Leseverstehen ─────────────────────────
   - type: reading_comprehension

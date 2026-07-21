@@ -11,9 +11,13 @@ goals:
   - text: Sich in einem kurzen Text vorstellen und ein Formular ausfüllen
     achieved_by: output
 grammar_points:
-  - Personalpronomen und regelmäßige Verben im Präsens
-  - sein und haben
-  - W-Fragen und Ja/Nein-Fragen
+  - Regelmäßige Verben im Präsens
+  - Die Personalpronomen
+  - sein
+  - haben
+  - Die W-Frage
+  - Die Ja/Nein-Frage
+  - Die Fragewörter
 texts:
   - kind: main
     title: Neu in der Stadt

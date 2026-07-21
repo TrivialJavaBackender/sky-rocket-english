@@ -1,5 +1,6 @@
 mode: writing
 genre: Steckbrief und Anmeldeformular
+word_target: [50, 60]
 prompt: |
   Sie möchten einen Sprachkurs besuchen. Schreiben Sie einen kurzen Text
   über sich für Ihre Lehrerin. 50–60 Wörter.

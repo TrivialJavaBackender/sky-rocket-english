@@ -80,11 +80,50 @@ export const VocabPackageSchema = z.object({
 
 // ───────────────────────────── theory.yaml ─────────────────────────────
 
-export const SpotlightItemSchema = z.object({
-  form: z.string().min(1),
-  example: z.string().min(1),
-  note: z.string().min(1),
-});
+/**
+ * A grammar table inside a spotlight item — conjugations, the three genders,
+ * case endings. Paradigms are two-dimensional, and squeezing them into a
+ * dot-separated string ("ich -e · du -st · er/sie/es -t") made the reader
+ * reconstruct the grid in their head, which is exactly the work a table is
+ * supposed to remove. `headers[0]` is usually empty: it labels the row-name
+ * column (the pronoun, the gender).
+ */
+export const SpotlightTableSchema = z
+  .object({
+    headers: z.array(z.string()).min(2),
+    rows: z.array(z.array(z.string()).min(2)).min(1),
+  })
+  .superRefine((table, ctx) => {
+    table.rows.forEach((row, i) => {
+      if (row.length !== table.headers.length) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          path: ['rows', i],
+          message: `row has ${row.length} cells but there are ${table.headers.length} headers — a ragged table renders misaligned`,
+        });
+      }
+    });
+  });
+export type SpotlightTable = z.infer<typeof SpotlightTableSchema>;
+
+export const SpotlightItemSchema = z
+  .object({
+    form: z.string().min(1),
+    // Optional when `table` carries the examples — a paradigm table repeats
+    // itself if every cell is also restated in an example line.
+    example: z.string().min(1).optional(),
+    note: z.string().min(1),
+    table: SpotlightTableSchema.optional(),
+  })
+  .superRefine((item, ctx) => {
+    if (!item.example && !item.table) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        path: ['example'],
+        message: 'a spotlight item needs either `example` or `table` — `form` + `note` alone show the learner no German',
+      });
+    }
+  });
 
 export const SpotlightSchema = z.object({
   title: z.string().min(1),
@@ -297,11 +336,33 @@ export type ExercisesPackage = z.infer<ReturnType<typeof makeExercisesPackageSch
 
 // ───────────────────────────── writing.yaml ─────────────────────────────
 
-export const WritingPackageSchema = z.object({
-  mode: z.enum(['writing', 'speaking']),
-  genre: z.string().min(1),
-  prompt: z.string().min(1),
-  model_answer: z.string().optional(),
-  checklist: z.array(z.string().min(1)).optional(),
-});
+export const WritingPackageSchema = z
+  .object({
+    mode: z.enum(['writing', 'speaking']),
+    genre: z.string().min(1),
+    prompt: z.string().min(1),
+    // Target length as [min, max]. Optional: speaking tasks have no word count,
+    // and the editor shows a plain counter rather than inventing a target when
+    // it is absent. Before this existed the editor hardcoded the CAE 220–260
+    // band and contradicted every A2 prompt (migration 0007).
+    word_target: z.tuple([z.number().int().positive(), z.number().int().positive()]).optional(),
+    model_answer: z.string().optional(),
+    checklist: z.array(z.string().min(1)).optional(),
+  })
+  .superRefine((pkg, ctx) => {
+    if (pkg.word_target && pkg.word_target[0] > pkg.word_target[1]) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        path: ['word_target'],
+        message: `word_target is [min, max] — got [${pkg.word_target[0]}, ${pkg.word_target[1]}]`,
+      });
+    }
+    if (pkg.mode === 'speaking' && pkg.word_target) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        path: ['word_target'],
+        message: 'a speaking task has no word count — drop word_target',
+      });
+    }
+  });
 export type WritingPackage = z.infer<typeof WritingPackageSchema>;

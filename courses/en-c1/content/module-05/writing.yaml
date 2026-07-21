@@ -1,5 +1,6 @@
 mode: writing
 genre: CAE Writing Part 1 essay
+word_target: [220, 260]
 prompt: |
   Your class has attended a panel discussion on how the environmental damage
   caused by modern farming should be dealt with. You have made the notes below.

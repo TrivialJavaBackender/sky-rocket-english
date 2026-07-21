@@ -1,5 +1,6 @@
 mode: writing
 genre: opinion article
+word_target: [220, 260]
 prompt: |
   You have seen this call for contributions on the website of an international
   current-affairs magazine:

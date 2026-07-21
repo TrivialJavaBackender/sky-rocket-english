@@ -1,5 +1,6 @@
 mode: writing
 genre: Steckbrief
+word_target: [30, 40]
 prompt: |
   Schreiben Sie einen kurzen Text über sich. 30–40 Wörter.
 

@@ -5,6 +5,7 @@
 # recommending (M04).
 mode: writing
 genre: formal email of complaint
+word_target: [220, 260]
 prompt: |
   Written under exam conditions: 40 minutes, 220–260 words, no dictionary and no
   second draft. Sit it straight after the 40 test items, in the same session.

@@ -95,8 +95,15 @@ spotlights:
     intro: English connects past experience to the present with the perfect…
     items:
       - form: have + past participle
-        example: She has led three product teams.
+        example: She has led three product teams.       # example ИЛИ table — минимум одно
         note: Completed experience that matters now — the CV tense.
+      - form: "Regelmäßige Verben: Stamm + Endung"      # парадигма → таблица, не цепочка через точку
+        note: Der Stamm bleibt gleich. Nur die Endung wechselt.
+        table:                                          # число ячеек в строке = числу headers
+          headers: ["", "lernen", "wohnen"]
+          rows:
+            - ["ich", "lerne", "wohne"]
+            - ["du", "lernst", "wohnst"]
 watchouts:
   - title: since + present perfect
     bad: I am working here since 2019.
@@ -197,6 +204,7 @@ review_pool: []                        # смешанные короткие з�
 ```yaml
 mode: writing                          # writing | speaking
 genre: formal application email
+word_target: [220, 260]                # опционально; у speaking его не бывает
 prompt: |
   You have seen this advertisement…
 model_answer: |

@@ -27,11 +27,65 @@
 4. **Ошибка не теряется.** Любая ошибка возвращается самим заданием через 2 → 7 → 21 день.
 5. **Повторение встроено в расписание.** Wiederholung в сессиях 2 и 3, ревью модуля на +7 и +21 день, карточки ежедневно.
 
+## 1a. Входной уровень
+
+То, с чего учащийся начинает. Это третий источник «правила опоры» (`docs/COURSE-DESIGN-GUIDE.md` §8): без него граница допустимого в заданиях не определена и держится на чутье автора.
+
+**Принцип замкнутого списка.** Перечень ниже исчерпывающий. Всё, чего в нём нет, курс не считает известным, пока модуль это не введёт. Список сформулирован в лингвистических категориях и не ссылается на номера модулей: он не меняется при перестановке роадмапа, потому что зависимость идёт от плана к заданиям, а не обратно.
+
+**Кому адресован курс.** Вход **ниже выхода A1**: спряжение в настоящем времени, `sein` и `haben` курс вводит с нуля. Это решение, а не недосмотр — курс рассчитан на человека, который слышал немецкий, знает пару десятков слов и не проходил систематического курса. Ярлык «A1 → A2» описывает выход, не вход.
+
+### Предполагается известным
+
+**Письмо и чтение вслух.** Латиница; буквы `ä ö ü` и `ß`; чтение сочетаний `sch`, `ch`, `ei`, `ie`, `eu/äu`, `sp-`, `st-` и конечного `-er`; существительное пишется с заглавной буквы (правописание, не грамматика).
+
+**Числа.** 0–100 на слух и в записи — возраст, цена, номер дома, телефон. Время как ярлык (`um 18 Uhr`), без системы обозначения времени.
+
+**Слова-ярлыки** — узнавание без словоизменения: названия стран и городов (`Deutschland`, `Polen`, `Italien`, `Berlin`); названия языков (`Deutsch`, `Englisch`); дни недели и месяцы; два-три десятка бытовых интернационализмов (`Kaffee`, `Universität`, `Restaurant`, `Computer`, `Telefon`, `Hotel`, `Musik`, `Sport`, `Problem`).
+
+**Служебные слова.**
+- Личные местоимения в именительном: `ich · du · er · sie · es · wir · ihr · sie · Sie` — **только узнавание**. Учащийся понимает, что `wir` значит «мы», но не знает, какого окончания глагола `wir` требует.
+- Сочинительные союзы `und`, `oder`, `aber`.
+- Отрицание `nicht` в конце простого предложения (`Ich verstehe nicht`). Противопоставление `nicht`/`kein` и позиционные правила — не предполагаются.
+- `ja`, `nein`, `bitte`, `danke`.
+
+**Синтаксис.** Порядок «подлежащее — сказуемое — остальное» в простом утверждении. Понимание, что вопрос отличается интонацией.
+
+**Готовые фразы** — нечленимыми блоками, без разбора формы: `Guten Tag` · `Guten Abend` · `Auf Wiedersehen` · `Tschüss` · `Entschuldigung` · `Wie bitte?` · `Ich verstehe nicht` · `Sprechen Sie bitte langsam` · `Danke schön`. Курс вправе давать их в заданиях целиком и вправе требовать их воспроизвести. Курс не вправе требовать разбора: `Sprechen Sie` — императив вежливой формы, и требовать образовать его до соответствующего модуля нельзя.
+
+### Ошибочно считается очевидным
+
+Замкнутый список выше отвечает на любой вопрос, но четыре вещи проскакивают в задания чаще прочего:
+
+- **любой падеж** — включая винительный, и любая падежная форма артикля, местоимения или существительного;
+- **род существительного** и выбор `der/die/das` — род неизвестен даже у знакомых слов;
+- **множественное число существительных** — ни образование, ни окончание `-n` в дательном;
+- **спряжение** — включая `sein` и `haben`.
+
+### Как этим пользоваться
+
+Множество допустимого для задания в модуле N:
+
+```
+допустимо(N) = входной уровень
+             ∪ грамматическая опись модулей 1…N
+             ∪ словообразовательная опись модулей 1…N
+             ∪ лексика модулей 1…N
+```
+
+Описи объявляет роадмап (§4) — строки «Грамматика», «Словообразование» и «Лексика» в карточке модуля. `meta.yaml` повторяет их дословно, ничего не добавляя от себя.
+
+**Проверяется ответ, а не условие.** Ограничение действует на то, что учащийся обязан **произвести**. В рамке задания, в тексте для чтения, в дистракторах и в модельном ответе допустима любая конструкция: `Ich fahre mit dem Bus` можно прочитать за пять модулей до дательного падежа. Требовать вписать `dem` — нельзя.
+
+**Одно задание — одна операция.** Если ответ требует двух неизученных правил сразу (число и падеж, форма и позиция), задание непроходимо даже при верном понимании первого.
+
+**Исключение — Einstufungstest.** Диагностика намеренно покрывает весь диапазон A1 → A2, включая материал последних модулей: её задача — карта пробелов, а не ворота. Правило опоры на неё не распространяется. На все остальные пакеты, включая чек-пойнты, распространяется.
+
 ## 2. Архитектура 40 часов
 
 | Этап | Состав | Часы |
 |---|---|---:|
-| Einstufungstest | 40 заданий + Grammatik-Wörterbuch (метаязык) + короткое письмо | 1,0 |
+| Einstufungstest | Grammatik-Wörterbuch (6) + 40 заданий + короткое письмо | 1,0 |
 | Блок A · Basis | Модули 1–4: Präsens, падежи, порядок слов | 14,0 |
 | Checkpoint A | 30 заданий + письмо | 1,25 |
 | Блок B · Alltag | Модули 5–7: Perfekt, предлоги, Dativ, модальные | 10,5 |
@@ -78,30 +132,37 @@
 
 ## 4. Роадмап по модулям
 
-**Неделя 0 · Einstufungstest — 1 ч.** 40 заданий по грамматике A1 + короткое письмо. Отдельно — **Grammatik-Wörterbuch**: глоссарий немецких грамматических терминов (`der Artikel`, `der Kasus`, `das Nomen`, `das Verb`, `der Plural`, `die Endung`, `der Hauptsatz`, `der Nebensatz`, `das Partizip`, `die Vergangenheit`). Дальше модули не используют ни одного термина вне этого списка — это то, что делает немецкие объяснения читаемыми.
+Карточка модуля объявляет три описи, и вместе с входным уровнем (§1a) они задают всё, что задание модуля вправе потребовать: **Грамматика** (число в скобках — количество пунктов теории, потолок — 8), **Словообразование** (источник для `word_formation`) и **Лексика**. Опись — это обязательство плана, а не пересказ готового контента: `meta.yaml` повторяет её дословно и ничего не добавляет от себя.
+
+**Неделя 0 · Einstufungstest — 1 ч.** 40 заданий по грамматике A1 + короткое письмо. Перед ними — **Grammatik-Wörterbuch**: 6 заданий на сопоставление, вводящих 24 немецких грамматических термина (§5). Дальше модули не используют ни одного термина вне этого списка — это то, что делает немецкие объяснения читаемыми.
 
 ### Блок A · Basis — ядро (М1–М4, 14 ч)
 
 **М1 · Ich und du**
-- Грамматика (6): Präsens регулярных глаголов; `sein` и `haben`; W-Fragen и Ja/Nein-Fragen; Personalpronomen im Nominativ.
+- Грамматика (7): Präsens регулярных глаголов; Personalpronomen im Nominativ; `sein`; `haben`; W-Frage; Ja/Nein-Frage; набор Fragewörter (`wer · was · wie · wo · woher · wann`).
+- Словообразование: страна → язык (`Polen → Polnisch`); профессия мужского рода → женского (`der Koch → die Köchin`); сложное слово из двух существительных (`die Mutter` + `die Sprache` → `die Muttersprache`).
+- Лексикализованные исключения: формы `sprechen` (`du sprichst`, `er spricht`) и `heißen` (`du heißt`) даются как словарные факты и могут требоваться в заданиях. Правило чередования в корне вводится не здесь — объяснения не должны его формулировать.
 - Лексика (30): знакомство, происхождение, языки, числа — *heißen · kommen aus · wohnen in · sprechen · die Sprache · der Beruf · verheiratet · ledig · die Adresse · das Alter · gern · auch*.
 - Тексты: «Neu in der Stadt» (280) + Dialog im Sprachkurs (140).
 - Продукция: Steckbrief/Anmeldeformular + короткое представление себя (50 слов).
 
 **М2 · Familie und Wohnen**
-- Грамматика (8): Artikel `der/die/das`; Plural; Akkusativ; Possessivartikel; Negation `nicht` vs `kein`.
+- Грамматика (8): Artikel `der/die/das`; Genus; Plural; Akkusativ; Possessivartikel; Negation `nicht`; Negation `kein`; Antwort `doch` на отрицательный вопрос.
+- Словообразование: образование множественного числа (`-e · -er · -n · -s` и умлаут); сложное слово из двух существительных (`schlafen` + `das Zimmer` → `das Schlafzimmer`).
 - Лексика (30): семья, жильё, мебель — *die Wohnung · das Zimmer · der Schrank · mieten · die Miete · der Nachbar · gemütlich · hell · die Geschwister · verwandt · umziehen · das Erdgeschoss*.
 - Тексты: «Meine erste eigene Wohnung» (300) + Wohnungsanzeigen (130).
 - Продукция: описание своей квартиры (50 слов).
 
 **М3 · Essen und Einkaufen**
 - Грамматика (7): глаголы с изменением корня (`essen`, `nehmen`, `sprechen`); Imperativ; `möchten` и `können`; Mengenangaben.
+- Словообразование: сложное слово с продуктом (`der Apfel` + `der Saft` → `der Apfelsaft`); место по действию с `-ei` (`backen → die Bäckerei`).
 - Лексика (30): продукты, магазин, цены — *das Lebensmittel · die Bäckerei · das Gemüse · frisch · günstig · die Kasse · das Kilo · die Packung · schmecken · probieren · bestellen · die Rechnung*.
 - Тексты: «Einkaufen am Samstag» (290) + Dialog an der Kasse (150).
 - Продукция: Einkaufszettel + Dialog im Geschäft (записанный, 1–2 мин).
 
 **М4 · Mein Tag**
 - Грамматика (8): trennbare Verben; Uhrzeit; Verb an Position 2 и инверсия; `am`/`um`/`im`.
+- Словообразование: отделяемая приставка меняет значение (`stehen → aufstehen`, `fangen → anfangen`); существительное из глагола без суффикса (`arbeiten → die Arbeit`).
 - Лексика (30): распорядок, работа, встречи — *aufstehen · anfangen · aufhören · der Termin · die Pause · die Arbeit · früh · spät · pünktlich · müde · jeden Tag · am Wochenende*.
 - Тексты: «Ein Tag von Anna» (300) + Terminkalender einer Woche (140).
 - Продукция: описание своего дня (55 слов).
@@ -112,18 +173,21 @@
 
 **М5 · Freizeit und Hobbys**
 - Грамматика (7): Perfekt mit `haben`; Partizip II регулярных и частотных нерегулярных; Zeitangaben `gestern`/`letzte Woche`.
+- Словообразование: Partizip II регулярных глаголов (`ge-` + основа + `-t`) и частотных нерегулярных (`ge-` + основа + `-en`).
 - Лексика (30): хобби, спорт, выходные — *das Hobby · Sport treiben · schwimmen · das Konzert · sich treffen · Freunde besuchen · das Ehrenamt · spannend · langweilig · draußen · zusammen · das Vergnügen*.
 - Тексты: «Was machst du am Wochenende?» (300) + три коротких поста в соцсети (3×50).
 - Продукция: рассказ о прошедших выходных (55 слов).
 
 **М6 · Unterwegs**
-- Грамматика (8): Perfekt mit `sein`; Wechselpräpositionen (`wohin` vs `wo`); `mit + Dativ` для транспорта.
+- Грамматика (8): Perfekt mit `sein`; Wechselpräpositionen (`wohin` vs `wo`); `mit + Dativ` для транспорта; Dativ Plural с окончанием `-n` (`aus neun Ländern`, `mit den Kindern`).
+- Словообразование: Partizip II глаголов движения (`fahren → gefahren`, `gehen → gegangen`); существительное из глагола с `-ung` (`verspäten → die Verspätung`).
 - Лексика (30): дорога, город, транспорт — *die Haltestelle · umsteigen · die Fahrkarte · geradeaus · abbiegen · die Kreuzung · die Reise · ankommen · abfahren · die Verspätung · zu Fuß · unterwegs*.
 - Тексты: «Eine Woche in Wien» (320) + Wegbeschreibung als Dialog (150).
 - Продукция: описание дороги от дома до работы (записанное, 1–2 мин).
 
 **М7 · Gesundheit**
 - Грамматика (8): Dativ als Objekt (`mir`, `dir`, `ihm`); все модальные глаголы; `weh tun`; Imperativ Sie-Form для советов.
+- Словообразование: отрицательный признак с `un-` (`gesund → ungesund`); сложное слово с `-schmerzen` (`der Kopf → die Kopfschmerzen`).
 - Лексика (30): тело, врач, советы — *der Arzt · die Praxis · sich fühlen · das Fieber · die Erkältung · gesund · krank · die Tablette · sich ausruhen · der Rat · helfen · besser werden*.
 - Тексты: «Beim Arzt» (300) + Ratgeber-Text «Gesund durch den Winter» (150).
 - Продукция: E-Mail другу с советом при болезни (55 слов).
@@ -134,18 +198,21 @@
 
 **М8 · Arbeit und Pläne**
 - Грамматика (7): Nebensatz mit `weil` и `dass` (глагол в конец); Zukunft через Präsens + Zeitangabe; профессии.
+- Словообразование: существительное из глагола с `-ung` (`sich bewerben → die Bewerbung`, `ausbilden → die Ausbildung`); деятель с `-er`/`-in` (`arbeiten → der Arbeiter`, `die Arbeiterin`).
 - Лексика (30): работа, планы, заявление — *die Stelle · sich bewerben · die Erfahrung · der Lebenslauf · das Gehalt · die Ausbildung · selbstständig · der Kollege · vorhaben · planen · sich freuen auf · deshalb*.
 - Тексты: «Warum ich meinen Job gewechselt habe» (320) + Stellenanzeige (140).
 - Продукция: короткое Bewerbungsschreiben (60 слов).
 
 **М9 · Einkaufen und Vergleichen**
 - Грамматика (8): Komparativ и Superlativ; `als` vs `wie`; прилагательное после `sein` vs перед существительным (основы склонения).
+- Словообразование: Komparativ и Superlativ (`-er`, `am -sten`, умлаут у коротких прилагательных); признак из существительного с `-ig`/`-lich` (`die Farbe → farbig`, `der Freund → freundlich`).
 - Лексика (30): одежда, цены, мнения — *die Kleidung · die Größe · anprobieren · umtauschen · teuer · billig · passen · gefallen · die Qualität · lieber · am liebsten · meiner Meinung nach*.
 - Тексты: «Online oder im Laden?» (320) + два отзыва на один товар (2×80).
 - Продукция: сравнение двух вещей с обоснованием (55 слов).
 
 **М10 · Feste und Erinnerungen**
 - Грамматика (8): Präteritum от `sein`, `haben` и модальных; Nebensatz mit `wenn` и `als`; Ordinalzahlen и даты.
+- Словообразование: порядковое числительное (`drei → der dritte`, `zwanzig → der zwanzigste`); существительное из глагола с `-ung` (`einladen → die Einladung`, `sich erinnern → die Erinnerung`).
 - Лексика (30): праздники, приглашения, воспоминания — *das Fest · feiern · einladen · die Einladung · das Geschenk · sich erinnern · damals · früher · der Geburtstag · gratulieren · die Erinnerung · schenken*.
 - Тексты: «Weihnachten bei uns früher» (330) + Einladungskarte und Antwort (2×70).
 - Продукция: рассказ о запомнившемся празднике (60 слов).
@@ -164,7 +231,22 @@
      example: Ich fahre mit dem Bus zur Arbeit.
      note: Nach „mit" immer Dativ. der Bus → mit dem Bus.
    ```
-2. **Метаязык только из глоссария.** Grammatik-Wörterbuch вводится в диагностике и фиксирован: `der Artikel`, `der Kasus`, `das Nomen`, `das Verb`, `der Plural`, `die Endung`, `der Hauptsatz`, `der Nebensatz`, `das Partizip`, `die Vergangenheit`. Ни одного термина сверх списка.
+2. **Метаязык только из глоссария.** Grammatik-Wörterbuch вводится в диагностике шестью заданиями на сопоставление, по четыре термина в каждом:
+
+   | № | Область | Термины |
+   |---|---|---|
+   | 1 | части речи | `das Nomen` · `das Verb` · `das Adjektiv` · `das Adverb` |
+   | 2 | существительное | `der Artikel` · `das Genus` · `der Singular` · `der Plural` |
+   | 3 | форма глагола | `der Stamm` · `die Endung` · `der Infinitiv` · `das Präsens` |
+   | 4 | спряжение | `das Personalpronomen` · `die Person` · `regelmäßig` · `unregelmäßig` |
+   | 5 | предложение | `der Hauptsatz` · `der Nebensatz` · `das Subjekt` · `das Fragewort` |
+   | 6 | формы и времена | `der Kasus` · `das Partizip` · `die Vergangenheit` · `trennbar` |
+
+   Первая строка — это ровно набор значений поля `tag` в `vocab.yaml`: части речи учащийся видит у каждого слова, поэтому вводятся они первыми.
+
+   Ни одного термина сверх списка — ни в теории, ни в `register`, ни в объяснениях к ответам. Термин, которого в таблице нет, заменяется показом: вместо «`oft mit Umlaut`» — `der Koch → die Köchin, der Arzt → die Ärztin`. Умлаут виден, называть его незачем.
+
+   **Глоссарий растёт вместе с курсом.** Если модулю нужен термин, которого в таблице нет, термин добавляется сюда и в диагностику — модуль не вводит метаязык сам. Диагностика проходится один раз и раньше всех модулей, поэтому таблица обязана быть полной к моменту, когда написан последний модуль; при написании каждого модуля недостающие термины добавляются заранее. Ожидаемый предел — 28 терминов (7 заданий): дальше стоимость входа перевешивает пользу, и объяснение надо переписывать, а не вводить новый термин.
 3. **`explanation` — 1–2 предложения плюс пример.** `„Nach *mit* steht immer der Dativ. mit dem Bus, mit der Bahn."` Не металингвистическое рассуждение.
 4. **`definition` — перифраза плюс синоним или антоним**, как в Schritte и Menschen: `der Nachbar → Eine Person. Sie wohnt neben mir.`
 
@@ -207,7 +289,7 @@ core: 52 · review_pool: 20 · cloze_cards: 8
 |---|---|---|
 | `mc_cloze` | артикль, форма глагола, предлог | `Ich helfe ___ Bruder.` → dem |
 | `open_cloze` | окончания и служебные слова | `Ich fahre ___ dem Bus.` → mit |
-| `word_formation` | Plural, Partizip II, Komparativ | `zwei ___ (das Buch)` → Bücher |
+| `word_formation` | операцию из словообразовательной описи модуля (§4) | `zwei ___ (das Buch)` → Bücher |
 | `key_word_transformation` | Präsens ↔ Perfekt, Aussage ↔ Frage | `Ich gehe ins Kino.` → GESTERN → `Ich ___ ins Kino ___.` |
 | `grammar_drill` | спряжение, падеж, порядок слов | выбор из четырёх форм |
 | `error_correction` | типовые ошибки русскоязычных | `Ich habe nach Berlin gefahren.` → habe → bin |

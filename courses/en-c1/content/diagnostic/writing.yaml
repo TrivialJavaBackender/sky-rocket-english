@@ -4,6 +4,7 @@
 # Sat cold, before Module 1 — this is a baseline sample, not an exercise.
 mode: writing
 genre: diagnostic essay and recorded monologue
+word_target: [220, 260]
 prompt: |
   This is a baseline. Nothing here is marked and nothing is unlocked by it:
   the point is to capture what your English looks like before the course, so

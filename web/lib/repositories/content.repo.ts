@@ -11,7 +11,13 @@ export interface GrammarSpotlightDTO {
   id: number;
   title: string;
   intro: string | null;
-  items: Array<{ form: string; example: string; note: string }>;
+  items: Array<{
+    form: string;
+    example?: string;
+    note: string;
+    /** Paradigm grid (conjugation, genders, case endings); see content-schema SpotlightTableSchema. */
+    table?: { headers: string[]; rows: string[][] };
+  }>;
   position: number;
 }
 
@@ -73,7 +79,7 @@ export async function listSpotlightsForModule(moduleId: number): Promise<Grammar
     id: idToNumber(r.id),
     title: r.title,
     intro: r.intro,
-    items: (r.items as unknown as Array<{ form: string; example: string; note: string }>) ?? [],
+    items: (r.items as unknown as GrammarSpotlightDTO['items']) ?? [],
     position: r.position,
   }));
 }

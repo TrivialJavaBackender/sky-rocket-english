@@ -1,5 +1,6 @@
 mode: writing
 genre: formal application email
+word_target: [220, 260]
 prompt: |
   You have seen this announcement on an international careers site:
 

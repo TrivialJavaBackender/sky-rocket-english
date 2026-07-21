@@ -1,38 +1,89 @@
 # Modul 01 · Ich und du — Grammatik im Fokus, Watch out! und Lückenkarten.
-# Grenze laut Profil (courses/de-a2/PLAN.md §6): höchstens 2 Spotlights × 4 Punkte.
-# Die Tabelle macht die Arbeit, nicht der Text — `note` bleibt unter 12 Wörtern.
+# 7 Punkte — genau die Grammatik-Liste der Modulkarte (courses/de-a2/PLAN.md §4).
+# Die Obergrenze des Profils (§6) wäre 2 Spotlights × 4 Punkte.
+# Paradigmen stehen als Tabelle, nicht als Kette mit Punkten: „ich -e · du -st ·
+# er -t“ zwingt die Lesenden, das Raster selbst im Kopf zu bauen.
 spotlights:
   - title: "Das Verb im Präsens"
     intro: "Jedes Verb hat einen Stamm und eine Endung. Die Endung zeigt: Wer macht das?"
     items:
-      - form: "ich -e · du -st · er/sie/es -t · wir -en · ihr -t · sie/Sie -en"
-        example: "ich lerne · du lernst · er lernt · wir lernen · ihr lernt · sie lernen"
-        note: "Der Stamm bleibt: lern-. Nur die Endung wechselt."
-      - form: "Personalpronomen im Nominativ"
-        example: "ich, du, er, sie, es, wir, ihr, sie / Sie"
-        note: "Sie mit großem S ist höflich. Für Fremde immer Sie."
-      - form: "sein: ich bin · du bist · er ist · wir sind · ihr seid · sie sind"
-        example: "Ich bin Koch. Du bist müde. Wir sind aus Polen."
-        note: "sein ist unregelmäßig. Diese Formen lernt man auswendig."
-      - form: "haben: ich habe · du hast · er hat · wir haben · ihr habt · sie haben"
-        example: "Ich habe Zeit. Sie hat einen Bruder. Habt ihr Fragen?"
-        note: "Nur du und er/sie/es sind besonders: hast, hat."
+      - form: "Regelmäßige Verben: Stamm + Endung"
+        note: "Der Stamm bleibt gleich. Nur die Endung wechselt."
+        table:
+          headers: ["", "lernen", "wohnen", "kommen"]
+          rows:
+            - ["ich", "lerne", "wohne", "komme"]
+            - ["du", "lernst", "wohnst", "kommst"]
+            - ["er / sie / es", "lernt", "wohnt", "kommt"]
+            - ["wir", "lernen", "wohnen", "kommen"]
+            - ["ihr", "lernt", "wohnt", "kommt"]
+            - ["sie / Sie", "lernen", "wohnen", "kommen"]
+      - form: "Die Personalpronomen"
+        note: "Sie mit großem S ist höflich. Für fremde Personen immer Sie."
+        table:
+          headers: ["", "Singular", "Plural"]
+          rows:
+            - ["1. Person", "ich", "wir"]
+            - ["2. Person", "du", "ihr"]
+            - ["3. Person", "er / sie / es", "sie"]
+            - ["höflich", "Sie", "Sie"]
+      - form: "sein — unregelmäßig"
+        example: Ich bin Koch. Du bist müde. Wir sind aus Polen.
+        note: "Diese Formen lernt man auswendig. Sie kommen sehr oft."
+        table:
+          headers: ["", "sein"]
+          rows:
+            - ["ich", "bin"]
+            - ["du", "bist"]
+            - ["er / sie / es", "ist"]
+            - ["wir", "sind"]
+            - ["ihr", "seid"]
+            - ["sie / Sie", "sind"]
+      - form: "haben — unregelmäßig"
+        example: Ich habe Zeit. Sie hat einen Bruder. Habt ihr Fragen?
+        note: "Nur du und er / sie / es sind besonders: hast, hat."
+        table:
+          headers: ["", "haben"]
+          rows:
+            - ["ich", "habe"]
+            - ["du", "hast"]
+            - ["er / sie / es", "hat"]
+            - ["wir", "haben"]
+            - ["ihr", "habt"]
+            - ["sie / Sie", "haben"]
 
   - title: "Fragen stellen"
-    intro: "Es gibt zwei Fragen: mit Fragewort und ohne. Beide beginnen mit dem Verb oder dem Fragewort."
+    intro: "Es gibt zwei Fragen: mit Fragewort und ohne. Das Verb steht immer vorn."
     items:
-      - form: "Fragewort + Verb + Subjekt"
-        example: "Woher kommst du? — Wo wohnst du? — Wie heißt sie?"
+      - form: "W-Frage: Fragewort + Verb + Subjekt"
         note: "Das Verb steht immer direkt nach dem Fragewort."
-      - form: "Verb + Subjekt (Ja/Nein-Frage)"
-        example: "Hast du Zeit? — Sprichst du Deutsch? — Ist das dein Buch?"
+        table:
+          headers: ["Fragewort", "Verb", "Subjekt", "Rest"]
+          rows:
+            - ["Woher", "kommst", "du", "—"]
+            - ["Wo", "wohnt", "sie", "—"]
+            - ["Wie", "heißen", "Sie", "—"]
+            - ["Was", "machst", "du", "am Wochenende?"]
+      - form: "Ja/Nein-Frage: Verb + Subjekt"
         note: "Ohne Fragewort beginnt der Satz mit dem Verb."
-      - form: "wer · was · wie · wo · woher · wann · warum"
-        example: "Wer ist das? Was machst du? Wie alt bist du? Woher kommt ihr?"
+        table:
+          headers: ["Verb", "Subjekt", "Rest"]
+          rows:
+            - ["Hast", "du", "Zeit?"]
+            - ["Sprichst", "du", "Deutsch?"]
+            - ["Seid", "ihr", "aus Spanien?"]
+            - ["Ist", "das", "dein Buch?"]
+      - form: "Die Fragewörter"
         note: "wo = der Ort. woher = das Land oder die Herkunft."
-      - form: "Antwort: ja · nein · doch"
-        example: "Sprichst du Englisch? — Ja. / Nein. — Du kommst nicht? — Doch!"
-        note: "doch antwortet positiv auf eine negative Frage."
+        table:
+          headers: ["Fragewort", "fragt nach", "Beispielantwort"]
+          rows:
+            - ["wer", "der Person", "Das ist Frau Weber."]
+            - ["was", "der Sache", "Ich lerne Deutsch."]
+            - ["wie", "der Art, dem Namen", "Ich heiße Marek."]
+            - ["wo", "dem Ort", "In Leipzig."]
+            - ["woher", "der Herkunft", "Aus Polen."]
+            - ["wann", "der Zeit", "Um 18 Uhr."]
 
 watchouts:
   - title: "Beruf ohne Artikel"

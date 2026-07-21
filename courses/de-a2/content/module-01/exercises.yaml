@@ -126,21 +126,21 @@ core:
   - type: word_formation
     group: vocab
     content:
-      pre: "Im Kurs sind Leute aus neun "
+      pre: "Ich komme aus Polen. Meine Muttersprache ist "
       post: "."
-      prompt: das Land
-      answers: [Ländern]
-      answer_shown: Ländern
-    explanation: "Plural von das Land ist die Länder. Nach aus steht der Dativ, im Plural mit -n: aus neun Ländern."
+      prompt: Polen
+      answers: [Polnisch]
+      answer_shown: Polnisch
+    explanation: "Das Land heißt Polen, die Sprache heißt Polnisch. Sprachen schreibt man groß."
   - type: word_formation
     group: vocab
     content:
-      pre: "Leipzig und Dresden sind zwei "
-      post: " in Sachsen."
-      prompt: die Stadt
-      answers: [Städte]
-      answer_shown: Städte
-    explanation: "Plural von die Stadt ist die Städte — mit Umlaut und Endung -e."
+      pre: "Ich komme aus Italien und spreche natürlich "
+      post: "."
+      prompt: Italien
+      answers: [Italienisch]
+      answer_shown: Italienisch
+    explanation: "Italien ist das Land, Italienisch ist die Sprache. Die Endung ist meistens -isch."
   - type: word_formation
     group: vocab
     content:
@@ -149,7 +149,7 @@ core:
       prompt: der Koch
       answers: [Köchin]
       answer_shown: Köchin
-    explanation: "Die weibliche Form endet auf -in, oft mit Umlaut: der Koch → die Köchin."
+    explanation: "Die weibliche Form endet auf -in: der Koch → die Köchin, der Arzt → die Ärztin."
   - type: word_formation
     group: vocab
     content:
@@ -162,21 +162,21 @@ core:
   - type: word_formation
     group: vocab
     content:
-      pre: "Meine "
-      post: " in Leipzig hat zwei Zimmer."
-      prompt: wohnen
-      answers: [Wohnung]
-      answer_shown: Wohnung
-    explanation: "Aus dem Verb wohnen wird das Nomen die Wohnung. Nomen schreibt man groß."
+      pre: "Wie ist deine "
+      post: "? — 0341 555 12 34."
+      prompt: das Telefon + die Nummer
+      answers: [Telefonnummer]
+      answer_shown: Telefonnummer
+    explanation: "Zwei Nomen werden ein Wort: das Telefon + die Nummer = die Telefonnummer."
   - type: word_formation
     group: vocab
     content:
-      pre: "Auf dem Tisch liegen drei "
-      post: " für den Kurs."
-      prompt: das Buch
-      answers: [Bücher]
-      answer_shown: Bücher
-    explanation: "Plural von das Buch ist die Bücher — Umlaut plus Endung -er."
+      pre: "Meine Schwester ist "
+      post: " an der Universität in München."
+      prompt: der Student
+      answers: [Studentin]
+      answer_shown: Studentin
+    explanation: "Die weibliche Form endet auf -in: der Student → die Studentin."
 
   # ───────────────────────── Umformung ─────────────────────────
   - type: key_word_transformation
@@ -233,7 +233,7 @@ core:
       prompt: SPRECHEN
       options: [spreche, sprichst, spricht, sprechen]
       answer: 1
-    explanation: "sprechen ist unregelmäßig: e wird zu i. du sprichst, er spricht."
+    explanation: "sprechen hat besondere Formen. Man lernt sie als Wort: ich spreche, du sprichst, er spricht."
   - type: grammar_drill
     group: grammar
     content:
@@ -326,14 +326,14 @@ core:
       words: [Meine, Schwester, sprechen, sehr, gut, "Deutsch."]
       wrong: 2
       correction: "sprechen → spricht"
-    explanation: "Meine Schwester = sie. Die Endung ist -t, und e wird zu i: sie spricht."
+    explanation: "Meine Schwester = sie. Zu sie gehört die Form spricht."
   - type: error_correction
     group: grammar
     content:
-      words: [Ich, komme, aus, die, "Türkei."]
-      wrong: 3
-      correction: "die → der"
-    explanation: "Nach aus steht der Dativ. die Türkei → aus der Türkei."
+      words: [Meine, Eltern, wohnt, in, "Krakau."]
+      wrong: 2
+      correction: "wohnt → wohnen"
+    explanation: "Meine Eltern sind mehrere Personen = sie. Die Endung ist -en: sie wohnen."
   - type: error_correction
     group: grammar
     content:
@@ -545,11 +545,11 @@ review_pool:
   - type: open_cloze
     group: grammar
     content:
-      pre: "Ich bin ledig und habe "
-      post: " Kinder."
-      answers: [keine]
-      answer_shown: keine
-    explanation: "Nomen im Plural verneint man mit keine: keine Kinder."
+      pre: "Das ist Frau Weber. "
+      post: " ist unsere Lehrerin."
+      answers: [sie]
+      answer_shown: Sie
+    explanation: "Frau Weber ist eine Person = sie. Das Personalpronomen ersetzt den Namen."
   - type: open_cloze
     group: grammar
     content:
@@ -593,7 +593,7 @@ review_pool:
       prompt: SPRECHEN
       options: [spreche, sprichst, spricht, sprechen]
       answer: 2
-    explanation: "Frau Weber = sie. sprechen ist unregelmäßig: sie spricht."
+    explanation: "Frau Weber = sie. Zu sie gehört die Form spricht."
   - type: error_correction
     group: grammar
     content:

@@ -9,8 +9,6 @@ import { Kicker } from '@/components/ui/Kicker';
 import { PromptText } from './PromptText';
 import { useActionRefresh } from '@/components/useActionRefresh';
 
-const WORD_TARGET: [number, number] = [220, 260];
-
 /**
  * UC-10 writing production (`mode: 'writing'`) + UC-11 speaking production
  * (`mode: 'speaking'`) — ARCHITECTURE.md §1.2. Speaking has no
@@ -23,8 +21,11 @@ export function WritingEditor({ task, stepId, alreadySubmittedBody }: { task: Wr
   const [submitted, setSubmitted] = useState(!!alreadySubmittedBody);
   const { pending: submitting, run } = useActionRefresh();
   const wordCount = body.trim().length === 0 ? 0 : body.trim().split(/\s+/).length;
-  const [min, max] = WORD_TARGET;
-  const inRange = wordCount >= min && wordCount <= max;
+  // From the task, not a constant: this used to be a hardcoded [220, 260] — the
+  // CAE essay band — which told a de-a2 learner writing a 30-word Steckbrief
+  // they were 190 words short (migration 0007, §8 D4).
+  const target = task.wordTarget;
+  const inRange = target !== null && wordCount >= target[0] && wordCount <= target[1];
 
   function handleSubmitWriting() {
     if (!body.trim()) return;
@@ -61,7 +62,8 @@ export function WritingEditor({ task, stepId, alreadySubmittedBody }: { task: Wr
           />
           <div className="mt-1.5 flex items-center justify-between text-[13px]">
             <span className={inRange ? 'font-semibold text-green-text' : 'text-fg-faint'}>
-              {wordCount} words <span className="text-fg-faint">({min}–{max} target)</span>
+              {wordCount} words
+              {target && <span className="text-fg-faint"> ({target[0]}–{target[1]} target)</span>}
             </span>
           </div>
           {!submitted ? (

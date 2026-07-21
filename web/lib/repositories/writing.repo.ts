@@ -15,9 +15,11 @@ export interface WritingTaskDTO {
   promptMd: string;
   modelAnswerMd: string | null;
   checklist: string[];
+  /** Target length [min, max]; null when the task sets none (speaking, or a course that declines to). */
+  wordTarget: [number, number] | null;
 }
 
-function mapTask(t: { id: bigint; module_id: bigint | null; checkpoint_id: bigint | null; mode: string; genre: string; prompt_md: string; model_answer_md: string | null; checklist: Prisma.JsonValue }): WritingTaskDTO {
+function mapTask(t: { id: bigint; module_id: bigint | null; checkpoint_id: bigint | null; mode: string; genre: string; prompt_md: string; model_answer_md: string | null; checklist: Prisma.JsonValue; word_min: number | null; word_max: number | null }): WritingTaskDTO {
   return {
     id: idToNumber(t.id),
     moduleId: t.module_id === null ? null : idToNumber(t.module_id),
@@ -27,6 +29,7 @@ function mapTask(t: { id: bigint; module_id: bigint | null; checkpoint_id: bigin
     promptMd: t.prompt_md,
     modelAnswerMd: t.model_answer_md,
     checklist: Array.isArray(t.checklist) ? (t.checklist as string[]) : [],
+    wordTarget: t.word_min !== null && t.word_max !== null ? [t.word_min, t.word_max] : null,
   };
 }
 

@@ -476,7 +476,10 @@ async function upsertWritingTask(
   counter: Counter,
 ): Promise<void> {
   const checklist = pkg.checklist ?? [];
-  const hash = sha256(canonical({ mode: pkg.mode, genre: pkg.genre, prompt: pkg.prompt, model_answer: pkg.model_answer ?? null, checklist }));
+  const [wordMin, wordMax] = pkg.word_target ?? [null, null];
+  const hash = sha256(
+    canonical({ mode: pkg.mode, genre: pkg.genre, prompt: pkg.prompt, model_answer: pkg.model_answer ?? null, checklist, word_target: pkg.word_target ?? null }),
+  );
   const moduleId = owner.column === 'module_id' ? owner.id : null;
   const checkpointId = owner.column === 'checkpoint_id' ? owner.id : null;
 
@@ -486,15 +489,15 @@ async function upsertWritingTask(
   );
   if (existing.rowCount === 0) {
     await client.query(
-      `insert into writing_task (module_id, checkpoint_id, mode, genre, prompt_md, model_answer_md, checklist, position, content_hash, ident)
-       values ($1,$2,$3::task_mode,$4,$5,$6,$7,$8,$9,$10)`,
-      [moduleId, checkpointId, pkg.mode, pkg.genre, pkg.prompt, pkg.model_answer ?? null, JSON.stringify(checklist), 1, hash, ident],
+      `insert into writing_task (module_id, checkpoint_id, mode, genre, prompt_md, model_answer_md, checklist, word_min, word_max, position, content_hash, ident)
+       values ($1,$2,$3::task_mode,$4,$5,$6,$7,$8,$9,$10,$11,$12)`,
+      [moduleId, checkpointId, pkg.mode, pkg.genre, pkg.prompt, pkg.model_answer ?? null, JSON.stringify(checklist), wordMin, wordMax, 1, hash, ident],
     );
     counter.added++;
   } else if (existing.rows[0].content_hash !== hash) {
     await client.query(
-      'update writing_task set mode=$1::task_mode, genre=$2, prompt_md=$3, model_answer_md=$4, checklist=$5, content_hash=$6 where id=$7',
-      [pkg.mode, pkg.genre, pkg.prompt, pkg.model_answer ?? null, JSON.stringify(checklist), hash, existing.rows[0].id],
+      'update writing_task set mode=$1::task_mode, genre=$2, prompt_md=$3, model_answer_md=$4, checklist=$5, word_min=$6, word_max=$7, content_hash=$8 where id=$9',
+      [pkg.mode, pkg.genre, pkg.prompt, pkg.model_answer ?? null, JSON.stringify(checklist), wordMin, wordMax, hash, existing.rows[0].id],
     );
     counter.updated++;
   } else {
