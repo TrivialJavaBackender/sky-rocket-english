@@ -1,0 +1,644 @@
+# Modul 01 · Ich und du — 52 Aufgaben im Kern, 20 im Wiederholungspool.
+# Verteilung laut Profil (courses/de-a2/PLAN.md §6): 6 mc_cloze · 8 open_cloze ·
+# 6 word_formation · 4 key_word_transformation · 8 grammar_drill ·
+# 6 error_correction · 8 collocation_match · 6 reading_comprehension.
+#
+# Kein spiralisches Wiederholen: M1 ist das erste Modul, es gibt noch keinen
+# Stoff davor. Ab M2 gehören 2–3 Aufgaben dem vorherigen Modul.
+core:
+  # ───────────────────────── Multiple Choice ─────────────────────────
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Marek "
+      post: " aus Polen und wohnt jetzt in Leipzig."
+      options: [komme, kommst, kommt, kommen]
+      answer: 2
+    explanation: "Marek = er. Bei er/sie/es endet das Verb auf -t: er kommt."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Ich "
+      post: " Köchin und arbeite in einem Restaurant."
+      options: [bin, bist, ist, sind]
+      answer: 0
+    explanation: "ich + sein = bin. Vor dem Beruf steht kein Artikel: Ich bin Köchin."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: ""
+      post: " ihr noch Fragen zum Kurs?"
+      options: [Habe, Hast, Hat, Habt]
+      answer: 3
+    explanation: "ihr + haben = habt. Ohne Fragewort beginnt die Frage mit dem Verb."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: ""
+      post: " wohnst du? — In der Bahnhofstraße."
+      options: [Woher, Wo, Wohin, Wer]
+      answer: 1
+    explanation: "wo fragt nach dem Ort. woher fragt nach der Herkunft: Woher kommst du?"
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Meine Schwester "
+      post: " zwei Kinder."
+      options: [hat, habe, hast, haben]
+      answer: 0
+    explanation: "Meine Schwester = sie. sie + haben = hat."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Wie "
+      post: " Sie? — Mein Name ist Weber."
+      options: [heiße, heißt, heißen, heißst]
+      answer: 2
+    explanation: "Sie (höflich) + Verb = Stamm + -en: Wie heißen Sie? Für Fremde immer Sie."
+
+  # ───────────────────────── Lückentext ─────────────────────────
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Ich komme "
+      post: " Polen, aus Krakau."
+      answers: [aus]
+      answer_shown: aus
+    explanation: "Herkunft: kommen aus + Land oder Stadt. Ich komme aus Italien, aus Wien."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Ich "
+      post: " Koch von Beruf."
+      answers: [bin]
+      answer_shown: bin
+    explanation: "ich + sein = bin. Der Beruf steht mit sein und ohne Artikel."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Wie alt "
+      post: " du? — Ich bin 27."
+      answers: [bist]
+      answer_shown: bist
+    explanation: "du + sein = bist. Das Alter steht immer mit sein, nicht mit haben."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Anna "
+      post: " zwei Brüder und eine Schwester."
+      answers: [hat]
+      answer_shown: hat
+    explanation: "Anna = sie. sie + haben = hat. Diese Form ist unregelmäßig."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: ""
+      post: " ihr aus Spanien? — Nein, wir kommen aus Portugal."
+      answers: [seid]
+      answer_shown: seid
+    explanation: "ihr + sein = seid. Die Antwort wir kommen zeigt: die Frage geht an mehrere Personen."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Ich spreche Polnisch "
+      post: " Englisch, aber nur wenig Deutsch."
+      answers: [und]
+      answer_shown: und
+    explanation: "und verbindet zwei gleiche Teile. Danach folgt der Gegensatz mit aber."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Entschuldigung, ich verstehe Sie "
+      post: ". Sprechen Sie bitte langsam."
+      answers: [nicht]
+      answer_shown: nicht
+    explanation: "nicht verneint das Verb und steht am Ende: Ich verstehe Sie nicht."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: ""
+      post: " kommst du? — Aus der Türkei."
+      answers: [woher]
+      answer_shown: Woher
+    explanation: "Die Antwort nennt ein Land, also fragt man mit woher. wo wäre der Ort, wohin die Richtung."
+
+  # ───────────────────────── Wortbildung ─────────────────────────
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Im Kurs sind Leute aus neun "
+      post: "."
+      prompt: das Land
+      answers: [Ländern]
+      answer_shown: Ländern
+    explanation: "Plural von das Land ist die Länder. Nach aus steht der Dativ, im Plural mit -n: aus neun Ländern."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Leipzig und Dresden sind zwei "
+      post: " in Sachsen."
+      prompt: die Stadt
+      answers: [Städte]
+      answer_shown: Städte
+    explanation: "Plural von die Stadt ist die Städte — mit Umlaut und Endung -e."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Meine Frau ist "
+      post: " und arbeitet in einem Restaurant."
+      prompt: der Koch
+      answers: [Köchin]
+      answer_shown: Köchin
+    explanation: "Die weibliche Form endet auf -in, oft mit Umlaut: der Koch → die Köchin."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Frau Weber ist "
+      post: " an einer Sprachschule."
+      prompt: der Lehrer
+      answers: [Lehrerin]
+      answer_shown: Lehrerin
+    explanation: "der Lehrer → die Lehrerin. Vor dem Beruf steht kein Artikel: Sie ist Lehrerin."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Meine "
+      post: " in Leipzig hat zwei Zimmer."
+      prompt: wohnen
+      answers: [Wohnung]
+      answer_shown: Wohnung
+    explanation: "Aus dem Verb wohnen wird das Nomen die Wohnung. Nomen schreibt man groß."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Auf dem Tisch liegen drei "
+      post: " für den Kurs."
+      prompt: das Buch
+      answers: [Bücher]
+      answer_shown: Bücher
+    explanation: "Plural von das Buch ist die Bücher — Umlaut plus Endung -er."
+
+  # ───────────────────────── Umformung ─────────────────────────
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: Mein Name ist Marek.
+      key: HEISSEN
+      pre: "Ich "
+      post: " Marek."
+      answers: [heiße]
+      hint: 1 Wort
+      answer_shown: heiße
+    explanation: "Mein Name ist … und Ich heiße … bedeuten das Gleiche. ich + heißen = heiße."
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: Ich bin Koch von Beruf.
+      key: ARBEITEN
+      pre: "Ich "
+      post: " Koch."
+      answers: [arbeite als]
+      hint: 2 Wörter
+      answer_shown: arbeite als
+    explanation: "arbeiten als + Beruf, ohne Artikel: Ich arbeite als Koch."
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: Du kommst aus Spanien, oder?
+      key: WOHER
+      pre: ""
+      post: " du?"
+      answers: [woher kommst]
+      hint: 2 Wörter
+      answer_shown: Woher kommst
+    explanation: "Aus der Ja/Nein-Frage wird eine W-Frage. Nach dem Fragewort steht sofort das Verb: Woher kommst du?"
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: Ich bin nicht verheiratet.
+      key: LEDIG
+      pre: "Ich "
+      post: "."
+      answers: [bin ledig]
+      hint: 2 Wörter
+      answer_shown: bin ledig
+    explanation: "ledig ist das Gegenteil von verheiratet. Im Formular steht dafür Familienstand: ledig."
+
+  # ───────────────────────── Grammatik-Drill ─────────────────────────
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Du "
+      post: " sehr gut Deutsch."
+      prompt: SPRECHEN
+      options: [spreche, sprichst, spricht, sprechen]
+      answer: 1
+    explanation: "sprechen ist unregelmäßig: e wird zu i. du sprichst, er spricht."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Wir "
+      post: " zusammen Deutsch."
+      prompt: LERNEN
+      options: [lerne, lernst, lernt, lernen]
+      answer: 3
+    explanation: "wir + Verb = Stamm + -en. Die Form sieht aus wie der Infinitiv: wir lernen."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Ich "
+      post: " seit einem Jahr in Leipzig."
+      prompt: WOHNEN
+      options: [wohne, wohnst, wohnt, wohnen]
+      answer: 0
+    explanation: "ich + Verb = Stamm + -e: ich wohne."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Ihr "
+      post: " aus Marokko, richtig?"
+      prompt: KOMMEN
+      options: [komme, kommst, kommt, kommen]
+      answer: 2
+    explanation: "ihr + Verb = Stamm + -t: ihr kommt. Die Endung ist gleich wie bei er/sie/es."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Das "
+      post: " meine Schwester Lena."
+      prompt: SEIN
+      options: [bin, ist, sind, bist]
+      answer: 1
+    explanation: "Das ist … stellt eine Person vor. Das = es, also die Form ist."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Wie "
+      post: " man Ihren Namen?"
+      prompt: SCHREIBEN
+      options: [schreibt, schreibe, schreibst, schreiben]
+      answer: 0
+    explanation: "man ist wie er/sie/es, also Endung -t: Wie schreibt man das?"
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Meine Eltern "
+      post: " noch in Krakau."
+      prompt: WOHNEN
+      options: [wohne, wohnst, wohnt, wohnen]
+      answer: 3
+    explanation: "Meine Eltern sind mehrere Personen = sie. Die Endung ist -en: sie wohnen."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: ""
+      post: " ist das? — Das ist Frau Weber, unsere Lehrerin."
+      prompt: PERSON
+      options: [Was, Wie, Wer, Wo]
+      answer: 2
+    explanation: "wer fragt nach einer Person. was fragt nach einer Sache."
+
+  # ───────────────────────── Fehlersuche ─────────────────────────
+  - type: error_correction
+    group: grammar
+    content:
+      words: [Ich, habe, "25", Jahre, "alt."]
+      wrong: 1
+      correction: "habe → bin"
+    explanation: "Das Alter steht mit sein: Ich bin 25 Jahre alt."
+  - type: error_correction
+    group: grammar
+    content:
+      words: [Woher, du, kommst, "?"]
+      wrong: 1
+      correction: "du kommst → kommst du"
+    explanation: "Nach dem Fragewort steht sofort das Verb: Woher kommst du?"
+  - type: error_correction
+    group: grammar
+    content:
+      words: [Ich, bin, ein, Student, aus, "Polen."]
+      wrong: 2
+      correction: "ein → (nichts)"
+    explanation: "Vor einem Beruf und vor Student steht kein Artikel: Ich bin Student."
+  - type: error_correction
+    group: grammar
+    content:
+      words: [Meine, Schwester, sprechen, sehr, gut, "Deutsch."]
+      wrong: 2
+      correction: "sprechen → spricht"
+    explanation: "Meine Schwester = sie. Die Endung ist -t, und e wird zu i: sie spricht."
+  - type: error_correction
+    group: grammar
+    content:
+      words: [Ich, komme, aus, die, "Türkei."]
+      wrong: 3
+      correction: "die → der"
+    explanation: "Nach aus steht der Dativ. die Türkei → aus der Türkei."
+  - type: error_correction
+    group: grammar
+    content:
+      words: [Wir, seid, alle, im, gleichen, "Kurs."]
+      wrong: 1
+      correction: "seid → sind"
+    explanation: "wir + sein = sind. seid gehört zu ihr."
+
+  # ───────────────────────── Wörter verbinden ─────────────────────────
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [Deutsch, ein Formular, den Namen, eine Frage]
+      right: [buchstabieren, sprechen, stellen, ausfüllen]
+      pairs: { 0: 1, 1: 3, 2: 0, 3: 2 }
+    explanation: "Feste Verbindungen: Deutsch sprechen, ein Formular ausfüllen, den Namen buchstabieren, eine Frage stellen."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [der Vorname, der Nachname, das Alter, die Adresse]
+      right: ["Nowak", "Bahnhofstraße 12", "Marek", "32 Jahre"]
+      pairs: { 0: 2, 1: 0, 2: 3, 3: 1 }
+    explanation: "Im Formular: Vorname Marek, Nachname Nowak, Alter 32 Jahre, Adresse Bahnhofstraße 12."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [Polen, Krakau, Koch, Polnisch]
+      right: [die Stadt, das Land, die Sprache, der Beruf]
+      pairs: { 0: 1, 1: 0, 2: 3, 3: 2 }
+    explanation: "Polen ist ein Land, Krakau eine Stadt, Koch ein Beruf, Polnisch eine Sprache."
+  - type: collocation_match
+    group: grammar
+    content:
+      left: [ich, du, er, wir]
+      right: [bist, sind, bin, ist]
+      pairs: { 0: 2, 1: 0, 2: 3, 3: 1 }
+    explanation: "sein: ich bin, du bist, er ist, wir sind."
+  - type: collocation_match
+    group: grammar
+    content:
+      left: [ich, du, ihr, sie]
+      right: [habt, hast, haben, habe]
+      pairs: { 0: 3, 1: 1, 2: 0, 3: 2 }
+    explanation: "haben: ich habe, du hast, ihr habt, sie haben."
+  - type: collocation_match
+    group: grammar
+    content:
+      left: [Woher, Wo, Wie, Was]
+      right: ["wohnst du?", "machst du?", "kommst du?", "heißt du?"]
+      pairs: { 0: 2, 1: 0, 2: 3, 3: 1 }
+    explanation: "woher → die Herkunft, wo → der Ort, wie → der Name, was → die Sache."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [verheiratet, ledig, langsam, gern]
+      right: [nicht schnell, mit Freude, hat eine Familie, nicht verheiratet]
+      pairs: { 0: 2, 1: 3, 2: 0, 3: 1 }
+    explanation: "verheiratet und ledig sind Gegenteile. langsam ist das Gegenteil von schnell. gern zeigt Freude."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [sich vorstellen, kennenlernen, wiederholen, verstehen]
+      right: [noch einmal sagen, den eigenen Namen sagen, wissen was es bedeutet, zum ersten Mal treffen]
+      pairs: { 0: 1, 1: 3, 2: 0, 3: 2 }
+    explanation: "Diese vier Verben braucht man in jeder ersten Kursstunde."
+
+  # ───────────────────────── Leseverstehen ─────────────────────────
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Marek Nowak ist 32 Jahre alt und kommt aus Polen, aus Krakau. Seit einem Jahr wohnt er in Leipzig. Von Beruf ist er Koch und arbeitet in einem kleinen Restaurant in der Nähe vom Bahnhof."
+      q: Was macht Marek in Leipzig?
+      options:
+        - Er studiert an der Universität.
+        - Er arbeitet als Koch.
+        - Er sucht eine Wohnung.
+        - Er besucht seine Familie.
+      answer: 1
+    explanation: "Im Text steht: Von Beruf ist er Koch und arbeitet in einem kleinen Restaurant."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Seine Muttersprache ist Polnisch, aber er spricht auch Englisch und ein bisschen Deutsch. „Am Anfang war alles schwer“, sagt er. „Ich verstehe die Leute hier oft nicht, und sie sprechen sehr schnell.“"
+      q: Welche Sprache spricht Marek am besten?
+      options:
+        - Polnisch
+        - Deutsch
+        - Englisch
+        - Alle drei gleich gut
+      answer: 0
+    explanation: "Polnisch ist seine Muttersprache — die erste Sprache. Deutsch spricht er nur ein bisschen."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Zweimal pro Woche besucht Marek einen Sprachkurs. Der Kurs beginnt am Montag und am Mittwoch um 18 Uhr. In der ersten Stunde stellt sich jeder kurz vor: Name, Land, Beruf."
+      q: Wie oft geht Marek in den Sprachkurs?
+      options:
+        - Jeden Tag
+        - Einmal pro Woche
+        - Am Wochenende
+        - Zweimal pro Woche
+      answer: 3
+    explanation: "Im Text steht: Zweimal pro Woche — am Montag und am Mittwoch."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Im Kurs sind vierzehn Leute aus neun Ländern. Neben Marek sitzt Fatima. Sie kommt aus Marokko, ist 27 und ledig. Sie studiert Informatik an der Universität und spricht schon sehr gut Deutsch."
+      q: Was wissen wir über Fatima?
+      options:
+        - Sie ist verheiratet und hat Kinder.
+        - Sie arbeitet in einem Restaurant.
+        - Sie studiert und ist nicht verheiratet.
+        - Sie lernt seit einem Monat Deutsch.
+      answer: 2
+    explanation: "Im Text steht: ist 27 und ledig … Sie studiert Informatik. ledig bedeutet nicht verheiratet."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Am Ende der Stunde bekommt jeder ein Formular. Alle füllen es aus: Vorname, Nachname, Alter, Adresse, Telefonnummer, E-Mail-Adresse. Marek schreibt seine neue Adresse in Leipzig hinein."
+      q: Welche Adresse schreibt Marek in das Formular?
+      options:
+        - Seine Adresse in Leipzig
+        - Seine alte Adresse in Krakau
+        - Die Adresse vom Restaurant
+        - Die Adresse der Sprachschule
+      answer: 0
+    explanation: "Im Text steht: seine neue Adresse in Leipzig. Die alte Adresse in Krakau steht nicht im Formular."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Marek ist verheiratet, aber seine Frau wohnt noch in Krakau. Im Sommer kommt sie nach Deutschland. Nach dem Kurs gehen einige Leute zusammen in ein Café. Sie trinken Kaffee und sprechen Deutsch — langsam, mit vielen Fehlern, aber sie sprechen."
+      q: Warum sprechen die Leute im Café Deutsch?
+      options:
+        - Weil sie keine andere Sprache können.
+        - Weil sie üben wollen.
+        - Weil die Lehrerin dabei ist.
+        - Weil im Café nur Deutsch erlaubt ist.
+      answer: 1
+    explanation: "Sie sprechen langsam und mit vielen Fehlern — aber sie sprechen. Das ist Üben, nicht Können."
+
+# ───────────────────────── Wiederholungspool ─────────────────────────
+# 20 kurze Aufgaben für das Modul-Quiz und die Wiederholung nach 7 und 21 Tagen.
+# Dazu kommen 8 Aufgaben aus theory.yaml (cloze_cards).
+review_pool:
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Fatima "
+      post: " Informatik an der Universität."
+      options: [studiere, studierst, studiert, studieren]
+      answer: 2
+    explanation: "Fatima = sie, also Endung -t: sie studiert."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Wir "
+      post: " aus neun verschiedenen Ländern."
+      options: [bin, bist, ist, sind]
+      answer: 3
+    explanation: "wir + sein = sind."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: ""
+      post: " du Zeit am Mittwoch?"
+      options: [Hast, Habe, Hat, Habt]
+      answer: 0
+    explanation: "du + haben = hast. Die Ja/Nein-Frage beginnt mit dem Verb."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Wie alt "
+      post: " deine Schwester?"
+      options: [bin, bist, ist, sind]
+      answer: 2
+    explanation: "deine Schwester = sie, also ist. Das Alter steht mit sein."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Ich wohne "
+      post: " Leipzig, in der Bahnhofstraße."
+      answers: [in]
+      answer_shown: in
+    explanation: "wohnen in + Stadt: Ich wohne in Leipzig."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Er "
+      post: " Koch und arbeitet abends."
+      answers: [ist]
+      answer_shown: ist
+    explanation: "er + sein = ist. Vor dem Beruf steht kein Artikel."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Wir "
+      post: " zwei Kinder, einen Sohn und eine Tochter."
+      answers: [haben]
+      answer_shown: haben
+    explanation: "wir + haben = haben. Die Form ist gleich wie der Infinitiv."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Sprichst du Englisch? — Nein, "
+      post: " Englisch spreche ich nicht."
+      answers: [aber]
+      answer_shown: aber
+    explanation: "aber zeigt den Gegensatz zur Erwartung."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Ich bin ledig und habe "
+      post: " Kinder."
+      answers: [keine]
+      answer_shown: keine
+    explanation: "Nomen im Plural verneint man mit keine: keine Kinder."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: ""
+      post: " alt bist du? — Ich bin 32."
+      answers: [wie]
+      answer_shown: Wie
+    explanation: "Wie alt …? fragt nach dem Alter."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Ihr "
+      post: " sehr schnell Deutsch."
+      prompt: LERNEN
+      options: [lerne, lernst, lernt, lernen]
+      answer: 2
+    explanation: "ihr + Verb = Stamm + -t: ihr lernt."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Ich "
+      post: " den Namen: N-o-w-a-k."
+      prompt: BUCHSTABIEREN
+      options: [buchstabiere, buchstabierst, buchstabiert, buchstabieren]
+      answer: 0
+    explanation: "ich + Verb = Stamm + -e: ich buchstabiere."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: ""
+      post: " machst du am Wochenende?"
+      prompt: SACHE
+      options: [Wer, Wo, Was, Wie]
+      answer: 2
+    explanation: "was fragt nach einer Sache oder Aktivität."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Frau Weber "
+      post: " sehr langsam und deutlich."
+      prompt: SPRECHEN
+      options: [spreche, sprichst, spricht, sprechen]
+      answer: 2
+    explanation: "Frau Weber = sie. sprechen ist unregelmäßig: sie spricht."
+  - type: error_correction
+    group: grammar
+    content:
+      words: [Wie, alt, hast, "du?"]
+      wrong: 2
+      correction: "hast → bist"
+    explanation: "Das Alter steht mit sein: Wie alt bist du?"
+  - type: error_correction
+    group: grammar
+    content:
+      words: [Ich, bin, eine, Lehrerin, in, "Leipzig."]
+      wrong: 2
+      correction: "eine → (nichts)"
+    explanation: "Vor dem Beruf steht kein Artikel: Ich bin Lehrerin."
+  - type: error_correction
+    group: grammar
+    content:
+      words: [Wo, ihr, wohnt, "?"]
+      wrong: 1
+      correction: "ihr wohnt → wohnt ihr"
+    explanation: "Nach dem Fragewort steht sofort das Verb: Wo wohnt ihr?"
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Meine "
+      post: " ist Arabisch."
+      prompt: die Mutter + die Sprache
+      answers: [Muttersprache]
+      answer_shown: Muttersprache
+    explanation: "Zwei Nomen werden ein Wort: die Mutter + die Sprache = die Muttersprache."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [Kaffee, Deutsch, einen Kurs, Leute]
+      right: [besuchen, trinken, kennenlernen, lernen]
+      pairs: { 0: 1, 1: 3, 2: 0, 3: 2 }
+    explanation: "Kaffee trinken, Deutsch lernen, einen Kurs besuchen, Leute kennenlernen."
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: Wie ist Ihr Name?
+      key: HEISSEN
+      pre: "Wie "
+      post: " Sie?"
+      answers: [heißen]
+      hint: 1 Wort
+      answer_shown: heißen
+    explanation: "Wie ist Ihr Name? und Wie heißen Sie? bedeuten das Gleiche. Sie + Verb = Stamm + -en."

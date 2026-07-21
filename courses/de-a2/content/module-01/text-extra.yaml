@@ -1,0 +1,37 @@
+kind: extra
+kicker: DIALOG
+title: Im Sprachkurs
+meta: ≈ 1 Min · die erste Stunde, Frage und Antwort
+word_count: 148
+body:
+  - - t: "FRAU WEBER: Guten Abend! Willkommen im Kurs. Darf ich mich kurz vorstellen? Mein Name ist Weber, Anna Weber. Und wie heißen Sie?"
+  - - t: "MAREK: Ich heiße Marek Nowak."
+  - - t: "FRAU WEBER: Können Sie den Nachnamen bitte "
+    - g: buchstabieren
+    - t: "?"
+  - - t: "MAREK: Ja, gern. N-o-w-a-k."
+  - - t: "FRAU WEBER: Danke. Und woher kommen Sie, Herr Nowak?"
+  - - t: "MAREK: Aus Polen, aus Krakau. Ich wohne jetzt hier in Leipzig."
+  - - t: "FRAU WEBER: Sehr schön. Was sind Sie von Beruf?"
+  - - t: "MAREK: Ich bin Koch. Ich arbeite in einem Restaurant."
+  - - t: "FRAU WEBER: Und Sie, Fatima? Sind Sie auch "
+    - g: berufstätig
+    - t: "?"
+  - - t: "FATIMA: Nein, ich studiere. Informatik, im dritten Jahr."
+  - - t: "FRAU WEBER: Welche Sprachen sprechen Sie?"
+  - - t: "FATIMA: Arabisch, Französisch und Deutsch. Englisch nur ein bisschen."
+  - - t: "MAREK: Polnisch, Englisch und Deutsch — aber noch nicht gut."
+  - - t: "FRAU WEBER: Kein Problem. Sprechen Sie langsam, und fragen Sie immer. Haben Sie noch Fragen?"
+  - - t: "MAREK: Ja, eine: Wann beginnt die nächste Stunde?"
+  - - t: "FRAU WEBER: Am Mittwoch, auch um 18 Uhr."
+glosses:
+  - key: buchstabieren
+    term: buchstabieren
+    pos_label: Verb
+    definition: Ein Wort Buchstabe für Buchstabe sagen
+    example: Buchstabieren Sie bitte Ihren Namen.
+  - key: berufstätig
+    term: berufstätig
+    pos_label: Adjektiv
+    definition: Eine Person hat Arbeit und bekommt dafür Geld.
+    example: Meine Eltern sind beide berufstätig.

@@ -170,11 +170,19 @@ export async function getUnit(userId: number, courseSlug: string, moduleSlug: st
   if (!module) return null;
 
   // UC-05: first entry into a module (upcoming → in_progress).
+  //
+  // Never write a row for a module the learner has no state for. `locked` is
+  // the absence of a row, not a fact worth storing, and persisting it here was
+  // actively harmful: ensureFirstModuleUnlocked skips a course as soon as *any*
+  // user_module_state row exists for it, so one visit to a locked module URL
+  // (D14 — the hub route isn't gated) pinned that course's first module at
+  // `locked` permanently and it never became clickable on the map.
   const state = await moduleRepo.getUserModuleState(userId, module.id);
-  const currentStatus = state?.status ?? 'locked';
-  const nextStatus = moduleStatusOnFirstEntry(currentStatus);
-  if (nextStatus !== currentStatus || !state?.startedAt) {
-    await moduleRepo.upsertUserModuleState(userId, module.id, { status: nextStatus, startedAt: state?.startedAt ?? new Date() });
+  if (state) {
+    const nextStatus = moduleStatusOnFirstEntry(state.status);
+    if (nextStatus !== state.status || !state.startedAt) {
+      await moduleRepo.upsertUserModuleState(userId, module.id, { status: nextStatus, startedAt: state.startedAt ?? new Date() });
+    }
   }
 
   const sessions = await moduleRepo.listSessionsForModule(userId, module.id);

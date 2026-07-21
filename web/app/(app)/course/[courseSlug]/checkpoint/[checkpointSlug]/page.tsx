@@ -6,6 +6,8 @@ import { Card } from '@/components/ui/Card';
 import { Kicker } from '@/components/ui/Kicker';
 import { CheckpointRunner } from '@/components/checkpoint/CheckpointRunner';
 import { WritingEditor } from '@/components/writing/WritingEditor';
+import { SelfCheck } from '@/components/writing/SelfCheck';
+import * as writingUseCase from '@/lib/use-cases/writing';
 
 // Per-user checkpoint status changes as progress is made (see app/course/page.tsx).
 export const dynamic = 'force-dynamic';
@@ -86,7 +88,22 @@ export default async function CheckpointPage({
       </Card>
 
       {cp.writingTask ? (
-        <WritingEditor task={cp.writingTask} />
+        <>
+          <WritingEditor task={cp.writingTask} />
+          {/*
+            A checkpoint has no session steps, so it never reaches the `self_check`
+            step that shows the model answer inside a module. Without this the
+            model answer and the checklist were authored but unreachable — the
+            editor even promised "standalone usage reveals the model answer
+            below". No `stepId`: there is no step to complete here.
+          */}
+          <div className="mt-4">
+            <SelfCheck
+              task={cp.writingTask}
+              latestSubmission={(await writingUseCase.getSelfCheckView(userId, cp.writingTask.id))?.latestSubmission ?? null}
+            />
+          </div>
+        </>
       ) : (
         <Card>
           <div className="text-[14.5px] text-fg-muted">No production task is attached to this checkpoint yet.</div>

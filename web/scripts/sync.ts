@@ -1,7 +1,8 @@
 /**
- * Content sync (ARCHITECTURE.md §4): walks content/<course>/module-NN/ and
- * content/<course>/<checkpoint>/ directories, validates every YAML file against
- * lib/content-schema.ts, and upserts into the content tables.
+ * Content sync (ARCHITECTURE.md §4): walks courses/<slug>/, upserts the course
+ * skeleton from its course.yaml, then validates every module/checkpoint package
+ * under courses/<slug>/content/ against lib/content-schema.ts and upserts into
+ * the content tables.
  *
  * Idempotent via a two-level sha256 hash (§4.4): a module-level gate hash
  * (raw bytes of every file in the package) skips untouched modules with
@@ -17,9 +18,10 @@
  * natural keys here are *partial* unique indexes (`where module_id is not
  * null`), which Prisma Client cannot target with a typed upsert.
  *
- * Only what's registered in content.config.ts is walked (§4.1) — a module
- * or checkpoint directory that doesn't exist yet is a warning + skip, not
- * an error, since most of the 15-module roadmap is unwritten.
+ * Only the course roots registered in content.config.ts are walked (§4.1); the
+ * modules and checkpoints themselves come from each course.yaml. A module or
+ * checkpoint directory that doesn't exist yet is a warning + skip, not an error,
+ * since a course's map is written long before all its packages are.
  */
 
 import 'dotenv/config';
@@ -30,13 +32,21 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { parse as parseYaml } from 'yaml';
 import { z } from 'zod';
-import { COURSES, type CheckpointEntry, type ModuleEntry } from '../content.config';
+import { COURSE_ROOTS } from '../content.config';
+import {
+  CourseSchema,
+  courseModules,
+  modulePlannedMinutes,
+  type Course,
+  type CourseCheckpointEntry,
+  type CourseModuleEntry,
+} from '../lib/course-schema';
 import {
   MetaSchema,
   VocabPackageSchema,
   TheoryPackageSchema,
   ReadingPackageSchema,
-  ExercisesPackageSchema,
+  makeExercisesPackageSchema,
   WritingPackageSchema,
   type Meta,
   type VocabEntry,
@@ -584,7 +594,7 @@ function vocabReverseFlashcardFields(entry: VocabEntry): FlashcardFields {
 
 // ───────────────────────────── module driver ─────────────────────────────
 
-async function syncModule(client: Client, courseSlug: string, mod: ModuleEntry, contentRoot: string): Promise<void> {
+async function syncModule(client: Client, course: Course, mod: CourseModuleEntry, contentRoot: string): Promise<void> {
   const moduleDir = path.join(contentRoot, mod.dir);
   if (!(await pathExists(moduleDir))) {
     console.warn(`! module dir missing, skipping: ${mod.slug} (${moduleDir})`);
@@ -594,10 +604,10 @@ async function syncModule(client: Client, courseSlug: string, mod: ModuleEntry, 
   const moduleRow = await client.query<{ id: number; content_hash: string | null }>(
     `select m.id, m.content_hash from module m join block b on b.id = m.block_id join course c on c.id = b.course_id
      where c.slug = $1 and m.slug = $2`,
-    [courseSlug, mod.slug],
+    [course.slug, mod.slug],
   );
   if (moduleRow.rowCount === 0) {
-    console.warn(`! module row not found in DB for ${mod.slug} — is 0002_seed_en_c1_skeleton.sql applied?`);
+    console.warn(`! module row not found in DB for ${mod.slug} — did syncCourseSkeleton run?`);
     return;
   }
   const moduleId = moduleRow.rows[0].id;
@@ -615,7 +625,7 @@ async function syncModule(client: Client, courseSlug: string, mod: ModuleEntry, 
   const theoryPkg = await readYamlFile(path.join(moduleDir, 'theory.yaml'), TheoryPackageSchema);
   const textMain = await readYamlFile(path.join(moduleDir, 'text-main.yaml'), ReadingPackageSchema);
   const textExtra = await readYamlFile(path.join(moduleDir, 'text-extra.yaml'), ReadingPackageSchema);
-  const exercisesPkg = await readYamlFile(path.join(moduleDir, 'exercises.yaml'), ExercisesPackageSchema);
+  const exercisesPkg = await readYamlFile(path.join(moduleDir, 'exercises.yaml'), makeExercisesPackageSchema(course.language));
   const writingPkg = await readYamlFile(path.join(moduleDir, 'writing.yaml'), WritingPackageSchema);
 
   const counters = {
@@ -733,7 +743,7 @@ async function syncModule(client: Client, courseSlug: string, mod: ModuleEntry, 
     // an exercise that already exists in the module. Both are tasks, and tasks
     // belong to lane 2. archiveRemovedFlashcards retires their rows on the
     // next sync, leaving card_state intact.
-    const tag = `en-c1::${mod.slug}`;
+    const tag = `${course.slug}::${mod.slug}`;
     const seenFlashcardIdents = new Set<string>();
     for (const entry of vocabPkg.entries) {
       const vocabEntryId = vocabEntryIdByTerm.get(entry.term) ?? null;
@@ -759,13 +769,197 @@ async function syncModule(client: Client, courseSlug: string, mod: ModuleEntry, 
   console.log(`[${mod.slug}] ${summary}`);
 }
 
+// ───────────────────────────── course skeleton ─────────────────────────────
+/**
+ * Upserts the course map from courses/<slug>/course.yaml (§4.1): course → block
+ * → module → checkpoint, plus the weekly protocol (study_session → session_step)
+ * replicated onto every module.
+ *
+ * This reverses the original rule that sync never creates structure. It used to
+ * live in db/migrations/0002 + 0004, which meant a second course — or moving one
+ * step by three minutes — required a migration. Everything here is keyed by the
+ * natural keys 0001_init.sql already declares unique, so re-running is a no-op
+ * and nothing downstream (attempts, card_state, review queues) sees churn.
+ *
+ * Steps are upserted on (study_session_id, position) rather than deleted and
+ * reinserted the way 0004 did: delete cascades user_step_state, so a protocol
+ * edit used to wipe the learner's place in the week. Only steps past the new end
+ * of a session are pruned.
+ */
+async function syncCourseSkeleton(client: Client, course: Course, courseYamlBytes: Buffer): Promise<void> {
+  const skeletonHash = createHash('sha256').update(courseYamlBytes).digest('hex');
+
+  const existing = await client.query<{ id: number; skeleton_hash: string | null }>(
+    'select id, skeleton_hash from course where slug = $1',
+    [course.slug],
+  );
+  if (existing.rowCount !== 0 && existing.rows[0].skeleton_hash === skeletonHash) {
+    console.log(`[${course.slug}] skeleton unchanged — 0 queries`);
+    return;
+  }
+
+  const counters = {
+    block: newCounter(),
+    module: newCounter(),
+    checkpoint: newCounter(),
+    study_session: newCounter(),
+    session_step: newCounter(),
+  };
+
+  await client.query('BEGIN');
+  try {
+    const courseRow = await client.query<{ id: number }>(
+      `insert into course (slug, language, name, level_label, position, skeleton_hash)
+       values ($1, $2, $3, $4, $5, $6)
+       on conflict (slug) do update set
+         language = excluded.language, name = excluded.name,
+         level_label = excluded.level_label, position = excluded.position,
+         skeleton_hash = excluded.skeleton_hash
+       returning id`,
+      [course.slug, course.language, course.name, course.level_label, course.position, skeletonHash],
+    );
+    const courseId = courseRow.rows[0].id;
+
+    // Blocks. Both (course_id, slug) and (course_id, position) are unique, so a
+    // reorder would collide mid-statement — park positions out of range first.
+    await client.query('update block set position = position + 1000 where course_id = $1', [courseId]);
+    const blockIdBySlug = new Map<string, number>();
+    for (const [i, block] of course.blocks.entries()) {
+      const row = await client.query<{ id: number; inserted: boolean }>(
+        `insert into block (course_id, slug, name, color, tint, position)
+         values ($1, $2, $3, $4, $5, $6)
+         on conflict (course_id, slug) do update set
+           name = excluded.name, color = excluded.color,
+           tint = excluded.tint, position = excluded.position
+         returning id, (xmax = 0) as inserted`,
+        [courseId, block.slug, block.name, block.color, block.tint, i + 1],
+      );
+      blockIdBySlug.set(block.slug, row.rows[0].id);
+      row.rows[0].inserted ? counters.block.added++ : counters.block.updated++;
+    }
+    await pruneByNotIn(client, 'block', 'course_id', courseId, 'slug', new Set(blockIdBySlug.keys()), counters.block);
+
+    // Modules. Same position dance, scoped per block. title/standfirst here are
+    // the pre-content map; syncModule overwrites them from meta.yaml once the
+    // package exists.
+    //
+    // Caveat: moving a module to a different block is a delete + insert, since
+    // the natural key is (block_id, slug) — its progress rows go with it. That is
+    // a deliberate restructure of the course, not an edit, so it is left loud
+    // rather than papered over.
+    const plannedMinutes = modulePlannedMinutes(course);
+    const moduleIdBySlug = new Map<string, number>();
+    for (const blockId of blockIdBySlug.values()) {
+      await client.query('update module set position = position + 1000 where block_id = $1', [blockId]);
+    }
+    for (const block of course.blocks) {
+      const blockId = blockIdBySlug.get(block.slug)!;
+      const seen = new Set<string>();
+      for (const [i, mod] of block.modules.entries()) {
+        const row = await client.query<{ id: number; inserted: boolean }>(
+          `insert into module (block_id, slug, title, standfirst, position, planned_minutes)
+           values ($1, $2, $3, $4, $5, $6)
+           on conflict (block_id, slug) do update set
+             title = excluded.title, standfirst = excluded.standfirst,
+             position = excluded.position, planned_minutes = excluded.planned_minutes
+           returning id, (xmax = 0) as inserted`,
+          [blockId, mod.slug, mod.title, mod.standfirst, i + 1, plannedMinutes],
+        );
+        moduleIdBySlug.set(mod.slug, row.rows[0].id);
+        seen.add(mod.slug);
+        row.rows[0].inserted ? counters.module.added++ : counters.module.updated++;
+      }
+      await pruneByNotIn(client, 'module', 'block_id', blockId, 'slug', seen, counters.module);
+    }
+
+    // Checkpoints. position is not unique here, so no parking needed.
+    const seenCheckpoints = new Set<string>();
+    for (const [i, cp] of course.checkpoints.entries()) {
+      const blockId = cp.block ? (blockIdBySlug.get(cp.block) ?? null) : null;
+      const row = await client.query<{ inserted: boolean }>(
+        `insert into checkpoint (course_id, block_id, kind, slug, title, pass_mark, planned_minutes, position)
+         values ($1, $2, $3::checkpoint_kind, $4, $5, $6, $7, $8)
+         on conflict (course_id, slug) do update set
+           block_id = excluded.block_id, kind = excluded.kind, title = excluded.title,
+           pass_mark = excluded.pass_mark, planned_minutes = excluded.planned_minutes,
+           position = excluded.position
+         returning (xmax = 0) as inserted`,
+        [courseId, blockId, cp.kind, cp.slug, cp.title, cp.pass_mark, cp.planned_minutes, i],
+      );
+      seenCheckpoints.add(cp.slug);
+      row.rows[0].inserted ? counters.checkpoint.added++ : counters.checkpoint.updated++;
+    }
+    await pruneByNotIn(client, 'checkpoint', 'course_id', courseId, 'slug', seenCheckpoints, counters.checkpoint);
+
+    // The protocol, replicated onto every module.
+    for (const moduleId of moduleIdBySlug.values()) {
+      const seenTypes = new Set<string>();
+      for (const [i, session] of course.protocol.entries()) {
+        const sessionRow = await client.query<{ id: number; inserted: boolean }>(
+          `insert into study_session (module_id, session_type, position, title, planned_minutes)
+           values ($1, $2::session_type, $3, $4, $5)
+           on conflict (module_id, session_type) do update set
+             position = excluded.position, title = excluded.title,
+             planned_minutes = excluded.planned_minutes
+           returning id, (xmax = 0) as inserted`,
+          [moduleId, session.type, i + 1, session.title, session.planned_minutes],
+        );
+        const sessionId = sessionRow.rows[0].id;
+        seenTypes.add(session.type);
+        sessionRow.rows[0].inserted ? counters.study_session.added++ : counters.study_session.updated++;
+
+        for (const [j, step] of session.steps.entries()) {
+          const stepRow = await client.query<{ inserted: boolean }>(
+            `insert into session_step (study_session_id, position, kind, title, detail, planned_minutes, config)
+             values ($1, $2, $3::step_kind, $4, $5, $6, $7::jsonb)
+             on conflict (study_session_id, position) do update set
+               kind = excluded.kind, title = excluded.title, detail = excluded.detail,
+               planned_minutes = excluded.planned_minutes, config = excluded.config
+             returning (xmax = 0) as inserted`,
+            [sessionId, j + 1, step.kind, step.title, step.detail ?? null, step.minutes, JSON.stringify(step.config)],
+          );
+          stepRow.rows[0].inserted ? counters.session_step.added++ : counters.session_step.updated++;
+        }
+        // Only steps that fell off the end of the session go; everything still
+        // in range was updated in place, so user_step_state survives.
+        const pruned = await client.query(
+          'delete from session_step where study_session_id = $1 and position > $2',
+          [sessionId, session.steps.length],
+        );
+        counters.session_step.removed += pruned.rowCount ?? 0;
+      }
+      const prunedSessions = await client.query(
+        `delete from study_session where module_id = $1 and session_type::text <> all($2::text[])`,
+        [moduleId, [...seenTypes]],
+      );
+      counters.study_session.removed += prunedSessions.rowCount ?? 0;
+    }
+
+    await client.query('COMMIT');
+  } catch (e) {
+    await client.query('ROLLBACK');
+    throw e;
+  }
+
+  console.log(
+    `[${course.slug}] skeleton: block ${fmtCounter(counters.block)} | module ${fmtCounter(counters.module)} | ` +
+      `checkpoint ${fmtCounter(counters.checkpoint)} | study_session ${fmtCounter(counters.study_session)} | ` +
+      `session_step ${fmtCounter(counters.session_step)}`,
+  );
+}
+
 // ───────────────────────────── checkpoint driver ─────────────────────────────
 // Checkpoints only carry exercises.yaml (+ optional writing.yaml) — no
-// vocab/theory/reading/flashcards (content/en-c1/README.md). No checkpoint
-// package exists yet as of module-01's ship; this path is exercised only
-// once diagnostic/checkpoint-*/final directories are written.
+// vocab/theory/reading/flashcards (docs/CONTENT-PACKAGE-SCHEMA.md). A course's
+// checkpoints are usually written after the block's modules, so a missing
+// directory here is routine.
 
-async function syncCheckpoint(client: Client, courseSlug: string, cp: CheckpointEntry, contentRoot: string): Promise<void> {
+async function syncCheckpoint(
+  client: Client,
+  course: Course,
+  cp: CourseCheckpointEntry,
+  contentRoot: string,
+): Promise<void> {
   const cpDir = path.join(contentRoot, cp.dir);
   if (!(await pathExists(cpDir))) {
     console.warn(`! checkpoint dir missing, skipping: ${cp.slug} (${cpDir})`);
@@ -774,10 +968,10 @@ async function syncCheckpoint(client: Client, courseSlug: string, cp: Checkpoint
 
   const cpRow = await client.query<{ id: number; content_hash: string | null }>(
     `select ck.id, ck.content_hash from checkpoint ck join course c on c.id = ck.course_id where c.slug = $1 and ck.slug = $2`,
-    [courseSlug, cp.slug],
+    [course.slug, cp.slug],
   );
   if (cpRow.rowCount === 0) {
-    console.warn(`! checkpoint row not found in DB for ${cp.slug} — is 0002_seed_en_c1_skeleton.sql applied?`);
+    console.warn(`! checkpoint row not found in DB for ${cp.slug} — did syncCourseSkeleton run?`);
     return;
   }
   const checkpointId = cpRow.rows[0].id;
@@ -789,7 +983,7 @@ async function syncCheckpoint(client: Client, courseSlug: string, cp: Checkpoint
     return;
   }
 
-  const exercisesPkg = await readYamlFile(path.join(cpDir, 'exercises.yaml'), ExercisesPackageSchema);
+  const exercisesPkg = await readYamlFile(path.join(cpDir, 'exercises.yaml'), makeExercisesPackageSchema(course.language));
   const writingPath = path.join(cpDir, 'writing.yaml');
   const writingPkg = (await pathExists(writingPath)) ? await readYamlFile(writingPath, WritingPackageSchema) : null;
 
@@ -843,18 +1037,31 @@ async function main() {
   const client = new Client({ connectionString: connectionString() });
   await client.connect();
   try {
-    for (const course of COURSES) {
-      const courseRow = await client.query<{ id: number }>('select id from course where slug = $1', [course.slug]);
-      if (courseRow.rowCount === 0) {
-        console.warn(`! course not seeded, skipping: ${course.slug} — is 0002_seed_en_c1_skeleton.sql applied?`);
+    for (const root of COURSE_ROOTS) {
+      const courseDir = path.join(REPO_ROOT, root);
+      const courseYamlPath = path.join(courseDir, 'course.yaml');
+      if (!(await pathExists(courseYamlPath))) {
+        console.warn(`! no course.yaml, skipping: ${root}`);
         continue;
       }
-      const contentRoot = path.join(REPO_ROOT, course.root);
-      for (const mod of course.modules) {
-        await syncModule(client, course.slug, mod, contentRoot);
+
+      // Read the bytes once: they are both the parse source and the gate hash.
+      const courseYamlBytes = await readFile(courseYamlPath);
+      const parsed = CourseSchema.safeParse(parseYaml(courseYamlBytes.toString('utf8')));
+      if (!parsed.success) {
+        const issues = parsed.error.issues.map((i) => `  ${i.path.join('.') || '(root)'}: ${i.message}`).join('\n');
+        throw new Error(`Invalid course skeleton ${courseYamlPath}:\n${issues}`);
+      }
+      const course = parsed.data;
+
+      await syncCourseSkeleton(client, course, courseYamlBytes);
+
+      const contentRoot = path.join(courseDir, 'content');
+      for (const mod of courseModules(course)) {
+        await syncModule(client, course, mod, contentRoot);
       }
       for (const cp of course.checkpoints) {
-        await syncCheckpoint(client, course.slug, cp, contentRoot);
+        await syncCheckpoint(client, course, cp, contentRoot);
       }
     }
   } finally {

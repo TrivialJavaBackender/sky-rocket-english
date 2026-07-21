@@ -207,7 +207,7 @@ export async function findCurrentModuleForCourse(userId: number, courseId: numbe
 }
 
 /**
- * 0002_seed_en_c1_skeleton.sql seeds course/block/module/session structure
+ * courses/<slug>/course.yaml provides course/block/module/session structure
  * but deliberately no `user_module_state` rows (progress is per-user, not
  * content). §6.5: "the course's first module starts `upcoming`". A brand
  * new user has zero user_module_state rows for the course, so this creates
@@ -215,17 +215,26 @@ export async function findCurrentModuleForCourse(userId: number, courseId: numbe
  * position) → upcoming. No-op once any row exists for the course.
  */
 export async function ensureFirstModuleUnlocked(userId: number, courseId: number): Promise<void> {
-  const anyState = await prisma.user_module_state.findFirst({ where: { user_id: userId, module: { block: { course_id: courseId } } } });
-  if (anyState) return;
   const first = await prisma.module.findFirst({
     where: { block: { course_id: courseId } },
     orderBy: [{ block: { position: 'asc' } }, { position: 'asc' }],
   });
   if (!first) return;
+
+  // Keyed on the first module's own state rather than "does this course have
+  // any row yet": the course's opening module must never sit at `locked`, and
+  // an early guard on *any* row let one stray `locked` row elsewhere in the
+  // course wedge it shut forever. Checking the module itself is both the
+  // correct invariant and self-healing for accounts already in that state.
+  const state = await prisma.user_module_state.findUnique({
+    where: { user_id_module_id: { user_id: userId, module_id: first.id } },
+  });
+  if (state && state.status !== 'locked') return;
+
   await prisma.user_module_state.upsert({
     where: { user_id_module_id: { user_id: userId, module_id: first.id } },
     create: { user_id: userId, module_id: first.id, status: 'upcoming' },
-    update: {},
+    update: { status: 'upcoming' },
   });
 }
 

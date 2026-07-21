@@ -13,25 +13,32 @@ export const dynamic = 'force-dynamic';
 
 // ARCHITECTURE.md §9 stage 4: the real shell — SideRail (desktop >= 980px,
 // pure CSS breakpoint, see tailwind.config.ts `desktop`) / HeaderBar +
-// BottomNav (mobile). Course label comes from the DB (§8 D4); only one
-// course is enrolled today so `courses[0]` is "current" by construction.
+// BottomNav (mobile). Course rows come from the DB (§8 D4).
 export default async function AppLayout({ children }: { children: ReactNode }) {
   // `middleware.ts` already gates this group; this is the defence-in-depth
   // copy for the case where the cookie expires between the two.
   const user = await getCurrentUser();
   if (!user) redirect('/login');
 
-  const courses = await courseSwitchUseCase.listAvailableCourses();
-  const current = courses[0];
-  const courseLabel = current ? `${current.language.toUpperCase()} · ${current.levelLabel}` : 'Course';
-  const courseFullLabel = current ? `${current.name} · ${current.levelLabel}` : 'Course';
+  // `courses[0]` is only the lowest `position`, not the learner's enrolment —
+  // reading it as "current" silently pinned the nav to en-c1 once a second
+  // course existed, no matter which one they had switched to.
+  const [allCourses, active] = await Promise.all([
+    courseSwitchUseCase.listAvailableCourses(),
+    courseSwitchUseCase.getActiveCourse(user.userId),
+  ]);
+  const courses = allCourses.map((c) => ({
+    slug: c.slug,
+    shortLabel: `${c.language.toUpperCase()} · ${c.levelLabel}`,
+    fullLabel: `${c.name} · ${c.levelLabel}`,
+  }));
 
   return (
     <>
-      <SideRail courseLabel={courseLabel} username={user.username} />
+      <SideRail courses={courses} activeSlug={active?.slug ?? null} username={user.username} />
       <div className="desktop:pl-56">
         <div className="mx-auto max-w-[720px] px-[18px] pb-[104px] pt-4 desktop:pb-10">
-          <HeaderBar courseLabel={courseLabel} courseFullLabel={courseFullLabel} username={user.username} />
+          <HeaderBar courses={courses} activeSlug={active?.slug ?? null} username={user.username} />
           {children}
         </div>
       </div>

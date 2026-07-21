@@ -739,7 +739,7 @@
   <div class="prose">
     <p>Контент отвязан от платформы: каждый модуль — самодостаточный пакет файлов со строгой схемой. Его можно читать как markdown, импортировать в Anki, а позже — синкать в базу приложения. Новый язык (немецкий) — это просто новый корень <code style="background:var(--code); padding:1px 6px; border-radius:5px">content/de-a1/</code> с той же схемой. Жёсткое правило пакета: внутри файлов модуля нет ни слова по-русски.</p>
   </div>
-  <pre>content/en-c1/
+  <pre>courses/en-c1/content/
   module-01/
     meta.yaml          # тема, грамм-подтемы (grammar_points), standfirst, goals, тексты, жанр
     vocab.yaml         # 45 entries: term, tag, definition, use_cases (2–3), collocations, register
@@ -751,7 +751,7 @@
     anki-vocab.csv     # Term,Definition,UseCase1,UseCase2,Collocations,Register,Tags
     anki-grammar.csv   # Text,Hint,Rule,Tags          (Cloze)
     anki-transform.csv # Prompt,Key,Answer,Note,Tags
-  module-02/ …         # полная схема пакета: content/en-c1/README.md в репо</pre>
+  module-02/ …         # полная схема пакета: docs/CONTENT-PACKAGE-SCHEMA.md в репо</pre>
 
   <h3 style="font-size:18px; margin-top:28px">Шаблон задачи субагенту</h3>
   <pre>Разработай модуль M{N} курса en-c1 по спецификации из плана SkyRocket English.
@@ -762,7 +762,7 @@
 ЯЗЫК: весь контент — строго английский, graded под B2+ (стиль Cambridge-учебника
 и learner's dictionary). Ни одного русского слова ни в одном файле.
 
-Сгенерируй пакет файлов по схеме content/en-c1/module-{NN}/:
+Сгенерируй пакет файлов по схеме courses/en-c1/content/module-{NN}/:
 1. meta.yaml — тема, подтемы грамматики, тексты, жанр продукции.
 2. vocab.yaml — ПОЛНЫЕ 45 записей (якоря из плана + добор в тех же доменах,
    уровень C1, не частотник B1): term, definition, 2–3 use cases в разных

@@ -1,22 +1,56 @@
-# Контент-пакет модуля — схема (курс en-c1)
+# Контент-пакет модуля — схема
 
-Каждый модуль — самодостаточный пакет в `content/en-c1/module-{NN}/`. Пакеты синкаются в Neon идемпотентно по `content_hash` (паттерн `scripts/sync.ts` из interview-prep). Правило: **внутри файлов пакета нет ни слова по-русски** — весь контент graded English (learner's dictionary style). Новый язык = новый корень (`content/de-a1/`) с той же схемой.
+Родовая схема, одинаковая для всех курсов. Каждый модуль — самодостаточный пакет в `courses/<slug>/content/module-{NN}/`. Пакеты синкаются в Neon идемпотентно по `content_hash`. Правило: **внутри файлов пакета нет ни слова на языке-посреднике** — весь контент на целевом языке курса, graded под его уровень.
+
+Объёмы (сколько лексем, сколько заданий каждого типа, лимит теории) схемой не задаются — их объявляет «Профиль модуля» в `courses/<slug>/PLAN.md`, см. `docs/COURSE-DESIGN-GUIDE.md` §12. Примеры ниже английские, потому что взяты из en-c1; на схему это не влияет.
 
 ```
-content/en-c1/
-  module-01/
-    meta.yaml            # → module: title, standfirst, goals[], grammar_points[]
-    vocab.yaml           # → vocab_entry: 45 записей (+ 2 flashcard на запись — деривация)
-    theory.yaml          # → grammar_spotlight + watchout + cloze_cards (→ exercise open_cloze, review-пул)
-    text-main.yaml       # → reading_text(kind=main) + gloss
-    text-extra.yaml      # → reading_text(kind=extra) + gloss
-    exercises.yaml       # → exercise: core 66 + review_pool 30 (+10 из theory.cloze_cards)
-    writing.yaml         # → writing_task
-  checkpoint-a/          # пакеты чек-пойнтов: exercises.yaml (40) + writing.yaml
-  diagnostic/            # 60 заданий + writing.yaml
+courses/<slug>/
+  course.yaml            # → course + block + module + checkpoint + study_session + session_step
+  content/
+    module-01/
+      meta.yaml          # → module: title, standfirst, goals[], grammar_points[]
+      vocab.yaml         # → vocab_entry (+ 2 flashcard на запись — деривация)
+      theory.yaml        # → grammar_spotlight + watchout + cloze_cards (→ exercise open_cloze, review-пул)
+      text-main.yaml     # → reading_text(kind=main) + gloss
+      text-extra.yaml    # → reading_text(kind=extra) + gloss
+      exercises.yaml     # → exercise: core + review_pool (+ производные из theory.cloze_cards)
+      writing.yaml       # → writing_task
+    checkpoint-a/        # пакеты чек-пойнтов: exercises.yaml + writing.yaml
+    diagnostic/          # диагностика: exercises.yaml + writing.yaml
 ```
 
 Флеш-карточки не имеют отдельных файлов: sync деривирует таблицу `flashcard` из YAML-источников пакета (см. раздел «Флеш-карточки» ниже). Отдельные Anki-CSV отменены — карточки живут только в webapp-SRS.
+
+## course.yaml — скелет курса
+
+Карта курса до того, как написан контент: блоки, модули, чек-пойнты и недельный протокол. Sync апсертит её по натуральным ключам, поэтому новый курс не требует ни миграции, ни правок приложения — только строка в `COURSE_ROOTS` (`web/content.config.ts`).
+
+```yaml
+slug: de-a2
+language: de                 # выбирает списки служебных слов content-gap-words/<lang>.ts
+name: Deutsch
+level_label: A1 → A2
+position: 2
+blocks:
+  - slug: a
+    name: Basis
+    color: '#C9622E'
+    tint: '#FAEDE6'
+    modules:
+      - { slug: m01, dir: module-01, title: Ich und du, standfirst: '…' }
+checkpoints:
+  - { slug: diagnostic, kind: diagnostic, dir: diagnostic, title: '…', pass_mark: null, planned_minutes: 60 }
+  - { slug: cp-a, kind: block, block: a, dir: checkpoint-a, title: '…', pass_mark: 75, planned_minutes: 75 }
+protocol:                    # применяется к каждому модулю курса
+  - type: prime              # prime | input | workout | output
+    title: Start
+    planned_minutes: 55
+    steps:
+      - { kind: theory, title: 'Grammatik im Fokus · Teil 1', detail: '…', minutes: 16, config: { part: 1, of: 2 } }
+```
+
+Позиции берутся из порядка в массивах, а `planned_minutes` модуля — из суммы минут сессий протокола: дублировать числа значит позволить им разойтись. `title`/`standfirst` модуля здесь — карта до появления контента; `meta.yaml` перезаписывает их при синке пакета.
 
 ## Форматы файлов
 
@@ -97,9 +131,11 @@ glosses:
 `content` — типоспецифичный, формы совпадают с плеером дизайна (`docs/design/skyrocket/content.js`, массив `exercises`).
 
 ```yaml
-core:                                  # ровно: 8 mc_cloze · 8 open_cloze · 8 word_formation ·
-                                       # 8 key_word_transformation · 10 grammar_drill ·
-                                       # 8 error_correction · 10 collocation_match · 6 reading_comprehension
+core:                                  # разбивка по типам — из «Профиля модуля» курса.
+                                       # en-c1: 8 mc_cloze · 8 open_cloze · 8 word_formation ·
+                                       #   8 key_word_transformation · 10 grammar_drill ·
+                                       #   8 error_correction · 10 collocation_match · 6 reading_comprehension = 66
+                                       # de-a2: 6 · 8 · 6 · 4 · 8 · 6 · 8 · 6 = 52
   - type: grammar_drill
     group: grammar                     # grammar | reading | vocab (лончеры юнита)
     grammar_point: Future in the past  # опционально → grammar_point
@@ -124,7 +160,7 @@ core:                                  # ровно: 8 mc_cloze · 8 open_cloze 
     content: {left: [hand in, take on, meet, carve out], right: [a niche, your notice, a deadline, responsibility],
               pairs: {0: 1, 1: 3, 2: 2, 3: 0}}
     explanation: …
-review_pool: []                        # 30 смешанных коротких заданий той же формы
+review_pool: []                        # смешанные короткие задания той же формы; объём — из профиля
 ```
 
 #### Правило восстановимости пропуска (open_cloze)
@@ -149,9 +185,11 @@ review_pool: []                        # 30 смешанных коротких 
       answer_shown: knowing
 ```
 
-Подсказка — это **базовая форма ответа**, а не название части речи: писать `preposition`/`auxiliary` не нужно. Служебные пропуски идут без подсказки намеренно — это формат CAE Reading & Use of English Part 2 (`docs/PLAN.md` §6), и ослаблять его метками класса нельзя.
+Подсказка — это **базовая форма ответа**, а не название части речи: писать `preposition`/`auxiliary` не нужно. Служебные пропуски идут без подсказки намеренно — в en-c1 это формат CAE Reading & Use of English Part 2 (`courses/en-c1/PLAN.md` §6), и ослаблять его метками класса нельзя.
 
-Правило проверяется автоматически: `OpenClozeContentSchema` (`web/lib/content-schema.ts`) валит sync, если знаменательный ответ идёт без `hint` и без полного набора `answers`. Списки служебных слов и устойчивых рамок — `web/lib/content-gap-words.ts`; новая рамка добавляется туда, и добавление — это утверждение, что контекст её вынуждает.
+**Правило языко-зависимо.** Что именно вынуждено грамматикой, решает язык курса: `makeOpenClozeContentSchema(language)` (`web/lib/content-schema.ts`) валит sync, если знаменательный ответ идёт без `hint` и без полного набора `answers`. Списки служебных слов и устойчивых рамок — `web/lib/content-gap-words/<lang>.ts`, язык берётся из `course.yaml`; новая рамка добавляется туда, и добавление — это утверждение, что контекст её вынуждает. Языка без своего файла sync не пропустит.
+
+Флективные языки ложатся на этот формат лучше аналитических: в немецком пропуск на артикле или предлоге однозначно задан падежом (`Ich fahre ▁▁▁ dem Bus` → только `mit`, `Ich sehe ▁▁▁ Mann` → только `den`), поэтому в de-a2 `open_cloze` несёт основную нагрузку по грамматике.
 
 Отдельно: `answers` должен содержать **все** валидные варианты. `were not ▁▁▁ to use dictionaries` без `supposed`, `It is ▁▁▁ that every child have` без `important` и `necessary` — это не строгость, а ложные ошибки в грейдинге.
 
@@ -169,12 +207,12 @@ checklist:
 ```
 
 ### Флеш-карточки → `flashcard` (деривация, отдельных файлов нет)
-Колода — **только лексика**, по две карточки на запись `vocab.yaml` (90 на модуль):
+Колода — **только лексика**, по две карточки на каждую запись `vocab.yaml`:
 - `note_type=vocab` — узнавание: front=term, back=definition + первые 2 use cases + collocations + register.
 - `note_type=vocab_reverse` — воспроизведение: front=definition, back=term + те же use cases. Use cases держатся на обороте: они содержат термин.
 
 Заданий в колоде нет (решение 2026-07, миграция `0005`): `cloze_cards` из `theory.yaml` синкаются как упражнения `open_cloze` в review-пул модуля — `{{c1::X}}` разбирается в `{pre, post, answers:[X]}`, `hint` становится подсказкой-основой, `rule` — разбором. Трансформации и так лежат в `exercises.yaml`. Промах по любому из них возвращает **само задание** через очередь повторений (+2/+7/+21 д), а не карточку.
 
-Теги: `en-c1::m{NN}` (префикс ident'а, между модулями карточки не коллидируют).
+Теги: `{course_slug}::m{NN}` (префикс ident'а — карточки не коллидируют ни между модулями, ни между курсами).
 
-Шаблон ТЗ на генерацию модуля и Definition of Done: `docs/MODULE-TASK-TEMPLATE.md`.
+Шаблон ТЗ на генерацию модуля и Definition of Done: `docs/MODULE-TASK-TEMPLATE.md` · как выводятся объёмы профиля: `docs/COURSE-DESIGN-GUIDE.md`.

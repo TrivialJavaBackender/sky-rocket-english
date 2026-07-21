@@ -12,6 +12,11 @@
  * Leaves real progress rows behind for that user — run
  * `tsx scripts/reset-progress.ts --username=<name>` afterwards to give
  * stage 4 a clean slate.
+ *
+ * Deliberately an **en-c1 smoke test**, not a generic harness: the assertions
+ * below encode that course's shape (4 blocks, 45 lexemes per module, 5 goals on
+ * m01, 5 steps in Prime). Pointing it at another course would need that course's
+ * own expectations, so the slug is a constant rather than a flag.
  */
 import 'dotenv/config';
 import { prisma } from '../lib/db';
@@ -32,6 +37,9 @@ import * as srsRepo from '../lib/repositories/srs.repo';
 import * as moduleRepo from '../lib/repositories/module.repo';
 
 import type { ExerciseTypeCode, GivenAnswer } from '../lib/domain/types';
+
+/** The course this script verifies. See the note in the file header before changing it. */
+const COURSE = 'en-c1';
 
 let passed = 0;
 let failed = 0;
@@ -109,7 +117,7 @@ async function main() {
   section('(a) getToday + getCourseMap');
   const today = await todayUseCase.getToday(userId);
   console.log(JSON.stringify(today, null, 2));
-  assert(today.courseSlug === 'en-c1', 'getToday returns the en-c1 course');
+  assert(today.courseSlug === COURSE, 'getToday returns the en-c1 course');
   assert(today.currentModule?.slug === 'm01', 'getToday resolves current module = m01');
 
   const map = await courseMapUseCase.getCourseMap(userId);
@@ -122,8 +130,8 @@ async function main() {
   assert(blockA.modules.find((m) => m.slug === 'm02')?.status === 'locked', 'm02 starts locked (sequential unlock, D5)');
 
   // ── (b) Unit screen: theory/vocab/reading/exercises/writing ─────────────
-  section('(b) getUnit(en-c1, m01)');
-  const unit = await unitUseCase.getUnit(userId, 'en-c1', 'm01');
+  section(`(b) getUnit(${COURSE}, m01)`);
+  const unit = await unitUseCase.getUnit(userId, COURSE, 'm01');
   assert(unit !== null, 'getUnit returns m01');
   assert(unit!.spotlights.length > 0, `spotlights present (${unit!.spotlights.length})`);
   assert(unit!.watchouts.length > 0, `watchouts present (${unit!.watchouts.length})`);
@@ -132,7 +140,7 @@ async function main() {
   assert(Object.keys(unit!.reading!.glosses).length > 0, `glosses joined dictionary present (${Object.keys(unit!.reading!.glosses).length} keys)`);
   assert(unit!.launchers.length === 3, `3 launchers (grammar/reading/vocab), got ${unit!.launchers.length}`);
 
-  const courseRow = await prisma.course.findUniqueOrThrow({ where: { slug: 'en-c1' } });
+  const courseRow = await prisma.course.findUniqueOrThrow({ where: { slug: COURSE } });
   const courseId = Number(courseRow.id);
   const module = await moduleRepo.getModuleBySlug(courseId, 'm01');
   const moduleId = module!.id;
@@ -154,10 +162,10 @@ async function main() {
   assert(unit!.goals.length === 5 && unit!.goals.some((g) => g.achievedBy === 'workout'), 'module goals carry the achieved_by mapping (D12)');
   assert(unit!.goals.every((g) => g.status !== 'achieved'), 'no goal is achieved before any session is done');
 
-  const primeRes = await sessionUseCase.getSession(userId, 'en-c1', 'm01', 'prime');
+  const primeRes = await sessionUseCase.getSession(userId, COURSE, 'm01', 'prime');
   assert(primeRes.kind === 'ok', `prime opens as the current session (got ${primeRes.kind})`);
   assert(primeRes.session.steps.length === 5, `prime has 5 steps after 0004 (got ${primeRes.session.steps.length})`);
-  const workoutRes = await sessionUseCase.getSession(userId, 'en-c1', 'm01', 'workout');
+  const workoutRes = await sessionUseCase.getSession(userId, COURSE, 'm01', 'workout');
   assert(workoutRes.kind === 'locked' && workoutRes.currentSessionType === 'prime', `workout is locked while prime is current (got ${workoutRes.kind})`);
 
   const theory1 = await unitUseCase.getModuleTheorySlice(moduleId, 1, 2);

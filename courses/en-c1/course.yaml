@@ -1,0 +1,254 @@
+# Course skeleton — the map of the course before any content exists.
+# scripts/sync.ts upserts course → block → module → checkpoint → study_session
+# → session_step from this file (docs/CONTENT-PACKAGE-SCHEMA.md §course.yaml).
+# Extracted verbatim from db/migrations/0002 (structure) and 0004 (step matrix),
+# which remain applied but are no longer the source of truth.
+#
+# Positions come from array order. A module's planned_minutes is the sum of the
+# protocol's session minutes (60+75+75+60 = 270).
+
+slug: en-c1
+language: en
+name: English
+level_label: B2+ → C1
+position: 1
+
+blocks:
+  - slug: a
+    name: Consolidate
+    color: '#2E7FC7'
+    tint: '#E8F0F8'
+    modules:
+      - slug: m01
+        dir: module-01
+        title: Work & Careers
+        standfirst: Narrative tenses, perfect aspect and future forms for career stories · 45 lexemes with use cases · a formal application email.
+      - slug: m02
+        dir: module-02
+        title: Science & Technology
+        standfirst: Advanced passives and causatives for science writing · 45 lexemes · a recorded monologue.
+      - slug: m03
+        dir: module-03
+        title: Media & Communication
+        standfirst: Reporting verbs and their patterns · 45 lexemes · an opinion article.
+      - slug: m04
+        dir: module-04
+        title: Education & Learning
+        standfirst: Gerund vs infinitive pairs that change meaning · 45 lexemes · a recorded monologue.
+
+  - slug: b
+    name: Expand
+    color: '#3D63CE'
+    tint: '#E9EDFA'
+    modules:
+      - slug: m05
+        dir: module-05
+        title: Environment & Sustainability
+        standfirst: Mixed and inverted conditionals · 45 lexemes · CAE essay #1.
+      - slug: m06
+        dir: module-06
+        title: Society & Inequality
+        standfirst: Unreal past and the subjunctive · 45 lexemes · a recorded monologue.
+      - slug: m07
+        dir: module-07
+        title: Health & Psychology
+        standfirst: 'Modality: speculation and degrees of certainty · 45 lexemes · an informal email.'
+      - slug: m08
+        dir: module-08
+        title: Globalisation & Travel
+        standfirst: Advanced relative and participle clauses · 45 lexemes · a recorded monologue.
+
+  - slug: c
+    name: Refine
+    color: '#5A4AC8'
+    tint: '#ECEAF9'
+    modules:
+      - slug: m09
+        dir: module-09
+        title: Culture & Arts
+        standfirst: Cleft sentences, fronting and emphasis · 45 lexemes · a review.
+      - slug: m10
+        dir: module-10
+        title: Crime & Justice
+        standfirst: Inversion after negative adverbials · 45 lexemes · a recorded monologue.
+      - slug: m11
+        dir: module-11
+        title: Business & Economy
+        standfirst: Nominalisation and formal register · 45 lexemes · a report.
+      - slug: m12
+        dir: module-12
+        title: Language & Identity
+        standfirst: Ellipsis, substitution and discourse markers · 45 lexemes · a recorded monologue.
+
+  - slug: d
+    name: Command
+    color: '#7C3FB5'
+    tint: '#F2EAF8'
+    modules:
+      - slug: m13
+        dir: module-13
+        title: Ethics & AI
+        standfirst: Hedging and concession for balanced argument · 45 lexemes · timed CAE essay #2.
+      - slug: m14
+        dir: module-14
+        title: Consumer Society
+        standfirst: Dependent prepositions, comparison and quantifiers · 45 lexemes · a recorded monologue.
+      - slug: m15
+        dir: module-15
+        title: Global Challenges
+        standfirst: Sentence architecture and cohesion for long-form writing · 45 lexemes · a proposal.
+
+checkpoints:
+  - slug: diagnostic
+    kind: diagnostic
+    dir: diagnostic
+    title: Diagnostic · 60 Use of English items + essay + monologue
+    pass_mark: null            # no gate — this one only draws the gap map
+    planned_minutes: 120
+  - slug: cp-a
+    kind: block
+    block: a
+    dir: checkpoint-a
+    title: Checkpoint A · modules 1–4
+    pass_mark: 75
+    planned_minutes: 120
+  - slug: cp-b
+    kind: block
+    block: b
+    dir: checkpoint-b
+    title: Checkpoint B · modules 5–8
+    pass_mark: 75
+    planned_minutes: 120
+  - slug: cp-c
+    kind: block
+    block: c
+    dir: checkpoint-c
+    title: Checkpoint C · modules 9–12
+    pass_mark: 75
+    planned_minutes: 120
+  - slug: final
+    kind: final
+    block: d
+    dir: final
+    title: Final mock · CAE Reading & Use of English + Writing
+    pass_mark: 65
+    planned_minutes: 270
+
+# The weekly protocol, applied identically to every module of the course.
+# `config` is read at render time by lib/domain/content-slicing.ts, so a module
+# whose content has a different number of spotlights/lexemes degrades gracefully.
+protocol:
+  - type: prime
+    title: Prime
+    planned_minutes: 60
+    steps:
+      - kind: opener
+        title: Unit opener
+        detail: See what this module builds toward — each goal lights up as you earn it
+        minutes: 5
+      - kind: reading
+        title: Skim the long-read
+        detail: Get the gist in one pass — no dictionary, glosses off
+        minutes: 10
+        config: { reading_kind: main, mode: skim }
+      - kind: theory
+        title: Grammar spotlight · part 1
+        detail: Master the first half of the module's constructions
+        minutes: 20
+        config: { part: 1, of: 2 }
+      - kind: vocab
+        title: Vocabulary studio · 1 of 3
+        detail: Meet the first batch of lexemes and mark your priority items
+        minutes: 20
+        config: { batch: 1, of: 3 }
+      - kind: flashcards_intro
+        title: New cards into rotation
+        detail: Put the module's decks into your daily review queue
+        minutes: 5
+
+  - type: input
+    title: Input
+    planned_minutes: 75
+    steps:
+      - kind: review_slot
+        title: Review Slot
+        detail: Clear 10 items from the exercise re-queue
+        minutes: 12
+        config: { count: 10 }
+      - kind: vocab
+        title: Vocabulary in focus · 2 of 3
+        detail: Meet the second batch — you'll spot these in the text next
+        minutes: 10
+        config: { batch: 2, of: 3 }
+      - kind: reading
+        title: Close reading with glosses
+        detail: Hunt the target constructions and focus lexemes in the long-read
+        minutes: 20
+        config: { reading_kind: main, mode: close }
+      - kind: exercise_set
+        title: Check the reading
+        detail: Prove you caught the detail, not just the gist
+        minutes: 8
+        config: { types: [reading_comprehension] }
+      - kind: vocab
+        title: Vocabulary in focus · 3 of 3
+        detail: Meet the final batch before you drill the full set
+        minutes: 8
+        config: { batch: 3, of: 3 }
+      - kind: exercise_set
+        title: Vocabulary set
+        detail: 'Nail the module''s lexis: MC cloze · collocation match · word formation'
+        minutes: 17
+        config: { group_key: vocab }
+
+  - type: workout
+    title: Workout
+    planned_minutes: 75
+    steps:
+      - kind: review_slot
+        title: Review Slot
+        detail: Clear 10 items from the exercise re-queue
+        minutes: 12
+        config: { count: 10 }
+      - kind: theory
+        title: Grammar spotlight · part 2
+        detail: Master the remaining constructions — you drill them next
+        minutes: 15
+        config: { part: 2, of: 2 }
+      - kind: exercise_set
+        title: Grammar drill · open cloze
+        detail: Apply both spotlight parts under pressure
+        minutes: 20
+        config: { types: [grammar_drill, open_cloze] }
+      - kind: exercise_set
+        title: Transformations · error correction
+        detail: Beat the exam formats and your typical L1 errors
+        minutes: 18
+        config: { types: [key_word_transformation, error_correction] }
+      - kind: harvest
+        title: Harvest errors
+        detail: Turn every mistake into a flashcard and an error-map entry
+        minutes: 10
+
+  - type: output
+    title: Output
+    planned_minutes: 60
+    steps:
+      - kind: reading
+        title: Extra text
+        detail: Read the module's second genre — fuel for the production task
+        minutes: 12
+        config: { reading_kind: extra, mode: close }
+      - kind: production
+        title: Writing / speaking task
+        detail: Put the module's grammar and lexis to work in the CAE-genre task
+        minutes: 30
+      - kind: self_check
+        title: Model answer & checklist
+        detail: Compare with the model answer and tick the self-check list
+        minutes: 8
+      - kind: module_quiz
+        title: Module quiz
+        detail: Score 10 review-pool items — module Completed, reviews at +7 and +21 days
+        minutes: 10
+        config: { count: 10, pool: review }

@@ -1,0 +1,33 @@
+kind: main
+kicker: LESETEXT
+title: Neu in der Stadt
+meta: ≈ 3 Min · Wörter mit Punkten haben eine Erklärung — tippen Sie darauf
+word_count: 283
+body:
+  - - t: "Marek Nowak ist 32 Jahre alt und kommt aus Polen, aus Krakau. Seit einem Jahr wohnt er in Leipzig. Von Beruf ist er Koch und arbeitet in einem kleinen Restaurant in der Nähe vom Bahnhof. Seine Muttersprache ist Polnisch, aber er spricht auch Englisch und ein bisschen Deutsch. „Am Anfang war alles schwer“, sagt er. „Ich verstehe die Leute hier oft nicht, und sie sprechen sehr schnell.“"
+  - - t: "Zweimal pro Woche besucht Marek einen Sprachkurs. Der Kurs beginnt am Montag und am Mittwoch um 18 Uhr. In der ersten Stunde stellt sich jeder kurz vor: Name, Land, Beruf. Für Marek ist das nicht leicht, denn sein Nachname ist für Deutsche schwer. Er "
+    - g: buchstabieren
+    - t: " ihn deshalb immer: N-o-w-a-k."
+  - - t: "Im Kurs sind vierzehn Leute aus neun Ländern. Neben Marek sitzt Fatima. Sie kommt aus Marokko, ist 27 und ledig. Sie studiert Informatik an der Universität und spricht schon sehr gut Deutsch. „Woher kommst du?“, fragt sie am ersten Abend. „Aus Polen“, antwortet Marek. „Und du?“ So lernen die beiden sich kennen."
+  - - t: "Die Lehrerin heißt Frau Weber. Sie ist "
+    - g: geduldig
+    - t: " und spricht langsam. „Haben Sie Fragen?“, fragt sie oft. Am Ende der Stunde bekommt jeder ein "
+    - g: das Formular
+    - t: ". Alle füllen es aus: Vorname, Nachname, Alter, Adresse, Telefonnummer, E-Mail-Adresse. Marek schreibt seine neue Adresse in Leipzig hinein. „Sind Sie verheiratet?“, steht auf dem Papier. Marek ist verheiratet, aber seine Frau wohnt noch in Krakau. Im Sommer kommt sie nach Deutschland."
+  - - t: "Nach dem Kurs gehen einige Leute zusammen in ein Café. Sie trinken Kaffee und sprechen Deutsch — langsam, mit vielen Fehlern, aber sie sprechen. „Wiederholen Sie einfach alles“, sagt Frau Weber immer. Marek macht das jeden Abend. Er lernt gern, und heute versteht er schon viel mehr als vor einem Jahr."
+glosses:
+  - key: buchstabieren
+    term: buchstabieren
+    pos_label: Verb
+    definition: Ein Wort Buchstabe für Buchstabe sagen
+    example: "Wie schreibt man das? — Ich buchstabiere: W-e-b-e-r."
+  - key: geduldig
+    term: geduldig
+    pos_label: Adjektiv
+    definition: Ruhig. Diese Person wartet gern und wird nicht böse.
+    example: Meine Lehrerin ist sehr geduldig und erklärt alles zweimal.
+  - key: das Formular
+    term: das Formular
+    pos_label: Nomen
+    definition: Ein Papier mit Fragen zu Name, Adresse und Alter
+    example: Bitte füllen Sie das Formular aus.

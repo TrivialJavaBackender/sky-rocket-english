@@ -131,7 +131,7 @@ export async function ensureActiveEnrollment(userId: number): Promise<CourseDTO>
   const enrollment = await prisma.user_course.findFirst({ where: { user_id: userId, is_active: true }, include: { course: true } });
   if (enrollment) return mapCourse(enrollment.course);
   const fallback = await prisma.course.findFirst({ where: { is_active: true }, orderBy: { position: 'asc' } });
-  if (!fallback) throw new Error('No active course seeded — is 0002_seed_en_c1_skeleton.sql applied?');
+  if (!fallback) throw new Error('No active course seeded — did `pnpm sync` run? (course rows come from courses/*/course.yaml)');
   await setActiveCourse(userId, idToNumber(fallback.id));
   return mapCourse(fallback);
 }

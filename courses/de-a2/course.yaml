@@ -1,0 +1,222 @@
+# Course skeleton — Deutsch A1 → A2, 40 hours (courses/de-a2/PLAN.md).
+# See docs/COURSE-DESIGN-GUIDE.md for how the numbers below were derived.
+#
+# Everything a learner reads is German, including the step titles: the course is
+# built for full immersion (PLAN.md §«Immersion»). Only this file's comments and
+# the sibling PLAN.md are in Russian — they are addressed to the author, not the
+# learner.
+#
+# Positions come from array order. A module's planned_minutes is the sum of the
+# protocol's session minutes (55+55+55+45 = 210 = 3.5 h).
+
+slug: de-a2
+language: de
+name: Deutsch
+level_label: A1 → A2
+position: 2
+
+blocks:
+  - slug: a
+    name: Basis
+    color: '#C9622E'
+    tint: '#FAEDE6'
+    modules:
+      - slug: m01
+        dir: module-01
+        title: Ich und du
+        standfirst: Präsens, sein und haben, Fragen · 30 Wörter · sich und andere vorstellen.
+      - slug: m02
+        dir: module-02
+        title: Familie und Wohnen
+        standfirst: Artikel, Plural, Akkusativ und Possessivartikel · 30 Wörter · die eigene Wohnung beschreiben.
+      - slug: m03
+        dir: module-03
+        title: Essen und Einkaufen
+        standfirst: Verben mit Vokalwechsel, Imperativ und möchten · 30 Wörter · ein Gespräch im Geschäft.
+      - slug: m04
+        dir: module-04
+        title: Mein Tag
+        standfirst: Trennbare Verben, Uhrzeit und die Satzstellung · 30 Wörter · den eigenen Tagesablauf erzählen.
+
+  - slug: b
+    name: Alltag
+    color: '#B8452F'
+    tint: '#F9E9E6'
+    modules:
+      - slug: m05
+        dir: module-05
+        title: Freizeit und Hobbys
+        standfirst: Perfekt mit haben und das Partizip II · 30 Wörter · vom Wochenende berichten.
+      - slug: m06
+        dir: module-06
+        title: Unterwegs
+        standfirst: Perfekt mit sein und die Wechselpräpositionen · 30 Wörter · den Weg beschreiben.
+      - slug: m07
+        dir: module-07
+        title: Gesundheit
+        standfirst: Dativ als Objekt und alle Modalverben · 30 Wörter · ein Gespräch beim Arzt.
+
+  - slug: c
+    name: Welt
+    color: '#8E3B5C'
+    tint: '#F5E8EE'
+    modules:
+      - slug: m08
+        dir: module-08
+        title: Arbeit und Pläne
+        standfirst: Nebensätze mit weil und dass · 30 Wörter · eine kurze Bewerbung schreiben.
+      - slug: m09
+        dir: module-09
+        title: Einkaufen und Vergleichen
+        standfirst: Komparativ, Superlativ und Adjektive · 30 Wörter · Dinge vergleichen und bewerten.
+      - slug: m10
+        dir: module-10
+        title: Feste und Erinnerungen
+        standfirst: Präteritum und Nebensätze mit wenn und als · 30 Wörter · von einem Fest erzählen.
+
+checkpoints:
+  - slug: diagnostic
+    kind: diagnostic
+    dir: diagnostic
+    title: Einstufungstest · 40 Aufgaben und das Grammatik-Wörterbuch
+    pass_mark: null
+    planned_minutes: 60
+  - slug: cp-a
+    kind: block
+    block: a
+    dir: checkpoint-a
+    title: Checkpoint A · Module 1–4
+    pass_mark: 75
+    planned_minutes: 75
+  - slug: cp-b
+    kind: block
+    block: b
+    dir: checkpoint-b
+    title: Checkpoint B · Module 5–7
+    pass_mark: 75
+    planned_minutes: 75
+  - slug: final
+    kind: final
+    block: c
+    dir: final
+    title: Abschlusstest · im Format Goethe-Zertifikat A2
+    pass_mark: 60
+    planned_minutes: 90
+
+# Vier Sitzungen pro Modul, 210 Minuten. Kürzer als im Kurs en-c1 (270), weil auf
+# dem Niveau A1–A2 die Konzentration früher nachlässt — docs/COURSE-DESIGN-GUIDE.md §7.
+protocol:
+  - type: prime
+    title: Start
+    planned_minutes: 55
+    steps:
+      - kind: opener
+        title: Ziele dieses Moduls
+        detail: Sieh, was du am Ende dieser Woche kannst
+        minutes: 3
+      - kind: reading
+        title: Text überfliegen
+        detail: Lies einmal ohne Wörterbuch — nur der Inhalt zählt
+        minutes: 8
+        config: { reading_kind: main, mode: skim }
+      - kind: theory
+        title: Grammatik im Fokus · Teil 1
+        detail: Lerne die erste Hälfte der Regeln — mit Tabelle und Beispielen
+        minutes: 16
+        config: { part: 1, of: 2 }
+      - kind: vocab
+        title: Wortschatz · 1 von 3
+        detail: Lerne die ersten Wörter und markiere die wichtigsten
+        minutes: 20
+        config: { batch: 1, of: 3 }
+      - kind: flashcards_intro
+        title: Neue Karten in die Kartei
+        detail: Die Wörter dieses Moduls kommen in deine tägliche Wiederholung
+        minutes: 8
+
+  - type: input
+    title: Lesen
+    planned_minutes: 55
+    steps:
+      - kind: review_slot
+        title: Wiederholung
+        detail: Löse 8 Aufgaben aus deiner Wiederholungsliste
+        minutes: 10
+        config: { count: 8 }
+      - kind: vocab
+        title: Wortschatz · 2 von 3
+        detail: Diese Wörter findest du gleich im Text
+        minutes: 8
+        config: { batch: 2, of: 3 }
+      - kind: reading
+        title: Lesen mit Glossen
+        detail: Suche im Text die Wörter und die Regeln dieses Moduls
+        minutes: 12
+        config: { reading_kind: main, mode: close }
+      - kind: exercise_set
+        title: Leseverstehen
+        detail: Zeig, dass du auch die Details verstanden hast
+        minutes: 7
+        config: { types: [reading_comprehension] }
+      - kind: vocab
+        title: Wortschatz · 3 von 3
+        detail: Die letzten Wörter, bevor du alles übst
+        minutes: 8
+        config: { batch: 3, of: 3 }
+      - kind: exercise_set
+        title: Wortschatz-Übungen
+        detail: Üben, bis die Wörter sitzen
+        minutes: 10
+        config: { group_key: vocab }
+
+  - type: workout
+    title: Training
+    planned_minutes: 55
+    steps:
+      - kind: review_slot
+        title: Wiederholung
+        detail: Löse 8 Aufgaben aus deiner Wiederholungsliste
+        minutes: 10
+        config: { count: 8 }
+      - kind: theory
+        title: Grammatik im Fokus · Teil 2
+        detail: Der Rest der Regeln — gleich danach übst du sie
+        minutes: 12
+        config: { part: 2, of: 2 }
+      - kind: exercise_set
+        title: Grammatik-Drill und Lückentext
+        detail: Formen, Endungen und die richtige Satzstellung
+        minutes: 18
+        config: { types: [grammar_drill, open_cloze] }
+      - kind: exercise_set
+        title: Umformung und Fehlersuche
+        detail: Sätze umformen und typische Fehler finden
+        minutes: 10
+        config: { types: [key_word_transformation, error_correction] }
+      - kind: harvest
+        title: Fehler sammeln
+        detail: Jeder Fehler kommt zurück — in 2, 7 und 21 Tagen
+        minutes: 5
+
+  - type: output
+    title: Anwenden
+    planned_minutes: 45
+    steps:
+      - kind: reading
+        title: Zweiter Text
+        detail: Ein Dialog zum Thema — das Material für deine Aufgabe
+        minutes: 8
+        config: { reading_kind: extra, mode: close }
+      - kind: production
+        title: Schreiben oder Sprechen
+        detail: Benutze die Wörter und die Grammatik dieses Moduls selbst
+        minutes: 20
+      - kind: self_check
+        title: Selbstkontrolle
+        detail: Vergleiche mit dem Musterbeispiel und prüfe die Liste
+        minutes: 7
+      - kind: module_quiz
+        title: Modul-Quiz
+        detail: 10 Aufgaben — danach ist das Modul fertig, Wiederholung in 7 und 21 Tagen
+        minutes: 10
+        config: { count: 10, pool: review }

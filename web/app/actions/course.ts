@@ -13,9 +13,10 @@ import * as checkpointUseCase from '@/lib/use-cases/checkpoint';
 export async function switchCourse(courseSlug: string) {
   const userId = await getCurrentUserId();
   const course = await courseSwitchUseCase.switchCourse(userId, courseSlug);
-  revalidatePath('/');
-  revalidatePath('/course');
-  revalidatePath('/progress');
+  // 'layout' scope, not the default 'page': the course label and the switcher
+  // itself live in app/(app)/layout.tsx, so a page-only revalidation would leave
+  // the nav still naming the course the learner just left.
+  revalidatePath('/', 'layout');
   return course;
 }
 

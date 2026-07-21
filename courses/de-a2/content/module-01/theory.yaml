@@ -1,0 +1,79 @@
+# Modul 01 · Ich und du — Grammatik im Fokus, Watch out! und Lückenkarten.
+# Grenze laut Profil (courses/de-a2/PLAN.md §6): höchstens 2 Spotlights × 4 Punkte.
+# Die Tabelle macht die Arbeit, nicht der Text — `note` bleibt unter 12 Wörtern.
+spotlights:
+  - title: "Das Verb im Präsens"
+    intro: "Jedes Verb hat einen Stamm und eine Endung. Die Endung zeigt: Wer macht das?"
+    items:
+      - form: "ich -e · du -st · er/sie/es -t · wir -en · ihr -t · sie/Sie -en"
+        example: "ich lerne · du lernst · er lernt · wir lernen · ihr lernt · sie lernen"
+        note: "Der Stamm bleibt: lern-. Nur die Endung wechselt."
+      - form: "Personalpronomen im Nominativ"
+        example: "ich, du, er, sie, es, wir, ihr, sie / Sie"
+        note: "Sie mit großem S ist höflich. Für Fremde immer Sie."
+      - form: "sein: ich bin · du bist · er ist · wir sind · ihr seid · sie sind"
+        example: "Ich bin Koch. Du bist müde. Wir sind aus Polen."
+        note: "sein ist unregelmäßig. Diese Formen lernt man auswendig."
+      - form: "haben: ich habe · du hast · er hat · wir haben · ihr habt · sie haben"
+        example: "Ich habe Zeit. Sie hat einen Bruder. Habt ihr Fragen?"
+        note: "Nur du und er/sie/es sind besonders: hast, hat."
+
+  - title: "Fragen stellen"
+    intro: "Es gibt zwei Fragen: mit Fragewort und ohne. Beide beginnen mit dem Verb oder dem Fragewort."
+    items:
+      - form: "Fragewort + Verb + Subjekt"
+        example: "Woher kommst du? — Wo wohnst du? — Wie heißt sie?"
+        note: "Das Verb steht immer direkt nach dem Fragewort."
+      - form: "Verb + Subjekt (Ja/Nein-Frage)"
+        example: "Hast du Zeit? — Sprichst du Deutsch? — Ist das dein Buch?"
+        note: "Ohne Fragewort beginnt der Satz mit dem Verb."
+      - form: "wer · was · wie · wo · woher · wann · warum"
+        example: "Wer ist das? Was machst du? Wie alt bist du? Woher kommt ihr?"
+        note: "wo = der Ort. woher = das Land oder die Herkunft."
+      - form: "Antwort: ja · nein · doch"
+        example: "Sprichst du Englisch? — Ja. / Nein. — Du kommst nicht? — Doch!"
+        note: "doch antwortet positiv auf eine negative Frage."
+
+watchouts:
+  - title: "Beruf ohne Artikel"
+    bad: Ich bin ein Student.
+    good: Ich bin Student.
+    note: "Vor Beruf, Nationalität und Religion steht kein Artikel."
+  - title: "Das Alter mit sein"
+    bad: Ich habe 25 Jahre.
+    good: Ich bin 25 Jahre alt.
+    note: "Das Alter steht im Deutschen immer mit sein."
+  - title: "Das Verb in der Frage"
+    bad: Woher du kommst?
+    good: Woher kommst du?
+    note: "Nach dem Fragewort kommt sofort das Verb."
+  - title: "Sprache ohne das Wort Sprache"
+    bad: Ich spreche die deutsche Sprache.
+    good: Ich spreche Deutsch.
+    note: "Die Sprache steht allein und groß: Deutsch, Polnisch, Englisch."
+
+cloze_cards:
+  - text: "Woher {{c1::kommst}} du? — Ich komme aus Italien."
+    hint: kommen
+    rule: "du + Verb = Stamm + -st. Nach dem Fragewort steht sofort das Verb."
+  - text: "Meine Schwester {{c1::wohnt}} seit drei Jahren in Wien."
+    hint: wohnen
+    rule: "er/sie/es + Verb = Stamm + -t. Meine Schwester = sie."
+  - text: "Wir {{c1::lernen}} zusammen Deutsch, denn wir sind im gleichen Kurs."
+    hint: lernen
+    rule: "wir + Verb = Stamm + -en. Die Form ist gleich wie der Infinitiv."
+  - text: "Ich {{c1::bin}} Köchin und arbeite in einem Restaurant."
+    hint: sein
+    rule: "sein ist unregelmäßig: ich bin. Vor dem Beruf steht kein Artikel."
+  - text: "{{c1::Seid}} ihr aus Spanien? — Nein, wir kommen aus Portugal."
+    hint: sein
+    rule: "ihr + sein = seid. Ohne Fragewort beginnt die Frage mit dem Verb."
+  - text: "Anna {{c1::hat}} zwei Brüder und eine Schwester."
+    hint: haben
+    rule: "er/sie/es + haben = hat. Diese Form ist unregelmäßig."
+  - text: "{{c1::Habt}} ihr noch Fragen zum Kurs?"
+    hint: haben
+    rule: "ihr + haben = habt. Die Ja/Nein-Frage beginnt mit dem Verb."
+  - text: "Wie {{c1::heißen}} Sie? — Mein Name ist Weber."
+    hint: heißen
+    rule: "Sie (höflich) + Verb = Stamm + -en. Für Fremde benutzt man immer Sie."

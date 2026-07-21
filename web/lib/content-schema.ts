@@ -2,13 +2,18 @@ import { z } from 'zod';
 import { isDeterminateGap, OPEN_CLASS_ANSWER_THRESHOLD } from './content-gap-words';
 
 /**
- * Zod schemas for the content package format (content/en-c1/README.md).
- * scripts/sync.ts validates every YAML/CSV file against these before upsert
+ * Zod schemas for the content package format (docs/CONTENT-PACKAGE-SCHEMA.md).
+ * scripts/sync.ts validates every YAML file against these before upsert
  * (ARCHITECTURE.md §4.7) — a malformed module fails the sync with a clear
  * error instead of writing partial/garbage rows. The runtime (stage 3) reuses
  * the exercise `content` union to type `exercise.content jsonb` when grading
  * (§5) — canon field names are the package's snake_case (§8, D3), not the
  * mockup's camelCase.
+ *
+ * The schemas are language-agnostic with one exception: the open_cloze
+ * determinacy rule needs to know which words a sentence forces, so anything
+ * downstream of it is built by `makeExercisesPackageSchema(language)` rather
+ * than exported as a ready value.
  */
 
 // ───────────────────────────── meta.yaml ─────────────────────────────
@@ -42,11 +47,17 @@ export const MetaSchema = z.object({
     mode: z.enum(['writing', 'speaking']),
     genre: z.string().min(1),
   }),
-  cards: z.object({
-    vocab: z.number().int().nonnegative(),
-    grammar_cloze: z.number().int().nonnegative(),
-    transformation: z.number().int().nonnegative(),
-  }),
+  // Legacy bookkeeping from before migration 0005: the deck is derived from
+  // vocab.yaml, so these counts inform nothing and no course is required to
+  // restate them. Optional rather than removed — the en-c1 packages still
+  // carry them and rewriting six modules to drop a dead field is churn.
+  cards: z
+    .object({
+      vocab: z.number().int().nonnegative(),
+      grammar_cloze: z.number().int().nonnegative().optional(),
+      transformation: z.number().int().nonnegative().optional(),
+    })
+    .optional(),
 });
 export type Meta = z.infer<typeof MetaSchema>;
 
@@ -170,25 +181,28 @@ export const ReadingComprehensionContentSchema = z.object({
 });
 export type ReadingComprehensionContent = z.infer<typeof ReadingComprehensionContentSchema>;
 
-export const OpenClozeContentSchema = z
-  .object({
-    pre: z.string(),
-    post: z.string(),
-    // Base form shown before answering, as in a coursebook's "(work)". Optional:
-    // classic open cloze gives no prompt, but the drills derived from
-    // theory.cloze_cards need one — "She ___ here since 2019" has several
-    // grammatical answers until you fix the verb.
-    hint: z.string().optional(),
-    answers: z.array(z.string().min(1)).min(1),
-    answer_shown: z.string().min(1),
-  })
-  // Determinacy rule (content/en-c1/README.md): a gap the learner cannot
-  // recover is a guessing game, not a test. Closed-class and fixed-frame
-  // answers are forced by the sentence; a lexical content word is not, so it
-  // needs either a base-form `hint` or an exhaustive `answers` set.
-  .superRefine((content, ctx) => {
+const OpenClozeShape = z.object({
+  pre: z.string(),
+  post: z.string(),
+  // Base form shown before answering, as in a coursebook's "(work)". Optional:
+  // classic open cloze gives no prompt, but the drills derived from
+  // theory.cloze_cards need one — "She ___ here since 2019" has several
+  // grammatical answers until you fix the verb.
+  hint: z.string().optional(),
+  answers: z.array(z.string().min(1)).min(1),
+  answer_shown: z.string().min(1),
+});
+export type OpenClozeContent = z.infer<typeof OpenClozeShape>;
+
+// Determinacy rule (docs/CONTENT-PACKAGE-SCHEMA.md): a gap the learner cannot
+// recover is a guessing game, not a test. Closed-class and fixed-frame answers
+// are forced by the sentence; a lexical content word is not, so it needs either
+// a base-form `hint` or an exhaustive `answers` set. Which words count as forced
+// is language-specific, hence the factory.
+export const makeOpenClozeContentSchema = (language: string) =>
+  OpenClozeShape.superRefine((content, ctx) => {
     if (content.hint) return;
-    if (isDeterminateGap(content.answers)) return;
+    if (isDeterminateGap(content.answers, language)) return;
     if (content.answers.length >= OPEN_CLASS_ANSWER_THRESHOLD) return;
     ctx.addIssue({
       code: z.ZodIssueCode.custom,
@@ -198,10 +212,9 @@ export const OpenClozeContentSchema = z
         `has more than one defensible answer. Add \`hint\` with the dictionary base form (e.g. hint: know for "knowing"), ` +
         `or list every member of the class in \`answers\` if grammar pins the class but not the word ` +
         `(≥${OPEN_CLASS_ANSWER_THRESHOLD} entries). If the word really is recoverable from a fixed frame, ` +
-        `add its head to FIXED_FRAME_HEADS in lib/content-gap-words.ts.`,
+        `add its head to FIXED_FRAME_HEADS in lib/content-gap-words/${language}.ts.`,
     });
   });
-export type OpenClozeContent = z.infer<typeof OpenClozeContentSchema>;
 
 export const WordFormationContentSchema = z.object({
   pre: z.string(),
@@ -246,32 +259,41 @@ const exerciseCommonFields = {
   explanation: z.string().min(1),
 };
 
-export const ExerciseEntrySchema = z.discriminatedUnion('type', [
-  z.object({ type: z.literal('mc_cloze'), content: McClozeContentSchema, ...exerciseCommonFields }),
-  z.object({ type: z.literal('grammar_drill'), content: GrammarDrillContentSchema, ...exerciseCommonFields }),
-  z.object({
-    type: z.literal('reading_comprehension'),
-    content: ReadingComprehensionContentSchema,
-    ...exerciseCommonFields,
-  }),
-  z.object({ type: z.literal('open_cloze'), content: OpenClozeContentSchema, ...exerciseCommonFields }),
-  z.object({ type: z.literal('word_formation'), content: WordFormationContentSchema, ...exerciseCommonFields }),
-  z.object({
-    type: z.literal('key_word_transformation'),
-    content: KeyWordTransformationContentSchema,
-    ...exerciseCommonFields,
-  }),
-  z.object({ type: z.literal('error_correction'), content: ErrorCorrectionContentSchema, ...exerciseCommonFields }),
-  z.object({ type: z.literal('collocation_match'), content: CollocationMatchContentSchema, ...exerciseCommonFields }),
-]);
-export type ExerciseEntry = z.infer<typeof ExerciseEntrySchema>;
+export const makeExerciseEntrySchema = (language: string) =>
+  z.discriminatedUnion('type', [
+    z.object({ type: z.literal('mc_cloze'), content: McClozeContentSchema, ...exerciseCommonFields }),
+    z.object({ type: z.literal('grammar_drill'), content: GrammarDrillContentSchema, ...exerciseCommonFields }),
+    z.object({
+      type: z.literal('reading_comprehension'),
+      content: ReadingComprehensionContentSchema,
+      ...exerciseCommonFields,
+    }),
+    z.object({
+      type: z.literal('open_cloze'),
+      content: makeOpenClozeContentSchema(language),
+      ...exerciseCommonFields,
+    }),
+    z.object({ type: z.literal('word_formation'), content: WordFormationContentSchema, ...exerciseCommonFields }),
+    z.object({
+      type: z.literal('key_word_transformation'),
+      content: KeyWordTransformationContentSchema,
+      ...exerciseCommonFields,
+    }),
+    z.object({ type: z.literal('error_correction'), content: ErrorCorrectionContentSchema, ...exerciseCommonFields }),
+    z.object({ type: z.literal('collocation_match'), content: CollocationMatchContentSchema, ...exerciseCommonFields }),
+  ]);
+
+// The determinacy refinement narrows nothing, so the inferred entry type is the
+// same for every language — callers that only need the shape can use these.
+export type ExerciseEntry = z.infer<ReturnType<typeof makeExerciseEntrySchema>>;
 export type ExerciseTypeCode = ExerciseEntry['type'];
 
-export const ExercisesPackageSchema = z.object({
-  core: z.array(ExerciseEntrySchema).min(1),
-  review_pool: z.array(ExerciseEntrySchema),
-});
-export type ExercisesPackage = z.infer<typeof ExercisesPackageSchema>;
+export const makeExercisesPackageSchema = (language: string) =>
+  z.object({
+    core: z.array(makeExerciseEntrySchema(language)).min(1),
+    review_pool: z.array(makeExerciseEntrySchema(language)),
+  });
+export type ExercisesPackage = z.infer<ReturnType<typeof makeExercisesPackageSchema>>;
 
 // ───────────────────────────── writing.yaml ─────────────────────────────
 

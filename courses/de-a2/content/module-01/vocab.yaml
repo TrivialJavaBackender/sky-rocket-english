@@ -1,0 +1,273 @@
+# Modul 01 · Ich und du — 30 Wörter zu Person, Herkunft, Beruf und Sprachkurs.
+# `definition` ist eine einfache Umschreibung auf A2 plus Synonym oder Gegenteil —
+# kein Wörterbuchstil (courses/de-a2/PLAN.md §5).
+entries:
+  - term: heißen
+    tag: Verb
+    definition: "Diesen Namen haben. Man fragt: Wie heißt du?"
+    use_cases:
+      - Ich heiße Marek und komme aus Polen.
+      - Wie heißt deine Lehrerin? — Sie heißt Frau Weber.
+    collocations: Wie heißt du? · Wie heißen Sie? · Ich heiße …
+    register: "Neutral. Formell: Mein Name ist …"
+
+  - term: kommen aus
+    tag: Verb
+    definition: "Aus diesem Land oder dieser Stadt sein. Man fragt: Woher kommst du?"
+    use_cases:
+      - Ich komme aus Italien, aus Neapel.
+      - Woher kommt ihr? — Wir kommen aus der Türkei.
+    collocations: kommen aus + Land · Woher kommst du?
+    register: Neutral
+
+  - term: wohnen
+    tag: Verb
+    definition: An diesem Ort leben. Man hat dort ein Zimmer oder eine Wohnung.
+    use_cases:
+      - Ich wohne seit zwei Jahren in Leipzig.
+      - Wo wohnst du? — In der Bahnhofstraße.
+    collocations: wohnen in + Stadt · Wo wohnst du?
+    register: Neutral
+
+  - term: sprechen
+    tag: Verb
+    definition: Wörter benutzen. Man spricht eine Sprache oder mit einer Person.
+    use_cases:
+      - Ich spreche Polnisch, Englisch und ein bisschen Deutsch.
+      - Sprechen Sie bitte langsam!
+    collocations: Deutsch sprechen · mit jemandem sprechen · langsam sprechen
+    register: "Neutral. Das Verb ist unregelmäßig: du sprichst, er spricht."
+
+  - term: die Sprache
+    tag: Nomen
+    definition: Deutsch, Polnisch oder Englisch. Damit sprechen die Menschen in einem Land.
+    use_cases:
+      - Deutsch ist keine leichte Sprache.
+      - Wie viele Sprachen sprichst du?
+    collocations: eine Sprache lernen · eine Sprache sprechen · die Fremdsprache
+    register: "Plural: die Sprachen"
+
+  - term: die Muttersprache
+    tag: Nomen
+    definition: Die erste Sprache. Diese Sprache lernt ein Kind zu Hause.
+    use_cases:
+      - Meine Muttersprache ist Arabisch.
+      - Er spricht Deutsch fast wie eine Muttersprache.
+    collocations: die Muttersprache sein · in der Muttersprache
+    register: Neutral
+
+  - term: der Beruf
+    tag: Nomen
+    definition: Die Arbeit einer Person. Lehrer, Koch und Ärztin sind Berufe.
+    use_cases:
+      - Was sind Sie von Beruf? — Ich bin Koch.
+      - Mein Beruf gefällt mir sehr.
+    collocations: von Beruf sein · einen Beruf lernen
+    register: "Frage: Was sind Sie von Beruf?"
+
+  - term: arbeiten als
+    tag: Verb
+    definition: Diesen Beruf haben und dafür Geld bekommen.
+    use_cases:
+      - Ich arbeite als Koch in einem Restaurant.
+      - Sie arbeitet als Ärztin im Krankenhaus.
+    collocations: arbeiten als + Beruf · arbeiten bei + Firma · arbeiten in + Ort
+    register: "Ohne Artikel: arbeiten als Koch, nicht als ein Koch."
+
+  - term: studieren
+    tag: Verb
+    definition: An einer Universität lernen. Das machen Studenten.
+    use_cases:
+      - Ich studiere Medizin in München.
+      - Was studierst du? — Informatik.
+    collocations: an der Universität studieren · Medizin studieren
+    register: "Nicht gleich lernen: studieren ist nur an der Universität."
+
+  - term: verheiratet
+    tag: Adjektiv
+    definition: "Eine Frau und ein Mann sind zusammen eine Familie. Gegenteil: ledig."
+    use_cases:
+      - Ich bin seit fünf Jahren verheiratet.
+      - Sind Sie verheiratet? — Nein, ich bin ledig.
+    collocations: verheiratet sein · verheiratet mit
+    register: "Steht oft im Formular."
+
+  - term: ledig
+    tag: Adjektiv
+    definition: Nicht verheiratet. Man hat keine Ehefrau und keinen Ehemann.
+    use_cases:
+      - "Familienstand: ledig."
+      - Mein Bruder ist noch ledig.
+    collocations: ledig sein · der Familienstand
+    register: "Formell. Im Gespräch sagt man oft: Ich bin Single."
+
+  - term: das Alter
+    tag: Nomen
+    definition: "Die Zahl der Jahre. Man fragt: Wie alt bist du?"
+    use_cases:
+      - Bitte schreiben Sie Ihr Alter in das Formular.
+      - Wir haben das gleiche Alter.
+    collocations: das Alter angeben · im Alter von
+    register: "Mit sein: Ich bin 25 Jahre alt."
+
+  - term: die Adresse
+    tag: Nomen
+    definition: Straße, Hausnummer und Stadt. Dorthin kommt die Post.
+    use_cases:
+      - Meine Adresse ist Bahnhofstraße 12, 04109 Leipzig.
+      - Können Sie mir Ihre Adresse geben?
+    collocations: die Adresse angeben · unter dieser Adresse wohnen
+    register: "Plural: die Adressen"
+
+  - term: die Telefonnummer
+    tag: Nomen
+    definition: Die Zahlen für das Telefon. Damit ruft man eine Person an.
+    use_cases:
+      - Wie ist deine Telefonnummer?
+      - Er hat mir seine Telefonnummer gegeben.
+    collocations: die Telefonnummer geben · die Nummer wählen
+    register: "Kurz: die Nummer"
+
+  - term: die E-Mail-Adresse
+    tag: Nomen
+    definition: Die Adresse für Nachrichten am Computer. Dort steht immer ein @.
+    use_cases:
+      - Schreiben Sie bitte Ihre E-Mail-Adresse hier.
+      - Meine E-Mail-Adresse ist neu.
+    collocations: die E-Mail-Adresse angeben · eine E-Mail schreiben
+    register: Neutral
+
+  - term: das Formular
+    tag: Nomen
+    definition: Ein Papier mit Fragen. Man schreibt Name, Adresse und Alter hinein.
+    use_cases:
+      - Bitte füllen Sie dieses Formular aus.
+      - Das Formular hat zwei Seiten.
+    collocations: ein Formular ausfüllen · ein Formular unterschreiben
+    register: "Plural: die Formulare"
+
+  - term: ausfüllen
+    tag: Verb
+    definition: In ein Formular alle Antworten schreiben.
+    use_cases:
+      - Ich fülle das Formular für den Kurs aus.
+      - Füllen Sie bitte alles auf Deutsch aus.
+    collocations: ein Formular ausfüllen · einen Antrag ausfüllen
+    register: "Trennbares Verb: Ich fülle … aus."
+
+  - term: der Name
+    tag: Nomen
+    definition: Das Wort für eine Person. Zum Beispiel Anna oder Weber.
+    use_cases:
+      - Mein Name ist Weber.
+      - Wie schreibt man Ihren Namen?
+    collocations: der Vorname · der Nachname · der Familienname
+    register: "Formeller als heißen: Mein Name ist …"
+
+  - term: der Vorname
+    tag: Nomen
+    definition: Der erste Name. Bei Anna Weber ist das Anna.
+    use_cases:
+      - "Vorname: Anna. Nachname: Weber."
+      - Mein Vorname ist schwer für Deutsche.
+    collocations: der Vorname und der Nachname
+    register: "Steht immer im Formular."
+
+  - term: der Nachname
+    tag: Nomen
+    definition: Der Name der Familie. Bei Anna Weber ist das Weber.
+    use_cases:
+      - Mein Nachname ist Nowak.
+      - Wie ist Ihr Nachname, bitte?
+    collocations: der Nachname · der Familienname
+    register: "Auch: der Familienname"
+
+  - term: das Land
+    tag: Nomen
+    definition: Ein großes Gebiet mit einer Regierung. Polen und Italien sind Länder.
+    use_cases:
+      - Aus welchem Land kommst du?
+      - In diesem Land spricht man drei Sprachen.
+    collocations: aus einem Land kommen · das Heimatland
+    register: "Plural: die Länder"
+
+  - term: die Stadt
+    tag: Nomen
+    definition: Ein Ort mit vielen Häusern und Menschen. Berlin ist eine Stadt.
+    use_cases:
+      - Leipzig ist eine schöne Stadt.
+      - In welcher Stadt wohnst du?
+    collocations: in der Stadt wohnen · die Großstadt · die Heimatstadt
+    register: "Plural: die Städte"
+
+  - term: kennenlernen
+    tag: Verb
+    definition: Eine Person zum ersten Mal treffen und mit ihr sprechen.
+    use_cases:
+      - Im Kurs lerne ich viele Leute kennen.
+      - Schön, Sie kennenzulernen!
+    collocations: Leute kennenlernen · sich kennenlernen
+    register: "Trennbar: Ich lerne sie kennen."
+
+  - term: sich vorstellen
+    tag: Verb
+    definition: Den eigenen Namen sagen, damit andere einen kennen.
+    use_cases:
+      - Darf ich mich kurz vorstellen? Ich heiße Marek.
+      - Jeder stellt sich in der ersten Stunde vor.
+    collocations: sich kurz vorstellen · Darf ich mich vorstellen?
+    register: "Trennbar und reflexiv: Ich stelle mich vor."
+
+  - term: buchstabieren
+    tag: Verb
+    definition: "Ein Wort Buchstabe für Buchstabe sagen: N-o-w-a-k."
+    use_cases:
+      - Können Sie Ihren Namen bitte buchstabieren?
+      - "Ich buchstabiere langsam: M-a-r-e-k."
+    collocations: den Namen buchstabieren · Wie buchstabiert man das?
+    register: "Sehr nützlich am Telefon."
+
+  - term: wiederholen
+    tag: Verb
+    definition: Etwas noch einmal sagen oder machen.
+    use_cases:
+      - Können Sie das bitte wiederholen?
+      - Wir wiederholen die Wörter aus Modul eins.
+    collocations: eine Frage wiederholen · den Stoff wiederholen
+    register: "Wichtiger Satz im Kurs: Bitte wiederholen Sie das."
+
+  - term: verstehen
+    tag: Verb
+    definition: Wissen, was die Wörter bedeuten.
+    use_cases:
+      - Entschuldigung, ich verstehe das nicht.
+      - Verstehst du die Aufgabe?
+    collocations: nichts verstehen · alles verstehen · falsch verstehen
+    register: Neutral
+
+  - term: langsam
+    tag: Adjektiv
+    definition: "Mit wenig Tempo, mit viel Zeit. Gegenteil: schnell."
+    use_cases:
+      - Sprechen Sie bitte langsam!
+      - Ich lerne langsam, aber ich lerne jeden Tag.
+    collocations: langsam sprechen · langsam lesen
+    register: "Gegenteil: schnell"
+
+  - term: gern
+    tag: Adverb
+    definition: Mit Freude. Man macht diese Sache oft und mag sie.
+    use_cases:
+      - Ich koche gern und fahre gern Fahrrad.
+      - Trinkst du gern Kaffee? — Ja, sehr gern.
+    collocations: gern machen · sehr gern · nicht gern
+    register: "Auch: gerne. Beides ist richtig."
+
+  - term: auch
+    tag: Adverb
+    definition: "Ebenso, genauso. Zeigt: für eine zweite Person oder Sache gilt das Gleiche."
+    use_cases:
+      - Ich komme aus Polen. Meine Frau kommt auch aus Polen.
+      - Sprichst du auch Englisch?
+    collocations: ich auch · auch nicht
+    register: "Antwort: Ich auch! / Ich auch nicht."

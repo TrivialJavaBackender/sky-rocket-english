@@ -1,0 +1,385 @@
+# Einstufungstest de-a2 — 40 Aufgaben.
+# Aufgabe 1–3 sind das Grammatik-Wörterbuch: Sie führen die Fachwörter ein, die
+# alle Module danach benutzen (courses/de-a2/PLAN.md §5). Danach 37 Aufgaben quer
+# durch den Stoff A1 → A2 — kein Test zum Bestehen, sondern eine Landkarte der Lücken.
+core:
+  # ───────────────────────── Grammatik-Wörterbuch ─────────────────────────
+  - type: collocation_match
+    group: grammar
+    id: diag-woerterbuch-1
+    content:
+      left: [das Nomen, das Verb, der Artikel, der Plural]
+      right: ["der, die, das", "das Haus, das Kind, die Stadt", "zwei Häuser, drei Kinder", "gehen, lernen, arbeiten"]
+      pairs: { 0: 1, 1: 3, 2: 0, 3: 2 }
+    explanation: "Das Nomen ist ein Ding oder eine Person. Das Verb ist die Aktion. Der Artikel steht vor dem Nomen. Der Plural bedeutet: mehr als eins."
+
+  - type: collocation_match
+    group: grammar
+    id: diag-woerterbuch-2
+    content:
+      left: [die Endung, der Hauptsatz, der Nebensatz, das Fragewort]
+      right: ["Ich lerne Deutsch.", "wer, wo, wie, warum", "…, weil ich müde bin.", "lern-e, lern-st, lern-t"]
+      pairs: { 0: 3, 1: 0, 2: 2, 3: 1 }
+    explanation: "Die Endung steht am Ende vom Verb. Der Hauptsatz kann allein stehen. Der Nebensatz beginnt mit weil, dass oder wenn. Das Fragewort beginnt eine Frage."
+
+  - type: collocation_match
+    group: grammar
+    id: diag-woerterbuch-3
+    content:
+      left: [der Kasus, das Partizip, die Vergangenheit, das Adjektiv]
+      right: ["Nominativ, Akkusativ, Dativ", "gut, klein, neu", "Gestern habe ich gelernt.", "gelernt, gemacht, gefahren"]
+      pairs: { 0: 0, 1: 3, 2: 2, 3: 1 }
+    explanation: "Der Kasus zeigt die Rolle vom Nomen im Satz. Das Partizip braucht man für die Vergangenheit. Das Adjektiv beschreibt ein Nomen."
+
+  # ───────────────────────── Wortschatz ─────────────────────────
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [Deutsch, Musik, Sport, Freunde]
+      right: [treiben, sprechen, treffen, hören]
+      pairs: { 0: 1, 1: 3, 2: 0, 3: 2 }
+    explanation: "Diese Verben stehen fest zusammen: Deutsch sprechen, Musik hören, Sport treiben, Freunde treffen."
+
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [eine Frage, einen Kaffee, ein Formular, die Hausaufgaben]
+      right: [ausfüllen, stellen, machen, trinken]
+      pairs: { 0: 1, 1: 3, 2: 0, 3: 2 }
+    explanation: "Man stellt eine Frage, man trinkt einen Kaffee, man füllt ein Formular aus, man macht die Hausaufgaben."
+
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [das Land, die Stadt, der Beruf, die Sprache]
+      right: [Lehrerin, Berlin, Italienisch, Österreich]
+      pairs: { 0: 3, 1: 1, 2: 0, 3: 2 }
+    explanation: "Österreich ist ein Land, Berlin ist eine Stadt, Lehrerin ist ein Beruf, Italienisch ist eine Sprache."
+
+  # ───────────────────────── Multiple Choice ─────────────────────────
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Anna "
+      post: " aus Spanien."
+      options: [komme, kommst, kommt, kommen]
+      answer: 2
+    explanation: "Anna = er/sie/es. Bei er/sie/es endet das Verb auf -t: sie kommt."
+
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Ich habe "
+      post: " Auto, aber ein Fahrrad."
+      options: [kein, keine, keinen, nicht]
+      answer: 0
+    explanation: "das Auto ist neutral. Im Akkusativ bleibt es kein Auto. Nur der-Nomen ändern sich zu keinen: keinen Wagen."
+
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Gestern "
+      post: " ich ins Kino gegangen."
+      options: [habe, bin, war, werde]
+      answer: 1
+    explanation: "gehen ist ein Verb der Bewegung. Diese Verben bilden die Vergangenheit mit sein: ich bin gegangen, ich bin gefahren."
+
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Wir fahren "
+      post: " dem Zug nach Hamburg."
+      options: [in, zu, auf, mit]
+      answer: 3
+    explanation: "Für Verkehrsmittel benutzt man mit + Dativ: mit dem Zug, mit dem Bus, mit der Bahn."
+
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Er ist "
+      post: " als sein Bruder."
+      options: [groß, größer, am größten, so groß]
+      answer: 1
+    explanation: "Nach als steht der Komparativ: groß → größer. Nur bei so groß wie vergleicht man zwei gleiche Dinge."
+
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Ich bleibe heute zu Hause, weil ich krank "
+      post: "."
+      options: [bin, ist, sein, bist]
+      answer: 0
+    explanation: "Im Nebensatz mit weil steht das Verb am Ende. Das Subjekt ist ich, also: weil ich krank bin."
+
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Das ist "
+      post: " Schwester. Sie heißt Lena."
+      options: [mein, meine, meinen, meiner]
+      answer: 1
+    explanation: "die Schwester ist feminin. Im Nominativ heißt es meine Schwester."
+
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Du "
+      post: " heute nicht arbeiten, es ist Sonntag."
+      options: [muss, müssen, müsst, musst]
+      answer: 3
+    explanation: "du + Modalverb müssen = du musst. Das zweite Verb steht im Infinitiv am Ende: du musst arbeiten."
+
+  # ───────────────────────── Lückentext ─────────────────────────
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Ich komme "
+      post: " Polen und wohne seit zwei Jahren in Köln."
+      answers: [aus]
+      answer_shown: aus
+    explanation: "Herkunft aus einem Land: kommen aus + Land. Ich komme aus Polen, aus der Türkei, aus Italien."
+
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Ich "
+      post: " Lehrerin und arbeite an einer Schule."
+      answers: [bin]
+      answer_shown: bin
+    explanation: "Der Beruf steht mit sein und ohne Artikel: Ich bin Lehrerin. NICHT: Ich bin eine Lehrerin."
+
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Das ist Frau Meier. "
+      post: " Frau kommt aus Berlin."
+      answers: [die]
+      answer_shown: die
+    explanation: "Die Frau ist schon bekannt, deshalb der bestimmte Artikel. die Frau ist feminin: die."
+
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Entschuldigung, ich verstehe Sie "
+      post: ". Sprechen Sie bitte langsam."
+      answers: [nicht]
+      answer_shown: nicht
+    explanation: "Man verneint ein Verb mit nicht. nicht steht am Ende: Ich verstehe Sie nicht."
+
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Jeden Morgen fahre ich "
+      post: " dem Bus zur Arbeit."
+      answers: [mit]
+      answer_shown: mit
+    explanation: "Nach mit steht immer der Dativ. der Bus → mit dem Bus."
+
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: ""
+      post: " du heute Abend Zeit? Wir gehen ins Kino."
+      answers: [hast]
+      answer_shown: hast
+    explanation: "Eine Frage ohne Fragewort beginnt mit dem Verb. du + haben = hast: Hast du Zeit?"
+
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Ich lerne Deutsch "
+      post: " Englisch. Beide Sprachen gefallen mir."
+      answers: [und]
+      answer_shown: und
+    explanation: "und verbindet zwei gleiche Teile. Beide zeigt: es sind zwei Sprachen zusammen."
+
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Ich habe "
+      post: " Bruder. Er heißt Tom und ist 20 Jahre alt."
+      answers: [einen]
+      answer_shown: einen
+    explanation: "haben braucht den Akkusativ. der Bruder → einen Bruder."
+
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Ich bleibe heute zu Hause, "
+      post: " ich müde bin."
+      answers: [weil]
+      answer_shown: weil
+    explanation: "weil gibt den Grund an. Nach weil steht das Verb am Ende: weil ich müde bin."
+
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Kannst du "
+      post: " Kind bitte helfen? Es findet seine Mutter nicht."
+      answers: [dem]
+      answer_shown: dem
+    explanation: "helfen braucht immer den Dativ. das Kind → dem Kind."
+
+  # ───────────────────────── Grammatik-Drill ─────────────────────────
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: ""
+      post: " kommst du?"
+      prompt: HERKUNFT
+      options: [Wo, Woher, Wohin, Wer]
+      answer: 1
+    explanation: "woher fragt nach der Herkunft: Woher kommst du? — Aus Italien. wo fragt nach dem Ort, wohin nach der Richtung."
+
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Am Wochenende "
+      post: " wir oft ins Schwimmbad."
+      prompt: GEHEN
+      options: [gehen, gehe, geht, gegangen]
+      answer: 0
+    explanation: "Das Subjekt ist wir, die Endung ist -en: wir gehen. Nach der Zeitangabe steht das Verb an Position 2."
+
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Ich stehe jeden Tag um sechs Uhr "
+      post: "."
+      prompt: AUFSTEHEN
+      options: [auf, an, aus, ab]
+      answer: 0
+    explanation: "aufstehen ist ein trennbares Verb. Im Hauptsatz geht auf ans Ende: Ich stehe um sechs Uhr auf."
+
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Wir "
+      post: " gestern einen Film gesehen."
+      prompt: PERFEKT
+      options: [sind, haben, waren, hatten]
+      answer: 1
+    explanation: "sehen bildet das Perfekt mit haben: wir haben gesehen. Nur Verben der Bewegung nehmen sein."
+
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Das Buch liegt "
+      post: " dem Tisch."
+      prompt: ORT
+      options: [an, über, in, auf]
+      answer: 3
+    explanation: "auf + Dativ beschreibt: etwas liegt oben auf einer Fläche. Frage: Wo? — Auf dem Tisch."
+
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Als Kind "
+      post: " ich sehr schüchtern."
+      prompt: PRÄTERITUM
+      options: [bin, war, gewesen, bist]
+      answer: 1
+    explanation: "Für sein benutzt man im Deutschen lieber das Präteritum: ich war. Das klingt natürlicher als ich bin gewesen."
+
+  # ───────────────────────── Fehlersuche ─────────────────────────
+  - type: error_correction
+    group: grammar
+    content:
+      words: [Ich, habe, "25", Jahre, "alt."]
+      wrong: 1
+      correction: "habe → bin"
+    explanation: "Das Alter steht mit sein: Ich bin 25 Jahre alt. Der Satz Ich habe 25 Jahre kommt aus anderen Sprachen."
+
+  - type: error_correction
+    group: grammar
+    content:
+      words: [Woher, du, kommst, "?"]
+      wrong: 1
+      correction: "du kommst → kommst du"
+    explanation: "In der Frage steht das Verb direkt nach dem Fragewort: Woher kommst du?"
+
+  - type: error_correction
+    group: grammar
+    content:
+      words: [Ich, bin, ein, Student, an, der, "Universität."]
+      wrong: 2
+      correction: "ein → (nichts)"
+    explanation: "Vor einem Beruf steht kein Artikel: Ich bin Student. Das gilt auch für Ich bin Ärztin, Ich bin Lehrer."
+
+  - type: error_correction
+    group: grammar
+    content:
+      words: [Gestern, habe, ich, nach, Berlin, "gefahren."]
+      wrong: 1
+      correction: "habe → bin"
+    explanation: "fahren ist ein Verb der Bewegung und bildet das Perfekt mit sein: Ich bin nach Berlin gefahren."
+
+  # ───────────────────────── Wortbildung ─────────────────────────
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "In der Klasse sind zwölf "
+      post: "."
+      prompt: das Kind
+      answers: [Kinder]
+      answer_shown: Kinder
+    explanation: "Plural von das Kind ist die Kinder. Nach einer Zahl steht immer der Plural."
+
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Wir haben gestern zwei Stunden "
+      post: "."
+      prompt: lernen
+      answers: [gelernt]
+      answer_shown: gelernt
+    explanation: "Das Partizip von regelmäßigen Verben: ge- + Stamm + -t. lernen → gelernt."
+
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Mein Bruder ist "
+      post: " als ich."
+      prompt: jung
+      answers: [jünger]
+      answer_shown: jünger
+    explanation: "Vor als steht der Komparativ. Kurze Adjektive bekommen oft einen Umlaut: jung → jünger, alt → älter."
+
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Meine Schwester arbeitet als "
+      post: " in einem Krankenhaus."
+      prompt: der Arzt
+      answers: [Ärztin]
+      answer_shown: Ärztin
+    explanation: "Die weibliche Form vom Beruf endet auf -in: der Arzt → die Ärztin, der Lehrer → die Lehrerin."
+
+  # ───────────────────────── Leseverstehen ─────────────────────────
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Hallo! Ich heiße Marek und komme aus Krakau. Seit einem Jahr wohne ich in Leipzig und arbeite dort als Koch. Am Anfang war alles schwer, denn ich habe fast kein Deutsch gesprochen. Jetzt besuche ich dreimal pro Woche einen Sprachkurs. Meine Lehrerin ist sehr geduldig und spricht langsam."
+      q: Warum war der Anfang für Marek schwer?
+      options:
+        - Er hatte keine Arbeit in Leipzig.
+        - Er konnte fast kein Deutsch.
+        - Seine Lehrerin sprach zu schnell.
+        - Er wohnte noch in Krakau.
+      answer: 1
+    explanation: "Im Text steht: denn ich habe fast kein Deutsch gesprochen. denn gibt den Grund an. Arbeit hatte er, und die Lehrerin spricht langsam."
+
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Sprachcafé im Stadtteilzentrum. Jeden Donnerstag von 18 bis 20 Uhr treffen sich Menschen aus vielen Ländern und sprechen zusammen Deutsch. Der Eintritt ist frei, Kaffee und Tee kosten einen Euro. Eine Anmeldung ist nicht nötig — kommen Sie einfach vorbei!"
+      q: Was muss man vor dem Besuch machen?
+      options:
+        - Man muss sich anmelden.
+        - Man muss einen Euro bezahlen.
+        - Man muss nichts machen.
+        - Man muss Deutsch lernen.
+      answer: 2
+    explanation: "Im Text steht: Eine Anmeldung ist nicht nötig. Der Euro ist nur für Kaffee oder Tee, nicht für den Eintritt."
+
+review_pool: []

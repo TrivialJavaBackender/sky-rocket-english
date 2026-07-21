@@ -1,14 +1,16 @@
 /**
- * Word lists behind the open_cloze determinacy rule (content/en-c1/README.md).
+ * English word lists behind the open_cloze determinacy rule
+ * (docs/CONTENT-PACKAGE-SCHEMA.md). One module per language; the dispatcher is
+ * ./index.ts.
  *
  * An open cloze gap is fair only if the learner can recover the answer from
  * the sentence. That holds when the missing word is closed-class (grammar
  * forces it — CAE Reading & Use of English Part 2 is built entirely this way,
- * see docs/PLAN.md §6) or when it is the head of a fixed expression the rest
- * of the frame gives away. It does not hold when the answer is a content word
- * chosen lexically: "He denied ___ anything about the missing files" admits
- * knowing, taking, hearing and saying alike, so the item must supply the base
- * form via `hint`.
+ * see courses/en-c1/PLAN.md §6) or when it is the head of a fixed expression
+ * the rest of the frame gives away. It does not hold when the answer is a
+ * content word chosen lexically: "He denied ___ anything about the missing
+ * files" admits knowing, taking, hearing and saying alike, so the item must
+ * supply the base form via `hint`.
  *
  * Both sets are deliberately hand-curated rather than derived from a POS
  * tagger: the question is not "what part of speech is this word" but "does
@@ -59,28 +61,3 @@ export const DETERMINATE_GAP_WORDS: ReadonlySet<string> = new Set([
   ...toSet(CLOSED_CLASS),
   ...toSet(FIXED_FRAME_HEADS),
 ]);
-
-/** True when every token of every accepted answer is recoverable from the frame. */
-export function isDeterminateGap(answers: readonly string[]): boolean {
-  return answers.every((answer) =>
-    answer
-      .toLowerCase()
-      // Sentence punctuation only — the apostrophe is part of the word here
-      // (needn't, shouldn't), so it survives; a quoted answer loses its wrapper.
-      .replace(/[.,!?;:"]/g, '')
-      .split(/\s+/)
-      .map((token) => token.replace(/^'+|'+$/g, ''))
-      .filter(Boolean)
-      .every((token) => DETERMINATE_GAP_WORDS.has(token)),
-  );
-}
-
-/**
- * How many accepted answers count as "the whole semantic class is open".
- * Some gaps are pinned by grammar to a class rather than a word — the
- * subjunctive trigger in "It is ___ that every child have a safe route"
- * takes essential, vital, imperative, crucial, important or necessary, and a
- * base-form hint would simply be the answer. Listing the class exhaustively
- * is the fix there, so a generous `answers` set stands in for a hint.
- */
-export const OPEN_CLASS_ANSWER_THRESHOLD = 4;
