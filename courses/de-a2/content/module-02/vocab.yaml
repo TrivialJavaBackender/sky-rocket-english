@@ -1,0 +1,275 @@
+# Modul 02 · Unterwegs — 30 Wörter zu Verkehr, Weg und Stadt.
+# `definition` ist eine einfache Umschreibung auf A2 plus Synonym oder Gegenteil —
+# kein Wörterbuchstil (courses/de-a2/PLAN.md §5).
+# Bei jedem Verb steht im `register` der Kasus oder die Präposition: das ist der
+# Stoff des Moduls. Bei jedem Nomen steht der Plural.
+entries:
+  - term: die Haltestelle
+    tag: Nomen
+    definition: Dort hält der Bus oder die Straßenbahn. Die Leute steigen ein und aus.
+    use_cases:
+      - Die Haltestelle ist zwei Minuten von meiner Wohnung.
+      - Bis zur Haltestelle gehe ich zu Fuß.
+    collocations: an der Haltestelle warten · bis zur Haltestelle · die nächste Haltestelle
+    register: "Plural: die Haltestellen"
+
+  - term: die Fahrkarte
+    tag: Nomen
+    definition: Damit darf man mit dem Bus oder mit dem Zug fahren. Man kauft sie vor der Fahrt.
+    use_cases:
+      - Die Fahrkarte kaufe ich immer im Internet.
+      - Eine Fahrkarte für den Zug nach Wien, bitte.
+    collocations: eine Fahrkarte kaufen · die Fahrkarte für den Zug · ohne Fahrkarte fahren
+    register: "Plural: die Fahrkarten. Auch: das Ticket."
+
+  - term: die Kreuzung
+    tag: Nomen
+    definition: Dort treffen sich zwei Straßen.
+    use_cases:
+      - Fahren Sie geradeaus bis zur Kreuzung.
+      - Nach der Kreuzung kommt eine Ampel.
+    collocations: bis zur Kreuzung · nach der Kreuzung · an der Kreuzung rechts
+    register: "Plural: die Kreuzungen"
+
+  - term: die Verspätung
+    tag: Nomen
+    definition: Ein Zug oder ein Bus kommt später als im Fahrplan.
+    use_cases:
+      - Der Zug hat heute zwanzig Minuten Verspätung.
+      - Mit der Verspätung bin ich erst um acht zu Hause gewesen.
+    collocations: Verspätung haben · zehn Minuten Verspätung · mit Verspätung ankommen
+    register: "Plural: die Verspätungen. Von dem Verb verspäten."
+
+  - term: die Straßenbahn
+    tag: Nomen
+    definition: Ein Zug für die Stadt. Er fährt mitten auf der Straße.
+    use_cases:
+      - In Wien fahre ich immer mit der Straßenbahn.
+      - Die Straßenbahn kommt alle fünf Minuten.
+    collocations: mit der Straßenbahn fahren · in die Straßenbahn einsteigen
+    register: "Plural: die Straßenbahnen. Kurz: die Bahn."
+
+  - term: der Fahrplan
+    tag: Nomen
+    definition: Dort stehen die Zeiten. Man liest, wann der Bus oder der Zug kommt.
+    use_cases:
+      - Der Fahrplan steht im Internet und am Bahnsteig.
+      - Nach dem Fahrplan fährt der Zug um 8:14.
+    collocations: im Fahrplan stehen · nach dem Fahrplan
+    register: "Plural: die Fahrpläne"
+
+  - term: der Bahnsteig
+    tag: Nomen
+    definition: Der Platz am Bahnhof. Dort wartet man auf den Zug.
+    use_cases:
+      - Der Zug nach Wien fährt von Bahnsteig 21 ab.
+      - Wir treffen uns am Bahnsteig.
+    collocations: von Bahnsteig 7 · am Bahnsteig warten
+    register: "Plural: die Bahnsteige. Auch: das Gleis."
+
+  - term: die Strecke
+    tag: Nomen
+    definition: Der ganze Weg von Anfang bis Ende, oft in Kilometern.
+    use_cases:
+      - Die Strecke nach Wien ist sehr schön.
+      - Auf dieser Strecke fahren nur zwei Züge pro Tag.
+    collocations: eine lange Strecke · die Strecke nach Wien
+    register: "Plural: die Strecken"
+
+  - term: der Weg
+    tag: Nomen
+    definition: So kommt man von einem Ort zum anderen. Man fragt nach ihm, wenn man ihn nicht kennt.
+    use_cases:
+      - Können Sie mir den Weg zum Museum sagen?
+      - Der Weg zur Arbeit dauert bei mir vierzig Minuten.
+    collocations: nach dem Weg fragen · der Weg zur Arbeit · auf dem Weg
+    register: "Plural: die Wege"
+
+  - term: die Richtung
+    tag: Nomen
+    definition: Nach rechts, nach links, geradeaus oder zurück — dorthin geht oder fährt man.
+    use_cases:
+      - Der Bus fährt in Richtung Zentrum.
+      - Einmal bin ich in die falsche Richtung gefahren.
+    collocations: in Richtung Zentrum · die falsche Richtung · in beide Richtungen
+    register: "Plural: die Richtungen"
+
+  - term: die Ampel
+    tag: Nomen
+    definition: Sie steht an der Kreuzung und ist rot, gelb oder grün.
+    use_cases:
+      - Nach der Ampel sehen Sie schon das Museum.
+      - Die Ampel ist rot, wir warten.
+    collocations: an der Ampel · bis zur Ampel · die Ampel ist rot
+    register: "Plural: die Ampeln"
+
+  - term: der Verkehr
+    tag: Nomen
+    definition: Alle Autos, Busse und Räder zusammen auf der Straße.
+    use_cases:
+      - Am Morgen ist in der Stadt viel Verkehr.
+      - Bei so viel Verkehr dauert die Fahrt eine Stunde.
+    collocations: viel Verkehr · wenig Verkehr · im Verkehr stehen
+    register: "Nur Singular."
+
+  - term: umsteigen
+    tag: Verb
+    definition: Aus einem Zug oder Bus aussteigen und in einen anderen einsteigen.
+    use_cases:
+      - In München müssen Sie einmal umsteigen.
+      - Ich bin am Hauptbahnhof umgestiegen.
+    collocations: in München umsteigen · einmal umsteigen · ohne Umsteigen
+    register: "Trennbar: Ich steige um. Partizip: umgestiegen, mit sein."
+
+  - term: einsteigen
+    tag: Verb
+    definition: In den Bus, in den Zug oder ins Auto gehen.
+    use_cases:
+      - Ohne Fahrkarte kann man nicht in den Zug einsteigen.
+      - Bitte einsteigen, der Zug fährt gleich ab!
+    collocations: in den Bus einsteigen · vorne einsteigen
+    register: "Trennbar: Ich steige ein. Partizip: eingestiegen, mit sein. Gegenteil: aussteigen."
+
+  - term: aussteigen
+    tag: Verb
+    definition: Aus dem Bus, aus dem Zug oder aus dem Auto gehen.
+    use_cases:
+      - Wir steigen an der nächsten Haltestelle aus.
+      - Ich bin nach vier Stationen ausgestiegen.
+    collocations: an der Haltestelle aussteigen · hier aussteigen
+    register: "Trennbar: Ich steige aus. Partizip: ausgestiegen, mit sein. Gegenteil: einsteigen."
+
+  - term: abbiegen
+    tag: Verb
+    definition: Nicht geradeaus gehen oder fahren, sondern nach rechts oder nach links.
+    use_cases:
+      - Biegen Sie nach der Ampel rechts ab.
+      - Ich bin zu früh links abgebogen.
+    collocations: rechts abbiegen · links abbiegen · in die Bahnhofstraße abbiegen
+    register: "Trennbar: Ich biege ab. Partizip: abgebogen, mit sein."
+
+  - term: ankommen
+    tag: Verb
+    definition: Am Ende vom Weg sein. Man ist da.
+    use_cases:
+      - Der Zug kommt um 14:30 in Wien an.
+      - Wir sind pünktlich angekommen.
+    collocations: in Wien ankommen · pünktlich ankommen · mit Verspätung ankommen
+    register: "Trennbar: Ich komme an. Partizip: angekommen, mit sein. Gegenteil: abfahren."
+
+  - term: abfahren
+    tag: Verb
+    definition: Losfahren. Der Zug oder der Bus beginnt die Fahrt.
+    use_cases:
+      - Der Zug fährt um 8:14 von Bahnsteig 7 ab.
+      - Wir sind heute sehr früh abgefahren.
+    collocations: pünktlich abfahren · von Bahnsteig 7 abfahren
+    register: "Trennbar: Ich fahre ab. Partizip: abgefahren, mit sein. Gegenteil: ankommen."
+
+  - term: dauern
+    tag: Verb
+    definition: So viel Zeit braucht eine Sache von Anfang bis Ende.
+    use_cases:
+      - Die Fahrt dauert ungefähr sechs Stunden.
+      - Wie lange dauert das noch?
+    collocations: zwei Stunden dauern · lange dauern · wie lange dauert …?
+    register: "Regelmäßig. Partizip: gedauert."
+
+  - term: erreichen
+    tag: Verb
+    definition: Rechtzeitig da sein und mitfahren können.
+    use_cases:
+      - In München erreichen Sie Ihren Zug noch.
+      - Ich habe den Bus um sieben nicht mehr erreicht.
+    collocations: den Zug erreichen · den Anschluss erreichen
+    register: "Partizip: erreicht, ohne ge-. Gegenteil: verpassen."
+
+  - term: verpassen
+    tag: Verb
+    definition: Zu spät kommen. Der Zug oder der Bus ist schon weg.
+    use_cases:
+      - Heute Morgen habe ich meinen Bus verpasst.
+      - Schnell, sonst verpassen wir die Straßenbahn!
+    collocations: den Zug verpassen · den Anfang verpassen
+    register: "Partizip: verpasst, ohne ge-. Gegenteil: erreichen."
+
+  - term: halten
+    tag: Verb
+    definition: Kurz nicht weiterfahren. Die Leute steigen ein und aus.
+    use_cases:
+      - Der Bus hält an jeder Haltestelle.
+      - Dieser Zug hält nicht in Ulm.
+    collocations: an der Haltestelle halten · überall halten · nicht halten
+    register: "Unregelmäßig: er hält. Partizip: gehalten."
+
+  - term: pünktlich
+    tag: Adjektiv
+    definition: "Genau zur richtigen Zeit, keine Minute später. Gegenteil: mit Verspätung."
+    use_cases:
+      - Der Zug ist heute pünktlich abgefahren.
+      - Bitte sei pünktlich, der Film beginnt um acht.
+    collocations: pünktlich ankommen · pünktlich sein
+    register: "Gegenteil: zu spät"
+
+  - term: bequem
+    tag: Adjektiv
+    definition: Man sitzt gut und wird nicht müde.
+    use_cases:
+      - Im Zug sitzt man bequem und kann lesen.
+      - Der Sessel im Wartezimmer ist sehr bequem.
+    collocations: bequem sitzen · ein bequemer Stuhl
+    register: "Gegenteil: unbequem"
+
+  - term: voll
+    tag: Adjektiv
+    definition: "Es ist kein Platz mehr da. Gegenteil: leer."
+    use_cases:
+      - Am Morgen ist die Straßenbahn sehr voll.
+      - Der Zug war sehr voll, wir haben keinen Platz gefunden.
+    collocations: voll sein · ganz voll · halb voll
+    register: "Gegenteil: leer"
+
+  - term: geradeaus
+    tag: Adverb
+    definition: Nicht nach rechts und nicht nach links. Immer in die gleiche Richtung.
+    use_cases:
+      - Gehen Sie hier geradeaus bis zur Kreuzung.
+      - Immer geradeaus, dann sehen Sie den Bahnhof.
+    collocations: immer geradeaus · geradeaus gehen · geradeaus fahren
+    register: "Gegenteil: rechts oder links abbiegen"
+
+  - term: unterwegs
+    tag: Adverb
+    definition: Nicht mehr zu Hause und noch nicht am Ziel. Auf dem Weg.
+    use_cases:
+      - Ich bin seit sechs Stunden unterwegs.
+      - Unterwegs habe ich zwei Kaffee getrunken.
+    collocations: unterwegs sein · lange unterwegs · unterwegs essen
+    register: "Meistens mit sein: Ich bin unterwegs."
+
+  - term: zu Fuß
+    tag: Adverb
+    definition: Ohne Auto, ohne Bus und ohne Rad. Man geht.
+    use_cases:
+      - Ich gehe jeden Morgen zu Fuß zur Arbeit.
+      - Zu Fuß sind es nur fünf Minuten.
+    collocations: zu Fuß gehen · zu Fuß zehn Minuten
+    register: "Immer mit gehen, nie mit fahren."
+
+  - term: ungefähr
+    tag: Adverb
+    definition: Nicht genau. Ein bisschen mehr oder ein bisschen weniger.
+    use_cases:
+      - Die Fahrt dauert ungefähr eine Stunde.
+      - Bis zum Museum sind es ungefähr zwanzig Minuten.
+    collocations: ungefähr zehn Minuten · ungefähr so weit
+    register: "Auch: etwa, circa"
+
+  - term: sofort
+    tag: Adverb
+    definition: Gleich jetzt, ohne eine Minute zu warten.
+    use_cases:
+      - Ich bin in München sofort umgestiegen.
+      - Nach der Arbeit fahre ich sofort nach Hause.
+    collocations: sofort losfahren · sofort umsteigen
+    register: "Auch: gleich, direkt"

@@ -1,0 +1,24 @@
+kind: extra
+kicker: ANZEIGEN
+title: Fünf Möbelanzeigen
+meta: ≈ 1 Min · aus einem Portal für gebrauchte Möbel
+word_count: 150
+body:
+  - - t: "SCHRANK, 2 Türen, weiß — 80 €"
+  - - t: "Guter Zustand, steht seit fünf Jahren in unserem Schlafzimmer. Er ist 180 cm hoch und passt nicht in die neue Wohnung. Abholung am Wochenende."
+  - - t: "BÜCHERREGAL aus Holz — 45 €"
+  - - t: "Fünf Bretter, sehr "
+    - g: praktisch
+    - t: ". Man kann es an die Wand hängen oder einfach auf den Boden stellen. Bei uns hat es im Flur gestanden. Kleine Kratzer oben."
+  - - t: "SESSEL, grün, sehr bequem — 60 €"
+  - - t: "Wir haben ihn zwei Jahre benutzt. Er hat in der Ecke neben dem Fenster gestanden. Wir ziehen nach Wien um und nehmen ihn nicht mit."
+  - - t: "TEPPICH, 2 × 3 m, dunkelblau — 25 €"
+  - - t: "Hat unter dem Esstisch gelegen, deshalb ist er in der Mitte etwas heller. Ansonsten ohne Flecken. Bitte selbst abholen, wir wohnen im dritten Stock ohne Aufzug."
+  - - t: "LAMPE für über den Esstisch — 30 €"
+  - - t: "Weißes Glas, Kabel 90 cm. Hat vier Jahre bei uns im Esszimmer gehangen. Wir haben eine neue Küche und brauchen sie nicht mehr. Abholung nach Absprache."
+glosses:
+  - key: praktisch
+    term: praktisch
+    pos_label: Adjektiv
+    definition: Man kann es gut benutzen. Es hilft im Alltag.
+    example: Das Regal ist klein, aber sehr praktisch.

@@ -1,0 +1,41 @@
+# Jeder Redebeitrag ist ein eigener Absatz und beginnt mit einem Gedankenstrich.
+# Der ganze Dialog kommt ohne Wechselpräpositionen aus (Modul 03): Der Weg läuft
+# über bis zur Kreuzung, nach der Ampel, vom Hauptbahnhof, durch die Straße.
+# Das ist die Vorlage für die eigene Aufgabe in writing.yaml.
+kind: extra
+kicker: DIALOG
+title: Wie komme ich zum Museum?
+meta: ≈ 1 Min · zwei Menschen auf der Straße
+word_count: 146
+body:
+  - - t: "– Entschuldigung, wie komme ich von hier zum Museum?"
+  - - t: "– Zu Fuß oder mit dem Bus?"
+  - - t: "– Zu Fuß. Ist es weit?"
+  - - t: "– Ungefähr zwanzig Minuten. Gehen Sie hier geradeaus bis zur Kreuzung. Nach der Kreuzung kommt eine Ampel — dort biegen Sie rechts ab."
+  - - t: "– Und dann?"
+  - - t: "– Dann immer geradeaus. Nach dem Park sehen Sie schon das Museum."
+  - - t: "– Ist der Weg gut zu finden?"
+  - - t: "– Ja. Nach der Ampel gehen Sie noch fünf Minuten durch die Bahnhofstraße. Das Museum ist ganz aus "
+    - g: Glas
+    - t: ", Sie finden es sofort."
+  - - t: "– Und mit dem Bus?"
+  - - t: "– Der Bus 12 fährt vom "
+    - g: Hauptbahnhof
+    - t: " bis zum Museum. Die Haltestelle ist gleich hier rechts."
+  - - t: "– Muss ich umsteigen?"
+  - - t: "– Nein, der Bus fährt direkt. Aber am Morgen ist viel Verkehr, zu Fuß sind Sie schneller."
+  - - t: "– Wie oft fährt er?"
+  - - t: "– Alle zehn Minuten. Den Fahrplan finden Sie dort an der Haltestelle."
+  - - t: "– Vielen Dank!"
+  - - t: "– Gern. Aber schnell: Das Museum schließt schon um 18 Uhr."
+glosses:
+  - key: Glas
+    term: Glas
+    pos_label: Nomen
+    definition: Man sieht durch dieses Material. Fenster sind daraus.
+    example: Das Museum ist ganz aus Glas.
+  - key: Hauptbahnhof
+    term: Hauptbahnhof
+    pos_label: Nomen
+    definition: Der größte Bahnhof in der Stadt. Dort fahren fast alle Züge ab.
+    example: Der Bus fährt vom Hauptbahnhof bis zum Museum.

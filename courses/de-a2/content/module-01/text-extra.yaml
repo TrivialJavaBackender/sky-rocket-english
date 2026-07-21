@@ -1,37 +1,27 @@
 kind: extra
-kicker: DIALOG
-title: Im Sprachkurs
-meta: ≈ 1 Min · die erste Stunde, Frage und Antwort
-word_count: 148
+kicker: POSTS
+title: Drei Posts vom Wochenende
+meta: ≈ 1 Min · drei kurze Beiträge aus einer Gruppe im Netz
+word_count: 135
 body:
-  - - t: "FRAU WEBER: Guten Abend! Willkommen im Kurs. Darf ich mich kurz vorstellen? Mein Name ist Weber, Anna Weber. Und wie heißen Sie?"
-  - - t: "MAREK: Ich heiße Marek Nowak."
-  - - t: "FRAU WEBER: Können Sie den Nachnamen bitte "
-    - g: buchstabieren
-    - t: "?"
-  - - t: "MAREK: Ja, gern. N-o-w-a-k."
-  - - t: "FRAU WEBER: Danke. Und woher kommen Sie, Herr Nowak?"
-  - - t: "MAREK: Aus Polen, aus Krakau. Ich wohne jetzt hier in Leipzig."
-  - - t: "FRAU WEBER: Sehr schön. Was sind Sie von Beruf?"
-  - - t: "MAREK: Ich bin Koch. Ich arbeite in einem Restaurant."
-  - - t: "FRAU WEBER: Und Sie, Fatima? Sind Sie auch "
-    - g: berufstätig
-    - t: "?"
-  - - t: "FATIMA: Nein, ich studiere. Informatik, im dritten Jahr."
-  - - t: "FRAU WEBER: Welche Sprachen sprechen Sie?"
-  - - t: "FATIMA: Arabisch, Französisch und Deutsch. Englisch nur ein bisschen."
-  - - t: "MAREK: Polnisch, Englisch und Deutsch — aber noch nicht gut."
-  - - t: "FRAU WEBER: Kein Problem. Sprechen Sie langsam, und fragen Sie immer. Haben Sie noch Fragen?"
-  - - t: "MAREK: Ja, eine: Wann beginnt die nächste Stunde?"
-  - - t: "FRAU WEBER: Am Mittwoch, auch um 18 Uhr."
+  - - t: "TOM, Samstag 22:14"
+  - - t: "Endlich Wochenende! Ich habe heute bis elf geschlafen, dann habe ich die ganze Wohnung aufgeräumt. Danach bin ich mit dem Rad an den Fluss gefahren und habe zwei Stunden in der Sonne gesessen. Kein Handy, kein Laptop. So "
+    - g: gemütlich
+    - t: " ist mein Samstag lange nicht gewesen."
+  - - t: "SARA, Sonntag 09:02"
+  - - t: "Gestern haben wir Julias Geburtstag gefeiert. Sie hat zwanzig Leute eingeladen, und alle haben etwas mitgebracht. Ich habe einen Kuchen gebacken — er ist leider nicht schön geworden, aber er hat gut geschmeckt. Wir haben bis zwei Uhr geredet und getanzt. Heute bin ich müde."
+  - - t: "MARKUS, Sonntag 19:40"
+  - - t: "Vorgestern bin ich mit meinem Bruder in den Bergen gewandert, sechs Stunden. Sehr "
+    - g: anstrengend
+    - t: ", aber es hat sich gelohnt. Heute habe ich nichts gemacht: nur ferngesehen und Tee getrunken. Übrigens, wer kommt nächstes Wochenende mit? Wir treffen uns um acht am Bahnhof."
 glosses:
-  - key: buchstabieren
-    term: buchstabieren
-    pos_label: Verb
-    definition: Ein Wort Buchstabe für Buchstabe sagen
-    example: Buchstabieren Sie bitte Ihren Namen.
-  - key: berufstätig
-    term: berufstätig
+  - key: gemütlich
+    term: gemütlich
     pos_label: Adjektiv
-    definition: Eine Person hat Arbeit und bekommt dafür Geld.
-    example: Meine Eltern sind beide berufstätig.
+    definition: Ruhig und angenehm. Man fühlt sich wohl und hat keine Eile.
+    example: Wir hatten einen gemütlichen Abend zu Hause.
+  - key: anstrengend
+    term: anstrengend
+    pos_label: Adjektiv
+    definition: Man braucht viel Kraft. Danach ist man müde.
+    example: Der Tag im Garten war sehr anstrengend.

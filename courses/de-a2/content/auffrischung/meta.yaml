@@ -1,0 +1,30 @@
+slug: a01
+title: Ich und du
+standfirst: Präsens, sein und haben, Fragen · 30 Wörter · sich und andere vorstellen.
+goals:
+  - text: Verben im Präsens richtig konjugieren — auch sein und haben
+    achieved_by: workout
+  - text: Fragen mit und ohne Fragewort stellen und beantworten
+    achieved_by: workout
+  - text: 30 Wörter zu Person, Herkunft und Beruf sicher benutzen
+    achieved_by: input
+  - text: Sich in einem kurzen Text vorstellen und ein Formular ausfüllen
+    achieved_by: output
+grammar_points:
+  - Regelmäßige Verben im Präsens
+  - Die Personalpronomen
+  - sein
+  - haben
+  - Die W-Frage
+  - Die Ja/Nein-Frage
+  - Die Fragewörter
+texts:
+  - kind: main
+    title: Neu in der Stadt
+    word_count: 281
+  - kind: extra
+    title: Im Sprachkurs
+    word_count: 136
+production:
+  mode: writing
+  genre: Steckbrief und Anmeldeformular

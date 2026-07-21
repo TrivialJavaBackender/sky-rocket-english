@@ -1,0 +1,43 @@
+# Glossen stehen nur auf Wörtern, deren Form im Satz gleich der Grundform ist:
+# ReadingText rendert `gloss.term` direkt in den Fließtext.
+kind: main
+kicker: LESETEXT
+title: Endlich eingerichtet
+meta: ≈ 3 Min · Wörter mit Punkten haben eine Erklärung — tippen Sie darauf
+word_count: 289
+body:
+  - - t: "Drei Monate haben Jonas und Mira eine Wohnung gesucht. Im April haben sie endlich eine gefunden: drei Zimmer, vierter Stock, zwei große Fenster. „Hell und "
+    - g: praktisch
+    - t: "“, sagt Mira. „Nur der Flur ist "
+    - g: eng
+    - t: " und dunkel.“ Letzte Woche sind sie umgezogen."
+  - - t: "Am ersten Abend hat die Wohnung noch leer ausgesehen. Zwanzig Kartons haben auf dem Boden gestanden, sonst nichts. „Wohin stellen wir das Sofa?“, hat Jonas gefragt. Diese Frage haben die beiden dann zwei Tage lang gestellt."
+  - - t: "Sie haben mit dem Wohnzimmer angefangen. Das Sofa steht jetzt an der Wand, "
+    - g: gegenüber
+    - t: " vom Fenster. Den Teppich haben sie davor auf den Boden gelegt. In die Ecke neben dem Fenster haben sie den Sessel gestellt — dort ist es am hellsten, und Mira liest dort jeden Abend. Das Bücherregal hängt nicht an der Wand, es steht "
+    - g: daneben
+    - t: " auf dem Boden: „Ein Regal an der Wand ist schön, aber unsere Bücher sind zu schwer.“"
+  - - t: "Im Schlafzimmer ist es einfacher gewesen. Das Bett steht zwischen den beiden Fenstern, der Kleiderschrank an der langen Wand. Über dem Bett hängt ein großes Foto aus Portugal. „Das Foto hängt in jeder Wohnung über unserem Bett“, sagt Jonas. „Es zieht immer mit um.“"
+  - - t: "In der Küche stehen die Gläser oben im Schrank und die schweren Töpfe unten. „So ist es praktisch“, sagt Mira, „oben nehme ich zehnmal am Tag etwas heraus, unten zweimal.“ Nur eine Sache passt noch nicht: Der Küchentisch ist zu groß. Er steht jetzt mitten im Raum, und alle laufen um ihn herum."
+  - - t: "„Nächstes Wochenende stellen wir ihn an die Wand“, sagt Jonas. Mira lacht: „Das hast du letzte Woche auch gesagt.“ Zwei Kartons stehen übrigens immer noch im Flur. Was drin ist, weiß niemand mehr. „Die machen wir im Sommer auf“, sagt Mira. „Oder wir stellen einfach eine Pflanze darauf.“"
+glosses:
+  - key: praktisch
+    term: praktisch
+    pos_label: Adjektiv
+    definition: Man kann es gut benutzen. Es hilft im Alltag.
+    example: Das Regal ist klein, aber sehr praktisch.
+  - key: eng
+    term: eng
+    pos_label: Adjektiv
+    definition: Mit wenig Platz. Zwei Personen passen kaum nebeneinander.
+    example: Die Küche ist sehr eng.
+  - key: gegenüber
+    term: gegenüber
+    pos_label: Adverb
+    definition: Auf der anderen Seite, genau vor dieser Sache.
+    example: Der Schreibtisch steht gegenüber vom Fenster.
+  - key: daneben
+    term: daneben
+    pos_label: Adverb
+    definition: Direkt neben dieser Sache.
+    example: Links steht der Schrank, daneben das Regal.

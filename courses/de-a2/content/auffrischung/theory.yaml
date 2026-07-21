@@ -1,0 +1,130 @@
+# Modul 01 · Ich und du — Grammatik im Fokus, Watch out! und Lückenkarten.
+# 7 Punkte — genau die Grammatik-Liste der Modulkarte (courses/de-a2/PLAN.md §4).
+# Die Obergrenze des Profils (§6) wäre 2 Spotlights × 4 Punkte.
+# Paradigmen stehen als Tabelle, nicht als Kette mit Punkten: „ich -e · du -st ·
+# er -t“ zwingt die Lesenden, das Raster selbst im Kopf zu bauen.
+spotlights:
+  - title: "Das Verb im Präsens"
+    intro: "Jedes Verb hat einen Stamm und eine Endung. Die Endung zeigt: Wer macht das?"
+    items:
+      - form: "Regelmäßige Verben: Stamm + Endung"
+        note: "Der Stamm bleibt gleich. Nur die Endung wechselt."
+        table:
+          headers: ["", "lernen", "wohnen", "kommen"]
+          rows:
+            - ["ich", "lerne", "wohne", "komme"]
+            - ["du", "lernst", "wohnst", "kommst"]
+            - ["er / sie / es", "lernt", "wohnt", "kommt"]
+            - ["wir", "lernen", "wohnen", "kommen"]
+            - ["ihr", "lernt", "wohnt", "kommt"]
+            - ["sie / Sie", "lernen", "wohnen", "kommen"]
+      - form: "Die Personalpronomen"
+        note: "Sie mit großem S ist höflich. Für fremde Personen immer Sie."
+        table:
+          headers: ["", "Singular", "Plural"]
+          rows:
+            - ["1. Person", "ich", "wir"]
+            - ["2. Person", "du", "ihr"]
+            - ["3. Person", "er / sie / es", "sie"]
+            - ["höflich", "Sie", "Sie"]
+      - form: "sein — unregelmäßig"
+        example: Ich bin Koch. Du bist müde. Wir sind aus Polen.
+        note: "Diese Formen lernt man auswendig. Sie kommen sehr oft."
+        table:
+          headers: ["", "sein"]
+          rows:
+            - ["ich", "bin"]
+            - ["du", "bist"]
+            - ["er / sie / es", "ist"]
+            - ["wir", "sind"]
+            - ["ihr", "seid"]
+            - ["sie / Sie", "sind"]
+      - form: "haben — unregelmäßig"
+        example: Ich habe Zeit. Sie hat einen Bruder. Habt ihr Fragen?
+        note: "Nur du und er / sie / es sind besonders: hast, hat."
+        table:
+          headers: ["", "haben"]
+          rows:
+            - ["ich", "habe"]
+            - ["du", "hast"]
+            - ["er / sie / es", "hat"]
+            - ["wir", "haben"]
+            - ["ihr", "habt"]
+            - ["sie / Sie", "haben"]
+
+  - title: "Fragen stellen"
+    intro: "Es gibt zwei Fragen: mit Fragewort und ohne. Das Verb steht immer vorn."
+    items:
+      - form: "W-Frage: Fragewort + Verb + Subjekt"
+        note: "Das Verb steht immer direkt nach dem Fragewort."
+        table:
+          headers: ["Fragewort", "Verb", "Subjekt", "Rest"]
+          rows:
+            - ["Woher", "kommst", "du", "—"]
+            - ["Wo", "wohnt", "sie", "—"]
+            - ["Wie", "heißen", "Sie", "—"]
+            - ["Was", "machst", "du", "am Wochenende?"]
+      - form: "Ja/Nein-Frage: Verb + Subjekt"
+        note: "Ohne Fragewort beginnt der Satz mit dem Verb."
+        table:
+          headers: ["Verb", "Subjekt", "Rest"]
+          rows:
+            - ["Hast", "du", "Zeit?"]
+            - ["Sprichst", "du", "Deutsch?"]
+            - ["Seid", "ihr", "aus Spanien?"]
+            - ["Ist", "das", "dein Buch?"]
+      - form: "Die Fragewörter"
+        note: "wo = der Ort. woher = das Land oder die Herkunft."
+        table:
+          headers: ["Fragewort", "fragt nach", "Beispielantwort"]
+          rows:
+            - ["wer", "der Person", "Das ist Frau Weber."]
+            - ["was", "der Sache", "Ich lerne Deutsch."]
+            - ["wie", "der Art, dem Namen", "Ich heiße Marek."]
+            - ["wo", "dem Ort", "In Leipzig."]
+            - ["woher", "der Herkunft", "Aus Polen."]
+            - ["wann", "der Zeit", "Um 18 Uhr."]
+
+watchouts:
+  - title: "Beruf ohne Artikel"
+    bad: Ich bin ein Student.
+    good: Ich bin Student.
+    note: "Vor Beruf, Nationalität und Religion steht kein Artikel."
+  - title: "Das Alter mit sein"
+    bad: Ich habe 25 Jahre.
+    good: Ich bin 25 Jahre alt.
+    note: "Das Alter steht im Deutschen immer mit sein."
+  - title: "Das Verb in der Frage"
+    bad: Woher du kommst?
+    good: Woher kommst du?
+    note: "Nach dem Fragewort kommt sofort das Verb."
+  - title: "Sprache ohne das Wort Sprache"
+    bad: Ich spreche die deutsche Sprache.
+    good: Ich spreche Deutsch.
+    note: "Die Sprache steht allein und groß: Deutsch, Polnisch, Englisch."
+
+cloze_cards:
+  - text: "Woher {{c1::kommst}} du? — Ich komme aus Italien."
+    hint: kommen
+    rule: "du + Verb = Stamm + -st. Nach dem Fragewort steht sofort das Verb."
+  - text: "Meine Schwester {{c1::wohnt}} seit drei Jahren in Wien."
+    hint: wohnen
+    rule: "er/sie/es + Verb = Stamm + -t. Meine Schwester = sie."
+  - text: "Wir {{c1::lernen}} zusammen Deutsch, denn wir sind im gleichen Kurs."
+    hint: lernen
+    rule: "wir + Verb = Stamm + -en. Die Form ist gleich wie der Infinitiv."
+  - text: "Ich {{c1::bin}} Köchin und arbeite in einem Restaurant."
+    hint: sein
+    rule: "sein ist unregelmäßig: ich bin. Vor dem Beruf steht kein Artikel."
+  - text: "{{c1::Seid}} ihr aus Spanien? — Nein, wir kommen aus Portugal."
+    hint: sein
+    rule: "ihr + sein = seid. Ohne Fragewort beginnt die Frage mit dem Verb."
+  - text: "Anna {{c1::hat}} zwei Brüder und eine Schwester."
+    hint: haben
+    rule: "er/sie/es + haben = hat. Diese Form ist unregelmäßig."
+  - text: "{{c1::Habt}} ihr noch Fragen zum Kurs?"
+    hint: haben
+    rule: "ihr + haben = habt. Die Ja/Nein-Frage beginnt mit dem Verb."
+  - text: "Wie {{c1::heißen}} Sie? — Mein Name ist Weber."
+    hint: heißen
+    rule: "Sie (höflich) + Verb = Stamm + -en. Für Fremde benutzt man immer Sie."

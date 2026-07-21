@@ -25,6 +25,8 @@ export interface BlockDTO {
   color: string;
   tint: string;
   position: number;
+  /** Outside the linear gate (0008): open from the start, gates nothing, carries no checkpoint. */
+  optional: boolean;
 }
 
 export interface CheckpointDTO {
@@ -58,7 +60,7 @@ function mapCourse(c: { id: bigint; slug: string; language: string; name: string
   };
 }
 
-function mapBlock(b: { id: bigint; course_id: bigint; slug: string; name: string; color: string; tint: string; position: number }): BlockDTO {
+function mapBlock(b: { id: bigint; course_id: bigint; slug: string; name: string; color: string; tint: string; position: number; optional: boolean }): BlockDTO {
   return {
     id: idToNumber(b.id),
     courseId: idToNumber(b.course_id),
@@ -67,6 +69,7 @@ function mapBlock(b: { id: bigint; course_id: bigint; slug: string; name: string
     color: b.color,
     tint: b.tint,
     position: b.position,
+    optional: b.optional,
   };
 }
 
@@ -169,8 +172,12 @@ export async function getCheckpointById(id: number): Promise<CheckpointDTO | nul
 }
 
 /** The block immediately after `afterPosition` in course order — UC-19: passing block checkpoint N unlocks block N+1's first module. */
+/** Next block in the linear chain. Optional blocks are stepped over — they sit outside the gate, so passing a checkpoint must open the next *required* block (0008). */
 export async function getNextBlock(courseId: number, afterPosition: number): Promise<BlockDTO | null> {
-  const row = await prisma.block.findFirst({ where: { course_id: courseId, position: { gt: afterPosition } }, orderBy: { position: 'asc' } });
+  const row = await prisma.block.findFirst({
+    where: { course_id: courseId, position: { gt: afterPosition }, optional: false },
+    orderBy: { position: 'asc' },
+  });
   return row ? mapBlock(row) : null;
 }
 

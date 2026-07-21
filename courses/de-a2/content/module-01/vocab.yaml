@@ -1,273 +1,274 @@
-# Modul 01 · Ich und du — 30 Wörter zu Person, Herkunft, Beruf und Sprachkurs.
+# Modul 01 · Mein Wochenende — 30 Wörter zu Freizeit, Wochenende und Treffen.
 # `definition` ist eine einfache Umschreibung auf A2 plus Synonym oder Gegenteil —
 # kein Wörterbuchstil (courses/de-a2/PLAN.md §5).
+# Bei jedem Verb steht das Partizip im `register`: es ist der Stoff des Moduls.
 entries:
-  - term: heißen
-    tag: Verb
-    definition: "Diesen Namen haben. Man fragt: Wie heißt du?"
-    use_cases:
-      - Ich heiße Marek und komme aus Polen.
-      - Wie heißt deine Lehrerin? — Sie heißt Frau Weber.
-    collocations: Wie heißt du? · Wie heißen Sie? · Ich heiße …
-    register: "Neutral. Formell: Mein Name ist …"
-
-  - term: kommen aus
-    tag: Verb
-    definition: "Aus diesem Land oder dieser Stadt sein. Man fragt: Woher kommst du?"
-    use_cases:
-      - Ich komme aus Italien, aus Neapel.
-      - Woher kommt ihr? — Wir kommen aus der Türkei.
-    collocations: kommen aus + Land · Woher kommst du?
-    register: Neutral
-
-  - term: wohnen
-    tag: Verb
-    definition: An diesem Ort leben. Man hat dort ein Zimmer oder eine Wohnung.
-    use_cases:
-      - Ich wohne seit zwei Jahren in Leipzig.
-      - Wo wohnst du? — In der Bahnhofstraße.
-    collocations: wohnen in + Stadt · Wo wohnst du?
-    register: Neutral
-
-  - term: sprechen
-    tag: Verb
-    definition: Wörter benutzen. Man spricht eine Sprache oder mit einer Person.
-    use_cases:
-      - Ich spreche Polnisch, Englisch und ein bisschen Deutsch.
-      - Sprechen Sie bitte langsam!
-    collocations: Deutsch sprechen · mit jemandem sprechen · langsam sprechen
-    register: "Neutral. Das Verb ist unregelmäßig: du sprichst, er spricht."
-
-  - term: die Sprache
+  - term: das Wochenende
     tag: Nomen
-    definition: Deutsch, Polnisch oder Englisch. Damit sprechen die Menschen in einem Land.
+    definition: Samstag und Sonntag. An diesen Tagen arbeiten die meisten Menschen nicht.
     use_cases:
-      - Deutsch ist keine leichte Sprache.
-      - Wie viele Sprachen sprichst du?
-    collocations: eine Sprache lernen · eine Sprache sprechen · die Fremdsprache
-    register: "Plural: die Sprachen"
+      - Am Wochenende bleibe ich gern zu Hause.
+      - Was hast du am Wochenende gemacht?
+    collocations: am Wochenende · das lange Wochenende · schönes Wochenende!
+    register: "Plural: die Wochenenden"
 
-  - term: die Muttersprache
+  - term: die Freizeit
     tag: Nomen
-    definition: Die erste Sprache. Diese Sprache lernt ein Kind zu Hause.
+    definition: Die Zeit ohne Arbeit und ohne Schule. Man macht, was man will.
     use_cases:
-      - Meine Muttersprache ist Arabisch.
-      - Er spricht Deutsch fast wie eine Muttersprache.
-    collocations: die Muttersprache sein · in der Muttersprache
-    register: Neutral
+      - In meiner Freizeit koche ich gern.
+      - Ich habe wenig Freizeit.
+    collocations: in der Freizeit · viel Freizeit haben · die Freizeit genießen
+    register: "Nur Singular."
 
-  - term: der Beruf
+  - term: das Hobby
     tag: Nomen
-    definition: Die Arbeit einer Person. Lehrer, Koch und Ärztin sind Berufe.
+    definition: Eine Sache, die man in der Freizeit regelmäßig und gern macht.
     use_cases:
-      - Was sind Sie von Beruf? — Ich bin Koch.
-      - Mein Beruf gefällt mir sehr.
-    collocations: von Beruf sein · einen Beruf lernen
-    register: "Frage: Was sind Sie von Beruf?"
+      - Mein Hobby ist Fotografieren.
+      - Hast du ein neues Hobby gefunden?
+    collocations: ein Hobby haben · mein größtes Hobby
+    register: "Plural: die Hobbys"
 
-  - term: arbeiten als
+  - term: Sport treiben
     tag: Verb
-    definition: Diesen Beruf haben und dafür Geld bekommen.
+    definition: Sich regelmäßig bewegen — laufen, schwimmen, Fußball spielen.
     use_cases:
-      - Ich arbeite als Koch in einem Restaurant.
-      - Sie arbeitet als Ärztin im Krankenhaus.
-    collocations: arbeiten als + Beruf · arbeiten bei + Firma · arbeiten in + Ort
-    register: "Ohne Artikel: arbeiten als Koch, nicht als ein Koch."
+      - Ich treibe dreimal pro Woche Sport.
+      - Früher hat er viel Sport getrieben.
+    collocations: viel Sport treiben · regelmäßig Sport treiben
+    register: "Partizip: getrieben. Auch: Sport machen."
 
-  - term: studieren
+  - term: sich treffen
     tag: Verb
-    definition: An einer Universität lernen. Das machen Studenten.
+    definition: Zusammenkommen. Zwei oder mehr Personen sind am gleichen Ort.
     use_cases:
-      - Ich studiere Medizin in München.
-      - Was studierst du? — Informatik.
-    collocations: an der Universität studieren · Medizin studieren
-    register: "Nicht gleich lernen: studieren ist nur an der Universität."
+      - Wir treffen uns um acht am Bahnhof.
+      - Gestern haben wir uns im Café getroffen.
+    collocations: sich mit Freunden treffen · sich am Bahnhof treffen
+    register: "Immer mit mich, dich, uns: Ich treffe mich, wir treffen uns. Partizip: getroffen."
 
-  - term: verheiratet
+  - term: das Konzert
+    tag: Nomen
+    definition: Eine Veranstaltung mit Musik. Man hört zu, die Musiker spielen.
+    use_cases:
+      - Am Freitag waren wir im Konzert.
+      - Das Konzert hat zwei Stunden gedauert.
+    collocations: ins Konzert gehen · ein Konzert besuchen · das Konzert beginnt
+    register: "Plural: die Konzerte"
+
+  - term: der Ausflug
+    tag: Nomen
+    definition: Eine kurze Reise für einen Tag. Man fährt weg und kommt zurück.
+    use_cases:
+      - Am Sonntag haben wir einen Ausflug an den See gemacht.
+      - Der Ausflug war leider sehr kurz.
+    collocations: einen Ausflug machen · der Tagesausflug
+    register: "Plural: die Ausflüge"
+
+  - term: wandern
+    tag: Verb
+    definition: Lange in der Natur zu Fuß gehen, meistens in den Bergen.
+    use_cases:
+      - Wir wandern jeden Sommer in den Alpen.
+      - Am Sonntag sind wir vier Stunden gewandert.
+    collocations: in den Bergen wandern · wandern gehen
+    register: "Partizip: gewandert, mit sein: Ich bin gewandert."
+
+  - term: Rad fahren
+    tag: Verb
+    definition: Mit dem Fahrrad fahren.
+    use_cases:
+      - Ich fahre jeden Tag Rad.
+      - Sie ist zum Markt Rad gefahren.
+    collocations: Rad fahren gehen · gern Rad fahren
+    register: "Partizip: gefahren, mit sein. Auch: Fahrrad fahren."
+
+  - term: spazieren gehen
+    tag: Verb
+    definition: Langsam gehen, ohne Ziel, nur zum Vergnügen.
+    use_cases:
+      - Nach dem Essen gehen wir immer spazieren.
+      - Gestern bin ich zwei Stunden spazieren gegangen.
+    collocations: im Park spazieren gehen · mit dem Hund spazieren gehen
+    register: "Partizip: spazieren gegangen, mit sein."
+
+  - term: fernsehen
+    tag: Verb
+    definition: Filme oder Sendungen am Fernseher ansehen.
+    use_cases:
+      - Abends sehe ich eine Stunde fern.
+      - Am Sonntag haben wir den ganzen Tag ferngesehen.
+    collocations: viel fernsehen · abends fernsehen
+    register: "Trennbar: Ich sehe fern. Partizip: ferngesehen."
+
+  - term: besuchen
+    tag: Verb
+    definition: Zu einer Person oder an einen Ort gehen und dort bleiben.
+    use_cases:
+      - Ich besuche meine Oma jeden Monat.
+      - Wir haben am Samstag ein Museum besucht.
+    collocations: Freunde besuchen · einen Kurs besuchen · eine Stadt besuchen
+    register: "Partizip: besucht, ohne ge-."
+
+  - term: einladen
+    tag: Verb
+    definition: "Zu jemandem sagen: Komm zu mir!"
+    use_cases:
+      - Ich lade dich zu meiner Party ein.
+      - Sie hat zwanzig Leute eingeladen.
+    collocations: zum Essen einladen · Freunde einladen
+    register: "Trennbar: Ich lade ein. Partizip: eingeladen."
+
+  - term: mitbringen
+    tag: Verb
+    definition: Etwas dabeihaben, wenn man zu einer Person kommt.
+    use_cases:
+      - Bringst du etwas zu trinken mit?
+      - Alle haben Kuchen mitgebracht.
+    collocations: ein Geschenk mitbringen · etwas zu essen mitbringen
+    register: "Trennbar: Ich bringe mit. Partizip: mitgebracht."
+
+  - term: feiern
+    tag: Verb
+    definition: Ein Fest machen — mit Musik, Essen und Gästen.
+    use_cases:
+      - Wir feiern am Samstag seinen Geburtstag.
+      - Sie haben bis drei Uhr gefeiert.
+    collocations: Geburtstag feiern · zusammen feiern · die Feier
+    register: "Partizip: gefeiert."
+
+  - term: kochen
+    tag: Verb
+    definition: Essen warm machen. Man braucht einen Topf und einen Herd.
+    use_cases:
+      - Am Wochenende koche ich für die ganze Familie.
+      - Wir haben zusammen Suppe gekocht.
+    collocations: Suppe kochen · gern kochen · Kaffee kochen
+    register: "Partizip: gekocht."
+
+  - term: backen
+    tag: Verb
+    definition: Kuchen oder Brot im Ofen machen.
+    use_cases:
+      - Meine Mutter backt jeden Sonntag einen Kuchen.
+      - Ich habe für die Party Brot gebacken.
+    collocations: einen Kuchen backen · Brot backen
+    register: "Unregelmäßig. Partizip: gebacken."
+
+  - term: aufräumen
+    tag: Verb
+    definition: Alles wieder an seinen Platz stellen. Danach ist die Wohnung ordentlich.
+    use_cases:
+      - Ich räume jeden Freitag die Küche auf.
+      - Hast du dein Zimmer schon aufgeräumt?
+    collocations: das Zimmer aufräumen · die Wohnung aufräumen
+    register: "Trennbar: Ich räume auf. Partizip: aufgeräumt."
+
+  - term: einkaufen
+    tag: Verb
+    definition: Im Geschäft Sachen für zu Hause kaufen.
+    use_cases:
+      - Am Samstag kaufe ich für die ganze Woche ein.
+      - Wir haben auf dem Markt eingekauft.
+    collocations: einkaufen gehen · im Supermarkt einkaufen
+    register: "Trennbar: Ich kaufe ein. Partizip: eingekauft."
+
+  - term: ausschlafen
+    tag: Verb
+    definition: So lange schlafen, wie man will. Kein Wecker am Morgen.
+    use_cases:
+      - Am Sonntag schlafe ich immer aus.
+      - Endlich habe ich einmal ausgeschlafen.
+    collocations: am Wochenende ausschlafen · endlich ausschlafen
+    register: "Trennbar: Ich schlafe aus. Partizip: ausgeschlafen."
+
+  - term: spannend
     tag: Adjektiv
-    definition: "Eine Frau und ein Mann sind zusammen eine Familie. Gegenteil: ledig."
+    definition: "Sehr interessant. Man will unbedingt wissen, wie es weitergeht. Gegenteil: langweilig."
     use_cases:
-      - Ich bin seit fünf Jahren verheiratet.
-      - Sind Sie verheiratet? — Nein, ich bin ledig.
-    collocations: verheiratet sein · verheiratet mit
-    register: "Steht oft im Formular."
+      - Der Film war wirklich spannend.
+      - Ich finde Wandern spannend, meine Schwester nicht.
+    collocations: ein spannendes Buch · spannend finden
+    register: "Gegenteil: langweilig"
 
-  - term: ledig
+  - term: langweilig
     tag: Adjektiv
-    definition: Nicht verheiratet. Man hat keine Ehefrau und keinen Ehemann.
+    definition: "Ohne Interesse. Man wartet nur, bis es zu Ende ist. Gegenteil: spannend."
     use_cases:
-      - "Familienstand: ledig."
-      - Mein Bruder ist noch ledig.
-    collocations: ledig sein · der Familienstand
-    register: "Formell. Im Gespräch sagt man oft: Ich bin Single."
+      - Das Konzert war leider ziemlich langweilig.
+      - Mir ist langweilig.
+    collocations: langweilig sein · langweilig finden
+    register: "Gegenteil: spannend"
 
-  - term: das Alter
-    tag: Nomen
-    definition: "Die Zahl der Jahre. Man fragt: Wie alt bist du?"
-    use_cases:
-      - Bitte schreiben Sie Ihr Alter in das Formular.
-      - Wir haben das gleiche Alter.
-    collocations: das Alter angeben · im Alter von
-    register: "Mit sein: Ich bin 25 Jahre alt."
-
-  - term: die Adresse
-    tag: Nomen
-    definition: Straße, Hausnummer und Stadt. Dorthin kommt die Post.
-    use_cases:
-      - Meine Adresse ist Bahnhofstraße 12, 04109 Leipzig.
-      - Können Sie mir Ihre Adresse geben?
-    collocations: die Adresse angeben · unter dieser Adresse wohnen
-    register: "Plural: die Adressen"
-
-  - term: die Telefonnummer
-    tag: Nomen
-    definition: Die Zahlen für das Telefon. Damit ruft man eine Person an.
-    use_cases:
-      - Wie ist deine Telefonnummer?
-      - Er hat mir seine Telefonnummer gegeben.
-    collocations: die Telefonnummer geben · die Nummer wählen
-    register: "Kurz: die Nummer"
-
-  - term: die E-Mail-Adresse
-    tag: Nomen
-    definition: Die Adresse für Nachrichten am Computer. Dort steht immer ein @.
-    use_cases:
-      - Schreiben Sie bitte Ihre E-Mail-Adresse hier.
-      - Meine E-Mail-Adresse ist neu.
-    collocations: die E-Mail-Adresse angeben · eine E-Mail schreiben
-    register: Neutral
-
-  - term: das Formular
-    tag: Nomen
-    definition: Ein Papier mit Fragen. Man schreibt Name, Adresse und Alter hinein.
-    use_cases:
-      - Bitte füllen Sie dieses Formular aus.
-      - Das Formular hat zwei Seiten.
-    collocations: ein Formular ausfüllen · ein Formular unterschreiben
-    register: "Plural: die Formulare"
-
-  - term: ausfüllen
-    tag: Verb
-    definition: In ein Formular alle Antworten schreiben.
-    use_cases:
-      - Ich fülle das Formular für den Kurs aus.
-      - Füllen Sie bitte alles auf Deutsch aus.
-    collocations: ein Formular ausfüllen · einen Antrag ausfüllen
-    register: "Trennbares Verb: Ich fülle … aus."
-
-  - term: der Name
-    tag: Nomen
-    definition: Das Wort für eine Person. Zum Beispiel Anna oder Weber.
-    use_cases:
-      - Mein Name ist Weber.
-      - Wie schreibt man Ihren Namen?
-    collocations: der Vorname · der Nachname · der Familienname
-    register: "Formeller als heißen: Mein Name ist …"
-
-  - term: der Vorname
-    tag: Nomen
-    definition: Der erste Name. Bei Anna Weber ist das Anna.
-    use_cases:
-      - "Vorname: Anna. Nachname: Weber."
-      - Mein Vorname ist schwer für Deutsche.
-    collocations: der Vorname und der Nachname
-    register: "Steht immer im Formular."
-
-  - term: der Nachname
-    tag: Nomen
-    definition: Der Name der Familie. Bei Anna Weber ist das Weber.
-    use_cases:
-      - Mein Nachname ist Nowak.
-      - Wie ist Ihr Nachname, bitte?
-    collocations: der Nachname · der Familienname
-    register: "Auch: der Familienname"
-
-  - term: das Land
-    tag: Nomen
-    definition: Ein großes Gebiet mit einer Regierung. Polen und Italien sind Länder.
-    use_cases:
-      - Aus welchem Land kommst du?
-      - In diesem Land spricht man drei Sprachen.
-    collocations: aus einem Land kommen · das Heimatland
-    register: "Plural: die Länder"
-
-  - term: die Stadt
-    tag: Nomen
-    definition: Ein Ort mit vielen Häusern und Menschen. Berlin ist eine Stadt.
-    use_cases:
-      - Leipzig ist eine schöne Stadt.
-      - In welcher Stadt wohnst du?
-    collocations: in der Stadt wohnen · die Großstadt · die Heimatstadt
-    register: "Plural: die Städte"
-
-  - term: kennenlernen
-    tag: Verb
-    definition: Eine Person zum ersten Mal treffen und mit ihr sprechen.
-    use_cases:
-      - Im Kurs lerne ich viele Leute kennen.
-      - Schön, Sie kennenzulernen!
-    collocations: Leute kennenlernen · sich kennenlernen
-    register: "Trennbar: Ich lerne sie kennen."
-
-  - term: sich vorstellen
-    tag: Verb
-    definition: Den eigenen Namen sagen, damit andere einen kennen.
-    use_cases:
-      - Darf ich mich kurz vorstellen? Ich heiße Marek.
-      - Jeder stellt sich in der ersten Stunde vor.
-    collocations: sich kurz vorstellen · Darf ich mich vorstellen?
-    register: "Trennbar, immer mit mich, dich, sich: Ich stelle mich vor."
-
-  - term: buchstabieren
-    tag: Verb
-    definition: "Ein Wort Buchstabe für Buchstabe sagen: N-o-w-a-k."
-    use_cases:
-      - Können Sie Ihren Namen bitte buchstabieren?
-      - "Ich buchstabiere langsam: M-a-r-e-k."
-    collocations: den Namen buchstabieren · Wie buchstabiert man das?
-    register: "Sehr nützlich am Telefon."
-
-  - term: wiederholen
-    tag: Verb
-    definition: Etwas noch einmal sagen oder machen.
-    use_cases:
-      - Können Sie das bitte wiederholen?
-      - Wir wiederholen die Wörter aus Modul eins.
-    collocations: eine Frage wiederholen · den Stoff wiederholen
-    register: "Wichtiger Satz im Kurs: Bitte wiederholen Sie das."
-
-  - term: verstehen
-    tag: Verb
-    definition: Wissen, was die Wörter bedeuten.
-    use_cases:
-      - Entschuldigung, ich verstehe das nicht.
-      - Verstehst du die Aufgabe?
-    collocations: nichts verstehen · alles verstehen · falsch verstehen
-    register: Neutral
-
-  - term: langsam
+  - term: anstrengend
     tag: Adjektiv
-    definition: "Mit wenig Tempo, mit viel Zeit. Gegenteil: schnell."
+    definition: Man braucht viel Kraft. Danach ist man müde.
     use_cases:
-      - Sprechen Sie bitte langsam!
-      - Ich lerne langsam, aber ich lerne jeden Tag.
-    collocations: langsam sprechen · langsam lesen
-    register: "Gegenteil: schnell"
+      - Die Wanderung war schön, aber anstrengend.
+      - Ich hatte eine anstrengende Woche.
+    collocations: anstrengend sein · körperlich anstrengend
+    register: "Gegenteil: leicht, entspannend"
 
-  - term: gern
+  - term: gemütlich
+    tag: Adjektiv
+    definition: Ruhig und angenehm. Man fühlt sich wohl und hat keine Eile.
+    use_cases:
+      - Wir hatten einen gemütlichen Abend zu Hause.
+      - Das Café ist klein und sehr gemütlich.
+    collocations: ein gemütlicher Abend · es sich gemütlich machen
+    register: "Sehr deutsches Wort — es beschreibt Wohnungen und Abende."
+
+  - term: draußen
     tag: Adverb
-    definition: Mit Freude. Man macht diese Sache oft und mag sie.
+    definition: "Nicht im Haus, sondern an der frischen Luft. Gegenteil: drinnen."
     use_cases:
-      - Ich koche gern und fahre gern Fahrrad.
-      - Trinkst du gern Kaffee? — Ja, sehr gern.
-    collocations: gern machen · sehr gern · nicht gern
-    register: "Auch: gerne. Beides ist richtig."
+      - Bei gutem Wetter essen wir draußen.
+      - Die Kinder sind den ganzen Tag draußen geblieben.
+    collocations: draußen sein · draußen bleiben · draußen sitzen
+    register: "Gegenteil: drinnen"
 
-  - term: auch
+  - term: zusammen
     tag: Adverb
-    definition: "Ebenso, genauso. Zeigt: für eine zweite Person oder Sache gilt das Gleiche."
+    definition: Nicht allein, sondern mit anderen Personen.
     use_cases:
-      - Ich komme aus Polen. Meine Frau kommt auch aus Polen.
-      - Sprichst du auch Englisch?
-    collocations: ich auch · auch nicht
-    register: "Antwort: Ich auch! / Ich auch nicht."
+      - Wir haben zusammen gekocht.
+      - Gehen wir zusammen ins Kino?
+    collocations: zusammen essen · zusammen wohnen · alle zusammen
+    register: "Gegenteil: allein"
+
+  - term: vorgestern
+    tag: Adverb
+    definition: Der Tag vor gestern. Heute ist Freitag, also war vorgestern Mittwoch.
+    use_cases:
+      - Vorgestern bin ich früh ins Bett gegangen.
+      - Wir haben uns vorgestern getroffen.
+    collocations: vorgestern Abend · erst vorgestern
+    register: "Reihe: vorgestern — gestern — heute — morgen"
+
+  - term: neulich
+    tag: Adverb
+    definition: Vor kurzer Zeit, aber nicht heute und nicht gestern.
+    use_cases:
+      - Neulich habe ich deinen Bruder in der Stadt gesehen.
+      - Wir waren neulich in einem sehr guten Restaurant.
+    collocations: neulich erst · erzählen, was neulich passiert ist
+    register: "Man sagt es, wenn man eine Geschichte beginnt."
+
+  - term: endlich
+    tag: Adverb
+    definition: Nach langem Warten. Man hat sich darauf gefreut.
+    use_cases:
+      - Endlich ist das Wochenende da!
+      - Wir haben endlich unsere Wohnung aufgeräumt.
+    collocations: endlich fertig · na endlich!
+    register: "Zeigt Freude oder Erleichterung."
+
+  - term: übrigens
+    tag: Adverb
+    definition: Man sagt es, wenn man ein neues Thema beginnt.
+    use_cases:
+      - Übrigens, hast du am Samstag Zeit?
+      - Das Essen war übrigens sehr gut.
+    collocations: übrigens am Anfang oder in der Mitte vom Satz
+    register: "Neutral, sehr häufig im Gespräch."

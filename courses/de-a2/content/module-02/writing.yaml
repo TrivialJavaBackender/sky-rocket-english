@@ -1,0 +1,38 @@
+# Sprechen statt Schreiben (Modulkarte: записанный монолог 1–2 мин), deshalb
+# ohne word_target — content-schema.ts lässt es bei mode: speaking nicht zu.
+# Das Musterbeispiel hat 119 Wörter: gesprochen sind das rund anderthalb Minuten.
+mode: speaking
+genre: Der Weg von zu Hause zur Arbeit
+prompt: |
+  Ein Kollege aus einer anderen Stadt fragt Sie: „Wie kommst du eigentlich
+  jeden Morgen zur Arbeit?“ Beschreiben Sie Ihren Weg. Sprechen Sie
+  1–2 Minuten und nehmen Sie sich dabei auf.
+
+  Sprechen Sie zu allen vier Punkten:
+  • Wie lange der Weg dauert und womit Sie fahren
+  • Wo Sie einsteigen, umsteigen und aussteigen
+  • Das Stück zu Fuß am Anfang oder am Ende — geradeaus, rechts, links
+  • Was am Morgen stört: der Verkehr, eine Verspätung oder eine volle Bahn
+
+  Benutzen Sie mindestens sechs Präpositionen mit Dativ und zwei mit Akkusativ.
+model_answer: |
+  Ich wohne im Zentrum, mein Büro ist weit draußen. Der Weg dauert ungefähr
+  vierzig Minuten. Zuerst gehe ich fünf Minuten zu Fuß bis zur Haltestelle.
+  Dort nehme ich die Straßenbahn 6 in Richtung Hauptbahnhof. Am Hauptbahnhof
+  steige ich um: Ich gehe geradeaus durch die Halle und dann rechts zum
+  Bahnsteig 3. Die S-Bahn fährt alle zehn Minuten, und ich bin nach vier
+  Stationen da. Von der Haltestelle sind es noch drei Minuten zu Fuß: nach
+  der Ampel links, dann immer geradeaus. Am Morgen ist die Bahn sehr voll,
+  aber ich sitze fast immer. Mit dem Auto brauche ich eine Stunde — bei so
+  viel Verkehr fahre ich gern mit der Bahn. Nur mit Verspätung komme ich zu
+  spät zur Arbeit.
+checklist:
+  - 1–2 Minuten frei sprechen, ohne Pause länger als fünf Sekunden
+  - Alle vier Punkte kommen vor
+  - Mindestens sechs Präpositionen mit Dativ (mit, bei, nach, von, zu, aus, seit)
+  - Mindestens zwei Präpositionen mit Akkusativ (für, gegen, ohne, um, durch, bis)
+  - Nach mit, bei, nach, von, zu, aus und seit steht der Dativ (mit dem Bus, zur Arbeit)
+  - Nach für, gegen, ohne, um, durch und bis steht der Akkusativ (durch den Park)
+  - "Die kurzen Formen kommen vor: zum, zur, beim, vom, im, am"
+  - nach vor Städten, zu vor Personen und Gebäuden (nach Wien, zum Arzt)
+  - Mindestens acht Wörter aus dem Modul kommen vor

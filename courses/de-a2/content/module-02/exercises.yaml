@@ -1,0 +1,651 @@
+# Modul 02 · Unterwegs — 52 Aufgaben im Kern, 20 im Wiederholungspool.
+# Verteilung laut Profil (courses/de-a2/PLAN.md §6): 6 mc_cloze · 8 open_cloze ·
+# 6 word_formation · 4 key_word_transformation · 8 grammar_drill ·
+# 6 error_correction · 8 collocation_match · 6 reading_comprehension.
+#
+# Spiralisches Wiederholen aus Modul 01 (Perfekt): word_formation 6,
+# key_word_transformation 3 und error_correction 3.
+#
+# Alle open_cloze-Lücken stehen auf einer Präposition oder auf einer kurzen
+# Form — geschlossene Wortklasse, der Satz erzwingt die Antwort
+# (web/lib/content-gap-words/de.ts). Deshalb ohne hint.
+#
+# Wechselpräpositionen (in, an, auf …) kommen erst in Modul 03: Sie dürfen im
+# Rahmen einer Aufgabe stehen, aber nie die verlangte Antwort sein.
+core:
+  # ───────────────────────── Multiple Choice ─────────────────────────
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Wir fahren mit "
+      post: " Straßenbahn bis zur Kreuzung."
+      options: [die, der, den, dem]
+      answer: 1
+    explanation: "Nach mit steht der Dativ. die Straßenbahn → der Straßenbahn."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Ich komme gerade von "
+      post: " Bahnhof."
+      options: [dem, den, der, das]
+      answer: 0
+    explanation: "Nach von steht der Dativ. der Bahnhof → dem Bahnhof. Kurz: vom Bahnhof."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Die Fahrkarte ist für "
+      post: " Zug nach Wien."
+      options: [dem, der, den, des]
+      answer: 2
+    explanation: "Nach für steht der Akkusativ. der Zug → den Zug."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Nach "
+      post: " Arbeit fahre ich sofort nach Hause."
+      options: [die, den, dem, der]
+      answer: 3
+    explanation: "Nach nach steht der Dativ. die Arbeit → der Arbeit."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Heute sind wir ohne "
+      post: " Auto gekommen."
+      options: [dem, das, der, den]
+      answer: 1
+    explanation: "Nach ohne steht der Akkusativ. Bei das ändert sich nichts: das Auto."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Seit "
+      post: " Sommer fahre ich mit dem Rad zur Arbeit."
+      options: [den, der, dem, das]
+      answer: 2
+    explanation: "Nach seit steht der Dativ. der Sommer → dem Sommer."
+
+  # ───────────────────────── Lückentext ─────────────────────────
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Ich fahre jeden Morgen "
+      post: " dem Bus zur Arbeit."
+      answers: [mit]
+      answer_shown: mit
+    explanation: "Das Verkehrsmittel steht nach mit: mit dem Bus, mit der Bahn."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Wie komme ich von hier "
+      post: " Hause?"
+      answers: [nach]
+      answer_shown: nach
+    explanation: "nach Hause ist eine feste Wendung. zu Hause heißt: Ich bin schon da."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Ich gehe morgen "
+      post: " Arzt."
+      answers: [zum]
+      answer_shown: zum
+    explanation: "Vor einer Person steht zu. zu dem Arzt wird kurz zum Arzt."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Ich habe die Fahrkarten "
+      post: " mich und meinen Bruder gekauft."
+      answers: [für]
+      answer_shown: für
+    explanation: "für nimmt den Akkusativ: für mich, für meinen Bruder."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Der Zug fährt fast zehn Minuten "
+      post: " den Tunnel."
+      answers: [durch]
+      answer_shown: durch
+    explanation: "Von einer Seite zur anderen: durch. Nach durch steht der Akkusativ."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Der Zug kam pünktlich an. "
+      post: " Bahnhof bin ich dann zu Fuß nach Hause gegangen."
+      answers: [vom]
+      answer_shown: Vom
+    explanation: "Der Weg beginnt am Bahnhof: von dem Bahnhof, kurz vom Bahnhof."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Ich wohne "
+      post: " drei Jahren in dieser Stadt."
+      answers: [seit]
+      answer_shown: seit
+    explanation: "Ein Anfang in der Vergangenheit bis heute: seit. Danach steht der Dativ."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Ohne Fahrkarte kann man nicht "
+      post: " den Zug einsteigen."
+      answers: [in]
+      answer_shown: in
+    explanation: "einsteigen braucht in: in den Zug, in den Bus, in die Straßenbahn."
+
+  # ───────────────────────── Wortbildung ─────────────────────────
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Der Zug hatte heute eine "
+      post: " von zwanzig Minuten."
+      prompt: verspäten
+      answers: [Verspätung]
+      answer_shown: Verspätung
+    explanation: "Stamm + -ung macht aus dem Verb ein Nomen: verspäten → die Verspätung."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Danke für die "
+      post: "! Jetzt finde ich den Weg."
+      prompt: beschreiben
+      answers: [Beschreibung]
+      answer_shown: Beschreibung
+    explanation: "beschreiben → die Beschreibung. Alle Nomen mit -ung sind feminin: die."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Nach Wien gibt es eine "
+      post: " ohne Umsteigen."
+      prompt: verbinden
+      answers: [Verbindung]
+      answer_shown: Verbindung
+    explanation: "verbinden → die Verbindung. Der Zug verbindet zwei Städte."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Ich kaufe im Internet. Die "
+      post: " dauert nur zwei Minuten."
+      prompt: buchen
+      answers: [Buchung]
+      answer_shown: Buchung
+    explanation: "buchen → die Buchung. Stamm plus -ung, wie bei verspäten und verbinden."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Vielen Dank für die "
+      post: " zu deiner Party!"
+      prompt: einladen
+      answers: [Einladung]
+      answer_shown: Einladung
+    explanation: "Auch trennbare Verben gehen so: einladen → die Einladung. Die Vorsilbe bleibt vorne."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Wir sind am Sonntag mit dem Zug nach Wien "
+      post: "."
+      prompt: fahren
+      answers: [gefahren]
+      answer_shown: gefahren
+    explanation: "Hier kein -ung, sondern das Partizip aus Modul 01: fahren → gefahren, mit sein."
+
+  # ───────────────────────── Umformung ─────────────────────────
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: Ich fahre mit dem Auto zur Arbeit.
+      key: OHNE
+      pre: "Ich fahre "
+      post: " zur Arbeit."
+      answers: [ohne das Auto, ohne Auto]
+      hint: 2–3 Wörter
+      answer_shown: ohne das Auto
+    explanation: "mit nimmt den Dativ, ohne den Akkusativ: mit dem Auto → ohne das Auto."
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: Wir gehen zu dem Bahnhof.
+      key: KURZ
+      pre: "Wir gehen "
+      post: " Bahnhof."
+      answers: [zum]
+      hint: 1 Wort
+      answer_shown: zum
+    explanation: "zu dem wird immer kurz: zum Bahnhof. Genauso zu der → zur."
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: Ich steige am Hauptbahnhof um.
+      key: GESTERN
+      pre: "Gestern "
+      post: " am Hauptbahnhof umgestiegen."
+      answers: [bin ich]
+      hint: 2 Wörter
+      answer_shown: bin ich
+    explanation: "umsteigen nimmt sein. Nach der Zeitangabe folgt das Verb, dann das Subjekt."
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: Der Bus kommt um sieben Uhr an.
+      key: WANN
+      pre: ""
+      post: " der Bus an?"
+      answers: [Wann kommt]
+      hint: 2 Wörter
+      answer_shown: Wann kommt
+    explanation: "Das Fragewort steht vorne, das Verb dahinter. Die Vorsilbe an bleibt am Ende."
+
+  # ───────────────────────── Grammatik-Drill ─────────────────────────
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Wir fliegen im Juli "
+      post: " Italien."
+      prompt: NACH, ZU ODER IN
+      options: [zu, nach, in, bei]
+      answer: 1
+    explanation: "Länder und Städte ohne Artikel bekommen nach: nach Italien, nach Wien."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Ich gehe jetzt zu Fuß "
+      post: " Bahnhof."
+      prompt: KURZE FORM
+      options: [beim, vom, zur, zum]
+      answer: 3
+    explanation: "Das Ziel steht nach zu. der Bahnhof ist Dativ dem Bahnhof, kurz zum Bahnhof."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Steigen Sie bitte "
+      post: " Hauptbahnhof um."
+      prompt: KURZE FORM
+      options: [am, im, zum, beim]
+      answer: 0
+    explanation: "an dem wird kurz am. Der Ort vom Umsteigen: am Hauptbahnhof."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Meine Schwester arbeitet "
+      post: " Post."
+      prompt: BEI ODER VON
+      options: [von der, bei dem, bei der, von dem]
+      answer: 2
+    explanation: "Die Firma steht nach bei. die Post → bei der Post."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Wir gehen zu Fuß "
+      post: " Park zum Museum."
+      prompt: DURCH ODER GEGEN
+      options: [gegen dem, durch dem, gegen den, durch den]
+      answer: 3
+    explanation: "Von einer Seite zur anderen: durch. Nach durch steht der Akkusativ: den Park."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Ich fahre "
+      post: " drei Jahren mit dem Rad zur Arbeit."
+      prompt: SEIT WANN
+      options: [vor, seit, ab, bis]
+      answer: 1
+    explanation: "Der Anfang liegt in der Vergangenheit, es gilt noch heute: seit drei Jahren."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Gestern "
+      post: " ich mit dem Zug nach Berlin gefahren."
+      prompt: HABEN ODER SEIN
+      options: [habe, hat, bin, ist]
+      answer: 2
+    explanation: "fahren ist Bewegung von A nach B: Perfekt mit sein. ich + sein = bin."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Ich kaufe eine Fahrkarte "
+      post: " Tag."
+      prompt: FÜR ODER MIT
+      options: [für einen, mit einem, für einem, mit einen]
+      answer: 0
+    explanation: "für nimmt den Akkusativ: für einen Tag. Nach mit steht immer der Dativ."
+
+  # ───────────────────────── Fehlersuche ─────────────────────────
+  - type: error_correction
+    group: grammar
+    content:
+      words: [Ich, fahre, mit, den, Bus, zur, "Arbeit."]
+      wrong: 3
+      correction: "den → dem"
+    explanation: "mit nimmt immer den Dativ, nie den Akkusativ: mit dem Bus."
+  - type: error_correction
+    group: grammar
+    content:
+      words: [Die, Fahrkarte, ist, für, dem, Zug, nach, "Wien."]
+      wrong: 4
+      correction: "dem → den"
+    explanation: "für nimmt immer den Akkusativ: für den Zug."
+  - type: error_correction
+    group: grammar
+    content:
+      words: [Ich, habe, gestern, mit, dem, Zug, nach, Berlin, "gefahren."]
+      wrong: 1
+      correction: "habe → bin"
+    explanation: "fahren ist Bewegung von A nach B und nimmt sein: Ich bin gefahren."
+  - type: error_correction
+    group: grammar
+    content:
+      words: [Wir, kommen, gerade, aus, "Kino."]
+      wrong: 4
+      correction: "Kino → dem Kino"
+    explanation: "Der Artikel fehlt. Ohne ihn sieht man den Kasus nicht: aus dem Kino."
+  - type: error_correction
+    group: grammar
+    content:
+      words: [Der, Zug, fährt, zehn, Minuten, durch, dem, "Tunnel."]
+      wrong: 6
+      correction: "dem → den"
+    explanation: "durch nimmt den Akkusativ: durch den Tunnel."
+  - type: error_correction
+    group: grammar
+    content:
+      words: [Wir, sind, am, Wochenende, zu, Wien, "gefahren."]
+      wrong: 4
+      correction: "zu → nach"
+    explanation: "Städte und Länder ohne Artikel bekommen nach: nach Wien, nach Italien."
+
+  # ───────────────────────── Wörter verbinden ─────────────────────────
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [in den Zug, aus dem Bus, in München, zu Fuß]
+      right: [gehen, einsteigen, aussteigen, umsteigen]
+      pairs: { 0: 1, 1: 2, 2: 3, 3: 0 }
+    explanation: "in den Zug einsteigen, aus dem Bus aussteigen, in München umsteigen, zu Fuß gehen."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [die Fahrkarte, der Fahrplan, die Haltestelle, die Verspätung]
+      right: [dort hält der Bus, der Zug kommt zu spät, damit darf man fahren, dort stehen die Zeiten]
+      pairs: { 0: 2, 1: 3, 2: 0, 3: 1 }
+    explanation: "Vier Wörter vom Bahnhof — jedes mit seiner Umschreibung."
+  - type: collocation_match
+    group: grammar
+    content:
+      left: [mit, bei, für, durch]
+      right: [den Tunnel, dem Bus, den Kurs, der Arbeit]
+      pairs: { 0: 1, 1: 3, 2: 2, 3: 0 }
+    explanation: "mit und bei nehmen den Dativ, für und durch den Akkusativ."
+  - type: collocation_match
+    group: grammar
+    content:
+      left: [zu dem, zu der, bei dem, von dem]
+      right: [vom, zum, beim, zur]
+      pairs: { 0: 1, 1: 3, 2: 2, 3: 0 }
+    explanation: "Die kurzen Formen: zum, zur, beim, vom. Man schreibt sie fast immer so."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [ankommen, abfahren, umsteigen, verpassen]
+      right: [zu spät kommen, in einen anderen Zug steigen, am Ziel sein, losfahren]
+      pairs: { 0: 2, 1: 3, 2: 1, 3: 0 }
+    explanation: "ankommen und abfahren sind Gegenteile. verpassen heißt: Der Zug ist schon weg."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [geradeaus, unterwegs, ungefähr, pünktlich]
+      right: [nicht zu spät, nicht genau, nicht rechts und nicht links, nicht mehr zu Hause]
+      pairs: { 0: 2, 1: 3, 2: 1, 3: 0 }
+    explanation: "Vier Wörter für den Weg — jedes über sein Gegenteil erklärt."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [die Ampel, die Kreuzung, der Bahnsteig, die Strecke]
+      right: [dort wartet man auf den Zug, sie ist rot oder grün, der ganze Weg in Kilometern, dort treffen sich zwei Straßen]
+      pairs: { 0: 1, 1: 3, 2: 0, 3: 2 }
+    explanation: "Die Ampel steht an der Kreuzung, der Bahnsteig am Bahnhof."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [der Verkehr, der Weg, die Richtung, halten]
+      right: [kurz nicht weiterfahren, nach rechts oder nach links, viele Autos auf der Straße, von hier nach dort]
+      pairs: { 0: 2, 1: 3, 2: 1, 3: 0 }
+    explanation: "Der Bus hält an der Haltestelle, der Weg führt von hier nach dort."
+
+  # ───────────────────────── Leseverstehen ─────────────────────────
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Die Fahrkarte kaufe ich immer im Internet. Dort steht auch der Fahrplan, und die Buchung dauert zwei Minuten. Am Morgen gehe ich dann zu Fuß zum Bahnhof, ungefähr fünfzehn Minuten. Mit dem Bus geht es schneller, aber ich gehe gern durch den Park."
+      q: Wie kommt der Autor zum Bahnhof?
+      options:
+        - Mit dem Bus
+        - Mit der Straßenbahn
+        - Mit dem Rad
+        - Zu Fuß
+      answer: 3
+    explanation: "Im Text steht: Am Morgen gehe ich dann zu Fuß zum Bahnhof. Der Bus wäre schneller, aber er nimmt ihn nicht."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Ich steige ein und suche meinen Platz. Eine Frau aus Ungarn sitzt schon im Wagen. Sie ist seit sechs Stunden unterwegs, ich erst seit zehn Minuten."
+      q: Wie lange ist die Frau aus Ungarn schon unterwegs?
+      options:
+        - Zehn Minuten
+        - Sechs Stunden
+        - Zwei Stunden
+        - Seit dem Morgen
+      answer: 1
+    explanation: "Im Text steht: Sie ist seit sechs Stunden unterwegs. Die zehn Minuten gehören dem Autor."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Nach zwei Stunden kommt der Schaffner. Er kontrolliert die Fahrkarten und sagt: „Der Zug hat heute zwanzig Minuten Verspätung. Aber in München erreichen Sie Ihren Zug.“"
+      q: Was sagt der Schaffner?
+      options:
+        - Der Zug fährt heute ohne Verspätung.
+        - Der Autor muss ein Taxi nehmen.
+        - Der Autor erreicht seinen Zug in München noch.
+        - Der Zug nach Wien fährt heute nicht.
+      answer: 2
+    explanation: "Im Text steht: Aber in München erreichen Sie Ihren Zug — trotz der zwanzig Minuten Verspätung."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Vom Hauptbahnhof fahre ich mit der U-Bahn weiter und steige nach vier Stationen aus. Von dort sind es zu Fuß fünf Minuten: geradeaus bis zur Kreuzung, dann rechts abbiegen. Nach der Ampel sehe ich schon mein Hotel."
+      q: Was macht der Autor an der Kreuzung?
+      options:
+        - Er biegt rechts ab.
+        - Er geht geradeaus weiter.
+        - Er steigt in die U-Bahn ein.
+        - Er fragt nach dem Weg.
+      answer: 0
+    explanation: "Im Text steht: geradeaus bis zur Kreuzung, dann rechts abbiegen. Geradeaus geht er nur bis dorthin."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "In Wien nehme ich dann die Straßenbahn. Die Haltestelle ist zwei Minuten vom Hotel entfernt. Die Bahn hält überall, und am Morgen ist sie sehr voll. Einmal bin ich in die falsche Richtung gefahren und habe den Anfang vom Konzert verpasst."
+      q: Warum hat der Autor den Anfang vom Konzert verpasst?
+      options:
+        - Die Straßenbahn war zu voll.
+        - Die Haltestelle war zu weit.
+        - Der Zug hatte Verspätung.
+        - Er ist in die falsche Richtung gefahren.
+      answer: 3
+    explanation: "Im Text steht: Einmal bin ich in die falsche Richtung gefahren. Voll war die Bahn am Morgen, das ist ein anderer Satz."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Warum nehme ich nicht das Flugzeug? Mit dem Zug fahre ich von Zentrum zu Zentrum, ohne Taxi und ohne Stress. Auch mit zwanzig Minuten Verspätung bin ich am Ende zufrieden."
+      q: Warum fährt der Autor mit dem Zug?
+      options:
+        - Der Zug ist schneller als das Flugzeug.
+        - Er kommt mitten in der Stadt an.
+        - Der Zug hat nie Verspätung.
+        - Das Flugzeug kostet zu viel.
+      answer: 1
+    explanation: "Im Text steht: von Zentrum zu Zentrum, ohne Taxi. Die Verspätung gibt es, sie stört ihn nur nicht."
+
+# ───────────────────────── Wiederholungspool ─────────────────────────
+# 20 kurze Aufgaben für das Modul-Quiz und die Wiederholung nach 7 und 21 Tagen.
+# Dazu kommen 8 Aufgaben aus theory.yaml (cloze_cards).
+review_pool:
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Der Bus fährt einmal um "
+      post: " Park."
+      options: [dem, den, der, das]
+      answer: 1
+    explanation: "um nimmt den Akkusativ. der Park → den Park."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Sie kommt gerade aus "
+      post: " Schweiz."
+      options: [die, den, der, dem]
+      answer: 2
+    explanation: "aus nimmt den Dativ. die Schweiz → der Schweiz."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Wir fahren mit "
+      post: " Zug nach Wien."
+      options: [den, dem, der, das]
+      answer: 1
+    explanation: "mit nimmt den Dativ. der Zug → dem Zug."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Das Geschenk ist für "
+      post: " Bruder."
+      options: [meinem, mein, meiner, meinen]
+      answer: 3
+    explanation: "für nimmt den Akkusativ. mein Bruder → meinen Bruder."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Ich fahre am Wochenende "
+      post: " Berlin."
+      answers: [nach]
+      answer_shown: nach
+    explanation: "Städte ohne Artikel bekommen nach: nach Berlin, nach Wien."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Wir gehen heute Abend "
+      post: " Bahnhof und essen dort."
+      answers: [zum]
+      answer_shown: zum
+    explanation: "Das Ziel steht nach zu. zu dem Bahnhof wird kurz zum Bahnhof."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Der Zug fährt "
+      post: " München und nicht weiter."
+      answers: [bis]
+      answer_shown: bis
+    explanation: "Das Ende der Strecke steht nach bis. Vor Städten ohne Artikel: bis München."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Kommst du heute Abend "
+      post: " uns ins Kino?"
+      answers: [mit]
+      answer_shown: mit
+    explanation: "Die Person, die mitkommt, steht nach mit: mit uns, mit dir."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Wir sind zehn Minuten "
+      post: " den Park gegangen."
+      answers: [durch]
+      answer_shown: durch
+    explanation: "Von einer Seite zur anderen: durch den Park."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Ich arbeite "
+      post: " der Post am Hauptbahnhof."
+      answers: [bei]
+      answer_shown: bei
+    explanation: "Die Firma steht nach bei: bei der Post, bei der Bahn."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Wir kommen gerade "
+      post: " Konzert."
+      prompt: KURZE FORM
+      options: [zum, beim, vom, im]
+      answer: 2
+    explanation: "Der Weg beginnt dort: von dem Konzert, kurz vom Konzert."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Sie ist gestern ohne "
+      post: " Fahrkarte gefahren."
+      prompt: DIE FAHRKARTE
+      options: [ihre, ihrer, ihrem, ihren]
+      answer: 0
+    explanation: "ohne nimmt den Akkusativ. Bei die ändert sich nichts: ohne ihre Fahrkarte."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Der Zug nach Wien fährt "
+      post: " Bahnsteig 21 ab."
+      prompt: WELCHE PRÄPOSITION
+      options: [zu, für, bei, von]
+      answer: 3
+    explanation: "abfahren zeigt den Anfang vom Weg: von Bahnsteig 21."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Nach "
+      post: " Kurs fahre ich sofort nach Hause."
+      prompt: DER KURS IM DATIV
+      options: [den Kurs, dem Kurs, der Kurs, des Kurses]
+      answer: 1
+    explanation: "nach nimmt den Dativ. der Kurs → dem Kurs."
+  - type: error_correction
+    group: grammar
+    content:
+      words: [Wir, fahren, mit, das, Auto, in, die, "Stadt."]
+      wrong: 3
+      correction: "das → dem"
+    explanation: "mit nimmt den Dativ: mit dem Auto."
+  - type: error_correction
+    group: grammar
+    content:
+      words: [Ich, gehe, jeden, Tag, zu, Fuß, nach, "Arbeit."]
+      wrong: 6
+      correction: "nach → zur"
+    explanation: "nach steht vor Städten und Ländern. Vor die Arbeit steht zu: zur Arbeit."
+  - type: error_correction
+    group: grammar
+    content:
+      words: [Meine, Eltern, haben, gestern, nach, Wien, "gefahren."]
+      wrong: 2
+      correction: "haben → sind"
+    explanation: "fahren nimmt sein: Meine Eltern sind nach Wien gefahren."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Der Bus hatte heute wieder zehn Minuten "
+      post: "."
+      prompt: verspäten
+      answers: [Verspätung]
+      answer_shown: Verspätung
+    explanation: "verspäten → die Verspätung. Stamm plus -ung."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [den Zug, die Fahrkarte, an der Haltestelle, in die Straßenbahn]
+      right: [einsteigen, verpassen, kaufen, warten]
+      pairs: { 0: 1, 1: 2, 2: 3, 3: 0 }
+    explanation: "den Zug verpassen, die Fahrkarte kaufen, an der Haltestelle warten, in die Straßenbahn einsteigen."
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: Wir fahren mit dem Bus in die Stadt.
+      key: ZU FUSS
+      pre: "Wir gehen "
+      post: " in die Stadt."
+      answers: [zu Fuß]
+      hint: 2 Wörter
+      answer_shown: zu Fuß
+    explanation: "Ohne Verkehrsmittel geht man zu Fuß. Aus fahren wird dann gehen."

@@ -4,7 +4,11 @@ import { StatusTag } from '@/components/ui/StatusTag';
 
 /** UC-02 course map (ARCHITECTURE.md §1.1, §7). Block color/tint/name/pct come straight from the DTO — never hardcoded (§8 D4). */
 export function CourseMap({ map }: { map: CourseMapDTO }) {
-  const totalModules = map.blocks.reduce((n, b) => n + b.modules.length, 0);
+  // Optional blocks sit outside the course proper (0008): they are offered, not
+  // scheduled, so they count toward neither the module tally nor block numbering.
+  const requiredBlocks = map.blocks.filter((b) => !b.optional);
+  const totalModules = requiredBlocks.reduce((n, b) => n + b.modules.length, 0);
+  const displayNumber = new Map(requiredBlocks.map((b, i) => [b.slug, i + 1]));
   return (
     <div className="animate-fade-up">
       <div className="text-[11px] font-bold tracking-kicker text-fg-subtle">
@@ -12,7 +16,7 @@ export function CourseMap({ map }: { map: CourseMapDTO }) {
       </div>
       <h1 className="m-0 mb-1 mt-0.5 text-[30px] tracking-[-.01em]">Course map</h1>
       <p className="m-0 mb-4 text-[15px] text-fg-muted">
-        {totalModules} modules in {map.blocks.length} blocks. Each block's checkpoint gates the next.
+        {totalModules} modules in {requiredBlocks.length} blocks. Each block's checkpoint gates the next.
       </p>
 
       {/* The diagnostic has no gate (pass_mark=null, §1.5), so it is always open. */}
@@ -29,21 +33,25 @@ export function CourseMap({ map }: { map: CourseMapDTO }) {
       )}
 
       {map.blocks.map((block) => (
-        <BlockSection key={block.slug} block={block} courseSlug={map.courseSlug} />
+        <BlockSection key={block.slug} block={block} courseSlug={map.courseSlug} number={displayNumber.get(block.slug)} />
       ))}
     </div>
   );
 }
 
-function BlockSection({ block, courseSlug }: { block: CourseMapBlockDTO; courseSlug: string }) {
+function BlockSection({ block, courseSlug, number }: { block: CourseMapBlockDTO; courseSlug: string; number?: number }) {
   return (
     <section className="mb-3.5 overflow-hidden rounded-xl border border-border bg-bg-card">
-      <header className="flex items-center gap-2.5 px-[18px] pb-3 pt-3.5">
+      <header className="flex flex-wrap items-center gap-x-2.5 gap-y-1 px-[18px] pb-3 pt-3.5">
         <span className="inline-block h-[11px] w-[11px] flex-none rounded-sm" style={{ background: block.color, opacity: block.locked ? 0.35 : 1 }} />
-        <span className="text-base font-bold">
-          Block {block.position} · {block.name}
-        </span>
+        <span className="text-base font-bold">{number != null ? `Block ${number} · ${block.name}` : block.name}</span>
+        {block.optional && (
+          <span className="rounded-full bg-bg-faint px-2 py-0.5 text-[11px] font-bold uppercase tracking-kicker text-fg-subtle">Optional</span>
+        )}
         <span className="ml-auto text-sm font-semibold tabular-nums text-fg-muted">{block.locked ? '—' : `${block.pct}%`}</span>
+        {block.optional && (
+          <p className="m-0 w-full text-[13px] text-fg-muted">Revision of the level below — open any time, outside the course hours, gates nothing.</p>
+        )}
       </header>
       {block.modules.map((m) => {
         const open = m.status !== 'locked';

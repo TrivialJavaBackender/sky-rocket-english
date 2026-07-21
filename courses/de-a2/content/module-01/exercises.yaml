@@ -1,478 +1,481 @@
-# Modul 01 · Ich und du — 52 Aufgaben im Kern, 20 im Wiederholungspool.
+# Modul 01 · Mein Wochenende — 52 Aufgaben im Kern, 20 im Wiederholungspool.
 # Verteilung laut Profil (courses/de-a2/PLAN.md §6): 6 mc_cloze · 8 open_cloze ·
 # 6 word_formation · 4 key_word_transformation · 8 grammar_drill ·
 # 6 error_correction · 8 collocation_match · 6 reading_comprehension.
 #
-# Kein spiralisches Wiederholen: M1 ist das erste Modul, es gibt noch keinen
-# Stoff davor. Ab M2 gehören 2–3 Aufgaben dem vorherigen Modul.
+# Kein spiralisches Wiederholen aus früheren Modulen: M1 ist das erste Modul des
+# Kurses, und der Block Auffrischung zählt nicht (PLAN.md §1a). An seiner Stelle
+# prüfen zwei Aufgaben das Eingangsniveau selbst — grammar_drill 6 (Präsens mit
+# trennbarem Verb) und error_correction 6 (Akkusativ). Beides setzt der Kurs
+# voraus; wer hier stolpert, sieht es in Woche 1 und nicht in Woche 9.
 core:
   # ───────────────────────── Multiple Choice ─────────────────────────
   - type: mc_cloze
     group: grammar
     content:
-      pre: "Marek "
-      post: " aus Polen und wohnt jetzt in Leipzig."
-      options: [komme, kommst, kommt, kommen]
-      answer: 2
-    explanation: "Marek = er. Bei er/sie/es endet das Verb auf -t: er kommt."
-  - type: mc_cloze
-    group: grammar
-    content:
-      pre: "Ich "
-      post: " Köchin und arbeite in einem Restaurant."
-      options: [bin, bist, ist, sind]
+      pre: "Am Samstag "
+      post: " ich bis zehn Uhr geschlafen."
+      options: [habe, bin, hat, bist]
       answer: 0
-    explanation: "ich + sein = bin. Vor dem Beruf steht kein Artikel: Ich bin Köchin."
+    explanation: "schlafen nimmt haben. ich + haben = habe."
   - type: mc_cloze
     group: grammar
     content:
-      pre: ""
-      post: " ihr noch Fragen zum Kurs?"
-      options: [Habe, Hast, Hat, Habt]
+      pre: "Nina "
+      post: " mit dem Rad zum Markt gefahren."
+      options: [hat, haben, ist, sind]
+      answer: 2
+    explanation: "fahren ist Bewegung von A nach B: Perfekt mit sein. Nina = sie, also ist."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Wir haben am Abend zusammen "
+      post: "."
+      options: [kochen, kocht, gekochen, gekocht]
       answer: 3
-    explanation: "ihr + haben = habt. Ohne Fragewort beginnt die Frage mit dem Verb."
+    explanation: "kochen ist regelmäßig: ge- + Stamm + -t = gekocht."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Meine Freunde "
+      post: " um acht gekommen."
+      options: [hat, sind, haben, ist]
+      answer: 1
+    explanation: "kommen nimmt sein. Meine Freunde sind mehrere Personen = sie, also sind."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Habt ihr die Wohnung schon "
+      post: "?"
+      options: [geaufräumt, aufräumen, aufgeräumt, aufgeräumen]
+      answer: 2
+    explanation: "aufräumen ist trennbar: das ge- steht in der Mitte — auf-ge-räumt."
   - type: mc_cloze
     group: grammar
     content:
       pre: ""
-      post: " wohnst du? — In der Bahnhofstraße."
-      options: [Woher, Wo, Wohin, Wer]
-      answer: 1
-    explanation: "wo fragt nach dem Ort. woher fragt nach der Herkunft: Woher kommst du?"
-  - type: mc_cloze
-    group: grammar
-    content:
-      pre: "Meine Schwester "
-      post: " zwei Kinder."
-      options: [hat, habe, hast, haben]
-      answer: 0
-    explanation: "Meine Schwester = sie. sie + haben = hat."
-  - type: mc_cloze
-    group: grammar
-    content:
-      pre: "Wie "
-      post: " Sie? — Mein Name ist Weber."
-      options: [heiße, heißt, heißen, heißst]
-      answer: 2
-    explanation: "Sie (höflich) + Verb = Stamm + -en: Wie heißen Sie? Für Fremde immer Sie."
+      post: " du gestern im Konzert gewesen?"
+      options: [Hast, Habt, Ist, Bist]
+      answer: 3
+    explanation: "sein bildet das Perfekt mit sein: du bist gewesen."
 
   # ───────────────────────── Lückentext ─────────────────────────
   - type: open_cloze
     group: grammar
     content:
-      pre: "Ich komme "
-      post: " Polen, aus Krakau."
-      answers: [aus]
-      answer_shown: aus
-    explanation: "Herkunft: kommen aus + Land oder Stadt. Ich komme aus Italien, aus Wien."
+      pre: "Am Sonntag "
+      post: " wir einen Ausflug an den See gemacht."
+      answers: [haben]
+      answer_shown: haben
+    explanation: "machen nimmt haben. wir + haben = haben."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Meine Schwester "
+      post: " am Samstag zu mir gekommen."
+      answers: [ist]
+      answer_shown: ist
+    explanation: "kommen ist Bewegung: Perfekt mit sein. sie + sein = ist."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: ""
+      post: " du schon für die Woche eingekauft?"
+      answers: [hast]
+      answer_shown: Hast
+    explanation: "einkaufen nimmt haben. du + haben = hast. Ohne Fragewort beginnt die Frage mit dem Verb."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Wir "
+      post: " bis nach Mitternacht gefeiert."
+      answers: [haben]
+      answer_shown: haben
+    explanation: "feiern nimmt haben — es ist keine Bewegung von A nach B."
   - type: open_cloze
     group: grammar
     content:
       pre: "Ich "
-      post: " Koch von Beruf."
+      post: " am Wochenende dreimal spazieren gegangen."
       answers: [bin]
       answer_shown: bin
-    explanation: "ich + sein = bin. Der Beruf steht mit sein und ohne Artikel."
+    explanation: "gehen nimmt sein. ich + sein = bin."
   - type: open_cloze
     group: grammar
     content:
-      pre: "Wie alt "
-      post: " du? — Ich bin 27."
-      answers: [bist]
-      answer_shown: bist
-    explanation: "du + sein = bist. Das Alter steht immer mit sein, nicht mit haben."
+      pre: ""
+      post: " ihr gestern Abend ferngesehen?"
+      answers: [habt]
+      answer_shown: Habt
+    explanation: "fernsehen nimmt haben. ihr + haben = habt."
   - type: open_cloze
     group: grammar
     content:
-      pre: "Anna "
-      post: " zwei Brüder und eine Schwester."
+      pre: "Die Kinder "
+      post: " den ganzen Nachmittag draußen geblieben."
+      answers: [sind]
+      answer_shown: sind
+    explanation: "bleiben nimmt sein, auch ohne Bewegung. Das lernt man auswendig: bleiben, sein, werden."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Er "
+      post: " zur Party einen Kuchen mitgebracht."
       answers: [hat]
       answer_shown: hat
-    explanation: "Anna = sie. sie + haben = hat. Diese Form ist unregelmäßig."
-  - type: open_cloze
-    group: grammar
-    content:
-      pre: ""
-      post: " ihr aus Spanien? — Nein, wir kommen aus Portugal."
-      answers: [seid]
-      answer_shown: seid
-    explanation: "ihr + sein = seid. Die Antwort wir kommen zeigt: die Frage geht an mehrere Personen."
-  - type: open_cloze
-    group: grammar
-    content:
-      pre: "Ich spreche Polnisch "
-      post: " Englisch, aber nur wenig Deutsch."
-      answers: [und]
-      answer_shown: und
-    explanation: "und verbindet zwei gleiche Teile. Danach folgt der Gegensatz mit aber."
-  - type: open_cloze
-    group: grammar
-    content:
-      pre: "Entschuldigung, ich verstehe Sie "
-      post: ". Sprechen Sie bitte langsam."
-      answers: [nicht]
-      answer_shown: nicht
-    explanation: "nicht verneint das Verb und steht am Ende: Ich verstehe Sie nicht."
-  - type: open_cloze
-    group: grammar
-    content:
-      pre: ""
-      post: " kommst du? — Aus der Türkei."
-      answers: [woher]
-      answer_shown: Woher
-    explanation: "Die Antwort nennt ein Land, also fragt man mit woher. wo wäre der Ort, wohin die Richtung."
+    explanation: "mitbringen nimmt haben. er + haben = hat."
 
   # ───────────────────────── Wortbildung ─────────────────────────
   - type: word_formation
     group: vocab
     content:
-      pre: "Ich komme aus Polen. Meine Muttersprache ist "
+      pre: "Am Freitagabend haben wir zusammen "
       post: "."
-      prompt: Polen
-      answers: [Polnisch]
-      answer_shown: Polnisch
-    explanation: "Das Land heißt Polen, die Sprache heißt Polnisch. Sprachen schreibt man groß."
+      prompt: kochen
+      answers: [gekocht]
+      answer_shown: gekocht
+    explanation: "Regelmäßig: ge- + Stamm + -t. kochen → gekocht."
   - type: word_formation
     group: vocab
     content:
-      pre: "Ich komme aus Italien und spreche natürlich "
+      pre: "Am Sonntag sind wir drei Stunden "
       post: "."
-      prompt: Italien
-      answers: [Italienisch]
-      answer_shown: Italienisch
-    explanation: "Italien ist das Land, Italienisch ist die Sprache. Die Endung ist meistens -isch."
+      prompt: wandern
+      answers: [gewandert]
+      answer_shown: gewandert
+    explanation: "Regelmäßig: ge- + Stamm + -t. wandern → gewandert."
   - type: word_formation
     group: vocab
     content:
-      pre: "Meine Frau ist "
-      post: " und arbeitet in einem Restaurant."
-      prompt: der Koch
-      answers: [Köchin]
-      answer_shown: Köchin
-    explanation: "Die weibliche Form endet auf -in: der Koch → die Köchin, der Arzt → die Ärztin."
+      pre: "Sie hat zwanzig Leute zu ihrem Geburtstag "
+      post: "."
+      prompt: einladen
+      answers: [eingeladen]
+      answer_shown: eingeladen
+    explanation: "Trennbar und unregelmäßig: ein-ge-laden."
   - type: word_formation
     group: vocab
     content:
-      pre: "Frau Weber ist "
-      post: " an einer Sprachschule."
-      prompt: der Lehrer
-      answers: [Lehrerin]
-      answer_shown: Lehrerin
-    explanation: "der Lehrer → die Lehrerin. Vor dem Beruf steht kein Artikel: Sie ist Lehrerin."
+      pre: "Am Samstag ist Nina mit dem Rad zum See "
+      post: "."
+      prompt: fahren
+      answers: [gefahren]
+      answer_shown: gefahren
+    explanation: "Unregelmäßig: ge- + Stamm + -en. fahren → gefahren."
   - type: word_formation
     group: vocab
     content:
-      pre: "Wie ist deine "
-      post: "? — 0341 555 12 34."
-      prompt: das Telefon + die Nummer
-      answers: [Telefonnummer]
-      answer_shown: Telefonnummer
-    explanation: "Zwei Nomen werden ein Wort: das Telefon + die Nummer = die Telefonnummer."
+      pre: "Hast du dein Zimmer endlich "
+      post: "?"
+      prompt: aufräumen
+      answers: [aufgeräumt]
+      answer_shown: aufgeräumt
+    explanation: "Trennbar: das ge- steht zwischen Vorsilbe und Stamm — auf-ge-räumt."
   - type: word_formation
     group: vocab
     content:
-      pre: "Meine Schwester ist "
-      post: " an der Universität in München."
-      prompt: der Student
-      answers: [Studentin]
-      answer_shown: Studentin
-    explanation: "Die weibliche Form endet auf -in: der Student → die Studentin."
+      pre: "Auf der Party haben alle viel Kuchen "
+      post: "."
+      prompt: essen
+      answers: [gegessen]
+      answer_shown: gegessen
+    explanation: "Unregelmäßig: essen → gegessen. Diese Form lernt man auswendig."
 
   # ───────────────────────── Umformung ─────────────────────────
   - type: key_word_transformation
     group: grammar
     content:
-      s1: Mein Name ist Marek.
-      key: HEISSEN
-      pre: "Ich "
-      post: " Marek."
-      answers: [heiße]
-      hint: 1 Wort
-      answer_shown: heiße
-    explanation: "Mein Name ist … und Ich heiße … bedeuten das Gleiche. ich + heißen = heiße."
-  - type: key_word_transformation
-    group: grammar
-    content:
-      s1: Ich bin Koch von Beruf.
-      key: ARBEITEN
-      pre: "Ich "
-      post: " Koch."
-      answers: [arbeite als]
+      s1: Ich spiele am Samstag Fußball.
+      key: GESTERN
+      pre: "Gestern "
+      post: " Fußball gespielt."
+      answers: [habe ich]
       hint: 2 Wörter
-      answer_shown: arbeite als
-    explanation: "arbeiten als + Beruf, ohne Artikel: Ich arbeite als Koch."
+      answer_shown: habe ich
+    explanation: "Nach der Zeitangabe steht das Verb auf Position 2, dann das Subjekt: Gestern habe ich …"
   - type: key_word_transformation
     group: grammar
     content:
-      s1: Du kommst aus Spanien, oder?
-      key: WOHER
-      pre: ""
-      post: " du?"
-      answers: [woher kommst]
+      s1: Wir fahren nach Berlin.
+      key: LETZTE WOCHE
+      pre: "Letzte Woche "
+      post: " nach Berlin gefahren."
+      answers: [sind wir]
       hint: 2 Wörter
-      answer_shown: Woher kommst
-    explanation: "Aus der Ja/Nein-Frage wird eine W-Frage. Nach dem Fragewort steht sofort das Verb: Woher kommst du?"
+      answer_shown: sind wir
+    explanation: "fahren nimmt sein. Nach der Zeitangabe: sind wir."
   - type: key_word_transformation
     group: grammar
     content:
-      s1: Ich bin nicht verheiratet.
-      key: LEDIG
-      pre: "Ich "
+      s1: Sie räumt die Wohnung auf.
+      key: PERFEKT
+      pre: "Sie hat die Wohnung "
       post: "."
-      answers: [bin ledig]
-      hint: 2 Wörter
-      answer_shown: bin ledig
-    explanation: "ledig ist das Gegenteil von verheiratet. Im Formular steht dafür Familienstand: ledig."
+      answers: [aufgeräumt]
+      hint: 1 Wort
+      answer_shown: aufgeräumt
+    explanation: "Im Perfekt wird aus auf … auf ein Wort: aufgeräumt, ganz am Ende."
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: Besuchst du deine Eltern?
+      key: PERFEKT
+      pre: ""
+      post: " du deine Eltern besucht?"
+      answers: [hast]
+      hint: 1 Wort
+      answer_shown: Hast
+    explanation: "besuchen nimmt haben. In der Frage steht es am Anfang: Hast du … besucht?"
 
   # ───────────────────────── Grammatik-Drill ─────────────────────────
   - type: grammar_drill
     group: grammar
     content:
-      pre: "Du "
-      post: " sehr gut Deutsch."
-      prompt: SPRECHEN
-      options: [spreche, sprichst, spricht, sprechen]
-      answer: 1
-    explanation: "sprechen hat besondere Formen. Man lernt sie als Wort: ich spreche, du sprichst, er spricht."
-  - type: grammar_drill
-    group: grammar
-    content:
       pre: "Wir "
-      post: " zusammen Deutsch."
-      prompt: LERNEN
-      options: [lerne, lernst, lernt, lernen]
-      answer: 3
-    explanation: "wir + Verb = Stamm + -en. Die Form sieht aus wie der Infinitiv: wir lernen."
-  - type: grammar_drill
-    group: grammar
-    content:
-      pre: "Ich "
-      post: " seit einem Jahr in Leipzig."
-      prompt: WOHNEN
-      options: [wohne, wohnst, wohnt, wohnen]
+      post: " am Wochenende einen Ausflug gemacht."
+      prompt: HABEN ODER SEIN
+      options: [haben, sind, ist, hat]
       answer: 0
-    explanation: "ich + Verb = Stamm + -e: ich wohne."
+    explanation: "machen nimmt haben. wir + haben = haben."
   - type: grammar_drill
     group: grammar
     content:
-      pre: "Ihr "
-      post: " aus Marokko, richtig?"
-      prompt: KOMMEN
-      options: [komme, kommst, kommt, kommen]
+      pre: "Nina "
+      post: " am Samstag um zehn aufgestanden."
+      prompt: HABEN ODER SEIN
+      options: [hat, haben, ist, sind]
       answer: 2
-    explanation: "ihr + Verb = Stamm + -t: ihr kommt. Die Endung ist gleich wie bei er/sie/es."
+    explanation: "aufstehen nimmt sein — man bewegt sich von unten nach oben. sie + sein = ist."
   - type: grammar_drill
     group: grammar
     content:
-      pre: "Das "
-      post: " meine Schwester Lena."
-      prompt: SEIN
-      options: [bin, ist, sind, bist]
+      pre: "Ich habe für die Party einen Kuchen "
+      post: "."
+      prompt: BACKEN
+      options: [gebackt, backte, gebacken, backen]
+      answer: 2
+    explanation: "backen ist unregelmäßig: ge- + Stamm + -en = gebacken."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Am Freitag sind meine Freunde "
+      post: "."
+      prompt: KOMMEN
+      options: [kommen, gekommen, gekommt, kamen]
       answer: 1
-    explanation: "Das ist … stellt eine Person vor. Das = es, also die Form ist."
-  - type: grammar_drill
-    group: grammar
-    content:
-      pre: "Wie "
-      post: " man Ihren Namen?"
-      prompt: SCHREIBEN
-      options: [schreibt, schreibe, schreibst, schreiben]
-      answer: 0
-    explanation: "man ist wie er/sie/es, also Endung -t: Wie schreibt man das?"
-  - type: grammar_drill
-    group: grammar
-    content:
-      pre: "Meine Eltern "
-      post: " noch in Krakau."
-      prompt: WOHNEN
-      options: [wohne, wohnst, wohnt, wohnen]
-      answer: 3
-    explanation: "Meine Eltern sind mehrere Personen = sie. Die Endung ist -en: sie wohnen."
+    explanation: "kommen ist unregelmäßig: gekommen. Mit sein, weil es Bewegung ist."
   - type: grammar_drill
     group: grammar
     content:
       pre: ""
-      post: " ist das? — Das ist Frau Weber, unsere Lehrerin."
-      prompt: PERSON
-      options: [Was, Wie, Wer, Wo]
-      answer: 2
-    explanation: "wer fragt nach einer Person. was fragt nach einer Sache."
+      post: " ihr gestern spazieren gegangen?"
+      prompt: HABEN ODER SEIN
+      options: [Habt, Seid, Sind, Ist]
+      answer: 1
+    explanation: "gehen nimmt sein. ihr + sein = seid."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Am Samstag "
+      post: " Nina immer früh auf."
+      prompt: AUFSTEHEN IM PRÄSENS
+      options: [steht, stehen, steht auf, aufsteht]
+      answer: 0
+    explanation: "Trennbares Verb im Präsens: steht … auf. Die Vorsilbe auf steht schon am Ende."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Ich "
+      post: " vorgestern meine Oma besucht."
+      prompt: HABEN ODER SEIN
+      options: [bin, ist, hat, habe]
+      answer: 3
+    explanation: "besuchen nimmt haben — man besucht jemanden, das ist keine Bewegung von A nach B."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Wir sind am Sonntag vier Stunden "
+      post: "."
+      prompt: WANDERN
+      options: [gewandert, wandern, gewandern, wanderten]
+      answer: 0
+    explanation: "wandern ist regelmäßig: gewandert. Mit sein, weil es Bewegung ist."
 
   # ───────────────────────── Fehlersuche ─────────────────────────
   - type: error_correction
     group: grammar
     content:
-      words: [Ich, habe, "25", Jahre, "alt."]
+      words: [Ich, habe, am, Sonntag, nach, Berlin, "gefahren."]
       wrong: 1
       correction: "habe → bin"
-    explanation: "Das Alter steht mit sein: Ich bin 25 Jahre alt."
+    explanation: "fahren ist Bewegung von A nach B und nimmt sein: Ich bin nach Berlin gefahren."
   - type: error_correction
     group: grammar
     content:
-      words: [Woher, du, kommst, "?"]
-      wrong: 1
-      correction: "du kommst → kommst du"
-    explanation: "Nach dem Fragewort steht sofort das Verb: Woher kommst du?"
-  - type: error_correction
-    group: grammar
-    content:
-      words: [Ich, bin, ein, Student, aus, "Polen."]
+      words: [Am, Samstag, bin, ich, Fußball, "gespielt."]
       wrong: 2
-      correction: "ein → (nichts)"
-    explanation: "Vor einem Beruf und vor Student steht kein Artikel: Ich bin Student."
+      correction: "bin → habe"
+    explanation: "spielen ist keine Bewegung von A nach B: Ich habe Fußball gespielt."
   - type: error_correction
     group: grammar
     content:
-      words: [Meine, Schwester, sprechen, sehr, gut, "Deutsch."]
+      words: [Wir, haben, gemacht, einen, "Ausflug."]
       wrong: 2
-      correction: "sprechen → spricht"
-    explanation: "Meine Schwester = sie. Zu sie gehört die Form spricht."
+      correction: "gemacht einen Ausflug → einen Ausflug gemacht"
+    explanation: "Das Partizip steht ganz am Ende. Dazwischen steht der Rest vom Satz."
   - type: error_correction
     group: grammar
     content:
-      words: [Meine, Eltern, wohnt, in, "Krakau."]
+      words: [Gestern, habe, ich, mit, Anna, "getelefoniert."]
+      wrong: 5
+      correction: "getelefoniert → telefoniert"
+    explanation: "Verben auf -ieren bilden das Partizip ohne ge-: telefoniert, studiert, fotografiert."
+  - type: error_correction
+    group: grammar
+    content:
+      words: [Er, hat, sein, Zimmer, endlich, "geaufräumt."]
+      wrong: 5
+      correction: "geaufräumt → aufgeräumt"
+    explanation: "Bei trennbaren Verben steht ge- in der Mitte: auf-ge-räumt, nicht ge-aufräumt."
+  - type: error_correction
+    group: grammar
+    content:
+      words: [Ich, habe, ein, Kuchen, "gebacken."]
       wrong: 2
-      correction: "wohnt → wohnen"
-    explanation: "Meine Eltern sind mehrere Personen = sie. Die Endung ist -en: sie wohnen."
-  - type: error_correction
-    group: grammar
-    content:
-      words: [Wir, seid, alle, im, gleichen, "Kurs."]
-      wrong: 1
-      correction: "seid → sind"
-    explanation: "wir + sein = sind. seid gehört zu ihr."
+      correction: "ein → einen"
+    explanation: "backen braucht den Akkusativ. der Kuchen → einen Kuchen."
 
   # ───────────────────────── Wörter verbinden ─────────────────────────
   - type: collocation_match
     group: vocab
     content:
-      left: [Deutsch, ein Formular, den Namen, eine Frage]
-      right: [buchstabieren, sprechen, stellen, ausfüllen]
+      left: [Sport, einen Ausflug, einen Kuchen, Freunde]
+      right: [backen, treiben, einladen, machen]
       pairs: { 0: 1, 1: 3, 2: 0, 3: 2 }
-    explanation: "Feste Verbindungen: Deutsch sprechen, ein Formular ausfüllen, den Namen buchstabieren, eine Frage stellen."
+    explanation: "Feste Verbindungen: Sport treiben, einen Ausflug machen, einen Kuchen backen, Freunde einladen."
   - type: collocation_match
     group: vocab
     content:
-      left: [der Vorname, der Nachname, das Alter, die Adresse]
-      right: ["Nowak", "Bahnhofstraße 12", "Marek", "32 Jahre"]
-      pairs: { 0: 2, 1: 0, 2: 3, 3: 1 }
-    explanation: "Im Formular: Vorname Marek, Nachname Nowak, Alter 32 Jahre, Adresse Bahnhofstraße 12."
+      left: [die Wohnung, ein Konzert, spazieren, fern]
+      right: [sehen, aufräumen, gehen, besuchen]
+      pairs: { 0: 1, 1: 3, 2: 2, 3: 0 }
+    explanation: "die Wohnung aufräumen, ein Konzert besuchen, spazieren gehen, fernsehen."
   - type: collocation_match
     group: vocab
     content:
-      left: [Polen, Krakau, Koch, Polnisch]
-      right: [die Stadt, das Land, die Sprache, der Beruf]
-      pairs: { 0: 1, 1: 0, 2: 3, 3: 2 }
-    explanation: "Polen ist ein Land, Krakau eine Stadt, Koch ein Beruf, Polnisch eine Sprache."
-  - type: collocation_match
-    group: grammar
-    content:
-      left: [ich, du, er, wir]
-      right: [bist, sind, bin, ist]
+      left: [spannend, langweilig, anstrengend, gemütlich]
+      right: [ohne Interesse, ruhig und angenehm, sehr interessant, man wird müde]
       pairs: { 0: 2, 1: 0, 2: 3, 3: 1 }
-    explanation: "sein: ich bin, du bist, er ist, wir sind."
+    explanation: "spannend und langweilig sind Gegenteile. anstrengend kostet Kraft, gemütlich ist das Gegenteil von Eile."
   - type: collocation_match
-    group: grammar
+    group: vocab
     content:
-      left: [ich, du, ihr, sie]
-      right: [habt, hast, haben, habe]
+      left: [vorgestern, neulich, endlich, übrigens]
+      right: [nach langem Warten, vor kurzer Zeit, ein neues Thema, der Tag vor gestern]
       pairs: { 0: 3, 1: 1, 2: 0, 3: 2 }
-    explanation: "haben: ich habe, du hast, ihr habt, sie haben."
+    explanation: "vorgestern ist ein Tag, neulich eine kurze Zeit davor, endlich zeigt Freude, übrigens beginnt ein neues Thema."
   - type: collocation_match
     group: grammar
     content:
-      left: [Woher, Wo, Wie, Was]
-      right: ["wohnst du?", "machst du?", "kommst du?", "heißt du?"]
-      pairs: { 0: 2, 1: 0, 2: 3, 3: 1 }
-    explanation: "woher → die Herkunft, wo → der Ort, wie → der Name, was → die Sache."
+      left: [gekocht, gefahren, aufgeräumt, eingeladen]
+      right: [einladen, kochen, aufräumen, fahren]
+      pairs: { 0: 1, 1: 3, 2: 2, 3: 0 }
+    explanation: "Vom Partizip zurück zum Infinitiv: gekocht → kochen, gefahren → fahren, aufgeräumt → aufräumen, eingeladen → einladen."
+  - type: collocation_match
+    group: grammar
+    content:
+      left: [ich, du, wir, ihr]
+      right: [seid, bin, sind, bist]
+      pairs: { 0: 1, 1: 3, 2: 2, 3: 0 }
+    explanation: "sein im Perfekt: ich bin gefahren, du bist gefahren, wir sind gefahren, ihr seid gefahren."
   - type: collocation_match
     group: vocab
     content:
-      left: [verheiratet, ledig, langsam, gern]
-      right: [nicht schnell, mit Freude, hat eine Familie, nicht verheiratet]
-      pairs: { 0: 2, 1: 3, 2: 0, 3: 1 }
-    explanation: "verheiratet und ledig sind Gegenteile. langsam ist das Gegenteil von schnell. gern zeigt Freude."
+      left: [einkaufen, ausschlafen, mitbringen, feiern]
+      right: [ein Fest machen, im Geschäft kaufen, etwas zu jemandem bringen, sehr lange schlafen]
+      pairs: { 0: 1, 1: 3, 2: 2, 3: 0 }
+    explanation: "Vier Verben für das Wochenende — jedes mit seiner Umschreibung."
   - type: collocation_match
     group: vocab
     content:
-      left: [sich vorstellen, kennenlernen, wiederholen, verstehen]
-      right: [noch einmal sagen, den eigenen Namen sagen, wissen was es bedeutet, zum ersten Mal treffen]
-      pairs: { 0: 1, 1: 3, 2: 0, 3: 2 }
-    explanation: "Diese vier Verben braucht man in jeder ersten Kursstunde."
+      left: [draußen, zusammen, das Wochenende, die Freizeit]
+      right: [Samstag und Sonntag, nicht allein, nicht im Haus, die Zeit ohne Arbeit]
+      pairs: { 0: 2, 1: 1, 2: 0, 3: 3 }
+    explanation: "draußen ist das Gegenteil von drinnen, zusammen von allein."
 
   # ───────────────────────── Leseverstehen ─────────────────────────
   - type: reading_comprehension
     group: reading
     content:
-      passage: "Marek Nowak ist 32 Jahre alt und kommt aus Polen, aus Krakau. Seit einem Jahr wohnt er in Leipzig. Von Beruf ist er Koch und arbeitet in einem kleinen Restaurant in der Nähe vom Bahnhof."
-      q: Was macht Marek in Leipzig?
+      passage: "Am Freitagabend ist Nina früh nach Hause gekommen und hat zuerst die Wohnung aufgeräumt. „Das klingt langweilig“, sagt sie und lacht, „aber so habe ich danach zwei freie Tage gehabt.“"
+      q: Warum hat Nina am Freitag aufgeräumt?
       options:
-        - Er studiert an der Universität.
-        - Er arbeitet als Koch.
-        - Er sucht eine Wohnung.
-        - Er besucht seine Familie.
+        - Ihre Schwester ist zu Besuch gekommen.
+        - So hat sie danach zwei freie Tage.
+        - Sie findet Aufräumen schön.
+        - Am Freitag hat sie nicht gearbeitet.
       answer: 1
-    explanation: "Im Text steht: Von Beruf ist er Koch und arbeitet in einem kleinen Restaurant."
+    explanation: "Im Text steht: so habe ich danach zwei freie Tage gehabt. Die Freunde kommen erst am Samstag."
   - type: reading_comprehension
     group: reading
     content:
-      passage: "Seine Muttersprache ist Polnisch, aber er spricht auch Englisch und ein bisschen Deutsch. „Am Anfang war alles schwer“, sagt er. „Ich verstehe die Leute hier oft nicht, und sie sprechen sehr schnell.“"
-      q: Welche Sprache spricht Marek am besten?
+      passage: "Am Samstag hat Nina ausgeschlafen. Um zehn ist sie aufgestanden, hat gefrühstückt und ist mit dem Rad zum Markt gefahren. Dort hat sie für die ganze Woche eingekauft: Obst, Gemüse, Brot."
+      q: Wie ist Nina zum Markt gekommen?
       options:
-        - Polnisch
-        - Deutsch
-        - Englisch
-        - Alle drei gleich gut
+        - Mit dem Rad
+        - Mit dem Bus
+        - Zu Fuß
+        - Mit dem Auto
       answer: 0
-    explanation: "Polnisch ist seine Muttersprache — die erste Sprache. Deutsch spricht er nur ein bisschen."
+    explanation: "Im Text steht: ist sie mit dem Rad zum Markt gefahren."
   - type: reading_comprehension
     group: reading
     content:
-      passage: "Zweimal pro Woche besucht Marek einen Sprachkurs. Der Kurs beginnt am Montag und am Mittwoch um 18 Uhr. In der ersten Stunde stellt sich jeder kurz vor: Name, Land, Beruf."
-      q: Wie oft geht Marek in den Sprachkurs?
+      passage: "Am Nachmittag hat sie einen Kuchen gebacken, denn am Abend sind Freunde gekommen. Sie hat die Leute schon am Mittwoch eingeladen. Alle haben etwas mitgebracht — Salat, Wein, Musik. Sie haben zusammen gekocht, gegessen und bis nach Mitternacht geredet."
+      q: Was haben die Gäste gemacht?
       options:
-        - Jeden Tag
-        - Einmal pro Woche
-        - Am Wochenende
-        - Zweimal pro Woche
-      answer: 3
-    explanation: "Im Text steht: Zweimal pro Woche — am Montag und am Mittwoch."
-  - type: reading_comprehension
-    group: reading
-    content:
-      passage: "Im Kurs sind vierzehn Leute aus neun Ländern. Neben Marek sitzt Fatima. Sie kommt aus Marokko, ist 27 und ledig. Sie studiert Informatik an der Universität und spricht schon sehr gut Deutsch."
-      q: Was wissen wir über Fatima?
-      options:
-        - Sie ist verheiratet und hat Kinder.
-        - Sie arbeitet in einem Restaurant.
-        - Sie studiert und ist nicht verheiratet.
-        - Sie lernt seit einem Monat Deutsch.
+        - Sie sind früh gegangen.
+        - Sie haben nur zugehört.
+        - Sie haben etwas mitgebracht.
+        - Sie haben den Kuchen gebacken.
       answer: 2
-    explanation: "Im Text steht: ist 27 und ledig … Sie studiert Informatik. ledig bedeutet nicht verheiratet."
+    explanation: "Im Text steht: Alle haben etwas mitgebracht. Den Kuchen hat Nina gebacken."
   - type: reading_comprehension
     group: reading
     content:
-      passage: "Am Ende der Stunde bekommt jeder ein Formular. Alle füllen es aus: Vorname, Nachname, Alter, Adresse, Telefonnummer, E-Mail-Adresse. Marek schreibt seine neue Adresse in Leipzig hinein."
-      q: Welche Adresse schreibt Marek in das Formular?
+      passage: "Mit ihrer Schwester hat sie sich am Bahnhof getroffen, und die beiden sind an den See gefahren. Dort haben sie einen Ausflug gemacht und sind drei Stunden gewandert. Nina findet Wandern spannend, ihre Schwester findet es anstrengend."
+      q: Wie finden die beiden das Wandern?
       options:
-        - Seine Adresse in Leipzig
-        - Seine alte Adresse in Krakau
-        - Die Adresse vom Restaurant
-        - Die Adresse der Sprachschule
-      answer: 0
-    explanation: "Im Text steht: seine neue Adresse in Leipzig. Die alte Adresse in Krakau steht nicht im Formular."
+        - Beide finden es spannend.
+        - Beide finden es anstrengend.
+        - Nina findet es anstrengend, die Schwester spannend.
+        - Nina findet es spannend, die Schwester anstrengend.
+      answer: 3
+    explanation: "Im Text steht: Nina findet Wandern spannend, ihre Schwester findet es anstrengend."
   - type: reading_comprehension
     group: reading
     content:
-      passage: "Marek ist verheiratet, aber seine Frau wohnt noch in Krakau. Im Sommer kommt sie nach Deutschland. Nach dem Kurs gehen einige Leute zusammen in ein Café. Sie trinken Kaffee und sprechen Deutsch — langsam, mit vielen Fehlern, aber sie sprechen."
-      q: Warum sprechen die Leute im Café Deutsch?
+      passage: "Am Abend hat Nina nur noch ferngesehen. Übrigens: Neulich hat sie ein neues Hobby gefunden. Sie treibt jetzt zweimal pro Woche Sport — sie geht schwimmen. Am Sonntag hat sie das nicht gemacht. „Einmal Pause ist auch Freizeit.“"
+      q: Was ist Ninas neues Hobby?
       options:
-        - Weil sie keine andere Sprache können.
-        - Weil sie üben wollen.
-        - Weil die Lehrerin dabei ist.
-        - Weil im Café nur Deutsch erlaubt ist.
+        - Fernsehen
+        - Schwimmen
+        - Wandern
+        - Backen
       answer: 1
-    explanation: "Sie sprechen langsam und mit vielen Fehlern — aber sie sprechen. Das ist Üben, nicht Können."
+    explanation: "Im Text steht: Sie treibt jetzt zweimal pro Woche Sport — sie geht schwimmen."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Am Sonntag hat die Sonne geschienen, und Nina ist keine Minute drinnen geblieben. Den ganzen Nachmittag sind sie draußen geblieben. Am Abend hat Nina nur noch ferngesehen."
+      q: Wo war Nina am Sonntagnachmittag?
+      options:
+        - Zu Hause vor dem Fernseher
+        - Im Konzert
+        - Draußen
+        - Auf dem Markt
+      answer: 2
+    explanation: "Im Text steht: Den ganzen Nachmittag sind sie draußen geblieben. Ferngesehen hat sie erst am Abend."
 
 # ───────────────────────── Wiederholungspool ─────────────────────────
 # 20 kurze Aufgaben für das Modul-Quiz und die Wiederholung nach 7 und 21 Tagen.
@@ -481,164 +484,164 @@ review_pool:
   - type: mc_cloze
     group: grammar
     content:
-      pre: "Fatima "
-      post: " Informatik an der Universität."
-      options: [studiere, studierst, studiert, studieren]
+      pre: "Am Sonntag "
+      post: " wir zu Hause geblieben."
+      options: [hat, haben, sind, ist]
       answer: 2
-    explanation: "Fatima = sie, also Endung -t: sie studiert."
+    explanation: "bleiben nimmt sein. wir + sein = sind."
   - type: mc_cloze
     group: grammar
     content:
-      pre: "Wir "
-      post: " aus neun verschiedenen Ländern."
-      options: [bin, bist, ist, sind]
-      answer: 3
-    explanation: "wir + sein = sind."
+      pre: "Sie hat am Samstag für die Woche "
+      post: "."
+      options: [einkaufen, eingekauft, gekauft ein, geeinkauft]
+      answer: 1
+    explanation: "einkaufen ist trennbar: ein-ge-kauft."
   - type: mc_cloze
     group: grammar
     content:
       pre: ""
-      post: " du Zeit am Mittwoch?"
-      options: [Hast, Habe, Hat, Habt]
+      post: " du am Wochenende Sport getrieben?"
+      options: [Hast, Bist, Ist, Habt]
       answer: 0
-    explanation: "du + haben = hast. Die Ja/Nein-Frage beginnt mit dem Verb."
+    explanation: "Sport treiben nimmt haben. du + haben = hast."
   - type: mc_cloze
     group: grammar
     content:
-      pre: "Wie alt "
-      post: " deine Schwester?"
-      options: [bin, bist, ist, sind]
-      answer: 2
-    explanation: "deine Schwester = sie, also ist. Das Alter steht mit sein."
+      pre: "Meine Eltern "
+      post: " gestern ins Konzert gegangen."
+      options: [haben, hat, ist, sind]
+      answer: 3
+    explanation: "gehen nimmt sein. Meine Eltern = sie, also sind."
   - type: open_cloze
     group: grammar
     content:
-      pre: "Ich wohne "
-      post: " Leipzig, in der Bahnhofstraße."
-      answers: [in]
-      answer_shown: in
-    explanation: "wohnen in + Stadt: Ich wohne in Leipzig."
+      pre: "Wir "
+      post: " am Freitag zusammen gekocht."
+      answers: [haben]
+      answer_shown: haben
+    explanation: "kochen nimmt haben. wir + haben = haben."
   - type: open_cloze
     group: grammar
     content:
       pre: "Er "
-      post: " Koch und arbeitet abends."
+      post: " um zehn Uhr aufgestanden."
       answers: [ist]
       answer_shown: ist
-    explanation: "er + sein = ist. Vor dem Beruf steht kein Artikel."
+    explanation: "aufstehen nimmt sein. er + sein = ist."
   - type: open_cloze
-    group: grammar
-    content:
-      pre: "Wir "
-      post: " zwei Kinder, einen Sohn und eine Tochter."
-      answers: [haben]
-      answer_shown: haben
-    explanation: "wir + haben = haben. Die Form ist gleich wie der Infinitiv."
-  - type: open_cloze
-    group: grammar
-    content:
-      pre: "Sprichst du Englisch? — Nein, "
-      post: " Englisch spreche ich nicht."
-      answers: [aber]
-      answer_shown: aber
-    explanation: "aber zeigt den Gegensatz zur Erwartung."
-  - type: open_cloze
-    group: grammar
-    content:
-      pre: "Das ist Frau Weber. "
-      post: " ist unsere Lehrerin."
-      answers: [sie]
-      answer_shown: Sie
-    explanation: "Frau Weber ist eine Person = sie. Das Personalpronomen ersetzt den Namen."
-  - type: open_cloze
-    group: grammar
-    content:
-      pre: ""
-      post: " alt bist du? — Ich bin 32."
-      answers: [wie]
-      answer_shown: Wie
-    explanation: "Wie alt …? fragt nach dem Alter."
-  - type: grammar_drill
-    group: grammar
-    content:
-      pre: "Ihr "
-      post: " sehr schnell Deutsch."
-      prompt: LERNEN
-      options: [lerne, lernst, lernt, lernen]
-      answer: 2
-    explanation: "ihr + Verb = Stamm + -t: ihr lernt."
-  - type: grammar_drill
     group: grammar
     content:
       pre: "Ich "
-      post: " den Namen: N-o-w-a-k."
-      prompt: BUCHSTABIEREN
-      options: [buchstabiere, buchstabierst, buchstabiert, buchstabieren]
-      answer: 0
-    explanation: "ich + Verb = Stamm + -e: ich buchstabiere."
-  - type: grammar_drill
+      post: " am Wochenende endlich ausgeschlafen."
+      answers: [habe]
+      answer_shown: habe
+    explanation: "ausschlafen nimmt haben — Schlafen ist keine Bewegung von A nach B."
+  - type: open_cloze
     group: grammar
     content:
       pre: ""
-      post: " machst du am Wochenende?"
-      prompt: SACHE
-      options: [Wer, Wo, Was, Wie]
-      answer: 2
-    explanation: "was fragt nach einer Sache oder Aktivität."
+      post: " ihr am Samstag gefeiert?"
+      answers: [habt]
+      answer_shown: Habt
+    explanation: "feiern nimmt haben. ihr + haben = habt."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Meine Freunde "
+      post: " Kuchen und Wein mitgebracht."
+      answers: [haben]
+      answer_shown: haben
+    explanation: "mitbringen nimmt haben. sie + haben = haben."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Wann "
+      post: " du gestern nach Hause gekommen?"
+      answers: [bist]
+      answer_shown: bist
+    explanation: "kommen nimmt sein. du + sein = bist."
   - type: grammar_drill
     group: grammar
     content:
-      pre: "Frau Weber "
-      post: " sehr langsam und deutlich."
-      prompt: SPRECHEN
-      options: [spreche, sprichst, spricht, sprechen]
+      pre: "Wir haben den ganzen Abend "
+      post: "."
+      prompt: FERNSEHEN
+      options: [gefernsehen, ferngesehen, fernsehen, ferngesehn]
+      answer: 1
+    explanation: "fernsehen ist trennbar: fern-ge-sehen = ferngesehen."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Ich bin am Sonntag zwei Stunden "
+      post: "."
+      prompt: SPAZIEREN GEHEN
+      options: [gespaziert, spazieren gehen, spazieren gegangen, spaziert gegangen]
       answer: 2
-    explanation: "Frau Weber = sie. Zu sie gehört die Form spricht."
+    explanation: "spazieren gehen: nur gehen bekommt das Partizip — spazieren gegangen, mit sein."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Sie hat ihre Großeltern am Wochenende "
+      post: "."
+      prompt: BESUCHEN
+      options: [gebesucht, besuchen, gebesuchen, besucht]
+      answer: 3
+    explanation: "besuchen bildet das Partizip ohne ge-: besucht."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Am Samstag "
+      post: " ich meine Wohnung auf."
+      prompt: AUFRÄUMEN IM PRÄSENS
+      options: [räume, räumen, aufräume, räume auf]
+      answer: 0
+    explanation: "Trennbares Verb im Präsens: räume … auf. Die Vorsilbe steht schon am Ende."
   - type: error_correction
     group: grammar
     content:
-      words: [Wie, alt, hast, "du?"]
+      words: [Meine, Eltern, ist, gestern, "gekommen."]
       wrong: 2
-      correction: "hast → bist"
-    explanation: "Das Alter steht mit sein: Wie alt bist du?"
+      correction: "ist → sind"
+    explanation: "Meine Eltern sind mehrere Personen = sie. sie + sein = sind."
   - type: error_correction
     group: grammar
     content:
-      words: [Ich, bin, eine, Lehrerin, in, "Leipzig."]
-      wrong: 2
-      correction: "eine → (nichts)"
-    explanation: "Vor dem Beruf steht kein Artikel: Ich bin Lehrerin."
-  - type: error_correction
-    group: grammar
-    content:
-      words: [Wo, ihr, wohnt, "?"]
+      words: [Wir, sind, am, Abend, Karten, "gespielt."]
       wrong: 1
-      correction: "ihr wohnt → wohnt ihr"
-    explanation: "Nach dem Fragewort steht sofort das Verb: Wo wohnt ihr?"
+      correction: "sind → haben"
+    explanation: "spielen ist keine Bewegung von A nach B und nimmt haben."
+  - type: error_correction
+    group: grammar
+    content:
+      words: [Ich, habe, gestern, "gefotografiert."]
+      wrong: 3
+      correction: "gefotografiert → fotografiert"
+    explanation: "Verben auf -ieren bilden das Partizip ohne ge-."
   - type: word_formation
     group: vocab
     content:
-      pre: "Meine "
-      post: " ist Arabisch."
-      prompt: die Mutter + die Sprache
-      answers: [Muttersprache]
-      answer_shown: Muttersprache
-    explanation: "Zwei Nomen werden ein Wort: die Mutter + die Sprache = die Muttersprache."
+      pre: "Wir haben am Abend eine Pizza "
+      post: "."
+      prompt: backen
+      answers: [gebacken]
+      answer_shown: gebacken
+    explanation: "Unregelmäßig: backen → gebacken."
   - type: collocation_match
     group: vocab
     content:
-      left: [Kaffee, Deutsch, einen Kurs, Leute]
-      right: [besuchen, trinken, kennenlernen, lernen]
+      left: [Kuchen, einen Ausflug, Freunde, das Zimmer]
+      right: [treffen, backen, aufräumen, machen]
       pairs: { 0: 1, 1: 3, 2: 0, 3: 2 }
-    explanation: "Kaffee trinken, Deutsch lernen, einen Kurs besuchen, Leute kennenlernen."
+    explanation: "Kuchen backen, einen Ausflug machen, Freunde treffen, das Zimmer aufräumen."
   - type: key_word_transformation
     group: grammar
     content:
-      s1: Wie ist Ihr Name?
-      key: HEISSEN
-      pre: "Wie "
-      post: " Sie?"
-      answers: [heißen]
-      hint: 1 Wort
-      answer_shown: heißen
-    explanation: "Wie ist Ihr Name? und Wie heißen Sie? bedeuten das Gleiche. Sie + Verb = Stamm + -en."
+      s1: Wir gehen am Sonntag spazieren.
+      key: VORGESTERN
+      pre: "Vorgestern "
+      post: " spazieren gegangen."
+      answers: [sind wir]
+      hint: 2 Wörter
+      answer_shown: sind wir
+    explanation: "gehen nimmt sein. Nach der Zeitangabe folgt das Verb, dann das Subjekt: Vorgestern sind wir …"

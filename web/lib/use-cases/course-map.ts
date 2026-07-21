@@ -30,6 +30,8 @@ export interface CourseMapBlockDTO {
   pct: number;
   /** Visually "locked" — no module in this block has been unlocked yet (prior block's checkpoint not passed). */
   locked: boolean;
+  /** Offered, not required: open from the start, outside the hour budget, gates nothing (0008). */
+  optional: boolean;
   modules: CourseMapModuleDTO[];
   checkpoint: CourseMapCheckpointDTO | null;
 }
@@ -46,6 +48,7 @@ export async function getCourseMap(userId: number, courseSlug?: string): Promise
   const course = courseSlug ? await courseRepo.getCourseBySlug(courseSlug) : await courseRepo.ensureActiveEnrollment(userId);
   if (!course) throw new Error(`Course not found: ${courseSlug ?? '(active)'}`);
   await moduleRepo.ensureFirstModuleUnlocked(userId, course.id);
+  await moduleRepo.ensureOptionalModulesUnlocked(userId, course.id);
 
   const [blocks, modules, checkpoints] = await Promise.all([
     courseRepo.listBlocksForCourse(course.id),
@@ -90,6 +93,7 @@ export async function getCourseMap(userId: number, courseSlug?: string): Promise
       position: b.position,
       pct: blockPct(masteredOrCompleted, modDtos.length),
       locked: modDtos.every((m) => m.status === 'locked'),
+      optional: b.optional,
       modules: modDtos,
       checkpoint: cp
         ? { slug: cp.slug, title: cp.title, status: cpState?.status ?? 'locked', passMark: cp.passMark, bestScore: cpState?.bestScore ?? null }

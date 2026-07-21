@@ -45,6 +45,7 @@ export interface TodayDTO {
 export async function getToday(userId: number, now: Date = new Date()): Promise<TodayDTO> {
   const course = await courseRepo.ensureActiveEnrollment(userId);
   await moduleRepo.ensureFirstModuleUnlocked(userId, course.id);
+  await moduleRepo.ensureOptionalModulesUnlocked(userId, course.id);
 
   const [activeDates, cardsDueCount, queueDueCount, overdueReviewCount, currentModule] = await Promise.all([
     activityRepo.listActiveDates(userId, addDays(now, -STREAK_LOOKBACK_DAYS)),

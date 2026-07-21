@@ -67,6 +67,12 @@ export const CourseBlockSchema = z.object({
   name: z.string().min(1),
   color: z.string().regex(/^#[0-9a-fA-F]{6}$/, 'expected a #rrggbb hex colour'),
   tint: z.string().regex(/^#[0-9a-fA-F]{6}$/, 'expected a #rrggbb hex colour'),
+  /**
+   * Outside the linear gate: modules open immediately, finishing them unlocks
+   * nothing, and the block carries no checkpoint. For refresher material the
+   * course offers but does not require — see db/migrations/0008.
+   */
+  optional: z.boolean().default(false),
   modules: z.array(CourseModuleSchema).min(1),
 });
 export type CourseBlockEntry = z.infer<typeof CourseBlockSchema>;
@@ -100,7 +106,28 @@ export const CourseSchema = z
   // fails at parse time with the file name attached rather than mid-transaction.
   .superRefine((course, ctx) => {
     const blockSlugs = new Set(course.blocks.map((b) => b.slug));
+    const optionalBlocks = new Set(course.blocks.filter((b) => b.optional).map((b) => b.slug));
+
+    // Every course needs at least one gated block, or there is no entry module
+    // for ensureFirstModuleUnlocked to open and the learner lands on an empty map.
+    if (optionalBlocks.size === course.blocks.length) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        path: ['blocks'],
+        message: 'every block is optional — a course needs at least one required block to open on',
+      });
+    }
+
     course.checkpoints.forEach((cp, i) => {
+      // An optional block is never completed on the way anywhere, so a checkpoint
+      // behind it would sit at `locked` forever and seal the rest of the course.
+      if (cp.block && optionalBlocks.has(cp.block)) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          path: ['checkpoints', i, 'block'],
+          message: `block "${cp.block}" is optional and gates nothing — it cannot carry a checkpoint`,
+        });
+      }
       if (cp.kind === 'diagnostic' && cp.block) {
         ctx.addIssue({
           code: z.ZodIssueCode.custom,

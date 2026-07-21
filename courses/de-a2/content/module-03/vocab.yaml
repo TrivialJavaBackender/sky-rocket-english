@@ -1,0 +1,274 @@
+# Modul 03 · Wohnen und Einrichten — 30 Wörter zu Wohnung, Möbeln und Einrichtung.
+# Kein Wort aus Modul 01: eine Vokabel gehört genau einem Modul (PLAN.md §4).
+# Die sechs Positionsverben stehen hier als Wortschatz und sind zugleich der
+# Grammatikstoff des Moduls — bei ihnen nennt `register` den passenden Kasus.
+entries:
+  - term: die Wohnung
+    tag: Nomen
+    definition: Mehrere Zimmer in einem Haus. Dort lebt eine Person oder eine Familie.
+    use_cases:
+      - Unsere Wohnung hat drei Zimmer und einen Balkon.
+      - Wir haben endlich eine Wohnung gefunden.
+    collocations: eine Wohnung suchen · eine Wohnung mieten · in einer Wohnung leben
+    register: "Plural: die Wohnungen"
+
+  - term: das Zimmer
+    tag: Nomen
+    definition: Ein Raum in einer Wohnung. Küche, Bad und Schlafzimmer sind Zimmer.
+    use_cases:
+      - Mein Zimmer ist klein, aber hell.
+      - Wie viele Zimmer hat die Wohnung?
+    collocations: das Zimmer einrichten · ein Zimmer mit Balkon
+    register: "Plural: die Zimmer — gleich wie Singular."
+
+  - term: der Schrank
+    tag: Nomen
+    definition: Ein großes Möbelstück mit Türen. Darin liegen Kleider oder Teller.
+    use_cases:
+      - Der Schrank steht neben dem Fenster.
+      - Häng die Jacke bitte in den Schrank!
+    collocations: der Kleiderschrank · den Schrank aufmachen
+    register: "Plural: die Schränke"
+
+  - term: das Regal
+    tag: Nomen
+    definition: Ein Möbelstück mit Brettern. Darauf stehen Bücher oder Gläser.
+    use_cases:
+      - Im Regal stehen über hundert Bücher.
+      - Wir haben ein neues Regal an die Wand gehängt.
+    collocations: das Bücherregal · etwas ins Regal stellen
+    register: "Plural: die Regale"
+
+  - term: die Wand
+    tag: Nomen
+    definition: Die Seite von einem Zimmer. Daran hängen Bilder.
+    use_cases:
+      - An der Wand hängt ein großes Foto.
+      - Die Wand ist weiß.
+    collocations: an der Wand hängen · etwas an die Wand hängen
+    register: "Plural: die Wände"
+
+  - term: der Teppich
+    tag: Nomen
+    definition: Ein weiches Stück Stoff. Es liegt auf dem Boden.
+    use_cases:
+      - Der Teppich liegt zwischen dem Sofa und dem Tisch.
+      - Wir haben einen neuen Teppich gekauft.
+    collocations: der Teppich liegt · einen Teppich auslegen
+    register: "Plural: die Teppiche"
+
+  - term: die Möbel
+    tag: Nomen
+    definition: Schrank, Tisch, Bett und Sessel zusammen. Damit richtet man ein Zimmer ein.
+    use_cases:
+      - Die Möbel sind alt, aber sehr schön.
+      - Wir haben die Möbel im Internet bestellt.
+    collocations: Möbel kaufen · alte Möbel · das Möbelstück
+    register: "Fast immer Plural: die Möbel."
+
+  - term: der Sessel
+    tag: Nomen
+    definition: Ein weicher Stuhl mit Armlehnen. Darin sitzt man bequem.
+    use_cases:
+      - Der Sessel steht in der Ecke am Fenster.
+      - Stell den Sessel bitte neben das Regal!
+    collocations: im Sessel sitzen · ein bequemer Sessel
+    register: "Plural: die Sessel — gleich wie Singular."
+
+  - term: die Lampe
+    tag: Nomen
+    definition: Damit wird es hell im Zimmer.
+    use_cases:
+      - Die Lampe steht auf dem Schreibtisch.
+      - Häng die Lampe bitte über den Tisch!
+    collocations: die Lampe anmachen · die Lampe ausmachen
+    register: "Plural: die Lampen"
+
+  - term: der Boden
+    tag: Nomen
+    definition: Die Fläche unten im Zimmer. Darauf steht man und geht man.
+    use_cases:
+      - Auf dem Boden liegt ein alter Teppich.
+      - Das Buch ist auf den Boden gefallen.
+    collocations: auf dem Boden liegen · der Holzboden
+    register: "Plural: die Böden"
+
+  - term: die Ecke
+    tag: Nomen
+    definition: Der Ort, wo zwei Wände zusammenkommen.
+    use_cases:
+      - In der Ecke steht eine große Pflanze.
+      - Stell den Sessel in die Ecke!
+    collocations: in der Ecke stehen · um die Ecke
+    register: "Plural: die Ecken"
+
+  - term: das Schlafzimmer
+    tag: Nomen
+    definition: Das Zimmer mit dem Bett. Dort schläft man.
+    use_cases:
+      - Unser Schlafzimmer ist das kleinste Zimmer.
+      - Im Schlafzimmer steht nur ein Bett und ein Schrank.
+    collocations: ins Schlafzimmer gehen · das Schlafzimmerfenster
+    register: "Aus schlafen + das Zimmer. Genauso: das Wohnzimmer, das Esszimmer."
+
+  - term: einrichten
+    tag: Verb
+    definition: Möbel in ein leeres Zimmer stellen, bis man dort leben kann.
+    use_cases:
+      - Wir richten gerade unsere neue Wohnung ein.
+      - Das Zimmer ist modern eingerichtet.
+    collocations: eine Wohnung einrichten · schön eingerichtet
+    register: "Trennbar: Ich richte ein. Partizip: eingerichtet."
+
+  - term: umziehen
+    tag: Verb
+    definition: Aus einer Wohnung in eine andere Wohnung wechseln.
+    use_cases:
+      - Im Sommer ziehen wir nach Hamburg um.
+      - Sie ist letzte Woche in eine größere Wohnung umgezogen.
+    collocations: in eine neue Wohnung umziehen · der Umzug
+    register: "Trennbar: Ich ziehe um. Partizip: umgezogen, mit sein."
+
+  - term: stellen
+    tag: Verb
+    definition: Etwas an einen Ort bringen, sodass es danach steht.
+    use_cases:
+      - Ich stelle die Lampe auf den Schreibtisch.
+      - Stell die Gläser bitte ins Regal!
+    collocations: etwas auf den Tisch stellen · etwas in die Ecke stellen
+    register: "Frage Wohin? — danach der Akkusativ. Partner: stehen."
+
+  - term: legen
+    tag: Verb
+    definition: Etwas an einen Ort bringen, sodass es danach flach liegt.
+    use_cases:
+      - Ich lege das Buch auf den Tisch.
+      - Leg den Teppich bitte vor das Sofa!
+    collocations: etwas auf den Boden legen · etwas ins Regal legen
+    register: "Frage Wohin? — danach der Akkusativ. Partner: liegen."
+
+  - term: hängen
+    tag: Verb
+    definition: Etwas oben festmachen, zum Beispiel ein Bild an einer Wand.
+    use_cases:
+      - Ich hänge das Foto an die Wand.
+      - Das Foto hängt schon lange an der Wand.
+    collocations: ein Bild an die Wand hängen · an der Wand hängen
+    register: "Zwei Formen: mit Objekt Wohin? + Akkusativ, ohne Objekt Wo? + Dativ."
+
+  - term: stehen
+    tag: Verb
+    definition: An einem Ort sein, aufrecht und nicht flach.
+    use_cases:
+      - Der Schrank steht neben der Tür.
+      - Auf dem Tisch stehen zwei Gläser.
+    collocations: in der Ecke stehen · auf dem Tisch stehen
+    register: "Frage Wo? — danach der Dativ. Partner: stellen."
+
+  - term: liegen
+    tag: Verb
+    definition: An einem Ort sein, flach und nicht aufrecht.
+    use_cases:
+      - Das Buch liegt auf dem Boden.
+      - Der Teppich liegt unter dem Tisch.
+    collocations: auf dem Bett liegen · im Regal liegen
+    register: "Frage Wo? — danach der Dativ. Partner: legen."
+
+  - term: suchen
+    tag: Verb
+    definition: Etwas finden wollen, das man gerade nicht sieht.
+    use_cases:
+      - Wir suchen seit drei Monaten eine Wohnung.
+      - Ich suche meine Schlüssel — hast du sie gesehen?
+    collocations: eine Wohnung suchen · nach etwas suchen
+    register: "Partizip: gesucht."
+
+  - term: finden
+    tag: Verb
+    definition: Etwas sehen, das man gesucht hat.
+    use_cases:
+      - Endlich haben wir eine bezahlbare Wohnung gefunden.
+      - Ich finde meine Brille nicht.
+    collocations: eine Wohnung finden · etwas gut finden
+    register: "Unregelmäßig. Partizip: gefunden."
+
+  - term: passen
+    tag: Verb
+    definition: Die richtige Größe oder Farbe haben. Es steht gut zusammen.
+    use_cases:
+      - Der Schrank passt nicht in die Ecke — er ist zu breit.
+      - Der neue Teppich passt gut zu den Möbeln.
+    collocations: in das Zimmer passen · zu etwas passen
+    register: "Partizip: gepasst."
+
+  - term: praktisch
+    tag: Adjektiv
+    definition: Man kann es gut benutzen. Es hilft im Alltag.
+    use_cases:
+      - Das Regal ist klein, aber sehr praktisch.
+      - Eine Küche mit Fenster ist praktisch.
+    collocations: praktisch sein · eine praktische Lösung
+    register: "Gegenteil: unpraktisch"
+
+  - term: hell
+    tag: Adjektiv
+    definition: "Mit viel Licht. Gegenteil: dunkel."
+    use_cases:
+      - Das Zimmer ist sehr hell, es hat zwei große Fenster.
+      - Wir suchen eine helle Wohnung.
+    collocations: ein helles Zimmer · hell und freundlich
+    register: "Gegenteil: dunkel"
+
+  - term: dunkel
+    tag: Adjektiv
+    definition: "Mit wenig Licht. Gegenteil: hell."
+    use_cases:
+      - Der Flur ist ziemlich dunkel.
+      - Im Winter wird es früh dunkel.
+    collocations: ein dunkles Zimmer · es wird dunkel
+    register: "Gegenteil: hell"
+
+  - term: eng
+    tag: Adjektiv
+    definition: "Mit wenig Platz. Gegenteil: breit."
+    use_cases:
+      - Die Küche ist sehr eng, dort passen nur zwei Personen.
+      - Der Flur ist lang und eng.
+    collocations: ein enges Zimmer · eng werden
+    register: "Gegenteil: breit"
+
+  - term: oben
+    tag: Adverb
+    definition: "An einem hohen Ort. Gegenteil: unten."
+    use_cases:
+      - Die Gläser stehen oben im Schrank.
+      - Wir wohnen oben, im vierten Stock.
+    collocations: oben im Regal · da oben
+    register: "Gegenteil: unten"
+
+  - term: unten
+    tag: Adverb
+    definition: "An einem tiefen Ort. Gegenteil: oben."
+    use_cases:
+      - Die schweren Bücher liegen unten im Regal.
+      - Unten im Haus ist eine Bäckerei.
+    collocations: unten im Schrank · hier unten
+    register: "Gegenteil: oben"
+
+  - term: daneben
+    tag: Adverb
+    definition: Direkt neben dieser Sache.
+    use_cases:
+      - Links steht der Schrank, daneben das Regal.
+      - Das Sofa ist neu, der Sessel daneben ist alt.
+    collocations: direkt daneben · gleich daneben
+    register: "Kurz für: neben dieser Sache."
+
+  - term: gegenüber
+    tag: Adverb
+    definition: Auf der anderen Seite, genau vor dieser Sache.
+    use_cases:
+      - Der Schreibtisch steht gegenüber vom Fenster.
+      - Gegenüber wohnt eine nette Familie.
+    collocations: gegenüber vom Fenster · direkt gegenüber
+    register: "Oft mit von: gegenüber vom Bahnhof."

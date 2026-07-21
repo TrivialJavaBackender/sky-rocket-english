@@ -1,0 +1,30 @@
+slug: m02
+title: Unterwegs
+standfirst: Der Dativ und die Präpositionen · 30 Wörter · den Weg beschreiben.
+goals:
+  - text: Nach mit, bei, nach, von, zu, aus und seit den Dativ bilden
+    achieved_by: workout
+  - text: Nach für, gegen, ohne, um, durch und bis den Akkusativ bilden
+    achieved_by: workout
+  - text: 30 Wörter zu Verkehr, Weg und Stadt sicher benutzen
+    achieved_by: input
+  - text: Den Weg von zu Hause zur Arbeit frei beschreiben
+    achieved_by: output
+grammar_points:
+  - Die Formen im Dativ
+  - Die Präpositionen mit Dativ
+  - Die kurzen Formen zum, zur, beim, vom, im, am
+  - nach, zu oder in?
+  - Die Präpositionen mit Akkusativ
+  - Die Formen im Akkusativ
+  - Dativ oder Akkusativ? Die Präposition entscheidet
+texts:
+  - kind: main
+    title: Mit dem Zug nach Wien
+    word_count: 323
+  - kind: extra
+    title: Wie komme ich zum Museum?
+    word_count: 146
+production:
+  mode: speaking
+  genre: Der Weg von zu Hause zur Arbeit

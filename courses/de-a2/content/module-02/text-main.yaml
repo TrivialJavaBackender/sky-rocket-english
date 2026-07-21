@@ -1,0 +1,50 @@
+# Glossen stehen nur auf Wörtern, deren Form im Satz gleich der Grundform ist:
+# ReadingText rendert `gloss.term` direkt in den Fließtext (components/reading/
+# ReadingText.tsx). Ein Gloss auf einer gebeugten Stelle würde den Satz zerstören.
+#
+# Der Weg wird nur mit den Präpositionen dieses Moduls beschrieben — bis zur
+# Kreuzung, nach der Ampel, vom Hauptbahnhof. Die Wechselpräpositionen kommen
+# erst in Modul 03, deshalb steht hier kein „an der Ampel links".
+kind: main
+kicker: LESETEXT
+title: Mit dem Zug nach Wien
+meta: ≈ 3 Min · Wörter mit Punkten haben eine Erklärung — tippen Sie darauf
+word_count: 323
+body:
+  - - t: "Zweimal im Jahr fahre ich mit dem Zug nach Wien. Das Flugzeug ist schnell, aber ich fahre gern mit der Bahn: Man sitzt bequem, man liest, und man kommt mitten in der Stadt an."
+  - - t: "Die Fahrkarte kaufe ich immer im Internet. Dort steht auch der Fahrplan, und die Buchung dauert zwei Minuten. Am Morgen gehe ich dann zu Fuß zum Bahnhof, ungefähr fünfzehn Minuten. Mit dem Bus geht es schneller, aber ich gehe gern durch den Park."
+  - - t: "Am Bahnhof suche ich zuerst die "
+    - g: Anzeigetafel
+    - t: ": Bahnsteig 7, Abfahrt um 8:14. Der Zug fährt pünktlich ab. Ich steige ein und suche meinen Platz. Eine Frau aus Ungarn sitzt schon im "
+    - g: Wagen
+    - t: ". Sie ist seit sechs Stunden unterwegs, ich erst seit zehn Minuten."
+  - - t: "Die Strecke nach Wien ist schön. Der Zug fährt zehn Minuten durch einen Tunnel, dann kommen die Berge. Mit dem Auto dauert die Fahrt sieben Stunden, und in der Stadt kommt noch der Verkehr dazu."
+  - - t: "Nach zwei Stunden kommt der "
+    - g: Schaffner
+    - t: ". Er kontrolliert die Fahrkarten und sagt: „Der Zug hat heute zwanzig Minuten Verspätung. Aber in München erreichen Sie Ihren Zug.“ In München steige ich sofort um. Der Zug nach Wien fährt von Bahnsteig 21 ab, und ich habe nur acht Minuten. Ich gehe schnell durch den Bahnhof, ohne Kaffee."
+  - - t: "Um 14:30 kommt der Zug in Wien an, mit zehn Minuten Verspätung. Vom Hauptbahnhof fahre ich mit der U-Bahn weiter und steige nach vier Stationen aus. Von dort sind es zu Fuß fünf Minuten: geradeaus bis zur Kreuzung, dann rechts abbiegen. Nach der Ampel sehe ich schon mein Hotel."
+  - - t: "In Wien nehme ich dann die Straßenbahn. Die Haltestelle ist zwei Minuten vom Hotel "
+    - g: entfernt
+    - t: ". Die Bahn hält überall, und am Morgen ist sie sehr voll. Einmal bin ich in die falsche Richtung gefahren und habe den Anfang vom Konzert verpasst."
+  - - t: "Warum nehme ich nicht das Flugzeug? Mit dem Zug fahre ich von Zentrum zu Zentrum, ohne Taxi und ohne Stress. Auch mit zwanzig Minuten Verspätung bin ich am Ende zufrieden."
+glosses:
+  - key: Anzeigetafel
+    term: Anzeigetafel
+    pos_label: Nomen
+    definition: Der große Bildschirm am Bahnhof. Dort stehen Abfahrt, Bahnsteig und Verspätung.
+    example: "Auf der Anzeigetafel steht: Bahnsteig 7."
+  - key: Wagen
+    term: Wagen
+    pos_label: Nomen
+    definition: Ein Teil vom Zug. Ein Zug hat oft zwölf oder mehr davon.
+    example: Mein Platz ist im Wagen 12.
+  - key: Schaffner
+    term: Schaffner
+    pos_label: Nomen
+    definition: Er arbeitet im Zug und kontrolliert die Fahrkarten.
+    example: Der Schaffner kommt nach zwei Stunden.
+  - key: entfernt
+    term: entfernt
+    pos_label: Adjektiv
+    definition: So weit weg von hier. Man sagt es mit Minuten oder Kilometern.
+    example: Die Haltestelle ist zwei Minuten vom Hotel entfernt.

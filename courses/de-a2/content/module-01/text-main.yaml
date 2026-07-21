@@ -1,33 +1,37 @@
+# Glossen stehen nur auf Wörtern, deren Form im Satz gleich der Grundform ist:
+# ReadingText rendert `gloss.term` direkt in den Fließtext (components/reading/
+# ReadingText.tsx). Ein Gloss auf einer gebeugten Stelle würde den Satz zerstören.
 kind: main
 kicker: LESETEXT
-title: Neu in der Stadt
+title: Was hast du am Wochenende gemacht?
 meta: ≈ 3 Min · Wörter mit Punkten haben eine Erklärung — tippen Sie darauf
-word_count: 283
+word_count: 282
 body:
-  - - t: "Marek Nowak ist 32 Jahre alt und kommt aus Polen, aus Krakau. Seit einem Jahr wohnt er in Leipzig. Von Beruf ist er Koch und arbeitet in einem kleinen Restaurant in der Nähe vom Bahnhof. Seine Muttersprache ist Polnisch, aber er spricht auch Englisch und ein bisschen Deutsch. „Am Anfang war alles schwer“, sagt er. „Ich verstehe die Leute hier oft nicht, und sie sprechen sehr schnell.“"
-  - - t: "Zweimal pro Woche besucht Marek einen Sprachkurs. Der Kurs beginnt am Montag und am Mittwoch um 18 Uhr. In der ersten Stunde stellt sich jeder kurz vor: Name, Land, Beruf. Für Marek ist das nicht leicht, denn sein Nachname ist für Deutsche schwer. Er "
-    - g: buchstabieren
-    - t: " ihn deshalb immer: N-o-w-a-k."
-  - - t: "Im Kurs sind vierzehn Leute aus neun Ländern. Neben Marek sitzt Fatima. Sie kommt aus Marokko, ist 27 und ledig. Sie studiert Informatik an der Universität und spricht schon sehr gut Deutsch. „Woher kommst du?“, fragt sie am ersten Abend. „Aus Polen“, antwortet Marek. „Und du?“ So lernen die beiden sich kennen."
-  - - t: "Die Lehrerin heißt Frau Weber. Sie ist "
-    - g: geduldig
-    - t: " und spricht langsam. „Haben Sie Fragen?“, fragt sie oft. Am Ende der Stunde bekommt jeder ein "
-    - g: das Formular
-    - t: ". Alle füllen es aus: Vorname, Nachname, Alter, Adresse, Telefonnummer, E-Mail-Adresse. Marek schreibt seine neue Adresse in Leipzig hinein. „Sind Sie verheiratet?“, steht auf dem Papier. Marek ist verheiratet, aber seine Frau wohnt noch in Krakau. Im Sommer kommt sie nach Deutschland."
-  - - t: "Nach dem Kurs gehen einige Leute zusammen in ein Café. Sie trinken Kaffee und sprechen Deutsch — langsam, mit vielen Fehlern, aber sie sprechen. „Wiederholen Sie einfach alles“, sagt Frau Weber immer. Marek macht das jeden Abend. Er lernt gern, und heute versteht er schon viel mehr als vor einem Jahr."
+  - - t: "Am Montag im Büro fragen alle das Gleiche: Was hast du am Wochenende gemacht? Für Nina ist die Antwort diesmal lang geworden."
+  - - t: "Am Freitagabend ist sie früh nach Hause gekommen und hat zuerst die Wohnung aufgeräumt. „Das klingt langweilig“, sagt sie und lacht, „aber so habe ich danach zwei freie Tage gehabt.“"
+  - - t: "Am Samstag hat Nina ausgeschlafen. Um zehn ist sie aufgestanden, hat gefrühstückt und ist mit dem Rad zum Markt gefahren. Dort hat sie für die ganze Woche eingekauft: Obst, Gemüse, Brot. Am Nachmittag hat sie einen Kuchen gebacken, denn am Abend sind Freunde gekommen. Sie hat die Leute schon am Mittwoch eingeladen. Alle haben etwas mitgebracht — Salat, Wein, Musik. Sie haben zusammen gekocht, gegessen und bis nach "
+    - g: Mitternacht
+    - t: " geredet. Der Abend ist sehr "
+    - g: gemütlich
+    - t: " gewesen. „Wir haben nichts geplant und trotzdem bis spät gefeiert“, sagt Nina."
+  - - t: "Am Sonntag hat die Sonne geschienen, und Nina ist keine Minute drinnen geblieben. Mit ihrer Schwester hat sie sich am Bahnhof getroffen, und die beiden sind an den See gefahren. Dort haben sie einen Ausflug gemacht und sind drei Stunden gewandert. Nina findet Wandern spannend, ihre Schwester findet es "
+    - g: anstrengend
+    - t: ". „Aber am Ende hat sie gelacht“, sagt Nina. Den ganzen Nachmittag sind die beiden draußen geblieben."
+  - - t: "Am Abend hat Nina nichts mehr geplant. Sie hat nur noch ferngesehen und ist früh ins Bett gegangen. Übrigens: Neulich hat sie ein neues Hobby gefunden. Sie treibt jetzt zweimal pro Woche Sport — sie geht schwimmen. Am Sonntag hat sie das nicht gemacht. „Einmal Pause ist auch Freizeit.“"
+  - - t: "Und Sie? Was haben Sie am Wochenende gemacht? Sind Sie spazieren gegangen, haben Sie Freunde besucht, haben Sie ein Konzert gehört? Oder haben Sie vorgestern und gestern einfach nichts getan? Auch das ist eine Antwort."
 glosses:
-  - key: buchstabieren
-    term: buchstabieren
-    pos_label: Verb
-    definition: Ein Wort Buchstabe für Buchstabe sagen
-    example: "Wie schreibt man das? — Ich buchstabiere: W-e-b-e-r."
-  - key: geduldig
-    term: geduldig
-    pos_label: Adjektiv
-    definition: Ruhig. Diese Person wartet gern und wird nicht böse.
-    example: Meine Lehrerin ist sehr geduldig und erklärt alles zweimal.
-  - key: das Formular
-    term: das Formular
+  - key: Mitternacht
+    term: Mitternacht
     pos_label: Nomen
-    definition: Ein Papier mit Fragen zu Name, Adresse und Alter
-    example: Bitte füllen Sie das Formular aus.
+    definition: Zwölf Uhr in der Nacht. Der Tag ist zu Ende, der neue beginnt.
+    example: Wir haben bis nach Mitternacht geredet.
+  - key: gemütlich
+    term: gemütlich
+    pos_label: Adjektiv
+    definition: Ruhig und angenehm. Man fühlt sich wohl und hat keine Eile.
+    example: Das Café ist klein und sehr gemütlich.
+  - key: anstrengend
+    term: anstrengend
+    pos_label: Adjektiv
+    definition: Man braucht viel Kraft. Danach ist man müde.
+    example: Die Wanderung war schön, aber anstrengend.

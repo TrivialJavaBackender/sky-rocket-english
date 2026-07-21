@@ -1,0 +1,129 @@
+# Modul 03 · Wohnen und Einrichten — Grammatik im Fokus, Watch out! und Lückenkarten.
+# 7 Punkte — genau die Grammatik-Liste der Modulkarte (courses/de-a2/PLAN.md §4).
+#
+# Die Formen des Dativs kommen aus Modul 02 und werden hier nicht neu erklärt,
+# sondern dem Akkusativ gegenübergestellt. Deshalb steht dieses Modul nach den
+# Präpositionen mit festem Kasus und nicht davor.
+#
+# Fachwörter: alle aus dem Grammatik-Wörterbuch der Diagnostik. „Wechselpräposition“
+# nennt die Konstruktion, die dieses Modul einführt, und steht deshalb hier (§5.2).
+# Der Plural bleibt draußen: das -n im Dativ Plural gehört einem späteren Modul,
+# darum stehen in allen Tabellen nur Formen im Singular.
+spotlights:
+  - title: "Die Wechselpräpositionen"
+    intro: "Den Dativ kennen Sie schon. Neun Präpositionen nehmen ihn aber nur manchmal — die Frage entscheidet: Wo? oder Wohin?"
+    items:
+      - form: "Die neun Präpositionen"
+        note: "Nur diese neun wechseln. Alle anderen haben immer den gleichen Kasus."
+        table:
+          headers: ["Präposition", "Bedeutung"]
+          rows:
+            - ["in", "innen, in einem Raum"]
+            - ["an", "direkt daneben, an einer Fläche"]
+            - ["auf", "oben auf einer Fläche"]
+            - ["unter", "tiefer als etwas"]
+            - ["über", "höher als etwas"]
+            - ["vor", "davor, näher zu mir"]
+            - ["hinter", "dahinter, weiter weg"]
+            - ["neben", "direkt daneben"]
+            - ["zwischen", "in der Mitte von zwei Dingen"]
+      - form: "Wo? — der Dativ"
+        note: "Die Formen kennen Sie von mit, bei und zu. Nichts bewegt sich, etwas ist einfach da."
+        table:
+          headers: ["Nominativ", "Wo? — Dativ"]
+          rows:
+            - ["der Tisch", "auf dem Tisch"]
+            - ["die Wand", "an der Wand"]
+            - ["das Regal", "in dem Regal"]
+      - form: "Wohin? — der Akkusativ"
+        note: "Etwas bewegt sich von A nach B und kommt dort an."
+        table:
+          headers: ["Nominativ", "Wohin? — Akkusativ"]
+          rows:
+            - ["der Tisch", "auf den Tisch"]
+            - ["die Wand", "an die Wand"]
+            - ["das Regal", "in das Regal"]
+      - form: "Die kurzen Formen"
+        note: "Wie bei zum und beim. Neu sind hier nur ins und ans für Wohin?."
+        table:
+          headers: ["lang", "kurz", "Frage"]
+          rows:
+            - ["in dem", "im", "Wo?"]
+            - ["in das", "ins", "Wohin?"]
+            - ["an dem", "am", "Wo?"]
+            - ["an das", "ans", "Wohin?"]
+
+  - title: "Stellen oder stehen?"
+    intro: "Zu jeder Frage gehört ein anderes Verb. Das Verb und der Kasus passen immer zusammen."
+    items:
+      - form: "Wohin? — stellen, legen, hängen"
+        example: Ich stelle die Lampe auf den Tisch. Er legt das Buch ins Regal.
+        note: "Diese Verben brauchen ein Objekt und den Akkusativ."
+        table:
+          headers: ["Verb", "Beispiel"]
+          rows:
+            - ["stellen", "Ich stelle den Sessel in die Ecke."]
+            - ["legen", "Ich lege den Teppich auf den Boden."]
+            - ["hängen", "Ich hänge das Bild an die Wand."]
+      - form: "Wo? — stehen, liegen, hängen"
+        example: Die Lampe steht auf dem Tisch. Das Buch liegt im Regal.
+        note: "Diese Verben brauchen kein Objekt und den Dativ."
+        table:
+          headers: ["Verb", "Beispiel"]
+          rows:
+            - ["stehen", "Der Sessel steht in der Ecke."]
+            - ["liegen", "Der Teppich liegt auf dem Boden."]
+            - ["hängen", "Das Bild hängt an der Wand."]
+      - form: "Die Paare"
+        note: "hängen steht in beiden Spalten — nur der Kasus zeigt den Unterschied."
+        table:
+          headers: ["Wohin? + Akkusativ", "Wo? + Dativ"]
+          rows:
+            - ["stellen", "stehen"]
+            - ["legen", "liegen"]
+            - ["hängen", "hängen"]
+            - ["Ich stelle das Glas auf den Tisch.", "Das Glas steht auf dem Tisch."]
+
+watchouts:
+  - title: "Wohin? braucht den Akkusativ"
+    bad: Ich lege das Buch auf dem Tisch.
+    good: Ich lege das Buch auf den Tisch.
+    note: "Das Buch bewegt sich: Frage Wohin? — also der Akkusativ."
+  - title: "Wo? braucht den Dativ"
+    bad: Der Schrank steht in die Ecke.
+    good: Der Schrank steht in der Ecke.
+    note: "Der Schrank bewegt sich nicht: Frage Wo? — also der Dativ."
+  - title: "stellen und stehen sind zwei Verben"
+    bad: Die Lampe stellt auf dem Tisch.
+    good: Die Lampe steht auf dem Tisch.
+    note: "stellen braucht ein Objekt: Ich stelle die Lampe. Ohne Objekt steht stehen."
+  - title: "Ein Wort, nicht zwei"
+    bad: Wir haben ein neues Schlaf Zimmer.
+    good: Wir haben ein neues Schlafzimmer.
+    note: "Zwei Nomen werden im Deutschen immer ein Wort: das Schlafzimmer, der Kleiderschrank."
+
+cloze_cards:
+  - text: "Die Lampe steht auf {{c1::dem}} Schreibtisch."
+    hint: der Schreibtisch
+    rule: "stehen fragt Wo? — also der Dativ. der Schreibtisch → dem Schreibtisch."
+  - text: "Ich hänge das Bild an {{c1::die}} Wand."
+    hint: die Wand
+    rule: "hängen mit Objekt fragt Wohin? — also der Akkusativ. die Wand bleibt die."
+  - text: "Der Schrank steht in {{c1::der}} Ecke neben dem Fenster."
+    hint: die Ecke
+    rule: "stehen fragt Wo? — Dativ. die Ecke → der Ecke."
+  - text: "Leg den Teppich bitte auf {{c1::den}} Boden!"
+    hint: der Boden
+    rule: "legen fragt Wohin? — Akkusativ. der Boden → den Boden."
+  - text: "Die Bücher liegen {{c1::im}} Regal, nicht auf dem Tisch."
+    hint: in dem
+    rule: "liegen fragt Wo? — Dativ. in dem wird kurz zu im."
+  - text: "Stell den Sessel bitte {{c1::ans}} Fenster!"
+    hint: an das
+    rule: "stellen fragt Wohin? — Akkusativ. an das wird kurz zu ans."
+  - text: "Das Regal hängt über {{c1::dem}} Sofa."
+    hint: das Sofa
+    rule: "hängen ohne Objekt fragt Wo? — Dativ. das Sofa → dem Sofa."
+  - text: "Wir haben den Tisch zwischen {{c1::das}} Regal und den Sessel gestellt."
+    hint: das Regal
+    rule: "stellen fragt Wohin? — Akkusativ. das Regal bleibt das."

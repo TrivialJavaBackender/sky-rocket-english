@@ -1,0 +1,648 @@
+# Modul 03 · Wohnen und Einrichten — 52 Aufgaben im Kern, 20 im Wiederholungspool.
+# Verteilung laut Profil (courses/de-a2/PLAN.md §6): 6 mc_cloze · 8 open_cloze ·
+# 6 word_formation · 4 key_word_transformation · 8 grammar_drill ·
+# 6 error_correction · 8 collocation_match · 6 reading_comprehension.
+#
+# Spiralisches Wiederholen: grammar_drill 7 nimmt die Präpositionen mit Dativ
+# aus Modul 02, grammar_drill 8 und error_correction 5 das Perfekt aus Modul 01.
+#
+# Alle open_cloze-Lücken stehen auf dem Artikel, nicht auf der Präposition:
+# „Der Teppich liegt ___ dem Sofa“ ließe vor, unter, neben und hinter zu — der
+# Artikel dagegen ist durch Wo?/Wohin? eindeutig bestimmt.
+core:
+  # ───────────────────────── Multiple Choice ─────────────────────────
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Das Buch liegt auf "
+      post: " Tisch."
+      options: [dem, den, der, das]
+      answer: 0
+    explanation: "liegen fragt Wo? — also der Dativ. der Tisch → dem Tisch."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Stell die Lampe bitte auf "
+      post: " Schreibtisch!"
+      options: [dem, der, den, das]
+      answer: 2
+    explanation: "stellen fragt Wohin? — also der Akkusativ. der Schreibtisch → den Schreibtisch."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Der Teppich liegt "
+      post: " dem Bett — man sieht ihn fast nicht."
+      options: [über, unter, auf den, in die]
+      answer: 1
+    explanation: "unter bedeutet: tiefer als etwas. Nach liegen (Wo?) steht der Dativ: unter dem Bett."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Häng das Bild bitte an "
+      post: " Wand!"
+      options: [der, dem, den, die]
+      answer: 3
+    explanation: "hängen mit Objekt fragt Wohin? — Akkusativ. die Wand bleibt die Wand."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Die Bücher stehen "
+      post: " Regal, nicht auf dem Tisch."
+      options: [ins, in die, im, in den]
+      answer: 2
+    explanation: "stehen fragt Wo? — Dativ. in dem Regal wird kurz zu im Regal."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Wir haben den Sessel "
+      post: " die Ecke gestellt."
+      options: [an, in, im, ins]
+      answer: 1
+    explanation: "in die Ecke — stellen fragt Wohin?, also der Akkusativ. im wäre Wo?."
+
+  # ───────────────────────── Lückentext ─────────────────────────
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Die Lampe steht auf "
+      post: " Boden neben dem Sessel."
+      answers: [dem]
+      answer_shown: dem
+    explanation: "stehen fragt Wo? — Dativ. der Boden → dem Boden."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Ich hänge das Foto an "
+      post: " Wand über dem Bett."
+      answers: [die]
+      answer_shown: die
+    explanation: "hängen mit Objekt fragt Wohin? — Akkusativ. die Wand bleibt die."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Der Schrank steht in "
+      post: " Ecke neben der Tür."
+      answers: [der]
+      answer_shown: der
+    explanation: "stehen fragt Wo? — Dativ. die Ecke → der Ecke."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Stell den Sessel bitte neben "
+      post: " Fenster!"
+      answers: [das]
+      answer_shown: das
+    explanation: "stellen fragt Wohin? — Akkusativ. das Fenster bleibt das."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Das Regal hängt über "
+      post: " Sofa."
+      answers: [dem]
+      answer_shown: dem
+    explanation: "hängen ohne Objekt fragt Wo? — Dativ. das Sofa → dem Sofa."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Wir stellen den Tisch zwischen "
+      post: " Sessel und das Regal."
+      answers: [den]
+      answer_shown: den
+    explanation: "stellen fragt Wohin? — Akkusativ. der Sessel → den Sessel."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Der Teppich liegt unter "
+      post: " Tisch."
+      answers: [dem]
+      answer_shown: dem
+    explanation: "liegen fragt Wo? — Dativ. der Tisch → dem Tisch."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Häng die Jacke bitte in "
+      post: " Schrank!"
+      answers: [den]
+      answer_shown: den
+    explanation: "hängen mit Objekt fragt Wohin? — Akkusativ. der Schrank → den Schrank."
+
+  # ───────────────────────── Wortbildung ─────────────────────────
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Das Bett steht im "
+      post: "."
+      prompt: schlafen + das Zimmer
+      answers: [Schlafzimmer]
+      answer_shown: Schlafzimmer
+    explanation: "Zwei Teile werden ein Wort: schlafen + das Zimmer = das Schlafzimmer."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Das Sofa und der Sessel stehen im "
+      post: "."
+      prompt: wohnen + das Zimmer
+      answers: [Wohnzimmer]
+      answer_shown: Wohnzimmer
+    explanation: "wohnen + das Zimmer = das Wohnzimmer. Der Artikel kommt vom zweiten Teil."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Häng die Jacke in den "
+      post: "!"
+      prompt: die Kleider + der Schrank
+      answers: [Kleiderschrank]
+      answer_shown: Kleiderschrank
+    explanation: "die Kleider + der Schrank = der Kleiderschrank."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Meine Bücher stehen alle im "
+      post: "."
+      prompt: die Bücher + das Regal
+      answers: [Bücherregal]
+      answer_shown: Bücherregal
+    explanation: "die Bücher + das Regal = das Bücherregal."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Der Computer steht auf dem "
+      post: " am Fenster."
+      prompt: schreiben + der Tisch
+      answers: [Schreibtisch]
+      answer_shown: Schreibtisch
+    explanation: "schreiben + der Tisch = der Schreibtisch."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Wir essen jeden Abend zusammen im "
+      post: "."
+      prompt: essen + das Zimmer
+      answers: [Esszimmer]
+      answer_shown: Esszimmer
+    explanation: "essen + das Zimmer = das Esszimmer."
+
+  # ───────────────────────── Umformung ─────────────────────────
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: Das Buch liegt auf dem Tisch.
+      key: LEGEN
+      pre: "Ich lege das Buch auf "
+      post: " Tisch."
+      answers: [den]
+      hint: 1 Wort
+      answer_shown: den
+    explanation: "Aus Wo? wird Wohin?: liegen → legen, Dativ → Akkusativ. dem Tisch → den Tisch."
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: Ich hänge das Bild an die Wand.
+      key: HÄNGEN
+      pre: "Das Bild hängt an "
+      post: " Wand."
+      answers: [der]
+      hint: 1 Wort
+      answer_shown: der
+    explanation: "Aus Wohin? wird Wo?: der Akkusativ wird zum Dativ. die Wand → der Wand."
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: Wir stellen den Sessel in die Ecke.
+      key: STEHEN
+      pre: "Der Sessel steht in "
+      post: " Ecke."
+      answers: [der]
+      hint: 1 Wort
+      answer_shown: der
+    explanation: "stellen → stehen, Akkusativ → Dativ. die Ecke → der Ecke."
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: Wohin stellst du die Lampe?
+      key: NEBEN
+      pre: "Ich stelle die Lampe "
+      post: "."
+      answers: [neben das Sofa]
+      hint: 3 Wörter
+      answer_shown: neben das Sofa
+    explanation: "Die Frage Wohin? verlangt den Akkusativ: neben das Sofa."
+
+  # ───────────────────────── Grammatik-Drill ─────────────────────────
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Die Lampe "
+      post: " auf dem Tisch."
+      prompt: STEHEN ODER STELLEN
+      options: [steht, stellt, stellen, stehen]
+      answer: 0
+    explanation: "Kein Objekt im Satz und die Frage ist Wo? — also stehen."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Ich "
+      post: " die Lampe auf den Tisch."
+      prompt: STEHEN ODER STELLEN
+      options: [stehe, stelle, steht, stellt]
+      answer: 1
+    explanation: "die Lampe ist das Objekt und die Frage ist Wohin? — also stellen."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Das Buch "
+      post: " schon lange oben im Regal."
+      prompt: LIEGEN ODER LEGEN
+      options: [lege, legt, liegt, liege]
+      answer: 2
+    explanation: "Kein Objekt, Frage Wo? — also liegen: Das Buch liegt."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Bitte "
+      post: " den Teppich vor das Sofa!"
+      prompt: LIEGEN ODER LEGEN
+      options: [liegt, liege, legt, leg]
+      answer: 3
+    explanation: "Bitte an eine Person mit du: leg. Mit Objekt und Wohin? gehört legen dazu."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Der Schrank steht "
+      post: " der Ecke."
+      prompt: WO?
+      options: [in, ins, in die, an die]
+      answer: 0
+    explanation: "Wo? verlangt den Dativ: in der Ecke. ins und in die wären Wohin?."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Häng die Jacke bitte "
+      post: " den Schrank!"
+      prompt: WOHIN?
+      options: [im, in, ins, an dem]
+      answer: 1
+    explanation: "Wohin? verlangt den Akkusativ: in den Schrank."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Ich fahre jeden Morgen "
+      post: " dem Fahrrad zur Arbeit."
+      prompt: PRÄPOSITION MIT DATIV
+      options: [in, an, mit, auf]
+      answer: 2
+    explanation: "mit nimmt immer den Dativ und wechselt nie: mit dem Fahrrad, mit der Bahn."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Meine Schwester "
+      post: " im Mai in eine größere Wohnung umgezogen."
+      prompt: HABEN ODER SEIN
+      options: [hat, haben, war, ist]
+      answer: 3
+    explanation: "umziehen ist Bewegung von A nach B: Perfekt mit sein. sie + sein = ist."
+
+  # ───────────────────────── Fehlersuche ─────────────────────────
+  - type: error_correction
+    group: grammar
+    content:
+      words: [Ich, lege, das, Buch, auf, dem, "Tisch."]
+      wrong: 5
+      correction: "dem → den"
+    explanation: "legen fragt Wohin? — der Akkusativ: auf den Tisch."
+  - type: error_correction
+    group: grammar
+    content:
+      words: [Der, Schrank, steht, in, die, "Ecke."]
+      wrong: 4
+      correction: "die → der"
+    explanation: "stehen fragt Wo? — der Dativ: in der Ecke."
+  - type: error_correction
+    group: grammar
+    content:
+      words: [Häng, das, Bild, bitte, an, der, "Wand!"]
+      wrong: 5
+      correction: "der → die"
+    explanation: "hängen mit Objekt fragt Wohin? — der Akkusativ: an die Wand."
+  - type: error_correction
+    group: grammar
+    content:
+      words: [Die, Lampe, stellt, auf, dem, "Schreibtisch."]
+      wrong: 2
+      correction: "stellt → steht"
+    explanation: "Ohne Objekt steht stehen. stellen braucht immer ein Objekt: Ich stelle die Lampe."
+  - type: error_correction
+    group: grammar
+    content:
+      words: [Wir, haben, letzte, Woche, nach, Bremen, "umgezogen."]
+      wrong: 1
+      correction: "haben → sind"
+    explanation: "umziehen ist Bewegung von A nach B und bildet das Perfekt mit sein."
+  - type: error_correction
+    group: grammar
+    content:
+      words: [Wir, haben, ein, neues, Schlaf, Zimmer, "eingerichtet."]
+      wrong: 4
+      correction: "Schlaf Zimmer → Schlafzimmer"
+    explanation: "Zwei Nomen werden im Deutschen ein Wort: das Schlafzimmer."
+
+  # ───────────────────────── Wörter verbinden ─────────────────────────
+  - type: collocation_match
+    group: grammar
+    content:
+      left: [stellen, legen, stehen, liegen]
+      right: [Wo? + Dativ, aufrecht, Wohin? + Akkusativ, flach]
+      pairs: { 0: 2, 1: 3, 2: 0, 3: 1 }
+    explanation: "stellen und legen fragen Wohin?, stehen und liegen fragen Wo?. legen und liegen sind flach, stellen und stehen aufrecht."
+  - type: collocation_match
+    group: grammar
+    content:
+      left: [in dem, in das, an dem, an das]
+      right: [ins, am, im, ans]
+      pairs: { 0: 2, 1: 0, 2: 1, 3: 3 }
+    explanation: "Die kurzen Formen: in dem = im, in das = ins, an dem = am, an das = ans."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [der Schrank, das Regal, der Teppich, die Lampe]
+      right: [liegt auf dem Boden, macht das Zimmer hell, hat Türen, hat Bretter für Bücher]
+      pairs: { 0: 2, 1: 3, 2: 0, 3: 1 }
+    explanation: "Vier Möbelstücke — jedes mit dem, was es ausmacht."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [hell, dunkel, eng, praktisch]
+      right: [mit wenig Platz, mit viel Licht, gut zu benutzen, mit wenig Licht]
+      pairs: { 0: 1, 1: 3, 2: 0, 3: 2 }
+    explanation: "hell und dunkel sind Gegenteile. eng beschreibt den Platz, praktisch den Nutzen."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [oben, unten, daneben, gegenüber]
+      right: [direkt neben dieser Sache, an einem tiefen Ort, auf der anderen Seite, an einem hohen Ort]
+      pairs: { 0: 3, 1: 1, 2: 0, 3: 2 }
+    explanation: "oben und unten sind Gegenteile. daneben und gegenüber zeigen die Seite."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [eine Wohnung, ein Zimmer, ein Bild, Möbel]
+      right: [einrichten, aufhängen, suchen, kaufen]
+      pairs: { 0: 2, 1: 0, 2: 1, 3: 3 }
+    explanation: "eine Wohnung suchen, ein Zimmer einrichten, ein Bild aufhängen, Möbel kaufen."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [umziehen, einrichten, passen, finden]
+      right: [die richtige Größe haben, Möbel in ein leeres Zimmer stellen, in eine andere Wohnung wechseln, was man gesucht hat]
+      pairs: { 0: 2, 1: 1, 2: 0, 3: 3 }
+    explanation: "Vier Verben rund um den Umzug — jedes mit seiner Umschreibung."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [schlafen + Zimmer, Bücher + Regal, Kleider + Schrank, schreiben + Tisch]
+      right: [das Bücherregal, der Schreibtisch, das Schlafzimmer, der Kleiderschrank]
+      pairs: { 0: 2, 1: 0, 2: 3, 3: 1 }
+    explanation: "Zwei Teile werden ein Wort. Der Artikel kommt immer vom zweiten Teil."
+
+  # ───────────────────────── Leseverstehen ─────────────────────────
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Drei Monate haben Jonas und Mira eine Wohnung gesucht. Im April haben sie endlich eine gefunden: drei Zimmer, vierter Stock, zwei große Fenster. „Hell und praktisch“, sagt Mira. „Nur der Flur ist eng und dunkel.“"
+      q: Was gefällt Mira an der Wohnung nicht?
+      options:
+        - Der Flur
+        - Die Fenster
+        - Der vierte Stock
+        - Die Zahl der Zimmer
+      answer: 0
+    explanation: "Im Text steht: Nur der Flur ist eng und dunkel. Alles andere findet sie hell und praktisch."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Sie haben mit dem Wohnzimmer angefangen. Das Sofa steht jetzt an der Wand, gegenüber vom Fenster. Den Teppich haben sie davor auf den Boden gelegt. In die Ecke neben dem Fenster haben sie den Sessel gestellt — dort ist es am hellsten, und Mira liest dort jeden Abend."
+      q: Warum steht der Sessel in der Ecke am Fenster?
+      options:
+        - Dort ist mehr Platz.
+        - Dort ist es am hellsten.
+        - Dort steht auch das Sofa.
+        - Dort liegt der Teppich.
+      answer: 1
+    explanation: "Im Text steht: dort ist es am hellsten, und Mira liest dort jeden Abend."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Das Bücherregal hängt nicht an der Wand, es steht daneben auf dem Boden: „Ein Regal an der Wand ist schön, aber unsere Bücher sind zu schwer.“"
+      q: Wo ist das Bücherregal?
+      options:
+        - An der Wand
+        - Im Schlafzimmer
+        - Auf dem Boden
+        - Im Flur
+      answer: 2
+    explanation: "Im Text steht: es steht daneben auf dem Boden. An der Wand hängt es gerade nicht."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Im Schlafzimmer ist es einfacher gewesen. Das Bett steht zwischen den beiden Fenstern, der Kleiderschrank an der langen Wand. Über dem Bett hängt ein großes Foto aus Portugal. „Das Foto hängt in jeder Wohnung über unserem Bett“, sagt Jonas."
+      q: Was macht Jonas in jeder Wohnung gleich?
+      options:
+        - Er stellt das Bett zwischen die Fenster.
+        - Er kauft einen neuen Schrank.
+        - Er richtet zuerst das Schlafzimmer ein.
+        - Er hängt das Foto über das Bett.
+      answer: 3
+    explanation: "Im Text steht: Das Foto hängt in jeder Wohnung über unserem Bett."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "In der Küche stehen die Gläser oben im Schrank und die schweren Töpfe unten. „So ist es praktisch“, sagt Mira, „oben nehme ich zehnmal am Tag etwas heraus, unten zweimal.“"
+      q: Warum stehen die Gläser oben?
+      options:
+        - Weil sie leichter sind.
+        - Mira braucht sie sehr oft.
+        - Unten ist kein Platz mehr.
+        - Die Töpfe sind zu groß.
+      answer: 1
+    explanation: "Im Text steht: oben nehme ich zehnmal am Tag etwas heraus, unten zweimal."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Nur eine Sache passt noch nicht: Der Küchentisch ist zu groß. Er steht jetzt mitten im Raum, und alle laufen um ihn herum. „Nächstes Wochenende stellen wir ihn an die Wand“, sagt Jonas. Mira lacht: „Das hast du letzte Woche auch gesagt.“"
+      q: Was ist das Problem mit dem Küchentisch?
+      options:
+        - Er ist zu dunkel.
+        - Er ist kaputt.
+        - Er ist zu groß für den Platz.
+        - Er passt nicht zu den Möbeln.
+      answer: 2
+    explanation: "Im Text steht: Der Küchentisch ist zu groß. Er steht mitten im Raum, und alle laufen um ihn herum."
+
+# ───────────────────────── Wiederholungspool ─────────────────────────
+# 20 kurze Aufgaben für das Modul-Quiz und die Wiederholung nach 7 und 21 Tagen.
+# Dazu kommen 8 Aufgaben aus theory.yaml (cloze_cards).
+review_pool:
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Der Sessel steht "
+      post: " der Ecke."
+      options: [in, in die, ins, an die]
+      answer: 0
+    explanation: "stehen fragt Wo? — Dativ: in der Ecke."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Leg den Teppich bitte auf "
+      post: " Boden!"
+      options: [dem, den, der, das]
+      answer: 1
+    explanation: "legen fragt Wohin? — Akkusativ: auf den Boden."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Die Gläser stehen oben "
+      post: " Schrank."
+      options: [in den, ins, im, in die]
+      answer: 2
+    explanation: "stehen fragt Wo? — in dem Schrank wird kurz zu im Schrank."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Wir haben das Foto "
+      post: " das Bett gehängt."
+      options: [über dem, überm, unter dem, über]
+      answer: 3
+    explanation: "hängen mit Objekt fragt Wohin? — Akkusativ: über das Bett."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Das Bild hängt an "
+      post: " Wand im Flur."
+      answers: [der]
+      answer_shown: der
+    explanation: "hängen ohne Objekt fragt Wo? — Dativ. die Wand → der Wand."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Stell die Gläser bitte in "
+      post: " Schrank!"
+      answers: [den]
+      answer_shown: den
+    explanation: "stellen fragt Wohin? — Akkusativ. der Schrank → den Schrank."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Der Teppich liegt vor "
+      post: " Sofa."
+      answers: [dem]
+      answer_shown: dem
+    explanation: "liegen fragt Wo? — Dativ. das Sofa → dem Sofa."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Ich lege das Handy neben "
+      post: " Lampe."
+      answers: [die]
+      answer_shown: die
+    explanation: "legen fragt Wohin? — Akkusativ. die Lampe bleibt die."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Das Regal steht zwischen "
+      post: " Fenster und der Tür."
+      answers: [dem]
+      answer_shown: dem
+    explanation: "stehen fragt Wo? — Dativ. das Fenster → dem Fenster."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Wir haben die Kartons in "
+      post: " Flur gestellt."
+      answers: [den]
+      answer_shown: den
+    explanation: "stellen fragt Wohin? — Akkusativ. der Flur → den Flur."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Das Buch "
+      post: " unter dem Sessel."
+      prompt: LIEGEN ODER LEGEN
+      options: [liegt, legt, lege, liege]
+      answer: 0
+    explanation: "Kein Objekt, Frage Wo? — also liegen."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Ich "
+      post: " den Sessel neben das Regal."
+      prompt: STEHEN ODER STELLEN
+      options: [stehe, stelle, steht, stellt]
+      answer: 1
+    explanation: "den Sessel ist das Objekt, die Frage ist Wohin? — also stellen."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Die Wohnung ist klein, aber sehr "
+      post: "."
+      prompt: GUT ZU BENUTZEN
+      options: [eng, dunkel, praktisch, oben]
+      answer: 2
+    explanation: "praktisch heißt: man kann es gut benutzen."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Sie haben die Wohnung im Juni "
+      post: "."
+      prompt: FINDEN
+      options: [findet, gefindet, finden, gefunden]
+      answer: 3
+    explanation: "finden ist unregelmäßig: gefunden."
+  - type: error_correction
+    group: grammar
+    content:
+      words: [Stell, die, Lampe, auf, dem, "Schreibtisch!"]
+      wrong: 4
+      correction: "dem → den"
+    explanation: "stellen fragt Wohin? — der Akkusativ: auf den Schreibtisch."
+  - type: error_correction
+    group: grammar
+    content:
+      words: [Das, Foto, hängt, über, das, "Bett."]
+      wrong: 4
+      correction: "das → dem"
+    explanation: "hängen ohne Objekt fragt Wo? — der Dativ: über dem Bett."
+  - type: error_correction
+    group: grammar
+    content:
+      words: [Der, Teppich, legt, vor, dem, "Sofa."]
+      wrong: 2
+      correction: "legt → liegt"
+    explanation: "Ohne Objekt steht liegen. legen braucht immer ein Objekt."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Der Computer steht auf dem "
+      post: "."
+      prompt: schreiben + der Tisch
+      answers: [Schreibtisch]
+      answer_shown: Schreibtisch
+    explanation: "schreiben + der Tisch = der Schreibtisch."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [die Wand, der Boden, die Ecke, das Regal]
+      right: [dort kommen zwei Wände zusammen, dort stehen Bücher, dort hängen Bilder, dort liegt der Teppich]
+      pairs: { 0: 2, 1: 3, 2: 0, 3: 1 }
+    explanation: "An der Wand hängen Bilder, auf dem Boden liegt der Teppich, in der Ecke kommen zwei Wände zusammen, im Regal stehen Bücher."
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: Ich stelle den Sessel in die Ecke.
+      key: STEHEN
+      pre: "Der Sessel steht in "
+      post: " Ecke."
+      answers: [der]
+      hint: 1 Wort
+      answer_shown: der
+    explanation: "Aus Wohin? wird Wo?: der Akkusativ wird zum Dativ. die Ecke → der Ecke."

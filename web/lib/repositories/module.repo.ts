@@ -215,8 +215,12 @@ export async function findCurrentModuleForCourse(userId: number, courseId: numbe
  * position) → upcoming. No-op once any row exists for the course.
  */
 export async function ensureFirstModuleUnlocked(userId: number, courseId: number): Promise<void> {
+  // Optional blocks are excluded: they sit outside the linear gate, so the entry
+  // point is the first module of the first *required* block. Were an optional
+  // block allowed to win here, it would become the course entry and — carrying no
+  // checkpoint — never open anything after it (0008).
   const first = await prisma.module.findFirst({
-    where: { block: { course_id: courseId } },
+    where: { block: { course_id: courseId, optional: false } },
     orderBy: [{ block: { position: 'asc' } }, { position: 'asc' }],
   });
   if (!first) return;
@@ -236,6 +240,41 @@ export async function ensureFirstModuleUnlocked(userId: number, courseId: number
     create: { user_id: userId, module_id: first.id, status: 'upcoming' },
     update: { status: 'upcoming' },
   });
+}
+
+/**
+ * Opens every module of every optional block (0008). Optional blocks are offered,
+ * not scheduled: nothing ever completes into them, so if they were not opened
+ * here they would stay `locked` for the entire course.
+ *
+ * Only `locked` rows are touched — a learner who has started or finished one of
+ * these modules must not be rolled back to `upcoming`.
+ */
+export async function ensureOptionalModulesUnlocked(userId: number, courseId: number): Promise<void> {
+  const modules = await prisma.module.findMany({
+    where: { block: { course_id: courseId, optional: true } },
+    select: { id: true },
+  });
+  if (modules.length === 0) return;
+
+  const states = await prisma.user_module_state.findMany({
+    where: { user_id: userId, module_id: { in: modules.map((m) => m.id) } },
+    select: { module_id: true, status: true },
+  });
+  const statusByModule = new Map(states.map((s) => [s.module_id, s.status]));
+
+  const toOpen = modules.filter((m) => (statusByModule.get(m.id) ?? 'locked') === 'locked');
+  if (toOpen.length === 0) return;
+
+  await prisma.$transaction(
+    toOpen.map((m) =>
+      prisma.user_module_state.upsert({
+        where: { user_id_module_id: { user_id: userId, module_id: m.id } },
+        create: { user_id: userId, module_id: m.id, status: 'upcoming' },
+        update: { status: 'upcoming' },
+      }),
+    ),
+  );
 }
 
 // ───────────────────────── study_session / session_step ─────────────────────────

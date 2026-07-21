@@ -1,30 +1,30 @@
 slug: m01
-title: Ich und du
-standfirst: Präsens, sein und haben, Fragen · 30 Wörter · sich und andere vorstellen.
+title: Mein Wochenende
+standfirst: Perfekt mit haben und sein · 30 Wörter · vom Wochenende berichten.
 goals:
-  - text: Verben im Präsens richtig konjugieren — auch sein und haben
+  - text: Das Partizip von regelmäßigen, unregelmäßigen und trennbaren Verben bilden
     achieved_by: workout
-  - text: Fragen mit und ohne Fragewort stellen und beantworten
+  - text: haben oder sein als richtige Perfektform wählen
     achieved_by: workout
-  - text: 30 Wörter zu Person, Herkunft und Beruf sicher benutzen
+  - text: 30 Wörter zu Freizeit und Wochenende sicher benutzen
     achieved_by: input
-  - text: Sich in einem kurzen Text vorstellen und ein Formular ausfüllen
+  - text: In einem kurzen Text vom letzten Wochenende erzählen
     achieved_by: output
 grammar_points:
-  - Regelmäßige Verben im Präsens
-  - Die Personalpronomen
-  - sein
-  - haben
-  - Die W-Frage
-  - Die Ja/Nein-Frage
-  - Die Fragewörter
+  - Das Partizip der regelmäßigen Verben
+  - Das Partizip der unregelmäßigen Verben
+  - Das Partizip der trennbaren Verben
+  - Das Perfekt mit haben
+  - Das Perfekt mit sein
+  - Die Stellung im Satz
+  - Die Zeitangaben
 texts:
   - kind: main
-    title: Neu in der Stadt
-    word_count: 283
+    title: Was hast du am Wochenende gemacht?
+    word_count: 282
   - kind: extra
-    title: Im Sprachkurs
-    word_count: 148
+    title: Drei Posts vom Wochenende
+    word_count: 135
 production:
   mode: writing
-  genre: Steckbrief und Anmeldeformular
+  genre: Bericht vom Wochenende

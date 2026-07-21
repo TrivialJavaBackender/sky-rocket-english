@@ -1,130 +1,129 @@
-# Modul 01 · Ich und du — Grammatik im Fokus, Watch out! und Lückenkarten.
+# Modul 01 · Mein Wochenende — Grammatik im Fokus, Watch out! und Lückenkarten.
 # 7 Punkte — genau die Grammatik-Liste der Modulkarte (courses/de-a2/PLAN.md §4).
 # Die Obergrenze des Profils (§6) wäre 2 Spotlights × 4 Punkte.
-# Paradigmen stehen als Tabelle, nicht als Kette mit Punkten: „ich -e · du -st ·
-# er -t“ zwingt die Lesenden, das Raster selbst im Kopf zu bauen.
+#
+# Fachwörter: alle aus dem Grammatik-Wörterbuch der Diagnostik, dazu „das
+# Perfekt“ — der Begriff nennt die Konstruktion, die dieses Modul einführt, und
+# steht deshalb hier (PLAN.md §5.2).
 spotlights:
-  - title: "Das Verb im Präsens"
-    intro: "Jedes Verb hat einen Stamm und eine Endung. Die Endung zeigt: Wer macht das?"
+  - title: "Das Partizip"
+    intro: "Für die Vergangenheit braucht man das Partizip. Es gibt drei Gruppen — die Endung zeigt, welche."
     items:
-      - form: "Regelmäßige Verben: Stamm + Endung"
-        note: "Der Stamm bleibt gleich. Nur die Endung wechselt."
+      - form: "Regelmäßige Verben: ge- + Stamm + -t"
+        note: "Der Stamm bleibt gleich. Das ist die größte Gruppe."
         table:
-          headers: ["", "lernen", "wohnen", "kommen"]
+          headers: ["Infinitiv", "Stamm", "Partizip"]
           rows:
-            - ["ich", "lerne", "wohne", "komme"]
-            - ["du", "lernst", "wohnst", "kommst"]
-            - ["er / sie / es", "lernt", "wohnt", "kommt"]
-            - ["wir", "lernen", "wohnen", "kommen"]
-            - ["ihr", "lernt", "wohnt", "kommt"]
-            - ["sie / Sie", "lernen", "wohnen", "kommen"]
-      - form: "Die Personalpronomen"
-        note: "Sie mit großem S ist höflich. Für fremde Personen immer Sie."
+            - ["machen", "mach-", "gemacht"]
+            - ["kochen", "koch-", "gekocht"]
+            - ["spielen", "spiel-", "gespielt"]
+            - ["wandern", "wander-", "gewandert"]
+      - form: "Unregelmäßige Verben: ge- + Stamm + -en"
+        note: "Oft ändert sich auch der Vokal. Diese Formen lernt man auswendig."
         table:
-          headers: ["", "Singular", "Plural"]
+          headers: ["Infinitiv", "Partizip"]
           rows:
-            - ["1. Person", "ich", "wir"]
-            - ["2. Person", "du", "ihr"]
-            - ["3. Person", "er / sie / es", "sie"]
-            - ["höflich", "Sie", "Sie"]
-      - form: "sein — unregelmäßig"
-        example: Ich bin Koch. Du bist müde. Wir sind aus Polen.
-        note: "Diese Formen lernt man auswendig. Sie kommen sehr oft."
+            - ["essen", "gegessen"]
+            - ["trinken", "getrunken"]
+            - ["fahren", "gefahren"]
+            - ["gehen", "gegangen"]
+            - ["kommen", "gekommen"]
+            - ["sein", "gewesen"]
+      - form: "Trennbare Verben: ge- steht in der Mitte"
+        note: "Vorsilbe + ge- + Stamm + Endung. Alles bleibt ein Wort."
         table:
-          headers: ["", "sein"]
+          headers: ["Infinitiv", "Vorsilbe", "Partizip"]
           rows:
-            - ["ich", "bin"]
-            - ["du", "bist"]
-            - ["er / sie / es", "ist"]
-            - ["wir", "sind"]
-            - ["ihr", "seid"]
-            - ["sie / Sie", "sind"]
-      - form: "haben — unregelmäßig"
-        example: Ich habe Zeit. Sie hat einen Bruder. Habt ihr Fragen?
-        note: "Nur du und er / sie / es sind besonders: hast, hat."
-        table:
-          headers: ["", "haben"]
-          rows:
-            - ["ich", "habe"]
-            - ["du", "hast"]
-            - ["er / sie / es", "hat"]
-            - ["wir", "haben"]
-            - ["ihr", "habt"]
-            - ["sie / Sie", "haben"]
+            - ["aufräumen", "auf-", "aufgeräumt"]
+            - ["einkaufen", "ein-", "eingekauft"]
+            - ["einladen", "ein-", "eingeladen"]
+            - ["mitbringen", "mit-", "mitgebracht"]
+            - ["fernsehen", "fern-", "ferngesehen"]
 
-  - title: "Fragen stellen"
-    intro: "Es gibt zwei Fragen: mit Fragewort und ohne. Das Verb steht immer vorn."
+  - title: "Das Perfekt im Satz"
+    intro: "Das Perfekt hat zwei Teile: haben oder sein und das Partizip. So erzählt man von gestern."
     items:
-      - form: "W-Frage: Fragewort + Verb + Subjekt"
-        note: "Das Verb steht immer direkt nach dem Fragewort."
+      - form: "Das Perfekt mit haben"
+        note: "Die meisten Verben nehmen haben."
         table:
-          headers: ["Fragewort", "Verb", "Subjekt", "Rest"]
+          headers: ["", "haben", "Partizip"]
           rows:
-            - ["Woher", "kommst", "du", "—"]
-            - ["Wo", "wohnt", "sie", "—"]
-            - ["Wie", "heißen", "Sie", "—"]
-            - ["Was", "machst", "du", "am Wochenende?"]
-      - form: "Ja/Nein-Frage: Verb + Subjekt"
-        note: "Ohne Fragewort beginnt der Satz mit dem Verb."
+            - ["ich", "habe", "gekocht"]
+            - ["du", "hast", "gekocht"]
+            - ["er / sie / es", "hat", "gekocht"]
+            - ["wir", "haben", "gekocht"]
+            - ["ihr", "habt", "gekocht"]
+            - ["sie / Sie", "haben", "gekocht"]
+      - form: "Das Perfekt mit sein"
+        note: "Bewegung von A nach B und die Verben bleiben, sein, werden."
         table:
-          headers: ["Verb", "Subjekt", "Rest"]
+          headers: ["", "sein", "Partizip"]
           rows:
-            - ["Hast", "du", "Zeit?"]
-            - ["Sprichst", "du", "Deutsch?"]
-            - ["Seid", "ihr", "aus Spanien?"]
-            - ["Ist", "das", "dein Buch?"]
-      - form: "Die Fragewörter"
-        note: "wo = der Ort. woher = das Land oder die Herkunft."
+            - ["ich", "bin", "gefahren"]
+            - ["du", "bist", "gefahren"]
+            - ["er / sie / es", "ist", "gefahren"]
+            - ["wir", "sind", "gefahren"]
+            - ["ihr", "seid", "gefahren"]
+            - ["sie / Sie", "sind", "gefahren"]
+      - form: "Die Stellung: Position 2 und am Ende"
+        note: "haben oder sein steht auf Position 2. Das Partizip steht ganz am Ende."
         table:
-          headers: ["Fragewort", "fragt nach", "Beispielantwort"]
+          headers: ["Position 1", "haben / sein", "Mitte", "Ende"]
           rows:
-            - ["wer", "der Person", "Das ist Frau Weber."]
-            - ["was", "der Sache", "Ich lerne Deutsch."]
-            - ["wie", "der Art, dem Namen", "Ich heiße Marek."]
-            - ["wo", "dem Ort", "In Leipzig."]
-            - ["woher", "der Herkunft", "Aus Polen."]
-            - ["wann", "der Zeit", "Um 18 Uhr."]
+            - ["Ich", "habe", "am Samstag Fußball", "gespielt."]
+            - ["Am Samstag", "habe", "ich Fußball", "gespielt."]
+            - ["Wir", "sind", "um zehn nach Hause", "gekommen."]
+            - ["Was", "hast", "du am Wochenende", "gemacht?"]
+      - form: "Die Zeitangaben"
+        note: "Sie stehen am Anfang oder in der Mitte — nie am Ende."
+        table:
+          headers: ["Zeitangabe", "Beispiel"]
+          rows:
+            - ["gestern", "Gestern habe ich gearbeitet."]
+            - ["vorgestern", "Vorgestern sind wir gewandert."]
+            - ["letzte Woche", "Letzte Woche hat sie gefeiert."]
+            - ["am Samstag", "Am Samstag bin ich zu Hause geblieben."]
 
 watchouts:
-  - title: "Beruf ohne Artikel"
-    bad: Ich bin ein Student.
-    good: Ich bin Student.
-    note: "Vor Beruf, Nationalität und Religion steht kein Artikel."
-  - title: "Das Alter mit sein"
-    bad: Ich habe 25 Jahre.
-    good: Ich bin 25 Jahre alt.
-    note: "Das Alter steht im Deutschen immer mit sein."
-  - title: "Das Verb in der Frage"
-    bad: Woher du kommst?
-    good: Woher kommst du?
-    note: "Nach dem Fragewort kommt sofort das Verb."
-  - title: "Sprache ohne das Wort Sprache"
-    bad: Ich spreche die deutsche Sprache.
-    good: Ich spreche Deutsch.
-    note: "Die Sprache steht allein und groß: Deutsch, Polnisch, Englisch."
+  - title: "Bewegung nimmt sein"
+    bad: Ich habe nach Berlin gefahren.
+    good: Ich bin nach Berlin gefahren.
+    note: "Bewegung von A nach B: fahren, gehen, kommen, fliegen — immer mit sein."
+  - title: "Ohne Bewegung steht haben"
+    bad: Ich bin Fußball gespielt.
+    good: Ich habe Fußball gespielt.
+    note: "spielen, kochen, arbeiten, lernen — alle mit haben."
+  - title: "Verben auf -ieren ohne ge-"
+    bad: Ich habe mit Anna getelefoniert.
+    good: Ich habe mit Anna telefoniert.
+    note: "telefonieren, studieren, fotografieren — das Partizip endet auf -t, ohne ge-."
+  - title: "Das Partizip steht am Ende"
+    bad: Wir haben gemacht einen Ausflug.
+    good: Wir haben einen Ausflug gemacht.
+    note: "Zwischen haben und Partizip steht der Rest vom Satz."
 
 cloze_cards:
-  - text: "Woher {{c1::kommst}} du? — Ich komme aus Italien."
-    hint: kommen
-    rule: "du + Verb = Stamm + -st. Nach dem Fragewort steht sofort das Verb."
-  - text: "Meine Schwester {{c1::wohnt}} seit drei Jahren in Wien."
-    hint: wohnen
-    rule: "er/sie/es + Verb = Stamm + -t. Meine Schwester = sie."
-  - text: "Wir {{c1::lernen}} zusammen Deutsch, denn wir sind im gleichen Kurs."
-    hint: lernen
-    rule: "wir + Verb = Stamm + -en. Die Form ist gleich wie der Infinitiv."
-  - text: "Ich {{c1::bin}} Köchin und arbeite in einem Restaurant."
-    hint: sein
-    rule: "sein ist unregelmäßig: ich bin. Vor dem Beruf steht kein Artikel."
-  - text: "{{c1::Seid}} ihr aus Spanien? — Nein, wir kommen aus Portugal."
-    hint: sein
-    rule: "ihr + sein = seid. Ohne Fragewort beginnt die Frage mit dem Verb."
-  - text: "Anna {{c1::hat}} zwei Brüder und eine Schwester."
+  - text: "Am Samstag {{c1::habe}} ich bis zehn Uhr geschlafen."
     hint: haben
-    rule: "er/sie/es + haben = hat. Diese Form ist unregelmäßig."
-  - text: "{{c1::Habt}} ihr noch Fragen zum Kurs?"
+    rule: "schlafen bildet das Perfekt mit haben. ich + haben = habe."
+  - text: "Meine Schwester {{c1::ist}} am Sonntag zu mir gekommen."
+    hint: sein
+    rule: "kommen ist Bewegung von A nach B, also Perfekt mit sein. sie + sein = ist."
+  - text: "Wir haben zusammen einen Kuchen {{c1::gebacken}}."
+    hint: backen
+    rule: "backen ist unregelmäßig: ge- + Stamm + -en."
+  - text: "Ich habe am Freitag meine Wohnung {{c1::aufgeräumt}}."
+    hint: aufräumen
+    rule: "Trennbares Verb: das ge- steht in der Mitte — auf-ge-räumt."
+  - text: "{{c1::Seid}} ihr gestern spazieren gegangen?"
+    hint: sein
+    rule: "gehen bildet das Perfekt mit sein. ihr + sein = seid."
+  - text: "Nina hat zehn Freunde zur Party {{c1::eingeladen}}."
+    hint: einladen
+    rule: "ein-ge-laden: das ge- steht zwischen Vorsilbe und Stamm."
+  - text: "Wir sind drei Stunden am See {{c1::gewandert}}."
+    hint: wandern
+    rule: "wandern ist regelmäßig: ge- + Stamm + -t. Es ist Bewegung, also mit sein."
+  - text: "Was {{c1::hast}} du am Wochenende gemacht?"
     hint: haben
-    rule: "ihr + haben = habt. Die Ja/Nein-Frage beginnt mit dem Verb."
-  - text: "Wie {{c1::heißen}} Sie? — Mein Name ist Weber."
-    hint: heißen
-    rule: "Sie (höflich) + Verb = Stamm + -en. Für Fremde benutzt man immer Sie."
+    rule: "machen nimmt haben. du + haben = hast. Das Partizip steht am Ende."

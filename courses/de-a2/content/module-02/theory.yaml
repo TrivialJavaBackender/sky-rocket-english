@@ -1,0 +1,136 @@
+# Modul 02 · Unterwegs — Grammatik im Fokus, Watch out! und Lückenkarten.
+# 7 Punkte — genau die Grammatik-Liste der Modulkarte (courses/de-a2/PLAN.md §4).
+#
+# Dies ist das Modul, das den Dativ als System einführt. Vorher kennt der Kurs
+# ihn nur als fertige Wendung aus dem Eingangsniveau (mit dem Bus). Deshalb
+# steht die Formentabelle hier — Modul 03 stellt sie dann dem Akkusativ
+# gegenüber und erklärt sie nicht noch einmal.
+#
+# Der Plural bleibt draußen: das -n im Dativ Plural gehört Modul 06, darum
+# stehen in allen Tabellen nur Formen im Singular.
+#
+# Fachwörter: alle aus dem Grammatik-Wörterbuch der Diagnostik. Die Namen der
+# Kasus kommen aus Aufgabe 6 (der Kasus: Nominativ · Akkusativ · Dativ), die
+# Präposition aus Aufgabe 7 (§5.2). Kein Modul-eigener Fachbegriff nötig.
+spotlights:
+  - title: "Der Dativ nach der Präposition"
+    intro: "Die Präposition wählt den Kasus, nicht das Verb. Sieben Präpositionen nehmen immer den Dativ."
+    items:
+      - form: "Die Formen im Dativ"
+        note: "Nur der Artikel ändert sich. Das Nomen bleibt gleich."
+        table:
+          headers: ["Nominativ", "Dativ"]
+          rows:
+            - ["der Zug", "dem Zug"]
+            - ["die Bahn", "der Bahn"]
+            - ["das Auto", "dem Auto"]
+      - form: "Sieben Präpositionen mit Dativ"
+        note: "Diese sieben lernt man auswendig. Danach steht nie der Akkusativ."
+        table:
+          headers: ["Präposition", "Beispiel"]
+          rows:
+            - ["mit", "Ich fahre mit dem Bus."]
+            - ["bei", "Ich arbeite bei der Post."]
+            - ["nach", "Nach der Arbeit fahre ich nach Hause."]
+            - ["von", "Ich komme gerade von der Arbeit."]
+            - ["zu", "Ich gehe zum Arzt. (zu dem)"]
+            - ["aus", "Sie kommt aus der Schweiz."]
+            - ["seit", "Ich wohne seit dem Sommer hier."]
+      - form: "Die kurzen Formen"
+        example: Ich fahre zum Bahnhof und dann mit der Bahn zur Arbeit.
+        note: "Man spricht und schreibt fast immer kurz. Die lange Form klingt schwer."
+        table:
+          headers: ["lang", "kurz"]
+          rows:
+            - ["zu dem", "zum"]
+            - ["zu der", "zur"]
+            - ["bei dem", "beim"]
+            - ["von dem", "vom"]
+            - ["in dem", "im"]
+            - ["an dem", "am"]
+      - form: "nach, zu oder in?"
+        note: "Drei Präpositionen für die Richtung. Man lernt sie mit dem Ziel zusammen."
+        table:
+          headers: ["Präposition", "Ziel", "Beispiel"]
+          rows:
+            - ["nach", "Stadt oder Land ohne Artikel", "Ich fahre nach Wien."]
+            - ["zu", "Person, Firma, Gebäude", "Ich gehe zum Arzt."]
+            - ["in", "Ziel mit Artikel", "Ich fahre in die Stadt."]
+            - ["nach", "feste Wendung", "Ich gehe nach Hause."]
+
+  - title: "Der Akkusativ nach der Präposition"
+    intro: "Sechs andere Präpositionen nehmen immer den Akkusativ. Die Frage nach dem Verb hilft hier nicht — nur die Präposition zählt."
+    items:
+      - form: "Sechs Präpositionen mit Akkusativ"
+        note: "Auch diese sechs lernt man auswendig. bis steht meistens ohne Artikel."
+        table:
+          headers: ["Präposition", "Beispiel"]
+          rows:
+            - ["für", "Die Fahrkarte ist für den Zug nach Wien."]
+            - ["gegen", "Das Auto ist gegen den Baum gefahren."]
+            - ["ohne", "Ich fahre heute ohne das Auto."]
+            - ["um", "Der Bus fährt um den Park."]
+            - ["durch", "Der Zug fährt durch den Tunnel."]
+            - ["bis", "Der Zug fährt bis München."]
+      - form: "Die Formen im Akkusativ"
+        note: "Nur der wird zu den. die und das bleiben gleich."
+        table:
+          headers: ["Nominativ", "Akkusativ"]
+          rows:
+            - ["der Zug", "den Zug"]
+            - ["die Bahn", "die Bahn"]
+            - ["das Auto", "das Auto"]
+      - form: "Dativ oder Akkusativ? Die Präposition entscheidet"
+        example: Ich fahre mit dem Auto. — Ich fahre ohne das Auto.
+        note: "Gleiches Verb, gleiches Nomen, anderer Kasus. Nur das Wort davor zählt."
+        table:
+          headers: ["mit Dativ", "mit Akkusativ"]
+          rows:
+            - ["mit dem Zug", "ohne den Zug"]
+            - ["von der Stadt", "durch die Stadt"]
+            - ["nach dem Kurs", "für den Kurs"]
+            - ["aus dem Park", "um den Park"]
+
+watchouts:
+  - title: "Nach mit steht der Dativ"
+    bad: Ich fahre jeden Tag mit den Bus zur Arbeit.
+    good: Ich fahre jeden Tag mit dem Bus zur Arbeit.
+    note: "mit nimmt immer den Dativ. der Bus → mit dem Bus."
+  - title: "Nach für steht der Akkusativ"
+    bad: Die Fahrkarte ist für dem Zug nach Wien.
+    good: Die Fahrkarte ist für den Zug nach Wien.
+    note: "für nimmt immer den Akkusativ. der Zug → für den Zug."
+  - title: "Der Artikel bleibt stehen"
+    bad: Ich fahre mit Bus zur Arbeit.
+    good: Ich fahre mit dem Bus zur Arbeit.
+    note: "Im Deutschen steht fast immer ein Artikel. Ohne ihn fehlt der Kasus."
+  - title: "Städte und Länder bekommen nach"
+    bad: Wir sind am Wochenende zu Wien gefahren.
+    good: Wir sind am Wochenende nach Wien gefahren.
+    note: "Stadt oder Land ohne Artikel: immer nach. zu steht vor Personen und Gebäuden."
+
+cloze_cards:
+  - text: "Ich fahre jeden Morgen mit {{c1::dem}} Bus zur Arbeit."
+    hint: der Bus
+    rule: "Nach mit steht immer der Dativ. der Bus → dem Bus."
+  - text: "Die Fahrkarte ist für {{c1::den}} Zug nach Wien."
+    hint: der Zug
+    rule: "Nach für steht immer der Akkusativ. der Zug → den Zug."
+  - text: "Nach {{c1::der}} Arbeit fahre ich sofort nach Hause."
+    hint: die Arbeit
+    rule: "Nach nach steht der Dativ. die Arbeit → der Arbeit."
+  - text: "Wir gehen jetzt zu Fuß {{c1::zum}} Bahnhof."
+    hint: zu dem
+    rule: "zu dem wird kurz zu zum. Nach zu steht der Dativ."
+  - text: "Ich war gestern {{c1::beim}} Arzt und komme heute zu spät."
+    hint: bei dem
+    rule: "bei dem wird kurz zu beim. Nach bei steht der Dativ."
+  - text: "Der Zug fährt zehn Minuten durch {{c1::den}} Tunnel."
+    hint: der Tunnel
+    rule: "Nach durch steht der Akkusativ. der Tunnel → den Tunnel."
+  - text: "Heute fahre ich ohne {{c1::das}} Auto in die Stadt."
+    hint: das Auto
+    rule: "Nach ohne steht der Akkusativ. Bei das ändert sich nichts."
+  - text: "In Wien fahren wir immer mit {{c1::der}} Straßenbahn."
+    hint: die Straßenbahn
+    rule: "Nach mit steht der Dativ. die Straßenbahn → der Straßenbahn."

@@ -1,0 +1,30 @@
+slug: m03
+title: Wohnen und Einrichten
+standfirst: Wechselpräpositionen, wo und wohin · 30 Wörter · das eigene Zimmer beschreiben.
+goals:
+  - text: Bei den neun Wechselpräpositionen zwischen Dativ und Akkusativ wählen
+    achieved_by: workout
+  - text: Die Frage Wo? von der Frage Wohin? unterscheiden
+    achieved_by: workout
+  - text: 30 Wörter zu Wohnung, Möbeln und Einrichtung sicher benutzen
+    achieved_by: input
+  - text: Ein Zimmer beschreiben und sagen, wo welches Möbelstück steht
+    achieved_by: output
+grammar_points:
+  - Die neun Wechselpräpositionen
+  - Wo? mit dem Dativ
+  - Wohin? mit dem Akkusativ
+  - Die kurzen Formen im, ins, am, ans
+  - stellen, legen und hängen
+  - stehen, liegen und hängen
+  - Die Paare im Überblick
+texts:
+  - kind: main
+    title: Endlich eingerichtet
+    word_count: 289
+  - kind: extra
+    title: Fünf Möbelanzeigen
+    word_count: 150
+production:
+  mode: writing
+  genre: Beschreibung des eigenen Zimmers

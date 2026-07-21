@@ -1,0 +1,31 @@
+mode: writing
+genre: Steckbrief und Anmeldeformular
+word_target: [50, 60]
+prompt: |
+  Sie möchten einen Sprachkurs besuchen. Schreiben Sie einen kurzen Text
+  über sich für Ihre Lehrerin. 50–60 Wörter.
+
+  Schreiben Sie zu allen fünf Punkten:
+  • Name, Alter und Familienstand
+  • Woher Sie kommen und wo Sie jetzt wohnen
+  • Ihr Beruf oder Ihr Studium
+  • Welche Sprachen Sie sprechen
+  • Was Sie gern machen
+
+  Stellen Sie am Ende eine Frage an Ihre Lehrerin.
+model_answer: |
+  Hallo! Ich heiße Fatima Benali und bin 27 Jahre alt. Ich bin ledig.
+  Ich komme aus Marokko, aus Casablanca, und wohne jetzt in Leipzig.
+  Ich studiere Informatik an der Universität, im dritten Jahr.
+  Meine Muttersprache ist Arabisch, aber ich spreche auch Französisch
+  und Deutsch. Englisch verstehe ich nur ein bisschen. In meiner Freizeit
+  lese ich gern und treffe Freunde. Wann beginnt der Kurs?
+checklist:
+  - 50–60 Wörter
+  - Alle fünf Punkte stehen im Text
+  - Am Ende steht eine Frage mit Fragewort oder mit dem Verb am Anfang
+  - Die Verben haben die richtige Endung (ich heiße, ich wohne, ich studiere)
+  - sein und haben sind richtig (ich bin, ich habe)
+  - Vor dem Beruf steht kein Artikel (Ich bin Studentin, nicht eine Studentin)
+  - Das Alter steht mit sein (Ich bin 27 Jahre alt)
+  - Mindestens acht Wörter aus dem Modul kommen vor

@@ -597,10 +597,42 @@ function vocabReverseFlashcardFields(entry: VocabEntry): FlashcardFields {
 
 // ───────────────────────────── module driver ─────────────────────────────
 
+/**
+ * A module whose `dir` no longer exists but which still carries synced content —
+ * the slug was repointed at new material, or the package was removed. Leaving the
+ * old rows in place is the one case where "skip" is wrong: the module would keep
+ * serving content the repository no longer describes, under whatever title the
+ * skeleton now gives it.
+ *
+ * Flashcards are archived rather than deleted, exactly as in the normal path, so
+ * the learner's `card_state` survives. Everything else is module-owned and goes.
+ */
+async function clearOrphanedModuleContent(client: Client, courseSlug: string, moduleSlug: string): Promise<boolean> {
+  const row = await client.query<{ id: number }>(
+    `select m.id from module m join block b on b.id = m.block_id join course c on c.id = b.course_id
+     where c.slug = $1 and m.slug = $2 and m.content_hash is not null`,
+    [courseSlug, moduleSlug],
+  );
+  if (row.rows.length === 0) return false;
+  const moduleId = row.rows[0].id;
+
+  for (const table of ['grammar_point', 'grammar_spotlight', 'watchout', 'reading_text', 'vocab_entry', 'exercise', 'writing_task']) {
+    await client.query(`delete from ${table} where module_id = $1`, [moduleId]);
+  }
+  await client.query('update flashcard set archived = true where module_id = $1 and archived = false', [moduleId]);
+  await client.query('update module set content_hash = null where id = $1', [moduleId]);
+  return true;
+}
+
 async function syncModule(client: Client, course: Course, mod: CourseModuleEntry, contentRoot: string): Promise<void> {
   const moduleDir = path.join(contentRoot, mod.dir);
   if (!(await pathExists(moduleDir))) {
-    console.warn(`! module dir missing, skipping: ${mod.slug} (${moduleDir})`);
+    const cleared = await clearOrphanedModuleContent(client, course.slug, mod.slug);
+    console.warn(
+      cleared
+        ? `! module dir missing: ${mod.slug} — cleared content synced from a previous package (${moduleDir})`
+        : `! module dir missing, skipping: ${mod.slug} (${moduleDir})`,
+    );
     return;
   }
 
@@ -829,13 +861,14 @@ async function syncCourseSkeleton(client: Client, course: Course, courseYamlByte
     const blockIdBySlug = new Map<string, number>();
     for (const [i, block] of course.blocks.entries()) {
       const row = await client.query<{ id: number; inserted: boolean }>(
-        `insert into block (course_id, slug, name, color, tint, position)
-         values ($1, $2, $3, $4, $5, $6)
+        `insert into block (course_id, slug, name, color, tint, position, optional)
+         values ($1, $2, $3, $4, $5, $6, $7)
          on conflict (course_id, slug) do update set
            name = excluded.name, color = excluded.color,
-           tint = excluded.tint, position = excluded.position
+           tint = excluded.tint, position = excluded.position,
+           optional = excluded.optional
          returning id, (xmax = 0) as inserted`,
-        [courseId, block.slug, block.name, block.color, block.tint, i + 1],
+        [courseId, block.slug, block.name, block.color, block.tint, i + 1, block.optional],
       );
       blockIdBySlug.set(block.slug, row.rows[0].id);
       row.rows[0].inserted ? counters.block.added++ : counters.block.updated++;

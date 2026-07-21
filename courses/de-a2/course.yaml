@@ -8,6 +8,9 @@
 #
 # Positions come from array order. A module's planned_minutes is the sum of the
 # protocol's session minutes (55+55+55+45 = 210 = 3.5 h).
+#
+# 14 modules × 3.5 h + 5 h of assessment = 54 h. The budget is derived in
+# PLAN.md §1 «Почему 54 часа» — it is the delta A1 → A2, not a course from zero.
 
 slug: de-a2
 language: de
@@ -16,63 +19,94 @@ level_label: A1 → A2
 position: 2
 
 blocks:
+  # Outside the 54 h and outside the gate (db/migrations/0008): the course
+  # assumes the learner holds A1, and this block is the safety net for whoever
+  # the placement test says has gaps. Open from the start, carries no checkpoint,
+  # and no required module may lean on it — it can be skipped entirely.
+  - slug: refresh
+    name: Auffrischung
+    optional: true
+    color: '#7A7A7A'
+    tint: '#F0EFEE'
+    modules:
+      - slug: a01
+        dir: auffrischung
+        title: Ich und du
+        standfirst: Präsens, sein und haben, Fragen · 30 Wörter · sich und andere vorstellen.
+
   - slug: a
-    name: Basis
+    name: Erzählen
     color: '#C9622E'
     tint: '#FAEDE6'
     modules:
       - slug: m01
         dir: module-01
-        title: Ich und du
-        standfirst: Präsens, sein und haben, Fragen · 30 Wörter · sich und andere vorstellen.
+        title: Mein Wochenende
+        standfirst: Perfekt mit haben und sein · 30 Wörter · vom Wochenende berichten.
       - slug: m02
         dir: module-02
-        title: Familie und Wohnen
-        standfirst: Artikel, Plural, Akkusativ und Possessivartikel · 30 Wörter · die eigene Wohnung beschreiben.
+        title: Unterwegs
+        standfirst: Der Dativ und die Präpositionen · 30 Wörter · den Weg beschreiben.
       - slug: m03
         dir: module-03
-        title: Essen und Einkaufen
-        standfirst: Verben mit Vokalwechsel, Imperativ und möchten · 30 Wörter · ein Gespräch im Geschäft.
+        title: Wohnen und Einrichten
+        standfirst: Wechselpräpositionen, wo und wohin · 30 Wörter · das eigene Zimmer beschreiben.
       - slug: m04
         dir: module-04
-        title: Mein Tag
-        standfirst: Trennbare Verben, Uhrzeit und die Satzstellung · 30 Wörter · den eigenen Tagesablauf erzählen.
+        title: Geschenke und Gefälligkeiten
+        standfirst: Dativ als Objekt und zwei Ergänzungen · 30 Wörter · um einen Gefallen bitten.
+      - slug: m05
+        dir: module-05
+        title: Früher und heute
+        standfirst: Präteritum, als und wenn · 30 Wörter · aus der Kindheit erzählen.
 
   - slug: b
-    name: Alltag
+    name: Beschreiben
     color: '#B8452F'
     tint: '#F9E9E6'
     modules:
-      - slug: m05
-        dir: module-05
-        title: Freizeit und Hobbys
-        standfirst: Perfekt mit haben und das Partizip II · 30 Wörter · vom Wochenende berichten.
       - slug: m06
         dir: module-06
-        title: Unterwegs
-        standfirst: Perfekt mit sein und die Wechselpräpositionen · 30 Wörter · den Weg beschreiben.
+        title: Kleidung und Einkaufen
+        standfirst: Adjektive nach dem bestimmten Artikel · 30 Wörter · ein Gespräch im Geschäft.
       - slug: m07
         dir: module-07
-        title: Gesundheit
-        standfirst: Dativ als Objekt und alle Modalverben · 30 Wörter · ein Gespräch beim Arzt.
+        title: Wohnungssuche
+        standfirst: Adjektive nach ein- und ohne Artikel · 30 Wörter · beim Vermieter nachfragen.
+      - slug: m08
+        dir: module-08
+        title: Vergleichen und Bewerten
+        standfirst: Komparativ und Superlativ · 30 Wörter · Dinge vergleichen und bewerten.
+      - slug: m09
+        dir: module-09
+        title: Körper und Gesundheit
+        standfirst: Reflexive Verben, dürfen und sollen · 30 Wörter · Ratschläge geben.
 
   - slug: c
-    name: Welt
+    name: Verbinden
     color: '#8E3B5C'
     tint: '#F5E8EE'
     modules:
-      - slug: m08
-        dir: module-08
-        title: Arbeit und Pläne
-        standfirst: Nebensätze mit weil und dass · 30 Wörter · eine kurze Bewerbung schreiben.
-      - slug: m09
-        dir: module-09
-        title: Einkaufen und Vergleichen
-        standfirst: Komparativ, Superlativ und Adjektive · 30 Wörter · Dinge vergleichen und bewerten.
       - slug: m10
         dir: module-10
-        title: Feste und Erinnerungen
-        standfirst: Präteritum und Nebensätze mit wenn und als · 30 Wörter · von einem Fest erzählen.
+        title: Arbeit und Entscheidungen
+        standfirst: Nebensätze mit weil, dass und obwohl · 30 Wörter · eine kurze Bewerbung schreiben.
+      - slug: m11
+        dir: module-11
+        title: Wünsche und Pläne
+        standfirst: Konjunktiv II und zu + Infinitiv · 30 Wörter · höflich bitten und absagen.
+      - slug: m12
+        dir: module-12
+        title: Gefühle und Beziehungen
+        standfirst: Verben mit Präposition und Präpositionaladverbien · 30 Wörter · über Gefühle sprechen.
+      - slug: m13
+        dir: module-13
+        title: Medien und Auskunft
+        standfirst: Indirekte Fragen und Relativsätze · 30 Wörter · nach Auskunft fragen.
+      - slug: m14
+        dir: module-14
+        title: Umwelt und Gesellschaft
+        standfirst: Passiv Präsens und Genitiv · 30 Wörter · Regeln erklären und begründen.
 
 checkpoints:
   - slug: diagnostic
@@ -85,14 +119,14 @@ checkpoints:
     kind: block
     block: a
     dir: checkpoint-a
-    title: Checkpoint A · Module 1–4
+    title: Checkpoint A · Module 1–5
     pass_mark: 75
     planned_minutes: 75
   - slug: cp-b
     kind: block
     block: b
     dir: checkpoint-b
-    title: Checkpoint B · Module 5–7
+    title: Checkpoint B · Module 6–9
     pass_mark: 75
     planned_minutes: 75
   - slug: final
