@@ -168,15 +168,18 @@ async function main() {
   const workoutRes = await sessionUseCase.getSession(userId, COURSE, 'm01', 'workout');
   assert(workoutRes.kind === 'locked' && workoutRes.currentSessionType === 'prime', `workout is locked while prime is current (got ${workoutRes.kind})`);
 
-  const theory1 = await unitUseCase.getModuleTheorySlice(moduleId, 1, 2);
-  const theory2 = await unitUseCase.getModuleTheorySlice(moduleId, 2, 2);
+  // en-c1's language ('en') is outside AUDIO_LANGS, so these also exercise the
+  // zero-audio-query path (ARCHITECTURE.md §4.8) — same course row already
+  // fetched above, no extra query.
+  const theory1 = await unitUseCase.getModuleTheorySlice(moduleId, 1, 2, courseRow.language);
+  const theory2 = await unitUseCase.getModuleTheorySlice(moduleId, 2, 2, courseRow.language);
   assert(
     theory1.spotlights.length + theory2.spotlights.length === unit!.spotlights.length && theory1.spotlights.length >= theory2.spotlights.length && theory2.spotlights.length > 0,
     `theory parts are balanced and cover everything (${theory1.spotlights.length}+${theory2.spotlights.length}=${unit!.spotlights.length})`,
   );
-  const batch1 = await unitUseCase.getModuleVocabBatch(userId, moduleId, 1, 3);
-  const batch2 = await unitUseCase.getModuleVocabBatch(userId, moduleId, 2, 3);
-  const batch3 = await unitUseCase.getModuleVocabBatch(userId, moduleId, 3, 3);
+  const batch1 = await unitUseCase.getModuleVocabBatch(userId, moduleId, 1, 3, courseRow.language);
+  const batch2 = await unitUseCase.getModuleVocabBatch(userId, moduleId, 2, 3, courseRow.language);
+  const batch3 = await unitUseCase.getModuleVocabBatch(userId, moduleId, 3, 3, courseRow.language);
   assert(
     batch1.entries.length === 15 && batch2.entries.length === 15 && batch3.entries.length === 15,
     `vocab batches split 15/15/15 (got ${batch1.entries.length}/${batch2.entries.length}/${batch3.entries.length})`,

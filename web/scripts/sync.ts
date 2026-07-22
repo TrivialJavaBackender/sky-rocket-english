@@ -48,6 +48,7 @@ import {
   ReadingPackageSchema,
   makeExercisesPackageSchema,
   WritingPackageSchema,
+  AudioManifestSchema,
   type Meta,
   type VocabEntry,
   type Spotlight,
@@ -58,7 +59,9 @@ import {
   type ExerciseEntry,
   type KeyWordTransformationContent,
   type WritingPackage,
+  type AudioManifestClip,
 } from '../lib/content-schema';
+import { AUDIO_PROFILE, audioManifestPath, blobFsPath } from '../lib/audio/config';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = path.resolve(__dirname, '..', '..');
@@ -984,6 +987,138 @@ async function syncCourseSkeleton(client: Client, course: Course, courseYamlByte
   );
 }
 
+// ───────────────────────────── audio manifest ─────────────────────────────
+/**
+ * Upserts audio_clip from courses/<slug>/audio/manifest.json (ARCHITECTURE.md
+ * §4.8), scripts/audio.ts's committed output. No manifest yet is a warning +
+ * skip, exactly like a missing module package — en-c1 has no audio and never
+ * will, and de-a2's own audio arrives after its content does.
+ *
+ * `audio_manifest_hash` gates the same way `course.skeleton_hash` does
+ * (sha256 of the file's raw bytes): a match skips every upsert. But the
+ * *global* per-language prune in main() still needs this course's full set of
+ * (text_hash, profile) keys even on that fast path — a clip is not owned by
+ * this course (0009's header), so if course A's manifest is unchanged while
+ * course B's (same language) changed, the prune at the end of main() must
+ * still see A's keys or it would delete A's still-current rows. That set is
+ * built from the manifest already sitting in memory, so populating it costs
+ * nothing extra even when every DB write below is skipped.
+ */
+async function syncAudioManifest(client: Client, course: Course, courseDir: string, seen: Map<string, Set<string>>): Promise<void> {
+  const manifestPath = audioManifestPath(courseDir);
+  if (!(await pathExists(manifestPath))) {
+    console.warn(`! no audio manifest, skipping: ${course.slug} (${manifestPath})`);
+    return;
+  }
+
+  const raw = await readFile(manifestPath);
+  const manifestHash = createHash('sha256').update(raw).digest('hex');
+  const parsed = AudioManifestSchema.safeParse(JSON.parse(raw.toString('utf8')));
+  if (!parsed.success) {
+    const issues = parsed.error.issues.map((i) => `  ${i.path.join('.') || '(root)'}: ${i.message}`).join('\n');
+    throw new Error(`Invalid audio manifest ${manifestPath}:\n${issues}`);
+  }
+  const manifest = parsed.data;
+  if (manifest.lang !== course.language) {
+    console.warn(`  ! audio manifest lang "${manifest.lang}" does not match course.language "${course.language}" for ${course.slug} — syncing under the manifest's own lang`);
+  }
+
+  // Always contribute this course's keys to `seen`, gate or no gate (see
+  // docstring) — cheap, since `manifest` is already parsed in memory.
+  const seenForLang = seen.get(manifest.lang) ?? new Set<string>();
+  for (const clip of manifest.clips) {
+    if (clip.audio[AUDIO_PROFILE]) seenForLang.add(`${clip.text_hash}|${AUDIO_PROFILE}`);
+  }
+  seen.set(manifest.lang, seenForLang);
+
+  const existing = await client.query<{ audio_manifest_hash: string | null }>('select audio_manifest_hash from course where slug = $1', [course.slug]);
+  if (existing.rowCount !== 0 && existing.rows[0].audio_manifest_hash === manifestHash) {
+    console.log(`[${course.slug}] audio unchanged — 0 queries`);
+    return;
+  }
+
+  const counter = newCounter();
+  for (const clip of manifest.clips) {
+    const outcome = clip.audio[AUDIO_PROFILE];
+    if (!outcome) continue; // this clip's manifest entry doesn't carry AUDIO_PROFILE — nothing this app plays
+    const blobPath = blobFsPath(outcome.path);
+    if (!(await pathExists(blobPath))) {
+      // Better a missing ▶ button than a 404 in the player — matches the rest
+      // of this file's "no file, no row" rule (e.g. syncModule's gloss/exercise checks).
+      console.warn(`  ! audio blob missing on disk, skipping row: ${outcome.path}`);
+      continue;
+    }
+    await upsertAudioClip(client, manifest.lang, manifest.voice, clip, outcome, counter);
+  }
+
+  await client.query('update course set audio_manifest_hash = $1 where slug = $2', [manifestHash, course.slug]);
+  console.log(`[${course.slug}] audio ${fmtCounter(counter)}`);
+}
+
+/** No content_hash column on audio_clip (0009 DDL) — compares fields directly, same as upsertGloss. */
+async function upsertAudioClip(
+  client: Client,
+  lang: string,
+  voice: string,
+  clip: AudioManifestClip,
+  outcome: { key: string; path: string; duration_ms: number; bytes: number },
+  counter: Counter,
+): Promise<void> {
+  const existing = await client.query<{ id: number; clip_key: string; path: string; duration_ms: number; bytes: number; voice: string; source_text: string }>(
+    'select id, clip_key, path, duration_ms, bytes, voice, source_text from audio_clip where lang = $1 and text_hash = $2 and profile = $3',
+    [lang, clip.text_hash, AUDIO_PROFILE],
+  );
+  if (existing.rowCount === 0) {
+    await client.query(
+      `insert into audio_clip (lang, text_hash, profile, clip_key, path, duration_ms, bytes, voice, source_text)
+       values ($1,$2,$3,$4,$5,$6,$7,$8,$9)`,
+      [lang, clip.text_hash, AUDIO_PROFILE, outcome.key, outcome.path, outcome.duration_ms, outcome.bytes, voice, clip.text],
+    );
+    counter.added++;
+    return;
+  }
+  const row = existing.rows[0];
+  // A voice change (0009's header: replacing reference_de.wav regenerates the
+  // whole course) keeps the same (lang, text_hash, profile) key but produces
+  // a new clip_key/path/voice — so this row updates in place rather than
+  // being reached only through insert.
+  const changed =
+    row.clip_key !== outcome.key ||
+    row.path !== outcome.path ||
+    row.duration_ms !== outcome.duration_ms ||
+    row.bytes !== outcome.bytes ||
+    row.voice !== voice ||
+    row.source_text !== clip.text;
+  if (changed) {
+    await client.query('update audio_clip set clip_key=$1, path=$2, duration_ms=$3, bytes=$4, voice=$5, source_text=$6 where id=$7', [
+      outcome.key,
+      outcome.path,
+      outcome.duration_ms,
+      outcome.bytes,
+      voice,
+      clip.text,
+      row.id,
+    ]);
+    counter.updated++;
+  } else {
+    counter.unchanged++;
+  }
+}
+
+/**
+ * Deletes audio_clip rows for `lang` whose (text_hash, profile) isn't in
+ * `seenKeys` — global per language, not per course, because a clip's natural
+ * key carries no course reference (0009's header: two German courses can
+ * share one recorded sentence). Only ever called from main() for a language
+ * at least one manifest was actually read for this run (§ syncAudioManifest
+ * docstring) — a course whose manifest doesn't exist yet must never cause
+ * another course's rows in the same language to be swept away.
+ */
+async function pruneAudioClips(client: Client, lang: string, seenKeys: Set<string>, counter: Counter): Promise<void> {
+  const result = await client.query(`delete from audio_clip where lang = $1 and (text_hash || '|' || profile) <> all($2::text[])`, [lang, [...seenKeys]]);
+  counter.removed += result.rowCount ?? 0;
+}
+
 // ───────────────────────────── checkpoint driver ─────────────────────────────
 // Checkpoints only carry exercises.yaml (+ optional writing.yaml) — no
 // vocab/theory/reading/flashcards (docs/CONTENT-PACKAGE-SCHEMA.md). A course's
@@ -1072,6 +1207,11 @@ function connectionString(): string {
 async function main() {
   const client = new Client({ connectionString: connectionString() });
   await client.connect();
+  // lang -> set of "text_hash|profile" seen across every course's audio
+  // manifest this run — accumulated here (not inside syncAudioManifest) so
+  // the prune below can act once, globally per language, after every course
+  // has had a chance to contribute (§ syncAudioManifest docstring).
+  const audioSeenByLang = new Map<string, Set<string>>();
   try {
     for (const root of COURSE_ROOTS) {
       const courseDir = path.join(REPO_ROOT, root);
@@ -1091,6 +1231,7 @@ async function main() {
       const course = parsed.data;
 
       await syncCourseSkeleton(client, course, courseYamlBytes);
+      await syncAudioManifest(client, course, courseDir, audioSeenByLang);
 
       const contentRoot = path.join(courseDir, 'content');
       for (const mod of courseModules(course)) {
@@ -1099,6 +1240,12 @@ async function main() {
       for (const cp of course.checkpoints) {
         await syncCheckpoint(client, course, cp, contentRoot);
       }
+    }
+
+    for (const [lang, seenKeys] of audioSeenByLang) {
+      const counter = newCounter();
+      await pruneAudioClips(client, lang, seenKeys, counter);
+      if (counter.removed > 0) console.log(`[audio:${lang}] pruned ${fmtCounter(counter)}`);
     }
   } finally {
     await client.end();

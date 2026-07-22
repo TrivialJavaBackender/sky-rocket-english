@@ -17,7 +17,20 @@ import { moduleStatusOnFirstEntry } from '../domain/module-state';
 import { nextVocabStatusOnPriorityMark } from '../domain/progress';
 import { computeGoalStatus, computeSessionCells, type GoalStatus, type SessionCellState } from '../domain/session-gating';
 import { partBounds, slicePart } from '../domain/content-slicing';
+import { paragraphTexts } from '../domain/audio-text';
+import {
+  resolveAudio,
+  attachVocabAudio,
+  attachSpotlightAudio,
+  attachWatchoutAudio,
+  attachReadingAudio,
+  paragraphSentences,
+  vocabAudioTexts,
+  spotlightAudioTexts,
+  watchoutAudioTexts,
+} from './audio';
 import type { GlossDTO, GrammarSpotlightDTO, ReadingTextDTO, VocabEntryDTO, WatchoutDTO } from '../repositories/content.repo';
+import type { AudioClipDTO } from './audio';
 import type { ExerciseGroup, ModuleGoal, ProgressStatus, ReadingKind, SessionType, StepKind } from '../domain/types';
 
 /** Compact step row inside a session's hub preview — enough for "what's in there" (incl. the Output writing task and extra text) without loading step content. */
@@ -60,6 +73,8 @@ export interface ReadingWithGlossesDTO {
   wordCount: number | null;
   paragraphs: ReadingTextDTO['body'];
   glosses: Record<string, GlossDTO>;
+  /** Per paragraph, the clips of whichever of its sentences were synthesized (ARCHITECTURE.md §4.8) — attached by getReadingWithGlosses/getUnit, absent if audio was never resolved for this instance. */
+  paragraphAudio?: AudioClipDTO[][];
 }
 
 export interface UnitDTO {
@@ -91,13 +106,32 @@ const LAUNCHER_COPY: Record<ExerciseGroup, { label: string; detail: (types: stri
   vocab: { label: 'Practise the vocabulary', detail: (types) => `${types} — practice set` },
 };
 
-export async function getReadingWithGlosses(moduleId: number, kind: ReadingKind): Promise<ReadingWithGlossesDTO | null> {
+/** Raw reading + glosses, no audio — shared by getReadingWithGlosses (its own scoped resolveAudio) and getUnit (folds into the hub's single combined resolveAudio call), so both routes split sentences exactly once and identically. */
+interface RawReading {
+  text: ReadingTextDTO;
+  glossMap: Record<string, GlossDTO>;
+  sentencesByParagraph: string[][];
+}
+
+async function fetchReadingRaw(moduleId: number, kind: ReadingKind): Promise<RawReading | null> {
   const text = await contentRepo.getReadingText(moduleId, kind);
   if (!text) return null;
   const glosses = await contentRepo.listGlossesForReadingText(text.id);
   const glossMap: Record<string, GlossDTO> = {};
   for (const g of glosses) glossMap[g.key] = g;
-  return { kind: text.kind, kicker: text.kicker, title: text.title, meta: text.meta, wordCount: text.wordCount, paragraphs: text.body, glosses: glossMap };
+  const sentencesByParagraph = paragraphSentences(paragraphTexts(text.body, glossMap));
+  return { text, glossMap, sentencesByParagraph };
+}
+
+function toReadingWithGlossesDTO(raw: RawReading): Omit<ReadingWithGlossesDTO, 'paragraphAudio'> {
+  return { kind: raw.text.kind, kicker: raw.text.kicker, title: raw.text.title, meta: raw.text.meta, wordCount: raw.text.wordCount, paragraphs: raw.text.body, glosses: raw.glossMap };
+}
+
+export async function getReadingWithGlosses(moduleId: number, kind: ReadingKind, lang: string): Promise<ReadingWithGlossesDTO | null> {
+  const raw = await fetchReadingRaw(moduleId, kind);
+  if (!raw) return null;
+  const clips = await resolveAudio(lang, raw.sentencesByParagraph.flat());
+  return { ...toReadingWithGlossesDTO(raw), paragraphAudio: attachReadingAudio(raw.sentencesByParagraph, clips) };
 }
 
 async function buildLaunchers(moduleId: number): Promise<UnitLauncherDTO[]> {
@@ -132,13 +166,16 @@ export async function markVocabPriority(userId: number, vocabEntryId: number): P
  * their own, without getUnit's extra work (session-cell/launcher building,
  * the first-entry module-state write).
  */
-export async function getModuleTheory(moduleId: number): Promise<{ spotlights: GrammarSpotlightDTO[]; watchouts: WatchoutDTO[] }> {
+export async function getModuleTheory(moduleId: number, lang: string): Promise<{ spotlights: GrammarSpotlightDTO[]; watchouts: WatchoutDTO[] }> {
   const [spotlights, watchouts] = await Promise.all([contentRepo.listSpotlightsForModule(moduleId), contentRepo.listWatchoutsForModule(moduleId)]);
-  return { spotlights, watchouts };
+  const clips = await resolveAudio(lang, [...spotlightAudioTexts(spotlights), ...watchoutAudioTexts(watchouts)]);
+  return { spotlights: attachSpotlightAudio(spotlights, clips), watchouts: attachWatchoutAudio(watchouts, clips) };
 }
 
-export async function getModuleVocab(userId: number, moduleId: number): Promise<VocabEntryDTO[]> {
-  return contentRepo.listVocabForModule(userId, moduleId);
+export async function getModuleVocab(userId: number, moduleId: number, lang: string): Promise<VocabEntryDTO[]> {
+  const entries = await contentRepo.listVocabForModule(userId, moduleId);
+  const clips = await resolveAudio(lang, vocabAudioTexts(entries));
+  return attachVocabAudio(entries, clips);
 }
 
 /** UC-06 dosed theory: step config {"part":P,"of":N} → the P-th balanced slice of the module's ordered spotlights and watchouts (PLAN.md §3: part 1 in Prime, part 2 in Workout). */
@@ -146,8 +183,9 @@ export async function getModuleTheorySlice(
   moduleId: number,
   part: number,
   of: number,
+  lang: string,
 ): Promise<{ spotlights: GrammarSpotlightDTO[]; watchouts: WatchoutDTO[]; part: number; of: number }> {
-  const { spotlights, watchouts } = await getModuleTheory(moduleId);
+  const { spotlights, watchouts } = await getModuleTheory(moduleId, lang);
   return { spotlights: slicePart(spotlights, part, of), watchouts: slicePart(watchouts, part, of), part, of };
 }
 
@@ -157,8 +195,9 @@ export async function getModuleVocabBatch(
   moduleId: number,
   batch: number,
   of: number,
+  lang: string,
 ): Promise<{ entries: VocabEntryDTO[]; rangeStart: number; rangeEnd: number; total: number; batch: number; of: number }> {
-  const all = await getModuleVocab(userId, moduleId);
+  const all = await getModuleVocab(userId, moduleId, lang);
   const { start, end } = partBounds(all.length, batch, of);
   return { entries: all.slice(start, end), rangeStart: start + 1, rangeEnd: end, total: all.length, batch, of };
 }
@@ -223,14 +262,30 @@ export async function getUnit(userId: number, courseSlug: string, moduleSlug: st
     };
   });
 
-  const [spotlights, watchouts, reading, readingExtra, vocabEntries, launchers] = await Promise.all([
+  const [spotlights, watchouts, mainRaw, extraRaw, vocabEntries, launchers] = await Promise.all([
     contentRepo.listSpotlightsForModule(module.id),
     contentRepo.listWatchoutsForModule(module.id),
-    getReadingWithGlosses(module.id, 'main'),
-    getReadingWithGlosses(module.id, 'extra'),
+    fetchReadingRaw(module.id, 'main'),
+    fetchReadingRaw(module.id, 'extra'),
     contentRepo.listVocabForModule(userId, module.id),
     buildLaunchers(module.id),
   ]);
+
+  // ARCHITECTURE.md §4.8: the whole hub page shares one resolveAudio round
+  // trip rather than one per section — every vocab term/use case, spotlight
+  // example, watchout good line, and both texts' sentences collapse into a
+  // single `text_hash IN (...)` query (bypassing getReadingWithGlosses'
+  // per-call resolveAudio, which would otherwise cost two more).
+  const clips = await resolveAudio(course.language, [
+    ...vocabAudioTexts(vocabEntries),
+    ...spotlightAudioTexts(spotlights),
+    ...watchoutAudioTexts(watchouts),
+    ...(mainRaw?.sentencesByParagraph.flat() ?? []),
+    ...(extraRaw?.sentencesByParagraph.flat() ?? []),
+  ]);
+
+  const reading = mainRaw ? { ...toReadingWithGlossesDTO(mainRaw), paragraphAudio: attachReadingAudio(mainRaw.sentencesByParagraph, clips) } : null;
+  const readingExtra = extraRaw ? { ...toReadingWithGlossesDTO(extraRaw), paragraphAudio: attachReadingAudio(extraRaw.sentencesByParagraph, clips) } : null;
 
   return {
     moduleId: module.id,
@@ -244,12 +299,12 @@ export async function getUnit(userId: number, courseSlug: string, moduleSlug: st
     goals,
     sessions: sessionCells,
     continueTarget,
-    spotlights,
-    watchouts,
+    spotlights: attachSpotlightAudio(spotlights, clips),
+    watchouts: attachWatchoutAudio(watchouts, clips),
     reading,
     readingExtra,
     vocabTitle: 'Vocabulary in focus',
-    vocabEntries,
+    vocabEntries: attachVocabAudio(vocabEntries, clips),
     launchers,
   };
 }

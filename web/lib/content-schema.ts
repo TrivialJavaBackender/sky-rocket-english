@@ -366,3 +366,49 @@ export const WritingPackageSchema = z
     }
   });
 export type WritingPackage = z.infer<typeof WritingPackageSchema>;
+
+// ───────────────────────────── audio/manifest.json ─────────────────────────────
+// Committed output of scripts/audio.ts, read back by scripts/sync.ts
+// (ARCHITECTURE.md §4.8). Not a module content package — one manifest per
+// course, at courses/<slug>/audio/manifest.json, covering every module's
+// vocab/theory/reading audio in one file so a single content_hash-style gate
+// (course.audio_manifest_hash) can skip the whole course in 0 queries.
+
+export const AudioClipRenderSchema = z.object({
+  key: z.string().min(1),
+  // '/audio/de/a3/<key>.opus' — served straight from web/public, and joined
+  // onto lib/audio/config.ts's WEB_PUBLIC_DIR to find the blob on disk.
+  path: z.string().min(1),
+  duration_ms: z.number().int().nonnegative(),
+  bytes: z.number().int().positive(),
+});
+export type AudioClipRender = z.infer<typeof AudioClipRenderSchema>;
+
+export const AudioManifestClipSchema = z.object({
+  // Normalized text (normalizeAudioText) — the source of both text_hash and
+  // what was actually sent to tts-mcp, kept for debugging and coverage
+  // reports rather than re-derived from text_hash (which is one-way).
+  text: z.string().min(1),
+  text_hash: z
+    .string()
+    .regex(/^[0-9a-f]{64}$/, 'expected a lowercase 64-char hex sha256(normalizeAudioText(text))'),
+  // Every "field|kind|position|..." locator this text came from (a term can
+  // repeat as both a vocab entry and inside a use_case) — debugging and the
+  // per-module coverage count in scripts/audio.ts's report, never read back
+  // by sync.
+  refs: z.array(z.string().min(1)).min(1),
+  // Keyed by profile name — today only AUDIO_PROFILE ('normal') is ever
+  // populated, but this carries tts-mcp's own per-profile manifest shape
+  // through unflattened rather than assuming there is exactly one.
+  audio: z.record(z.string(), AudioClipRenderSchema),
+});
+export type AudioManifestClip = z.infer<typeof AudioManifestClipSchema>;
+
+export const AudioManifestSchema = z.object({
+  schema_version: z.literal(1),
+  lang: z.string().min(2),
+  engine: z.string().min(1),
+  voice: z.string().min(1),
+  clips: z.array(AudioManifestClipSchema),
+});
+export type AudioManifest = z.infer<typeof AudioManifestSchema>;

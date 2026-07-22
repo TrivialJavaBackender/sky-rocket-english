@@ -12,6 +12,12 @@ dist
 dist-ssr
 *.local
 
+# Audio pipeline intermediates (scripts/audio.ts) — phrases.json and
+# tts-mcp's own render manifest. The committed output is
+# courses/<slug>/audio/manifest.json, one level up from here, plus the
+# .opus blobs under web/public/audio/ (both tracked normally).
+courses/*/audio/.build/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

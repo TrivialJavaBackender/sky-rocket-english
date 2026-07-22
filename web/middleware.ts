@@ -70,8 +70,21 @@ export async function middleware(request: NextRequest) {
 }
 
 export const config = {
-  // Everything except Next's own assets and static files. `_next/static` and
-  // `_next/image` are public by design; matching them would just burn CPU on
-  // every asset request.
-  matcher: ['/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp|ico|txt|webmanifest)$).*)'],
+  // Everything except Next's own assets, static files, and audio. `_next/static`
+  // and `_next/image` are public by design; matching them would just burn CPU
+  // on every asset request.
+  //
+  // `audio/`, `sw.js`, and the `.opus` extension are excluded for a different
+  // reason than the rest of this list: a clip under /audio/** is
+  // content-addressed, immutable, public course material with no personal
+  // data in it at all (ARCHITECTURE.md §4.8 — the filename *is* a hash of
+  // engine+voice+text), so gating it behind the login cookie would buy no
+  // privacy. It would actively break playback and offline caching, though:
+  // an <audio>'s own Range requests and the service worker's background
+  // `fetch()` calls (sw.js, populating the cache from "Save audio offline"
+  // or from a stale/expired access cookie between silent refreshes) have no
+  // access to this middleware's redirect-and-refresh dance, so a gated
+  // /audio/... would sometimes hand back a 307-to-/login response — HTML,
+  // not audio — for the player or the cache to choke on instead of bytes.
+  matcher: ['/((?!_next/static|_next/image|favicon.ico|audio/|sw\\.js|.*\\.(?:svg|png|jpg|jpeg|gif|webp|ico|txt|webmanifest|opus)$).*)'],
 };

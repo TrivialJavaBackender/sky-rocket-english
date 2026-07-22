@@ -1,6 +1,6 @@
 # SkyRocket · Data Model — Neon Postgres
 
-Схема данных курс-агностичного движка изучения языков: контент модулей, недельный протокол сессий, пользователи и три колеи повторений. Спроектирована по утверждённому дизайну (`docs/design/skyrocket/` — `content.js` задаёт формы данных экранов), дизайн-брифу и плану курса (`courses/en-c1/PLAN.md`). Миграции: `db/migrations/0001_init.sql` (DDL + сид типов упражнений), `db/migrations/0002_seed_en_c1_skeleton.sql` (каркас курса en-c1), `db/migrations/0003_content_natural_keys.sql` (стабильные натуральные ключи `ident` для `exercise`/`writing_task`/`flashcard` — см. ниже), `db/migrations/0004_dose_theory_vocab_across_sessions.sql` (пересев `session_step`: дозирование теории/лексики по сессиям, детали шагов = микро-цели; DDL не меняет, сбрасывает `user_step_state`/`user_session_state` курса en-c1), `db/migrations/0006_course_skeleton_from_yaml.sql` (`course.skeleton_hash`).
+Схема данных курс-агностичного движка изучения языков: контент модулей, недельный протокол сессий, пользователи и три колеи повторений. Спроектирована по утверждённому дизайну (`docs/design/skyrocket/` — `content.js` задаёт формы данных экранов), дизайн-брифу и плану курса (`courses/en-c1/PLAN.md`). Миграции: `db/migrations/0001_init.sql` (DDL + сид типов упражнений), `db/migrations/0002_seed_en_c1_skeleton.sql` (каркас курса en-c1), `db/migrations/0003_content_natural_keys.sql` (стабильные натуральные ключи `ident` для `exercise`/`writing_task`/`flashcard` — см. ниже), `db/migrations/0004_dose_theory_vocab_across_sessions.sql` (пересев `session_step`: дозирование теории/лексики по сессиям, детали шагов = микро-цели; DDL не меняет, сбрасывает `user_step_state`/`user_session_state` курса en-c1), `db/migrations/0006_course_skeleton_from_yaml.sql` (`course.skeleton_hash`), `db/migrations/0009_audio_clip.sql` (таблица `audio_clip` + `course.audio_manifest_hash` — тот же гейт-паттерн, что и `skeleton_hash`, для коммитируемого аудио-манифеста курса).
 
 **Структура курса больше не задаётся миграциями.** `0002` и `0004` остаются применёнными как история, но каркас (`course`, `block`, `module`, `checkpoint`, `study_session`, `session_step`) теперь приходит из `courses/<slug>/course.yaml` через `pnpm sync`, который апсертит его по натуральным ключам этих таблиц. Новый курс или правка протокола — это правка YAML, а не новая миграция (см. `docs/ARCHITECTURE.md` §4.1).
 
@@ -67,7 +67,16 @@ erDiagram
     enum source "content|error_harvest|gloss|manual"
     text ident UK "натуральный ключ sync, глобально уникален"
   }
+  audio_clip {
+    text lang "'de' — без FK на course, сверяется по значению"
+    char text_hash "sha256(normalizeAudioText(text)); UK вместе с lang+profile"
+    text profile "всегда 'normal' (lib/audio/config.ts)"
+    text clip_key "content_key tts-mcp — имя файла блоба"
+    text path "/audio/de/xx/key.opus"
+  }
 ```
+
+`audio_clip` не связан ни с одной сущностью выше по FK: его натуральный ключ `(lang, text_hash, profile)` не несёт ссылку на курс, поэтому клип, синтезированный для одного немецкого курса, доступен и любому другому курсу с тем же `language` (`db/migrations/0009_audio_clip.sql`).
 
 ### Недельный протокол сессий
 
@@ -141,7 +150,7 @@ erDiagram
 
 | Таблица | Назначение | Ключевое |
 |---|---|---|
-| `course` | Курс (язык) | `slug` unique; `level_label` для шапки («B2+ → C1») |
+| `course` | Курс (язык) | `slug` unique; `level_label` для шапки («B2+ → C1»); `audio_manifest_hash` (0009) — гейт синка аудио-манифеста, по образцу `skeleton_hash` |
 | `block` | Блок из 4 модулей | `color`/`tint` — цветовой код карты; unique(course, slug) |
 | `module` | Учебный модуль-неделя | `standfirst`, `goals jsonb` — с 0004 канонически `[{text, achieved_by}]`, где `achieved_by` — сессия, закрывающая цель (ARCHITECTURE §8 D12); unique(block, slug) |
 | `checkpoint` | Ворота: диагностика / чек-пойнт блока / финальный мок | `kind`; `pass_mark` (null у диагностики, 75 у блоков, 65 у финала); CHECK связки kind↔block |
@@ -160,6 +169,7 @@ erDiagram
 | `exercise` | Задание | владелец: модуль XOR чек-пойнт; `pool` core/review; `group_key` — лончеры юнита; `content jsonb` по типу; `explanation` EN; `ident` (0003) — натуральный ключ sync, partial unique `(module_id, ident)`/`(checkpoint_id, ident)` |
 | `writing_task` | Письмо / спикинг | `mode`, `genre`, `model_answer_md`, `checklist jsonb`; `ident` (0003) — натуральный ключ sync, partial unique `(module_id, ident)`/`(checkpoint_id, ident)` |
 | `flashcard` | Карточка (3 note-типа) | `fields jsonb` `{front, main, cases, extra}`; `source`: content / error_harvest / gloss / manual + ссылки на источник; `ident` (0003) — натуральный ключ sync, глобально unique |
+| `audio_clip` (0009) | Озвучка (только курсы `language: de`) | не привязана к курсу — `unique(lang, text_hash, profile)`; `text_hash = sha256(normalizeAudioText(text))` — ключ поиска приложения; `clip_key`/`path`/`voice` — адресация `tts-mcp`, копируются как есть; прунится глобально по языку (`scripts/sync.ts`), а не по курсу |
 
 ### Протокол сессий
 
@@ -851,6 +861,72 @@ create unique index writing_task_checkpoint_ident_uniq
 
 alter table flashcard add column ident text;
 create unique index flashcard_ident_uniq on flashcard (ident);
+
+commit;
+```
+
+### db/migrations/0009_audio_clip.sql
+
+```sql
+-- 0009 · audio_clip: content-addressed TTS output (courses/<slug>/audio/manifest.json).
+--
+-- Course audio (docs/ARCHITECTURE.md §4.8) is generated offline by tts-mcp and
+-- synced from a committed manifest — Netlify never runs TTS (no GPU on the
+-- build). The row's natural key is (lang, text_hash, profile), a sha256 of
+-- normalizeAudioText(text), not a (module_id, position) pointer — for the same
+-- reason content tables already carry a content_hash gate instead of trusting
+-- position: a positional key would keep silently serving the *old* clip the
+-- moment a sentence is edited or the paragraph reordered, because the row
+-- would still sit at that slot. Keying by the text itself fails safe instead —
+-- editing a sentence changes its hash, the old row simply stops being looked
+-- up, the ▶ button disappears until the next `pnpm audio`, and nothing ever
+-- plays stale pronunciation under a fresh sentence.
+--
+-- `clip_key` and `path` are tts-mcp's own content-addressed identity (sha256 of
+-- engine+voice+profile+profile_version+text, see tts-mcp's core/keys.py) —
+-- carried through verbatim so this app never reimplements that formula. The
+-- app only ever looks things up by its own `text_hash`; `clip_key`/`path` are
+-- just where the answer points.
+--
+-- `profile` stays a column even though exactly one profile (`normal`) exists
+-- today: tts-mcp's manifest already carries a profile per clip at no cost, the
+-- (lang, text_hash, profile) key falls out of that for free, and dropping the
+-- column now would mean widening the unique key again the day a second
+-- profile (e.g. `slow`) ships. The one-profile rule is enforced above the DB,
+-- in lib/audio/config.ts's AUDIO_PROFILE constant — there is no profile picker
+-- in the UI — so adding a profile later is additive, not a migration.
+--
+-- Clips are not owned by a course: two German courses saying the same sentence
+-- share one row, because the key is (lang, text_hash, profile). scripts/sync.ts
+-- prunes this table globally per language for the same reason, not per course.
+
+begin;
+
+create table if not exists audio_clip (
+  id            bigserial primary key,
+  lang          text     not null,
+  text_hash     char(64) not null,   -- sha256(normalizeAudioText(text)) — the lookup key the app uses
+  profile       text     not null,   -- always 'normal' today; see header
+  clip_key      char(64) not null,   -- tts-mcp's own content_key (the blob's filename)
+  path          text     not null,   -- '/audio/de/a3/<key>.opus' — served straight from web/public
+  duration_ms   integer  not null,
+  bytes         integer  not null,
+  voice         text     not null,
+  source_text   text     not null,   -- normalized original text: coverage reports and debugging
+  unique (lang, text_hash, profile)
+);
+create index if not exists audio_clip_lookup_idx on audio_clip (lang, text_hash);
+
+comment on column audio_clip.text_hash is
+  'sha256(normalizeAudioText(text)) — how the app asks "is there a clip for this string", independent of tts-mcp''s own key formula.';
+comment on column audio_clip.clip_key is
+  'tts-mcp content_key (engine+voice+profile+profile_version+text) — the blob''s filename on disk; this app never recomputes it.';
+comment on column audio_clip.profile is
+  'Always ''normal'' today (lib/audio/config.ts AUDIO_PROFILE, no UI picker) — kept as a column because it is free from tts-mcp''s manifest and widening the unique key later would be worse than carrying it now.';
+
+-- Gate hash over courses/<slug>/audio/manifest.json, mirroring course.skeleton_hash
+-- (0006): a matching hash lets scripts/sync.ts skip a course's audio in 0 queries.
+alter table course add column if not exists audio_manifest_hash text;
 
 commit;
 ```

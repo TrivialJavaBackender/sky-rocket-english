@@ -6,6 +6,7 @@ import * as unitUseCase from '@/lib/use-cases/unit';
 import * as exerciseSetUseCase from '@/lib/use-cases/exercise-set';
 import * as writingUseCase from '@/lib/use-cases/writing';
 import type { ExerciseGroup, ExerciseTypeCode, ProgressStatus, ReadingKind, SessionType } from '@/lib/domain/types';
+import { paragraphTexts } from '@/lib/domain/audio-text';
 import { LinkButton } from '@/components/ui/LinkButton';
 import { Card } from '@/components/ui/Card';
 import { Kicker } from '@/components/ui/Kicker';
@@ -108,6 +109,7 @@ export default async function SessionPage({
             key={viewedStep.id}
             userId={userId}
             moduleId={session.moduleId}
+            language={session.language}
             stepId={viewedStep.id}
             kind={viewedStep.kind}
             title={viewedStep.title}
@@ -138,6 +140,7 @@ export default async function SessionPage({
 async function ActiveStepPanel({
   userId,
   moduleId,
+  language,
   stepId,
   kind,
   title,
@@ -146,6 +149,8 @@ async function ActiveStepPanel({
 }: {
   userId: number;
   moduleId: number;
+  /** Course language (ARCHITECTURE.md §4.8) — threaded into the theory/reading/vocab use-case calls below so a German course's steps resolve audio and an en-c1 page costs zero audio queries. */
+  language: string;
   stepId: number;
   kind: string;
   title: string;
@@ -169,7 +174,7 @@ async function ActiveStepPanel({
       // Dosed theory (PLAN.md §3): {"part":P,"of":N} slices the module's ordered spotlights/watchouts — part 1 in Prime, part 2 in Workout.
       const part = typeof config.part === 'number' ? config.part : 1;
       const of = typeof config.of === 'number' ? config.of : 1;
-      const { spotlights, watchouts } = await unitUseCase.getModuleTheorySlice(moduleId, part, of);
+      const { spotlights, watchouts } = await unitUseCase.getModuleTheorySlice(moduleId, part, of, language);
       if (spotlights.length === 0 && watchouts.length === 0) {
         return (
           <Card>
@@ -198,7 +203,7 @@ async function ActiveStepPanel({
     case 'reading': {
       const readingKind = (config.reading_kind as ReadingKind | undefined) ?? 'main';
       const mode = config.mode === 'skim' ? 'skim' : 'close';
-      const reading = await unitUseCase.getReadingWithGlosses(moduleId, readingKind);
+      const reading = await unitUseCase.getReadingWithGlosses(moduleId, readingKind, language);
       if (!reading) {
         return (
           <Card>
@@ -215,7 +220,7 @@ async function ActiveStepPanel({
           {reading.kicker && <Kicker>{reading.kicker}</Kicker>}
           <h2 className="text-pretty m-0 mb-1 mt-1 text-[22px] leading-[1.2] tracking-[-.01em]">{reading.title}</h2>
           {reading.meta && <div className="mb-3.5 text-[13px] text-fg-subtle">{reading.meta}</div>}
-          <ReadingText paragraphs={reading.paragraphs} glosses={reading.glosses} moduleId={moduleId} glossesEnabled={mode !== 'skim'} />
+          <ReadingText paragraphs={reading.paragraphs} glosses={reading.glosses} moduleId={moduleId} glossesEnabled={mode !== 'skim'} paragraphAudio={reading.paragraphAudio} />
           <div className="mt-3">
             <MarkStepDone stepId={stepId} done={done} />
           </div>
@@ -227,7 +232,7 @@ async function ActiveStepPanel({
       // Dosed vocabulary (PLAN.md §3): {"batch":B,"of":N} slices the 45 lexemes into balanced batches — 1/3 in Prime, 2/3 and 3/3 in Input.
       const batch = typeof config.batch === 'number' ? config.batch : 1;
       const of = typeof config.of === 'number' ? config.of : 1;
-      const { entries, rangeStart, rangeEnd, total } = await unitUseCase.getModuleVocabBatch(userId, moduleId, batch, of);
+      const { entries, rangeStart, rangeEnd, total } = await unitUseCase.getModuleVocabBatch(userId, moduleId, batch, of, language);
       return (
         <div>
           <VocabStudio title={title} entries={entries} rangeLabel={of > 1 ? `Lexemes ${rangeStart}–${rangeEnd} of ${total}` : undefined} />
@@ -292,15 +297,17 @@ async function ActiveStepPanel({
       // Fix 3: Input's close-reading step is followed by a reading_comprehension
       // exercise_set, but by then the text is gone. When this set is quizzing on
       // the reading, fetch it too and flatten it server-side into plain-text
-      // paragraphs (gloss segments resolve to their term, same as ReadingText's
-      // client-side join) so ExercisePlayer can show it in a collapsible panel.
+      // paragraphs so ExercisePlayer can show it in a collapsible panel.
+      // paragraphTexts is the same join scripts/audio.ts uses to turn this same
+      // body into sentences to synthesize, so a gloss resolves identically here,
+      // there, and in ReadingText's own client-side join.
       let readingTitle: string | undefined;
       let readingParagraphs: string[] | undefined;
       if (types?.includes('reading_comprehension')) {
-        const reading = await unitUseCase.getReadingWithGlosses(moduleId, 'main');
+        const reading = await unitUseCase.getReadingWithGlosses(moduleId, 'main', language);
         if (reading) {
           readingTitle = reading.title;
-          readingParagraphs = reading.paragraphs.map((para) => para.map((seg) => ('t' in seg ? seg.t : (reading.glosses[seg.g]?.term ?? seg.g))).join(''));
+          readingParagraphs = paragraphTexts(reading.paragraphs, reading.glosses);
         }
       }
 

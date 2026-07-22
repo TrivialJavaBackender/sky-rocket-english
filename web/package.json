@@ -10,6 +10,7 @@
     "lint": "next lint",
     "migrate": "tsx scripts/migrate.ts",
     "sync": "tsx scripts/sync.ts",
+    "audio": "tsx scripts/audio.ts",
     "verify-backend": "tsx scripts/verify-backend.ts",
     "reset-progress": "tsx scripts/reset-progress.ts",
     "db:pull": "prisma db pull && prisma generate",

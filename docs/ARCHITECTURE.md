@@ -220,6 +220,10 @@ web/
       exercise-types/                   # McCloze, OpenCloze, WordFormation, Kwt,
                                         #   GrammarDrill, ErrorCorrection, CollocationMatch, ReadingComprehension
     reading/ReadingText.tsx             # UC-07 глоссы (client — тап-раскрытие)
+    audio/                               # §4.8 — общий плеер и офлайн-доставка озвучки
+      AudioProvider.tsx                  # 'use client' — один <audio> на всё приложение; play/playSequence/stop/prefetch
+      PlayButton.tsx                     # ▶/⏸ одного клипа; null, если клипа нет
+      DownloadModuleAudio.tsx            # «Save audio offline» — префетч всех клипов модуля через SW
     map/  today/  progress/  unit/      # презентационные (server) компоненты экранов
     ui/                                 # примитивы (Badge, Card, ProgressBar, BottomNav, SideRail)
   lib/
@@ -235,12 +239,13 @@ web/
       progress.ts                       # агрегаты статусов (доли Known+/Reliable/retention)
       time.ts                           # startOfDay/addDays (из референса leitner.ts)
       types.ts                          # доменные типы (ExerciseContent-юнион, GivenAnswer, статусы)
+      audio-text.ts                     # normalizeAudioText/splitSentences — общий код sync, scripts/audio.ts и страниц (§4.8)
     use-cases/                          # application-слой, 'server-only'; оркестрирует repo + domain
       today.ts  course-map.ts  unit.ts  session.ts  exercise-set.ts
-      flashcards.ts  review.ts  module-review.ts  checkpoint.ts  progress.ts  writing.ts  course-switch.ts
+      flashcards.ts  review.ts  module-review.ts  checkpoint.ts  progress.ts  writing.ts  course-switch.ts  audio.ts
     repositories/                       # доступ к БД через Prisma; ТОЛЬКО здесь Prisma
       course.repo.ts  module.repo.ts  content.repo.ts  exercise.repo.ts
-      progress.repo.ts  srs.repo.ts  review.repo.ts  writing.repo.ts  activity.repo.ts
+      progress.repo.ts  srs.repo.ts  review.repo.ts  writing.repo.ts  activity.repo.ts  audio.repo.ts
     db.ts                               # PrismaClient singleton (из референса)
     serialize.ts                        # BigInt → number на границе repo (§3, разн. D7)
     current-user.ts                     # getCurrentUserId(): id из cookie-сессии (§8 D10)
@@ -249,11 +254,16 @@ web/
       cookies.ts                        # имена и флаги httpOnly-кук (единственное место)
       session.ts                        # чтение сессии из кук в RSC/Server Actions
     content-schema.ts                   # zod-типы YAML пакета (общие для sync и рантайма)
+    audio/
+      config.ts                         # AUDIO_PROFILE/AUDIO_LANGS, пути блобов — общие для scripts/audio.ts и sync.ts (§4.8)
   prisma/
     schema.prisma                       # ИНТРОСПЕКТИРОВАННАЯ схема (prisma db pull), @@map на snake_case
   scripts/
     migrate.ts                          # применяет db/migrations/*.sql идемпотентно (§3.2)
     sync.ts                             # content/<course> → БД (§4)
+    audio.ts                            # генерация озвучки: plan → synth → import (§4.8)
+  public/
+    sw.js                                # service worker — cache-first для /audio/** (§4.8, §7.2)
   middleware.ts                         # гейт + тихое обновление access-токена (§8 D10)
   content.config.ts                     # реестр курсов и модулей (порядок, slug) — §4.1
   docker-compose.yml                    # Postgres 16 локально (из референса)
@@ -432,6 +442,29 @@ export const COURSE_ROOTS: string[] = ['courses/en-c1', 'courses/de-a2'];
 
 **Языковая параметризация.** Схемы курс-агностичны с одним исключением: правило восстановимости пропуска `open_cloze` должно знать, какие слова вынуждены грамматикой этого языка. Поэтому вместо готового значения экспортируется фабрика `makeExercisesPackageSchema(language)`, а списки служебных слов лежат в `lib/content-gap-words/<lang>.ts` за диспетчером `index.ts`. Язык берётся из `course.yaml`; для языка без своего файла синк падает с указанием, какой файл создать. `course-schema.ts` дополнительно проверяет то, что БД проверила бы позже и хуже: соответствие `kind` чек-пойнта наличию блока (зеркало CHECK-констрейнта), уникальность slug'ов модулей и типов сессий.
 
+### 4.8. Аудио-манифест
+
+Курсы с `language: de` (сейчас — только `de-a2`) несут озвучку части контента: `pnpm audio` синтезирует её оффлайн через `tts-mcp` (Chatterbox, CUDA) и кладёт результат в репозиторий как обычный контент — сам sync никогда не обращается к TTS.
+
+**Цикл:** автор с локальным GPU и `tts-mcp` (`.venv` с extra `[chatterbox]`) запускает `pnpm audio -- --course de-a2` → `.opus`-блобы в `web/public/audio/de/<xx>/<key>.opus` и `courses/de-a2/audio/manifest.json` коммитятся в репозиторий → `pnpm sync` (локально и на билде) читает манифест и заливает `audio_clip`. **Netlify TTS не запускает никогда** — GPU-модели на билде нет и не будет, `next build` только читает уже закоммиченные блобы и манифест.
+
+**`scripts/audio.ts`** (`pnpm audio -- --course <slug> [--module <slug>] [--dry-run] [--skip-synth] [--no-prune]`) — три фазы одного процесса, потому что модель Chatterbox грузится один раз за запуск:
+1. **plan** — обход `courses/<slug>/content/<dir>/` теми же zod-схемами, что и sync (`VocabPackageSchema`, `TheoryPackageSchema`, `ReadingPackageSchema`), сбор фраз по фиксированному списку полей (`docs/CONTENT-PACKAGE-SCHEMA.md` «Аудио»), дедуп по `normalizeAudioText`, запись `courses/<slug>/audio/.build/phrases.json` (не коммитится).
+2. **synth** — `spawn` бинаря `tts-mcp batch … --profiles normal` (`TTS_ENGINE=chatterbox`, `stdio: inherit` — прогресс и брак tts-mcp видны прямо в выводе `pnpm audio`); повторный запуск дёшев — tts-mcp дедуплицирует по своему контентно-адресуемому кешу.
+3. **import** — копирует новые блобы из кеша tts-mcp в `web/public/audio`, пишет коммитируемый `courses/<slug>/audio/manifest.json` (отсортирован по `text_hash` — стабильный diff), прунит из `web/public/audio/<lang>/**` файлы, не упомянутые ни одним манифестом этого языка, печатает отчёт (клипов на модуль, суммарный вес, непросинтезированные фразы, предложения длиннее `MAX_SENTENCE_CHARS`).
+
+**Адресация — по тексту, не по позиции** (мотивация — §8 D15). Приложение ищет клип по собственному `text_hash = sha256(normalizeAudioText(text))`; `clip_key`/`path` манифеста — родная адресация tts-mcp (движок+голос+профиль+версия параметров+текст), приложение её только копирует и никогда не пересчитывает.
+
+**`syncAudioManifest`** (`scripts/sync.ts`, вызывается в `main()` сразу после `syncCourseSkeleton`, до модулей курса):
+- нет `courses/<slug>/audio/manifest.json` → warn + skip, как отсутствующий пакет модуля — en-c1 (язык не `de`) живёт без аудио постоянно, de-a2 получает его после своего контента;
+- гейт `course.audio_manifest_hash` (sha256 байтов файла, по образцу `course.skeleton_hash` из `0006`) — совпал → «audio unchanged — 0 queries»; даже на этом быстром пути функция обязана добавить ключи курса в общую по языку карту `seen`, иначе прунинг ниже стёр бы валидные строки другого курса того же языка, чей манифест в этом прогоне не менялся;
+- перед upsert каждой строки — проверка блоба на диске (`web/public/audio` + путь манифеста): нет файла → warn + строка не пишется, тот же принцип «отсутствующая кнопка лучше 404 в плеере», что у остальных сущностей sync;
+- upsert по `(lang, text_hash, profile)`, счётчики `+/~/=/-`.
+
+**Прунинг — глобальный по языку, не по курсу.** `main()` копит `Map<lang, Set<"text_hash|profile">>` по всем курсам одного прогона и один раз в конце удаляет из `audio_clip` лишние строки этого `lang` — натуральный ключ клипа не содержит курс (два курса на одном языке могут делить одну и ту же озвученную фразу), «прунинг по курсу» стёр бы чужие валидные строки.
+
+`profile` остаётся колонкой даже при одном значении: сейчас всегда `'normal'` (константа `AUDIO_PROFILE`, `lib/audio/config.ts`, выбора в UI нет), но она бесплатно приезжает из манифеста tts-mcp, а без неё второй профиль (`slow` и т. п.) в будущем потребовал бы расширять уникальный ключ отдельной миграцией.
+
 ---
 
 ## 5. Проверка ответов упражнений (8 типов)
@@ -532,8 +565,11 @@ export const COURSE_ROOTS: string[] = ['courses/en-c1', 'courses/de-a2'];
 - `VocabStudio` может быть островом, если нужна отметка приоритета (иначе SSR).
 - `WritingEditor` (UC-10): textarea + счётчик слов → `submitWriting`.
 - Свитчер курса, боттом-нав/рельса (клиент для активного состояния и навигации).
+- `AudioProvider` + `PlayButton` + `DownloadModuleAudio` (§4.8): `AudioProvider` монтируется один раз в `app/(app)/layout.tsx` вокруг `children` и держит единственный на всё приложение `<audio>`-элемент (`play`/`playSequence`/`stop`/`prefetch`) — «играет ровно один клип» следует из того, что элемент один, а не из координации между кнопками. `PlayButton` — тонкий остров (`null`, если у DTO нет клипа), встроенный в серверные `GrammarSpotlight` (у `row.example`) и `WatchoutBox` (у строки ✓, никогда у `bad_example`); в клиентском `VocabStudio` — у `term` и перед каждым `use_cases[i]`; в клиентском `ReadingText` — кнопка `[▶ Play all]` над текстом и кнопка на каждом абзаце, обе через `playSequence` по предложениям абзаца, с подсветкой играющего абзаца. `DownloadModuleAudio` на странице модуля одним сообщением `prefetch(urls)` просит service worker закешировать весь список клипов модуля целиком — прогресс идёт отдельными `postMessage` от `public/sw.js`, а не через `AudioContext`.
 
 **Данные для островов** передаются из RSC как сериализованные props (после `serialize.ts`), в форме `content.js`. Острова не читают БД.
+
+**Кеш аудио** — `public/sw.js`, единственный service worker приложения: перехватывает только `GET /audio/**`, всё остальное (навигации, server actions, другие origin'ы) пропускает нетронутым — нет ни одного `respondWith` вне этой ветки. Стратегия cache-first безопасна именно потому, что путь клипа — хеш нормализованного текста (§8 D15): один и тот же URL никогда не начнёт отдавать другие байты, второй заход не обязан спрашивать сеть о свежести. Обязательна ветка `Range`: медиа-элементы всегда шлют `Range: bytes=0-` для проверки перемотки, поэтому воркер режет закешированное тело на `206` сам, а не отдаёт только то, с чем впервые встретился.
 
 ---
 
@@ -592,6 +628,10 @@ export const COURSE_ROOTS: string[] = ['courses/en-c1', 'courses/de-a2'];
 → **Предлагаемое решение:** миграция — `grammar_spotlight.module_id` делается nullable, добавляется `checkpoint_id` и CHECK-констрейнт вида `exercise_owner` (ровно один владелец); `syncCheckpoint` начинает читать опциональный `theory.yaml`; страница чек-пойнта получает секцию с теорией. Открытый подвопрос: справочник уровня **курса**, а не чек-пойнта, — Grammatik-Wörterbuch логичнее держать доступным из любого модуля, и тогда владельцем должен быть `course_id`, а в навигации нужен раздел «Справочник». **Приоритет — средний:** обходное решение держит de-a2, но каждый новый курс на A-уровне упрётся в то же самое.
 
 **D14 · Хаб модуля не загейчен, в отличие от сессий.** `/course/<slug>/module/<slug>` отдаёт 200 для модуля со статусом `locked` — карта курса просто не рисует ссылку, а сессии внутри гейтит D11. Поведение существует с этапа 4 и одинаково для обоих курсов; на de-a2 оно заметнее, потому что у заблокированных модулей ещё нет контента, и хаб рендерится полупустым. → **Предлагаемое решение:** `getUnit` возвращает `{kind:'locked'}` для модуля, чей `user_module_state.status = 'locked'`, страница делает redirect на `/course` — ровно тем же приёмом, что `getSession` (D11). Не блокирует: попасть туда можно только вручную набрав URL.
+
+**D15 · Адресация аудио-клипа: по тексту, а не по позиции модуля/шага.** Простейшая схема — привязать клип к `(module_id, position)` того же поля, которое он озвучивает. Она ломается на первой же правке: перестановка слова в `vocab.yaml` или переписанное предложение текста молча продолжили бы отдавать **старую озвучку** под новым текстом, потому что строка всё ещё сидит на том же слоте. → **Решение:** `audio_clip` (`db/migrations/0009_audio_clip.sql`) ключуется по `(lang, text_hash, profile)`, где `text_hash = sha256(normalizeAudioText(text))` (`lib/domain/audio-text.ts`) служит натуральным ключом — тот же приём, что `exercise.ident`/`flashcard.ident` (§4.5): ключ выводится из содержимого, поэтому правка содержимого сама меняет ключ, а не только его атрибуты. Правка озвученной строки в YAML меняет её хеш → старая запись просто перестаёт находиться, кнопка ▶ пропадает до следующего `pnpm audio`, а не подставляет чужое произношение под новый текст. У `audio_clip` даже нет отдельной колонки `content_hash` — `text_hash` одновременно и ключ поиска, и единственное, что вообще может «устареть»; изменения остальных полей (`clip_key`, `path`, `voice` при смене референсного голоса) синк сверяет напрямую, как у `gloss`. Приложение никогда не переимплементирует собственно ключ `tts-mcp` (`clip_key` = engine+voice+profile+profile_version+text) — тот приезжает в манифесте и только копируется в БД; из БД приложение всегда спрашивает одно и то же: «есть ли клип для этого нормализованного текста».
+
+Клип = одно предложение, а не абзац: Chatterbox рендерит вход одним авторегрессивным проходом без внутреннего разбиения на предложения (в отличие от Piper, который сам режет текст на `join_sentences`) — абзац на 400–600 символов для такой модели прямой риск обрыва или галлюцинации, а встроенная проверка движка смотрит только на хвост клипа. `scripts/audio.ts` синтезирует по `splitSentences()`, а `ReadingText` (§7.2) склеивает клипы предложений одного абзаца в очередь через `playSequence` — слушатель по-прежнему слышит один непрерывный абзац, разбиение на предложения — деталь пайплайна синтеза, а не что-то заметное в интерфейсе.
 
 ---
 
@@ -679,4 +719,5 @@ export const COURSE_ROOTS: string[] = ['courses/en-c1', 'courses/de-a2'];
 8. **Источники истины при конфликте:** SQL-схема > контент-пакет > PLAN > мокап. Мокап `content.js` — контракт **форм данных**, но не буквальных имён (канон полей — из пакета: длинные `type_code`, snake_case, нормализованные глоссы).
 9. **Netlify build:** `prisma generate` → `migrate` → `sync` → `next build`; Neon — `DATABASE_URL` (пулер, рантайм) + `DIRECT_URL` (прямой, билд-скрипты); локально — Postgres 16 в Docker.
 10. **10 открытых вопросов зафиксированы** с предлагаемыми решениями, заложенными в ТЗ (ключевой — D1: стабильные натуральные ключи).
+11. **Аудио (de-a2, §4.8)** — курсы с `language: de` озвучивают часть контента оффлайн (`pnpm audio` + Chatterbox), клипы адресуются по тексту, а не по позиции (D15); коммитируемый `courses/<slug>/audio/manifest.json` синкается отдельным гейтом `course.audio_manifest_hash`; блобы — иммутабельная статика `public/audio/**`, кешируется через `public/sw.js` (cache-first).
 ```

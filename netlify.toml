@@ -8,3 +8,14 @@
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
+
+# Mirrors web/next.config.mjs's headers() for the same path — Netlify's CDN
+# can serve /audio/** (a public/ static file) directly without invoking the
+# Next.js server at all, so the header needs to be declared here too, not
+# just in next.config.mjs (ARCHITECTURE.md §4.8). Duplication is cheaper
+# than a cache-miss debugging session.
+[[headers]]
+  for = "/audio/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    Content-Type = "audio/ogg"

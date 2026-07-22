@@ -5,6 +5,7 @@ import { getCurrentUser } from '@/lib/current-user';
 import { HeaderBar } from '@/components/nav/HeaderBar';
 import { SideRail } from '@/components/nav/SideRail';
 import { BottomNav } from '@/components/nav/BottomNav';
+import { AudioProvider } from '@/components/audio/AudioProvider';
 
 // Reads cookies and per-request DB state, so it must never be frozen into
 // static HTML at build time — and the build has to succeed against a
@@ -39,7 +40,7 @@ export default async function AppLayout({ children }: { children: ReactNode }) {
       <div className="desktop:pl-56">
         <div className="mx-auto max-w-[720px] px-[18px] pb-[104px] pt-4 desktop:pb-10">
           <HeaderBar courses={courses} activeSlug={active?.slug ?? null} username={user.username} />
-          {children}
+          <AudioProvider>{children}</AudioProvider>
         </div>
       </div>
       <BottomNav />

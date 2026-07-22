@@ -5,6 +5,7 @@
 import { prisma } from '../db';
 import { idToNumber } from '../serialize';
 import type { GrammarStatus, ReadingKind, VocabStatus } from '../domain/types';
+import type { AudioClipDTO } from './audio.repo';
 import type { Prisma } from '@prisma/client';
 
 export interface GrammarSpotlightDTO {
@@ -17,6 +18,8 @@ export interface GrammarSpotlightDTO {
     note: string;
     /** Paradigm grid (conjugation, genders, case endings); see content-schema SpotlightTableSchema. */
     table?: { headers: string[]; rows: string[][] };
+    /** Clip for `example` (ARCHITECTURE.md §4.8), attached by lib/use-cases/audio.ts's attachSpotlightAudio — absent until that runs, null when the item has no example or no clip exists yet. */
+    audio?: AudioClipDTO | null;
   }>;
   position: number;
 }
@@ -28,6 +31,8 @@ export interface WatchoutDTO {
   goodExample: string;
   note: string | null;
   position: number;
+  /** Clip for `goodExample` only — never for `badExample`, which is deliberately-wrong German (ARCHITECTURE.md §4.8). Attached by attachWatchoutAudio. */
+  goodAudio?: AudioClipDTO | null;
 }
 
 export interface GrammarPointDTO {
@@ -71,6 +76,8 @@ export interface VocabEntryDTO {
   registerNote: string | null;
   position: number;
   status: VocabStatus;
+  /** Clips for `term` and each `useCases[i]`, by position — attached by attachVocabAudio (ARCHITECTURE.md §4.8). */
+  audio?: { term: AudioClipDTO | null; useCases: (AudioClipDTO | null)[] };
 }
 
 export async function listSpotlightsForModule(moduleId: number): Promise<GrammarSpotlightDTO[]> {

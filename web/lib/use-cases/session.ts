@@ -20,6 +20,8 @@ export interface SessionDTO extends StudySessionDTO {
   /** Added in stage 4 (frontend) — the session-runner page's breadcrumb/header needs the module's title; `module` was already fetched here for its id, so surfacing the title too avoids a second lookup from the page. */
   moduleTitle: string;
   moduleSlug: string;
+  /** Added for audio (ARCHITECTURE.md §4.8) — `course` is already loaded here for its id, so surfacing its language costs nothing extra and lets the session-runner page thread it into getModuleTheorySlice/getModuleVocabBatch/getReadingWithGlosses (empty for a course outside AUDIO_LANGS, same as any other language). */
+  language: string;
   steps: SessionStepDTO[];
 }
 
@@ -56,7 +58,7 @@ export async function getSession(userId: number, courseSlug: string, moduleSlug:
   }
 
   const steps = await moduleRepo.listStepsForSession(userId, session.id);
-  return { kind: 'ok', session: { ...session, moduleTitle: module.title, moduleSlug: module.slug, steps } };
+  return { kind: 'ok', session: { ...session, moduleTitle: module.title, moduleSlug: module.slug, language: course.language, steps } };
 }
 
 export interface AdvanceStepResult {

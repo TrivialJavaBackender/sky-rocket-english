@@ -1,5 +1,6 @@
 import { Card } from '@/components/ui/Card';
 import { Kicker } from '@/components/ui/Kicker';
+import { PlayButton } from '@/components/audio/PlayButton';
 import type { GrammarSpotlightDTO } from '@/lib/repositories/content.repo';
 
 /**
@@ -19,7 +20,12 @@ export function GrammarSpotlight({ spotlight }: { spotlight: GrammarSpotlightDTO
       {spotlight.items.map((row, i) => (
         <div key={i} className="border-t border-green-border py-[11px]">
           <div className="text-[14.5px] font-bold text-green-text">{row.form}</div>
-          {row.example && <div className="my-0.5 text-[15.5px] italic">{row.example}</div>}
+          {row.example && (
+            <div className="my-0.5 flex items-start gap-1.5 text-[15.5px] italic">
+              <PlayButton clip={row.audio} id={`spotlight-${spotlight.id}-${i}`} label={row.example} size="sm" className="mt-0.5" />
+              <span>{row.example}</span>
+            </div>
+          )}
           {row.table && <ParadigmTable table={row.table} />}
           <div className="text-[13.5px] text-fg-muted">{row.note}</div>
         </div>

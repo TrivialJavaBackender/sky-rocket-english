@@ -1,5 +1,6 @@
 import { Card } from '@/components/ui/Card';
 import { Kicker } from '@/components/ui/Kicker';
+import { PlayButton } from '@/components/audio/PlayButton';
 import type { WatchoutDTO } from '@/lib/repositories/content.repo';
 
 /** UC-06 "Watch out!" box (ARCHITECTURE.md §1.2). One card per watchout — module-01 has 4 (real DB cardinality; the mockup only illustrates one). */
@@ -13,7 +14,10 @@ export function WatchoutBox({ watchout }: { watchout: WatchoutDTO }) {
         <span className="font-bold text-red">✗</span> <span className="text-red-text line-through decoration-red/60">{watchout.badExample}</span>
       </div>
       <div className="mt-0.5 text-[15.5px]">
-        <span className="font-bold text-green">✓</span> <span className="font-semibold">{watchout.goodExample}</span>
+        <span className="font-bold text-green">✓</span>{' '}
+        {/* Never a badAudio counterpart here — badExample is deliberately-wrong German and must never be spoken (ARCHITECTURE.md §4.8). */}
+        <PlayButton clip={watchout.goodAudio} id={`watchout-${watchout.id}`} label={watchout.goodExample} size="sm" className="-mb-1" />{' '}
+        <span className="font-semibold">{watchout.goodExample}</span>
       </div>
       {watchout.note && <div className="mt-2 text-[13.5px] leading-relaxed text-fg-muted">{watchout.note}</div>}
     </Card>

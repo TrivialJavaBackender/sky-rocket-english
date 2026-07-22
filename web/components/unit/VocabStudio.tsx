@@ -7,6 +7,7 @@ import type { VocabStatus } from '@/lib/domain/types';
 import { markVocabPriority } from '@/app/actions/sessions';
 import { Card } from '@/components/ui/Card';
 import { Kicker } from '@/components/ui/Kicker';
+import { PlayButton } from '@/components/audio/PlayButton';
 
 const STATUS_LABELS: Record<VocabStatus, string> = { new: 'New', learning: 'Learning', known: 'Known', in_use: 'In use' };
 
@@ -40,6 +41,7 @@ export function VocabStudio({ title, entries, rangeLabel }: { title: string; ent
           <div key={e.id} className="border-t border-border-faint py-3.5">
             <div className="flex flex-wrap items-baseline gap-2.5">
               <span className="text-[17px] font-bold">{e.term}</span>
+              <PlayButton clip={e.audio?.term} id={`vocab-${e.id}-term`} label={e.term} size="md" />
               {e.tag && <span className="text-[11.5px] italic text-fg-subtle">{e.tag}</span>}
               <button
                 onClick={() => handleMark(e.id)}
@@ -54,7 +56,10 @@ export function VocabStudio({ title, entries, rangeLabel }: { title: string; ent
             <div className="my-0.5 text-[14.5px] text-fg">{e.definition}</div>
             <div className="text-[14.5px] italic leading-relaxed text-fg-muted">
               {e.useCases.map((u, i) => (
-                <div key={i}>“{u}”</div>
+                <div key={i} className="flex items-start gap-1.5">
+                  <PlayButton clip={e.audio?.useCases[i]} id={`vocab-${e.id}-use-${i}`} label={u} size="sm" className="mt-0.5" />
+                  <span>“{u}”</span>
+                </div>
               ))}
             </div>
             {(e.collocations || e.registerNote) && (

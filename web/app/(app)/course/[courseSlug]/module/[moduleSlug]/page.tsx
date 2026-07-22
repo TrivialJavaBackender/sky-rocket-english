@@ -13,6 +13,7 @@ import { WatchoutBox } from '@/components/unit/WatchoutBox';
 import { VocabStudio } from '@/components/unit/VocabStudio';
 import { UnitLaunchers } from '@/components/unit/UnitLaunchers';
 import { ReadingText } from '@/components/reading/ReadingText';
+import { DownloadModuleAudio } from '@/components/audio/DownloadModuleAudio';
 import { Card } from '@/components/ui/Card';
 import { Kicker } from '@/components/ui/Kicker';
 
@@ -43,6 +44,8 @@ export default async function UnitPage({ params }: { params: Promise<{ courseSlu
       </LinkButton>
 
       <UnitHeader blockPosition={unit.blockPosition} blockName={unit.blockName} moduleSlug={unit.moduleSlug} title={unit.title} standfirst={unit.standfirst} />
+
+      <DownloadModuleAudio vocabEntries={unit.vocabEntries} spotlights={unit.spotlights} watchouts={unit.watchouts} reading={unit.reading} readingExtra={unit.readingExtra} />
 
       <GoalsProgress goals={unit.goals} />
 
@@ -101,7 +104,7 @@ function ReferenceReading({ reading, moduleId }: { reading: ReadingWithGlossesDT
       {reading.kicker && <Kicker>{reading.kicker}</Kicker>}
       <h2 className="text-pretty m-0 mb-1 mt-1 text-[22px] leading-[1.2] tracking-[-.01em]">{reading.title}</h2>
       {reading.meta && <div className="mb-3.5 text-[13px] text-fg-subtle">{reading.meta}</div>}
-      <ReadingText paragraphs={reading.paragraphs} glosses={reading.glosses} moduleId={moduleId} />
+      <ReadingText paragraphs={reading.paragraphs} glosses={reading.glosses} moduleId={moduleId} paragraphAudio={reading.paragraphAudio} />
     </div>
   );
 }

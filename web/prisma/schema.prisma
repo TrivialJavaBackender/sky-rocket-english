@@ -31,6 +31,25 @@ model app_user {
   writing_submission    writing_submission[]
 }
 
+/// Content-addressed TTS output (db/migrations/0009, ARCHITECTURE.md §4.8).
+/// No FK to course/module — a clip belongs to a language, not a course, and is
+/// looked up by (lang, text_hash, profile) from lib/repositories/audio.repo.ts.
+model audio_clip {
+  id          BigInt @id @default(autoincrement())
+  lang        String
+  text_hash   String @db.Char(64)
+  profile     String
+  clip_key    String @db.Char(64)
+  path        String
+  duration_ms Int
+  bytes       Int
+  voice       String
+  source_text String
+
+  @@unique([lang, text_hash, profile])
+  @@index([lang, text_hash], map: "audio_clip_lookup_idx")
+}
+
 model block {
   id         BigInt       @id @default(autoincrement())
   course_id  BigInt
@@ -102,18 +121,19 @@ model checkpoint {
 }
 
 model course {
-  id            BigInt        @id @default(autoincrement())
-  slug          String        @unique
-  language      String
-  name          String
-  level_label   String
-  position      Int           @default(1)
-  is_active     Boolean       @default(true)
-  created_at    DateTime      @default(now()) @db.Timestamptz(6)
-  skeleton_hash String?
-  block         block[]
-  checkpoint    checkpoint[]
-  user_course   user_course[]
+  id                  BigInt        @id @default(autoincrement())
+  slug                String        @unique
+  language            String
+  name                String
+  level_label         String
+  position            Int           @default(1)
+  is_active           Boolean       @default(true)
+  created_at          DateTime      @default(now()) @db.Timestamptz(6)
+  skeleton_hash       String?
+  audio_manifest_hash String?
+  block               block[]
+  checkpoint          checkpoint[]
+  user_course         user_course[]
 }
 
 model daily_activity {
