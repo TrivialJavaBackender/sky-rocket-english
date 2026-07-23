@@ -1,0 +1,39 @@
+# Modul 06 · Zusatztext „Umtausch und Rückgabe" — die Rückgabebedingungen eines
+# Geschäfts als Info/Aushang (Genre Anzeige). Kürzer als der Haupttext.
+# Auch hier stehen Zielvokabeln (umtauschen, die Ware, die Quittung, das
+# Sonderangebot, reduziert) und Zielformen des Moduls: jeden Artikel, jede
+# Verkäuferin, das gestreifte Hemd, den warmen Mantel.
+# Drei Glossen auf Wörtern in der Grundform: der Umtausch, die Ware, das Etikett.
+# word_count zählt die Wörter im body (mit den drei Glossen-Wörtern).
+kind: extra
+kicker: INFO
+title: Umtausch und Rückgabe
+meta: ≈ 1 Min · ein Aushang im Geschäft
+word_count: 135
+body:
+  - - t: 'Liebe Kundin, lieber Kunde, Sie haben etwas gekauft, aber es passt leider nicht? Kein Problem. Bei uns können Sie jeden Artikel umtauschen. So einfach geht der '
+    - g: Umtausch
+    - t: ':'
+  - - t: 'Bringen Sie die '
+    - g: Ware
+    - t: ' innerhalb von vierzehn Tagen zurück. Die Kleidung muss sauber und neu sein, und das '
+    - g: Etikett
+    - t: ' bleibt an der Ware. Bringen Sie auch die Quittung oder den Kassenbon mit. Ohne Quittung ist der Umtausch nicht möglich. Kleidung ohne Etikett können wir leider nicht zurücknehmen.'
+  - - t: 'Reduzierte Artikel aus dem Sonderangebot tauschen wir auch um, aber wir geben kein Geld zurück. Sie bekommen dann eine andere Größe oder eine andere Farbe.'
+  - - t: 'Sie möchten das gestreifte Hemd in Weiß oder den warmen Mantel in Grau? Fragen Sie einfach an der Kasse. Jede Verkäuferin und jeder Verkäufer hilft Ihnen gern. Wir wünschen Ihnen viel Freude beim Einkaufen. Ihr Mode-Team.'
+glosses:
+  - key: Umtausch
+    term: Umtausch
+    pos_label: Nomen
+    definition: Man gibt eine Sache zurück und bekommt eine andere dafür.
+    example: Der Umtausch ist nur mit der Quittung möglich.
+  - key: Ware
+    term: Ware
+    pos_label: Nomen
+    definition: "Alles, was ein Geschäft verkauft: Kleidung, Schuhe und mehr."
+    example: Die Ware muss sauber und neu sein.
+  - key: Etikett
+    term: Etikett
+    pos_label: Nomen
+    definition: Ein kleines Schild an der Kleidung. Dort stehen die Größe und der Preis.
+    example: "Das Etikett zeigt: Der Pullover kostet dreißig Euro."

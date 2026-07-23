@@ -1,0 +1,37 @@
+# Modul 06 · Kleidung und Einkaufen — Produktion: ein Gespräch im Geschäft.
+# mode: speaking, also kein word_target (das Schema verbietet es bei speaking).
+# Das Modell zeigt die Grammatik von Modul 06: das Adjektiv nach der, das, die
+# (den blauen Mantel, der graue Mantel), dieser Mantel und die kurze Antwort
+# (den nehme ich). Die Vokabeln des Moduls stehen im Gespräch.
+mode: speaking
+genre: Gespräch im Geschäft
+prompt: |
+  Sie sind in einem Kaufhaus und kaufen Kleidung. Spielen Sie ein Gespräch
+  zwischen der Kundin oder dem Kunden und der Verkäuferin (1–2 Minuten).
+  Nehmen Sie das Gespräch mit dem Handy auf.
+
+  Sprechen Sie über diese vier Punkte:
+  - Sagen Sie, welches Kleidungsstück Sie suchen (zum Beispiel einen Mantel,
+    ein Kleid oder Schuhe) und in welcher Farbe.
+  - Nennen Sie Ihre Größe und fragen Sie, ob Sie es anprobieren dürfen.
+  - Sagen Sie, wie es Ihnen passt: zu eng, zu weit, zu lang oder gut.
+  - Fragen Sie nach dem Preis und ob Sie die Ware später umtauschen können.
+model_answer: |
+  — Guten Tag! Ich suche einen warmen Mantel für den Winter. Haben Sie den
+  blauen Mantel aus dem Schaufenster auch in meiner Größe?
+  — Guten Tag! Ja, natürlich. Welche Größe haben Sie?
+  — Ich habe Größe achtunddreißig. Darf ich den blauen Mantel anprobieren?
+  — Gern. Die Umkleidekabine ist dort hinten.
+  — Danke … Der Mantel ist schön, aber die Ärmel sind ein bisschen zu lang,
+  und er ist ein wenig zu weit.
+  — Dann probieren Sie doch den grauen Mantel. Der ist etwas kleiner.
+  — Ja, dieser Mantel passt perfekt. Was kostet er?
+  — Er ist heute reduziert und kostet nur sechzig Euro.
+  — Sehr gut, den nehme ich. Kann ich den Mantel später umtauschen?
+  — Kein Problem. Bewahren Sie nur die Quittung gut auf.
+checklist:
+  - Ich nenne das Kleidungsstück, die Farbe und meine Größe.
+  - "Ich frage höflich: Darf ich … anprobieren? Was kostet …?"
+  - "Das Adjektiv nach der, das, die hat die richtige Endung: der blaue Mantel, den blauen Mantel."
+  - "Ich benutze dieser oder jeder und die kurze Antwort: Den nehme ich."
+  - Das Gespräch dauert 1–2 Minuten und ist aufgenommen.

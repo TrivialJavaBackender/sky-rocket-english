@@ -1,0 +1,951 @@
+# Modul 07 · Wohnungssuche — 52 Aufgaben im Kern, 20 im Wiederholungspool.
+# Verteilung laut Profil (courses/de-a2/PLAN.md §6): 6 mc_cloze · 8 open_cloze ·
+# 6 word_formation · 4 key_word_transformation · 8 grammar_drill ·
+# 6 error_correction · 8 collocation_match · 6 reading_comprehension.
+# Wiederholungspool: 4 mc_cloze · 6 open_cloze · 4 grammar_drill · 3 error_correction ·
+# 1 word_formation · 1 collocation_match · 1 key_word_transformation.
+#
+# Thema des Moduls ist die Endung des Adjektivs nach ein-/kein-/mein-, ohne
+# Artikel und im Dativ. Jede Aufgabe prüft nur eine Sache: entweder die Endung
+# des Adjektivs bei fertigem Artikel oder den Artikel bei fertiger Endung.
+# Der Dativ hat im ganzen Modul die Endung -en (in einem großen Haus, mit einer
+# schönen Küche) — die schwierige Form ohne Artikel im Dativ (gutem, ruhiger)
+# wird nicht verlangt.
+#
+# Spiralisches Wiederholen: open_cloze 7 und grammar_drill 7 nehmen das Adjektiv
+# nach der/das/die aus Modul 06, open_cloze 8 das Präteritum hatten aus Modul 05,
+# grammar_drill 8 die Frage Wo? mit Dativ aus Modul 03, error_correction 5 das
+# Perfekt mit sein aus Modul 01, error_correction 6 die Präposition mit + Dativ
+# aus Modul 02. word_formation 6 bildet das -ung aus Modul 02 (die Besichtigung).
+# Im Pool: open_cloze 5 wieder mit + Dativ (Modul 02), grammar_drill 4 der/das/die
+# (Modul 06), error_correction 3 das Perfekt mit sein (Modul 01).
+core:
+- type: mc_cloze
+  group: grammar
+  content:
+    pre: 'In der Anzeige steht: Das ist ein '
+    post: ' Balkon.'
+    options:
+    - schöne
+    - schöner
+    - schönes
+    - schönen
+    answer: 1
+  explanation: 'der Balkon ist maskulin. Nach ein steht im Nominativ die Endung -er: ein schöner Balkon.'
+- type: mc_cloze
+  group: grammar
+  content:
+    pre: 'Ich suche einen '
+    post: ' Raum für mein Büro.'
+    options:
+    - helle
+    - heller
+    - hellen
+    - helles
+    answer: 2
+  explanation: 'der Raum ist maskulin im Akkusativ. Nach einen steht -en: einen hellen Raum.'
+- type: mc_cloze
+  group: grammar
+  content:
+    pre: 'Ich möchte eine '
+    post: ' Wohnung mieten.'
+    options:
+    - ruhige
+    - ruhiger
+    - ruhiges
+    - ruhigen
+    answer: 0
+  explanation: 'die Wohnung ist feminin. Nach eine steht -e: eine ruhige Wohnung.'
+- type: mc_cloze
+  group: grammar
+  content:
+    pre: 'Sie sucht ein '
+    post: ' Zimmer im Zentrum.'
+    options:
+    - möblierte
+    - möblierter
+    - möblierten
+    - möbliertes
+    answer: 3
+  explanation: 'das Zimmer ist neutral im Akkusativ. Nach ein steht -es: ein möbliertes Zimmer.'
+- type: mc_cloze
+  group: grammar
+  content:
+    pre: 'In der Anzeige steht nur: '
+    post: ' Zimmer, ruhige Lage, niedrige Nebenkosten.'
+    options:
+    - helle
+    - heller
+    - helles
+    - hellen
+    answer: 2
+  explanation: 'Ohne Artikel trägt das Adjektiv das Signal. das Zimmer ist neutral, also -es: helles Zimmer.'
+- type: mc_cloze
+  group: grammar
+  content:
+    pre: 'Die Wohnung ist schön, mit einem '
+    post: ' Balkon.'
+    options:
+    - schöne
+    - schönen
+    - schöner
+    - schönes
+    answer: 1
+  explanation: 'Im Dativ ist die Endung immer -en: mit einem schönen Balkon.'
+- type: open_cloze
+  group: grammar
+  content:
+    pre: 'Im ersten Stock ist ein '
+    post: ' Balkon mit viel Sonne.'
+    hint: groß
+    answers:
+    - großer
+    answer_shown: großer
+  explanation: 'der Balkon ist maskulin im Nominativ. Nach ein steht -er: ein großer Balkon.'
+- type: open_cloze
+  group: grammar
+  content:
+    pre: 'Ich möchte eine '
+    post: ' Wohnung mieten, ohne Lärm.'
+    hint: ruhig
+    answers:
+    - ruhige
+    answer_shown: ruhige
+  explanation: 'die Wohnung ist feminin im Akkusativ. Nach eine steht -e: eine ruhige Wohnung.'
+- type: open_cloze
+  group: grammar
+  content:
+    pre: 'Das ist gut: Die Anzeige verspricht '
+    post: ' Nebenkosten.'
+    hint: niedrig
+    answers:
+    - niedrige
+    answer_shown: niedrige
+  explanation: 'Ohne Artikel steht im Plural -e: niedrige Nebenkosten.'
+- type: open_cloze
+  group: grammar
+  content:
+    pre: 'Die Wohnung kommt mit einem '
+    post: ' Balkon.'
+    hint: schön
+    answers:
+    - schönen
+    answer_shown: schönen
+  explanation: 'Im Dativ ist die Endung immer -en: mit einem schönen Balkon.'
+- type: open_cloze
+  group: grammar
+  content:
+    pre: 'Jetzt wohne ich in '
+    post: ' hellen Zimmer im Erdgeschoss.'
+    answers:
+    - einem
+    - dem
+    - diesem
+    - jedem
+    - meinem
+    - deinem
+    - seinem
+    - ihrem
+    - unserem
+    - eurem
+    - keinem
+    answer_shown: einem
+  explanation: 'Die Endung -en beim Adjektiv zeigt den Dativ. das Zimmer ist neutral: in einem / dem hellen Zimmer.'
+- type: open_cloze
+  group: grammar
+  content:
+    pre: 'Für das Wohnzimmer brauche ich noch '
+    post: ' großen Tisch.'
+    answers:
+    - einen
+    - den
+    - diesen
+    - jeden
+    - keinen
+    - meinen
+    - deinen
+    - seinen
+    - ihren
+    - unseren
+    - euren
+    answer_shown: einen
+  explanation: 'der Tisch ist maskulin im Akkusativ. Der Artikel endet auf -en: einen / keinen großen Tisch.'
+- type: open_cloze
+  group: grammar
+  content:
+    pre: 'Der '
+    post: ' Balkon gefällt mir sehr.'
+    hint: schön
+    answers:
+    - schöne
+    answer_shown: schöne
+  explanation: 'Nach der steht beim Adjektiv im Nominativ die Endung -e: der schöne Balkon (aus Modul 06).'
+- type: open_cloze
+  group: grammar
+  content:
+    pre: 'Früher '
+    post: ' wir nur eine kleine Wohnung.'
+    hint: haben
+    answers:
+    - hatten
+    answer_shown: hatten
+  explanation: 'haben im Präteritum: wir hatten. früher zeigt die Vergangenheit (aus Modul 05).'
+- type: word_formation
+  group: vocab
+  content:
+    pre: 'Zur Miete kommen noch die '
+    post: ' für Wasser, Strom und Heizung.'
+    prompt: neben + Kosten
+    answers:
+    - Nebenkosten
+    answer_shown: Nebenkosten
+  explanation: 'neben und Kosten werden ein Wort: die Nebenkosten. Das sind die Kosten neben der Miete.'
+- type: word_formation
+  group: vocab
+  content:
+    pre: 'Das Haus ist alt. Wir suchen eine schöne '
+    post: ' im Zentrum.'
+    prompt: Altbau + Wohnung
+    answers:
+    - Altbauwohnung
+    answer_shown: Altbauwohnung
+  explanation: 'Altbau und Wohnung werden ein Wort: die Altbauwohnung. Das letzte Wort bestimmt den Artikel.'
+- type: word_formation
+  group: vocab
+  content:
+    pre: 'Bevor man einzieht, unterschreibt man den '
+    post: .
+    prompt: Miete + Vertrag
+    answers:
+    - Mietvertrag
+    answer_shown: Mietvertrag
+  explanation: 'Miete und Vertrag werden ein Wort: der Mietvertrag. Das e von Miete fällt weg.'
+- type: word_formation
+  group: vocab
+  content:
+    pre: 'Die Wohnung liegt nicht oben, sondern unten im '
+    post: .
+    prompt: Erd + Geschoss
+    answers:
+    - Erdgeschoss
+    answer_shown: Erdgeschoss
+  explanation: 'Erd und Geschoss werden ein Wort: das Erdgeschoss. Das ist der Boden unten im Haus.'
+- type: word_formation
+  group: vocab
+  content:
+    pre: 'Die Wohnung ist 70 '
+    post: ' groß.'
+    prompt: Quadrat + Meter
+    answers:
+    - Quadratmeter
+    answer_shown: Quadratmeter
+  explanation: 'Quadrat und Meter werden ein Wort: der Quadratmeter. So misst man die Wohnfläche.'
+- type: word_formation
+  group: vocab
+  content:
+    pre: 'Am Samstag ist die '
+    post: ' der Wohnung. Dann sehen wir alles genau an.'
+    prompt: besichtigen
+    answers:
+    - Besichtigung
+    answer_shown: Besichtigung
+  explanation: 'Aus dem Verb besichtigen wird mit -ung ein Nomen: die Besichtigung (das -ung aus Modul 02).'
+- type: key_word_transformation
+  group: grammar
+  content:
+    s1: Das Zimmer ist hell.
+    key: EIN
+    pre: 'Das ist '
+    post: ' Zimmer.'
+    answers:
+    - ein helles
+    hint: 2 Wörter
+    answer_shown: ein helles
+  explanation: 'das Zimmer ist neutral. Nach ein steht -es: ein helles Zimmer.'
+- type: key_word_transformation
+  group: grammar
+  content:
+    s1: Der Balkon ist groß.
+    key: EINEN
+    pre: 'Die Wohnung hat '
+    post: ' Balkon.'
+    answers:
+    - einen großen
+    hint: 2 Wörter
+    answer_shown: einen großen
+  explanation: 'der Balkon ist maskulin im Akkusativ. Nach einen steht -en: einen großen Balkon.'
+- type: key_word_transformation
+  group: grammar
+  content:
+    s1: Die Küche ist neu.
+    key: EINE
+    pre: 'Die Wohnung hat '
+    post: ' Küche.'
+    answers:
+    - eine neue
+    hint: 2 Wörter
+    answer_shown: eine neue
+  explanation: 'die Küche ist feminin im Akkusativ. Nach eine steht -e: eine neue Küche.'
+- type: key_word_transformation
+  group: grammar
+  content:
+    s1: Der Balkon ist groß.
+    key: DER
+    pre: ''
+    post: ' Balkon gefällt mir.'
+    answers:
+    - Der große
+    hint: 2 Wörter
+    answer_shown: Der große
+  explanation: 'Nach der steht im Nominativ -e: der große Balkon (aus Modul 06).'
+- type: grammar_drill
+  group: grammar
+  content:
+    pre: 'Ich wohne in einem '
+    post: ' Haus am Stadtrand.'
+    prompt: DATIV
+    options:
+    - große
+    - großen
+    - großes
+    - großer
+    answer: 1
+  explanation: 'Im Dativ ist die Endung immer -en: in einem großen Haus.'
+- type: grammar_drill
+  group: grammar
+  content:
+    pre: 'Sie sucht einen '
+    post: ' Raum für ihr Büro.'
+    prompt: AKKUSATIV
+    options:
+    - heller
+    - helles
+    - helle
+    - hellen
+    answer: 3
+  explanation: 'der Raum ist maskulin im Akkusativ. Nach einen steht -en: einen hellen Raum.'
+- type: grammar_drill
+  group: grammar
+  content:
+    pre: 'Hier ist ein '
+    post: ' Zimmer, hell und freundlich.'
+    prompt: NOMINATIV
+    options:
+    - möblierte
+    - möbliertes
+    - möblierten
+    - möblierter
+    answer: 1
+  explanation: 'das Zimmer ist neutral. Nach ein steht -es: ein möbliertes Zimmer.'
+- type: grammar_drill
+  group: grammar
+  content:
+    pre: 'Das ist eine '
+    post: ' Straße, hier gibt es wenig Verkehr.'
+    prompt: NOMINATIV
+    options:
+    - ruhiger
+    - ruhiges
+    - ruhige
+    - ruhigen
+    answer: 2
+  explanation: 'die Straße ist feminin. Nach eine steht -e: eine ruhige Straße.'
+- type: grammar_drill
+  group: grammar
+  content:
+    pre: 'Die Wohnung kommt mit einem '
+    post: ' Balkon.'
+    prompt: DATIV
+    options:
+    - schöner
+    - schönen
+    - schönes
+    - schöne
+    answer: 1
+  explanation: 'Im Dativ ist die Endung immer -en: mit einem schönen Balkon.'
+- type: grammar_drill
+  group: grammar
+  content:
+    pre: 'Zu vermieten: '
+    post: ' Zimmer, ruhige Lage, guter Preis.'
+    prompt: OHNE ARTIKEL
+    options:
+    - Helle
+    - Hell
+    - Helles
+    - Hellen
+    answer: 2
+  explanation: 'Ohne Artikel trägt das Adjektiv das Signal. das Zimmer ist neutral, also -es: helles Zimmer.'
+- type: grammar_drill
+  group: grammar
+  content:
+    pre: 'Der '
+    post: ' Balkon gefällt mir sehr gut.'
+    prompt: DER / DAS / DIE
+    options:
+    - schöne
+    - schöner
+    - schönen
+    - schönes
+    answer: 0
+  explanation: 'Nach der steht im Nominativ -e: der schöne Balkon (aus Modul 06).'
+- type: grammar_drill
+  group: grammar
+  content:
+    pre: 'Das Bett steht in '
+    post: ' Schlafzimmer.'
+    prompt: WO?
+    options:
+    - das
+    - den
+    - der
+    - dem
+    answer: 3
+  explanation: 'Wo? Das Bett steht ruhig, also Dativ: in dem Schlafzimmer (aus Modul 03).'
+- type: error_correction
+  group: grammar
+  content:
+    words:
+    - Ich
+    - wohne
+    - in
+    - einem
+    - groß
+    - Haus.
+    wrong: 4
+    correction: groß → großen
+  explanation: 'Im Dativ braucht das Adjektiv die Endung -en: in einem großen Haus.'
+- type: error_correction
+  group: grammar
+  content:
+    words:
+    - Das
+    - ist
+    - ein
+    - schöne
+    - Balkon.
+    wrong: 3
+    correction: schöne → schöner
+  explanation: 'der Balkon ist maskulin im Nominativ. Nach ein steht -er: ein schöner Balkon.'
+- type: error_correction
+  group: grammar
+  content:
+    words:
+    - Zu
+    - 'vermieten:'
+    - hell
+    - Zimmer
+    - mit
+    - Balkon.
+    wrong: 2
+    correction: hell → helles
+  explanation: 'Ohne Artikel braucht das Adjektiv das Signal: helles Zimmer, nicht hell Zimmer.'
+- type: error_correction
+  group: grammar
+  content:
+    words:
+    - Ich
+    - suche
+    - ein
+    - hellen
+    - Raum.
+    wrong: 2
+    correction: ein → einen
+  explanation: 'der Raum ist maskulin im Akkusativ. Der Artikel heißt einen: einen hellen Raum.'
+- type: error_correction
+  group: grammar
+  content:
+    words:
+    - Wir
+    - haben
+    - letzte
+    - Woche
+    - umgezogen.
+    wrong: 1
+    correction: haben → sind
+  explanation: 'umziehen bildet das Perfekt mit sein: Wir sind umgezogen (aus Modul 01).'
+- type: error_correction
+  group: grammar
+  content:
+    words:
+    - Ich
+    - fahre
+    - mit
+    - den
+    - Bus
+    - zur
+    - Wohnung.
+    wrong: 3
+    correction: den → dem
+  explanation: 'mit steht immer mit Dativ. der Bus wird dem Bus: mit dem Bus (aus Modul 02).'
+- type: collocation_match
+  group: vocab
+  content:
+    left:
+    - die Miete
+    - den Mietvertrag
+    - die Wohnung
+    - den Vermieter
+    right:
+    - unterschreiben
+    - anrufen
+    - zahlen
+    - besichtigen
+    pairs:
+      0: 2
+      1: 0
+      2: 3
+      3: 1
+  explanation: die Miete zahlen · den Mietvertrag unterschreiben · die Wohnung besichtigen · den Vermieter anrufen.
+- type: collocation_match
+  group: vocab
+  content:
+    left:
+    - der Altbau
+    - hell
+    - teuer
+    - der Stadtrand
+    right:
+    - billig
+    - dunkel
+    - der Neubau
+    - das Zentrum
+    pairs:
+      0: 2
+      1: 1
+      2: 0
+      3: 3
+  explanation: 'Gegenteile: Altbau — Neubau · hell — dunkel · teuer — billig · Stadtrand — Zentrum.'
+- type: collocation_match
+  group: vocab
+  content:
+    left:
+    - die Kaltmiete
+    - die Nebenkosten
+    - die Kaution
+    - die Wohnfläche
+    right:
+    - das Geld für Wasser und Heizung
+    - die Größe in Quadratmetern
+    - die Miete ohne Nebenkosten
+    - das Geld als Sicherheit
+    pairs:
+      0: 2
+      1: 0
+      2: 3
+      3: 1
+  explanation: Kaltmiete = Miete ohne Nebenkosten · Nebenkosten = Geld für Wasser und Heizung · Kaution = Geld als Sicherheit · Wohnfläche = Größe in Quadratmetern.
+- type: collocation_match
+  group: vocab
+  content:
+    left:
+    - in die Wohnung
+    - den Vertrag
+    - die alte Wohnung
+    - die Kaution
+    right:
+    - kündigen
+    - einziehen
+    - bezahlen
+    - renovieren
+    pairs:
+      0: 1
+      1: 0
+      2: 3
+      3: 2
+  explanation: in die Wohnung einziehen · den Vertrag kündigen · die alte Wohnung renovieren · die Kaution bezahlen.
+- type: collocation_match
+  group: vocab
+  content:
+    left:
+    - möbliertes
+    - niedrige
+    - provisionsfreie
+    - ruhige
+    right:
+    - Wohnung
+    - Zimmer
+    - Nebenkosten
+    - Lage
+    pairs:
+      0: 1
+      1: 2
+      2: 0
+      3: 3
+  explanation: möbliertes Zimmer · niedrige Nebenkosten · provisionsfreie Wohnung · ruhige Lage.
+- type: collocation_match
+  group: vocab
+  content:
+    left:
+    - der Balkon
+    - der Keller
+    - der Aufzug
+    - das Erdgeschoss
+    right:
+    - unten im Haus
+    - ein Platz draußen
+    - für schwere Sachen unten
+    - fährt nach oben
+    pairs:
+      0: 1
+      1: 2
+      2: 3
+      3: 0
+  explanation: der Balkon = ein Platz draußen · der Keller = für schwere Sachen unten · der Aufzug fährt nach oben · das Erdgeschoss = unten im Haus.
+- type: collocation_match
+  group: vocab
+  content:
+    left:
+    - besichtigen
+    - kündigen
+    - einziehen
+    - mieten
+    right:
+    - in eine neue Wohnung kommen
+    - eine Wohnung ansehen
+    - den Vertrag beenden
+    - für Geld benutzen
+    pairs:
+      0: 1
+      1: 2
+      2: 0
+      3: 3
+  explanation: besichtigen = eine Wohnung ansehen · kündigen = den Vertrag beenden · einziehen = in eine neue Wohnung kommen · mieten = für Geld benutzen.
+- type: collocation_match
+  group: vocab
+  content:
+    left:
+    - zentral
+    - möbliert
+    - ruhig
+    - provisionsfrei
+    right:
+    - ohne Provision
+    - mit Möbeln
+    - ohne Lärm
+    - mitten in der Stadt
+    pairs:
+      0: 3
+      1: 1
+      2: 2
+      3: 0
+  explanation: zentral = mitten in der Stadt · möbliert = mit Möbeln · ruhig = ohne Lärm · provisionsfrei = ohne Provision.
+- type: reading_comprehension
+  group: reading
+  content:
+    passage: Am Samstagmorgen fährt Lena zum Stadtrand.
+    q: Wohin fährt Lena am Samstag?
+    options:
+    - ins Zentrum
+    - aufs Land
+    - zum Bahnhof
+    - zum Stadtrand
+    answer: 3
+  explanation: 'Im Text steht: Lena fährt zum Stadtrand.'
+- type: reading_comprehension
+  group: reading
+  content:
+    passage: Einen Aufzug gibt es nicht, aber die Wohnung liegt in der zweiten Etage.
+    q: Was steht im Text über das Haus?
+    options:
+    - Es gibt einen Aufzug.
+    - Es gibt keinen Aufzug.
+    - Die Wohnung ist im Erdgeschoss.
+    - Das Haus hat zehn Etagen.
+    answer: 1
+  explanation: 'Im Text steht: Einen Aufzug gibt es nicht.'
+- type: reading_comprehension
+  group: reading
+  content:
+    passage: Die Kaltmiete beträgt sechshundert Euro.
+    q: Wie hoch ist die Kaltmiete?
+    options:
+    - 600 Euro
+    - 150 Euro
+    - 750 Euro
+    - 520 Euro
+    answer: 0
+  explanation: Sechshundert Euro sind 600 Euro.
+- type: reading_comprehension
+  group: reading
+  content:
+    passage: Aber die Wohnung ist provisionsfrei, Sie zahlen keine extra Gebühr.
+    q: Was bedeutet provisionsfrei hier?
+    options:
+    - Die Miete ist frei.
+    - Man zahlt keine extra Gebühr.
+    - Die Wohnung ist leer.
+    - Es gibt keine Kaution.
+    answer: 1
+  explanation: 'provisionsfrei heißt: man zahlt keine extra Gebühr für die Wohnung.'
+- type: reading_comprehension
+  group: reading
+  content:
+    passage: Auch einen Keller gibt es.
+    q: Was gehört noch zur Wohnung?
+    options:
+    - ein Garten
+    - eine Garage
+    - ein Keller
+    - ein zweiter Balkon
+    answer: 2
+  explanation: 'Im Text steht: Auch einen Keller gibt es.'
+- type: reading_comprehension
+  group: reading
+  content:
+    passage: Der alte Mieter hat die Wohnung gekündigt und ist letzten Monat ausgezogen.
+    q: Warum ist die Wohnung jetzt frei?
+    options:
+    - Der alte Mieter ist ausgezogen.
+    - Der Vermieter hat sie verkauft.
+    - Sie ist zu teuer.
+    - Sie ist zu klein.
+    answer: 0
+  explanation: Der alte Mieter hat gekündigt und ist ausgezogen. Deshalb ist die Wohnung frei.
+review_pool:
+- type: mc_cloze
+  group: grammar
+  content:
+    pre: 'Ich möchte eine '
+    post: ' Wohnung mieten.'
+    options:
+    - ruhige
+    - ruhiger
+    - ruhiges
+    - ruhigen
+    answer: 0
+  explanation: 'die Wohnung ist feminin. Nach eine steht -e: eine ruhige Wohnung.'
+- type: mc_cloze
+  group: grammar
+  content:
+    pre: 'Ich wohne in einem '
+    post: ' Zimmer.'
+    options:
+    - helle
+    - hellen
+    - helles
+    - heller
+    answer: 1
+  explanation: 'Im Dativ ist die Endung immer -en: in einem hellen Zimmer.'
+- type: mc_cloze
+  group: grammar
+  content:
+    pre: 'Zu vermieten: '
+    post: ' Lage, wenig Verkehr, viel Grün.'
+    options:
+    - ruhig
+    - ruhiges
+    - ruhigen
+    - ruhige
+    answer: 3
+  explanation: 'Ohne Artikel steht bei feminin -e: ruhige Lage.'
+- type: mc_cloze
+  group: grammar
+  content:
+    pre: 'Das ist ein '
+    post: ' Zimmer mit Balkon.'
+    options:
+    - möblierte
+    - möblierter
+    - möbliertes
+    - möblierten
+    answer: 2
+  explanation: 'das Zimmer ist neutral. Nach ein steht -es: ein möbliertes Zimmer.'
+- type: open_cloze
+  group: grammar
+  content:
+    pre: 'Das ist ein '
+    post: ' Balkon mit viel Sonne.'
+    hint: groß
+    answers:
+    - großer
+    answer_shown: großer
+  explanation: 'der Balkon ist maskulin im Nominativ. Nach ein steht -er: ein großer Balkon.'
+- type: open_cloze
+  group: grammar
+  content:
+    pre: 'Die Anzeige verspricht '
+    post: ' Nebenkosten.'
+    hint: niedrig
+    answers:
+    - niedrige
+    answer_shown: niedrige
+  explanation: 'Ohne Artikel steht im Plural -e: niedrige Nebenkosten.'
+- type: open_cloze
+  group: grammar
+  content:
+    pre: 'Ich wohne jetzt in '
+    post: ' kleinen Wohnung.'
+    answers:
+    - einer
+    - der
+    - dieser
+    - jeder
+    - meiner
+    - deiner
+    - seiner
+    - ihrer
+    - unserer
+    - eurer
+    - keiner
+    answer_shown: einer
+  explanation: 'Die Endung -en beim Adjektiv zeigt den Dativ. die Wohnung ist feminin: in einer / der kleinen Wohnung.'
+- type: open_cloze
+  group: grammar
+  content:
+    pre: 'Sie sucht einen '
+    post: ' Raum.'
+    hint: hell
+    answers:
+    - hellen
+    answer_shown: hellen
+  explanation: 'der Raum ist maskulin im Akkusativ. Nach einen steht -en: einen hellen Raum.'
+- type: open_cloze
+  group: grammar
+  content:
+    pre: 'Ich fahre '
+    post: ' dem Bus in die Stadt.'
+    answers:
+    - mit
+    answer_shown: mit
+  explanation: 'mit steht immer mit Dativ: mit dem Bus. So kommt man ohne Auto in die Stadt (aus Modul 02).'
+- type: open_cloze
+  group: grammar
+  content:
+    pre: 'Die Wohnung kommt mit einer '
+    post: ' Küche.'
+    hint: schön
+    answers:
+    - schönen
+    answer_shown: schönen
+  explanation: 'Im Dativ ist die Endung immer -en: mit einer schönen Küche.'
+- type: grammar_drill
+  group: grammar
+  content:
+    pre: 'Ich wohne in einem '
+    post: ' Haus.'
+    prompt: DATIV
+    options:
+    - große
+    - großen
+    - großes
+    - großer
+    answer: 1
+  explanation: 'Im Dativ ist die Endung immer -en: in einem großen Haus.'
+- type: grammar_drill
+  group: grammar
+  content:
+    pre: 'Ich suche eine '
+    post: ' Wohnung.'
+    prompt: AKKUSATIV
+    options:
+    - ruhige
+    - ruhigen
+    - ruhiger
+    - ruhiges
+    answer: 0
+  explanation: 'die Wohnung ist feminin im Akkusativ. Nach eine steht -e: eine ruhige Wohnung.'
+- type: grammar_drill
+  group: grammar
+  content:
+    pre: 'Das ist ein '
+    post: ' Balkon.'
+    prompt: NOMINATIV
+    options:
+    - schöne
+    - schönes
+    - schöner
+    - schönen
+    answer: 2
+  explanation: 'der Balkon ist maskulin. Nach ein steht -er: ein schöner Balkon.'
+- type: grammar_drill
+  group: grammar
+  content:
+    pre: 'Der '
+    post: ' Balkon ist wirklich toll.'
+    prompt: DER / DAS / DIE
+    options:
+    - schöne
+    - schöner
+    - schönen
+    - schönes
+    answer: 0
+  explanation: 'Nach der steht im Nominativ -e: der schöne Balkon (aus Modul 06).'
+- type: error_correction
+  group: grammar
+  content:
+    words:
+    - Ich
+    - wohne
+    - in
+    - einem
+    - klein
+    - Zimmer.
+    wrong: 4
+    correction: klein → kleinen
+  explanation: 'Im Dativ braucht das Adjektiv die Endung -en: in einem kleinen Zimmer.'
+- type: error_correction
+  group: grammar
+  content:
+    words:
+    - Das
+    - ist
+    - ein
+    - groß
+    - Balkon.
+    wrong: 3
+    correction: groß → großer
+  explanation: 'der Balkon ist maskulin im Nominativ. Nach ein steht -er: ein großer Balkon.'
+- type: error_correction
+  group: grammar
+  content:
+    words:
+    - Wir
+    - haben
+    - letzte
+    - Woche
+    - eingezogen.
+    wrong: 1
+    correction: haben → sind
+  explanation: 'einziehen bildet das Perfekt mit sein: Wir sind eingezogen (aus Modul 01).'
+- type: word_formation
+  group: vocab
+  content:
+    pre: 'Miete plus Nebenkosten heißt zusammen die '
+    post: .
+    prompt: warm + Miete
+    answers:
+    - Warmmiete
+    answer_shown: Warmmiete
+  explanation: 'warm und Miete werden ein Wort: die Warmmiete. Das ist die Miete mit allen Nebenkosten.'
+- type: collocation_match
+  group: vocab
+  content:
+    left:
+    - die Miete
+    - den Mietvertrag
+    - die Wohnung
+    - den Vermieter
+    right:
+    - besichtigen
+    - unterschreiben
+    - zahlen
+    - fragen
+    pairs:
+      0: 2
+      1: 1
+      2: 0
+      3: 3
+  explanation: die Miete zahlen · den Mietvertrag unterschreiben · die Wohnung besichtigen · den Vermieter fragen.
+- type: key_word_transformation
+  group: grammar
+  content:
+    s1: Das Zimmer ist möbliert.
+    key: EIN
+    pre: 'Das ist '
+    post: ' Zimmer.'
+    answers:
+    - ein möbliertes
+    hint: 2 Wörter
+    answer_shown: ein möbliertes
+  explanation: 'das Zimmer ist neutral. Nach ein steht -es: ein möbliertes Zimmer.'

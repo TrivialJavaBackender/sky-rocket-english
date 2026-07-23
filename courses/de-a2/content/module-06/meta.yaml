@@ -1,0 +1,34 @@
+# Modul 06 · Kleidung und Einkaufen — Kopf des Moduls.
+# grammar_points: 6 Punkte, genau die Grammatik-Liste der Modulkarte (PLAN.md §4),
+# in der Theorie als 2 Spotlights × 3 gegliedert.
+# standfirst wörtlich aus course.yaml. word_count der Texte = tatsächliche Zahl
+# im body (siehe text-main.yaml und text-extra.yaml).
+slug: m06
+title: Kleidung und Einkaufen
+standfirst: "Adjektive nach dem bestimmten Artikel · 30 Wörter · ein Gespräch im Geschäft."
+goals:
+  - text: Kleidung, Größen und Farben benennen und im Geschäft danach fragen
+    achieved_by: input
+  - text: "Das Adjektiv vor dem Nomen richtig verändern: der neue Mantel, den neuen Mantel"
+    achieved_by: workout
+  - text: Mit dieser und jeder auf ein bestimmtes Kleidungsstück zeigen
+    achieved_by: workout
+  - text: Ein Gespräch im Geschäft führen — fragen, anprobieren, kaufen und umtauschen
+    achieved_by: output
+grammar_points:
+  - Das Adjektiv nach der, das, die im Nominativ (der neue Mantel, das rote Kleid, die neuen Schuhe)
+  - Das Adjektiv nach der, das, die im Akkusativ (Ich nehme den neuen Mantel — nur maskulin ändert sich)
+  - dieser und jeder (dieser Mantel, jede Jacke, jeden Tag)
+  - der, das, die als kurze Antwort („Welchen nimmst du?" — „Den da.")
+  - dieser oder jeder mit dem Adjektiv (Dieser gestreifte Pullover ist zu eng)
+  - Überblick über die Endungen nach der, das, die, den im Nominativ und Akkusativ
+texts:
+  - kind: main
+    title: Im Kaufhaus
+    word_count: 311
+  - kind: extra
+    title: Umtausch und Rückgabe
+    word_count: 132
+production:
+  mode: speaking
+  genre: Gespräch im Geschäft

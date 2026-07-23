@@ -1,0 +1,34 @@
+# Modul 07 · Wohnungssuche — Kopf des Moduls: Titel, Ziele, Grammatik, Texte.
+# standfirst wörtlich aus course.yaml. Die 6 grammar_points sind die
+# Grammatik-Liste der Modulkarte (PLAN.md §4), gruppiert als 2 Spotlights zu je
+# 3 Punkten (siehe theory.yaml). word_count stimmt mit den Texten überein:
+# text-main 321, text-extra 142.
+slug: m07
+title: Wohnungssuche
+standfirst: Adjektive nach ein- und ohne Artikel · 30 Wörter · beim Vermieter nachfragen.
+goals:
+- text: 30 Wörter zu Anzeige, Miete und Wohnlage verstehen und benutzen
+  achieved_by: input
+- text: 'Das Adjektiv nach ein, kein, mein richtig beenden: ein schöner Balkon, einen hellen Raum'
+  achieved_by: workout
+- text: 'Das Adjektiv ohne Artikel und im Dativ richtig beenden: helles Zimmer, in einem großen Haus'
+  achieved_by: workout
+- text: Eine E-Mail an den Vermieter mit vier Fragen schreiben
+  achieved_by: output
+grammar_points:
+- Das Adjektiv nach ein, kein, mein im Nominativ (ein schöner Balkon, ein helles Zimmer, eine ruhige Straße)
+- Das Adjektiv nach ein, kein, mein im Akkusativ (einen hellen Raum, ein möbliertes Zimmer, eine ruhige Wohnung)
+- Das Adjektiv ohne Artikel im Nominativ und Akkusativ (helles Zimmer, ruhige Lage, niedrige Nebenkosten)
+- Das Adjektiv im Dativ nach dem und einem (in einem großen Haus, mit einem schönen Balkon)
+- Das Adjektiv im Dativ Plural (in ruhigen Straßen, mit hohen Nebenkosten)
+- 'Überblick: die Adjektiv-Endungen nach ein, kein, mein im Nominativ, Akkusativ und Dativ'
+texts:
+- kind: main
+  title: Die Besichtigung
+  word_count: 321
+- kind: extra
+  title: Vier Wohnungsanzeigen
+  word_count: 142
+production:
+  mode: writing
+  genre: E-Mail an den Vermieter mit Fragen

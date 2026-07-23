@@ -1,0 +1,126 @@
+# Modul 06 · Kleidung und Einkaufen — Grammatik im Fokus, Watch out! und Lückenkarten.
+# 6 Punkte — genau die Grammatik-Liste der Modulkarte (courses/de-a2/PLAN.md §4),
+# aufgeteilt in 2 Spotlights × 3 Punkte. Die Obergrenze des Profils wäre 2 × 4.
+#
+# Fachwörter: alle aus dem Grammatik-Wörterbuch der Diagnostik (das Adjektiv, das
+# Nomen, der Artikel, die Endung, der Kasus), dazu die Kasusnamen Nominativ und
+# Akkusativ. Ein eigenes Wort für die Konstruktion führt dieses Modul nicht ein:
+# statt einen Namen zu nennen, zeigt die Theorie das Muster am Beispiel — der
+# neue Mantel → den neuen Mantel. „bestimmt" steht nur neben der Artikel (nach
+# dem bestimmten Artikel der, das, die), so wie im standfirst von course.yaml.
+#
+# Das Adjektiv bekommt hier eine Endung nur nach der, das, die, dieser und jeder,
+# und nur im Nominativ und Akkusativ. Nach ein und im Dativ kommt das erst in
+# Modul 07 — deshalb steht in den Beispielen fast nie ein vor dem Adjektiv.
+spotlights:
+  - title: "Das Adjektiv nach der, das, die"
+    intro: "Das Adjektiv vor dem Nomen bekommt eine Endung. Nach dem bestimmten Artikel der, das, die ist die Endung fast immer -e oder -en. Welche von beiden, das zeigt der Kasus."
+    items:
+      - form: "Im Nominativ: der neue Mantel, das rote Kleid, die blaue Jacke"
+        example: Der neue Mantel ist warm, und die blaue Jacke ist schön.
+        note: "Nach der, das, die heißt die Endung -e. Im Plural: -en."
+        table:
+          headers: ["Artikel", "Adjektiv + Nomen"]
+          rows:
+            - ["der (maskulin)", "der neue Mantel"]
+            - ["das (neutrum)", "das rote Kleid"]
+            - ["die (feminin)", "die blaue Jacke"]
+            - ["die (Plural)", "die neuen Schuhe"]
+      - form: "Im Akkusativ: Ich nehme den neuen Mantel"
+        example: Ich nehme den neuen Mantel, das rote Kleid und die blaue Jacke.
+        note: "Nur maskulin ändert sich: der neue → den neuen. Der Rest bleibt gleich."
+        table:
+          headers: ["", "Nominativ", "Akkusativ"]
+          rows:
+            - ["maskulin", "der neue Mantel", "den neuen Mantel"]
+            - ["neutrum", "das rote Kleid", "das rote Kleid"]
+            - ["feminin", "die blaue Jacke", "die blaue Jacke"]
+            - ["Plural", "die neuen Schuhe", "die neuen Schuhe"]
+      - form: "dieser und jeder: dieser Mantel, jede Jacke, jeden Tag"
+        example: Dieser Mantel ist teuer, aber jede Jacke hier ist billig.
+        note: "dieser und jeder enden wie der, das, die. Das Adjektiv danach: -e oder -en."
+        table:
+          headers: ["der, das, die", "dieser / jeder", "mit Adjektiv"]
+          rows:
+            - ["der Mantel", "dieser Mantel", "dieser neue Mantel"]
+            - ["das Kleid", "jedes Kleid", "jedes rote Kleid"]
+            - ["die Jacke", "jede Jacke", "jede blaue Jacke"]
+            - ["den Mantel", "diesen Mantel", "diesen neuen Mantel"]
+
+  - title: "der, das, die als kurze Antwort · Überblick"
+    intro: "Man muss das Nomen nicht immer wiederholen: der, das, die zeigen kurz auf die Sache. Am Ende steht ein Überblick über alle Endungen."
+    items:
+      - form: "der, das, die als kurze Antwort"
+        example: '„Welchen Mantel nimmst du?" — „Den da, den blauen."'
+        note: "der, das, die stehen allein und zeigen auf die Sache. Akkusativ maskulin: den."
+        table:
+          headers: ["Frage", "kurze Antwort"]
+          rows:
+            - ["Welcher Mantel ist neu?", "Der da. (Nominativ)"]
+            - ["Welchen Mantel nimmst du?", "Den da. (Akkusativ)"]
+            - ["Welche Jacke gefällt dir?", "Die da."]
+            - ["Welches Kleid möchtest du?", "Das da."]
+      - form: "dieser oder jeder mit dem Adjektiv im Satz"
+        example: Dieser gestreifte Pullover ist zu eng. Jede neue Hose kostet extra.
+        note: "Nach dieser und jeder steht das Adjektiv mit -e oder -en."
+        table:
+          headers: ["Satz", "Kasus"]
+          rows:
+            - ["Dieser gestreifte Pullover ist zu eng.", "Nominativ"]
+            - ["Ich nehme diesen gestreiften Pullover.", "Akkusativ"]
+            - ["Jede neue Hose kostet extra.", "Nominativ"]
+            - ["Ich probiere jede neue Hose an.", "Akkusativ"]
+      - form: "Überblick: die Endungen nach der, das, die"
+        example: Der neue Mantel ist teuer, aber ich nehme den neuen Mantel trotzdem.
+        note: "Maskulin im Akkusativ: -en. Sonst im Singular: -e. Plural immer: -en."
+        table:
+          headers: ["", "Nominativ", "Akkusativ"]
+          rows:
+            - ["maskulin", "der neue", "den neuen"]
+            - ["neutrum", "das neue", "das neue"]
+            - ["feminin", "die neue", "die neue"]
+            - ["Plural", "die neuen", "die neuen"]
+
+watchouts:
+  - title: "Das Adjektiv braucht eine Endung"
+    bad: Der neu Mantel ist warm.
+    good: Der neue Mantel ist warm.
+    note: "Vor dem Nomen steht das Adjektiv nie ohne Endung: der neue Mantel."
+  - title: "Im Akkusativ maskulin: -en"
+    bad: Ich nehme den neue Mantel.
+    good: Ich nehme den neuen Mantel.
+    note: "Nominativ: der neue Mantel. Akkusativ maskulin: den neuen Mantel."
+  - title: "der oder den?"
+    bad: Ich kaufe der roten Rock.
+    good: Ich kaufe den roten Rock.
+    note: "kaufen fragt Wen? — Akkusativ. der Rock → den Rock."
+  - title: "Im Plural: -en"
+    bad: Ich möchte die neue Schuhe.
+    good: Ich möchte die neuen Schuhe.
+    note: "Nach die im Plural bekommt das Adjektiv -en: die neuen Schuhe."
+
+cloze_cards:
+  - text: "Der {{c1::neue}} Mantel ist warm und nicht zu eng."
+    hint: neu
+    rule: "Nach der heißt die Endung im Nominativ -e: der neue Mantel."
+  - text: "Ich nehme den {{c1::neuen}} Mantel, er gefällt mir sehr."
+    hint: neu
+    rule: "Im Akkusativ maskulin: den neuen. Nur maskulin ändert sich."
+  - text: "Das {{c1::rote}} Kleid steht dir wirklich gut."
+    hint: rot
+    rule: "Nach das heißt die Endung -e: das rote Kleid. Nominativ und Akkusativ gleich."
+  - text: "Die {{c1::blaue}} Jacke ist heute im Sonderangebot."
+    hint: blau
+    rule: "Nach die heißt die Endung -e: die blaue Jacke."
+  - text: "Ich möchte die {{c1::neuen}} Schuhe anprobieren."
+    hint: neu
+    rule: "Im Plural nach die bekommt das Adjektiv -en: die neuen Schuhe."
+  - text: "Der Mantel ist schön. Ich nehme {{c1::den}} grauen Mantel."
+    hint: der oder den
+    rule: "nehmen fragt Wen? — Akkusativ. der Mantel → den Mantel."
+  - text: "{{c1::Dieser}} gestreifte Pullover ist mir leider zu eng."
+    hint: dieser
+    rule: "dieser endet wie der: dieser Pullover. Das Adjektiv danach hat -e."
+  - text: "{{c1::Jede}} neue Hose in diesem Geschäft kostet extra."
+    hint: jeder
+    rule: "jeder endet wie der: jede Hose (feminin). Das Adjektiv danach hat -e."

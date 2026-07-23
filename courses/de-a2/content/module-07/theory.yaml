@@ -1,0 +1,185 @@
+# Modul 07 · Wohnungssuche — Grammatik im Fokus, Watch out! und Lückenkarten.
+# 6 Punkte — genau die Grammatik-Liste der Modulkarte (PLAN.md §4), als
+# 2 Spotlights zu je 3 Punkten. Erster Spotlight: das Adjektiv nach ein, kein,
+# mein und ohne Artikel (Nominativ und Akkusativ). Zweiter Spotlight: das
+# Adjektiv im Dativ und ein Überblick über alle Endungen.
+#
+# Fachwörter nur aus dem Grammatik-Wörterbuch der Diagnostik: das Adjektiv, die
+# Endung, der Artikel, das Nomen, das Genus, der Kasus mit Nominativ, Akkusativ
+# und Dativ, der Singular und der Plural. Der Begriff für die Konstruktion selbst
+# kommt nicht vor — die Regel steht als Beispiel in der Tabelle.
+#
+# Der erste Punkt bindet die Endung an das schon bekannte Genus: ohne der, das,
+# die zeigt jetzt das Adjektiv das Genus (der wird -er, das wird -es, die wird -e).
+# Die schwierige Form ohne Artikel im Dativ (gutem, ruhiger) steht bewusst in
+# keiner Tabelle und wird nirgends verlangt; im Dativ steht überall -en.
+#
+# Die vier Watch-outs treffen die typischen Fehler: Endung nach ein bei den drei
+# Genus, vergessenes -en im Dativ, fehlendes Signal ohne Artikel und der
+# Akkusativ maskulin (einen, nicht ein). Die acht Lückenkarten wandern als
+# open_cloze in den Wiederholungspool; der Tipp ist die Grundform des Adjektivs.
+spotlights:
+- title: Das Adjektiv nach ein, kein, mein und ohne Artikel
+  intro: Auch nach ein, kein und mein bekommt das Adjektiv eine Endung. Ohne der, das, die zeigt jetzt das Adjektiv das Genus vom Nomen.
+  items:
+  - form: Nach ein, kein, mein im Nominativ
+    example: Das ist ein schöner Balkon.
+    note: der wird -er, das wird -es, die wird -e.
+    table:
+      headers:
+      - Genus
+      - Endung
+      - Beispiel
+      rows:
+      - - der (maskulin)
+        - -er
+        - ein schöner Balkon
+      - - das (neutral)
+        - -es
+        - ein helles Zimmer
+      - - die (feminin)
+        - -e
+        - eine ruhige Straße
+  - form: Nach ein, kein, mein im Akkusativ
+    example: Ich suche einen hellen Raum.
+    note: 'Nur maskulin ändert sich: ein wird einen, -er wird -en.'
+    table:
+      headers:
+      - Genus
+      - Akkusativ
+      - Beispiel
+      rows:
+      - - der (maskulin)
+        - einen ...-en
+        - Ich suche einen hellen Raum.
+      - - das (neutral)
+        - ein ...-es
+        - Ich suche ein möbliertes Zimmer.
+      - - die (feminin)
+        - eine ...-e
+        - Ich suche eine ruhige Wohnung.
+  - form: Ohne Artikel im Nominativ und Akkusativ
+    example: Helles Zimmer, ruhige Lage, niedrige Nebenkosten.
+    note: 'Ohne Artikel trägt das Adjektiv das Signal: -er, -es, -e.'
+    table:
+      headers:
+      - Genus
+      - Endung
+      - Beispiel
+      rows:
+      - - der (maskulin)
+        - -er
+        - guter Preis
+      - - das (neutral)
+        - -es
+        - helles Zimmer
+      - - die (feminin)
+        - -e
+        - ruhige Lage
+      - - Plural
+        - -e
+        - niedrige Nebenkosten
+- title: Das Adjektiv im Dativ und der Überblick
+  intro: 'Im Dativ ist es leicht: Das Adjektiv hat immer die Endung -en. Das gilt für alle drei Genus und auch im Plural.'
+  items:
+  - form: 'Im Dativ nach dem, einem: Endung -en'
+    example: Wir wohnen in einem großen Haus.
+    note: 'Egal ob der, das oder die: im Dativ immer -en.'
+    table:
+      headers:
+      - Genus
+      - Dativ
+      - Beispiel
+      rows:
+      - - der (maskulin)
+        - dem / einem ...-en
+        - mit einem schönen Balkon
+      - - das (neutral)
+        - dem / einem ...-en
+        - in einem großen Haus
+      - - die (feminin)
+        - der / einer ...-en
+        - mit einer schönen Küche
+  - form: 'Im Dativ Plural: auch -en'
+    example: Am Stadtrand wohnt man in ruhigen Straßen.
+    note: Im Plural steht kein ein. Das Adjektiv endet auf -en.
+    table:
+      headers:
+      - Nomen
+      - Dativ Plural
+      - Beispiel
+      rows:
+      - - die Straßen
+        - -en
+        - in ruhigen Straßen
+      - - die Kosten
+        - -en
+        - mit hohen Nebenkosten
+  - form: 'Überblick: die Endungen nach ein, kein, mein'
+    example: ein schöner Balkon, einen schönen Balkon, mit einem schönen Balkon.
+    note: Vom Nominativ zum Dativ wird die Endung zu -en.
+    table:
+      headers:
+      - Kasus
+      - der (m)
+      - das (n)
+      - die (f)
+      - Plural
+      rows:
+      - - Nominativ
+        - -er
+        - -es
+        - -e
+        - -en
+      - - Akkusativ
+        - -en
+        - -es
+        - -e
+        - -en
+      - - Dativ
+        - -en
+        - -en
+        - -en
+        - -en
+watchouts:
+- title: ein schöner, ein schönes, eine schöne
+  bad: Das ist ein schöne Balkon.
+  good: Das ist ein schöner Balkon.
+  note: 'der Balkon ist maskulin: ein schöner Balkon. das wird -es, die wird -e.'
+- title: Im Dativ immer -en
+  bad: Wir wohnen in einem groß Haus.
+  good: Wir wohnen in einem großen Haus.
+  note: Im Dativ endet das Adjektiv immer auf -en.
+- title: helles Zimmer, nicht hell Zimmer
+  bad: 'Zu vermieten: hell Zimmer mit Balkon.'
+  good: 'Zu vermieten: helles Zimmer mit Balkon.'
+  note: 'Ohne Artikel trägt das Adjektiv das Signal: helles Zimmer.'
+- title: einen hellen Raum
+  bad: Ich suche ein hellen Raum.
+  good: Ich suche einen hellen Raum.
+  note: 'der Raum ist maskulin im Akkusativ: einen hellen Raum.'
+cloze_cards:
+- text: Das ist ein {{c1::schöner}} Balkon mit viel Sonne.
+  hint: schön
+  rule: 'der Balkon ist maskulin. Nach ein steht -er: ein schöner Balkon.'
+- text: 'In der Anzeige steht: ein {{c1::helles}} Zimmer im Zentrum.'
+  hint: hell
+  rule: 'das Zimmer ist neutral. Nach ein steht -es: ein helles Zimmer.'
+- text: Ich suche einen {{c1::hellen}} Raum für mein Büro.
+  hint: hell
+  rule: 'der Raum ist maskulin im Akkusativ. Nach einen steht -en: einen hellen Raum.'
+- text: Wir möchten eine {{c1::ruhige}} Wohnung mieten.
+  hint: ruhig
+  rule: 'die Wohnung ist feminin. Nach eine steht -e: eine ruhige Wohnung.'
+- text: Die Anzeige verspricht {{c1::niedrige}} Nebenkosten.
+  hint: niedrig
+  rule: 'Ohne Artikel steht im Plural -e: niedrige Nebenkosten.'
+- text: Die Wohnung kommt mit einem {{c1::schönen}} Balkon.
+  hint: schön
+  rule: 'Im Dativ ist die Endung immer -en: mit einem schönen Balkon.'
+- text: Wir wohnen jetzt in einem {{c1::großen}} Haus am Stadtrand.
+  hint: groß
+  rule: 'Im Dativ ist die Endung immer -en: in einem großen Haus.'
+- text: 'Zu vermieten: {{c1::möbliertes}} Zimmer, ruhige Lage.'
+  hint: möbliert
+  rule: 'Ohne Artikel trägt das Adjektiv das Signal: möbliertes Zimmer.'

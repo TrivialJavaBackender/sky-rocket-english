@@ -1,0 +1,50 @@
+# Modul 07 · Wohnungssuche — Haupttext „Die Besichtigung" (Szene, ~327 Wörter).
+# Lena sieht sich mit dem Vermieter eine Wohnung am Stadtrand an: Miete,
+# Nebenkosten, Kaution, Lage. Im Text stehen die Zielwörter des Moduls und alle
+# Zielformen des Adjektivs: nach ein-/kein- (ein heller Raum, einen sonnigen
+# Balkon), ohne Artikel (ruhige Lage, nette Leute) und im Dativ (mit einer
+# schönen Aussicht, in der zweiten Etage).
+# Glossen nur auf Wörtern, deren Form im Text die Wörterbuchform ist:
+# besichtigen (Infinitiv), die Aussicht, provisionsfrei, die Wohnfläche.
+kind: main
+kicker: LESETEXT
+title: Die Besichtigung
+meta: ≈ 3 Min · Wörter mit Punkten tragen eine Erklärung — tippen und lesen
+word_count: 327
+body:
+- - t: 'Am Samstagmorgen fährt Lena zum Stadtrand. Sie sucht eine neue Wohnung, denn ihre alte Wohnung ist zu klein und zu teuer. In der Zeitung hat sie eine Anzeige gefunden: „Helle Zwei-Zimmer-Wohnung, ruhige Lage, mit Balkon.“ Jetzt will sie die Wohnung '
+  - g: besichtigen
+  - t: .
+- - t: Vor dem Haus wartet schon der Vermieter, Herr Kraus. „Guten Tag! Schön, dass Sie da sind“, sagt er freundlich. „Das ist ein ruhiges Haus. Hier wohnen nette Leute.“ Sie gehen zusammen ins Erdgeschoss. Einen Aufzug gibt es nicht, aber die Wohnung liegt in der zweiten Etage.
+- - t: 'Die Wohnung ist wirklich schön. Das Wohnzimmer ist groß und hell. In dem großen Wohnzimmer steht schon ein altes Sofa. „Hier haben Sie einen sonnigen Balkon mit einer schönen '
+  - g: Aussicht
+  - t: “, erklärt Herr Kraus. Lena freut sich. Ein heller Raum, ein möbliertes Zimmer, eine ruhige Straße — genau das hat sie gesucht.
+- - t: '„Wie hoch ist die Miete?“, fragt Lena. „Die Kaltmiete beträgt sechshundert Euro. Dazu kommen noch die Nebenkosten, ungefähr hundertfünfzig Euro. Die Warmmiete ist also siebenhundertfünfzig Euro im Monat.“ Lena denkt kurz nach. „Und die Kaution?“ „Drei Monatsmieten. Aber die Wohnung ist '
+  - g: provisionsfrei
+  - t: ', Sie zahlen keine extra Gebühr.“'
+- - t: 'Lena schaut sich alles genau an. Die Küche ist neu und die Heizung funktioniert gut. Auch einen Keller gibt es. „Die '
+  - g: Wohnfläche
+  - t: ' ist siebzig Quadratmeter“, sagt der Vermieter. „Das Haus ist ein Altbau, aber wir haben letztes Jahr alles renoviert. Die Zimmer sind hoch und sehr hell.“'
+- - t: „Die Umgebung gefällt mir“, sagt Lena. „Alles ist ruhig, und trotzdem ist die Stadt nicht weit.“ „Ja, mit dem Bus sind Sie in zwanzig Minuten zentral in der Stadt“, antwortet Herr Kraus freundlich. In der ruhigen Umgebung gibt es einen kleinen Park und viele grüne Bäume.
+- - t: Am Ende ist Lena sehr zufrieden. „Wann kann ich einziehen?“, fragt sie. „Der alte Mieter hat die Wohnung gekündigt und ist letzten Monat ausgezogen. Sie wird am ersten Mai frei. Wenn Sie möchten, schicke ich Ihnen heute noch den Mietvertrag.“ Lena lächelt. Vielleicht ist das bald ihr neues Zuhause.
+glosses:
+- key: besichtigen
+  term: besichtigen
+  pos_label: Verb
+  definition: Eine Wohnung genau ansehen, bevor man sie mietet.
+  example: Wir besichtigen morgen eine Wohnung am Stadtrand.
+- key: Aussicht
+  term: Aussicht
+  pos_label: Nomen, die
+  definition: Der Blick nach draußen, zum Beispiel vom Balkon oder Fenster.
+  example: Vom Balkon hat man eine schöne Aussicht auf den Park.
+- key: provisionsfrei
+  term: provisionsfrei
+  pos_label: Adjektiv
+  definition: Ohne Provision. Man zahlt dem Vermieter nur die Miete, kein extra Geld.
+  example: Die Wohnung ist provisionsfrei, das ist günstig.
+- key: Wohnfläche
+  term: Wohnfläche
+  pos_label: Nomen, die
+  definition: Wie groß eine Wohnung ist, gemessen in Quadratmetern.
+  example: Die Wohnfläche beträgt achtzig Quadratmeter.

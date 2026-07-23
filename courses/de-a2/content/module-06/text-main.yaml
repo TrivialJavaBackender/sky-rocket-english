@@ -1,0 +1,50 @@
+# Modul 06 · Haupttext „Im Kaufhaus" — eine Szene beim Einkaufen von Kleidung.
+# Der Text bringt über zwei Drittel der 30 Zielvokabeln und alle Zielformen des
+# Moduls: das Adjektiv nach der, das, die im Nominativ (der blaue Mantel, die
+# rote Jacke) und im Akkusativ (Lena nimmt den blauen Mantel, die schwarzen
+# Schuhe), dazu dieser Mantel, jede Bluse und die kurze Antwort (Der gefällt
+# mir, Die nehme ich).
+# Vier Glossen stehen auf Wörtern in der Grundform: der Ärmel, die
+# Umkleidekabine, das Sonderangebot, die Quittung.
+# word_count zählt die Wörter im body (mit den vier Glossen-Wörtern).
+kind: main
+kicker: LESETEXT
+title: Im Kaufhaus
+meta: ≈ 3 Min · die Wörter mit Punkten haben eine Erklärung — zum Antippen
+word_count: 316
+body:
+  - - t: 'Am Samstag geht Lena mit ihrer Freundin Mara in ein großes Kaufhaus in der Stadt. Draußen ist es kalt, und ihr alter Mantel ist zu dünn. Lena sucht einen warmen Mantel für den Winter. Schon im Schaufenster sieht sie den blauen Mantel und die rote Jacke. „Schau mal", sagt Lena, „der blaue Mantel dort. Der gefällt mir sehr gut."'
+  - - t: 'Im ersten Stock ist die Kleidung für Damen. Die Auswahl ist wirklich groß. Neben den Mänteln hängen die Kleider, die Röcke und die warmen Pullover. „So viele schöne Sachen!", sagt Mara. Lena nimmt den blauen Mantel und sucht ihre Größe. „Welche Größe hast du?", fragt Mara. „Achtunddreißig", sagt Lena und geht in die '
+    - g: Umkleidekabine
+    - t: '.'
+  - - t: 'Sie probiert den blauen Mantel an. Er ist schön, aber der '
+    - g: Ärmel
+    - t: ' ist ein bisschen zu lang, und der Mantel ist auch ein wenig zu weit. „Wie steht mir der blaue Mantel?", fragt Lena. „Gut", sagt Mara, „aber die Farbe steht dir nicht. Nimm doch den grauen. Der ist wärmer." Lena probiert auch den grauen Mantel an. Dieser Mantel passt perfekt.'
+  - - t: 'Dann sehen die zwei Frauen die Hemden und die Blusen. Mara findet ein gestreiftes Hemd und eine karierte Bluse. „Das gestreifte Hemd ist modern", sagt sie. „Ich trage gern Streifen." Mara probiert die karierte Bluse an, aber sie ist ihr zu eng. Jede Bluse hier hat ein kleines Etikett mit dem Preis.'
+  - - t: 'An einem großen Tisch liegt das '
+    - g: Sonderangebot
+    - t: '. Heute sind alle Schuhe reduziert. Lena nimmt die schwarzen Schuhe und probiert sie an. „Diese Schuhe sind sehr preiswert", freut sie sich. „Die nehme ich." Auch die roten Schuhe gefallen ihr, aber sie sind ihr zu teuer.'
+  - - t: 'An der Kasse bezahlt Lena den grauen Mantel und die schwarzen Schuhe. Die Verkäuferin ist sehr freundlich und gibt ihr den Kassenbon. „Bewahren Sie die '
+    - g: Quittung
+    - t: ' gut auf", sagt sie. „Dann können Sie jeden Artikel umtauschen." Lena und Mara sind zufrieden und gehen glücklich nach Hause.'
+glosses:
+  - key: Umkleidekabine
+    term: Umkleidekabine
+    pos_label: Nomen
+    definition: Ein kleiner Raum im Geschäft. Dort probiert man Kleidung an.
+    example: Die Umkleidekabine ist dort hinten, gleich neben den Blusen.
+  - key: Ärmel
+    term: Ärmel
+    pos_label: Nomen
+    definition: Der Teil vom Hemd oder Mantel für den Arm. Ein Hemd hat zwei Ärmel.
+    example: Der Ärmel ist mir zu lang, ich brauche eine andere Größe.
+  - key: Sonderangebot
+    term: Sonderangebot
+    pos_label: Nomen
+    definition: Eine Ware ist für kurze Zeit billiger. So spart man Geld.
+    example: Heute sind alle Schuhe im Sonderangebot und kosten die Hälfte.
+  - key: Quittung
+    term: Quittung
+    pos_label: Nomen
+    definition: "Ein kleines Papier vom Geschäft. Es zeigt: Man hat bezahlt."
+    example: Ohne die Quittung kann man die Ware nicht umtauschen.

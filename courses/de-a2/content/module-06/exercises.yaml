@@ -1,0 +1,678 @@
+# Modul 06 · Kleidung und Einkaufen — 52 Aufgaben im Kern, 20 im Wiederholungspool.
+# Verteilung laut Profil (courses/de-a2/PLAN.md §6): 6 mc_cloze · 8 open_cloze ·
+# 6 word_formation · 4 key_word_transformation · 8 grammar_drill ·
+# 6 error_correction · 8 collocation_match · 6 reading_comprehension.
+#
+# Getestet wird nur das Adjektiv nach der, das, die, dieser und jeder, und nur
+# im Nominativ und Akkusativ (die Modulkarte). Die Endung nach ein und im Dativ
+# (Modul 07) oder Formen wie größer und am größten (Modul 08) kommen nie als
+# Lösung vor.
+#
+# Spiralisches Wiederholen: open_cloze 7 die Präposition mit + Dativ (Modul 02),
+# open_cloze 8 das Präteritum war (Modul 05), word_formation 6 das Partizip II
+# (Modul 01), grammar_drill 7 die Frage Wohin? (Modul 03), grammar_drill 8 der
+# Dativ nach stehen (Modul 04), error_correction 6 das Partizip II (Modul 01).
+# Im Pool: open_cloze 5 mit + Dativ (Modul 02), grammar_drill 4 das Perfekt mit
+# sein (Modul 01), error_correction 3 für + Akkusativ (Modul 02).
+#
+# Die Lücken im open_cloze stehen meist auf der Adjektiv-Endung (hint = die
+# Grundform des Adjektivs, so ist nur eine Endung möglich) oder auf dem Artikel
+# den/der, den der Kasus eindeutig macht.
+core:
+  # ───────────────────────── Multiple Choice ─────────────────────────
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Im Schaufenster hängt der "
+      post: " Mantel."
+      options: [neuer, neue, neuen, neu]
+      answer: 1
+    explanation: "Nach der heißt die Endung im Nominativ -e: der neue Mantel."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Ich kaufe den "
+      post: " Pullover."
+      options: [rote, roter, roten, rot]
+      answer: 2
+    explanation: "Im Akkusativ maskulin: den roten Pullover. Nur maskulin ändert sich zu -en."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Das "
+      post: " Kleid steht dir wirklich gut."
+      options: [rote, roten, rotes, rot]
+      answer: 0
+    explanation: "Nach das heißt die Endung -e: das rote Kleid. Nominativ und Akkusativ sind gleich."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: ""
+      post: " gestreifte Hemd ist modern."
+      options: [Dieser, Dieses, Diese, Diesen]
+      answer: 1
+    explanation: "das Hemd ist neutrum: dieses Hemd. Das Adjektiv danach hat -e: dieses gestreifte Hemd."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: '„Welchen Mantel nimmst du?" — „'
+      post: ' da, den blauen."'
+      options: [Der, Dem, Den, Das]
+      answer: 2
+    explanation: "kurze Antwort im Akkusativ maskulin: Den da. der Mantel → den."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Ich nehme die "
+      post: " Schuhe."
+      options: [neues, neuer, neue, neuen]
+      answer: 3
+    explanation: "Im Plural nach die bekommt das Adjektiv -en: die neuen Schuhe."
+
+  # ───────────────────────── Lückentext ─────────────────────────
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Der "
+      post: " Rock ist heute im Sonderangebot."
+      answers: [graue]
+      hint: grau
+      answer_shown: graue
+    explanation: "Nach der heißt die Endung im Nominativ -e: der graue Rock."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Dieses "
+      post: " Hemd trage ich gern zur Arbeit."
+      answers: [weiße]
+      hint: weiß
+      answer_shown: weiße
+    explanation: "dieses endet wie das. Das Adjektiv danach hat -e: dieses weiße Hemd."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Die "
+      post: " Jacke gefällt mir sehr."
+      answers: [rote]
+      hint: rot
+      answer_shown: rote
+    explanation: "Nach die heißt die Endung -e: die rote Jacke."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Ich möchte die "
+      post: " Schuhe anprobieren."
+      answers: [schwarzen]
+      hint: schwarz
+      answer_shown: schwarzen
+    explanation: "Im Plural nach die bekommt das Adjektiv -en: die schwarzen Schuhe."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Ich nehme den "
+      post: " Mantel, er ist wärmer."
+      answers: [grauen]
+      hint: grau
+      answer_shown: grauen
+    explanation: "Im Akkusativ maskulin: den grauen Mantel (-en)."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Der blaue Mantel gefällt mir. Ich nehme "
+      post: " blauen Mantel."
+      answers: [den, diesen]
+      answer_shown: den
+    explanation: "nehmen fragt Wen? — Akkusativ maskulin: den (oder diesen) blauen Mantel."
+  # Spiralisches Wiederholen: die Präposition mit + Dativ aus Modul 02.
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Ich fahre "
+      post: " dem Bus ins Kaufhaus."
+      answers: [mit]
+      answer_shown: mit
+    explanation: "Für ein Verkehrsmittel steht mit + Dativ (Modul 02): mit dem Bus."
+  # Spiralisches Wiederholen: das Präteritum von sein aus Modul 05.
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Gestern "
+      post: " der graue Mantel noch reduziert."
+      answers: [war]
+      answer_shown: war
+    explanation: "sein im Präteritum: er war (Modul 05). Gestern zeigt die Vergangenheit."
+
+  # ───────────────────────── Wortbildung ─────────────────────────
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Das Kleid ist schön bunt und "
+      post: "."
+      prompt: Farbe
+      answers: [farbig]
+      answer_shown: farbig
+    explanation: "Mit -ig wird aus dem Nomen ein Adjektiv: die Farbe → farbig."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Die Verkäuferin ist sehr "
+      post: "."
+      prompt: Freund
+      answers: [freundlich]
+      answer_shown: freundlich
+    explanation: "Mit -lich wird aus dem Nomen ein Adjektiv: der Freund → freundlich."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Heute ist es warm und "
+      post: "."
+      prompt: Sonne
+      answers: [sonnig]
+      answer_shown: sonnig
+    explanation: "Mit -ig wird aus die Sonne das Adjektiv sonnig."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Am Morgen war der Himmel grau und "
+      post: "."
+      prompt: Wolke
+      answers: [wolkig]
+      answer_shown: wolkig
+    explanation: "Mit -ig: die Wolke → wolkig."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Dieser Pullover ist modern und "
+      post: "."
+      prompt: Sport
+      answers: [sportlich]
+      answer_shown: sportlich
+    explanation: "Mit -lich: der Sport → sportlich."
+  # Spiralisches Wiederholen: das Partizip II aus Modul 01.
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Ich habe die blaue Jacke im Sonderangebot "
+      post: "."
+      prompt: kaufen
+      answers: [gekauft]
+      answer_shown: gekauft
+    explanation: "Partizip II von kaufen: gekauft (Modul 01). Das Perfekt steht mit haben."
+
+  # ───────────────────────── Umformung ─────────────────────────
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: Der Mantel ist neu.
+      key: NEUEN
+      pre: "Ich kaufe den "
+      post: " Mantel."
+      answers: [neuen]
+      hint: 1 Wort
+      answer_shown: neuen
+    explanation: "Aus dem Satz wird eine Akkusativ-Gruppe: den neuen Mantel (maskulin: -en)."
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: Das Kleid ist rot.
+      key: ROTE
+      pre: "Ich möchte das "
+      post: " Kleid anprobieren."
+      answers: [rote]
+      hint: 1 Wort
+      answer_shown: rote
+    explanation: "das rote Kleid: nach das heißt die Endung -e, im Akkusativ gleich."
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: Die Schuhe sind schwarz.
+      key: SCHWARZEN
+      pre: "Ich nehme die "
+      post: " Schuhe."
+      answers: [schwarzen]
+      hint: 1 Wort
+      answer_shown: schwarzen
+    explanation: "Im Plural nach die: die schwarzen Schuhe (-en)."
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: Dieser Pullover ist gestreift.
+      key: DIESEN
+      pre: "Ich möchte "
+      post: " gestreiften Pullover."
+      answers: [diesen]
+      hint: 1 Wort
+      answer_shown: diesen
+    explanation: "dieser wird im Akkusativ maskulin zu diesen: diesen gestreiften Pullover."
+
+  # ───────────────────────── Grammatik-Drill ─────────────────────────
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Ich nehme "
+      post: " blauen Mantel."
+      prompt: AKKUSATIV
+      options: [der, den, dem, das]
+      answer: 1
+    explanation: "nehmen fragt Wen? — Akkusativ maskulin: den blauen Mantel."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: ""
+      post: " rote Rock ist im Sonderangebot."
+      prompt: NOMINATIV
+      options: [Der, Den, Dem, Das]
+      answer: 0
+    explanation: "Der Rock ist das Subjekt → Nominativ: Der rote Rock."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Ich trage das "
+      post: " Hemd."
+      prompt: ENDUNG
+      options: [weiß, weiße, weißen, weißes]
+      answer: 1
+    explanation: "das weiße Hemd: nach das heißt die Endung -e."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: ""
+      post: " Jacke gefällt mir sehr."
+      prompt: DIESER
+      options: [Dieser, Dieses, Diese, Diesen]
+      answer: 2
+    explanation: "die Jacke ist feminin: diese Jacke."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Ich möchte die "
+      post: " Schuhe anprobieren."
+      prompt: ENDUNG
+      options: [roten, rote, roter, rotes]
+      answer: 0
+    explanation: "Im Plural nach die: die roten Schuhe (-en)."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Nimmst du "
+      post: " karierten Rock?"
+      prompt: AKKUSATIV
+      options: [der, dem, das, den]
+      answer: 3
+    explanation: "nehmen fragt Wen? — Akkusativ maskulin: den karierten Rock."
+  # Spiralisches Wiederholen: die Frage Wohin? aus Modul 03.
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Ich lege den Pullover "
+      post: " Tisch."
+      prompt: "WOHIN?"
+      options: [auf dem, auf den, auf der, im]
+      answer: 1
+    explanation: "legen fragt Wohin? — Akkusativ (Modul 03): auf den Tisch."
+  # Spiralisches Wiederholen: der Dativ nach stehen aus Modul 04.
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Der graue Mantel steht "
+      post: " wirklich gut."
+      prompt: DATIV
+      options: [du, dich, dir, dein]
+      answer: 2
+    explanation: "stehen mit einer Person steht im Dativ (Modul 04): Der Mantel steht dir gut."
+
+  # ───────────────────────── Fehlersuche ─────────────────────────
+  - type: error_correction
+    group: grammar
+    content:
+      words: [Der, neu, Mantel, ist, sehr, "warm."]
+      wrong: 1
+      correction: "neu → neue"
+    explanation: "Vor dem Nomen braucht das Adjektiv eine Endung: der neue Mantel."
+  - type: error_correction
+    group: grammar
+    content:
+      words: [Ich, nehme, den, neue, "Mantel."]
+      wrong: 3
+      correction: "neue → neuen"
+    explanation: "Im Akkusativ maskulin: den neuen Mantel."
+  - type: error_correction
+    group: grammar
+    content:
+      words: [Ich, möchte, die, neue, Schuhe, "anprobieren."]
+      wrong: 3
+      correction: "neue → neuen"
+    explanation: "Im Plural nach die bekommt das Adjektiv -en: die neuen Schuhe."
+  - type: error_correction
+    group: grammar
+    content:
+      words: [Das, rot, Kleid, gefällt, mir, "gut."]
+      wrong: 1
+      correction: "rot → rote"
+    explanation: "Nach das heißt die Endung -e: das rote Kleid."
+  - type: error_correction
+    group: grammar
+    content:
+      words: [Diese, Pullover, ist, zu, "eng."]
+      wrong: 0
+      correction: "Diese → Dieser"
+    explanation: "der Pullover ist maskulin: Dieser Pullover ist zu eng."
+  # Spiralisches Wiederholen: das Partizip II aus Modul 01.
+  - type: error_correction
+    group: grammar
+    content:
+      words: [Ich, habe, einen, Mantel, "gekaufen."]
+      wrong: 4
+      correction: "gekaufen → gekauft"
+    explanation: "Partizip II von kaufen: gekauft (Modul 01), nicht gekaufen."
+
+  # ───────────────────────── Wörter verbinden ─────────────────────────
+  - type: collocation_match
+    group: grammar
+    content:
+      left: [der neue, das rote, die blaue, die neuen]
+      right: [Kleid, Schuhe, Mantel, Jacke]
+      pairs: { 0: 2, 1: 0, 2: 3, 3: 1 }
+    explanation: "der neue Mantel, das rote Kleid, die blaue Jacke, die neuen Schuhe — der Artikel zeigt das Genus."
+  - type: collocation_match
+    group: grammar
+    content:
+      left: [den neuen, das rote, die blaue, die neuen]
+      right: [Jacke, Mantel, Schuhe, Kleid]
+      pairs: { 0: 1, 1: 3, 2: 0, 3: 2 }
+    explanation: "Ich nehme den neuen Mantel, das rote Kleid, die blaue Jacke, die neuen Schuhe. Nur maskulin: den neuen."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [weit, groß, neu, teuer]
+      right: [alt, eng, billig, klein]
+      pairs: { 0: 1, 1: 3, 2: 0, 3: 2 }
+    explanation: "Gegenteile: weit und eng, groß und klein, neu und alt, teuer und billig."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [die Umkleidekabine, das Sonderangebot, der Ärmel, die Quittung]
+      right: [hier ist die Ware billiger, ein Teil vom Hemd für den Arm, ein kleiner Raum zum Anprobieren, ein Papier vom Bezahlen]
+      pairs: { 0: 2, 1: 0, 2: 1, 3: 3 }
+    explanation: "Vier Nomen aus dem Modul, jedes mit seiner Umschreibung."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [die Kasse, das Schaufenster, tragen, anprobieren]
+      right: [das große Fenster vorne am Laden, vor dem Kauf anziehen und prüfen, dort bezahlt man im Geschäft, Kleidung am Körper haben]
+      pairs: { 0: 2, 1: 0, 2: 3, 3: 1 }
+    explanation: "An der Kasse bezahlt man, im Schaufenster liegt die Ware, tragen heißt am Körper haben, anprobieren heißt vor dem Kauf prüfen."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [die Mütze, die Schuhe, der Schal, der Mantel]
+      right: [an den Füßen, auf dem Kopf, am ganzen Körper, um den Hals]
+      pairs: { 0: 1, 1: 0, 2: 3, 3: 2 }
+    explanation: "Wo trägt man was? Die Mütze auf dem Kopf, die Schuhe an den Füßen, den Schal um den Hals, den Mantel am Körper."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [anziehen, ausziehen, umtauschen, anprobieren]
+      right: [zurückbringen und eine andere nehmen, Kleidung an den Körper tun, im Geschäft testen, Kleidung vom Körper wegnehmen]
+      pairs: { 0: 1, 1: 3, 2: 0, 3: 2 }
+    explanation: "anziehen und ausziehen sind Gegenteile. umtauschen heißt zurückbringen, anprobieren heißt im Geschäft testen."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [gestreift, kariert, reduziert, preiswert]
+      right: [nicht teuer, mit Linien, jetzt billiger als vorher, mit kleinen Quadraten]
+      pairs: { 0: 1, 1: 3, 2: 2, 3: 0 }
+    explanation: "gestreift hat Linien, kariert hat Quadrate, reduziert heißt jetzt billiger, preiswert heißt nicht teuer."
+
+  # ───────────────────────── Leseverstehen ─────────────────────────
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Lena sucht einen warmen Mantel für den Winter. Schon im Schaufenster sieht sie den blauen Mantel und die rote Jacke."
+      q: Was sucht Lena im Kaufhaus?
+      options:
+        - Einen warmen Mantel
+        - Eine rote Jacke
+        - Ein gestreiftes Hemd
+        - Neue Schuhe
+      answer: 0
+    explanation: "Im Text steht: Lena sucht einen warmen Mantel für den Winter."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Im ersten Stock ist die Kleidung für Damen. Die Auswahl ist wirklich groß. Neben den Mänteln hängen die Kleider, die Röcke und die warmen Pullover."
+      q: Wo ist die Kleidung für Damen?
+      options:
+        - Im Schaufenster
+        - Im ersten Stock
+        - Im Erdgeschoss
+        - Neben der Kasse
+      answer: 1
+    explanation: "Im Text steht: Im ersten Stock ist die Kleidung für Damen."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Sie probiert den blauen Mantel an. Er ist schön, aber der Ärmel ist ein bisschen zu lang, und der Mantel ist auch ein wenig zu weit."
+      q: Was ist das Problem mit dem blauen Mantel?
+      options:
+        - Er ist zu teuer
+        - Er ist zu klein
+        - Der Ärmel ist zu lang und er ist zu weit
+        - Die Farbe gefällt nicht
+      answer: 2
+    explanation: "Im Text steht: der Ärmel ist ein bisschen zu lang, und der Mantel ist auch ein wenig zu weit."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Lena probiert auch den grauen Mantel an. Dieser Mantel passt perfekt."
+      q: Welcher Mantel passt Lena perfekt?
+      options:
+        - Der blaue Mantel
+        - Der rote Mantel
+        - Der alte Mantel
+        - Der graue Mantel
+      answer: 3
+    explanation: "Im Text steht: Lena probiert auch den grauen Mantel an. Dieser Mantel passt perfekt."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "An einem großen Tisch liegt das Sonderangebot. Heute sind alle Schuhe reduziert. Lena nimmt die schwarzen Schuhe und probiert sie an."
+      q: Warum sind die Schuhe heute billig?
+      options:
+        - Sie sind im Sonderangebot
+        - Sie sind alt
+        - Sie sind kaputt
+        - Sie sind zu klein
+      answer: 0
+    explanation: "Im Text steht: An einem großen Tisch liegt das Sonderangebot. Heute sind alle Schuhe reduziert."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: '„Bewahren Sie die Quittung gut auf", sagt sie. „Dann können Sie jeden Artikel umtauschen."'
+      q: Warum soll Lena die Quittung aufbewahren?
+      options:
+        - Dann bezahlt sie mehr
+        - Dann kann sie die Ware umtauschen
+        - Dann geht sie in die Umkleidekabine
+        - Dann findet sie ihre Größe
+      answer: 1
+    explanation: "Im Text steht: Bewahren Sie die Quittung gut auf. Dann können Sie jeden Artikel umtauschen."
+
+# ───────────────────────── Wiederholungspool ─────────────────────────
+# 20 kurze Aufgaben für das Modul-Quiz und die Wiederholung nach 7 und 21 Tagen.
+# Dazu kommen 8 Aufgaben aus theory.yaml (cloze_cards).
+# Verteilung: 4 mc_cloze · 6 open_cloze · 4 grammar_drill · 3 error_correction ·
+# 1 word_formation · 1 collocation_match · 1 key_word_transformation.
+review_pool:
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Der "
+      post: " Schal ist schön warm."
+      options: [rot, rote, roten, roter]
+      answer: 1
+    explanation: "Nach der heißt die Endung im Nominativ -e: der rote Schal."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Ich nehme die "
+      post: " Bluse."
+      options: [karierte, karierten, kariertes, kariert]
+      answer: 0
+    explanation: "Nach die heißt die Endung -e, im Akkusativ gleich: die karierte Bluse."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Ich möchte "
+      post: " Kleid anprobieren."
+      options: [dieser, dieses, diese, diesen]
+      answer: 1
+    explanation: "das Kleid ist neutrum: dieses Kleid, im Akkusativ gleich."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: '„Welche Schuhe nimmst du?" — „'
+      post: ' da."'
+      options: [Der, Das, Die, Den]
+      answer: 2
+    explanation: "kurze Antwort im Plural: Die da. die Schuhe → Die."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Das "
+      post: " Hemd ist modern."
+      answers: [gestreifte]
+      hint: gestreift
+      answer_shown: gestreifte
+    explanation: "Nach das heißt die Endung -e: das gestreifte Hemd."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Die "
+      post: " Bluse gefällt mir gut."
+      answers: [karierte]
+      hint: kariert
+      answer_shown: karierte
+    explanation: "Nach die heißt die Endung -e: die karierte Bluse."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Ich nehme den "
+      post: " Schal."
+      answers: [warmen]
+      hint: warm
+      answer_shown: warmen
+    explanation: "Im Akkusativ maskulin: den warmen Schal (-en)."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Ich kaufe die "
+      post: " Schuhe."
+      answers: [roten]
+      hint: rot
+      answer_shown: roten
+    explanation: "Im Plural nach die bekommt das Adjektiv -en: die roten Schuhe."
+  # Spiralisches Wiederholen: die Präposition mit + Dativ aus Modul 02.
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Ich fahre "
+      post: " dem Bus zum Kaufhaus."
+      answers: [mit]
+      answer_shown: mit
+    explanation: "Für ein Verkehrsmittel steht mit + Dativ (Modul 02): mit dem Bus."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Jede "
+      post: " Hose in diesem Geschäft kostet extra."
+      answers: [neue]
+      hint: neu
+      answer_shown: neue
+    explanation: "jede endet wie die (feminin). Das Adjektiv danach hat -e: jede neue Hose."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Ich kaufe "
+      post: " warmen Mantel."
+      prompt: AKKUSATIV
+      options: [der, den, dem, das]
+      answer: 1
+    explanation: "kaufen fragt Wen? — Akkusativ maskulin: den warmen Mantel."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: ""
+      post: " blaue Jacke ist teuer."
+      prompt: NOMINATIV
+      options: [Der, Die, Den, Das]
+      answer: 1
+    explanation: "die Jacke ist das Subjekt → Nominativ: Die blaue Jacke."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Ich möchte das "
+      post: " Kleid."
+      prompt: ENDUNG
+      options: [karierte, karierten, kariertes, kariert]
+      answer: 0
+    explanation: "Nach das heißt die Endung -e: das karierte Kleid."
+  # Spiralisches Wiederholen: das Perfekt mit sein aus Modul 01.
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Gestern "
+      post: " ich ins Kaufhaus gegangen."
+      prompt: PERFEKT
+      options: [habe, bin, hat, ist]
+      answer: 1
+    explanation: "gehen ist eine Bewegung: Perfekt mit sein (Modul 01). ich + sein = bin."
+  - type: error_correction
+    group: grammar
+    content:
+      words: [Ich, nehme, den, neue, "Schal."]
+      wrong: 3
+      correction: "neue → neuen"
+    explanation: "Im Akkusativ maskulin: den neuen Schal."
+  - type: error_correction
+    group: grammar
+    content:
+      words: [Diese, Kleid, ist, "schön."]
+      wrong: 0
+      correction: "Diese → Dieses"
+    explanation: "das Kleid ist neutrum: Dieses Kleid ist schön."
+  # Spiralisches Wiederholen: die Präposition für + Akkusativ aus Modul 02.
+  - type: error_correction
+    group: grammar
+    content:
+      words: [Ich, kaufe, den, Mantel, für, mein, "Vater."]
+      wrong: 5
+      correction: "mein → meinen"
+    explanation: "für steht mit dem Akkusativ (Modul 02): für meinen Vater."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Die Verkäuferin ist sehr "
+      post: "."
+      prompt: Freund
+      answers: [freundlich]
+      answer_shown: freundlich
+    explanation: "Mit -lich wird aus dem Nomen ein Adjektiv: der Freund → freundlich."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [anziehen, ausziehen, umtauschen, anprobieren]
+      right: [im Geschäft anziehen und prüfen, Kleidung an den Körper tun, zurückbringen und tauschen, Kleidung vom Körper wegnehmen]
+      pairs: { 0: 1, 1: 3, 2: 2, 3: 0 }
+    explanation: "anziehen und ausziehen sind Gegenteile. umtauschen heißt zurückbringen, anprobieren heißt im Geschäft prüfen."
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: Die Jacke ist blau.
+      key: BLAUE
+      pre: "Ich nehme die "
+      post: " Jacke."
+      answers: [blaue]
+      hint: 1 Wort
+      answer_shown: blaue
+    explanation: "die blaue Jacke: nach die heißt die Endung -e, im Akkusativ gleich."

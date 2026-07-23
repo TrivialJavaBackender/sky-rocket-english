@@ -1,0 +1,285 @@
+# Modul 06 · Kleidung und Einkaufen — 30 Wörter zu Kleidung, Größen und Einkauf.
+# Kein Wort aus Modul 01–05: eine Vokabel gehört genau einem Modul (PLAN.md §4).
+# Deshalb stehen eng und stehen (jemandem) hier nicht als Eintrag — sie sind
+# Vokabeln aus Modul 03 und kommen in den Texten und Aufgaben trotzdem vor.
+# An ihrer Stelle stehen andere Wörter aus dem gleichen Bereich (der Schal, die
+# Mütze).
+#
+# Bei jedem Nomen nennt `register` den Plural, bei jedem Verb das Partizip II.
+# Alle Verben stehen in diesem Modul im Perfekt (Modul 01), nur sein und haben
+# im Präteritum (Modul 05).
+#
+# Die Beispiele in `use_cases` zeigen das Adjektiv nach der, das, die (der neue
+# Mantel, den blauen Mantel) — die Grammatik von Modul 06. Das Adjektiv steht
+# sonst hinter dem Verb (die Hose ist zu weit), damit keine Endung nach ein
+# vorkommt (das ist Modul 07).
+entries:
+  - term: die Kleidung
+    tag: Nomen
+    definition: "Alles, was man am Körper trägt: Hosen, Hemden, Jacken und Mäntel."
+    use_cases:
+      - Im ersten Stock ist die Kleidung für Damen.
+      - Warme Kleidung ist im Winter wichtig.
+    collocations: warme Kleidung · die Kleidung tragen · die Kleidung anprobieren
+    register: "Meistens Singular. Von dem Verb kleiden."
+
+  - term: die Größe
+    tag: Nomen
+    definition: "Die Zahl bei der Kleidung. Sie sagt: klein, mittel oder groß."
+    use_cases:
+      - "Welche Größe haben Sie?"
+      - Der Mantel ist leider die falsche Größe.
+    collocations: die richtige Größe · eine Größe größer · welche Größe?
+    register: "Plural: die Größen. Von dem Adjektiv groß."
+
+  - term: anprobieren
+    tag: Verb
+    definition: "Kleidung im Geschäft anziehen und schauen: Passt sie? Ist sie zu eng?"
+    use_cases:
+      - Darf ich den Mantel anprobieren?
+      - Sie probiert das rote Kleid an.
+    collocations: einen Mantel anprobieren · Schuhe anprobieren · in der Kabine anprobieren
+    register: "Partizip II: anprobiert. Trennbar: ich probiere an."
+
+  - term: umtauschen
+    tag: Verb
+    definition: Eine Sache ins Geschäft zurückbringen und eine andere dafür nehmen.
+    use_cases:
+      - Kann ich die Jacke umtauschen?
+      - Mit der Quittung darf man die Ware umtauschen.
+    collocations: die Ware umtauschen · gegen eine andere Größe umtauschen
+    register: "Partizip II: umgetauscht. Trennbar: ich tausche um."
+
+  - term: der Ärmel
+    tag: Nomen
+    definition: Der Teil vom Hemd oder Mantel für den Arm. Ein Hemd hat zwei Ärmel.
+    use_cases:
+      - Der Ärmel ist mir zu lang.
+      - Das Hemd hat kurze Ärmel.
+    collocations: kurze Ärmel · lange Ärmel · der Ärmel ist zu lang
+    register: "Plural: die Ärmel. Von dem Nomen der Arm."
+
+  - term: weit
+    tag: Adjektiv
+    definition: Nicht eng. Es ist viel Platz. Gegenteil von eng.
+    use_cases:
+      - Die Hose ist mir zu weit.
+      - Der Mantel ist oben ein bisschen zu weit.
+    collocations: zu weit · weit oder eng · nicht weit genug
+    register: "Gegenteil: eng. Auch: der Weg ist weit (= lang)."
+
+  - term: gestreift
+    tag: Adjektiv
+    definition: Mit Linien in zwei Farben, zum Beispiel blau und weiß.
+    use_cases:
+      - Das Hemd ist blau und weiß gestreift.
+      - Ich mag das gestreifte Hemd.
+    collocations: blau gestreift · gestreift oder kariert · das gestreifte Hemd
+    register: "Von dem Nomen der Streifen. Ähnlich: kariert."
+
+  - term: kariert
+    tag: Adjektiv
+    definition: Mit kleinen Quadraten, wie ein Schachbrett. Oft rot und schwarz.
+    use_cases:
+      - Die Bluse ist rot kariert.
+      - Ich finde das karierte Hemd schön.
+    collocations: rot kariert · kariert oder gestreift · die karierte Bluse
+    register: "Von dem Nomen das Karo. Ähnlich: gestreift."
+
+  - term: das Sonderangebot
+    tag: Nomen
+    definition: Eine Ware ist für kurze Zeit billiger. So spart man Geld.
+    use_cases:
+      - Die Schuhe sind heute im Sonderangebot.
+      - Im Sonderangebot kostet der Mantel nur die Hälfte.
+    collocations: im Sonderangebot · ein gutes Sonderangebot · das Sonderangebot der Woche
+    register: "Plural: die Sonderangebote. Aus sonder- und das Angebot."
+
+  - term: die Quittung
+    tag: Nomen
+    definition: "Ein kleines Papier vom Geschäft. Es zeigt: Man hat bezahlt."
+    use_cases:
+      - Bewahren Sie die Quittung gut auf.
+      - Ohne Quittung kann man nichts umtauschen.
+    collocations: die Quittung aufbewahren · die Quittung zeigen · ohne Quittung
+    register: "Plural: die Quittungen. Ähnlich: der Kassenbon."
+
+  - term: der Mantel
+    tag: Nomen
+    definition: Eine lange, warme Jacke für den Winter. Man trägt sie über der Kleidung.
+    use_cases:
+      - Im Winter brauche ich einen Mantel.
+      - Der blaue Mantel gefällt mir sehr.
+    collocations: der warme Mantel · den Mantel anziehen · der Mantel passt gut
+    register: "Plural: die Mäntel. Ein langes Kleidungsstück für kalte Tage."
+
+  - term: die Jacke
+    tag: Nomen
+    definition: Ein kurzes Kleidungsstück für die Arme und den Körper. Kürzer als ein Mantel.
+    use_cases:
+      - Zieh die Jacke an, es ist kalt.
+      - Die rote Jacke steht dir gut.
+    collocations: die Jacke anziehen · die warme Jacke · die Jacke zumachen
+    register: "Plural: die Jacken. Kleiner als der Mantel."
+
+  - term: die Hose
+    tag: Nomen
+    definition: Ein Kleidungsstück für die Beine. Sie hat zwei Beine.
+    use_cases:
+      - Die Hose ist mir zu lang.
+      - Ich suche eine Hose in meiner Größe.
+    collocations: die kurze Hose · die Hose anziehen · die Hose ist zu eng
+    register: "Plural: die Hosen. Man sagt eine Hose, auch für zwei Beine."
+
+  - term: das Kleid
+    tag: Nomen
+    definition: Ein Kleidungsstück für Frauen. Oben und unten ein Teil, keine Hose.
+    use_cases:
+      - Das rote Kleid steht dir gut.
+      - Zum Fest trage ich ein Kleid.
+    collocations: das lange Kleid · ein Kleid tragen · das Kleid anprobieren
+    register: "Plural: die Kleider. Nicht verwechseln mit die Kleidung."
+
+  - term: der Rock
+    tag: Nomen
+    definition: Ein Kleidungsstück für Frauen, nur unten. Kein Bein wie bei der Hose.
+    use_cases:
+      - Der Rock ist mir zu kurz.
+      - Sie trägt einen Rock und eine Bluse.
+    collocations: der kurze Rock · der lange Rock · den Rock anprobieren
+    register: "Plural: die Röcke. Für Frauen, ohne Beine."
+
+  - term: das Hemd
+    tag: Nomen
+    definition: Ein Kleidungsstück für den oberen Körper, oft mit Knöpfen. Man trägt es im Büro.
+    use_cases:
+      - Das weiße Hemd trage ich zur Arbeit.
+      - Sein Hemd ist blau gestreift.
+    collocations: das weiße Hemd · das Hemd anziehen · ein Hemd mit Streifen
+    register: "Plural: die Hemden. Oft mit Knöpfen und Ärmeln."
+
+  - term: die Bluse
+    tag: Nomen
+    definition: Ein Hemd für Frauen. Leicht und oft aus dünnem Stoff.
+    use_cases:
+      - Die karierte Bluse gefällt mir.
+      - Sie trägt eine Bluse zum Rock.
+    collocations: die weiße Bluse · die Bluse anziehen · eine Bluse aus Seide
+    register: "Plural: die Blusen. Ein Hemd für Frauen."
+
+  - term: der Pullover
+    tag: Nomen
+    definition: Ein warmes Kleidungsstück für den oberen Körper, oft aus Wolle.
+    use_cases:
+      - Im Winter trage ich gern einen Pullover.
+      - Der gestreifte Pullover ist mir zu eng.
+    collocations: der warme Pullover · den Pullover anziehen · ein Pullover aus Wolle
+    register: "Plural: die Pullover. Kurz: der Pulli."
+
+  - term: die Schuhe
+    tag: Nomen
+    definition: "Man trägt sie an den Füßen. Zwei Stück: für links und rechts."
+    use_cases:
+      - Die schwarzen Schuhe sind heute reduziert.
+      - Diese Schuhe sind mir zu klein.
+    collocations: die Schuhe anziehen · ein Paar Schuhe · die Schuhe anprobieren
+    register: "Singular: der Schuh. Meistens im Plural: die Schuhe."
+
+  - term: der Schal
+    tag: Nomen
+    definition: Man trägt ihn im Winter um den Hals. Er ist lang und warm.
+    use_cases:
+      - Bei Kälte trage ich einen Schal.
+      - Der lange Schal ist aus Wolle.
+    collocations: der warme Schal · den Schal umbinden · ein Schal aus Wolle
+    register: "Plural: die Schals. Um den Hals gegen die Kälte."
+
+  - term: die Mütze
+    tag: Nomen
+    definition: Man trägt sie im Winter auf dem Kopf. Sie macht den Kopf warm.
+    use_cases:
+      - Setz die Mütze auf, es ist kalt.
+      - Die rote Mütze steht dem Kind gut.
+    collocations: die warme Mütze · die Mütze aufsetzen · eine Mütze aus Wolle
+    register: "Plural: die Mützen. Auf dem Kopf, gegen die Kälte."
+
+  - term: die Farbe
+    tag: Nomen
+    definition: Zum Beispiel rot, blau, grün oder gelb. Die Sache hat eine Farbe.
+    use_cases:
+      - "Welche Farbe hat der Mantel?"
+      - Die Farbe steht dir nicht.
+    collocations: welche Farbe? · eine helle Farbe · die Farbe gefällt mir
+    register: "Plural: die Farben. Das Adjektiv dazu: farbig."
+
+  - term: anziehen
+    tag: Verb
+    definition: Kleidung an den Körper tun. Gegenteil von ausziehen.
+    use_cases:
+      - Zieh die warme Jacke an!
+      - Ich ziehe heute das blaue Hemd an.
+    collocations: die Jacke anziehen · sich warm anziehen · die Schuhe anziehen
+    register: "Partizip II: angezogen. Gegenteil: ausziehen."
+
+  - term: ausziehen
+    tag: Verb
+    definition: Kleidung vom Körper wegnehmen. Gegenteil von anziehen.
+    use_cases:
+      - Zieh die nasse Jacke aus!
+      - Zu Hause ziehe ich die Schuhe aus.
+    collocations: die Schuhe ausziehen · die Jacke ausziehen · sich ausziehen
+    register: "Partizip II: ausgezogen. Gegenteil: anziehen."
+
+  - term: tragen
+    tag: Verb
+    definition: Kleidung am Körper haben. Man hat sie an.
+    use_cases:
+      - Sie trägt heute ein rotes Kleid.
+      - Im Büro trage ich ein weißes Hemd.
+    collocations: Kleidung tragen · gern tragen · einen Mantel tragen
+    register: "Partizip II: getragen. Präsens: ich trage, du trägst."
+
+  - term: die Umkleidekabine
+    tag: Nomen
+    definition: Ein kleiner Raum im Geschäft. Dort probiert man Kleidung an.
+    use_cases:
+      - Die Umkleidekabine ist dort hinten.
+      - Sie geht mit dem Mantel in die Umkleidekabine.
+    collocations: in die Umkleidekabine gehen · die Umkleidekabine ist frei
+    register: "Plural: die Umkleidekabinen. Kurz: die Kabine."
+
+  - term: der Kassenbon
+    tag: Nomen
+    definition: Ein kleines Papier von der Kasse. Es zeigt den Preis und das Datum.
+    use_cases:
+      - Der Kassenbon liegt in der Tüte.
+      - Ohne Kassenbon ist der Umtausch schwer.
+    collocations: den Kassenbon aufbewahren · der Kassenbon von heute
+    register: "Plural: die Kassenbons. Ähnlich: die Quittung."
+
+  - term: reduziert
+    tag: Adjektiv
+    definition: Billiger als vorher. Der Preis ist kleiner geworden.
+    use_cases:
+      - Alle Mäntel sind heute reduziert.
+      - Das reduzierte Kleid kostet nur zwanzig Euro.
+    collocations: reduzierte Ware · reduzierte Preise · um die Hälfte reduziert
+    register: "Von dem Verb reduzieren. Ähnlich: billiger."
+
+  - term: das Schaufenster
+    tag: Nomen
+    definition: Das große Fenster vorne am Geschäft. Dort sieht man die Ware von der Straße.
+    use_cases:
+      - Im Schaufenster hängt der blaue Mantel.
+      - Sie schaut lange ins Schaufenster.
+    collocations: im Schaufenster · ins Schaufenster schauen · die Ware im Schaufenster
+    register: "Plural: die Schaufenster. Aus schauen und das Fenster."
+
+  - term: die Kasse
+    tag: Nomen
+    definition: Dort bezahlt man im Geschäft. Am Ende geht man zur Kasse.
+    use_cases:
+      - An der Kasse bezahle ich mit Karte.
+      - Die Kasse ist gleich am Ausgang.
+    collocations: an der Kasse · zur Kasse gehen · an der Kasse bezahlen
+    register: "Plural: die Kassen. Dort gibt man das Geld."

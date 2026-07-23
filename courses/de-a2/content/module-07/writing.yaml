@@ -1,0 +1,34 @@
+# Modul 07 · Wohnungssuche — Schreibaufgabe: E-Mail an den Vermieter.
+# Echtes A2-Format (Goethe/telc Brief): kurze E-Mail, 50 bis 60 Wörter, vier
+# vorgegebene Punkte, Anrede und Gruß. Der Lernende fragt beim Vermieter nach
+# Miete, Nebenkosten, Möbeln und einem Termin — genau das nachfragen aus dem
+# standfirst. Das Modell nutzt die Zielformen des Moduls (eine ruhige Wohnung,
+# mit freundlichen Grüßen) und keine Grammatik aus späteren Modulen.
+mode: writing
+genre: E-Mail an den Vermieter mit Fragen
+word_target:
+- 50
+- 60
+prompt: |
+  Sie haben in der Zeitung eine Wohnungsanzeige gelesen und finden die Wohnung interessant. Schreiben Sie eine E-Mail an den Vermieter, Herrn Kraus. Schreiben Sie 50 bis 60 Wörter.
+
+  Schreiben Sie etwas zu allen vier Punkten:
+  - Sagen Sie, welche Anzeige Sie gelesen haben.
+  - Fragen Sie nach der Miete und den Nebenkosten.
+  - Fragen Sie, ob die Wohnung möbliert ist.
+  - Fragen Sie nach einem Termin für eine Besichtigung.
+
+  Vergessen Sie die Anrede und den Gruß nicht.
+model_answer: |
+  Sehr geehrter Herr Kraus,
+
+  ich habe Ihre Anzeige für die Zwei-Zimmer-Wohnung am Stadtrand gelesen. Die Wohnung gefällt mir sehr. Wie hoch ist die Kaltmiete, und wie hoch sind die Nebenkosten? Ist die Wohnung möbliert oder leer? Ich möchte die Wohnung gern besichtigen. Wann haben Sie Zeit für einen Termin?
+
+  Mit freundlichen Grüßen
+  Anna Weber
+checklist:
+- Anrede (Sehr geehrter Herr Kraus) und Gruß (Mit freundlichen Grüßen) nicht vergessen
+- 50 bis 60 Wörter
+- 'Zu allen vier Punkten etwas schreiben: Anzeige, Miete und Nebenkosten, möbliert, Termin'
+- 'Fragen mit Fragezeichen stellen: Wie hoch ist die Miete? Ist die Wohnung möbliert?'
+- 'Die Adjektive richtig beenden: eine ruhige Wohnung, mit freundlichen Grüßen'
