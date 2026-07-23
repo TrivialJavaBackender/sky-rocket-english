@@ -24,7 +24,7 @@ import {
   attachSpotlightAudio,
   attachWatchoutAudio,
   attachReadingAudio,
-  paragraphSentences,
+  paragraphClipTexts,
   vocabAudioTexts,
   spotlightAudioTexts,
   watchoutAudioTexts,
@@ -110,7 +110,7 @@ const LAUNCHER_COPY: Record<ExerciseGroup, { label: string; detail: (types: stri
 interface RawReading {
   text: ReadingTextDTO;
   glossMap: Record<string, GlossDTO>;
-  sentencesByParagraph: string[][];
+  clipsByParagraph: string[][];
 }
 
 async function fetchReadingRaw(moduleId: number, kind: ReadingKind): Promise<RawReading | null> {
@@ -119,8 +119,8 @@ async function fetchReadingRaw(moduleId: number, kind: ReadingKind): Promise<Raw
   const glosses = await contentRepo.listGlossesForReadingText(text.id);
   const glossMap: Record<string, GlossDTO> = {};
   for (const g of glosses) glossMap[g.key] = g;
-  const sentencesByParagraph = paragraphSentences(paragraphTexts(text.body, glossMap));
-  return { text, glossMap, sentencesByParagraph };
+  const clipsByParagraph = paragraphClipTexts(paragraphTexts(text.body, glossMap));
+  return { text, glossMap, clipsByParagraph };
 }
 
 function toReadingWithGlossesDTO(raw: RawReading): Omit<ReadingWithGlossesDTO, 'paragraphAudio'> {
@@ -130,8 +130,8 @@ function toReadingWithGlossesDTO(raw: RawReading): Omit<ReadingWithGlossesDTO, '
 export async function getReadingWithGlosses(moduleId: number, kind: ReadingKind, lang: string): Promise<ReadingWithGlossesDTO | null> {
   const raw = await fetchReadingRaw(moduleId, kind);
   if (!raw) return null;
-  const clips = await resolveAudio(lang, raw.sentencesByParagraph.flat());
-  return { ...toReadingWithGlossesDTO(raw), paragraphAudio: attachReadingAudio(raw.sentencesByParagraph, clips) };
+  const clips = await resolveAudio(lang, raw.clipsByParagraph.flat());
+  return { ...toReadingWithGlossesDTO(raw), paragraphAudio: attachReadingAudio(raw.clipsByParagraph, clips) };
 }
 
 async function buildLaunchers(moduleId: number): Promise<UnitLauncherDTO[]> {
@@ -280,12 +280,12 @@ export async function getUnit(userId: number, courseSlug: string, moduleSlug: st
     ...vocabAudioTexts(vocabEntries),
     ...spotlightAudioTexts(spotlights),
     ...watchoutAudioTexts(watchouts),
-    ...(mainRaw?.sentencesByParagraph.flat() ?? []),
-    ...(extraRaw?.sentencesByParagraph.flat() ?? []),
+    ...(mainRaw?.clipsByParagraph.flat() ?? []),
+    ...(extraRaw?.clipsByParagraph.flat() ?? []),
   ]);
 
-  const reading = mainRaw ? { ...toReadingWithGlossesDTO(mainRaw), paragraphAudio: attachReadingAudio(mainRaw.sentencesByParagraph, clips) } : null;
-  const readingExtra = extraRaw ? { ...toReadingWithGlossesDTO(extraRaw), paragraphAudio: attachReadingAudio(extraRaw.sentencesByParagraph, clips) } : null;
+  const reading = mainRaw ? { ...toReadingWithGlossesDTO(mainRaw), paragraphAudio: attachReadingAudio(mainRaw.clipsByParagraph, clips) } : null;
+  const readingExtra = extraRaw ? { ...toReadingWithGlossesDTO(extraRaw), paragraphAudio: attachReadingAudio(extraRaw.clipsByParagraph, clips) } : null;
 
   return {
     moduleId: module.id,

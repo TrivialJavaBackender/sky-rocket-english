@@ -299,7 +299,7 @@ async function ActiveStepPanel({
       // the reading, fetch it too and flatten it server-side into plain-text
       // paragraphs so ExercisePlayer can show it in a collapsible panel.
       // paragraphTexts is the same join scripts/audio.ts uses to turn this same
-      // body into sentences to synthesize, so a gloss resolves identically here,
+      // body into clip texts to synthesize, so a gloss resolves identically here,
       // there, and in ReadingText's own client-side join.
       let readingTitle: string | undefined;
       let readingParagraphs: string[] | undefined;

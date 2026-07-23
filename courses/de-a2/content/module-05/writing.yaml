@@ -1,0 +1,31 @@
+mode: writing
+genre: Erzählung über die eigene Kindheit
+word_target: [50, 60]
+prompt: |
+  In Ihrer Sprachgruppe im Netz schreiben diese Woche alle über ihre
+  Kindheit. Schreiben Sie Ihren Beitrag. 50–60 Wörter.
+
+  Schreiben Sie zu allen vier Punkten:
+  • Wo Sie aufgewachsen sind und wie es dort war
+  • Was Sie als Kind machen durften und was verboten war
+  • Was Sie in den Ferien immer gemacht haben
+  • Ein Erlebnis aus Ihrer Kindheit
+
+  Benutzen Sie das Präteritum von sein und haben, ein Verb aus können,
+  müssen, wollen, dürfen, sollen und je einmal als und wenn.
+model_answer: |
+  Ich bin in einem kleinen Dorf aufgewachsen. Wir hatten kein Auto und kein
+  Spielzeug, aber wir hatten viel Freiheit. Meine Eltern waren streng:
+  Abends durfte ich nicht lange draußen bleiben. Immer wenn wir Ferien
+  hatten, sind wir zu meiner Oma gefahren. Als ich acht war, sind wir in die
+  Stadt gezogen. Diesen Tag vergesse ich nie.
+checklist:
+  - 50–60 Wörter
+  - Alle vier Punkte stehen im Text
+  - sein und haben stehen im Präteritum (war, waren, hatte, hatten)
+  - Ein Verb aus können, müssen, wollen, dürfen, sollen steht im Präteritum
+  - als steht für einmal, wenn für immer wieder
+  - Nach als und wenn steht das Verb ganz am Ende
+  - Alle anderen Verben stehen im Perfekt mit haben oder sein
+  - Eine Zeitangabe der Vergangenheit kommt vor (damals, früher, mit acht Jahren)
+  - Mindestens acht Wörter aus dem Modul kommen vor

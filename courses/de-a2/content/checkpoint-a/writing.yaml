@@ -1,0 +1,68 @@
+# Checkpoint A · Schreiben und Auswertung. Das Szenario ist so gewählt, dass die
+# Grammatik von allen fünf Modulen von selbst nötig wird: der Umzug am
+# Wochenende (M01 · Perfekt), der Weg zur neuen Wohnung (M02 · Präposition mit
+# festem Kasus), die Möbel im Zimmer (M03 · wo und wohin), die Person, die
+# geholfen hat (M04 · Dativ als Objekt), und die alte Wohnung von früher
+# (M05 · war, hatte, musste und als/wenn).
+#
+# 60–80 Wörter sind mehr als im Profil (PLAN.md §6: 50–60). Das ist Absicht:
+# Die Aufgabe muss die Grammatik von fünf Modulen auf einmal zeigen. In 60
+# Wörter passt das nicht.
+mode: writing
+genre: E-Mail über den Umzug
+word_target: [60, 80]
+prompt: |
+  Schreiben Sie diesen Text direkt nach den 30 Aufgaben, in der gleichen
+  Sitzung. 20 Minuten, kein Wörterbuch.
+
+  ## Die Aufgabe
+
+  Sie sind letzten Monat umgezogen. Eine Freundin oder ein Freund aus Ihrem
+  Deutschkurs wohnt in einer anderen Stadt. Schreiben Sie eine E-Mail über
+  Ihre neue Wohnung. 60–80 Wörter.
+
+  Schreiben Sie zu allen fünf Punkten:
+  • Was Sie am Wochenende gemacht haben — der Umzug
+  • Wer Ihnen geholfen hat und was Sie dieser Person geschenkt haben
+  • Wo im Zimmer jetzt die Möbel stehen, liegen oder hängen
+  • Wie es in der alten Wohnung früher war
+  • Wie man vom Bahnhof zu Ihnen kommt
+
+  Benutzen Sie das Perfekt mit haben und sein, eine Präposition mit Dativ, den
+  Dativ nach helfen, danken oder schenken, das Präteritum von sein und haben
+  und einmal als oder wenn.
+
+  ## Nach dem Test
+
+  • 23 von 30 sind 75 Prozent. So viele Aufgaben müssen richtig sein.
+  • Sortieren Sie jeden Fehler nach dem Modul. Vorn in der Erklärung steht
+    M01, M02, M03, M04 oder M05.
+  • Ein Fehler hier und ein Fehler dort ist normal. Drei Fehler in einem
+    Modul sind eine Lücke: Lesen Sie dort die Regeln noch einmal und machen
+    Sie die Aufgaben von diesem Modul neu.
+  • Weniger als 23 richtig? Dann kommt zuerst eine Woche Wiederholung,
+    danach Block B.
+model_answer: |
+  Liebe Sara,
+
+  endlich sind wir umgezogen! Am Samstag haben wir alles in die Wohnung
+  getragen. Mein Bruder hat mir geholfen, und ich habe ihm einen Gutschein
+  geschenkt. Das Regal steht neben dem Fenster, und die Lampe hängt über dem
+  Tisch. Früher war mein Zimmer dunkel: Wir hatten kein Regal, und ich musste
+  alles auf den Boden legen. Als wir am Abend fertig waren, haben wir
+  zusammen gefeiert. Vom Bahnhof fährst du mit der Straßenbahn bis zur Ampel.
+
+  Liebe Grüße
+  Ella
+checklist:
+  - 60–80 Wörter
+  - Alle fünf Punkte stehen im Text
+  - Anrede (Liebe … / Lieber …) und Gruß am Ende
+  - Die Sätze über das Wochenende stehen im Perfekt, das Partizip am Ende
+  - haben oder sein ist richtig gewählt (Bewegung → sein)
+  - Nach mit, bei, nach, von, zu, aus und seit steht der Dativ
+  - Bei stehen, liegen und hängen steht der Dativ (Wo?), bei stellen, legen und hängen der Akkusativ (Wohin?)
+  - Nach helfen, danken und schenken steht die Person im Dativ
+  - sein und haben stehen im Präteritum (war, waren, hatte, hatten)
+  - als oder wenn kommt einmal vor, und das Verb steht am Ende
+  - Mindestens zehn Wörter aus den Modulen 1–5 kommen vor

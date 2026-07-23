@@ -1,0 +1,285 @@
+# Modul 05 · Früher und heute — 30 Wörter zu Kindheit, Erinnerung und Biografie.
+# Kein Wort aus Modul 01, 02, 03 oder 04: eine Vokabel gehört genau einem Modul
+# (PLAN.md §4). Deshalb steht umziehen hier nicht noch einmal — es ist eine
+# Vokabel von Modul 03 und kommt in den Texten und Aufgaben trotzdem vor.
+# An seiner Stelle steht die Schulzeit aus dem gleichen Bereich.
+#
+# Bei den Verben nennt `register` das Partizip: alle diese Verben stehen in
+# diesem Modul im Perfekt (Modul 01). Im Präteritum stehen nur sein, haben und die
+# Verben können, müssen, wollen, dürfen, sollen — die stehen in theory.yaml.
+# Bei jedem Nomen steht der Plural.
+#
+# sich erinnern ist eine Vokabel mit festen Formen, kein Grammatikstoff — wie
+# sich treffen in Modul 01. Die Formen ich erinnere mich, erinnerst du dich
+# stehen fertig in `register` und `use_cases`; keine Aufgabe verlangt, mich oder
+# dich selbst zu bilden.
+entries:
+  - term: die Kindheit
+    tag: Nomen
+    definition: Die Zeit als Kind — von der Geburt bis ungefähr vierzehn.
+    use_cases:
+      - Meine Kindheit war laut und voll.
+      - Er hat eine schöne Kindheit gehabt.
+    collocations: eine schöne Kindheit · in der Kindheit · aus meiner Kindheit
+    register: "Meistens Singular. Von dem Nomen das Kind."
+
+  - term: die Jugend
+    tag: Nomen
+    definition: Die Zeit nach der Kindheit — ungefähr von vierzehn bis zwanzig.
+    use_cases:
+      - Meine Jugend war dann in der Stadt.
+      - In seiner Jugend hat er viel Sport getrieben.
+    collocations: in der Jugend · die eigene Jugend
+    register: "Nur Singular. Von dem Adjektiv jung."
+
+  - term: die Erinnerung
+    tag: Nomen
+    definition: Ein Bild von früher im Kopf. Man weiß es noch.
+    use_cases:
+      - Ich habe nur schöne Erinnerungen an das Dorf.
+      - Das Foto ist eine Erinnerung an meine Schulzeit.
+    collocations: eine schöne Erinnerung · die Erinnerungen von damals
+    register: "Plural: die Erinnerungen. Von dem Verb erinnern."
+
+  - term: das Erlebnis
+    tag: Nomen
+    definition: Etwas Besonderes passiert. Man denkt später oft daran.
+    use_cases:
+      - Der erste Schultag war ein großes Erlebnis.
+      - Von diesem Erlebnis hat sie allen erzählt.
+    collocations: ein großes Erlebnis · ein schönes Erlebnis
+    register: "Plural: die Erlebnisse. Von dem Verb erleben."
+
+  - term: die Schulzeit
+    tag: Nomen
+    definition: Die Jahre in der Schule — von der ersten bis zur letzten Klasse.
+    use_cases:
+      - Meine Schulzeit hat gut angefangen.
+      - Aus der Schulzeit habe ich noch drei Freunde.
+    collocations: in der Schulzeit · die ganze Schulzeit
+    register: "Nur Singular. Aus die Schule + die Zeit."
+
+  - term: das Dorf
+    tag: Nomen
+    definition: Ein kleiner Ort auf dem Land. Dort wohnen wenige Menschen.
+    use_cases:
+      - Wir haben in einem kleinen Dorf gewohnt.
+      - Im Dorf kennt jeder jeden.
+    collocations: ein kleines Dorf · im Dorf wohnen · aus einem Dorf kommen
+    register: "Plural: die Dörfer. Gegenteil: die Stadt."
+
+  - term: der Hof
+    tag: Nomen
+    definition: Der Platz zwischen den Häusern. Dort spielen die Kinder.
+    use_cases:
+      - Wir haben jeden Tag im Hof Fußball gespielt.
+      - Früher war dort ein Hof voller Kinder.
+    collocations: im Hof spielen · der Hof hinter dem Haus
+    register: "Plural: die Höfe. Auf dem Land: der Bauernhof."
+
+  - term: das Spielzeug
+    tag: Nomen
+    definition: "Sachen zum Spielen: Autos, Puppen, Bälle."
+    use_cases:
+      - Spielzeug hatten wir fast keins.
+      - Das alte Spielzeug liegt noch im Keller.
+    collocations: mit dem Spielzeug spielen · altes Spielzeug
+    register: "Meistens Singular. Aus spielen + das Zeug."
+
+  - term: das Märchen
+    tag: Nomen
+    definition: Eine alte Geschichte für Kinder. Oft kommt ein Tier oder ein König darin vor.
+    use_cases:
+      - Am Abend hat Oma uns Märchen erzählt.
+      - Kennst du das Märchen von dem Wolf?
+    collocations: ein Märchen erzählen · ein Märchen lesen
+    register: "Plural: die Märchen — die Form bleibt gleich."
+
+  - term: der Enkel
+    tag: Nomen
+    definition: Das Kind von meinem Kind.
+    use_cases:
+      - Inzwischen habe ich vier Enkel.
+      - Der Enkel macht für die Schule ein Interview.
+    collocations: der kleine Enkel · Enkel haben
+    register: "Frau: die Enkelin. Plural: die Enkel."
+
+  - term: die Note
+    tag: Nomen
+    definition: "Die Zahl für eine Arbeit in der Schule: 1 ist sehr gut, 5 ist schlecht."
+    use_cases:
+      - In Mathe hatte ich nie gute Noten.
+      - Sie hat für den Test eine gute Note bekommen.
+    collocations: eine gute Note · eine schlechte Note · Noten bekommen
+    register: "Plural: die Noten."
+
+  - term: die Freiheit
+    tag: Nomen
+    definition: Man darf selbst wählen. Niemand sagt, was man machen muss.
+    use_cases:
+      - Als Kind hatten wir viel Freiheit.
+      - Mit achtzehn kommt die große Freiheit.
+    collocations: viel Freiheit haben · ein Stück Freiheit
+    register: "Meistens Singular. Von dem Adjektiv frei."
+
+  - term: der Alltag
+    tag: Nomen
+    definition: "Der normale Tag: Arbeit, Einkaufen, Essen, Schlafen."
+    use_cases:
+      - Inzwischen habe ich einen vollen Alltag.
+      - Im Alltag bleibt wenig Zeit für Hobbys.
+    collocations: der normale Alltag · im Alltag · der Alltag mit Kindern
+    register: "Nur Singular. Aus all- + der Tag."
+
+  - term: aufwachsen
+    tag: Verb
+    definition: An einem Ort vom Kind zum erwachsenen Menschen werden.
+    use_cases:
+      - Ich bin in einem kleinen Dorf aufgewachsen.
+      - Sie ist bei ihrer Großmutter aufgewachsen.
+    collocations: auf dem Land aufwachsen · in der Stadt aufwachsen
+    register: "Trennbar: Ich wachse auf. Partizip: aufgewachsen, mit sein."
+
+  - term: sich erinnern
+    tag: Verb
+    definition: Etwas von früher ist wieder im Kopf. Man weiß es noch.
+    use_cases:
+      - Ich erinnere mich gut an meinen ersten Schultag.
+      - Erinnerst du dich noch an unser altes Haus?
+    collocations: sich gut erinnern · sich genau erinnern
+    register: "Immer mit mich, dich, uns: Ich erinnere mich, wir erinnern uns. Partizip: erinnert, mit haben."
+
+  - term: vergessen
+    tag: Verb
+    definition: Etwas ist nicht mehr im Kopf. Gegenteil von sich erinnern.
+    use_cases:
+      - Diesen Tag vergesse ich nie.
+      - Ich habe den Namen von meiner Lehrerin vergessen.
+    collocations: einen Namen vergessen · nie vergessen
+    register: "Unregelmäßig: du vergisst. Partizip: vergessen, mit haben."
+
+  - term: erlauben
+    tag: Verb
+    definition: Ja sagen. Eine Person darf etwas machen.
+    use_cases:
+      - Meine Mutter hat es einmal erlaubt.
+      - Die Eltern erlauben dem Kind einen Hund.
+    collocations: jemandem etwas erlauben · die Eltern erlauben es
+    register: "Wem? + Was? Partizip: erlaubt, ohne ge-. Gegenteil: verbieten."
+
+  - term: verbieten
+    tag: Verb
+    definition: Nein sagen. Eine Person darf etwas nicht machen.
+    use_cases:
+      - Meine Eltern haben uns den Fluss verboten.
+      - Hier ist das Parken verboten.
+    collocations: jemandem etwas verbieten · streng verboten
+    register: "Unregelmäßig. Partizip: verboten, mit haben. Gegenteil: erlauben."
+
+  - term: klettern
+    tag: Verb
+    definition: Mit Händen und Füßen nach oben gehen.
+    use_cases:
+      - Wir sind auf die Bäume geklettert.
+      - Mein Enkel klettert gern.
+    collocations: auf einen Baum klettern · auf das Dach klettern
+    register: "Partizip: geklettert, mit sein — es ist eine Bewegung."
+
+  - term: sammeln
+    tag: Verb
+    definition: Viele gleiche Sachen suchen und behalten.
+    use_cases:
+      - Wir haben Steine und alte Münzen gesammelt.
+      - Mein Bruder sammelt seit zehn Jahren Briefmarken.
+    collocations: Briefmarken sammeln · Steine sammeln
+    register: "Partizip: gesammelt, mit haben."
+
+  - term: passieren
+    tag: Verb
+    definition: Etwas geschieht plötzlich und ohne Plan.
+    use_cases:
+      - Einmal ist etwas Schlimmes passiert.
+      - Was ist damals passiert?
+    collocations: etwas passiert · ein Unfall passiert
+    register: "Meistens mit es. Partizip: passiert, mit sein."
+
+  - term: verbringen
+    tag: Verb
+    definition: Eine Zeit an einem Ort oder mit Personen sein.
+    use_cases:
+      - Dort habe ich jeden Sommer vier Wochen verbracht.
+      - Wir verbringen den Urlaub bei meinen Eltern.
+    collocations: die Ferien verbringen · Zeit mit der Familie verbringen
+    register: "Unregelmäßig. Partizip: verbracht, mit haben."
+
+  - term: damals
+    tag: Adverb
+    definition: In dieser Zeit früher — nicht heute.
+    use_cases:
+      - Damals hatten wir kein Auto.
+      - Ich war damals sieben Jahre alt.
+    collocations: damals in der Schule · von damals · damals war alles anders
+    register: "Steht oft am Anfang. Danach kommt das Verb."
+
+  - term: früher
+    tag: Adverb
+    definition: In der Zeit vor heute. Gegenteil von jetzt.
+    use_cases:
+      - Früher war hier ein Hof voller Kinder.
+      - Früher habe ich viel Sport getrieben.
+    collocations: früher war alles anders · von früher · wie früher
+    register: "Steht oft am Anfang vom Satz. Gegenteil: heute."
+
+  - term: inzwischen
+    tag: Adverb
+    definition: In der Zeit von damals bis heute. Jetzt ist es anders.
+    use_cases:
+      - Inzwischen bin ich erwachsen.
+      - Inzwischen hat meine Oma vier Enkel.
+    collocations: inzwischen ist alles anders · inzwischen wohnt sie in Berlin
+    register: "Steht oft am Anfang. Auch: mittlerweile."
+
+  - term: streng
+    tag: Adjektiv
+    definition: Eine Person sagt oft Nein und erlaubt wenig.
+    use_cases:
+      - Meine Eltern waren sehr streng.
+      - Unsere Lehrerin war streng, aber gut.
+    collocations: streng sein · strenge Eltern · streng verboten
+    register: "Auch als Adverb: Das ist streng verboten."
+
+  - term: neugierig
+    tag: Adjektiv
+    definition: Man will alles wissen und fragt viel.
+    use_cases:
+      - Ich war neugierig und wollte alles wissen.
+      - Sei nicht so neugierig!
+    collocations: neugierig sein · neugierige Kinder
+    register: "Oft mit sein: Kinder sind neugierig."
+
+  - term: schüchtern
+    tag: Adjektiv
+    definition: Man spricht nicht gern mit fremden Menschen.
+    use_cases:
+      - Ich war damals sehr schüchtern.
+      - Als Kind ist er schüchtern gewesen.
+    collocations: schüchtern sein · ein schüchternes Kind
+    register: "Gegenteil: offen."
+
+  - term: erwachsen
+    tag: Adjektiv
+    definition: Nicht mehr Kind. Über achtzehn Jahre alt.
+    use_cases:
+      - Inzwischen bin ich erwachsen.
+      - Ihre Kinder sind schon erwachsen.
+    collocations: erwachsen sein · erwachsen werden
+    register: "Als Nomen: der Erwachsene, die Erwachsene."
+
+  - term: plötzlich
+    tag: Adverb
+    definition: Sehr schnell und ohne Plan. Niemand hat es erwartet.
+    use_cases:
+      - Plötzlich war das Dorf weg.
+      - Plötzlich hat es geregnet.
+    collocations: ganz plötzlich · plötzlich anfangen
+    register: "Auch: auf einmal."

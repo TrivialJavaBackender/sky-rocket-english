@@ -1,0 +1,275 @@
+# Modul 04 · Geschenke und Gefälligkeiten — 30 Wörter zu Geschenk, Hilfe und
+# Freundschaft. Kein Wort aus Modul 01, 02 oder 03: eine Vokabel gehört genau
+# einem Modul (PLAN.md §4).
+# Bei den Verben nennt `register` die Frage und damit den Kasus — das ist der
+# Grammatikstoff dieses Moduls. Bei jedem Nomen steht der Plural.
+entries:
+  - term: das Geschenk
+    tag: Nomen
+    definition: Eine Sache für eine andere Person. Man gibt sie und nimmt kein Geld dafür.
+    use_cases:
+      - Zum Geburtstag bekommt Oma jedes Jahr viele Geschenke.
+      - Wir haben das Geschenk gemeinsam besorgt.
+    collocations: ein Geschenk kaufen · ein Geschenk bekommen · das Geburtstagsgeschenk
+    register: "Plural: die Geschenke. Von dem Verb schenken."
+
+  - term: der Gefallen
+    tag: Nomen
+    definition: Eine kleine Hilfe für eine Person. Man macht sie gern und ohne Geld.
+    use_cases:
+      - Kannst du mir einen Gefallen tun?
+      - Meine Kollegin hat mir schon oft einen Gefallen getan.
+    collocations: jemandem einen Gefallen tun · um einen Gefallen bitten
+    register: "Plural: die Gefallen. Fast immer mit dem Verb tun."
+
+  - term: die Überraschung
+    tag: Nomen
+    definition: Niemand weiß davon. Plötzlich ist sie da und macht Freude.
+    use_cases:
+      - Das Fotobuch ist eine große Überraschung gewesen.
+      - Sag ihr bitte nichts, es soll eine Überraschung bleiben.
+    collocations: eine Überraschung machen · eine kleine Überraschung
+    register: "Plural: die Überraschungen. Von dem Verb überraschen."
+
+  - term: der Geburtstag
+    tag: Nomen
+    definition: Jedes Jahr der gleiche Tag. An diesem Tag ist die Person geboren.
+    use_cases:
+      - Meine Oma hat am Samstag Geburtstag.
+      - Zum Geburtstag schenke ich meinem Bruder ein Buch.
+    collocations: Geburtstag haben · zum Geburtstag gratulieren · das Geburtstagskind
+    register: "Plural: die Geburtstage. Aus die Geburt + der Tag."
+
+  - term: die Hilfe
+    tag: Nomen
+    definition: Eine Person macht eine Arbeit nicht allein. Eine andere Person macht mit.
+    use_cases:
+      - Ohne deine Hilfe bin ich nicht fertig geworden.
+      - Vielen Dank für die Hilfe am Wochenende!
+    collocations: um Hilfe bitten · Hilfe brauchen · Danke für die Hilfe
+    register: "Meistens Singular. Von dem Verb helfen."
+
+  - term: der Nachbar
+    tag: Nomen
+    definition: Eine Person. Sie wohnt neben mir oder im gleichen Haus.
+    use_cases:
+      - Unser Nachbar hat uns beim Umzug geholfen.
+      - Ich habe dem Nachbarn den Schlüssel gegeben.
+    collocations: der nette Nachbar · die Nachbarin von oben · den Nachbarn fragen
+    register: "Frau: die Nachbarin. Im Dativ: dem Nachbarn."
+
+  - term: die Kollegin
+    tag: Nomen
+    definition: Eine Frau. Sie arbeitet in der gleichen Firma wie ich.
+    use_cases:
+      - Meine Kollegin hat mir ihr Auto geliehen.
+      - Wir haben unserer Kollegin zur Hochzeit gratuliert.
+    collocations: eine nette Kollegin · die Kollegin fragen
+    register: "Mann: der Kollege. Plural: die Kolleginnen."
+
+  - term: die Freundschaft
+    tag: Nomen
+    definition: Zwei Menschen mögen sich und helfen sich lange Zeit.
+    use_cases:
+      - Unsere Freundschaft ist schon zwanzig Jahre alt.
+      - Aus der Arbeit ist eine echte Freundschaft geworden.
+    collocations: eine lange Freundschaft · aus Freundschaft · die Freundschaft pflegen
+    register: "Plural: die Freundschaften. Von dem Nomen der Freund."
+
+  - term: der Gutschein
+    tag: Nomen
+    definition: Ein Papier oder eine Karte. Damit bekommt man etwas im Laden, das Geld ist schon bezahlt.
+    use_cases:
+      - Zum Geburtstag haben wir ihr einen Gutschein geschenkt.
+      - Der Gutschein für das Kino gilt ein Jahr.
+    collocations: einen Gutschein schenken · ein Gutschein für ein Buch
+    register: "Plural: die Gutscheine. Aus gut + der Schein."
+
+  - term: die Bitte
+    tag: Nomen
+    definition: Man fragt eine Person höflich nach Hilfe.
+    use_cases:
+      - Ich habe eine Bitte an dich.
+      - "Meine Bitte ist klein: Bring mir bitte das Paket mit."
+    collocations: eine Bitte haben · eine große Bitte · eine Bitte an dich
+    register: "Plural: die Bitten. Von dem Verb bitten."
+
+  - term: der Verkäufer
+    tag: Nomen
+    definition: Ein Mann. Er arbeitet im Laden und verkauft dort etwas.
+    use_cases:
+      - Der Verkäufer hat uns das Papier geschenkt.
+      - Fragen Sie bitte den Verkäufer nach dem Preis.
+    collocations: der Verkäufer im Laden · den Verkäufer fragen
+    register: "Frau: die Verkäuferin. Aus verkaufen + -er."
+
+  - term: schenken
+    tag: Verb
+    definition: Einer Person etwas geben und kein Geld dafür nehmen.
+    use_cases:
+      - Ich schenke meiner Oma ein Fotobuch.
+      - Was hast du deinem Bruder zum Geburtstag geschenkt?
+    collocations: jemandem etwas schenken · zum Geburtstag schenken
+    register: "Wem? + Was? Partizip: geschenkt, mit haben."
+
+  - term: leihen
+    tag: Verb
+    definition: Einer Person etwas kurz geben. Später bekommt man es zurück.
+    use_cases:
+      - Kannst du mir dein Auto leihen?
+      - Ich habe ihm mein Fahrrad geliehen.
+    collocations: jemandem etwas leihen · sich etwas leihen
+    register: "Wem? + Was? Unregelmäßig. Partizip: geliehen."
+
+  - term: gehören
+    tag: Verb
+    definition: Es ist der Besitz von dieser Person.
+    use_cases:
+      - Das Fahrrad im Hof gehört meiner Nachbarin.
+      - Wem gehört diese Tasche?
+    collocations: jemandem gehören · Wem gehört das?
+    register: "Nur Wem? — immer Dativ, nie Akkusativ. Partizip: gehört."
+
+  - term: helfen
+    tag: Verb
+    definition: Eine Arbeit für eine andere Person leichter machen.
+    use_cases:
+      - Ich helfe meinem Bruder jeden Samstag im Garten.
+      - Frau Weber hat uns mit einer guten Idee geholfen.
+    collocations: jemandem helfen · bei der Arbeit helfen · sich gegenseitig helfen
+    register: "Nur Wem? — immer Dativ. Unregelmäßig: du hilfst. Partizip: geholfen."
+
+  - term: danken
+    tag: Verb
+    definition: Nach einer Hilfe oder einem Geschenk Danke sagen.
+    use_cases:
+      - Ich danke dir für deine Hilfe.
+      - Wir haben der Kollegin herzlich gedankt.
+    collocations: jemandem danken · für etwas danken · herzlich danken
+    register: "Nur Wem? — immer Dativ. Partizip: gedankt."
+
+  - term: gratulieren
+    tag: Verb
+    definition: Einer Person zum Geburtstag oder zur Hochzeit alles Gute sagen.
+    use_cases:
+      - Wir gratulieren dir zum Geburtstag!
+      - Ich habe meiner Kollegin zur Hochzeit gratuliert.
+    collocations: jemandem gratulieren · zum Geburtstag gratulieren
+    register: "Nur Wem? — immer Dativ. Partizip: gratuliert, ohne ge-."
+
+  - term: besorgen
+    tag: Verb
+    definition: Etwas kaufen oder holen — für sich oder für eine andere Person.
+    use_cases:
+      - Kannst du für die Party die Getränke besorgen?
+      - Ich habe meiner Schwester Blumen besorgt.
+    collocations: ein Geschenk besorgen · etwas für jemanden besorgen
+    register: "Partizip: besorgt, ohne ge-."
+
+  - term: erklären
+    tag: Verb
+    definition: Einer Person eine Sache klar machen. Danach versteht sie.
+    use_cases:
+      - Der Lehrer erklärt uns die Regel noch einmal.
+      - Kannst du mir bitte den Weg zum Museum erklären?
+    collocations: jemandem etwas erklären · eine Regel erklären
+    register: "Wem? + Was? Partizip: erklärt, ohne ge-."
+
+  - term: versprechen
+    tag: Verb
+    definition: "Fest sagen: Ich mache das ganz sicher."
+    use_cases:
+      - Ich verspreche dir alles Gute für morgen.
+      - Er hat uns seine Hilfe versprochen.
+    collocations: jemandem etwas versprechen · Hilfe versprechen
+    register: "Wem? + Was? Unregelmäßig: du versprichst. Partizip: versprochen."
+
+  - term: wünschen
+    tag: Verb
+    definition: "Einer Person schöne Worte zum Fest sagen: alles Gute, viel Glück."
+    use_cases:
+      - Wir wünschen dir alles Gute zum Geburtstag!
+      - Oma hat uns viel Glück gewünscht.
+    collocations: jemandem alles Gute wünschen · viel Glück wünschen
+    register: "Wem? + Was? Partizip: gewünscht."
+
+  - term: abholen
+    tag: Verb
+    definition: Zu einem Ort gehen oder fahren und eine Person oder eine Sache mitnehmen.
+    use_cases:
+      - Ich hole dich um acht am Bahnhof ab.
+      - Wir haben das Paket bei der Nachbarin abgeholt.
+    collocations: jemanden am Bahnhof abholen · ein Paket abholen
+    register: "Trennbar: Ich hole ab. Partizip: abgeholt, mit haben."
+
+  - term: einpacken
+    tag: Verb
+    definition: Etwas in Papier legen — zum Beispiel ein Geschenk.
+    use_cases:
+      - Wir haben das Fotobuch schön eingepackt.
+      - Packen Sie das bitte als Geschenk ein?
+    collocations: ein Geschenk einpacken · in Papier einpacken
+    register: "Trennbar: Ich packe ein. Partizip: eingepackt. Gegenteil: auspacken."
+
+  - term: gemeinsam
+    tag: Adjektiv
+    definition: Nicht allein. Zwei oder mehr Personen machen es zusammen.
+    use_cases:
+      - Wir haben das Geschenk gemeinsam besorgt.
+      - Jonas und ich haben einen gemeinsamen Plan.
+    collocations: gemeinsam etwas machen · ein gemeinsames Geschenk
+    register: "Auch: zusammen."
+
+  - term: gegenseitig
+    tag: Adjektiv
+    definition: Einer macht es für den anderen, und der andere macht es auch.
+    use_cases:
+      - Im Kurs helfen wir uns gegenseitig.
+      - Die beiden Familien besuchen sich gegenseitig.
+    collocations: sich gegenseitig helfen · gegenseitige Hilfe
+    register: "Fast immer mit sich: Wir helfen uns gegenseitig."
+
+  - term: dringend
+    tag: Adjektiv
+    definition: Sehr schnell nötig. Es kann nicht bis morgen warten.
+    use_cases:
+      - Ich brauche das Auto heute dringend.
+      - Das ist eine dringende Bitte.
+    collocations: dringend brauchen · eine dringende Frage · dringend anrufen
+    register: "Auch als Adverb: Ich muss dringend gehen."
+
+  - term: ausgerechnet
+    tag: Adverb
+    definition: Genau diese Person oder genau dieser Tag — und das passt gar nicht.
+    use_cases:
+      - Ausgerechnet am Geburtstag hat es geregnet.
+      - Ausgerechnet die Nachbarin hat die beste Idee gehabt.
+    collocations: ausgerechnet heute · ausgerechnet du · ausgerechnet jetzt
+    register: "Steht direkt vor dem Wort. Zeigt eine kleine Überraschung."
+
+  - term: selbst
+    tag: Adverb
+    definition: Diese Person und keine andere macht es.
+    use_cases:
+      - Den Kuchen habe ich selbst gebacken.
+      - Oma will die Fotos nächstes Jahr selbst aussuchen.
+    collocations: selbst machen · selbst backen · ich selbst
+    register: "Auch: selber — mehr im Gespräch."
+
+  - term: unbedingt
+    tag: Adverb
+    definition: Ganz sicher. Es gibt keine andere Lösung.
+    use_cases:
+      - Diesmal wollen wir ihr unbedingt eine Überraschung machen.
+      - Du musst ihm unbedingt danken.
+    collocations: unbedingt brauchen · unbedingt wollen
+    register: "Auch: auf jeden Fall."
+
+  - term: persönlich
+    tag: Adjektiv
+    definition: Nur für diese eine Person gemacht. Nicht für alle gleich.
+    use_cases:
+      - Ein Gutschein ist praktisch, aber nicht persönlich.
+      - Ich möchte ihr das Geschenk persönlich geben.
+    collocations: ein persönliches Geschenk · persönlich vorbeikommen
+    register: "Von dem Nomen die Person."

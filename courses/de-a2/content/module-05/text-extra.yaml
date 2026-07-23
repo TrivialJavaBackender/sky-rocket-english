@@ -1,0 +1,43 @@
+# Jeder Redebeitrag ist ein eigener Absatz und beginnt mit einem Gedankenstrich —
+# wie der Dialog in Modul 02. Die Enkelin fragt, die Großmutter antwortet.
+# Das Interview ist die Vorlage für die eigene Aufgabe in writing.yaml: Fragen
+# nach der Kindheit und Antworten mit war, hatte, durfte, konnte.
+# Hier steht auch der Enkel — die einzige Vokabel des Moduls, die im Haupttext
+# nicht vorkommt.
+kind: extra
+kicker: INTERVIEW
+title: Interview mit meiner Großmutter
+meta: ≈ 1 Min · Lena fragt ihre Oma für ein Schulprojekt
+word_count: 150
+body:
+  - - t: "– Oma, ich schreibe für die Schule über früher. Wie war deine Kindheit?"
+  - - t: "– Ganz anders. Wir hatten kein Bad, aber viel Zeit."
+  - - t: "– Wo bist du aufgewachsen?"
+  - - t: "– In einem Dorf bei Dresden, sechs Kinder in einem Zimmer."
+  - - t: "– Waren deine Eltern streng?"
+  - - t: "– Sehr streng. Nach sechs Uhr durften wir nicht raus. Und immer wenn wir laut waren, mussten wir früh ins Bett."
+  - - t: "– Was hast du gern gemacht?"
+  - - t: "– Wir sind auf die Bäume geklettert und haben Steine gesammelt. "
+    - g: Spielzeug
+    - t: " hatten wir fast keins."
+  - - t: "– Erzähl mir von einem Tag aus deiner Kindheit."
+  - - t: "– Am dritten Mai 1957 hat mein Vater ein Fahrrad gebracht. Als ich das Rad gesehen habe, habe ich geweint. Fahren konnte ich noch nicht."
+  - - t: "– Und die Schule?"
+  - - t: "– Ich hatte gute Noten, aber ich war sehr schüchtern."
+  - - t: "– Und heute?"
+  - - t: "– Inzwischen habe ich vier "
+    - g: Enkel
+    - t: ". Ihr habt viel Freiheit — aber wenig Zeit."
+  - - t: "– Möchtest du zurück?"
+  - - t: "– Nein. Aber manchmal denke ich an den Hof von damals."
+glosses:
+  - key: Spielzeug
+    term: Spielzeug
+    pos_label: Nomen
+    definition: "Sachen zum Spielen: Autos, Puppen, Bälle."
+    example: Das alte Spielzeug liegt noch im Keller.
+  - key: Enkel
+    term: Enkel
+    pos_label: Nomen
+    definition: Das Kind von meinem Kind.
+    example: Inzwischen habe ich vier Enkel.

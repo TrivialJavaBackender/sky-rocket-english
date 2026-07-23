@@ -1,0 +1,138 @@
+# Modul 04 · Geschenke und Gefälligkeiten — Grammatik im Fokus, Watch out! und
+# Lückenkarten. 7 Punkte — genau die Grammatik-Liste der Modulkarte
+# (courses/de-a2/PLAN.md §4).
+#
+# Die Formen des Dativs kommen aus Modul 02, dort stehen sie nach der
+# Präposition. Hier steht der gleiche Kasus direkt nach dem Verb. Deshalb wird
+# die Tabelle nicht neu erklärt, sondern nur ohne Präposition gezeigt.
+#
+# Fachwörter: alle aus dem Grammatik-Wörterbuch der Diagnostik (der Kasus mit
+# Nominativ · Akkusativ · Dativ, das Objekt, das Personalpronomen, der Artikel,
+# das Nomen, das Verb, die Endung). Dieses Modul führt keine neue Konstruktion
+# mit eigenem Namen ein — für mein, dein und unser im Dativ steht deshalb
+# überall die Form selbst und kein Fachwort (§5.2).
+#
+# Der Plural bleibt draußen: das -n im Dativ Plural gehört einem späteren Modul,
+# darum stehen in allen Tabellen nur Formen im Singular. Bei den Pronomen sind
+# uns, euch und ihnen dabei — sie sind eine Form und keine Endung am Nomen.
+spotlights:
+  - title: "Der Dativ als Objekt"
+    intro: "Bisher stand der Dativ nach mit, bei und zu. Jetzt kommt er direkt nach dem Verb — ganz ohne Präposition. Die Frage heißt Wem?"
+    items:
+      - form: "Wem? — der Dativ ohne Präposition"
+        example: Ich helfe dem Bruder. — Wem helfe ich? Dem Bruder.
+        note: "Die Formen kennen Sie aus Modul 02. Neu ist: keine Präposition davor."
+        table:
+          headers: ["Nominativ", "Dativ — Wem?"]
+          rows:
+            - ["der Bruder", "dem Bruder"]
+            - ["die Kollegin", "der Kollegin"]
+            - ["das Kind", "dem Kind"]
+      - form: "Vier Verben mit dem Dativ"
+        note: "Diese vier Verben nehmen nie den Akkusativ. Man lernt sie auswendig."
+        table:
+          headers: ["Verb", "Beispiel"]
+          rows:
+            - ["helfen", "Ich helfe meiner Kollegin."]
+            - ["danken", "Wir danken dem Verkäufer."]
+            - ["gehören", "Das Fahrrad gehört der Nachbarin."]
+            - ["gratulieren", "Ich gratuliere dem Kind zum Geburtstag."]
+      - form: "Verben mit zwei Objekten"
+        example: Ich schenke meiner Oma ein Fotobuch.
+        note: "Zwei Fragen zu einem Verb: Wem? und Was? Die Person steht im Dativ."
+        table:
+          headers: ["Verb", "Wem? — Dativ", "Was? — Akkusativ"]
+          rows:
+            - ["geben", "dem Kind", "das Buch"]
+            - ["schenken", "der Oma", "ein Fotobuch"]
+            - ["zeigen", "dem Freund", "die Fotos"]
+            - ["erklären", "der Kollegin", "den Weg"]
+      - form: "Zuerst der Dativ, dann der Akkusativ"
+        example: Ich schenke meinem Bruder ein Buch.
+        note: "Erst die Person, dann die Sache. So steht es fast immer."
+        table:
+          headers: ["Wer?", "Verb", "Wem? — Dativ", "Was? — Akkusativ"]
+          rows:
+            - ["Ich", "schenke", "meinem Bruder", "ein Buch."]
+            - ["Er", "zeigt", "uns", "die Fotos."]
+            - ["Wir", "besorgen", "der Oma", "einen Kuchen."]
+
+  - title: "mir, dir, ihm — der Dativ bei Personen"
+    intro: "Die Person im Dativ ist sehr oft ein Personalpronomen. Diese acht Formen braucht man jeden Tag."
+    items:
+      - form: "Die Personalpronomen im Dativ"
+        example: Kannst du mir bitte helfen? Ich zeige dir dann die Fotos.
+        note: "Nur uns und euch bleiben gleich. Alle anderen Formen ändern sich."
+        table:
+          headers: ["Nominativ", "Dativ"]
+          rows:
+            - ["ich", "mir"]
+            - ["du", "dir"]
+            - ["er / es", "ihm"]
+            - ["sie", "ihr"]
+            - ["wir", "uns"]
+            - ["ihr", "euch"]
+            - ["sie", "ihnen"]
+            - ["Sie", "Ihnen"]
+      - form: "mein, dein, unser im Dativ"
+        example: Ich habe meiner Schwester und meinem Bruder gratuliert.
+        note: "Die Endung ist die gleiche wie bei dem und der: -em und -er."
+        table:
+          headers: ["Nominativ", "Dativ"]
+          rows:
+            - ["mein Bruder", "meinem Bruder"]
+            - ["meine Schwester", "meiner Schwester"]
+            - ["mein Kind", "meinem Kind"]
+            - ["unsere Oma", "unserer Oma"]
+      - form: "Der Dativ im Überblick"
+        note: "Drei Wege, eine Endung. Das Wort vor dem Nomen zeigt den Kasus."
+        table:
+          headers: ["", "der Bruder", "die Schwester", "das Kind"]
+          rows:
+            - ["Artikel", "dem Bruder", "der Schwester", "dem Kind"]
+            - ["mein", "meinem Bruder", "meiner Schwester", "meinem Kind"]
+            - ["Personalpronomen", "ihm", "ihr", "ihm"]
+
+watchouts:
+  - title: "helfen fragt Wem?"
+    bad: Ich helfe meinen Bruder jeden Samstag.
+    good: Ich helfe meinem Bruder jeden Samstag.
+    note: "helfen nimmt nie den Akkusativ. Immer: Wem helfe ich? Meinem Bruder."
+  - title: "danken und gratulieren fragen auch Wem?"
+    bad: Ich gratuliere dich zum Geburtstag.
+    good: Ich gratuliere dir zum Geburtstag.
+    note: "Nicht dich, sondern dir. Genauso: Ich danke dir für das Geschenk."
+  - title: "Zuerst die Person, dann die Sache"
+    bad: Ich schenke ein Buch meinem Vater.
+    good: Ich schenke meinem Vater ein Buch.
+    note: "Erst Wem?, dann Was? Der Dativ steht vor dem Akkusativ."
+  - title: "Perfekt mit haben"
+    bad: Ich bin meiner Nachbarin beim Umzug geholfen.
+    good: Ich habe meiner Nachbarin beim Umzug geholfen.
+    note: "helfen, danken und schenken bilden das Perfekt immer mit haben."
+
+cloze_cards:
+  - text: "Ich helfe {{c1::meinem}} Bruder jeden Samstag im Garten."
+    hint: mein Bruder
+    rule: "helfen fragt Wem? — also der Dativ. mein Bruder → meinem Bruder."
+  - text: "Das Fahrrad im Hof gehört {{c1::der}} Nachbarin aus dem dritten Stock."
+    hint: die Nachbarin
+    rule: "gehören fragt Wem? — also der Dativ. die Nachbarin → der Nachbarin."
+  - text: "Tom hat heute Geburtstag. Wir gratulieren {{c1::ihm}} am Abend."
+    hint: er
+    rule: "gratulieren fragt Wem? — Dativ. Tom = er → ihm."
+  - text: "Ich schaffe das nicht allein. Kannst du {{c1::mir}} bitte helfen?"
+    hint: ich
+    rule: "helfen fragt Wem? — Dativ. ich → mir."
+  - text: "Ich habe {{c1::meiner}} Kollegin einen Gutschein geschenkt."
+    hint: meine Kollegin
+    rule: "schenken fragt zuerst Wem? — Dativ. meine Kollegin → meiner Kollegin."
+  - text: "Wir wollen die Bilder sehen. Zeig {{c1::uns}} bitte die Fotos!"
+    hint: wir
+    rule: "zeigen fragt Wem? + Was? wir → uns. Danach kommt die Sache."
+  - text: "Der Verkäufer hat {{c1::dem}} Kind den Gutschein erklärt."
+    hint: das Kind
+    rule: "erklären fragt Wem? + Was? das Kind → dem Kind, danach den Gutschein."
+  - text: "Liebe Anna, lieber Tom, ich danke {{c1::euch}} für das Geschenk."
+    hint: ihr
+    rule: "danken fragt Wem? — Dativ. Zwei Personen mit du = ihr → euch."

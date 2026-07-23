@@ -1,0 +1,667 @@
+# Modul 05 · Früher und heute — 52 Aufgaben im Kern, 20 im Wiederholungspool.
+# Verteilung laut Profil (courses/de-a2/PLAN.md §6): 6 mc_cloze · 8 open_cloze ·
+# 6 word_formation · 4 key_word_transformation · 8 grammar_drill ·
+# 6 error_correction · 8 collocation_match · 6 reading_comprehension.
+#
+# Spiralisches Wiederholen: grammar_drill 7 und error_correction 6 nehmen das
+# Perfekt mit sein aus Modul 01, open_cloze 7 die Präposition mit + Dativ aus
+# Modul 02, grammar_drill 8 die Frage Wohin? aus Modul 03, open_cloze 8 den
+# Dativ nach gehören aus Modul 04. In word_formation 6 steht das -ung aus
+# Modul 02.
+#
+# Im Präteritum stehen nur sein, haben und die Verben können, müssen, wollen,
+# dürfen, sollen — mehr verlangt die Modulkarte nicht. Alle anderen Verben
+# stehen in den Lösungen im Perfekt (Modul 01): gefahren, gekommen, gewohnt.
+#
+# Die Lücken im open_cloze stehen auf war, hatte, dem Verb im Präteritum, auf
+# der Konjunktion oder auf dem Wort vor dem Nomen. Bei den Verben können,
+# müssen, dürfen macht der Satz die Wahl eindeutig („Der Bus ist nicht
+# gekommen" → mussten), sonst würden vier Formen gleich gut passen.
+#
+# Beim Nebensatz mit als und wenn prüft jede Aufgabe nur eine Sache: entweder
+# die Wahl der Konjunktion bei fertiger Wortstellung oder die Stellung vom Verb
+# bei fertiger Konjunktion. Nie beides zusammen.
+core:
+  # ───────────────────────── Multiple Choice ─────────────────────────
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Als ich ein Kind "
+      post: ", haben wir in einem kleinen Dorf gewohnt."
+      options: [bin, war, ist, gewesen]
+      answer: 1
+    explanation: "sein im Präteritum: ich war. Nach als steht das Verb am Ende vom Nebensatz."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Damals "
+      post: " wir kein Auto und keinen Fernseher."
+      options: [haben, hat, hattet, hatten]
+      answer: 3
+    explanation: "haben im Präteritum: wir hatten. damals zeigt die Vergangenheit."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Mit acht Jahren "
+      post: " ich schon allein zur Schule gehen."
+      options: [durfte, darf, dürfen, gedurft]
+      answer: 0
+    explanation: "dürfen im Präteritum: ich durfte. Aus ü wird u, die Endung ist -te."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Meine Oma hat auf dem Land gewohnt. Immer "
+      post: " wir Ferien hatten, sind wir zu ihr gefahren."
+      options: [als, damals, wenn, früher]
+      answer: 2
+    explanation: "Immer wieder in der Vergangenheit → wenn. Für einmal steht als."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "An diesen Tag erinnere ich mich genau: "
+      post: " ich sechs war, bin ich in die Schule gekommen."
+      options: [Als, Wenn, Damals, Inzwischen]
+      answer: 0
+    explanation: "Ein Tag, einmal in der Vergangenheit → als. wenn steht für immer wieder."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Meine kleine Schwester "
+      post: " damals noch nicht lesen."
+      options: [kann, können, gekonnt, konnte]
+      answer: 3
+    explanation: "können im Präteritum: sie konnte. Aus ö wird o."
+
+  # ───────────────────────── Lückentext ─────────────────────────
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Als ich klein "
+      post: ", hatte ich einen Hund und viel Freiheit."
+      answers: [war]
+      answer_shown: war
+    explanation: "sein im Präteritum: ich war. Nach als steht das Verb ganz am Ende."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Meine Eltern und ich "
+      post: " damals kein Auto."
+      answers: [hatten]
+      answer_shown: hatten
+    explanation: "haben im Präteritum: wir hatten. damals zeigt die Vergangenheit."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: ""
+      post: " ich acht Jahre alt war, sind wir in eine andere Stadt gezogen."
+      answers: [Als]
+      answer_shown: Als
+    explanation: "Der Umzug ist einmal passiert → als. Das Verb war steht am Ende vom Nebensatz."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Immer "
+      post: " wir Ferien hatten, sind wir zu meiner Oma aufs Land gefahren."
+      answers: [wenn]
+      answer_shown: wenn
+    explanation: "Nach immer kommt wenn: die Ferien waren jedes Jahr. Für einmal steht als."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Der Bus ist nicht gekommen. Leider "
+      post: " wir zu Fuß zur Schule gehen."
+      answers: [mussten]
+      answer_shown: mussten
+    explanation: "müssen im Präteritum: wir mussten. Aus ü wird u, aus ß wird ss."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Mein Vater hat es mir gezeigt: Mit fünf Jahren "
+      post: " ich schon gut schwimmen."
+      answers: [konnte]
+      answer_shown: konnte
+    explanation: "können im Präteritum: ich konnte. Aus ö wird o."
+  # Spiralisches Wiederholen: die Präpositionen mit Dativ aus Modul 02.
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Zur Schule sind wir jeden Morgen "
+      post: " dem Bus gefahren."
+      answers: [mit]
+      answer_shown: mit
+    explanation: "Für ein Verkehrsmittel steht mit + Dativ: mit dem Bus, mit der Bahn."
+  # Spiralisches Wiederholen: der Dativ nach gehören aus Modul 04.
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Das alte Spielzeug hat "
+      post: " Bruder gehört, nicht mir."
+      answers: [meinem, dem, deinem, ihrem, unserem, seinem, einem]
+      answer_shown: meinem
+    explanation: "gehören fragt Wem? — also der Dativ. der Bruder → dem Bruder, meinem Bruder."
+
+  # ───────────────────────── Wortbildung ─────────────────────────
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Heute ist der "
+      post: " Mai — meine Oma hat Geburtstag."
+      prompt: drei
+      answers: [dritte]
+      answer_shown: dritte
+    explanation: "drei → der dritte. Der Tag im Datum bekommt -te: der dritte Mai."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Der "
+      post: " September war mein erster Schultag."
+      prompt: eins
+      answers: [erste]
+      answer_shown: erste
+    explanation: "eins → der erste. Diese Form ist unregelmäßig, man lernt sie auswendig."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Mein Enkel wird morgen sechs. Heute ist der "
+      post: " Juni."
+      prompt: zwanzig
+      answers: [zwanzigste]
+      answer_shown: zwanzigste
+    explanation: "Ab zwanzig kommt -ste an die Zahl: zwanzig → der zwanzigste, dreißig → der dreißigste."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Mit acht Jahren bin ich in die "
+      post: " Klasse gekommen."
+      prompt: zwei
+      answers: [zweite]
+      answer_shown: zweite
+    explanation: "Bis neunzehn kommt -te an die Zahl: zwei → die zweite, vier → die vierte."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Der "
+      post: " August war der erste Tag in der neuen Stadt."
+      prompt: acht
+      answers: [achte]
+      answer_shown: achte
+    explanation: "acht → der achte. Das t steht nur einmal, nicht achtte."
+  # Spiralisches Wiederholen: das -ung aus Modul 02.
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Das Foto ist für mich eine schöne "
+      post: " an die Kindheit."
+      prompt: erinnern
+      answers: [Erinnerung]
+      answer_shown: Erinnerung
+    explanation: "Mit -ung wird aus dem Verb ein Nomen (Modul 02): erinnern → die Erinnerung."
+
+  # ───────────────────────── Umformung ─────────────────────────
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: Ich bin als Kind sehr schüchtern gewesen.
+      key: WAR
+      pre: "Ich "
+      post: " als Kind sehr schüchtern."
+      answers: [war]
+      hint: 1 Wort
+      answer_shown: war
+    explanation: "Aus dem Perfekt von sein wird das Präteritum: ich bin gewesen → ich war."
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: Wir haben damals keinen Fernseher gehabt.
+      key: HATTEN
+      pre: "Wir "
+      post: " damals keinen Fernseher."
+      answers: [hatten]
+      hint: 1 Wort
+      answer_shown: hatten
+    explanation: "Aus dem Perfekt von haben wird das Präteritum: wir haben gehabt → wir hatten."
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: Ich war acht Jahre alt. Da sind wir in eine andere Stadt gezogen.
+      key: ALS
+      pre: "Wir sind in eine andere Stadt gezogen, als ich acht Jahre "
+      post: "."
+      answers: [alt war]
+      hint: 2 Wörter
+      answer_shown: alt war
+    explanation: "Der Nebensatz mit als kann auch hinten stehen. Das Verb war steht am Ende."
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: Meine Eltern haben mir das Fahrrad nicht erlaubt.
+      key: DURFTE
+      pre: "Ich "
+      post: " nicht Rad fahren."
+      answers: [durfte]
+      hint: 1 Wort
+      answer_shown: durfte
+    explanation: "Nicht erlauben heißt nicht dürfen. dürfen im Präteritum: ich durfte."
+
+  # ───────────────────────── Grammatik-Drill ─────────────────────────
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Meine Großmutter "
+      post: " als Kind sehr arm."
+      prompt: PRÄTERITUM
+      options: [ist, gewesen, war, wart]
+      answer: 2
+    explanation: "sein im Präteritum: sie war. Nicht: sie hat gewesen."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Wir "
+      post: " damals nur ein kleines Zimmer."
+      prompt: PRÄTERITUM
+      options: [hatten, haben, hattet, hat]
+      answer: 0
+    explanation: "haben im Präteritum: wir hatten. Die Endung -en zeigt die Person wir."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: ""
+      post: " ich zehn war, habe ich mein erstes Fahrrad bekommen."
+      prompt: ALS ODER WENN
+      options: [Wenn, Damals, Früher, Als]
+      answer: 3
+    explanation: "Ein Erlebnis, einmal in der Vergangenheit → als."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Immer "
+      post: " es geregnet hat, haben wir im Hof gespielt."
+      prompt: ALS ODER WENN
+      options: [als, wenn, damals, dann]
+      answer: 1
+    explanation: "Nach immer steht wenn: Der Regen kam wieder und wieder."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Mit sechs Jahren "
+      post: " ich noch nicht lesen."
+      prompt: PRÄTERITUM
+      options: [konnte, kann, können, gekonnt]
+      answer: 0
+    explanation: "können im Präteritum: ich konnte. Aus ö wird o."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: ""
+      post: ", habe ich viele Märchen gelesen."
+      prompt: STELLUNG
+      options: [Als war ich ein Kind, Als ich war ein Kind, Als ich ein Kind war, Als ein Kind ich war]
+      answer: 2
+    explanation: "Im Nebensatz mit als steht das Verb ganz am Ende: Als ich ein Kind war, …"
+  # Spiralisches Wiederholen: haben oder sein im Perfekt (Modul 01).
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Wir "
+      post: " im Sommer oft zu meiner Oma gefahren."
+      prompt: HABEN ODER SEIN
+      options: [haben, hat, ist, sind]
+      answer: 3
+    explanation: "fahren ist eine Bewegung von A nach B: Perfekt mit sein. wir + sein = sind."
+  # Spiralisches Wiederholen: Wohin? aus Modul 03.
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Als Kind bin ich oft "
+      post: " Baum geklettert."
+      prompt: "WOHIN?"
+      options: [auf dem, auf den, auf der, im]
+      answer: 1
+    explanation: "klettern fragt Wohin? — also der Akkusativ. der Baum → auf den Baum."
+
+  # ───────────────────────── Fehlersuche ─────────────────────────
+  - type: error_correction
+    group: grammar
+    content:
+      words: [Als, ich, war, "klein,", hatte, ich, einen, "Hund."]
+      wrong: 2
+      correction: "war klein → klein war"
+    explanation: "Nach als steht das Verb ganz am Ende vom Nebensatz: Als ich klein war, …"
+  - type: error_correction
+    group: grammar
+    content:
+      words: [Meine, Oma, hat, damals, sehr, arm, "gewesen."]
+      wrong: 2
+      correction: "hat gewesen → war"
+    explanation: "sein bildet die Vergangenheit nicht mit haben. Im Präteritum heißt es: Meine Oma war damals sehr arm."
+  - type: error_correction
+    group: grammar
+    content:
+      words: [Damals, war, ich, acht, "Jahre."]
+      wrong: 4
+      correction: "Jahre. → Jahre alt."
+    explanation: "Nach der Zahl der Jahre steht immer alt: Ich war acht Jahre alt."
+  - type: error_correction
+    group: grammar
+    content:
+      words: [Immer, als, wir, Ferien, "hatten,", sind, wir, zu, Oma, "gefahren."]
+      wrong: 1
+      correction: "als → wenn"
+    explanation: "Immer wieder in der Vergangenheit → wenn. als steht nur für einmal."
+  - type: error_correction
+    group: grammar
+    content:
+      words: [Mit, sechs, Jahren, ich, konnte, noch, nicht, "lesen."]
+      wrong: 3
+      correction: "ich konnte → konnte ich"
+    explanation: "Nach der Zeitangabe am Anfang steht das Verb auf Position zwei: Mit sechs Jahren konnte ich …"
+  # Spiralisches Wiederholen: haben oder sein im Perfekt (Modul 01).
+  - type: error_correction
+    group: grammar
+    content:
+      words: [Wir, haben, jeden, Sommer, zu, meiner, Oma, "gefahren."]
+      wrong: 1
+      correction: "haben → sind"
+    explanation: "fahren ist eine Bewegung: das Perfekt steht mit sein (Modul 01)."
+
+  # ───────────────────────── Wörter verbinden ─────────────────────────
+  - type: collocation_match
+    group: grammar
+    content:
+      left: [sein, haben, können, müssen]
+      right: [musste, war, konnte, hatte]
+      pairs: { 0: 1, 1: 3, 2: 2, 3: 0 }
+    explanation: "Das Präteritum bei ich: sein → war, haben → hatte, können → konnte, müssen → musste."
+  - type: collocation_match
+    group: grammar
+    content:
+      left: [dürfen, wollen, sollen, können]
+      right: [wollte, konnte, sollte, durfte]
+      pairs: { 0: 3, 1: 0, 2: 2, 3: 1 }
+    explanation: "Aus ö und ü wird o und u: dürfen → durfte, können → konnte. wollen und sollen ändern nur die Endung."
+  - type: collocation_match
+    group: grammar
+    content:
+      left: [als, wenn, damals, inzwischen]
+      right: [immer wieder in der Vergangenheit, seit dieser Zeit ist es anders, einmal in der Vergangenheit, in dieser Zeit früher]
+      pairs: { 0: 2, 1: 0, 2: 3, 3: 1 }
+    explanation: "als steht für einmal, wenn für immer wieder. damals zeigt die Zeit früher, inzwischen die Zeit bis heute."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [eins, drei, acht, zwanzig]
+      right: [der achte, der erste, der zwanzigste, der dritte]
+      pairs: { 0: 1, 1: 3, 2: 0, 3: 2 }
+    explanation: "Bis neunzehn kommt -te an die Zahl, ab zwanzig -ste. eins und drei sind unregelmäßig: der erste, der dritte."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [Märchen, Steine, gute Noten, im Hof]
+      right: [spielen, erzählen, bekommen, sammeln]
+      pairs: { 0: 1, 1: 3, 2: 2, 3: 0 }
+    explanation: "Diese Wörter stehen fest zusammen: Märchen erzählen, Steine sammeln, gute Noten bekommen, im Hof spielen."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [die Kindheit, das Erlebnis, die Erinnerung, der Alltag]
+      right: [ein Bild von früher im Kopf, die Zeit als Kind, der ganz normale Tag, etwas Besonderes passiert]
+      pairs: { 0: 1, 1: 3, 2: 0, 3: 2 }
+    explanation: "Vier Nomen aus dem Modul — jedes mit seiner Umschreibung."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [aufwachsen, erlauben, verbieten, vergessen]
+      right: [Nein sagen, nicht mehr im Kopf haben, an einem Ort groß werden, Ja sagen]
+      pairs: { 0: 2, 1: 3, 2: 0, 3: 1 }
+    explanation: "erlauben und verbieten sind Gegenteile. vergessen ist das Gegenteil von sich erinnern."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [streng, schüchtern, neugierig, erwachsen]
+      right: [will alles wissen, sagt oft Nein und erlaubt wenig, nicht mehr Kind, spricht nicht gern mit fremden Menschen]
+      pairs: { 0: 1, 1: 3, 2: 0, 3: 2 }
+    explanation: "Vier Wörter für Personen — drei beschreiben den Charakter, erwachsen beschreibt das Alter."
+
+  # ───────────────────────── Leseverstehen ─────────────────────────
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Meine Kindheit war laut und voll. Wir haben in einem kleinen Dorf gewohnt, weit von der Stadt. Damals hatten wir kein Auto, keinen Computer und drei Programme im Fernsehen. Aber wir hatten den Hof zwischen den Häusern, und das war genug."
+      q: Wo hat die Erzählerin als Kind gewohnt?
+      options:
+        - In einer großen Stadt
+        - In einem kleinen Dorf
+        - Bei ihrer Oma auf dem Land
+        - In einem Haus am Fluss
+      answer: 1
+    explanation: "Im Text steht: Wir haben in einem kleinen Dorf gewohnt, weit von der Stadt."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Meine Eltern waren streng, aber wir hatten viel Freiheit. Wir durften bis acht Uhr draußen bleiben. Nur eins war verboten: Allein zum Fluss sollten wir nicht gehen."
+      q: Was war in der Familie verboten?
+      options:
+        - Bis acht Uhr draußen bleiben
+        - Im Hof Fußball spielen
+        - Am Abend fernsehen
+        - Allein zum Fluss gehen
+      answer: 3
+    explanation: "Im Text steht: Nur eins war verboten: Allein zum Fluss sollten wir nicht gehen."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "An einen Tag erinnere ich mich besonders gut: an den ersten September. Als ich sechs war, bin ich in die Schule gekommen. Meine Oma hat mir eine große Tasche geschenkt. Die Schulzeit hat gut angefangen: Ich war neugierig und wollte alles wissen."
+      q: Wie alt war die Erzählerin am ersten Schultag?
+      options:
+        - Sechs
+        - Sieben
+        - Acht
+        - Zehn
+      answer: 0
+    explanation: "Im Text steht: Als ich sechs war, bin ich in die Schule gekommen."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Wenn wir Ferien hatten, sind wir immer zu meiner Oma aufs Land gefahren. Dort habe ich jeden Sommer vier Wochen verbracht. Wir sind auf die Bäume geklettert, wir haben Steine und alte Münzen gesammelt, und am Abend hat Oma uns Märchen erzählt."
+      q: Was haben die Kinder bei der Oma gemacht?
+      options:
+        - Sie haben Spielzeug gekauft.
+        - Sie haben Märchen geschrieben.
+        - Sie sind geklettert und haben Steine gesammelt.
+        - Sie haben im Haus geholfen.
+      answer: 2
+    explanation: "Im Text steht: Wir sind auf die Bäume geklettert, wir haben Steine und alte Münzen gesammelt."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Einmal ist etwas passiert. Das vergesse ich nie. Als ich acht Jahre alt war, sind wir in eine andere Stadt gezogen. Am dritten Mai haben wir die Kartons in den Wagen getragen."
+      q: Was ist passiert, als die Erzählerin acht Jahre alt war?
+      options:
+        - Sie hat ein Fahrrad bekommen.
+        - Sie ist in die Schule gekommen.
+        - Sie hat ihre Oma besucht.
+        - Die Familie ist in eine andere Stadt gezogen.
+      answer: 3
+    explanation: "Im Text steht: Als ich acht Jahre alt war, sind wir in eine andere Stadt gezogen."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Inzwischen bin ich erwachsen und habe einen vollen Alltag. In diesem Dorf bin ich aufgewachsen, und das Haus steht heute noch. Früher war dort ein Hof voller Kinder, heute ist es ruhig."
+      q: Wie ist es heute in dem Dorf?
+      options:
+        - Es ist ruhig.
+        - Dort spielen viele Kinder.
+        - Das Haus steht nicht mehr.
+        - Dort wohnt die Oma.
+      answer: 0
+    explanation: "Im Text steht: Früher war dort ein Hof voller Kinder, heute ist es ruhig."
+
+# ───────────────────────── Wiederholungspool ─────────────────────────
+# 20 kurze Aufgaben für das Modul-Quiz und die Wiederholung nach 7 und 21 Tagen.
+# Dazu kommen 8 Aufgaben aus theory.yaml (cloze_cards).
+review_pool:
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Als Kind "
+      post: " ich sehr schüchtern."
+      options: [bin, hatte, war, ist]
+      answer: 2
+    explanation: "sein im Präteritum: ich war."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Damals "
+      post: " wir kein Telefon."
+      options: [hatten, haben, hattet, hat]
+      answer: 0
+    explanation: "haben im Präteritum: wir hatten."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Mit zehn Jahren "
+      post: " ich noch nicht Rad fahren."
+      options: [kann, können, gekonnt, konnte]
+      answer: 3
+    explanation: "können im Präteritum: ich konnte."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Immer "
+      post: " wir Geburtstag hatten, hat Oma einen Kuchen gebacken."
+      options: [als, wenn, damals, dann]
+      answer: 1
+    explanation: "Nach immer steht wenn: Der Geburtstag kam jedes Jahr."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Meine Großmutter "
+      post: " als Kind sehr arm."
+      answers: [war]
+      answer_shown: war
+    explanation: "sein im Präteritum: sie war."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Wir "
+      post: " damals kein Bad und keine Heizung."
+      answers: [hatten]
+      answer_shown: hatten
+    explanation: "haben im Präteritum: wir hatten."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: ""
+      post: " ich zehn war, habe ich mein erstes Fahrrad bekommen."
+      answers: [Als]
+      answer_shown: Als
+    explanation: "Ein Erlebnis, einmal in der Vergangenheit → als."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Immer "
+      post: " es geregnet hat, haben wir im Hof gespielt."
+      answers: [wenn]
+      answer_shown: wenn
+    explanation: "Nach immer steht wenn: Der Regen kam wieder und wieder."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Ich war erst fünf. Lesen "
+      post: " ich damals noch nicht, ich habe nur die Bilder angesehen."
+      answers: [konnte]
+      answer_shown: konnte
+    explanation: "können im Präteritum: ich konnte. Aus ö wird o."
+  # Spiralisches Wiederholen: die Präpositionen mit Dativ aus Modul 02.
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Als Kind sind wir jeden Sommer "
+      post: " dem Zug zu meiner Oma gefahren."
+      answers: [mit]
+      answer_shown: mit
+    explanation: "Für ein Verkehrsmittel steht mit + Dativ: mit dem Zug."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Meine Eltern "
+      post: " sehr streng."
+      prompt: PRÄTERITUM
+      options: [war, waren, sind, gewesen]
+      answer: 1
+    explanation: "sein im Präteritum: sie waren."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Mit acht Jahren "
+      post: " ich schon allein zur Schule gehen."
+      prompt: PRÄTERITUM
+      options: [darf, dürfen, gedurft, durfte]
+      answer: 3
+    explanation: "dürfen im Präteritum: ich durfte."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: ""
+      post: " meine Oma jung war, hat sie in einem Dorf gewohnt."
+      prompt: ALS ODER WENN
+      options: [Als, Wenn, Damals, Inzwischen]
+      answer: 0
+    explanation: "Eine Zeit, einmal in der Vergangenheit → als."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: ""
+      post: ", habe ich viel Zeit im Hof verbracht."
+      prompt: STELLUNG
+      options: [Als war ich klein, Als ich war klein, Als ich klein war, Als klein ich war]
+      answer: 2
+    explanation: "Im Nebensatz mit als steht das Verb ganz am Ende."
+  - type: error_correction
+    group: grammar
+    content:
+      words: [Immer, als, ich, Geburtstag, "hatte,", hat, Oma, einen, Kuchen, "gebacken."]
+      wrong: 1
+      correction: "als → wenn"
+    explanation: "Immer wieder in der Vergangenheit → wenn."
+  - type: error_correction
+    group: grammar
+    content:
+      words: [Als, ich, war, "sechs,", bin, ich, in, die, Schule, "gekommen."]
+      wrong: 2
+      correction: "war sechs → sechs war"
+    explanation: "Nach als steht das Verb am Ende vom Nebensatz: Als ich sechs war, …"
+  - type: error_correction
+    group: grammar
+    content:
+      words: [Ich, war, damals, sieben, "Jahre."]
+      wrong: 4
+      correction: "Jahre. → Jahre alt."
+    explanation: "Nach der Zahl der Jahre steht immer alt."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Der "
+      post: " Juni war der letzte Schultag."
+      prompt: zwanzig
+      answers: [zwanzigste]
+      answer_shown: zwanzigste
+    explanation: "Ab zwanzig kommt -ste an die Zahl: der zwanzigste."
+  - type: collocation_match
+    group: grammar
+    content:
+      left: [sein, haben, dürfen, sollen]
+      right: [durfte, hatte, sollte, war]
+      pairs: { 0: 3, 1: 1, 2: 0, 3: 2 }
+    explanation: "Das Präteritum bei ich: war, hatte, durfte, sollte."
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: Meine Oma ist als Kind sehr arm gewesen.
+      key: WAR
+      pre: "Meine Oma "
+      post: " als Kind sehr arm."
+      answers: [war]
+      hint: 1 Wort
+      answer_shown: war
+    explanation: "Aus dem Perfekt von sein wird das Präteritum: sie ist gewesen → sie war."

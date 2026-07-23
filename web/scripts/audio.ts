@@ -15,13 +15,14 @@
  *      committed courses/<slug>/audio/manifest.json (scripts/sync.ts's input),
  *      and prune stale files.
  *
- * Clips are synthesized *per sentence*, not per paragraph: Chatterbox renders
- * its input in one autoregressive pass with no internal sentence splitting
- * (unlike Piper), and a 400+ character paragraph is exactly the shape that
- * makes an autoregressive TTS model drift or hallucinate mid-clip. Splitting
- * is exactly what lib/domain/audio-text.ts's splitSentences() does; the UI
- * queues a paragraph's sentence clips back-to-back so the *listener* still
- * hears one continuous paragraph (ARCHITECTURE.md §4.8).
+ * How a reading text is cut into clips is lib/domain/audio-text.ts's
+ * READING_CLIP_GRANULARITY — currently one clip per paragraph, so prosody
+ * runs across sentence boundaries and playback has no seams. The trade-off it
+ * documents is real here: Chatterbox renders its input in one autoregressive
+ * pass with no internal splitting (unlike Piper), so a long paragraph is the
+ * shape most likely to drift mid-clip, and a bad take costs the paragraph
+ * rather than a sentence. The report below flags anything over
+ * MAX_SENTENCE_CHARS for exactly that reason (ARCHITECTURE.md §4.8).
  *
  * Addressing is by text, not by (module, position): a clip's identity is
  * sha256(normalizeAudioText(text)), so editing a sentence in YAML orphans the
@@ -56,7 +57,7 @@ import { z } from 'zod';
 import { COURSE_ROOTS } from '../content.config';
 import { CourseSchema, courseModules, type Course, type CourseModuleEntry } from '../lib/course-schema';
 import { AUDIO_LANGS, AUDIO_PROFILE, AUDIO_PUBLIC_DIR, WEB_PUBLIC_DIR, audioManifestPath, blobFsPath, hasAudio } from '../lib/audio/config';
-import { MAX_SENTENCE_CHARS, normalizeAudioText, paragraphTexts, splitSentences } from '../lib/domain/audio-text';
+import { MAX_SENTENCE_CHARS, normalizeAudioText, paragraphTexts, readingClipTexts } from '../lib/domain/audio-text';
 import {
   AudioManifestSchema,
   ReadingPackageSchema,
@@ -187,8 +188,10 @@ async function collectModulePhrases(mod: CourseModuleEntry, moduleDir: string, p
     const pkg = await readYamlFile(textPath, ReadingPackageSchema);
     const paragraphs = paragraphTexts(pkg.body, pkg.glosses);
     paragraphs.forEach((paragraphText, paraIdx) => {
-      const sentences = splitSentences(paragraphText);
-      sentences.forEach((sentence, sentIdx) => add(sentence, `${mod.slug}|${kind}|p${paraIdx + 1}|s${sentIdx + 1}`));
+      // Same cut the pages use to look clips up (lib/use-cases/audio.ts's
+      // paragraphClipTexts) — one shared knob, never two implementations.
+      const texts = readingClipTexts(paragraphText);
+      texts.forEach((text, clipIdx) => add(text, `${mod.slug}|${kind}|p${paraIdx + 1}|c${clipIdx + 1}`));
     });
   }
 }
@@ -407,7 +410,7 @@ function printReport(courseSlug: string, planned: Map<string, PlannedPhrase>, lo
     for (const m of missing) console.log(`    - ${m}`);
   }
   if (longSentences.length > 0) {
-    console.log(`  ! ${longSentences.length} sentence(s) over ${MAX_SENTENCE_CHARS} chars — chatterbox risks a mid-clip dropout, consider rewriting:`);
+    console.log(`  ! ${longSentences.length} phrase(s) over ${MAX_SENTENCE_CHARS} chars — chatterbox risks a mid-clip dropout, listen to these first:`);
     for (const s of longSentences) console.log(`    - ${s}`);
   }
 }

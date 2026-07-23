@@ -1,0 +1,30 @@
+slug: m04
+title: Geschenke und Gefälligkeiten
+standfirst: Der Dativ als Objekt, mir und dir · 30 Wörter · um einen Gefallen bitten.
+goals:
+  - text: Den Dativ nach helfen, danken, gehören und gratulieren richtig benutzen
+    achieved_by: workout
+  - text: Bei zwei Objekten zuerst Wem? und dann Was? sagen
+    achieved_by: workout
+  - text: 30 Wörter zu Geschenken, Hilfe und Freundschaft sicher benutzen
+    achieved_by: input
+  - text: Eine kurze E-Mail schreiben und um einen Gefallen bitten
+    achieved_by: output
+grammar_points:
+  - Der Dativ als Objekt
+  - Die Verben helfen, danken, gehören und gratulieren
+  - Verben mit zwei Objekten
+  - Zuerst der Dativ, dann der Akkusativ
+  - Die Personalpronomen im Dativ
+  - mein, dein und unser im Dativ
+  - Der Dativ im Überblick
+texts:
+  - kind: main
+    title: Ein Geschenk für Oma
+    word_count: 304
+  - kind: extra
+    title: Chat am Donnerstagabend
+    word_count: 146
+production:
+  mode: writing
+  genre: E-Mail mit einer Bitte um einen Gefallen

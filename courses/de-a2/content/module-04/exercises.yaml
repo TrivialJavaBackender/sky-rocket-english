@@ -1,0 +1,660 @@
+# Modul 04 · Geschenke und Gefälligkeiten — 52 Aufgaben im Kern, 20 im
+# Wiederholungspool. Verteilung laut Profil (courses/de-a2/PLAN.md §6):
+# 6 mc_cloze · 8 open_cloze · 6 word_formation · 4 key_word_transformation ·
+# 8 grammar_drill · 6 error_correction · 8 collocation_match ·
+# 6 reading_comprehension.
+#
+# Spiralisches Wiederholen: grammar_drill 5 und error_correction 4 nehmen das
+# Perfekt aus Modul 01, grammar_drill 6 die Präpositionen mit festem Kasus aus
+# Modul 02, grammar_drill 7 die Frage Wohin? aus Modul 03. In word_formation 6
+# steht das -ung aus Modul 02.
+#
+# Die Lücken im open_cloze stehen auf dem Personalpronomen oder auf dem Wort
+# vor dem Nomen — dort ist der Kasus sichtbar. Wo mehrere Wörter vor dem Nomen
+# stehen können (meinem, dem, deinem …), stehen sie alle in `answers`: geprüft
+# wird die Endung, nicht die Wahl zwischen Artikel und mein.
+#
+# Der Plural bleibt draußen: jede verlangte Dativform ist Singular. Nur die
+# Personalpronomen uns, euch und ihnen kommen vor — sie sind eine eigene Form
+# und keine Endung am Nomen.
+core:
+  # ───────────────────────── Multiple Choice ─────────────────────────
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Ich helfe "
+      post: " Vater jeden Samstag im Garten."
+      options: [meinen, meinem, mein, meiner]
+      answer: 1
+    explanation: "helfen fragt Wem? — also der Dativ. mein Vater → meinem Vater."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Der Gutschein gehört "
+      post: " Kind, nicht dir."
+      options: [das, den, der, dem]
+      answer: 3
+    explanation: "gehören fragt Wem? — also der Dativ. das Kind → dem Kind."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Anna und Tom heiraten heute. Wir gratulieren "
+      post: " herzlich."
+      options: [sie, ihnen, ihr, euch]
+      answer: 1
+    explanation: "gratulieren fragt Wem? — Dativ. Anna und Tom = sie → ihnen."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Wir wollen die Bilder sehen. Zeig "
+      post: " bitte die Fotos!"
+      options: [uns, wir, unser, unsere]
+      answer: 0
+    explanation: "zeigen fragt Wem? + Was? wir → uns. Danach kommt die Sache: die Fotos."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Ich danke "
+      post: " für deine Hilfe beim Umzug."
+      options: [dich, du, dir, dein]
+      answer: 2
+    explanation: "danken fragt Wem? — nie den Akkusativ. du → dir."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Kannst du "
+      post: " einen Gefallen tun? Ich schaffe das nicht allein."
+      options: [mich, ich, mein, mir]
+      answer: 3
+    explanation: "Wem tust du einen Gefallen? Mir. ich → mir, danach die Sache im Akkusativ."
+
+  # ───────────────────────── Lückentext ─────────────────────────
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Meine Oma hat morgen Geburtstag. Ich schenke "
+      post: " einen Gutschein für das Theater."
+      answers: [ihr]
+      answer_shown: ihr
+    explanation: "schenken fragt zuerst Wem? — Dativ. die Oma = sie → ihr."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Ich kann den Schrank nicht allein tragen. Kannst du "
+      post: " bitte helfen?"
+      answers: [mir]
+      answer_shown: mir
+    explanation: "helfen fragt Wem? — Dativ. Die Person spricht von sich: ich → mir."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Im dritten Stock wohnt eine Nachbarin. Das Fahrrad im Hof gehört "
+      post: " Nachbarin."
+      answers: [der, dieser]
+      answer_shown: der
+    explanation: "gehören fragt Wem? — Dativ. Die Person ist schon bekannt: die Nachbarin → der Nachbarin."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Zum Geburtstag schenke ich "
+      post: " Bruder ein Buch über Fußball."
+      answers: [meinem, dem, deinem, ihrem, unserem, seinem, einem]
+      answer_shown: meinem
+    explanation: "schenken fragt zuerst Wem? — Dativ. der Bruder → dem Bruder, meinem Bruder. Die Endung -m zeigt den Kasus."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Wir verstehen die Aufgabe nicht. Der Lehrer erklärt "
+      post: " die Regel noch einmal."
+      answers: [uns]
+      answer_shown: uns
+    explanation: "erklären fragt Wem? + Was? wir → uns. Danach kommt die Sache: die Regel."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Liebe Anna, lieber Tom, vielen Dank für die Einladung! Wir bringen "
+      post: " einen Kuchen mit."
+      answers: [euch]
+      answer_shown: euch
+    explanation: "Zwei Personen mit du = ihr → euch. Zuerst die Person, dann die Sache."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Ich habe "
+      post: " Schwester zum Geburtstag Blumen besorgt."
+      answers: [meiner, der, deiner, ihrer, unserer, seiner, einer]
+      answer_shown: meiner
+    explanation: "besorgen fragt hier Wem? + Was? die Schwester → der Schwester, meiner Schwester. Die Endung -r zeigt den Kasus."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Mein Kollege hat mir oft geholfen. Jetzt helfe ich "
+      post: " beim Umzug."
+      answers: [ihm]
+      answer_shown: ihm
+    explanation: "helfen fragt Wem? — Dativ. der Kollege = er → ihm."
+
+  # ───────────────────────── Wortbildung ─────────────────────────
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Mein Onkel ist "
+      post: " in einer großen Fabrik."
+      prompt: arbeiten
+      answers: [Arbeiter]
+      answer_shown: Arbeiter
+    explanation: "Stamm + -er macht aus dem Verb die Person: arbeiten → der Arbeiter."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Im Laden an der Ecke arbeitet eine junge "
+      post: "."
+      prompt: verkaufen
+      answers: [Verkäuferin]
+      answer_shown: Verkäuferin
+    explanation: "verkaufen → der Verkäufer, die Verkäuferin. Für eine Frau kommt -in dazu."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Beim Umzug brauchen wir jeden "
+      post: "."
+      prompt: helfen
+      answers: [Helfer]
+      answer_shown: Helfer
+    explanation: "helfen → der Helfer. Die Person macht das, was das Verb sagt."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Oma zeigt jeder "
+      post: " das Fotobuch."
+      prompt: besuchen
+      answers: [Besucherin]
+      answer_shown: Besucherin
+    explanation: "besuchen → der Besucher, die Besucherin. zeigen fragt zuerst Wem? — jeder Besucherin."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Das Bild an der Wand ist von einem "
+      post: " aus Wien."
+      prompt: malen
+      answers: [Maler]
+      answer_shown: Maler
+    explanation: "malen → der Maler. Frau: die Malerin."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Das Fotobuch ist eine große "
+      post: " für Oma gewesen."
+      prompt: überraschen
+      answers: [Überraschung]
+      answer_shown: Überraschung
+    explanation: "Hier kein -er, sondern das -ung aus Modul 02: überraschen → die Überraschung."
+
+  # ───────────────────────── Umformung ─────────────────────────
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: Ich schenke meiner Schwester ein Buch.
+      key: SIE
+      pre: "Ich schenke "
+      post: " ein Buch."
+      answers: [ihr]
+      hint: 1 Wort
+      answer_shown: ihr
+    explanation: "Die Person wird zum Personalpronomen im Dativ: meiner Schwester = sie → ihr."
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: Ich helfe meinem Bruder am Wochenende.
+      key: ER
+      pre: "Ich helfe "
+      post: " am Wochenende."
+      answers: [ihm]
+      hint: 1 Wort
+      answer_shown: ihm
+    explanation: "meinem Bruder = er → ihm. helfen fragt weiter Wem?."
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: Wir danken dir für die Hilfe.
+      key: IHR
+      pre: "Wir danken "
+      post: " für die Hilfe."
+      answers: [euch]
+      hint: 1 Wort
+      answer_shown: euch
+    explanation: "Aus einer Person werden zwei: du → dir, ihr → euch."
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: Ich habe meinem Vater ein Buch geschenkt.
+      key: HEUTE
+      pre: "Heute "
+      post: " meinem Vater ein Buch."
+      answers: [schenke ich]
+      hint: 2 Wörter
+      answer_shown: schenke ich
+    explanation: "Aus dem Perfekt wird das Präsens. Nach heute steht das Verb auf Position zwei: Heute schenke ich …"
+
+  # ───────────────────────── Grammatik-Drill ─────────────────────────
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Ich schenke "
+      post: " Schwester eine Kette zum Geburtstag."
+      prompt: WEM?
+      options: [meine, meiner, meinen, meinem]
+      answer: 1
+    explanation: "schenken fragt zuerst Wem? — Dativ. meine Schwester → meiner Schwester."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Ich habe "
+      post: "."
+      prompt: REIHENFOLGE
+      options: [ein Buch meinem Vater geschenkt, geschenkt meinem Vater ein Buch, meinem Vater geschenkt ein Buch, meinem Vater ein Buch geschenkt]
+      answer: 3
+    explanation: "Zuerst Wem?, dann Was?, und das Partizip steht am Ende: meinem Vater ein Buch geschenkt."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Anna und Tom heiraten. Wir gratulieren "
+      post: " herzlich."
+      prompt: WEM?
+      options: [ihnen, sie, ihr, ihm]
+      answer: 0
+    explanation: "gratulieren fragt Wem? — Dativ. Zwei Personen: sie → ihnen."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Der Gutschein gehört "
+      post: " Kollegin, nicht mir."
+      prompt: WEM?
+      options: [die, den, meiner, meinem]
+      answer: 2
+    explanation: "gehören fragt Wem? — Dativ. meine Kollegin → meiner Kollegin."
+  # Spiralisches Wiederholen: das Perfekt aus Modul 01.
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Ich "
+      post: " meiner Nachbarin gestern beim Einkaufen geholfen."
+      prompt: HABEN ODER SEIN
+      options: [bin, habe, ist, hat]
+      answer: 1
+    explanation: "helfen bildet das Perfekt mit haben. ich + haben = habe."
+  # Spiralisches Wiederholen: die Präpositionen mit festem Kasus aus Modul 02.
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Wir fahren "
+      post: " dem Zug zu meiner Oma."
+      prompt: PRÄPOSITION MIT DATIV
+      options: [in, für, durch, mit]
+      answer: 3
+    explanation: "mit nimmt immer den Dativ: mit dem Zug. für und durch nehmen den Akkusativ."
+  # Spiralisches Wiederholen: Wo? und Wohin? aus Modul 03.
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Ich habe das Geschenk "
+      post: " Schrank gelegt."
+      prompt: WOHIN?
+      options: [in dem, im, in den, in der]
+      answer: 2
+    explanation: "legen fragt Wohin? — Akkusativ. der Schrank → in den Schrank."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Kannst du "
+      post: " bitte den Weg erklären? Ich finde das Haus nicht."
+      prompt: WEM?
+      options: [mir, mich, ich, mein]
+      answer: 0
+    explanation: "erklären fragt Wem? + Was? ich → mir, danach den Weg."
+
+  # ───────────────────────── Fehlersuche ─────────────────────────
+  - type: error_correction
+    group: grammar
+    content:
+      words: [Ich, helfe, meinen, Bruder, jeden, "Samstag."]
+      wrong: 2
+      correction: "meinen → meinem"
+    explanation: "helfen fragt Wem? — der Dativ: meinem Bruder. Der Akkusativ ist hier nie richtig."
+  - type: error_correction
+    group: grammar
+    content:
+      words: [Wir, gratulieren, dich, zum, "Geburtstag!"]
+      wrong: 2
+      correction: "dich → dir"
+    explanation: "gratulieren fragt Wem? — der Dativ: dir. Genauso: Ich danke dir."
+  - type: error_correction
+    group: grammar
+    content:
+      words: [Das, Fahrrad, gehört, meine, "Nachbarin."]
+      wrong: 3
+      correction: "meine → meiner"
+    explanation: "gehören fragt Wem? — der Dativ: meiner Nachbarin."
+  # Spiralisches Wiederholen: haben oder sein im Perfekt (Modul 01).
+  - type: error_correction
+    group: grammar
+    content:
+      words: [Ich, bin, meinem, Vater, im, Garten, "geholfen."]
+      wrong: 1
+      correction: "bin → habe"
+    explanation: "helfen bildet das Perfekt mit haben, nicht mit sein: Ich habe geholfen."
+  - type: error_correction
+    group: grammar
+    content:
+      words: [Ich, danke, Sie, für, das, schöne, "Geschenk."]
+      wrong: 2
+      correction: "Sie → Ihnen"
+    explanation: "danken fragt Wem? — der Dativ. Sie (höflich) → Ihnen."
+  - type: error_correction
+    group: grammar
+    content:
+      words: [Ich, schenke, ein, Buch, meinem, "Vater."]
+      wrong: 2
+      correction: "ein Buch meinem Vater → meinem Vater ein Buch"
+    explanation: "Zuerst die Person im Dativ, dann die Sache im Akkusativ: Ich schenke meinem Vater ein Buch."
+
+  # ───────────────────────── Wörter verbinden ─────────────────────────
+  - type: collocation_match
+    group: grammar
+    content:
+      left: [helfen, danken, gratulieren, gehören]
+      right: [zum Geburtstag, bei der Arbeit, für das Geschenk, meiner Schwester]
+      pairs: { 0: 1, 1: 2, 2: 0, 3: 3 }
+    explanation: "Alle vier Verben fragen Wem? Dazu gehört jeweils eine feste Wendung: bei der Arbeit helfen, für das Geschenk danken, zum Geburtstag gratulieren, jemandem gehören."
+  - type: collocation_match
+    group: grammar
+    content:
+      left: [ich, du, er, wir]
+      right: [uns, mir, ihm, dir]
+      pairs: { 0: 1, 1: 3, 2: 2, 3: 0 }
+    explanation: "Die Personalpronomen im Dativ: ich → mir, du → dir, er → ihm, wir → uns."
+  - type: collocation_match
+    group: grammar
+    content:
+      left: [mein Bruder, meine Schwester, mein Kind, unsere Oma]
+      right: [meinem Kind, meiner Schwester, unserer Oma, meinem Bruder]
+      pairs: { 0: 3, 1: 1, 2: 0, 3: 2 }
+    explanation: "Im Dativ endet das Wort vor dem Nomen auf -em oder -er — genau wie dem und der."
+  - type: collocation_match
+    group: grammar
+    content:
+      left: [der Freund, die Freundin, das Kind, die Oma]
+      right: [dem Kind, der Oma, dem Freund, der Freundin]
+      pairs: { 0: 2, 1: 3, 2: 0, 3: 1 }
+    explanation: "der und das werden im Dativ zu dem, die wird zu der."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [ein Geschenk, einen Gefallen, Blumen, ein Fahrrad]
+      right: [tun, besorgen, leihen, einpacken]
+      pairs: { 0: 3, 1: 0, 2: 1, 3: 2 }
+    explanation: "Diese Wörter stehen fest zusammen: ein Geschenk einpacken, einen Gefallen tun, Blumen besorgen, ein Fahrrad leihen."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [schenken, leihen, gehören, besorgen]
+      right: [kurz geben und später zurückbekommen, etwas kaufen oder holen, geben und kein Geld dafür nehmen, der Besitz von einer Person sein]
+      pairs: { 0: 2, 1: 0, 2: 3, 3: 1 }
+    explanation: "Vier Verben rund um das Geschenk — jedes mit seiner Umschreibung."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [gemeinsam, gegenseitig, dringend, ausgerechnet]
+      right: [sehr schnell nötig, zusammen mit anderen, genau diese Person oder dieser Tag, einer hilft dem anderen]
+      pairs: { 0: 1, 1: 3, 2: 0, 3: 2 }
+    explanation: "gemeinsam heißt zusammen, gegenseitig heißt einer für den anderen. dringend zeigt die Zeit, ausgerechnet die Überraschung."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [arbeiten, verkaufen, helfen, besuchen]
+      right: [der Besucher, der Arbeiter, der Helfer, der Verkäufer]
+      pairs: { 0: 1, 1: 3, 2: 2, 3: 0 }
+    explanation: "Stamm + -er macht aus dem Verb die Person. Für eine Frau kommt -in dazu: die Arbeiterin, die Helferin."
+
+  # ───────────────────────── Leseverstehen ─────────────────────────
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Am Samstag hat unsere Oma Geburtstag — sie wird achtzig. Seit drei Wochen suchen mein Bruder Jonas und ich ein Geschenk für sie. Blumen bekommt sie von allen, und letztes Jahr haben wir ihr ein Buch geschenkt. Ein Gutschein ist praktisch, aber nicht persönlich."
+      q: Warum wollen Jonas und seine Schwester keinen Gutschein schenken?
+      options:
+        - Ein Gutschein ist zu teuer.
+        - Ein Gutschein ist nicht persönlich.
+        - Oma hat schon einen Gutschein.
+        - Der Laden hat keine Gutscheine.
+      answer: 1
+    explanation: "Im Text steht: Ein Gutschein ist praktisch, aber nicht persönlich."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Am Montag habe ich unserer Nachbarin von dem Problem erzählt. Frau Weber kennt Oma seit dreißig Jahren, die beiden verbindet eine lange Freundschaft. „Zeig mir mal eure alten Fotos“, hat sie gesagt. Dann hat sie mir ihre Idee erklärt: ein Fotobuch aus sechzig Jahren."
+      q: Von wem kommt die Idee mit dem Fotobuch?
+      options:
+        - Von Jonas
+        - Von der Kollegin
+        - Von Oma
+        - Von der Nachbarin
+      answer: 3
+    explanation: "Im Text steht: Dann hat sie mir ihre Idee erklärt — sie ist Frau Weber, die Nachbarin."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Die alten Fotos gehören meinem Vater. Er hat sie uns sofort gegeben und uns auch zwei Kartons aus dem Keller besorgt. Jonas hat drei Abende am Computer gesessen, ich habe ihm dabei geholfen."
+      q: Wem gehören die alten Fotos?
+      options:
+        - Dem Vater
+        - Der Nachbarin
+        - Der Oma
+        - Jonas
+      answer: 0
+    explanation: "Im Text steht: Die alten Fotos gehören meinem Vater."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Am Freitag ist es dann dringend geworden: Das Fotobuch ist immer noch nicht da gewesen. Ich habe meine Kollegin um einen Gefallen gebeten. „Kannst du mir dein Auto leihen? Ich muss das Paket noch abholen.“ Sie hat mir den Schlüssel gegeben und nichts dafür genommen."
+      q: Was möchte die Erzählerin von ihrer Kollegin?
+      options:
+        - Um ein Geschenk
+        - Um Geld für das Fotobuch
+        - Um das Auto
+        - Um eine Idee
+      answer: 2
+    explanation: "Im Text steht: Kannst du mir dein Auto leihen? Danach gibt die Kollegin ihr den Schlüssel."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Am Samstagmorgen haben wir das Buch eingepackt. Der Verkäufer im kleinen Laden an der Ecke hat uns das Papier geschenkt — er kennt Oma auch. Um drei Uhr haben wir ihr gratuliert und ihr das Paket gegeben."
+      q: Was macht der Verkäufer?
+      options:
+        - Er schenkt ihnen das Papier.
+        - Er packt das Buch ein.
+        - Er verkauft ihnen ein Fotobuch.
+        - Er gratuliert Oma.
+      answer: 0
+    explanation: "Im Text steht: Der Verkäufer hat uns das Papier geschenkt. Eingepackt haben die beiden selbst."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Später hat sie uns noch etwas gewünscht: „Helft euch immer gegenseitig. Dann braucht ihr keine großen Geschenke.“ Am Abend haben wir Frau Weber ein Stück Kuchen gebracht — unser Dank für ihre Hilfe. Eine Bitte hat sie auch: Nächstes Jahr will sie die Fotos selbst aussuchen."
+      q: Was sagt Oma zum Schluss zu Jonas und seiner Schwester?
+      options:
+        - Sie möchte jedes Jahr ein Fotobuch.
+        - Sie kommt am Wochenende zu Besuch.
+        - Frau Weber bekommt ein Stück Kuchen.
+        - Sie sollen sich immer gegenseitig helfen.
+      answer: 3
+    explanation: "Im Text steht: Helft euch immer gegenseitig. Dann braucht ihr keine großen Geschenke."
+
+# ───────────────────────── Wiederholungspool ─────────────────────────
+# 20 kurze Aufgaben für das Modul-Quiz und die Wiederholung nach 7 und 21 Tagen.
+# Dazu kommen 8 Aufgaben aus theory.yaml (cloze_cards).
+review_pool:
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Das Fahrrad gehört "
+      post: " Nachbarin von oben."
+      options: [die, den, der, dem]
+      answer: 2
+    explanation: "gehören fragt Wem? — Dativ. die Nachbarin → der Nachbarin."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Ich habe "
+      post: " einen Gefallen getan."
+      options: [ihr, sie, ihn, euer]
+      answer: 0
+    explanation: "Wem habe ich einen Gefallen getan? Ihr. sie → ihr im Dativ."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Der Verkäufer erklärt "
+      post: " den Weg zur Kasse."
+      options: [wir, unser, unsere, uns]
+      answer: 3
+    explanation: "erklären fragt Wem? + Was? wir → uns."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Ich habe "
+      post: " zum Geburtstag gratuliert."
+      options: [mein Bruder, meinem Bruder, meinen Bruder, meines Bruders]
+      answer: 1
+    explanation: "gratulieren fragt Wem? — Dativ: meinem Bruder."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Anna hat heute Geburtstag. Wir gratulieren "
+      post: " am Abend."
+      answers: [ihr]
+      answer_shown: ihr
+    explanation: "gratulieren fragt Wem? — Dativ. Anna = sie → ihr."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Ich finde das Haus nicht. Kannst du "
+      post: " bitte den Weg erklären?"
+      answers: [mir]
+      answer_shown: mir
+    explanation: "erklären fragt Wem? + Was? ich → mir, danach den Weg."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Tom und Anna heiraten morgen. Wir wünschen "
+      post: " alles Gute."
+      answers: [ihnen]
+      answer_shown: ihnen
+    explanation: "wünschen fragt Wem? + Was? Zwei Personen: sie → ihnen."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Zum Geburtstag schenke ich "
+      post: " Kollegin einen Gutschein."
+      answers: [meiner, der, deiner, ihrer, unserer, seiner, einer]
+      answer_shown: meiner
+    explanation: "schenken fragt zuerst Wem? — Dativ. die Kollegin → der Kollegin, meiner Kollegin."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Liebe Oma, wir danken "
+      post: " für das schöne Fest."
+      answers: [dir]
+      answer_shown: dir
+    explanation: "danken fragt Wem? — Dativ. Eine Person mit du → dir."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Jonas und ich haben das Geschenk eingepackt. Der Verkäufer hat "
+      post: " das Papier geschenkt."
+      answers: [uns]
+      answer_shown: uns
+    explanation: "schenken fragt Wem? + Was? wir → uns, danach das Papier."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Ich helfe "
+      post: " Kollegin bei der Arbeit."
+      prompt: WEM?
+      options: [meine, meinen, meinem, meiner]
+      answer: 3
+    explanation: "helfen fragt Wem? — Dativ. meine Kollegin → meiner Kollegin."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Wir haben "
+      post: "."
+      prompt: REIHENFOLGE
+      options: [ein Fotobuch der Oma geschenkt, der Oma ein Fotobuch geschenkt, geschenkt der Oma ein Fotobuch, der Oma geschenkt ein Fotobuch]
+      answer: 1
+    explanation: "Zuerst Wem?, dann Was?, das Partizip am Ende: der Oma ein Fotobuch geschenkt."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Meine Schwester "
+      post: " mir gestern ihr Auto geliehen."
+      prompt: HABEN ODER SEIN
+      options: [ist, sind, hat, haben]
+      answer: 2
+    explanation: "leihen bildet das Perfekt mit haben. sie + haben = hat."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Das Paket habe ich "
+      post: " der Nachbarin abgeholt."
+      prompt: PRÄPOSITION MIT DATIV
+      options: [bei, für, ohne, durch]
+      answer: 0
+    explanation: "bei nimmt immer den Dativ: bei der Nachbarin. für, ohne und durch nehmen den Akkusativ."
+  - type: error_correction
+    group: grammar
+    content:
+      words: [Ich, danke, dich, für, die, "Hilfe."]
+      wrong: 2
+      correction: "dich → dir"
+    explanation: "danken fragt Wem? — der Dativ: dir."
+  - type: error_correction
+    group: grammar
+    content:
+      words: [Der, Gutschein, gehört, meinen, "Bruder."]
+      wrong: 3
+      correction: "meinen → meinem"
+    explanation: "gehören fragt Wem? — der Dativ: meinem Bruder."
+  - type: error_correction
+    group: grammar
+    content:
+      words: [Wir, haben, ein, Buch, unserer, Oma, "geschenkt."]
+      wrong: 2
+      correction: "ein Buch unserer Oma → unserer Oma ein Buch"
+    explanation: "Zuerst die Person im Dativ, dann die Sache: unserer Oma ein Buch geschenkt."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Meine Tante ist "
+      post: " in einem kleinen Laden."
+      prompt: verkaufen
+      answers: [Verkäuferin]
+      answer_shown: Verkäuferin
+    explanation: "verkaufen → der Verkäufer, die Verkäuferin."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [der Gefallen, die Bitte, die Hilfe, die Überraschung]
+      right: [niemand weiß davon, eine kleine Hilfe für eine Person, man macht eine Arbeit nicht allein, man fragt höflich nach Hilfe]
+      pairs: { 0: 1, 1: 3, 2: 2, 3: 0 }
+    explanation: "Vier Nomen aus dem Modul — jedes mit seiner Umschreibung."
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: Ich zeige meiner Kollegin die Fotos.
+      key: SIE
+      pre: "Ich zeige "
+      post: " die Fotos."
+      answers: [ihr]
+      hint: 1 Wort
+      answer_shown: ihr
+    explanation: "meiner Kollegin = sie → ihr. Das Pronomen steht vor der Sache."

@@ -1,0 +1,133 @@
+# Modul 05 · Früher und heute — Grammatik im Fokus, Watch out! und Lückenkarten.
+# 6 Punkte — genau die Grammatik-Liste der Modulkarte (courses/de-a2/PLAN.md §4).
+# Die Obergrenze des Profils (§6) wäre 2 Spotlights × 4 Punkte.
+#
+# Fachwörter: alle aus dem Grammatik-Wörterbuch der Diagnostik (der Hauptsatz,
+# der Nebensatz, die Konjunktion, das Verb, der Stamm, die Endung, das Präsens,
+# der Infinitiv, die Vergangenheit, das Partizip, die Person), dazu „das
+# Präteritum" — der Begriff nennt die Konstruktion, die dieses Modul einführt,
+# und steht deshalb im ersten Punkt der Theorie (PLAN.md §5.2). „Das Perfekt"
+# kommt aus Modul 01.
+# Für können, müssen, wollen, dürfen und sollen gibt es kein Fachwort im
+# Wörterbuch — deshalb stehen überall die fünf Verben selbst.
+#
+# Das Präteritum bleibt bei sein, haben und diesen fünf Verben. Alle anderen
+# Verben stehen weiter im Perfekt (Modul 01) — genau so erzählt man im Alltag.
+#
+# Die Stellung im Nebensatz ist kein siebter Punkt, sondern steht in den
+# Tabellen zu als und wenn: hier trifft der Lernende sie zum ersten Mal.
+spotlights:
+  - title: "Das Präteritum"
+    intro: "Von gestern erzählt man im Perfekt. Bei sein, haben und den Verben können, müssen, wollen, dürfen, sollen nimmt man aber eine andere Form: das Präteritum."
+    items:
+      - form: "Das Präteritum von sein: war"
+        example: Als ich ein Kind war, war ich sehr schüchtern.
+        note: "Nicht ich bin gewesen, sondern ich war. So spricht man von früher."
+        table:
+          headers: ["", "Präsens", "Präteritum"]
+          rows:
+            - ["ich", "bin", "war"]
+            - ["du", "bist", "warst"]
+            - ["er / sie / es", "ist", "war"]
+            - ["wir", "sind", "waren"]
+            - ["ihr", "seid", "wart"]
+            - ["sie / Sie", "sind", "waren"]
+      - form: "Das Präteritum von haben: hatte"
+        example: Damals hatten wir kein Auto und keinen Fernseher.
+        note: "Der Stamm heißt hatt-. Die 1. und die 3. Person sind gleich."
+        table:
+          headers: ["", "Präsens", "Präteritum"]
+          rows:
+            - ["ich", "habe", "hatte"]
+            - ["du", "hast", "hattest"]
+            - ["er / sie / es", "hat", "hatte"]
+            - ["wir", "haben", "hatten"]
+            - ["ihr", "habt", "hattet"]
+            - ["sie / Sie", "haben", "hatten"]
+      - form: "Das Präteritum von können, müssen, wollen, dürfen, sollen"
+        example: Mit acht Jahren durfte ich schon allein zur Schule gehen.
+        note: "Bei können, müssen, dürfen wird aus ö und ü ein o und u. Die Endung ist -te."
+        table:
+          headers: ["Infinitiv", "ich / er, sie, es", "wir / sie"]
+          rows:
+            - ["können", "konnte", "konnten"]
+            - ["müssen", "musste", "mussten"]
+            - ["wollen", "wollte", "wollten"]
+            - ["dürfen", "durfte", "durften"]
+            - ["sollen", "sollte", "sollten"]
+
+  - title: "als und wenn"
+    intro: "Beide Konjunktionen sagen: zu dieser Zeit früher. als steht für einmal, wenn für immer wieder. Nach beiden steht das Verb am Ende vom Nebensatz."
+    items:
+      - form: "als — einmal in der Vergangenheit"
+        example: Als ich acht Jahre alt war, sind wir in eine andere Stadt gezogen.
+        note: "Ein Tag, ein Jahr, ein Erlebnis. Der Nebensatz kann vorn oder hinten stehen."
+        table:
+          headers: ["Reihenfolge", "Beispiel"]
+          rows:
+            - ["Nebensatz zuerst", "Als ich sechs war, bin ich in die Schule gekommen."]
+            - ["Hauptsatz zuerst", "Ich bin in die Schule gekommen, als ich sechs war."]
+      - form: "wenn — immer wieder in der Vergangenheit"
+        example: Immer wenn wir Ferien hatten, sind wir zu meiner Oma gefahren.
+        note: "Oft steht immer oder jedes Mal dabei. Auch hier: Verb am Ende."
+        table:
+          headers: ["Wie oft?", "Konjunktion", "Beispiel"]
+          rows:
+            - ["einmal", "als", "Als ich zehn war, habe ich ein Fahrrad bekommen."]
+            - ["immer wieder", "wenn", "Wenn ich Geburtstag hatte, hat Oma einen Kuchen gebacken."]
+            - ["immer wieder", "wenn", "Immer wenn es geregnet hat, haben wir im Hof gespielt."]
+      - form: "Die Zeitangaben der Vergangenheit"
+        example: Mit acht Jahren konnte ich schon Rad fahren.
+        note: "Sie stehen am Anfang oder in der Mitte. Am Anfang kommt danach das Verb."
+        table:
+          headers: ["Zeitangabe", "Beispiel"]
+          rows:
+            - ["damals", "Damals hatten wir kein Auto."]
+            - ["früher", "Früher war hier ein Hof voller Kinder."]
+            - ["mit acht Jahren", "Mit acht Jahren durfte ich allein zur Schule gehen."]
+            - ["als Kind", "Als Kind war ich sehr schüchtern."]
+            - ["am dritten Mai", "Am dritten Mai sind wir umgezogen."]
+
+watchouts:
+  - title: "als oder wenn?"
+    bad: Immer als wir Ferien hatten, sind wir zu Oma gefahren.
+    good: Immer wenn wir Ferien hatten, sind wir zu Oma gefahren.
+    note: "Einmal in der Vergangenheit → als. Immer wieder → wenn."
+  - title: "Das Verb steht am Ende"
+    bad: Als ich war klein, hatte ich einen Hund.
+    good: Als ich klein war, hatte ich einen Hund.
+    note: "Nach als und wenn steht das Verb ganz am Ende vom Nebensatz."
+  - title: "Jahre alt"
+    bad: Damals war ich acht Jahre.
+    good: Damals war ich acht Jahre alt.
+    note: "Nach der Zahl der Jahre steht immer alt. Auch: Ich bin 30 Jahre alt."
+  - title: "war statt habe gewesen"
+    bad: Ich habe als Kind in einem Dorf gewesen.
+    good: Ich war als Kind in einem Dorf.
+    note: "sein und haben stehen fast immer im Präteritum: war, hatte."
+
+cloze_cards:
+  - text: "Als ich ein Kind {{c1::war}}, haben wir in einem kleinen Dorf gewohnt."
+    hint: sein
+    rule: "sein im Präteritum: ich war. Nach als steht das Verb am Ende."
+  - text: "Damals {{c1::hatten}} wir kein Auto und keinen Fernseher."
+    hint: haben
+    rule: "haben im Präteritum: wir hatten. damals zeigt die Vergangenheit."
+  - text: "Mit sechs Jahren {{c1::konnte}} ich noch nicht lesen."
+    hint: können
+    rule: "können im Präteritum: ich konnte. Aus ö wird o."
+  - text: "Meine Eltern waren streng. Ich {{c1::durfte}} abends nicht lange draußen bleiben."
+    hint: dürfen
+    rule: "dürfen im Präteritum: ich durfte. Aus ü wird u."
+  - text: "{{c1::Als}} ich zehn war, habe ich mein erstes Fahrrad bekommen."
+    hint: als oder wenn
+    rule: "Ein Erlebnis, einmal in der Vergangenheit → als."
+  - text: "Immer {{c1::wenn}} wir Ferien hatten, sind wir zu meiner Oma gefahren."
+    hint: als oder wenn
+    rule: "Immer wieder in der Vergangenheit → wenn. Oft steht immer dabei."
+  - text: "Meine Großmutter {{c1::war}} als Kind sehr arm."
+    hint: sein
+    rule: "sein im Präteritum: sie war. Nicht: sie hat gewesen."
+  - text: "Ich {{c1::musste}} als Kind jeden Samstag im Hof helfen."
+    hint: müssen
+    rule: "müssen im Präteritum: ich musste. Aus ü wird u, aus ß wird ss."

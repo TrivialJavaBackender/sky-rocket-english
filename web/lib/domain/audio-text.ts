@@ -63,6 +63,33 @@ export function paragraphTexts(
 /** Sentences longer than this are still returned whole (see splitSentences) — a caller prints them in its coverage report as "rewrite this paragraph" bait, since chatterbox's one-shot rendering degrades on long input. */
 export const MAX_SENTENCE_CHARS = 400;
 
+/**
+ * How a reading text is cut into clips — the one knob both the generator
+ * (scripts/audio.ts) and the lookup (use-cases/audio.ts) read, so flipping it
+ * can never leave the two disagreeing about clip boundaries.
+ *
+ * `'paragraph'`: one clip per paragraph. Prosody carries across sentence
+ * boundaries and playback has no seams, at the cost of handing chatterbox a
+ * long one-shot render (it does no internal chunking) — the risk it drops or
+ * hallucinates a stretch grows with length, and a single bad take costs the
+ * whole paragraph rather than one sentence.
+ *
+ * `'sentence'`: the conservative fallback, small renders and cheap retakes,
+ * played back as a queue.
+ *
+ * Switching values changes every reading clip's text and therefore its hash:
+ * a flip must be followed by `pnpm audio` + `pnpm sync`, or the ▶ buttons on
+ * texts simply stop appearing (D15's fail-safe).
+ */
+export const READING_CLIP_GRANULARITY: 'paragraph' | 'sentence' = 'paragraph';
+
+/** The clip texts one flattened paragraph contributes, per READING_CLIP_GRANULARITY. Always an array, so callers keep the same per-paragraph queue shape either way. */
+export function readingClipTexts(paragraphText: string): string[] {
+  if (READING_CLIP_GRANULARITY === 'sentence') return splitSentences(paragraphText);
+  const normalized = normalizeAudioText(paragraphText);
+  return normalized ? [normalized] : [];
+}
+
 // '.' is the only terminator that is ever ambiguous in German — it also
 // closes abbreviations ("bzw.") and sits inside ordinals/times ("3.", "10.30").
 // '!', '?' and the single-character ellipsis '…' never do, so any run

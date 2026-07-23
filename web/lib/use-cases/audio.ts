@@ -4,14 +4,14 @@
  * gathers exactly the strings it's about to show (the `*AudioTexts` helpers
  * below), resolves them in one round trip via `resolveAudio`, then slots
  * clips back onto its DTOs *by position* (the `attach*Audio` helpers) — a
- * paragraph's Nth sentence gets the Nth entry of its `AudioClipDTO[]`, never
+ * paragraph's Nth clip gets the Nth entry of its `AudioClipDTO[]`, never
  * a text string a client component would have to re-hash to find its own
  * clip. That's the plan's "в пропсы клиента не должны уезжать тексты-ключи":
  * once attached, a DTO carries clip objects addressed by array position, not
- * by the sentence/term text itself.
+ * by the clip/term text itself.
  */
 import * as audioRepo from '../repositories/audio.repo';
-import { normalizeAudioText, splitSentences } from '../domain/audio-text';
+import { normalizeAudioText, readingClipTexts } from '../domain/audio-text';
 import type { GrammarSpotlightDTO, VocabEntryDTO, WatchoutDTO } from '../repositories/content.repo';
 import type { AudioClipDTO } from '../repositories/audio.repo';
 
@@ -70,27 +70,28 @@ export function attachWatchoutAudio(watchouts: readonly WatchoutDTO[], clips: Ma
 // ─────────────────────────────── reading ───────────────────────────────
 
 /**
- * Splits each paragraph's flattened plain text (paragraphTexts' output) into
- * sentences — the exact split scripts/audio.ts used to decide what to
- * synthesize, so a lookup built from this always lands on the generator's
- * own clip boundaries.
+ * Cuts each paragraph's flattened plain text (paragraphTexts' output) into
+ * clip texts through the same READING_CLIP_GRANULARITY knob scripts/audio.ts
+ * used to decide what to synthesize, so a lookup built from this always lands
+ * on the generator's own clip boundaries — today one clip per paragraph, but
+ * the shape stays per-paragraph-array either way.
  */
-export function paragraphSentences(paragraphTextsList: readonly string[]): string[][] {
-  return paragraphTextsList.map((p) => splitSentences(p));
+export function paragraphClipTexts(paragraphTextsList: readonly string[]): string[][] {
+  return paragraphTextsList.map((p) => readingClipTexts(p));
 }
 
 /**
- * Per paragraph, the clips of whichever of its sentences were actually
- * found — never a sparse/null-padded array. A mid-paragraph gap (one
- * sentence not yet synthesized) is silently skipped rather than surfaced,
- * so the eventual playback queue still plays what exists back-to-back; a
- * paragraph with nothing synthesized at all comes back `[]`, which the
- * PlayButton/queue (stage 3) read as "no button".
+ * Per paragraph, the clips of whichever of its texts were actually found —
+ * never a sparse/null-padded array. A gap (one text not yet synthesized) is
+ * silently skipped rather than surfaced, so the playback queue still plays
+ * what exists back-to-back; a paragraph with nothing synthesized at all comes
+ * back `[]`, which the PlayButton/queue read as "no button". Under
+ * READING_CLIP_GRANULARITY='paragraph' each inner array is 0 or 1 long.
  */
-export function attachReadingAudio(sentencesByParagraph: readonly string[][], clips: Map<string, AudioClipDTO>): AudioClipDTO[][] {
-  return sentencesByParagraph.map((sentences) => {
+export function attachReadingAudio(clipsByParagraph: readonly string[][], clips: Map<string, AudioClipDTO>): AudioClipDTO[][] {
+  return clipsByParagraph.map((texts) => {
     const found: AudioClipDTO[] = [];
-    for (const s of sentences) {
+    for (const s of texts) {
       const clip = lookup(clips, s);
       if (clip) found.push(clip);
     }

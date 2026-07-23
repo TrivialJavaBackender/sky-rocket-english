@@ -1,0 +1,45 @@
+# Glossen stehen nur auf Wörtern, deren Form im Satz gleich der Grundform ist:
+# ReadingText rendert `gloss.term` direkt in den Fließtext.
+# Erzählt wird im Perfekt (Modul 01) — kein Präteritum, auch nicht war und
+# hatte: das gehört Modul 05. Deshalb steht hier ist … gewesen und hat … gehabt.
+kind: main
+kicker: LESETEXT
+title: Ein Geschenk für Oma
+meta: ≈ 3 Min · Wörter mit Punkten haben eine Erklärung — tippen Sie darauf
+word_count: 304
+body:
+  - - t: "Am Samstag hat unsere Oma Geburtstag — sie wird achtzig. Seit drei Wochen suchen mein Bruder Jonas und ich ein Geschenk für sie. Blumen bekommt sie von allen, und letztes Jahr haben wir ihr ein Buch geschenkt. Ein Gutschein ist praktisch, aber nicht "
+    - g: persönlich
+    - t: ". Diesmal wollen wir ihr unbedingt eine richtige Überraschung machen."
+  - - t: "Am Montag habe ich unserer Nachbarin von dem Problem erzählt. Frau Weber kennt Oma seit dreißig Jahren, die beiden verbindet eine lange Freundschaft. „Zeig mir mal eure alten Fotos“, hat sie gesagt. Dann hat sie mir ihre Idee erklärt: ein Fotobuch aus sechzig Jahren. "
+    - g: Ausgerechnet
+    - t: " die Nachbarin hat die beste Idee gehabt."
+  - - t: "Die alten Fotos gehören meinem Vater. Er hat sie uns sofort gegeben und uns auch zwei Kartons aus dem Keller besorgt. Jonas hat drei Abende am Computer gesessen, ich habe ihm dabei geholfen. Gemeinsam haben wir hundert Bilder ausgesucht — von der Hochzeit, aus dem Urlaub, vom ersten Auto."
+  - - t: "Am Freitag ist es dann dringend geworden: Das Fotobuch ist immer noch nicht da gewesen. Ich habe meine Kollegin um einen "
+    - g: Gefallen
+    - t: " gebeten. „Kannst du mir dein Auto leihen? Ich muss das Paket noch abholen.“ Sie hat mir den Schlüssel gegeben und nichts dafür genommen. Ich habe ihr sehr gedankt."
+  - - t: "Am Samstagmorgen haben wir das Buch eingepackt. Der Verkäufer im kleinen Laden an der Ecke hat uns das Papier geschenkt — er kennt Oma auch. Um drei Uhr haben wir ihr gratuliert und ihr das Paket gegeben. Oma hat lange nichts gesagt. Dann hat sie uns beide umarmt und uns etwas versprochen: „Dieses Buch zeige ich jedem Besucher.“"
+  - - t: "Später hat sie uns noch etwas gewünscht: „Helft euch immer "
+    - g: gegenseitig
+    - t: ". Dann braucht ihr keine großen Geschenke.“ Am Abend haben wir Frau Weber ein Stück Kuchen gebracht — unser Dank für ihre Hilfe. Eine Bitte hat sie auch: Nächstes Jahr will sie die Fotos selbst aussuchen."
+glosses:
+  - key: persönlich
+    term: persönlich
+    pos_label: Adjektiv
+    definition: Nur für diese eine Person gemacht. Nicht für alle gleich.
+    example: Ein Gutschein ist praktisch, aber nicht persönlich.
+  - key: Ausgerechnet
+    term: Ausgerechnet
+    pos_label: Adverb
+    definition: Genau diese Person oder genau dieser Tag — und das passt gar nicht.
+    example: Ausgerechnet am Geburtstag hat es geregnet.
+  - key: Gefallen
+    term: Gefallen
+    pos_label: Nomen
+    definition: Eine kleine Hilfe für eine Person. Man macht sie gern und ohne Geld.
+    example: Kannst du mir einen Gefallen tun?
+  - key: gegenseitig
+    term: gegenseitig
+    pos_label: Adjektiv
+    definition: Einer macht es für den anderen, und der andere macht es auch.
+    example: Im Kurs helfen wir uns gegenseitig.

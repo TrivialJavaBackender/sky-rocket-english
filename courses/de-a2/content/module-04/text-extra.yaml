@@ -1,0 +1,44 @@
+# Jede Nachricht ist ein eigener Absatz: erst der Name mit der Uhrzeit, dann
+# der Text. Der Chat zeigt genau das, was in writing.yaml verlangt wird — eine
+# Bitte um einen Gefallen und die Antwort darauf.
+kind: extra
+kicker: CHAT
+title: Chat am Donnerstagabend
+meta: ≈ 1 Min · Lena schreibt ihrem Freund Tom
+word_count: 146
+body:
+  - - t: "Lena, 19:02"
+  - - t: "Tom, ich habe eine dringende Bitte. Kannst du mir am Samstag einen "
+    - g: Gefallen
+    - t: " tun?"
+  - - t: "Tom, 19:04"
+  - - t: "Klar. Was brauchst du?"
+  - - t: "Lena, 19:05"
+  - - t: "Meine Oma hat Geburtstag. Ich muss das Geschenk um zehn Uhr abholen, aber mein Auto ist kaputt."
+  - - t: "Tom, 19:06"
+  - - t: "Kein Problem. Ich hole das Paket für dich ab und bringe es dir nach Hause. Ausgerechnet am Samstag habe ich frei."
+  - - t: "Lena, 19:07"
+  - - t: "Das ist super. Ich danke dir!"
+  - - t: "Tom, 19:09"
+  - - t: "Und was schenkt ihr der Oma?"
+  - - t: "Lena, 19:10"
+  - - t: "Ein Fotobuch. Jonas und ich haben es gemeinsam gemacht. Unsere Nachbarin hat uns die Idee erklärt und uns sogar Bilder von der Hochzeit geliehen."
+  - - t: "Tom, 19:11"
+  - - t: "Schöne Idee — viel persönlicher als ein Gutschein. Gratuliere deiner Oma bitte auch von mir."
+  - - t: "Lena, 19:12"
+  - - t: "Mache ich. Und du bekommst ein Stück Kuchen, das verspreche ich dir."
+  - - t: "Tom, 19:13"
+  - - t: "Dann helfen wir uns eben "
+    - g: gegenseitig
+    - t: ". Bis Samstag!"
+glosses:
+  - key: Gefallen
+    term: Gefallen
+    pos_label: Nomen
+    definition: Eine kleine Hilfe für eine Person. Man macht sie gern und ohne Geld.
+    example: Kannst du mir einen Gefallen tun?
+  - key: gegenseitig
+    term: gegenseitig
+    pos_label: Adjektiv
+    definition: Einer macht es für den anderen, und der andere macht es auch.
+    example: Im Kurs helfen wir uns gegenseitig.

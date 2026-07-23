@@ -1,0 +1,33 @@
+mode: writing
+genre: E-Mail mit einer Bitte um einen Gefallen
+word_target: [50, 60]
+prompt: |
+  Ihre Oma hat am Samstag Geburtstag. Sie brauchen Hilfe und schreiben
+  einer Freundin oder einem Freund eine E-Mail. 50–60 Wörter.
+
+  Schreiben Sie zu allen vier Punkten:
+  • Warum Sie schreiben — Ihre Bitte
+  • Was Sie brauchen und wann
+  • Was Sie selbst schon gemacht haben
+  • Wie Sie danken — was Sie dafür versprechen
+
+  Benutzen Sie mindestens vier Verben mit dem Dativ und die Pronomen mir und dir.
+model_answer: |
+  Liebe Mia,
+
+  ich habe eine dringende Bitte an dich. Meine Oma hat am Samstag
+  Geburtstag, und ich muss ihr Geschenk um zehn Uhr abholen. Kannst du mir
+  bitte dein Auto leihen? Das Fotobuch habe ich schon eingepackt.
+  Am Sonntag bringe ich dir ein Stück Kuchen — das verspreche ich dir!
+
+  Vielen Dank und liebe Grüße
+  Lena
+checklist:
+  - 50–60 Wörter
+  - Alle vier Punkte stehen im Text
+  - Anrede (Liebe … / Lieber …) und Gruß am Ende
+  - Nach helfen, danken, gehören und gratulieren steht der Dativ
+  - Die Pronomen mir, dir, ihm und ihr stehen in der richtigen Form
+  - Bei zwei Objekten steht zuerst die Person, dann die Sache
+  - Das Perfekt steht mit haben oder sein und dem Partizip am Ende
+  - Mindestens acht Wörter aus dem Modul kommen vor

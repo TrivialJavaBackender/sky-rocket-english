@@ -28,7 +28,7 @@ export function ReadingText({
   moduleId: number;
   /** false in Prime's skim step (UC-07): gloss segments render as plain text — one pass, gist only. */
   glossesEnabled?: boolean;
-  /** Per paragraph, the clips of whichever of its sentences were synthesized (ARCHITECTURE.md §4.8) — attached server-side by getUnit/getReadingWithGlosses. Absent entirely for a call site that never resolves audio (en-c1); an individual paragraph's own entry can still be `[]` if that module has audio but this particular paragraph doesn't yet — either way its ▶ just doesn't render, the same "no clip → no button" rule PlayButton itself follows. */
+  /** Per paragraph, the clips it was synthesized as — one per paragraph today, a queue of sentence clips under READING_CLIP_GRANULARITY='sentence' (ARCHITECTURE.md §4.8) — attached server-side by getUnit/getReadingWithGlosses. Absent entirely for a call site that never resolves audio (en-c1); an individual paragraph's own entry can still be `[]` if that module has audio but this particular paragraph doesn't yet — either way its ▶ just doesn't render, the same "no clip → no button" rule PlayButton itself follows. */
   paragraphAudio?: AudioClipDTO[][];
 }) {
   const [openKey, setOpenKey] = useState<string | null>(null);
