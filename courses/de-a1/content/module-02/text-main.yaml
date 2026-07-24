@@ -1,0 +1,45 @@
+# Module 02 · main text — someone describes their family. German body; glosses
+# carry German term + example, English pos_label + definition (§5). Constructions
+# that belong to later modules (accusative einen Bruder, negation nicht, dative
+# von deiner Familie, imperative Erzähl) appear as input only — the learner reads
+# them but is never asked to produce them.
+kind: main
+kicker: LESETEXT
+title: Meine Familie
+meta: ≈ 2 min · dotted words have a note — tap to reveal
+word_count: 119
+body:
+  - - t: "Hallo! Ich heiße Jonas und das ist meine Familie. Wir sind fünf Personen und wohnen in Hamburg."
+  - - t: "Meine Eltern heißen Klaus und Petra. Mein Vater ist siebenundvierzig Jahre alt und arbeitet viel. Meine Mutter ist zweiundvierzig. Sie kommt aus Österreich."
+  - - t: "Ich habe einen Bruder und eine Schwester. Mein Bruder Leon ist neunzehn und studiert in Berlin. Meine kleine Schwester Mia ist "
+    - g: erst
+    - t: " acht Jahre alt. Sie geht noch in die Schule."
+  - - t: "Meine Großeltern leben nicht in Hamburg. Meine Oma und mein Opa wohnen in München. Oma ist "
+    - g: schon
+    - t: " vierundsiebzig, aber sie ist noch sehr "
+    - g: aktiv
+    - t: ". Wir "
+    - g: besuchen
+    - t: " sie oft."
+  - - t: "Ich liebe meine Familie. Und du? Hast du Geschwister? Wie alt sind deine Eltern? Erzähl mir von deiner Familie!"
+glosses:
+  - key: erst
+    term: erst
+    pos_label: adverb
+    definition: only, just — not more than
+    example: Sie ist erst acht Jahre alt.
+  - key: schon
+    term: schon
+    pos_label: adverb
+    definition: already
+    example: Oma ist schon vierundsiebzig.
+  - key: aktiv
+    term: aktiv
+    pos_label: adjective
+    definition: active; doing a lot
+    example: Meine Oma ist noch sehr aktiv.
+  - key: besuchen
+    term: besuchen
+    pos_label: verb
+    definition: to visit, to go and see someone
+    example: Wir besuchen die Großeltern oft.

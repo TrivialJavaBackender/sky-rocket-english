@@ -1,0 +1,30 @@
+# Module 01 · production. Scaffolding (prompt, checklist) is English; the model
+# answer is German (§5). The task matches Goethe A1: a form plus a few sentences.
+mode: writing
+genre: registration form and a short self-introduction
+word_target: [20, 30]
+prompt: |
+  You are signing up for a German course. Fill in the registration form
+  (Anmeldeformular) and then write two or three sentences about yourself.
+  20–30 words in the sentences.
+
+  Anmeldeformular:
+  • Vorname / Nachname:
+  • Land:
+  • Sprachen:
+  • Telefonnummer:
+  • verheiratet / ledig:
+
+  Then say: your name, where you come from, where you live now, and one
+  more thing about yourself. Use ich bin, ich heiße, ich komme, ich wohne.
+model_answer: |
+  Anmeldeformular — Vorname: Marco, Nachname: Rossi. Land: Italien.
+  Sprachen: Italienisch, Englisch. Telefonnummer: 0176 12 20. Ledig.
+
+  Hallo! Ich heiße Marco Rossi. Ich komme aus Italien und wohne jetzt
+  in Hamburg. Ich bin ledig und lerne Deutsch.
+checklist:
+  - The form has your name, country and languages
+  - You use ich heiße / ich komme / ich wohne / ich bin
+  - Country and language names start with a capital letter
+  - The sentences are 20–30 words long

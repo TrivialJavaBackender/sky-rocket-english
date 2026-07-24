@@ -1,0 +1,35 @@
+# Module 01 · extra text — a short dialogue. It carries the four words the main
+# text does not: buchstabieren, das Land, verheiratet, Französisch. The yes/no
+# question "Bist du verheiratet?" appears as input only (verb-first questions are
+# module 4) — the learner reads it here, but is never asked to produce it.
+kind: extra
+kicker: DIALOG
+title: Wie heißt du?
+meta: ≈ 1 min · dotted words have a note — tap to reveal
+word_count: 64
+body:
+  - - t: "Sara: Hallo! Wie heißt du?"
+  - - t: "Lukas: Ich heiße Lukas. Und du?"
+  - - t: "Sara: Ich bin Sara. Woher kommst du, Lukas?"
+  - - t: "Lukas: Ich komme aus Frankreich, aus Lyon."
+  - - t: "Sara: Aus welchem Land? Frankreich? Schön! Wie buchstabiert "
+    - g: man
+    - t: " Lyon?"
+  - - t: "Lukas: L-Y-O-N."
+  - - t: "Sara: Danke! Bist du verheiratet?"
+  - - t: "Lukas: Nein, ich bin ledig. Und du?"
+  - - t: "Sara: Ich bin "
+    - g: auch
+    - t: " ledig. Wo wohnst du jetzt?"
+  - - t: "Lukas: Ich wohne in Berlin."
+glosses:
+  - key: man
+    term: man
+    pos_label: pronoun
+    definition: one, you — people in general
+    example: Wie schreibt man das?
+  - key: auch
+    term: auch
+    pos_label: adverb
+    definition: also, too
+    example: Ich bin auch Student.

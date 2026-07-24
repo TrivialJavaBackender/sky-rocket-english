@@ -1,0 +1,482 @@
+# Module 01 · 46 core tasks + 16 review. Distribution (PLAN.md §6):
+# 8 mc_cloze · 8 open_cloze · 6 word_formation · 2 key_word_transformation ·
+# 10 grammar_drill · 4 error_correction · 4 collocation_match · 4 reading_comprehension.
+#
+# First module of the course, so there is no spiral revision of earlier grammar
+# (PLAN.md §4). Everything the answers require comes from the module card of M1
+# alone: sein, the pronouns, the W-questions, capitalising nouns, and the four
+# self-introduction verbs whose forms the vocab cards supply. Explanations are
+# English (§5); frames and answers are German.
+core:
+  # ───────────────────────── Multiple Choice ─────────────────────────
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Hallo, ich "
+      post: " Anna."
+      options: [bin, bist, ist, sind]
+      answer: 0
+    explanation: "ich + sein = bin."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Woher "
+      post: " du?"
+      options: [komme, kommt, kommst, kommen]
+      answer: 2
+    explanation: "du + kommen = kommst. woher asks which country you are from."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Das "
+      post: " Herr Meyer."
+      options: [bin, ist, bist, sind]
+      answer: 1
+    explanation: "das / er + sein = ist."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Wir "
+      post: " aus Österreich."
+      options: [bin, bist, seid, sind]
+      answer: 3
+    explanation: "wir + sein = sind."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: ""
+      post: " heißt du?"
+      options: [Wo, Wer, Wie, Woher]
+      answer: 2
+    explanation: "Wie heißt du? asks for a name."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Ihr "
+      post: " Studenten."
+      options: [seid, sind, ist, bin]
+      answer: 0
+    explanation: "ihr + sein = seid."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: ""
+      post: " wohnst du?"
+      options: [Wer, Wie, Woher, Wo]
+      answer: 3
+    explanation: "Wo wohnst du? asks for the place."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Ich "
+      post: " in Berlin."
+      options: [wohnst, wohne, wohnt, wohnen]
+      answer: 1
+    explanation: "ich + wohnen = wohne."
+
+  # ───────────────────────── Lückentext (open_cloze) ─────────────────────────
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Ich "
+      post: " Student."
+      answers: [bin]
+      answer_shown: bin
+    explanation: "ich + sein = bin. Only sein fits before a bare noun."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: ""
+      post: " heißt du?"
+      answers: [Wie]
+      answer_shown: Wie
+    explanation: "Only Wie fits: Wie heißt du?"
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Wir "
+      post: " Studenten."
+      answers: [sind]
+      answer_shown: sind
+    explanation: "wir + sein = sind."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Woher "
+      post: " du?"
+      hint: kommen
+      answers: [kommst]
+      answer_shown: kommst
+    explanation: "du + kommen = kommst."
+  - type: open_cloze
+    group: reading
+    content:
+      pre: ""
+      post: " wohnst du?"
+      answers: [Wo]
+      answer_shown: Wo
+    explanation: "The verb wohnst asks for a place, so Wo."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Du "
+      post: " Studentin."
+      answers: [bist]
+      answer_shown: bist
+    explanation: "du + sein = bist."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Ich "
+      post: " in Wien."
+      hint: wohnen
+      answers: [wohne]
+      answer_shown: wohne
+    explanation: "The hint wohnen forces wohne (Ich bin in Wien would also be German — the hint decides)."
+  - type: open_cloze
+    group: reading
+    content:
+      pre: ""
+      post: " ist das? — Das ist Herr Meyer."
+      answers: [Wer]
+      answer_shown: Wer
+    explanation: "The answer names a person, so the question word is Wer."
+
+  # ───────────────────────── Wortbildung (capitalise the noun) ─────────────────────────
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Ich komme aus "
+      post: "."
+      prompt: "spanien → ?"
+      answers: [Spanien]
+      answer_shown: Spanien
+    explanation: "Country names are capitalised: Spanien, not spanien."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Was ist dein "
+      post: "?"
+      prompt: "beruf → ?"
+      answers: [Beruf]
+      answer_shown: Beruf
+    explanation: "Every noun takes a capital: Beruf."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Deutsch ist eine "
+      post: "."
+      prompt: "sprache → ?"
+      answers: [Sprache]
+      answer_shown: Sprache
+    explanation: "Nouns are capitalised: Sprache."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Wie ist deine "
+      post: "?"
+      prompt: "adresse → ?"
+      answers: [Adresse]
+      answer_shown: Adresse
+    explanation: "Nouns take a capital: Adresse."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Berlin ist eine Stadt in "
+      post: "."
+      prompt: "deutschland → ?"
+      answers: [Deutschland]
+      answer_shown: Deutschland
+    explanation: "Country names are capitalised: Deutschland."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Meine "
+      post: " ist 0176 12 20."
+      prompt: "telefonnummer → ?"
+      answers: [Telefonnummer]
+      answer_shown: Telefonnummer
+    explanation: "Nouns are capitalised: Telefonnummer."
+
+  # ───────────────────────── Umformung (key_word_transformation) ─────────────────────────
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: Ich bin Student.
+      key: WIR
+      pre: ""
+      post: " Studenten."
+      answers: [sind]
+      hint: 1 Wort
+      answer_shown: sind
+    explanation: "ich → wir changes the verb: bin → sind. Wir sind Studenten."
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: Nina wohnt in Berlin.
+      key: WO
+      pre: ""
+      post: " wohnt Nina?"
+      answers: [Wo]
+      hint: 1 Wort
+      answer_shown: Wo
+    explanation: "Ask about the place with Wo: Wo wohnt Nina?"
+
+  # ───────────────────────── Grammatik-Drill ─────────────────────────
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Ich "
+      post: " Lehrer."
+      prompt: sein
+      options: [bist, bin, ist, sind]
+      answer: 1
+    explanation: "ich + sein = bin."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Du "
+      post: " aus Frankreich."
+      prompt: sein
+      options: [bin, ist, sind, bist]
+      answer: 3
+    explanation: "du + sein = bist."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Er "
+      post: " Student."
+      prompt: sein
+      options: [ist, bin, bist, seid]
+      answer: 0
+    explanation: "er + sein = ist."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: ""
+      post: " heißt du?"
+      prompt: W-Frage
+      options: [Wo, Wer, Wie, Woher]
+      answer: 2
+    explanation: "Wie heißt du? asks for a name."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Wir "
+      post: " aus Spanien."
+      prompt: sein
+      options: [seid, sind, bin, ist]
+      answer: 1
+    explanation: "wir + sein = sind."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: ""
+      post: " wohnst du?"
+      prompt: W-Frage
+      options: [Wer, Wie, Woher, Wo]
+      answer: 3
+    explanation: "Wo wohnst du? asks for the place."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Ihr "
+      post: " Studenten."
+      prompt: sein
+      options: [bin, bist, seid, sind]
+      answer: 2
+    explanation: "ihr + sein = seid."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Sie "
+      post: " Frau Meyer."
+      prompt: sein
+      options: [ist, sind, bin, seid]
+      answer: 0
+    explanation: "sie (she) + sein = ist."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: ""
+      post: " komme aus Berlin."
+      prompt: Pronomen
+      options: [Du, Er, Wir, Ich]
+      answer: 3
+    explanation: "The form komme goes with ich: Ich komme."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: ""
+      post: " kommst du?"
+      prompt: W-Frage
+      options: [Wie, Woher, Wo, Wer]
+      answer: 1
+    explanation: "Woher kommst du? asks which country you are from."
+
+  # ───────────────────────── Fehlerkorrektur (typical beginner errors) ─────────────────────────
+  - type: error_correction
+    group: grammar
+    content: { words: [Ich, komme, aus, "deutschland."], wrong: 3, correction: "deutschland → Deutschland" }
+    explanation: "Country names take a capital: Deutschland."
+  - type: error_correction
+    group: grammar
+    content: { words: [Wir, seid, aus, "Spanien."], wrong: 1, correction: "seid → sind" }
+    explanation: "wir takes sind, not seid: Wir sind aus Spanien."
+  - type: error_correction
+    group: grammar
+    content: { words: [Was, ist, dein, "beruf?"], wrong: 3, correction: "beruf → Beruf" }
+    explanation: "Every noun is capitalised: Beruf."
+  - type: error_correction
+    group: grammar
+    content: { words: [Ich, ist, "Student."], wrong: 1, correction: "ist → bin" }
+    explanation: "ich takes bin, not ist: Ich bin Student."
+
+  # ───────────────────────── Zuordnung (collocation_match) ─────────────────────────
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [Deutschland, Frankreich, Spanien, England]
+      right: [Französisch, Englisch, Deutsch, Spanisch]
+      pairs: { 0: 2, 1: 0, 2: 3, 3: 1 }
+    explanation: "Each country with its language: Deutschland → Deutsch, Frankreich → Französisch, Spanien → Spanisch, England → Englisch."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: ["Wie heißt du?", "Woher kommst du?", "Wo wohnst du?", "Wer ist das?"]
+      right: ["In Berlin.", "Aus Spanien.", "Ich heiße Anna.", "Das ist Herr Meyer."]
+      pairs: { 0: 2, 1: 1, 2: 0, 3: 3 }
+    explanation: "Every W-question with its answer: wie → the name, woher → the country, wo → the place, wer → the person."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [kommen, wohnen, buchstabieren, sein]
+      right: [den Namen, aus Spanien, verheiratet, in Berlin]
+      pairs: { 0: 1, 1: 3, 2: 0, 3: 2 }
+    explanation: "kommen aus Spanien · wohnen in Berlin · den Namen buchstabieren · verheiratet sein."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [verheiratet, das Land, die Sprache, die Zahl]
+      right: [Deutsch, zwölf, ledig, Deutschland]
+      pairs: { 0: 2, 1: 3, 2: 0, 3: 1 }
+    explanation: "verheiratet ↔ ledig (opposites); Deutschland is a Land, Deutsch a Sprache, zwölf a Zahl."
+
+  # ───────────────────────── Leseverstehen (passages from the main text) ─────────────────────────
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Ich heiße Elena Ruiz. Ich komme aus Spanien, aus Madrid. Ich wohne jetzt in Wien, in Österreich."
+      q: Woher kommt Elena?
+      options:
+        - Aus Österreich
+        - Aus Wien
+        - Aus Spanien
+        - Aus Deutschland
+      answer: 2
+    explanation: "The text says: Ich komme aus Spanien. Wien is where she lives now."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Von Beruf bin ich Studentin. Ich lerne hier Deutsch. Deutsch ist schwer, aber schön."
+      q: Was ist Elena von Beruf?
+      options:
+        - Studentin
+        - Lehrerin
+        - Ärztin
+        - Verkäuferin
+      answer: 0
+    explanation: "The text says: Von Beruf bin ich Studentin."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Ich spreche drei Sprachen: Spanisch, Englisch und ein bisschen Deutsch."
+      q: Wie viele Sprachen spricht Elena?
+      options:
+        - zwei
+        - drei
+        - vier
+        - fünf
+      answer: 1
+    explanation: "The text says: drei Sprachen — Spanisch, Englisch und Deutsch."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Meine Freundin heißt Nina. Sie kommt aus Frankreich und wohnt auch in Wien."
+      q: Woher kommt Nina?
+      options:
+        - Aus Wien
+        - Aus Spanien
+        - Aus Österreich
+        - Aus Frankreich
+      answer: 3
+    explanation: "The text says: Sie kommt aus Frankreich. Wien is where she lives."
+
+review_pool:
+  - type: mc_cloze
+    group: grammar
+    content: { pre: "Du ", post: " Anna.", options: [bin, bist, ist, sind], answer: 1 }
+    explanation: "du + sein = bist."
+  - type: mc_cloze
+    group: grammar
+    content: { pre: "", post: " kommst du?", options: [Wie, Wer, Woher, Wo], answer: 2 }
+    explanation: "Woher kommst du? asks for your country."
+  - type: mc_cloze
+    group: grammar
+    content: { pre: "Sie ", post: " aus Frankreich.", options: [bist, ist, bin, seid], answer: 1 }
+    explanation: "sie (she) + sein = ist."
+  - type: mc_cloze
+    group: grammar
+    content: { pre: "Ich ", post: " Lehrer von Beruf.", options: [bist, ist, bin, sind], answer: 2 }
+    explanation: "ich + sein = bin."
+  - type: mc_cloze
+    group: grammar
+    content: { pre: "", post: " ist das?", options: [Wie, Wer, Wo, Woher], answer: 1 }
+    explanation: "Wer ist das? asks about a person."
+  - type: open_cloze
+    group: grammar
+    content: { pre: "Wir ", post: " Freunde.", answers: [sind], answer_shown: sind }
+    explanation: "wir + sein = sind."
+  - type: open_cloze
+    group: grammar
+    content: { pre: "Ich ", post: " aus Deutschland.", hint: kommen, answers: [komme], answer_shown: komme }
+    explanation: "The hint kommen forces komme: Ich komme aus Deutschland."
+  - type: open_cloze
+    group: grammar
+    content: { pre: "", post: " heißt deine Freundin?", answers: [Wie], answer_shown: Wie }
+    explanation: "Wie heißt deine Freundin?"
+  - type: open_cloze
+    group: grammar
+    content: { pre: "Du ", post: " in Berlin.", hint: wohnen, answers: [wohnst], answer_shown: wohnst }
+    explanation: "The hint wohnen forces wohnst: Du wohnst in Berlin."
+  - type: open_cloze
+    group: grammar
+    content: { pre: "Ihr ", post: " Studenten.", answers: [seid], answer_shown: seid }
+    explanation: "ihr + sein = seid."
+  - type: grammar_drill
+    group: grammar
+    content: { pre: "Es ", post: " schön.", prompt: sein, options: [bin, bist, ist, sind], answer: 2 }
+    explanation: "es + sein = ist."
+  - type: grammar_drill
+    group: grammar
+    content: { pre: "", post: " sind aus Spanien.", prompt: Pronomen, options: [Ich, Du, Er, Wir], answer: 3 }
+    explanation: "The form sind goes with wir: Wir sind."
+  - type: grammar_drill
+    group: grammar
+    content: { pre: "", post: " wohnt Anna?", prompt: W-Frage, options: [Wer, Wo, Wie, Woher], answer: 1 }
+    explanation: "Wo wohnt Anna? asks for the place."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: ["null", zehn, fünf, zwanzig]
+      right: ["20", "10", "0", "5"]
+      pairs: { 0: 2, 1: 1, 2: 3, 3: 0 }
+    explanation: "Number word to digit: null = 0, zehn = 10, fünf = 5, zwanzig = 20."
+  - type: word_formation
+    group: vocab
+    content: { pre: "Ich lerne ", post: ".", prompt: "englisch → ?", answers: [Englisch], answer_shown: Englisch }
+    explanation: "A language name is a noun and is capitalised: Englisch."
+  - type: error_correction
+    group: grammar
+    content: { words: [Du, bin, "Studentin."], wrong: 1, correction: "bin → bist" }
+    explanation: "du takes bist: Du bist Studentin."

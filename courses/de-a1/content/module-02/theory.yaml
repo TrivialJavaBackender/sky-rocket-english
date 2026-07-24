@@ -1,0 +1,107 @@
+# Module 02 · theory. Two spotlights, 5 items — they realise the four grammar
+# points of the card (haben, regular present, possessives, verb second), plus a
+# numbers 20–100 reference (the module's lexical extension, PLAN.md §4). Scaffolding
+# rule (§5): intro and note English, every example and table German. Grammar terms
+# are named in English directly (§5.1).
+spotlights:
+  - title: haben and the present tense
+    intro: After sein, the next two things you need are haben (to have) and the regular present tense. Most German verbs follow one simple pattern.
+    items:
+      - form: The verb haben (to have)
+        example: "Ich habe zwei Brüder. Hast du Geschwister? Wir haben ein Baby."
+        note: haben is irregular in du and er — hast and hat. Learn them by heart.
+        table:
+          headers: ["", "haben"]
+          rows:
+            - ["ich", "habe"]
+            - ["du", "hast"]
+            - ["er / sie / es", "hat"]
+            - ["wir", "haben"]
+            - ["ihr", "habt"]
+            - ["sie / Sie", "haben"]
+      - form: "Regular verbs: stem + ending"
+        note: Take the stem (wohn-, spiel-, leb-) and add the ending for the person.
+        table:
+          headers: ["", "wohnen", "spielen"]
+          rows:
+            - ["ich", "wohne", "spiele"]
+            - ["du", "wohnst", "spielst"]
+            - ["er / sie / es", "wohnt", "spielt"]
+            - ["wir", "wohnen", "spielen"]
+            - ["ihr", "wohnt", "spielt"]
+            - ["sie / Sie", "wohnen", "spielen"]
+      - form: Numbers from 20 to 100
+        note: "Say the small number first: einundzwanzig is literally 'one-and-twenty'."
+        table:
+          headers: ["Zahl", "Wort"]
+          rows:
+            - ["20", "zwanzig"]
+            - ["21", "einundzwanzig"]
+            - ["30", "dreißig"]
+            - ["40", "vierzig"]
+            - ["50", "fünfzig"]
+            - ["60", "sechzig"]
+            - ["70", "siebzig"]
+            - ["80", "achtzig"]
+            - ["100", "hundert"]
+
+  - title: Possessives and word order
+    intro: To say whose relative it is, use a possessive. And in a German statement the verb always comes second.
+    items:
+      - form: "Possessives (nominative): mein, dein, sein, ihr, unser"
+        note: Add -e before a die-word — mein Vater, but meine Mutter. The family word tells you der/die/das.
+        table:
+          headers: ["", "der Vater", "die Mutter", "das Kind"]
+          rows:
+            - ["ich →", "mein Vater", "meine Mutter", "mein Kind"]
+            - ["du →", "dein Vater", "deine Mutter", "dein Kind"]
+            - ["er →", "sein Vater", "seine Mutter", "sein Kind"]
+            - ["sie →", "ihr Vater", "ihre Mutter", "ihr Kind"]
+            - ["wir →", "unser Vater", "unsere Mutter", "unser Kind"]
+      - form: The verb is the second element
+        note: The subject can be several words, but the verb still comes right after it — never at the end.
+        table:
+          headers: ["Position 1", "Position 2 (Verb)", "Rest"]
+          rows:
+            - ["Ich", "habe", "zwei Brüder."]
+            - ["Mein Vater", "heißt", "Thomas."]
+            - ["Meine Eltern", "wohnen", "in Berlin."]
+            - ["Meine kleine Schwester", "ist", "acht Jahre alt."]
+
+watchouts:
+  - title: haben changes in du and er
+    bad: Du habe einen Bruder.
+    good: Du hast einen Bruder.
+    note: "haben is irregular: ich habe, du hast, er hat."
+  - title: meine before a die-word
+    bad: Das ist mein Mutter.
+    good: Das ist meine Mutter.
+    note: "die-words take meine: meine Mutter, but mein Vater (der)."
+  - title: The verb stays in second position
+    bad: Meine Familie in Köln wohnt.
+    good: Meine Familie wohnt in Köln.
+    note: In a main clause the verb comes second, not at the end.
+  - title: Eltern is already plural
+    bad: Meine Eltern wohnt in Berlin.
+    good: Meine Eltern wohnen in Berlin.
+    note: Eltern, Großeltern and Geschwister are always plural — use the sie/wir form.
+
+cloze_cards:
+  - text: "Ich {{c1::habe}} zwei Geschwister."
+    hint: haben
+    rule: "ich + haben = habe."
+  - text: "Mein Bruder {{c1::heißt}} Tom."
+    hint: heißen
+    rule: "er (mein Bruder) + heißen = heißt."
+  - text: "{{c1::Meine}} Mutter kommt aus Spanien."
+    hint: mein
+    rule: "die Mutter is a die-word, so the possessive takes -e: meine."
+  - text: "Wir {{c1::haben}} ein Baby."
+    hint: haben
+    rule: "wir + haben = haben."
+  - text: "Meine Eltern {{c1::wohnen}} in Berlin."
+    hint: wohnen
+    rule: "Eltern is plural (sie), so wohnen."
+  - text: "Meine Oma {{c1::lebt}} in Italien."
+    hint: leben
+    rule: "er/sie + leben = lebt (stem + -t)."

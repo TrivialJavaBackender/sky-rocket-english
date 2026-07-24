@@ -1,0 +1,30 @@
+# Module 01 · Hallo! Ich bin … — the first module of the course.
+# Scaffolding (goals, standfirst) is English; the module title stays German
+# (courses/de-a1/PLAN.md §5). grammar_points repeat the module card's opis (4).
+slug: m01
+title: Hallo! Ich bin …
+standfirst: The verb sein, pronouns and W-questions · 20 words · introduce yourself and spell your name.
+goals:
+  - text: Use sein in all persons to say who you are and where you are from
+    achieved_by: workout
+  - text: Ask and answer W-questions with wie, wer, woher and wo
+    achieved_by: workout
+  - text: Learn 20 words to introduce yourself, spell a name and count to 20
+    achieved_by: input
+  - text: Fill in a registration form and write a few sentences about yourself
+    achieved_by: output
+grammar_points:
+  - The alphabet and pronunciation (ä ö ü ß; sch, ch, ei, ie, eu/äu; capital nouns)
+  - The verb sein in all persons
+  - Personal pronouns in the nominative
+  - W-questions with wie, wer, woher and wo
+texts:
+  - kind: main
+    title: Das bin ich
+    word_count: 103
+  - kind: extra
+    title: Wie heißt du?
+    word_count: 64
+production:
+  mode: writing
+  genre: registration form and a short self-introduction

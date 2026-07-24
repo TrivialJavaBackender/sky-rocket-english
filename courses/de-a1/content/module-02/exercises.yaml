@@ -1,0 +1,489 @@
+# Module 02 · 46 core tasks + 16 review. Distribution (PLAN.md §6):
+# 8 mc_cloze · 8 open_cloze · 6 word_formation · 2 key_word_transformation ·
+# 10 grammar_drill · 4 error_correction · 4 collocation_match · 4 reading_comprehension.
+#
+# Spiral revision of module 1 (marked "SPIRAL M1"): open_cloze 3 (W-question) and
+# 8 (sein), grammar_drill 8 (W-question). Possessives are tested on family nouns
+# whose gender the vocab supplies (der Vater → mein, die Mutter → meine), so each
+# item is a single operation — der/die/das is not a system until module 3.
+# Explanations English (§5); frames and answers German.
+core:
+  # ───────────────────────── Multiple Choice ─────────────────────────
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Ich "
+      post: " zwei Brüder."
+      options: [habe, hast, hat, haben]
+      answer: 0
+    explanation: "ich + haben = habe."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: ""
+      post: " Vater heißt Thomas."
+      options: [meine, meinen, mein, meinem]
+      answer: 2
+    explanation: "der Vater is a der-word, so the possessive has no ending: mein Vater."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Meine Mutter "
+      post: " aus Spanien."
+      options: [komme, kommt, kommst, kommen]
+      answer: 1
+    explanation: "Meine Mutter (sie) + kommen = kommt."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Wir "
+      post: " ein Baby."
+      options: [habe, hast, hat, haben]
+      answer: 3
+    explanation: "wir + haben = haben."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: ""
+      post: " Schwester ist zehn."
+      options: [mein, meinen, meine, meinem]
+      answer: 2
+    explanation: "die Schwester is a die-word, so the possessive takes -e: meine Schwester."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Meine Eltern "
+      post: " in Berlin."
+      options: [wohnen, wohnt, wohnst, wohne]
+      answer: 0
+    explanation: "Eltern is plural (sie) → wohnen."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Du "
+      post: " eine Schwester."
+      options: [habe, hat, haben, hast]
+      answer: 3
+    explanation: "du + haben = hast."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Mein Bruder "
+      post: " Leon."
+      options: [heiße, heißt, heißen, heißest]
+      answer: 1
+    explanation: "Mein Bruder (er) + heißen = heißt."
+
+  # ───────────────────────── Lückentext (open_cloze) ─────────────────────────
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Ich "
+      post: " zwei Geschwister."
+      answers: [habe]
+      answer_shown: habe
+    explanation: "ich + haben = habe."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Das ist meine Familie. "
+      post: " Vater arbeitet in Köln."
+      hint: mein
+      answers: [Mein]
+      answer_shown: Mein
+    explanation: "It is my family, and der Vater is a der-word → Mein (no ending)."
+  # SPIRAL M1 — W-question from module 1
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: ""
+      post: " heißt deine Mutter?"
+      answers: [Wie]
+      answer_shown: Wie
+    explanation: "Wie heißt …? asks for a name (revision of module 1)."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Meine Schwester "
+      post: " in Wien."
+      hint: wohnen
+      answers: [wohnt]
+      answer_shown: wohnt
+    explanation: "Meine Schwester (sie) + wohnen = wohnt. The hint decides between wohnt and ist."
+  - type: open_cloze
+    group: reading
+    content:
+      pre: "Meine Großeltern "
+      post: " in München."
+      hint: wohnen
+      answers: [wohnen]
+      answer_shown: wohnen
+    explanation: "Großeltern is plural (sie) → wohnen."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Du "
+      post: " zwei Kinder."
+      answers: [hast]
+      answer_shown: hast
+    explanation: "du + haben = hast."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Tom hat eine Mutter. Das ist "
+      post: " Mutter."
+      hint: sein
+      answers: [seine]
+      answer_shown: seine
+    explanation: "It is Tom's mother (er → sein), and die Mutter takes -e → seine."
+  # SPIRAL M1 — sein from module 1
+  - type: open_cloze
+    group: reading
+    content:
+      pre: ""
+      post: " ist das? — Das ist mein Opa."
+      answers: [Wer]
+      answer_shown: Wer
+    explanation: "The answer names a person → Wer ist das? (revision of module 1)."
+
+  # ───────────────────────── Wortbildung (infinitive → person form) ─────────────────────────
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Mein Vater "
+      post: " in Berlin."
+      prompt: "wohnen (er)"
+      answers: [wohnt]
+      answer_shown: wohnt
+    explanation: "er (mein Vater): wohnen → wohnt."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Mein Bruder "
+      post: " Gitarre."
+      prompt: "spielen (er)"
+      answers: [spielt]
+      answer_shown: spielt
+    explanation: "er: spielen → spielt."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Ich "
+      post: " in Hamburg."
+      prompt: "leben (ich)"
+      answers: [lebe]
+      answer_shown: lebe
+    explanation: "ich: leben → lebe."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Du "
+      post: " aus Österreich."
+      prompt: "kommen (du)"
+      answers: [kommst]
+      answer_shown: kommst
+    explanation: "du: kommen → kommst."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Meine Schwester "
+      post: " Deutsch."
+      prompt: "lernen (sie)"
+      answers: [lernt]
+      answer_shown: lernt
+    explanation: "sie (meine Schwester): lernen → lernt."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Ihr "
+      post: " in Köln."
+      prompt: "wohnen (ihr)"
+      answers: [wohnt]
+      answer_shown: wohnt
+    explanation: "ihr: wohnen → wohnt."
+
+  # ───────────────────────── Umformung (key_word_transformation) ─────────────────────────
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: Ich habe zwei Brüder.
+      key: WIR
+      pre: ""
+      post: " zwei Brüder."
+      answers: [haben]
+      hint: 1 Wort
+      answer_shown: haben
+    explanation: "ich → wir: habe → haben. Wir haben zwei Brüder."
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: Mein Vater kommt aus Wien.
+      key: ELTERN
+      pre: "Meine Eltern "
+      post: " aus Wien."
+      answers: [kommen]
+      hint: 1 Wort
+      answer_shown: kommen
+    explanation: "Singular → plural: kommt → kommen. Meine Eltern kommen aus Wien."
+
+  # ───────────────────────── Grammatik-Drill ─────────────────────────
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Ich "
+      post: " eine Schwester."
+      prompt: haben
+      options: [hast, habe, hat, haben]
+      answer: 1
+    explanation: "ich + haben = habe."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: ""
+      post: " Mutter heißt Eva."
+      prompt: Possessiv
+      options: [mein, meinen, meinem, meine]
+      answer: 3
+    explanation: "die Mutter → meine (die-word takes -e)."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Wir "
+      post: " zwei Kinder."
+      prompt: haben
+      options: [haben, habe, hast, hat]
+      answer: 0
+    explanation: "wir + haben = haben."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Mein Vater "
+      post: " in Berlin."
+      prompt: wohnen
+      options: [wohne, wohnst, wohnt, wohnen]
+      answer: 2
+    explanation: "er (mein Vater) → wohnt."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: ""
+      post: " Bruder ist zwanzig."
+      prompt: Possessiv
+      options: [meine, mein, meinen, meinem]
+      answer: 1
+    explanation: "der Bruder → mein (der-word, no ending)."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Du "
+      post: " ein Baby."
+      prompt: haben
+      options: [habe, hat, haben, hast]
+      answer: 3
+    explanation: "du + haben = hast."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Meine Geschwister "
+      post: " in Köln."
+      prompt: leben
+      options: [lebe, lebst, leben, lebt]
+      answer: 2
+    explanation: "Geschwister is plural (sie) → leben."
+  # SPIRAL M1 — W-question from module 1
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: ""
+      post: " heißt du?"
+      prompt: W-Frage
+      options: [Wie, Wer, Wo, Woher]
+      answer: 0
+    explanation: "Wie heißt du? (revision of module 1)."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Ihr "
+      post: " eine große Familie."
+      prompt: haben
+      options: [habe, hast, hat, habt]
+      answer: 3
+    explanation: "ihr + haben = habt."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Meine Tante "
+      post: " in Wien."
+      prompt: leben
+      options: [lebe, lebt, lebst, leben]
+      answer: 1
+    explanation: "sie (meine Tante) → lebt."
+
+  # ───────────────────────── Fehlerkorrektur ─────────────────────────
+  - type: error_correction
+    group: grammar
+    content: { words: [Du, habe, einen, "Bruder."], wrong: 1, correction: "habe → hast" }
+    explanation: "du takes hast: Du hast einen Bruder."
+  - type: error_correction
+    group: grammar
+    content: { words: [Das, ist, mein, "Mutter."], wrong: 2, correction: "mein → meine" }
+    explanation: "die Mutter is a die-word: meine Mutter."
+  - type: error_correction
+    group: grammar
+    content: { words: [Meine, Eltern, "wohnt", in, "Berlin."], wrong: 2, correction: "wohnt → wohnen" }
+    explanation: "Eltern is plural (sie): Meine Eltern wohnen."
+  - type: error_correction
+    group: grammar
+    content: { words: [Ich, habe, zwanzig, Jahre, "alt."], wrong: 1, correction: "habe → bin" }
+    explanation: "For age use sein, not haben: Ich bin zwanzig Jahre alt."
+
+  # ───────────────────────── Zuordnung (collocation_match) ─────────────────────────
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [die Eltern, die Großeltern, die Geschwister, die Kinder]
+      right: [Sohn und Tochter, Vater und Mutter, Oma und Opa, Bruder und Schwester]
+      pairs: { 0: 1, 1: 2, 2: 3, 3: 0 }
+    explanation: "die Eltern = Vater und Mutter; die Großeltern = Oma und Opa; die Geschwister = Bruder und Schwester; die Kinder = Sohn und Tochter."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [alt, der Vater, der Bruder, der Sohn]
+      right: [die Tochter, jung, die Schwester, die Mutter]
+      pairs: { 0: 1, 1: 3, 2: 2, 3: 0 }
+    explanation: "Opposites and pairs: alt ↔ jung, Vater ↔ Mutter, Bruder ↔ Schwester, Sohn ↔ Tochter."
+  - type: collocation_match
+    group: grammar
+    content:
+      left: [ich, du, er, wir]
+      right: [haben, hat, habe, hast]
+      pairs: { 0: 2, 1: 3, 2: 1, 3: 0 }
+    explanation: "Conjugate haben: ich habe, du hast, er hat, wir haben."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [haben, wohnen, heißen, leben]
+      right: [in Berlin, zwei Kinder, Anna, gern hier]
+      pairs: { 0: 1, 1: 0, 2: 2, 3: 3 }
+    explanation: "zwei Kinder haben · in Berlin wohnen · Anna heißen · gern hier leben."
+
+  # ───────────────────────── Leseverstehen (passages from the main text) ─────────────────────────
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Mein Vater ist siebenundvierzig Jahre alt und arbeitet viel. Meine Mutter ist zweiundvierzig. Sie kommt aus Österreich."
+      q: Woher kommt Jonas' Mutter?
+      options:
+        - Aus Deutschland
+        - Aus der Schweiz
+        - Aus Österreich
+        - Aus Italien
+      answer: 2
+    explanation: "The text says: Sie (die Mutter) kommt aus Österreich."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Mein Bruder Leon ist neunzehn und studiert in Berlin. Meine kleine Schwester Mia ist erst acht Jahre alt."
+      q: Wie alt ist Leon?
+      options:
+        - neunzehn
+        - acht
+        - zwölf
+        - zwanzig
+      answer: 0
+    explanation: "The text says: Mein Bruder Leon ist neunzehn."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Meine Oma und mein Opa wohnen in München. Oma ist schon vierundsiebzig, aber sie ist noch sehr aktiv."
+      q: Wo wohnen die Großeltern?
+      options:
+        - In Hamburg
+        - In München
+        - In Berlin
+        - In Wien
+      answer: 1
+    explanation: "The text says: Meine Oma und mein Opa wohnen in München."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Ich heiße Jonas und das ist meine Familie. Wir sind fünf Personen und wohnen in Hamburg."
+      q: Wie viele Personen sind in Jonas' Familie?
+      options:
+        - drei
+        - vier
+        - sechs
+        - fünf
+      answer: 3
+    explanation: "The text says: Wir sind fünf Personen."
+
+review_pool:
+  - type: mc_cloze
+    group: grammar
+    content: { pre: "Er ", post: " zwei Kinder.", options: [habe, hast, hat, haben], answer: 2 }
+    explanation: "er + haben = hat."
+  - type: mc_cloze
+    group: grammar
+    content: { pre: "", post: " Vater kommt aus Wien.", options: [Meine, Deine, Mein, Meins], answer: 2 }
+    explanation: "der Vater → Mein (no ending)."
+  - type: mc_cloze
+    group: grammar
+    content: { pre: "Meine Schwester ", post: " in Köln.", options: [wohne, wohnst, wohnt, wohnen], answer: 2 }
+    explanation: "sie → wohnt."
+  - type: mc_cloze
+    group: grammar
+    content: { pre: "Wir ", post: " eine große Familie.", options: [habt, hat, haben, hast], answer: 2 }
+    explanation: "wir + haben = haben."
+  # SPIRAL M1 — W-question
+  - type: mc_cloze
+    group: grammar
+    content: { pre: "", post: " kommst du?", options: [Wie, Woher, Wo, Wer], answer: 1 }
+    explanation: "Woher kommst du? (module 1)."
+  - type: open_cloze
+    group: grammar
+    content: { pre: "Ich ", post: " zwei Brüder.", answers: [habe], answer_shown: habe }
+    explanation: "ich + haben = habe."
+  - type: open_cloze
+    group: grammar
+    content: { pre: "Das ist meine Familie. ", post: " Mutter heißt Eva.", hint: mein, answers: [Meine], answer_shown: Meine }
+    explanation: "die Mutter → Meine (it is my family)."
+  - type: open_cloze
+    group: grammar
+    content: { pre: "Meine Eltern ", post: " in Berlin.", hint: wohnen, answers: [wohnen], answer_shown: wohnen }
+    explanation: "Eltern is plural → wohnen."
+  - type: open_cloze
+    group: grammar
+    content: { pre: "Du ", post: " ein Baby.", answers: [hast], answer_shown: hast }
+    explanation: "du + haben = hast."
+  # SPIRAL M1 — sein
+  - type: open_cloze
+    group: reading
+    content: { pre: "", post: " ist das? — Das ist meine Oma.", answers: [Wer], answer_shown: Wer }
+    explanation: "Wer ist das? (module 1)."
+  - type: grammar_drill
+    group: grammar
+    content: { pre: "Ihr ", post: " zwei Kinder.", prompt: haben, options: [habe, hast, habt, haben], answer: 2 }
+    explanation: "ihr + haben = habt."
+  - type: grammar_drill
+    group: grammar
+    content: { pre: "", post: " Schwester ist jung.", prompt: Possessiv, options: [Mein, Meine, Meinen, Meinem], answer: 1 }
+    explanation: "die Schwester → meine."
+  - type: grammar_drill
+    group: grammar
+    content: { pre: "Mein Opa ", post: " in Wien.", prompt: leben, options: [lebe, lebst, lebt, leben], answer: 2 }
+    explanation: "er → lebt."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [der Vater, der Bruder, der Sohn, der Opa]
+      right: [die Oma, die Tochter, die Mutter, die Schwester]
+      pairs: { 0: 2, 1: 3, 2: 1, 3: 0 }
+    explanation: "Male ↔ female: Vater–Mutter, Bruder–Schwester, Sohn–Tochter, Opa–Oma."
+  - type: word_formation
+    group: vocab
+    content: { pre: "Meine Tante ", post: " in Hamburg.", prompt: "wohnen (sie)", answers: [wohnt], answer_shown: wohnt }
+    explanation: "sie → wohnt."
+  - type: error_correction
+    group: grammar
+    content: { words: [Meine, Mutter, "habe", einen, "Bruder."], wrong: 2, correction: "habe → hat" }
+    explanation: "Meine Mutter (sie) → hat."

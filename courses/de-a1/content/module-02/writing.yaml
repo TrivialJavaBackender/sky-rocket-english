@@ -1,0 +1,28 @@
+# Module 02 · production. Scaffolding (prompt, checklist) English; model answer
+# German (§5). The model stays inside what module 2 can produce: haben, the
+# regular present, possessives, sein and numbers. It avoids visible accusative
+# (eine Schwester, not einen Bruder) — the accusative is module 6.
+mode: writing
+genre: a short text about your family
+word_target: [25, 35]
+prompt: |
+  Write a few sentences about your own family for a class blog. 25–35 words.
+
+  Say something about each point:
+  • how many people are in your family
+  • your parents (names and ages)
+  • your brothers, sisters or other relatives
+  • where they live
+
+  Use haben, the possessives mein / meine, and at least two ages
+  with … Jahre alt.
+model_answer: |
+  Das ist meine Familie. Meine Eltern heißen Anna und Paul. Mein Vater
+  ist fünfzig Jahre alt und meine Mutter ist achtundvierzig. Ich habe
+  eine Schwester. Sie heißt Mia und ist zwanzig.
+checklist:
+  - You say who is in your family (parents, brothers or sisters)
+  - You use the possessives mein and meine (mein Vater, meine Mutter)
+  - You give at least two ages with … Jahre alt
+  - The verb comes second in every sentence
+  - The sentences are 25–35 words long

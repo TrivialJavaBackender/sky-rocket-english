@@ -1,0 +1,32 @@
+# Module 02 · Meine Familie. Scaffolding (goals, standfirst) English, title German
+# (§5). grammar_points repeat the module card's opis (4). Numbers 20–100 are the
+# lexical extension of this module (PLAN.md §4): they live in a theory reference
+# table and in the ages used across the text and tasks, not as separate vocab
+# entries — the 24 entries are the family words.
+slug: m02
+title: Meine Familie
+standfirst: haben, the present tense and possessives · 24 words · talk about your family.
+goals:
+  - text: Use haben and the regular present tense for all persons
+    achieved_by: workout
+  - text: Say whose relative it is with mein, dein, sein, ihr and unser
+    achieved_by: workout
+  - text: Learn 24 family words and the numbers from 20 to 100
+    achieved_by: input
+  - text: Write a few sentences about your own family
+    achieved_by: output
+grammar_points:
+  - The verb haben in all persons
+  - Regular verbs in the present tense (stem + -e/-st/-t/-en)
+  - Possessives in the nominative (mein, dein, sein, ihr, unser)
+  - The verb in second position (statement word order)
+texts:
+  - kind: main
+    title: Meine Familie
+    word_count: 119
+  - kind: extra
+    title: Familienfotos
+    word_count: 64
+production:
+  mode: writing
+  genre: a short text about your family

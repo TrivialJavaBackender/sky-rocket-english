@@ -81,7 +81,7 @@ export const MAX_SENTENCE_CHARS = 400;
  * a flip must be followed by `pnpm audio` + `pnpm sync`, or the ▶ buttons on
  * texts simply stop appearing (D15's fail-safe).
  */
-export const READING_CLIP_GRANULARITY: 'paragraph' | 'sentence' = 'paragraph';
+export const READING_CLIP_GRANULARITY: 'paragraph' | 'sentence' = 'sentence';
 
 /** The clip texts one flattened paragraph contributes, per READING_CLIP_GRANULARITY. Always an array, so callers keep the same per-paragraph queue shape either way. */
 export function readingClipTexts(paragraphText: string): string[] {

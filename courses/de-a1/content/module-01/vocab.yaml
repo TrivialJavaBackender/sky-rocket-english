@@ -1,0 +1,185 @@
+# Module 01 · 20 words to introduce yourself, name countries and languages, and
+# count to twenty. First module, so 20 entries (PLAN.md §6). Scaffolding rule
+# (§5): term/use_cases/collocations/register in German, definition in English
+# with a synonym or opposite. Verbs carry their present-tense forms in register —
+# those forms are the ones the learner may produce this module.
+entries:
+  - term: heißen
+    tag: Verb
+    definition: to be called; the verb for saying your name
+    use_cases:
+      - Ich heiße Anna.
+      - Wie heißt du?
+    collocations: Wie heißt du? · Ich heiße … · er/sie heißt …
+    register: "ich heiße · du heißt · er/sie heißt · wir heißen"
+
+  - term: kommen
+    tag: Verb
+    definition: to come; here — to come from a place (kommen aus)
+    use_cases:
+      - Ich komme aus Spanien.
+      - Woher kommst du?
+    collocations: kommen aus + Land · Woher kommst du?
+    register: "ich komme · du kommst · er/sie kommt · wir kommen"
+
+  - term: wohnen
+    tag: Verb
+    definition: to live somewhere, to have your home there (wohnen in)
+    use_cases:
+      - Ich wohne in Berlin.
+      - Wo wohnst du?
+    collocations: wohnen in + Stadt · Wo wohnst du?
+    register: "ich wohne · du wohnst · er/sie wohnt · wir wohnen"
+
+  - term: buchstabieren
+    tag: Verb
+    definition: to spell; to say a word letter by letter
+    use_cases:
+      - Buchstabieren Sie bitte Ihren Namen.
+      - Wie buchstabiert man das?
+    collocations: den Namen buchstabieren · langsam buchstabieren
+    register: "ich buchstabiere · du buchstabierst · Sie buchstabieren"
+
+  - term: das Land
+    tag: Nomen
+    definition: a country, e.g. Germany or Spain. Opposite of a city
+    use_cases:
+      - Deutschland ist ein Land in Europa.
+      - Aus welchem Land kommst du?
+    collocations: ein Land in Europa · das Nachbarland
+    register: "Plural: die Länder"
+
+  - term: die Sprache
+    tag: Nomen
+    definition: a language, e.g. German or English
+    use_cases:
+      - Ich lerne die Sprache Deutsch.
+      - Deutsch ist eine schöne Sprache.
+    collocations: eine Sprache lernen · die Muttersprache
+    register: "Plural: die Sprachen"
+
+  - term: der Beruf
+    tag: Nomen
+    definition: a job, the work you do (e.g. teacher, doctor)
+    use_cases:
+      - Was sind Sie von Beruf?
+      - Ich bin Lehrer von Beruf.
+    collocations: von Beruf sein · der Traumberuf
+    register: "Plural: die Berufe"
+
+  - term: die Adresse
+    tag: Nomen
+    definition: an address; the street and number where you live
+    use_cases:
+      - Wie ist deine Adresse?
+      - Meine Adresse ist Bahnstraße 12.
+    collocations: die Adresse geben · die E-Mail-Adresse
+    register: "Plural: die Adressen"
+
+  - term: die Telefonnummer
+    tag: Nomen
+    definition: a phone number; the number people call you on
+    use_cases:
+      - Wie ist deine Telefonnummer?
+      - Meine Telefonnummer ist 0176 12 20.
+    collocations: die Telefonnummer geben · die Handynummer
+    register: "Plural: die Telefonnummern"
+
+  - term: verheiratet
+    tag: Adjektiv
+    definition: married; you have a husband or a wife. Opposite - ledig
+    use_cases:
+      - Ich bin verheiratet.
+      - Sind Sie verheiratet?
+    collocations: verheiratet sein · glücklich verheiratet
+    register: "Gegenteil: ledig"
+
+  - term: ledig
+    tag: Adjektiv
+    definition: single, not married. Opposite - verheiratet
+    use_cases:
+      - Ich bin ledig.
+      - Er ist noch ledig.
+    collocations: ledig sein
+    register: "Gegenteil: verheiratet"
+
+  - term: die Zahl
+    tag: Nomen
+    definition: a number, e.g. for counting from zero to twenty
+    use_cases:
+      - Null, eins, zwei, drei — das sind Zahlen.
+      - Welche Zahl ist das?
+    collocations: die Zahlen von null bis zwanzig
+    register: "0 null · 1 eins · 2 zwei · 3 drei · 4 vier · 5 fünf · 6 sechs · 7 sieben · 8 acht · 9 neun · 10 zehn · 11 elf · 12 zwölf · 13 dreizehn · 14 vierzehn · 15 fünfzehn · 16 sechzehn · 17 siebzehn · 18 achtzehn · 19 neunzehn · 20 zwanzig"
+
+  - term: Deutschland
+    tag: Land
+    definition: Germany; a country in the middle of Europe
+    use_cases:
+      - Ich komme aus Deutschland.
+      - Berlin liegt in Deutschland.
+    collocations: aus Deutschland kommen · in Deutschland wohnen
+    register: "Sprache: Deutsch"
+
+  - term: Österreich
+    tag: Land
+    definition: Austria; a country south of Germany
+    use_cases:
+      - Wien ist in Österreich.
+      - Sie kommt aus Österreich.
+    collocations: aus Österreich kommen
+    register: "Sprache: Deutsch"
+
+  - term: Frankreich
+    tag: Land
+    definition: France; a country west of Germany
+    use_cases:
+      - Paris ist in Frankreich.
+      - Er kommt aus Frankreich.
+    collocations: aus Frankreich kommen
+    register: "Sprache: Französisch"
+
+  - term: Spanien
+    tag: Land
+    definition: Spain; a country in the south of Europe
+    use_cases:
+      - Madrid liegt in Spanien.
+      - Wir kommen aus Spanien.
+    collocations: aus Spanien kommen
+    register: "Sprache: Spanisch"
+
+  - term: Deutsch
+    tag: Sprache
+    definition: German; the language of Germany and Austria
+    use_cases:
+      - Ich lerne Deutsch.
+      - Sprechen Sie Deutsch?
+    collocations: Deutsch lernen · Deutsch sprechen
+    register: "Land: Deutschland"
+
+  - term: Englisch
+    tag: Sprache
+    definition: English; a world language spoken in many countries
+    use_cases:
+      - Ich spreche Englisch und Deutsch.
+      - Englisch und Deutsch sind zwei Sprachen.
+    collocations: Englisch sprechen · Englisch lernen
+    register: "Land: England"
+
+  - term: Französisch
+    tag: Sprache
+    definition: French; the language of France
+    use_cases:
+      - Die Sprache in Frankreich ist Französisch.
+      - Ich lerne Französisch.
+    collocations: Französisch sprechen · Französisch lernen
+    register: "Land: Frankreich"
+
+  - term: Spanisch
+    tag: Sprache
+    definition: Spanish; the language of Spain and much of Latin America
+    use_cases:
+      - Die Sprache in Spanien ist Spanisch.
+      - Ich lerne Spanisch.
+    collocations: Spanisch sprechen · Spanisch lernen
+    register: "Land: Spanien"

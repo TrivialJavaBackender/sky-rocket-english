@@ -1,0 +1,44 @@
+# Module 01 · main text — a Steckbrief (personal profile). German body; glosses
+# have German term + example but English pos_label and definition (§5). A gloss
+# sits only on a word whose form in the sentence equals its dictionary form.
+kind: main
+kicker: STECKBRIEF
+title: Das bin ich
+meta: ≈ 2 min · dotted words have a note — tap to reveal
+word_count: 103
+body:
+  - - t: "Hallo! Ich heiße Elena Ruiz. Ich komme aus Spanien, aus Madrid. Ich wohne "
+    - g: jetzt
+    - t: " in Wien, in Österreich."
+  - - t: "Meine Adresse ist Bahnstraße 12. Meine Telefonnummer ist null eins sieben sechs, zwei drei drei. Ich bin neunzehn Jahre alt und ledig."
+  - - t: "Von Beruf bin ich Studentin. Ich lerne hier Deutsch. Deutsch ist "
+    - g: schwer
+    - t: ", aber schön."
+  - - t: "Ich spreche drei Sprachen: Spanisch, Englisch und "
+    - g: bisschen
+    - t: " Deutsch. Meine "
+    - g: muttersprache
+    - t: " ist Spanisch."
+  - - t: "Meine Freundin heißt Nina. Sie kommt aus Frankreich und wohnt auch in Wien. Sie ist auch Studentin."
+  - - t: "Und du? Wie heißt du? Woher kommst du? Und wo wohnst du? Schreib mir bitte eine Nachricht!"
+glosses:
+  - key: jetzt
+    term: jetzt
+    pos_label: adverb
+    definition: now, at this moment
+    example: Ich wohne jetzt in Wien.
+  - key: schwer
+    term: schwer
+    pos_label: adjective
+    definition: "difficult, not easy. Opposite: einfach"
+    example: Deutsch ist schwer, aber schön.
+  - key: bisschen
+    term: ein bisschen
+    pos_label: phrase
+    definition: a little, a small amount
+    example: Ich spreche ein bisschen Deutsch.
+  - key: muttersprache
+    term: Muttersprache
+    pos_label: noun
+    definition: mother tongue, the language you grew up with
+    example: Meine Muttersprache ist Spanisch.

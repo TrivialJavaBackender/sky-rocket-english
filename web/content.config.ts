@@ -13,4 +13,4 @@
  */
 
 /** Course roots, relative to the repo root. Each holds course.yaml + content/. */
-export const COURSE_ROOTS: string[] = ['courses/en-c1', 'courses/de-a2'];
+export const COURSE_ROOTS: string[] = ['courses/en-c1', 'courses/de-a2', 'courses/de-a1'];

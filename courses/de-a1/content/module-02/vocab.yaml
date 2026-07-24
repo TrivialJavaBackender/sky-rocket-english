@@ -1,0 +1,221 @@
+# Module 02 · 24 family words. Scaffolding rule (§5): term/use_cases/collocations/
+# register German, definition English with a synonym or opposite. Every noun
+# carries its article and plural in register — the article is what makes the
+# module-02 possessives (mein Vater vs meine Mutter) work before gender becomes a
+# system in module 3. Numbers 20–100 appear inside the ages of the use_cases.
+entries:
+  - term: die Familie
+    tag: Nomen
+    definition: a family; parents and children together
+    use_cases:
+      - Ich habe eine große Familie.
+      - Meine Familie wohnt in Köln.
+    collocations: die ganze Familie · eine große Familie
+    register: "Plural: die Familien"
+
+  - term: die Eltern
+    tag: Nomen
+    definition: parents; your mother and father. A plural word
+    use_cases:
+      - Meine Eltern wohnen in Berlin.
+      - Wie alt sind deine Eltern?
+    collocations: meine Eltern · die Eltern besuchen
+    register: "Nur Plural (die Eltern)."
+
+  - term: der Vater
+    tag: Nomen
+    definition: father; your male parent
+    use_cases:
+      - Mein Vater heißt Thomas.
+      - Ihr Vater arbeitet in Berlin.
+    collocations: mein Vater · der Vater von Anna
+    register: "Plural: die Väter"
+
+  - term: die Mutter
+    tag: Nomen
+    definition: mother; your female parent
+    use_cases:
+      - Meine Mutter kommt aus Spanien.
+      - Seine Mutter heißt Eva.
+    collocations: meine Mutter · die Mutter von Tom
+    register: "Plural: die Mütter"
+
+  - term: der Bruder
+    tag: Nomen
+    definition: brother; a boy or man with the same parents
+    use_cases:
+      - Mein Bruder ist zwanzig Jahre alt.
+      - Hast du einen Bruder?
+    collocations: mein großer Bruder · der kleine Bruder
+    register: "Plural: die Brüder"
+
+  - term: die Schwester
+    tag: Nomen
+    definition: sister; a girl or woman with the same parents
+    use_cases:
+      - Meine Schwester heißt Lena.
+      - Ich habe zwei Schwestern.
+    collocations: meine große Schwester
+    register: "Plural: die Schwestern"
+
+  - term: die Großeltern
+    tag: Nomen
+    definition: grandparents; your grandmothers and grandfathers. A plural word
+    use_cases:
+      - Meine Großeltern leben in Italien.
+      - Wir besuchen die Großeltern oft.
+    collocations: die Großeltern besuchen
+    register: "Nur Plural (die Großeltern)."
+
+  - term: das Kind
+    tag: Nomen
+    definition: child; a young person; also a son or daughter
+    use_cases:
+      - Sie haben drei Kinder.
+      - Das Kind heißt Max.
+    collocations: ein kleines Kind · zwei Kinder haben
+    register: "Plural: die Kinder"
+
+  - term: der Sohn
+    tag: Nomen
+    definition: son; a male child
+    use_cases:
+      - Mein Sohn ist noch klein.
+      - Ihr Sohn studiert in Wien.
+    collocations: der älteste Sohn
+    register: "Plural: die Söhne"
+
+  - term: die Tochter
+    tag: Nomen
+    definition: daughter; a female child
+    use_cases:
+      - Meine Tochter heißt Sophie.
+      - Sie haben eine Tochter und einen Sohn.
+    collocations: die kleine Tochter
+    register: "Plural: die Töchter"
+
+  - term: das Alter
+    tag: Nomen
+    definition: age; how many years old someone is
+    use_cases:
+      - Im Alter von dreißig Jahren.
+      - Alter und Beruf, bitte.
+    collocations: das Alter angeben
+    register: "Meist Singular."
+
+  - term: alt
+    tag: Adjektiv
+    definition: old; used for age (… Jahre alt). Opposite - jung
+    use_cases:
+      - Mein Vater ist fünfzig Jahre alt.
+      - Wie alt bist du?
+    collocations: … Jahre alt sein · Wie alt bist du?
+    register: "Gegenteil: jung"
+
+  - term: der Mann
+    tag: Nomen
+    definition: man; also husband
+    use_cases:
+      - Der Mann von Anna heißt Peter.
+      - Mein Mann arbeitet in Berlin.
+    collocations: mein Mann · ein junger Mann
+    register: "Plural: die Männer"
+
+  - term: die Frau
+    tag: Nomen
+    definition: woman; also wife. Also a title before a name (Frau Meyer)
+    use_cases:
+      - Die Frau von Tom heißt Julia.
+      - Frau Schmidt ist meine Lehrerin.
+    collocations: meine Frau · eine junge Frau
+    register: "Plural: die Frauen"
+
+  - term: die Oma
+    tag: Nomen
+    definition: granny, grandma (an informal word for Großmutter)
+    use_cases:
+      - Meine Oma ist achtundsiebzig Jahre alt.
+      - Ich besuche meine Oma oft.
+    collocations: meine liebe Oma
+    register: "Plural: die Omas"
+
+  - term: der Opa
+    tag: Nomen
+    definition: grandad, grandpa (an informal word for Großvater)
+    use_cases:
+      - Mein Opa kommt aus Österreich.
+      - Opa und Oma leben zusammen.
+    collocations: mein Opa
+    register: "Plural: die Opas"
+
+  - term: der Onkel
+    tag: Nomen
+    definition: uncle; the brother of your mother or father
+    use_cases:
+      - Mein Onkel wohnt in Hamburg.
+      - Onkel Ben ist sehr nett.
+    collocations: mein Onkel
+    register: "Plural: die Onkel"
+
+  - term: die Tante
+    tag: Nomen
+    definition: aunt; the sister of your mother or father
+    use_cases:
+      - Meine Tante heißt Rosa.
+      - Meine Tante hat zwei Kinder.
+    collocations: meine Tante
+    register: "Plural: die Tanten"
+
+  - term: die Geschwister
+    tag: Nomen
+    definition: siblings; brothers and sisters together. A plural word
+    use_cases:
+      - Ich habe drei Geschwister.
+      - Meine Geschwister wohnen in Köln.
+    collocations: Geschwister haben
+    register: "Nur Plural (die Geschwister)."
+
+  - term: der Cousin
+    tag: Nomen
+    definition: cousin (male); the son of your uncle or aunt
+    use_cases:
+      - Mein Cousin lebt in Frankreich.
+      - Mein Cousin heißt Luca.
+    collocations: mein Cousin
+    register: "Plural: die Cousins. Sprich: „Kusäng“."
+
+  - term: die Cousine
+    tag: Nomen
+    definition: cousin (female); the daughter of your uncle or aunt
+    use_cases:
+      - Meine Cousine ist zwanzig.
+      - Meine Cousine studiert Musik.
+    collocations: meine Cousine
+    register: "Plural: die Cousinen"
+
+  - term: das Baby
+    tag: Nomen
+    definition: baby; a very young child
+    use_cases:
+      - Meine Schwester hat ein Baby.
+      - Das Baby ist erst ein Jahr alt.
+    collocations: ein kleines Baby
+    register: "Plural: die Babys"
+
+  - term: jung
+    tag: Adjektiv
+    definition: young; not old. Opposite - alt
+    use_cases:
+      - Meine Eltern sind noch jung.
+      - Ein junger Mann wohnt hier.
+    collocations: ein junger Mann · jung und alt
+    register: "Gegenteil: alt"
+
+  - term: leben
+    tag: Verb
+    definition: to live, to be alive; also to live in a place (like wohnen)
+    use_cases:
+      - Meine Großeltern leben in Italien.
+      - Wir leben gern hier.
+    collocations: in … leben · noch leben
+    register: "ich lebe · du lebst · er/sie lebt · wir leben"

@@ -16,7 +16,7 @@ slug: de-a2
 language: de
 name: Deutsch
 level_label: A1 → A2
-position: 2
+position: 3
 
 blocks:
   # Outside the 54 h and outside the gate (db/migrations/0008): the course

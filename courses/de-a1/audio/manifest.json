@@ -1,0 +1,2977 @@
+{
+  "schema_version": 1,
+  "lang": "de",
+  "engine": "chatterbox",
+  "voice": "chatterbox-mtl-de-a9b8033285",
+  "clips": [
+    {
+      "text": "Welche Zahl ist das?",
+      "text_hash": "0008457d7a9149628ff2bd0f7f6f2d771d0726b3ecc4029f7d3ae38a2659722d",
+      "refs": [
+        "m01|vocab|12|use|1"
+      ],
+      "audio": {
+        "normal": {
+          "key": "e40b29bc0f2eeb5efea50403147bd4a321797d37b75741e0bef00889075369bb",
+          "path": "/audio/de/e4/e40b29bc0f2eeb5efea50403147bd4a321797d37b75741e0bef00889075369bb.opus",
+          "duration_ms": 1512,
+          "bytes": 4837
+        }
+      }
+    },
+    {
+      "text": "der Mann",
+      "text_hash": "05d5f842296e77f3931b926f78d6b79cf90998f695f446a43c7ff3c30d3cd0a8",
+      "refs": [
+        "m02|vocab|13|term"
+      ],
+      "audio": {
+        "normal": {
+          "key": "f24e138a047fab1a0fa21796af470c82ddc5daf9fc01399fe1f565150a9d0836",
+          "path": "/audio/de/f2/f24e138a047fab1a0fa21796af470c82ddc5daf9fc01399fe1f565150a9d0836.opus",
+          "duration_ms": 986,
+          "bytes": 3187
+        }
+      }
+    },
+    {
+      "text": "Ihr Sohn studiert in Wien.",
+      "text_hash": "0a85fee4be97e70690c372855e962d62e6a44504952b7ef56c1b2191f62f21d0",
+      "refs": [
+        "m02|vocab|9|use|1"
+      ],
+      "audio": {
+        "normal": {
+          "key": "73712acdad21d0d33cc4d8773ac05e934fd962113a64718693b971f0759968c5",
+          "path": "/audio/de/73/73712acdad21d0d33cc4d8773ac05e934fd962113a64718693b971f0759968c5.opus",
+          "duration_ms": 2039,
+          "bytes": 6445
+        }
+      }
+    },
+    {
+      "text": "Woher kommst du, Lukas?",
+      "text_hash": "0b3e0af5645c0ab892b37846db66719186508abbd0b8b370e09d014800b64815",
+      "refs": [
+        "m01|text-extra|p3|c2"
+      ],
+      "audio": {
+        "normal": {
+          "key": "6e6349d3abe5548975d8583ffe36ab5fc328fe709547db1d8c3505d59235e815",
+          "path": "/audio/de/6e/6e6349d3abe5548975d8583ffe36ab5fc328fe709547db1d8c3505d59235e815.opus",
+          "duration_ms": 2282,
+          "bytes": 7106
+        }
+      }
+    },
+    {
+      "text": "Sie haben zwei Kinder.",
+      "text_hash": "0babba1efa7475e95a10dfcc4f4a9ca884353ca4789019e9ea92844a452b7a80",
+      "refs": [
+        "m02|text-extra|p2|c3"
+      ],
+      "audio": {
+        "normal": {
+          "key": "3d5bfdb8420b1926adf930d437694a58f3ae2a7149937b0bbbb58078a12e93f8",
+          "path": "/audio/de/3d/3d5bfdb8420b1926adf930d437694a58f3ae2a7149937b0bbbb58078a12e93f8.opus",
+          "duration_ms": 2170,
+          "bytes": 6448
+        }
+      }
+    },
+    {
+      "text": "Ich bin neunzehn Jahre alt und ledig.",
+      "text_hash": "0bb23a8a39216351f89a5f9e45b41561d24fcc920700c54171b35cff62b0595e",
+      "refs": [
+        "m01|text-main|p2|c2"
+      ],
+      "audio": {
+        "normal": {
+          "key": "e14bb52d1845546a72cdc0cde4e0fa47887e032728eaacdba0bf2ed4b7d51854",
+          "path": "/audio/de/e1/e14bb52d1845546a72cdc0cde4e0fa47887e032728eaacdba0bf2ed4b7d51854.opus",
+          "duration_ms": 2414,
+          "bytes": 7605
+        }
+      }
+    },
+    {
+      "text": "Ein junger Mann wohnt hier.",
+      "text_hash": "0c850aadac1037c66b887c36850319030beeef9dc32951ad1d1f682255642ff4",
+      "refs": [
+        "m02|vocab|23|use|1"
+      ],
+      "audio": {
+        "normal": {
+          "key": "55d8f186494ec75c1b28a12b15336bc7be597608c37956f76e2a4cde618ec30c",
+          "path": "/audio/de/55/55d8f186494ec75c1b28a12b15336bc7be597608c37956f76e2a4cde618ec30c.opus",
+          "duration_ms": 1825,
+          "bytes": 5847
+        }
+      }
+    },
+    {
+      "text": "Du bist Student.",
+      "text_hash": "13688453fdb7bc1b2fbf85d419e132bfa912c17f12ff3d821f0d0eb024bddf87",
+      "refs": [
+        "m01|theory|watchout|2|good"
+      ],
+      "audio": {
+        "normal": {
+          "key": "3296e734cd183be1ab98216c541e5d6aa1d6698334291afa700bbcef53647dcb",
+          "path": "/audio/de/32/3296e734cd183be1ab98216c541e5d6aa1d6698334291afa700bbcef53647dcb.opus",
+          "duration_ms": 1304,
+          "bytes": 4196
+        }
+      }
+    },
+    {
+      "text": "Mein Cousin lebt in Frankreich.",
+      "text_hash": "155766cfdb3dd6b3c154f18f727ddf51fec318c3714cb53e99e572e2be790505",
+      "refs": [
+        "m02|vocab|20|use|0"
+      ],
+      "audio": {
+        "normal": {
+          "key": "8e0a57b93dc4e015b63041cfce54a91b88ad6a3f1167093b2ebec37aca35b3b4",
+          "path": "/audio/de/8e/8e0a57b93dc4e015b63041cfce54a91b88ad6a3f1167093b2ebec37aca35b3b4.opus",
+          "duration_ms": 2250,
+          "bytes": 7119
+        }
+      }
+    },
+    {
+      "text": "Mein Onkel ist noch jung — erst dreißig.",
+      "text_hash": "1596b3e50f4dfd778991a9d1f094075f977eaf444f18b8419fff91cf4cee6a9e",
+      "refs": [
+        "m02|text-extra|p1|c2"
+      ],
+      "audio": {
+        "normal": {
+          "key": "c4ec2cdb2bffa7b26fe21855e1a35810738c834d2655e384a4a74428dfdf0f26",
+          "path": "/audio/de/c4/c4ec2cdb2bffa7b26fe21855e1a35810738c834d2655e384a4a74428dfdf0f26.opus",
+          "duration_ms": 2774,
+          "bytes": 8538
+        }
+      }
+    },
+    {
+      "text": "die Cousine",
+      "text_hash": "1705dd1889dbd476a511bc7bde03fe3c6fc11700c2e50889f45cdf0546ca066c",
+      "refs": [
+        "m02|vocab|21|term"
+      ],
+      "audio": {
+        "normal": {
+          "key": "cb4b5d6a1ac7a052e4b1c2583161ee12932c023097b30738d0245a60c6ff7f55",
+          "path": "/audio/de/cb/cb4b5d6a1ac7a052e4b1c2583161ee12932c023097b30738d0245a60c6ff7f55.opus",
+          "duration_ms": 1043,
+          "bytes": 3462
+        }
+      }
+    },
+    {
+      "text": "Sie ist die Frau von meinem Onkel Ben.",
+      "text_hash": "173aba224e9c741161ceccddab2c391573efbb20f85427537759c59c3bb3f911",
+      "refs": [
+        "m02|text-extra|p2|c2"
+      ],
+      "audio": {
+        "normal": {
+          "key": "3668367ce3823dd6237f41a43ccaf69a336aeaef8df0689a612106f84b2a1a32",
+          "path": "/audio/de/36/3668367ce3823dd6237f41a43ccaf69a336aeaef8df0689a612106f84b2a1a32.opus",
+          "duration_ms": 2135,
+          "bytes": 6702
+        }
+      }
+    },
+    {
+      "text": "Sie geht noch in die Schule.",
+      "text_hash": "179f8cb4023a3c029d6d225963b5bf584635454cc58b591df112787cc87ee8ae",
+      "refs": [
+        "m02|text-main|p3|c4"
+      ],
+      "audio": {
+        "normal": {
+          "key": "26f7b276f4f7fc08c4e340c4267235954b9ae4d342b426b8db40be26ceeac1d6",
+          "path": "/audio/de/26/26f7b276f4f7fc08c4e340c4267235954b9ae4d342b426b8db40be26ceeac1d6.opus",
+          "duration_ms": 1488,
+          "bytes": 4827
+        }
+      }
+    },
+    {
+      "text": "Frau Schmidt ist meine Lehrerin.",
+      "text_hash": "18a46a68b44e4b2880da05a45efb6f4d73678cfbfefb1c72df1fffe54f90e385",
+      "refs": [
+        "m02|vocab|14|use|1"
+      ],
+      "audio": {
+        "normal": {
+          "key": "714b29f9bc8fdb82299a9b667f69abb0666136bab146a29989ac74d8ce5c0491",
+          "path": "/audio/de/71/714b29f9bc8fdb82299a9b667f69abb0666136bab146a29989ac74d8ce5c0491.opus",
+          "duration_ms": 1770,
+          "bytes": 5547
+        }
+      }
+    },
+    {
+      "text": "Mein Cousin heißt Luca.",
+      "text_hash": "1be688f8d7c3d086e2dc262b6876cf37f914c84e29d3b4eda5a89499fbc218e2",
+      "refs": [
+        "m02|vocab|20|use|1"
+      ],
+      "audio": {
+        "normal": {
+          "key": "a032218dbaa523cc53d0753a2da95d3b54d3a56353d50cd1b2d176357a722690",
+          "path": "/audio/de/a0/a032218dbaa523cc53d0753a2da95d3b54d3a56353d50cd1b2d176357a722690.opus",
+          "duration_ms": 2947,
+          "bytes": 9405
+        }
+      }
+    },
+    {
+      "text": "das Kind",
+      "text_hash": "1bf9a16f327c342b7b1c6a0cd6f19112e8e1b42b283759856604d47a9383592e",
+      "refs": [
+        "m02|vocab|8|term"
+      ],
+      "audio": {
+        "normal": {
+          "key": "e78807f485ba38bb16ceba4b00859e99a5cb78178483716f82daf88bb129da8f",
+          "path": "/audio/de/e7/e78807f485ba38bb16ceba4b00859e99a5cb78178483716f82daf88bb129da8f.opus",
+          "duration_ms": 890,
+          "bytes": 2956
+        }
+      }
+    },
+    {
+      "text": "Wir sind fünf Personen und wohnen in Hamburg.",
+      "text_hash": "1ea9f98d42bb30d113cf5b91b11e79588a6c6657d0643f4bbcc29e81f3592d9d",
+      "refs": [
+        "m02|text-main|p1|c3"
+      ],
+      "audio": {
+        "normal": {
+          "key": "a53e796a8d4205adcd1128a85b23ce022e944a3c76508c90d9665cffb2155fe3",
+          "path": "/audio/de/a5/a53e796a8d4205adcd1128a85b23ce022e944a3c76508c90d9665cffb2155fe3.opus",
+          "duration_ms": 3071,
+          "bytes": 9544
+        }
+      }
+    },
+    {
+      "text": "Der Mann von Anna heißt Peter.",
+      "text_hash": "2302e146a0a09b5e06fc52dc0d8412afb8373b1a2068ff80644ae6747d4f65af",
+      "refs": [
+        "m02|vocab|13|use|0"
+      ],
+      "audio": {
+        "normal": {
+          "key": "837a1f54292a1e679555ae00f449eca2b897a384de3cd31e90104671b25d1713",
+          "path": "/audio/de/83/837a1f54292a1e679555ae00f449eca2b897a384de3cd31e90104671b25d1713.opus",
+          "duration_ms": 2545,
+          "bytes": 8001
+        }
+      }
+    },
+    {
+      "text": "Null, eins, zwei, drei — das sind Zahlen.",
+      "text_hash": "235de476a882c6f767e3de563f87abe07f53c7f2d1e255b6d8ba67e96e1748e0",
+      "refs": [
+        "m01|vocab|12|use|0"
+      ],
+      "audio": {
+        "normal": {
+          "key": "1712edf3c26b79d4452c262076f4c30796abdaeda0f08e5630ec17b6f415e6a8",
+          "path": "/audio/de/17/1712edf3c26b79d4452c262076f4c30796abdaeda0f08e5630ec17b6f415e6a8.opus",
+          "duration_ms": 3619,
+          "bytes": 11127
+        }
+      }
+    },
+    {
+      "text": "Er kommt aus Frankreich.",
+      "text_hash": "238c2108e8cb304dfe3332faf2880637829dcbdf631d1d8e6e4f41dd029168bd",
+      "refs": [
+        "m01|vocab|15|use|1"
+      ],
+      "audio": {
+        "normal": {
+          "key": "d7d924ba5be809c3ae71d00c5a065e84ed02f187a886fadccbe80f11b2ab5557",
+          "path": "/audio/de/d7/d7d924ba5be809c3ae71d00c5a065e84ed02f187a886fadccbe80f11b2ab5557.opus",
+          "duration_ms": 1693,
+          "bytes": 5388
+        }
+      }
+    },
+    {
+      "text": "Meine Großeltern leben in Italien.",
+      "text_hash": "238f8dd710a806a01dee5a707fc73c4e3b452b48cb27ec380c4ccd1a321b20f4",
+      "refs": [
+        "m02|vocab|24|use|0",
+        "m02|vocab|7|use|0"
+      ],
+      "audio": {
+        "normal": {
+          "key": "aae1de79f4890b10980e3a74f063d5a8445d8f20a7707661f5c6b4d4ebe6e34c",
+          "path": "/audio/de/aa/aae1de79f4890b10980e3a74f063d5a8445d8f20a7707661f5c6b4d4ebe6e34c.opus",
+          "duration_ms": 2697,
+          "bytes": 8434
+        }
+      }
+    },
+    {
+      "text": "Aus welchem Land kommst du?",
+      "text_hash": "24f66456d83b66fe11027310b835d92abb4ea9bbfcfa6cb00e0a5d918b39aef8",
+      "refs": [
+        "m01|vocab|5|use|1"
+      ],
+      "audio": {
+        "normal": {
+          "key": "d187520461dc4bad47c913fda17b17a589646b29a772f4106c72efd1865d58b9",
+          "path": "/audio/de/d1/d187520461dc4bad47c913fda17b17a589646b29a772f4106c72efd1865d58b9.opus",
+          "duration_ms": 1947,
+          "bytes": 6115
+        }
+      }
+    },
+    {
+      "text": "Du hast einen Bruder.",
+      "text_hash": "257b3e5e9d805e241381fa8c80bfa707aace19d2cc3877424aaf85a6fbcce218",
+      "refs": [
+        "m02|theory|watchout|1|good"
+      ],
+      "audio": {
+        "normal": {
+          "key": "3a4590553f26313ca9e820743b74ca5f3fb4c7eb056f71a3501ff9ce07d2eb7e",
+          "path": "/audio/de/3a/3a4590553f26313ca9e820743b74ca5f3fb4c7eb056f71a3501ff9ce07d2eb7e.opus",
+          "duration_ms": 1678,
+          "bytes": 5341
+        }
+      }
+    },
+    {
+      "text": "Ich heiße Elena Ruiz.",
+      "text_hash": "25895290fb42592f8db0c1f43964dcd58f9188d59a12dd040aab38857e66fa51",
+      "refs": [
+        "m01|text-main|p1|c2"
+      ],
+      "audio": {
+        "normal": {
+          "key": "519de81b6ea38faa60fa66eadba4a8c468ba53a8bdf406a74ddd3a9ff0158430",
+          "path": "/audio/de/51/519de81b6ea38faa60fa66eadba4a8c468ba53a8bdf406a74ddd3a9ff0158430.opus",
+          "duration_ms": 1637,
+          "bytes": 5138
+        }
+      }
+    },
+    {
+      "text": "Ich komme aus Spanien.",
+      "text_hash": "2628e3e3ce5d692eeec637fd9f8c8de421e4ebc32e7bc56e10a254bfac49053f",
+      "refs": [
+        "m01|vocab|2|use|0"
+      ],
+      "audio": {
+        "normal": {
+          "key": "a92de41a752fc9888eea7c4d3c1962a31da2204258852f590ec49ccd43c63c28",
+          "path": "/audio/de/a9/a92de41a752fc9888eea7c4d3c1962a31da2204258852f590ec49ccd43c63c28.opus",
+          "duration_ms": 1459,
+          "bytes": 4718
+        }
+      }
+    },
+    {
+      "text": "Sie kommt aus Frankreich und wohnt auch in Wien.",
+      "text_hash": "26f484108f6e5ddc09f04b0d97d3fb82b513c0145f759c2b5d7ad468f2ad2945",
+      "refs": [
+        "m01|text-main|p5|c2"
+      ],
+      "audio": {
+        "normal": {
+          "key": "0e891a8cc46b224f2033b76382b706179e2181bbd63209fbadb503d74646686a",
+          "path": "/audio/de/0e/0e891a8cc46b224f2033b76382b706179e2181bbd63209fbadb503d74646686a.opus",
+          "duration_ms": 3330,
+          "bytes": 10236
+        }
+      }
+    },
+    {
+      "text": "Wie heißt du?",
+      "text_hash": "2753e4860651be83bea82179f42ddb29947635c5ea61b047a06924f8c758f042",
+      "refs": [
+        "m01|text-extra|p1|c2",
+        "m01|text-main|p6|c2",
+        "m01|vocab|1|use|1"
+      ],
+      "audio": {
+        "normal": {
+          "key": "45982a6a638aba707db412cb9ad95479e0b64108b609642b33181516777d5b11",
+          "path": "/audio/de/45/45982a6a638aba707db412cb9ad95479e0b64108b609642b33181516777d5b11.opus",
+          "duration_ms": 983,
+          "bytes": 3228
+        }
+      }
+    },
+    {
+      "text": "Ich habe einen Bruder und eine Schwester.",
+      "text_hash": "287df349dd9157c3d52c121b554fd1e1c11aefac1ff51f33ddc8860216ab4841",
+      "refs": [
+        "m02|text-main|p3|c1"
+      ],
+      "audio": {
+        "normal": {
+          "key": "e29dd3ab3996e9864305dc8358676ac7d3b510d46903639a40a81f35a276ec88",
+          "path": "/audio/de/e2/e29dd3ab3996e9864305dc8358676ac7d3b510d46903639a40a81f35a276ec88.opus",
+          "duration_ms": 3689,
+          "bytes": 10822
+        }
+      }
+    },
+    {
+      "text": "Wie buchstabiert man das?",
+      "text_hash": "2a3bb118c30689123468d0c26e68c61f28973049f77f6143cd6e19d0c607b2c2",
+      "refs": [
+        "m01|vocab|4|use|1"
+      ],
+      "audio": {
+        "normal": {
+          "key": "b3ba28caba8fe08b552c29492a0661a89d779dfc29edfdacee53b323675c6fa1",
+          "path": "/audio/de/b3/b3ba28caba8fe08b552c29492a0661a89d779dfc29edfdacee53b323675c6fa1.opus",
+          "duration_ms": 2805,
+          "bytes": 8481
+        }
+      }
+    },
+    {
+      "text": "Wien ist in Österreich.",
+      "text_hash": "2d1578287ad133c2e261e331efb57aba61d3a472e6cd8cab3c52eb700494bc06",
+      "refs": [
+        "m01|vocab|14|use|0"
+      ],
+      "audio": {
+        "normal": {
+          "key": "4635c7e8f7d5e7acf065e1116abfeff5748318b834aad1cb5a79b6cad6183d78",
+          "path": "/audio/de/46/4635c7e8f7d5e7acf065e1116abfeff5748318b834aad1cb5a79b6cad6183d78.opus",
+          "duration_ms": 1889,
+          "bytes": 5937
+        }
+      }
+    },
+    {
+      "text": "Ich habe drei Geschwister.",
+      "text_hash": "2d21a23a2579bfad1d7d65a4559e1cfdc08a2b0621dae9f93c90a02882cbc5f7",
+      "refs": [
+        "m02|vocab|19|use|0"
+      ],
+      "audio": {
+        "normal": {
+          "key": "fa5fe65a14324e143ab31986846885a382afd6efc542ed9e4e669c119807df35",
+          "path": "/audio/de/fa/fa5fe65a14324e143ab31986846885a382afd6efc542ed9e4e669c119807df35.opus",
+          "duration_ms": 1501,
+          "bytes": 4747
+        }
+      }
+    },
+    {
+      "text": "Das Baby heißt Emma.",
+      "text_hash": "2e6f060b54893d494e23755a91803e5f4dc90ec9cd56895da4c6fec9372e3c5d",
+      "refs": [
+        "m02|text-extra|p3|c2"
+      ],
+      "audio": {
+        "normal": {
+          "key": "15c21a562ce384c2267bc45be6075cf6cca7e9ea1ce8b3244b49c6fc19134131",
+          "path": "/audio/de/15/15c21a562ce384c2267bc45be6075cf6cca7e9ea1ce8b3244b49c6fc19134131.opus",
+          "duration_ms": 1907,
+          "bytes": 5993
+        }
+      }
+    },
+    {
+      "text": "Meine Mutter ist zweiundvierzig.",
+      "text_hash": "2e81270f90fd1d174f6a768091aab7c347f323e87f84b9aa5d2a7f494b2c2291",
+      "refs": [
+        "m02|text-main|p2|c3"
+      ],
+      "audio": {
+        "normal": {
+          "key": "b310b2df00ff4e2bbe60032811ac8ef52b0cc30ab1b7991f80addb4d4b245141",
+          "path": "/audio/de/b3/b310b2df00ff4e2bbe60032811ac8ef52b0cc30ab1b7991f80addb4d4b245141.opus",
+          "duration_ms": 2036,
+          "bytes": 6483
+        }
+      }
+    },
+    {
+      "text": "Meine Tante hat zwei Kinder.",
+      "text_hash": "2f2104d1c3f827635b58219ab4bd0cd9de85933123acc6580553526c51e2d1fd",
+      "refs": [
+        "m02|vocab|18|use|1"
+      ],
+      "audio": {
+        "normal": {
+          "key": "62ed4d6973bb23869365ac403c7e0fdc1c6bda7802da4d17f19540954838d522",
+          "path": "/audio/de/62/62ed4d6973bb23869365ac403c7e0fdc1c6bda7802da4d17f19540954838d522.opus",
+          "duration_ms": 1717,
+          "bytes": 5490
+        }
+      }
+    },
+    {
+      "text": "der Vater",
+      "text_hash": "2f70c269dc94cdf441150e1e472a2ae1c8f2c4b556dfb00275c0a115152cc2ab",
+      "refs": [
+        "m02|vocab|3|term"
+      ],
+      "audio": {
+        "normal": {
+          "key": "ef791faeb8c6e39b2f687647b5df35d2ce8c00aa7b013ebaeb0cd19088cf891f",
+          "path": "/audio/de/ef/ef791faeb8c6e39b2f687647b5df35d2ce8c00aa7b013ebaeb0cd19088cf891f.opus",
+          "duration_ms": 1013,
+          "bytes": 3286
+        }
+      }
+    },
+    {
+      "text": "der Onkel",
+      "text_hash": "2f9c8e6cee0a563f97636946e16b2eea39e643636c9d81a9d1abcee6d4844e50",
+      "refs": [
+        "m02|vocab|17|term"
+      ],
+      "audio": {
+        "normal": {
+          "key": "addd2e6456a068d9e2b418f50fd526e3c848015a00400f927751693328498aee",
+          "path": "/audio/de/ad/addd2e6456a068d9e2b418f50fd526e3c848015a00400f927751693328498aee.opus",
+          "duration_ms": 1495,
+          "bytes": 4652
+        }
+      }
+    },
+    {
+      "text": "die Telefonnummer",
+      "text_hash": "30bec5dd112ef5adecec9c493c6917b7895484b803be3faebc6ad1d81acf7f50",
+      "refs": [
+        "m01|vocab|9|term"
+      ],
+      "audio": {
+        "normal": {
+          "key": "b17ce3d6a6de0b9bf670f0d346f00a48e05bcd591b59ce8d58728c1ac26b933f",
+          "path": "/audio/de/b1/b17ce3d6a6de0b9bf670f0d346f00a48e05bcd591b59ce8d58728c1ac26b933f.opus",
+          "duration_ms": 1389,
+          "bytes": 4652
+        }
+      }
+    },
+    {
+      "text": "Schreib mir bitte eine Nachricht!",
+      "text_hash": "32a144f62bd0988d8b7ce2d3ba2a5893ddc537831242cdd8bc8e7c1efe40f681",
+      "refs": [
+        "m01|text-main|p6|c5"
+      ],
+      "audio": {
+        "normal": {
+          "key": "79d2cdbfd319830edc3919c343b77476912fc3a4f9e47766117b6a990612f1ec",
+          "path": "/audio/de/79/79d2cdbfd319830edc3919c343b77476912fc3a4f9e47766117b6a990612f1ec.opus",
+          "duration_ms": 1782,
+          "bytes": 5713
+        }
+      }
+    },
+    {
+      "text": "Meine Schwester heißt Lena.",
+      "text_hash": "32ea4ba98c5258d66c828fae0297a264339c30932c3103a0df2d354921d7316a",
+      "refs": [
+        "m02|vocab|6|use|0"
+      ],
+      "audio": {
+        "normal": {
+          "key": "9c4e02afa1ab2233896659fd4d0de05ffe89b95216214f22439498d22f7ca4ac",
+          "path": "/audio/de/9c/9c4e02afa1ab2233896659fd4d0de05ffe89b95216214f22439498d22f7ca4ac.opus",
+          "duration_ms": 2019,
+          "bytes": 6425
+        }
+      }
+    },
+    {
+      "text": "der Beruf",
+      "text_hash": "33570f12e2363ed601d2c00ed09a5de049be3edb025d3365e0219dbed2ad3852",
+      "refs": [
+        "m01|vocab|7|term"
+      ],
+      "audio": {
+        "normal": {
+          "key": "5efdf87c710a17d87a93f19197a392e396eec1e151c8ddc60cef7f216bcf99bc",
+          "path": "/audio/de/5e/5efdf87c710a17d87a93f19197a392e396eec1e151c8ddc60cef7f216bcf99bc.opus",
+          "duration_ms": 990,
+          "bytes": 3275
+        }
+      }
+    },
+    {
+      "text": "Die Frau von Tom heißt Julia.",
+      "text_hash": "34d58d6cf12a22ce3b658bd173809dff9bc3c3a0691bdfc2d9f022e2f2427173",
+      "refs": [
+        "m02|vocab|14|use|0"
+      ],
+      "audio": {
+        "normal": {
+          "key": "aa675e217bdc7b59837151f3c0c46c66e82b146b1ac7c8c6efe0649ed9b19a0c",
+          "path": "/audio/de/aa/aa675e217bdc7b59837151f3c0c46c66e82b146b1ac7c8c6efe0649ed9b19a0c.opus",
+          "duration_ms": 3977,
+          "bytes": 11796
+        }
+      }
+    },
+    {
+      "text": "Hallo!",
+      "text_hash": "357a57fe73d6c63bb1923e970f79a924db3a3609eb9797547784a94ee38fc3df",
+      "refs": [
+        "m01|text-main|p1|c1",
+        "m02|text-main|p1|c1"
+      ],
+      "audio": {
+        "normal": {
+          "key": "a467477b2ff112ba29c04a0b39253f8c5596a79ffd28d9dab9b50d0112d8a995",
+          "path": "/audio/de/a4/a467477b2ff112ba29c04a0b39253f8c5596a79ffd28d9dab9b50d0112d8a995.opus",
+          "duration_ms": 759,
+          "bytes": 2502
+        }
+      }
+    },
+    {
+      "text": "Die Sprache in Spanien ist Spanisch.",
+      "text_hash": "35961450f91f6720be69628045fdf6843678267f49d11777820be97fbfb147e7",
+      "refs": [
+        "m01|vocab|20|use|0"
+      ],
+      "audio": {
+        "normal": {
+          "key": "2bdb8a9593ba91931127a882415af6f1f018fd698bd4448531cce2ac209a74ee",
+          "path": "/audio/de/2b/2bdb8a9593ba91931127a882415af6f1f018fd698bd4448531cce2ac209a74ee.opus",
+          "duration_ms": 2980,
+          "bytes": 9288
+        }
+      }
+    },
+    {
+      "text": "Meine Großeltern leben nicht in Hamburg.",
+      "text_hash": "3661966acd1560ecebbd030cd54d4293a87f5ef4160cd16fc1ae8565ad5f0c1c",
+      "refs": [
+        "m02|text-main|p4|c1"
+      ],
+      "audio": {
+        "normal": {
+          "key": "0fb0de4e3633bafe28cf73349cf9cba7985052e52a1be80d17292d5f6539403f",
+          "path": "/audio/de/0f/0fb0de4e3633bafe28cf73349cf9cba7985052e52a1be80d17292d5f6539403f.opus",
+          "duration_ms": 2930,
+          "bytes": 8860
+        }
+      }
+    },
+    {
+      "text": "Meine Cousine ist zwanzig.",
+      "text_hash": "36e383d99b4843ed74f6f16fbf47ee100d2b51ae5b0b8f8b4c6216d4c4489352",
+      "refs": [
+        "m02|vocab|21|use|0"
+      ],
+      "audio": {
+        "normal": {
+          "key": "63e40842ba1bf4a9c7fffc8e30036c1ffab73ae4d9bd210747e9ca9827763785",
+          "path": "/audio/de/63/63e40842ba1bf4a9c7fffc8e30036c1ffab73ae4d9bd210747e9ca9827763785.opus",
+          "duration_ms": 1756,
+          "bytes": 5580
+        }
+      }
+    },
+    {
+      "text": "Deutschland ist ein Land in Europa.",
+      "text_hash": "376c9c5243cce1c383dd837e36ee59fb1b2bf5ae44e53c610c41d74872bb01b1",
+      "refs": [
+        "m01|vocab|5|use|0"
+      ],
+      "audio": {
+        "normal": {
+          "key": "5012bc5a067b27d5405389ef9d6271260bb32db83be491c0471b5b84e1a89423",
+          "path": "/audio/de/50/5012bc5a067b27d5405389ef9d6271260bb32db83be491c0471b5b84e1a89423.opus",
+          "duration_ms": 2569,
+          "bytes": 8022
+        }
+      }
+    },
+    {
+      "text": "die Adresse",
+      "text_hash": "3835cc66ee88049ba70f80a4bff3e19166dd5e20e72eb066f23df6beca7501ae",
+      "refs": [
+        "m01|vocab|8|term"
+      ],
+      "audio": {
+        "normal": {
+          "key": "1e6bcd581817d989612b8a3bf2414684218a4cdbbe8546f95b4cd59c266c93cd",
+          "path": "/audio/de/1e/1e6bcd581817d989612b8a3bf2414684218a4cdbbe8546f95b4cd59c266c93cd.opus",
+          "duration_ms": 1080,
+          "bytes": 3548
+        }
+      }
+    },
+    {
+      "text": "der Beruf · die Adresse · das Land · die Telefonnummer",
+      "text_hash": "385ec9e29bcd799005144e2b3a1b075d43192a0fab4f8bc34a87c53093cb4793",
+      "refs": [
+        "m01|theory|spotlight|1|4|example"
+      ],
+      "audio": {
+        "normal": {
+          "key": "4c438d5b91bb8a568e07308fce533606921438b38019fdbcae395175305fdb83",
+          "path": "/audio/de/4c/4c438d5b91bb8a568e07308fce533606921438b38019fdbcae395175305fdb83.opus",
+          "duration_ms": 5777,
+          "bytes": 17172
+        }
+      }
+    },
+    {
+      "text": "Wie alt sind deine Eltern?",
+      "text_hash": "391ce1b50009568a6e2e97ad1091fd016e83ecb589815eb8c82630b0131cc137",
+      "refs": [
+        "m02|text-main|p5|c4",
+        "m02|vocab|2|use|1"
+      ],
+      "audio": {
+        "normal": {
+          "key": "ce34c82d04c518229021476edf34e2fc0394a0ff8480830d8d9d5ad15c51c2fb",
+          "path": "/audio/de/ce/ce34c82d04c518229021476edf34e2fc0394a0ff8480830d8d9d5ad15c51c2fb.opus",
+          "duration_ms": 1813,
+          "bytes": 5696
+        }
+      }
+    },
+    {
+      "text": "buchstabieren",
+      "text_hash": "39b5854a7347409e6a03b282d51c22fbaccca0884dad991ab166a569b6b28958",
+      "refs": [
+        "m01|vocab|4|term"
+      ],
+      "audio": {
+        "normal": {
+          "key": "9c3be4a3989487b61f814c3f6160e9a571e9c37903fb92260a5cf70a385cd59a",
+          "path": "/audio/de/9c/9c3be4a3989487b61f814c3f6160e9a571e9c37903fb92260a5cf70a385cd59a.opus",
+          "duration_ms": 2092,
+          "bytes": 6202
+        }
+      }
+    },
+    {
+      "text": "leben",
+      "text_hash": "3a1a7839bab1137bceb27cb2e80bb84cf6d1925c507660ece7b649f19fbd38c4",
+      "refs": [
+        "m02|vocab|24|term"
+      ],
+      "audio": {
+        "normal": {
+          "key": "e5c483266b3ecce7e2abafcc42138d5301282af62f58c3e03181beee09c1f528",
+          "path": "/audio/de/e5/e5c483266b3ecce7e2abafcc42138d5301282af62f58c3e03181beee09c1f528.opus",
+          "duration_ms": 809,
+          "bytes": 2707
+        }
+      }
+    },
+    {
+      "text": "Alter und Beruf, bitte.",
+      "text_hash": "3bdcb66d80033eb240d9895fbbb6431f9bcc6c9049876ec645ba3acaf8e425c9",
+      "refs": [
+        "m02|vocab|11|use|1"
+      ],
+      "audio": {
+        "normal": {
+          "key": "d1ef0156a9b0f398d36a7cbaffcc3c039c44e77bc539dda57a077d4c79cd5895",
+          "path": "/audio/de/d1/d1ef0156a9b0f398d36a7cbaffcc3c039c44e77bc539dda57a077d4c79cd5895.opus",
+          "duration_ms": 2077,
+          "bytes": 6612
+        }
+      }
+    },
+    {
+      "text": "Bist du verheiratet?",
+      "text_hash": "3c0823b57c631f69cd7f5524d32ba14d2928bb78c3e2b3380a0bdffcb38ace48",
+      "refs": [
+        "m01|text-extra|p7|c2"
+      ],
+      "audio": {
+        "normal": {
+          "key": "f46c5b12c13d912993209217bf5df8a9bf5c50d78efdc3b773ca1da1c099daa2",
+          "path": "/audio/de/f4/f46c5b12c13d912993209217bf5df8a9bf5c50d78efdc3b773ca1da1c099daa2.opus",
+          "duration_ms": 1955,
+          "bytes": 5809
+        }
+      }
+    },
+    {
+      "text": "Sie haben drei Kinder.",
+      "text_hash": "3cb9f0d24e52d6e6ad1aec07e120209693653220f6cbfdcefff28237ab0f7415",
+      "refs": [
+        "m02|vocab|8|use|0"
+      ],
+      "audio": {
+        "normal": {
+          "key": "7800e4e7ce756d12c1c2b93995e52a0bc1d3041208acc9b2259c5cd73fee2371",
+          "path": "/audio/de/78/7800e4e7ce756d12c1c2b93995e52a0bc1d3041208acc9b2259c5cd73fee2371.opus",
+          "duration_ms": 1894,
+          "bytes": 5920
+        }
+      }
+    },
+    {
+      "text": "Sara: Ich bin auch ledig.",
+      "text_hash": "3edb2ae03b4560966c3b827b4333984f7feaa1610404470830405f6014224f38",
+      "refs": [
+        "m01|text-extra|p9|c1"
+      ],
+      "audio": {
+        "normal": {
+          "key": "e497510902a8049aa7ec9a2b243c9443b22d85c31cfd52a7c67588323df68f01",
+          "path": "/audio/de/e4/e497510902a8049aa7ec9a2b243c9443b22d85c31cfd52a7c67588323df68f01.opus",
+          "duration_ms": 2847,
+          "bytes": 8479
+        }
+      }
+    },
+    {
+      "text": "Woher kommst du?",
+      "text_hash": "3f22e95182a83d53e548ff495c5093369b0f69262a12e0f41469065b9a923e22",
+      "refs": [
+        "m01|text-main|p6|c3",
+        "m01|theory|watchout|3|good",
+        "m01|vocab|2|use|1"
+      ],
+      "audio": {
+        "normal": {
+          "key": "fb60a27523b0295471c0c0501033e02c7d5cdb6b9db9b591703816901dd973e8",
+          "path": "/audio/de/fb/fb60a27523b0295471c0c0501033e02c7d5cdb6b9db9b591703816901dd973e8.opus",
+          "duration_ms": 1142,
+          "bytes": 3655
+        }
+      }
+    },
+    {
+      "text": "Wie alt bist du?",
+      "text_hash": "4000ddf9f15272ec95c7de7400f566e3e8457a174571f491a1c2ee3bfb501fb6",
+      "refs": [
+        "m02|vocab|12|use|1"
+      ],
+      "audio": {
+        "normal": {
+          "key": "f21fc27988b46764a0f7e4703af8edd7e2cf29876a98d33771bef4104a9500ae",
+          "path": "/audio/de/f2/f21fc27988b46764a0f7e4703af8edd7e2cf29876a98d33771bef4104a9500ae.opus",
+          "duration_ms": 1280,
+          "bytes": 4116
+        }
+      }
+    },
+    {
+      "text": "Meine Tante heißt Rosa.",
+      "text_hash": "428b40ea8c9205fd7b75dc425db30297a2c0e7b2e68023266c5cee141facf057",
+      "refs": [
+        "m02|vocab|18|use|0"
+      ],
+      "audio": {
+        "normal": {
+          "key": "8612acf2e355e2c9fb2c672a3dc27127e8c871b58283046bbb8f7707ad2f9b14",
+          "path": "/audio/de/86/8612acf2e355e2c9fb2c672a3dc27127e8c871b58283046bbb8f7707ad2f9b14.opus",
+          "duration_ms": 1730,
+          "bytes": 5527
+        }
+      }
+    },
+    {
+      "text": "Foto 2: Hier siehst du meine Tante Rosa.",
+      "text_hash": "451c433ad4a7ca86acff026bc526e5fc510d1251109e3a1f5ac6ae7747d33e67",
+      "refs": [
+        "m02|text-extra|p2|c1"
+      ],
+      "audio": {
+        "normal": {
+          "key": "81d13344875947620153b8078260909835ca5bea88040c059fd4ffda0f451e2f",
+          "path": "/audio/de/81/81d13344875947620153b8078260909835ca5bea88040c059fd4ffda0f451e2f.opus",
+          "duration_ms": 3828,
+          "bytes": 11617
+        }
+      }
+    },
+    {
+      "text": "Meine Mutter kommt aus Spanien.",
+      "text_hash": "46efd2744f1e32d9b654b10b16615ead8455962c6a1b65d8935f7f2f085e0d7b",
+      "refs": [
+        "m02|vocab|4|use|0"
+      ],
+      "audio": {
+        "normal": {
+          "key": "eb760d0d735b05e9c81551ea09439206a4ae8eb98cd0520e0bed45150e0e4122",
+          "path": "/audio/de/eb/eb760d0d735b05e9c81551ea09439206a4ae8eb98cd0520e0bed45150e0e4122.opus",
+          "duration_ms": 1858,
+          "bytes": 5922
+        }
+      }
+    },
+    {
+      "text": "Lukas: Nein, ich bin ledig.",
+      "text_hash": "48801f32349cf7e53c03b5cf6777a90620e39d5811007928adee2de658467513",
+      "refs": [
+        "m01|text-extra|p8|c1"
+      ],
+      "audio": {
+        "normal": {
+          "key": "1e3bf6e0ecabc3dac92eb61c043949077d826e3cd42f28edc24f3ad21ef88705",
+          "path": "/audio/de/1e/1e3bf6e0ecabc3dac92eb61c043949077d826e3cd42f28edc24f3ad21ef88705.opus",
+          "duration_ms": 2134,
+          "bytes": 6836
+        }
+      }
+    },
+    {
+      "text": "wohnen",
+      "text_hash": "4944af70480b82a6c3002d53da795b40fcb6e33323b120a550ed034825360bae",
+      "refs": [
+        "m01|vocab|3|term"
+      ],
+      "audio": {
+        "normal": {
+          "key": "e11e1affff6626c2c7e18d710e6c0e5961d4566ecaf41fe79eebed5412cbe804",
+          "path": "/audio/de/e1/e11e1affff6626c2c7e18d710e6c0e5961d4566ecaf41fe79eebed5412cbe804.opus",
+          "duration_ms": 966,
+          "bytes": 3118
+        }
+      }
+    },
+    {
+      "text": "Ich lerne die Sprache Deutsch.",
+      "text_hash": "499d87387c2eb7af7411c608bb282724f4fb292bddbfb4a400c3edc96377ff79",
+      "refs": [
+        "m01|vocab|6|use|0"
+      ],
+      "audio": {
+        "normal": {
+          "key": "1b50402ca48342ca3f5f0ef69c99708b5b57814c773d78da1b4e418dd8e9042a",
+          "path": "/audio/de/1b/1b50402ca48342ca3f5f0ef69c99708b5b57814c773d78da1b4e418dd8e9042a.opus",
+          "duration_ms": 2068,
+          "bytes": 6540
+        }
+      }
+    },
+    {
+      "text": "Meine Adresse ist Bahnstraße 12.",
+      "text_hash": "4a384d534b9c0468d6d182c56085932f6a8ab7f14178bbbd2c077c5c9d1f65dd",
+      "refs": [
+        "m01|vocab|8|use|1"
+      ],
+      "audio": {
+        "normal": {
+          "key": "fa967da35924f927642e1cef6874234a89efb3a87999c48c36ba3e5067548a9b",
+          "path": "/audio/de/fa/fa967da35924f927642e1cef6874234a89efb3a87999c48c36ba3e5067548a9b.opus",
+          "duration_ms": 2280,
+          "bytes": 7211
+        }
+      }
+    },
+    {
+      "text": "Meine Geschwister wohnen in Köln.",
+      "text_hash": "4ab2c939f30c1ca95ab0ab798e144623c697924472d8bde7e062f8b3bcc0af07",
+      "refs": [
+        "m02|vocab|19|use|1"
+      ],
+      "audio": {
+        "normal": {
+          "key": "1b927d3bd147a9f5faaf7ea50f3ad4c38b258882f80818d99ad72572463f9c26",
+          "path": "/audio/de/1b/1b927d3bd147a9f5faaf7ea50f3ad4c38b258882f80818d99ad72572463f9c26.opus",
+          "duration_ms": 3095,
+          "bytes": 9361
+        }
+      }
+    },
+    {
+      "text": "Lukas: L-Y-O-N.",
+      "text_hash": "4afea7a7f745ace46127f5a9480bd2b4acf01d572eff6428cfdcfd57d860b15e",
+      "refs": [
+        "m01|text-extra|p6|c1"
+      ],
+      "audio": {
+        "normal": {
+          "key": "9457598e4c519ada3994654393a02c12c15c720da25ebd335dbc44935ba1ebb2",
+          "path": "/audio/de/94/9457598e4c519ada3994654393a02c12c15c720da25ebd335dbc44935ba1ebb2.opus",
+          "duration_ms": 2322,
+          "bytes": 7223
+        }
+      }
+    },
+    {
+      "text": "das Land",
+      "text_hash": "4b2b2cb30799a0ba834153a8e86ff8521379e50cad6d435eaf3b60ab94ac57ed",
+      "refs": [
+        "m01|vocab|5|term"
+      ],
+      "audio": {
+        "normal": {
+          "key": "6b42dbe43a6239e87ff8beba6d935930c977370576abca23c780ab55acfe3552",
+          "path": "/audio/de/6b/6b42dbe43a6239e87ff8beba6d935930c977370576abca23c780ab55acfe3552.opus",
+          "duration_ms": 1060,
+          "bytes": 3463
+        }
+      }
+    },
+    {
+      "text": "Meine Schwester hat ein Baby.",
+      "text_hash": "4cfc254bd82dd623e1deaf86b7ee13c8ec6447f97b49d037041ec8b77ccc4a43",
+      "refs": [
+        "m02|vocab|22|use|0"
+      ],
+      "audio": {
+        "normal": {
+          "key": "26d182ea2b0785e5859f698e128052cfd342b6435becd96ff6db7354562fc020",
+          "path": "/audio/de/26/26d182ea2b0785e5859f698e128052cfd342b6435becd96ff6db7354562fc020.opus",
+          "duration_ms": 3533,
+          "bytes": 10572
+        }
+      }
+    },
+    {
+      "text": "die Sprache",
+      "text_hash": "4d450d552d4455e5abdf63db0968847641d3c7e2897eea8f60aea9a2babf8c5a",
+      "refs": [
+        "m01|vocab|6|term"
+      ],
+      "audio": {
+        "normal": {
+          "key": "c675e9c037c5ab962f6b40ae5786824b722d730089aa6f7db40ad2672801a555",
+          "path": "/audio/de/c6/c675e9c037c5ab962f6b40ae5786824b722d730089aa6f7db40ad2672801a555.opus",
+          "duration_ms": 1890,
+          "bytes": 5627
+        }
+      }
+    },
+    {
+      "text": "alt",
+      "text_hash": "4d48fba6cf5f7d6abfb35e695f453297870a7a56568ceae968f06d04701b0047",
+      "refs": [
+        "m02|vocab|12|term"
+      ],
+      "audio": {
+        "normal": {
+          "key": "4cde0e3ffd01083a80896e17dc944bd36dd26b234f862c7761492043d7f3903b",
+          "path": "/audio/de/4c/4cde0e3ffd01083a80896e17dc944bd36dd26b234f862c7761492043d7f3903b.opus",
+          "duration_ms": 674,
+          "bytes": 2263
+        }
+      }
+    },
+    {
+      "text": "Deutsch ist eine schöne Sprache.",
+      "text_hash": "4e20cd30b309040990ee3c45fa2fe777a559d54e7a4e18548db80929cfd65e6c",
+      "refs": [
+        "m01|vocab|6|use|1"
+      ],
+      "audio": {
+        "normal": {
+          "key": "55ef24080019d7dcdfeecf7a3ec7f6ed4a0b43590cd568a46e3ba3720188b21d",
+          "path": "/audio/de/55/55ef24080019d7dcdfeecf7a3ec7f6ed4a0b43590cd568a46e3ba3720188b21d.opus",
+          "duration_ms": 2961,
+          "bytes": 9059
+        }
+      }
+    },
+    {
+      "text": "kommen",
+      "text_hash": "529f00bc62dff975aab2f1a4700be67e7c93fe78dca238b5347152391219afee",
+      "refs": [
+        "m01|vocab|2|term"
+      ],
+      "audio": {
+        "normal": {
+          "key": "f981ae718021b585c41816ce36b32be51cba550dcd350fa1da4d9f27d7a0730b",
+          "path": "/audio/de/f9/f981ae718021b585c41816ce36b32be51cba550dcd350fa1da4d9f27d7a0730b.opus",
+          "duration_ms": 749,
+          "bytes": 2572
+        }
+      }
+    },
+    {
+      "text": "Mein Mann arbeitet in Berlin.",
+      "text_hash": "53610672e2213a5514d6c1500b0b54346b23c310a4d60fa8c16b7293d3f7945e",
+      "refs": [
+        "m02|vocab|13|use|1"
+      ],
+      "audio": {
+        "normal": {
+          "key": "9e8466c758161b82a35e427696e69361d22e35e9ad31c01d9d15d0cf83ac4a96",
+          "path": "/audio/de/9e/9e8466c758161b82a35e427696e69361d22e35e9ad31c01d9d15d0cf83ac4a96.opus",
+          "duration_ms": 2888,
+          "bytes": 8949
+        }
+      }
+    },
+    {
+      "text": "Ich komme aus Spanien, aus Madrid.",
+      "text_hash": "554b8922fa609803567ed9c745646a79597659819f51f5acd210b86a2fe1f5cf",
+      "refs": [
+        "m01|text-main|p1|c3"
+      ],
+      "audio": {
+        "normal": {
+          "key": "436ebc194c23a8d6d7916ef53dac30e8bb8e132497965129e14d33795b9b1eda",
+          "path": "/audio/de/43/436ebc194c23a8d6d7916ef53dac30e8bb8e132497965129e14d33795b9b1eda.opus",
+          "duration_ms": 2380,
+          "bytes": 7471
+        }
+      }
+    },
+    {
+      "text": "Madrid liegt in Spanien.",
+      "text_hash": "558be0b9811ad3a1afca8c7ab6e77e4258f911b18eaa10d1fa659db6c8213d0c",
+      "refs": [
+        "m01|vocab|16|use|0"
+      ],
+      "audio": {
+        "normal": {
+          "key": "071d7c811f2697c706927ce1c1fce1361472fa5ed20d4af3bf0bdd42a183b271",
+          "path": "/audio/de/07/071d7c811f2697c706927ce1c1fce1361472fa5ed20d4af3bf0bdd42a183b271.opus",
+          "duration_ms": 3199,
+          "bytes": 9584
+        }
+      }
+    },
+    {
+      "text": "Meine Oma und mein Opa wohnen in München.",
+      "text_hash": "569cf3384bb6f598928f5ab5eb510636036988cd971a364119dd0a21d5bf8264",
+      "refs": [
+        "m02|text-main|p4|c2"
+      ],
+      "audio": {
+        "normal": {
+          "key": "bd51e84961a373dd5a75e18b06ad561ec3ee33f02636a80dace9a0e3b1b6585a",
+          "path": "/audio/de/bd/bd51e84961a373dd5a75e18b06ad561ec3ee33f02636a80dace9a0e3b1b6585a.opus",
+          "duration_ms": 3206,
+          "bytes": 10009
+        }
+      }
+    },
+    {
+      "text": "Meine Cousine studiert Musik.",
+      "text_hash": "56d8930c9c2af6f406bb249b6dc45566f053e62c96e62e28b1c14458c0cf2dde",
+      "refs": [
+        "m02|vocab|21|use|1"
+      ],
+      "audio": {
+        "normal": {
+          "key": "aa1b81e6021d912a12f96147b66ea4d750addf01b37f3d344599ee90addfb3a9",
+          "path": "/audio/de/aa/aa1b81e6021d912a12f96147b66ea4d750addf01b37f3d344599ee90addfb3a9.opus",
+          "duration_ms": 2195,
+          "bytes": 6881
+        }
+      }
+    },
+    {
+      "text": "die Zahl",
+      "text_hash": "5709e0305aeb65894f19875c279db673ff0774619b4ea82d59458244ab1c9bc8",
+      "refs": [
+        "m01|vocab|12|term"
+      ],
+      "audio": {
+        "normal": {
+          "key": "c30ba3b85797044204f26a24f882f3402989f4f91f29232fbeae0e8fb9f737c4",
+          "path": "/audio/de/c3/c30ba3b85797044204f26a24f882f3402989f4f91f29232fbeae0e8fb9f737c4.opus",
+          "duration_ms": 1066,
+          "bytes": 3560
+        }
+      }
+    },
+    {
+      "text": "die Geschwister",
+      "text_hash": "589dd68ad9fadef76c93e32260594ba9797f5f602549076a453913c7d1197b5e",
+      "refs": [
+        "m02|vocab|19|term"
+      ],
+      "audio": {
+        "normal": {
+          "key": "8929b2b529d73b991534a4f48fece2bc17ed2227045d44d950faf8ad2459ca22",
+          "path": "/audio/de/89/8929b2b529d73b991534a4f48fece2bc17ed2227045d44d950faf8ad2459ca22.opus",
+          "duration_ms": 993,
+          "bytes": 3194
+        }
+      }
+    },
+    {
+      "text": "der Cousin",
+      "text_hash": "5b4890bf5c674cbdf6dd8ced784b2e94de62be90b7232e90b064310383bb9a65",
+      "refs": [
+        "m02|vocab|20|term"
+      ],
+      "audio": {
+        "normal": {
+          "key": "879a1218fa080c37fae0307718296dd05c2bbbb58fc8a49eb15aada4388dfa88",
+          "path": "/audio/de/87/879a1218fa080c37fae0307718296dd05c2bbbb58fc8a49eb15aada4388dfa88.opus",
+          "duration_ms": 1126,
+          "bytes": 3711
+        }
+      }
+    },
+    {
+      "text": "Mein Sohn ist noch klein.",
+      "text_hash": "5ba8a49e15322ac60d81071cf71658781ea00822d99ef983251a8f79b95d427d",
+      "refs": [
+        "m02|vocab|9|use|0"
+      ],
+      "audio": {
+        "normal": {
+          "key": "2c0ff1e41c25d183f9e16e2918af3e3f7b11bf155e6f9ee207244132298d57b8",
+          "path": "/audio/de/2c/2c0ff1e41c25d183f9e16e2918af3e3f7b11bf155e6f9ee207244132298d57b8.opus",
+          "duration_ms": 1533,
+          "bytes": 4885
+        }
+      }
+    },
+    {
+      "text": "die Familie",
+      "text_hash": "5c0c4227776695d86a900b9a75023d1b5031cf30867330820d71c93d8cfa4b4f",
+      "refs": [
+        "m02|vocab|1|term"
+      ],
+      "audio": {
+        "normal": {
+          "key": "2abbbe28b9e9bb39cbe01f3cb1e42fadc74129a7d64bd8df34d0e1215ee6ca45",
+          "path": "/audio/de/2a/2abbbe28b9e9bb39cbe01f3cb1e42fadc74129a7d64bd8df34d0e1215ee6ca45.opus",
+          "duration_ms": 1105,
+          "bytes": 3572
+        }
+      }
+    },
+    {
+      "text": "Mein Vater ist siebenundvierzig Jahre alt und arbeitet viel.",
+      "text_hash": "5faab4b0a22c89f4df5cec0d79213f04bcd12317b9ee1e33062dd8dd92850d4a",
+      "refs": [
+        "m02|text-main|p2|c2"
+      ],
+      "audio": {
+        "normal": {
+          "key": "c562cfd86ffe4080e188405b3aee8a64f0e9ae8e123023c15484a60ef12e4ea4",
+          "path": "/audio/de/c5/c562cfd86ffe4080e188405b3aee8a64f0e9ae8e123023c15484a60ef12e4ea4.opus",
+          "duration_ms": 3789,
+          "bytes": 11821
+        }
+      }
+    },
+    {
+      "text": "Ich bin Anna.",
+      "text_hash": "5fd43bb8d13d44548278471f2b38e57de1915d3877589ed20b3c4a2d7aaf75d4",
+      "refs": [
+        "m01|theory|watchout|4|good"
+      ],
+      "audio": {
+        "normal": {
+          "key": "031f13926e951f5d4eeafb3810a458daeaf91a0174ecb9c0428a415759f1a44b",
+          "path": "/audio/de/03/031f13926e951f5d4eeafb3810a458daeaf91a0174ecb9c0428a415759f1a44b.opus",
+          "duration_ms": 1571,
+          "bytes": 4730
+        }
+      }
+    },
+    {
+      "text": "die Großeltern",
+      "text_hash": "60ddc232524418c648c5fcaba2995368e701ed590dee029b9d436c0ce67a2b5c",
+      "refs": [
+        "m02|vocab|7|term"
+      ],
+      "audio": {
+        "normal": {
+          "key": "1b369a3ec270f1a244b058750ca5e1d1db2aad9a1534cfeb13eda6f7e97aa5f5",
+          "path": "/audio/de/1b/1b369a3ec270f1a244b058750ca5e1d1db2aad9a1534cfeb13eda6f7e97aa5f5.opus",
+          "duration_ms": 1876,
+          "bytes": 5573
+        }
+      }
+    },
+    {
+      "text": "Seine Mutter heißt Eva.",
+      "text_hash": "626b252ffa438a74a1e3ee8611e4f45d83cdfd727d297393e26aed2602c38e03",
+      "refs": [
+        "m02|vocab|4|use|1"
+      ],
+      "audio": {
+        "normal": {
+          "key": "b49713a8a1146ce992be2645a197f7d9479a3e03ec13e1b5fd9b77bbd78af7c4",
+          "path": "/audio/de/b4/b49713a8a1146ce992be2645a197f7d9479a3e03ec13e1b5fd9b77bbd78af7c4.opus",
+          "duration_ms": 2307,
+          "bytes": 7006
+        }
+      }
+    },
+    {
+      "text": "Wir kommen aus Spanien.",
+      "text_hash": "6294d7d2f18f34e513bc4ed12a45ebf3c4a5bec1ee41ab686f2c9e2b57459479",
+      "refs": [
+        "m01|vocab|16|use|1"
+      ],
+      "audio": {
+        "normal": {
+          "key": "0a653620476ed5b3c9065cc1c8d89c8c8e90ca38c4ae81ecbc6cffd6c44c7140",
+          "path": "/audio/de/0a/0a653620476ed5b3c9065cc1c8d89c8c8e90ca38c4ae81ecbc6cffd6c44c7140.opus",
+          "duration_ms": 1774,
+          "bytes": 5679
+        }
+      }
+    },
+    {
+      "text": "Frankreich",
+      "text_hash": "6365760ae1ba1eb556bff6e67460d61ac3ae5f8407d275903fabefb83b476c9e",
+      "refs": [
+        "m01|vocab|15|term"
+      ],
+      "audio": {
+        "normal": {
+          "key": "69cdf5c22ce388187c856ba37c36251ec134973e88674d47dc8af7fda28be2e1",
+          "path": "/audio/de/69/69cdf5c22ce388187c856ba37c36251ec134973e88674d47dc8af7fda28be2e1.opus",
+          "duration_ms": 980,
+          "bytes": 3231
+        }
+      }
+    },
+    {
+      "text": "Ich bin Anna. Du bist Student. Wir sind aus Spanien.",
+      "text_hash": "64202e6304fd4eadd1d4e86fef28a3c81f30f855afd8eae4bcc43f49310d0117",
+      "refs": [
+        "m01|theory|spotlight|2|2|example"
+      ],
+      "audio": {
+        "normal": {
+          "key": "bff13f5c5238681f1fdf595d5df4e35ccf6b13fc7c2002c9a2f6f61dda2fdf8a",
+          "path": "/audio/de/bf/bff13f5c5238681f1fdf595d5df4e35ccf6b13fc7c2002c9a2f6f61dda2fdf8a.opus",
+          "duration_ms": 3699,
+          "bytes": 11161
+        }
+      }
+    },
+    {
+      "text": "Meine Familie wohnt in Köln.",
+      "text_hash": "6596083d2368b589677af988c087a6df3f117df37f259b038bb4200240e44e0b",
+      "refs": [
+        "m02|theory|watchout|3|good",
+        "m02|vocab|1|use|1"
+      ],
+      "audio": {
+        "normal": {
+          "key": "6359dab0873869795f4a27b6de8a39917ae2d7461ff0cec972b7549dcc7a7819",
+          "path": "/audio/de/63/6359dab0873869795f4a27b6de8a39917ae2d7461ff0cec972b7549dcc7a7819.opus",
+          "duration_ms": 2365,
+          "bytes": 7404
+        }
+      }
+    },
+    {
+      "text": "Ich wohne jetzt in Wien, in Österreich.",
+      "text_hash": "68756b3cf574333be776363384c4ac04d7b6606b7fa2a27f63d4e6ead82fb774",
+      "refs": [
+        "m01|text-main|p1|c4"
+      ],
+      "audio": {
+        "normal": {
+          "key": "5a3bf6a8e0f96e86ab2488167c997665c39c2c4929fc3bb9b9e1d9fc24593062",
+          "path": "/audio/de/5a/5a3bf6a8e0f96e86ab2488167c997665c39c2c4929fc3bb9b9e1d9fc24593062.opus",
+          "duration_ms": 3232,
+          "bytes": 9816
+        }
+      }
+    },
+    {
+      "text": "Spanien",
+      "text_hash": "6977d57accf6e34b55124e6944a3f8f053e83863c8c876127b27503d1920edb0",
+      "refs": [
+        "m01|vocab|16|term"
+      ],
+      "audio": {
+        "normal": {
+          "key": "1e457638009f7891fccf43099cb032406bf86ce900bb61542cb5592bdab2d28c",
+          "path": "/audio/de/1e/1e457638009f7891fccf43099cb032406bf86ce900bb61542cb5592bdab2d28c.opus",
+          "duration_ms": 1557,
+          "bytes": 4616
+        }
+      }
+    },
+    {
+      "text": "Sara: Ich bin Sara.",
+      "text_hash": "6a1f546deb42d3a0fe988cadbafade201d9bdb9fff8bdad21e070d6edd45de38",
+      "refs": [
+        "m01|text-extra|p3|c1"
+      ],
+      "audio": {
+        "normal": {
+          "key": "ae65a0cc7e003b51c1e1bbe32542323fc63a47070bfcdbec6b71bc703e759034",
+          "path": "/audio/de/ae/ae65a0cc7e003b51c1e1bbe32542323fc63a47070bfcdbec6b71bc703e759034.opus",
+          "duration_ms": 2166,
+          "bytes": 6763
+        }
+      }
+    },
+    {
+      "text": "Ich habe zwei Schwestern.",
+      "text_hash": "6b55b9e02ed14f1859167df1c7ba478287a4a6521e58ce8c29c06213f8d05807",
+      "refs": [
+        "m02|vocab|6|use|1"
+      ],
+      "audio": {
+        "normal": {
+          "key": "15c0a198e1515bc7f90fa061d2017fe0d541a80573b15295952b656fb4ce0c68",
+          "path": "/audio/de/15/15c0a198e1515bc7f90fa061d2017fe0d541a80573b15295952b656fb4ce0c68.opus",
+          "duration_ms": 3596,
+          "bytes": 10449
+        }
+      }
+    },
+    {
+      "text": "die Schwester",
+      "text_hash": "6b9bb8f3a1a5119509af88c88889c2405a6d0b325ab5f5732b049ee096e554f3",
+      "refs": [
+        "m02|vocab|6|term"
+      ],
+      "audio": {
+        "normal": {
+          "key": "1a5156b262f44b2a03b09d51cf8b66333fca1bc2c99c135be95e91fe31327c1b",
+          "path": "/audio/de/1a/1a5156b262f44b2a03b09d51cf8b66333fca1bc2c99c135be95e91fe31327c1b.opus",
+          "duration_ms": 1809,
+          "bytes": 5191
+        }
+      }
+    },
+    {
+      "text": "Sprache · Straße · sprechen · Vater · Wasser",
+      "text_hash": "6bada55eecf0a606ccba97e75af121fb33a3ffeec6d090afb7628803442bde56",
+      "refs": [
+        "m01|theory|spotlight|1|3|example"
+      ],
+      "audio": {
+        "normal": {
+          "key": "560ae41e0d8d8bb59bc578cc95c93ab55c15ed418ba6ce9e96b590fdf021c6d3",
+          "path": "/audio/de/56/560ae41e0d8d8bb59bc578cc95c93ab55c15ed418ba6ce9e96b590fdf021c6d3.opus",
+          "duration_ms": 4370,
+          "bytes": 12765
+        }
+      }
+    },
+    {
+      "text": "Mein Onkel wohnt in Hamburg.",
+      "text_hash": "6dfc17d13cbabddf095199b9d27216778be47e24de3e432a5e57e408e787d382",
+      "refs": [
+        "m02|vocab|17|use|0"
+      ],
+      "audio": {
+        "normal": {
+          "key": "0999658c86cc2e5f191af6bf42ccbb26894e92dcaf98d428f5fcac475a9eb02b",
+          "path": "/audio/de/09/0999658c86cc2e5f191af6bf42ccbb26894e92dcaf98d428f5fcac475a9eb02b.opus",
+          "duration_ms": 2366,
+          "bytes": 7436
+        }
+      }
+    },
+    {
+      "text": "Spanisch",
+      "text_hash": "6e3815e97afad8de082da1bbf8d1e66c101da1e02665db4654c5ff7118eddbe5",
+      "refs": [
+        "m01|vocab|20|term"
+      ],
+      "audio": {
+        "normal": {
+          "key": "226ef5938ef6954f2e3c1be4c6f82f98eb5eb82febe8561700e4fa6b70831427",
+          "path": "/audio/de/22/226ef5938ef6954f2e3c1be4c6f82f98eb5eb82febe8561700e4fa6b70831427.opus",
+          "duration_ms": 930,
+          "bytes": 3062
+        }
+      }
+    },
+    {
+      "text": "Meine kleine Schwester Mia ist erst acht Jahre alt.",
+      "text_hash": "6e70b8ed209e7323f544cd2188389172b4822b9a43a168a20d53b3ddd2e89cac",
+      "refs": [
+        "m02|text-main|p3|c3"
+      ],
+      "audio": {
+        "normal": {
+          "key": "7bf926b733912375faa8455f3c673b8d17c05a75b40657facabcd9dd9174f4b1",
+          "path": "/audio/de/7b/7bf926b733912375faa8455f3c673b8d17c05a75b40657facabcd9dd9174f4b1.opus",
+          "duration_ms": 3808,
+          "bytes": 11508
+        }
+      }
+    },
+    {
+      "text": "Meine Eltern heißen Klaus und Petra.",
+      "text_hash": "6f71552f4c3311901bcb9f895286eac188d9f5c7c725235397208db256ae78fb",
+      "refs": [
+        "m02|text-main|p2|c1"
+      ],
+      "audio": {
+        "normal": {
+          "key": "0de8b6b322fb119e388c0b3fec20cb9da01761b1e7500f1b9cf62223d48e7a0a",
+          "path": "/audio/de/0d/0de8b6b322fb119e388c0b3fec20cb9da01761b1e7500f1b9cf62223d48e7a0a.opus",
+          "duration_ms": 3639,
+          "bytes": 11135
+        }
+      }
+    },
+    {
+      "text": "Sara: Aus welchem Land?",
+      "text_hash": "73b38da45cb1d49853b0aa727e53ade31ca025bde7dd6a35fff38979fd5f3388",
+      "refs": [
+        "m01|text-extra|p5|c1"
+      ],
+      "audio": {
+        "normal": {
+          "key": "f69fde1b93e1e9a6e91a594193dcf2835538201ddd99a49ee2aeaa3ef116b923",
+          "path": "/audio/de/f6/f69fde1b93e1e9a6e91a594193dcf2835538201ddd99a49ee2aeaa3ef116b923.opus",
+          "duration_ms": 2089,
+          "bytes": 6554
+        }
+      }
+    },
+    {
+      "text": "Foto 3: Das ist meine Cousine Lena mit ihrer Tochter.",
+      "text_hash": "75403df445e20a74cb86f5238ca08396798a80ae9776f4f81312335001b76bcc",
+      "refs": [
+        "m02|text-extra|p3|c1"
+      ],
+      "audio": {
+        "normal": {
+          "key": "ac964c1c5647b9531b3e32d1275a2179063c9b9ea0e57eae380a7e9520eb5e47",
+          "path": "/audio/de/ac/ac964c1c5647b9531b3e32d1275a2179063c9b9ea0e57eae380a7e9520eb5e47.opus",
+          "duration_ms": 3570,
+          "bytes": 10988
+        }
+      }
+    },
+    {
+      "text": "Ich liebe meine Familie.",
+      "text_hash": "75854fa4b8612fa72a775506af94d2653c366edcd11ef207a572bc010f62097a",
+      "refs": [
+        "m02|text-main|p5|c1"
+      ],
+      "audio": {
+        "normal": {
+          "key": "bd1337e2a2b1f5bbb18b71849ab8486862127f2dc10e2f40edfadacecad176a4",
+          "path": "/audio/de/bd/bd1337e2a2b1f5bbb18b71849ab8486862127f2dc10e2f40edfadacecad176a4.opus",
+          "duration_ms": 3487,
+          "bytes": 9734
+        }
+      }
+    },
+    {
+      "text": "Mein Bruder ist zwanzig Jahre alt.",
+      "text_hash": "76461b8a94c8ac7e1dedf0aebde846d15e379db02441ba030bd3beead3a06182",
+      "refs": [
+        "m02|vocab|5|use|0"
+      ],
+      "audio": {
+        "normal": {
+          "key": "f1d1f9cbf4ca5ed50ac5877a59506522696292f253e9eee8d86e7c6b9f17a36a",
+          "path": "/audio/de/f1/f1d1f9cbf4ca5ed50ac5877a59506522696292f253e9eee8d86e7c6b9f17a36a.opus",
+          "duration_ms": 2471,
+          "bytes": 7704
+        }
+      }
+    },
+    {
+      "text": "das Baby",
+      "text_hash": "76d2d70d2f5c79e9f6190b5b136e0fb901ce97cbb50280ef8d863d849bcef75c",
+      "refs": [
+        "m02|vocab|22|term"
+      ],
+      "audio": {
+        "normal": {
+          "key": "ddd5f0ea06a76d2718fbf0bfb0996c4761f25ffcf78ca9908a41e3c6af9810ec",
+          "path": "/audio/de/dd/ddd5f0ea06a76d2718fbf0bfb0996c4761f25ffcf78ca9908a41e3c6af9810ec.opus",
+          "duration_ms": 930,
+          "bytes": 3096
+        }
+      }
+    },
+    {
+      "text": "die Tochter",
+      "text_hash": "78471cfb70cc0c6fe8dda1ba2a3e5b4f010039de1001dc90b10341bbd68f88c3",
+      "refs": [
+        "m02|vocab|10|term"
+      ],
+      "audio": {
+        "normal": {
+          "key": "d34210529f5902fec1c96310c209a9cca6e9773d457379444507cd27f4ec10e7",
+          "path": "/audio/de/d3/d34210529f5902fec1c96310c209a9cca6e9773d457379444507cd27f4ec10e7.opus",
+          "duration_ms": 1031,
+          "bytes": 3278
+        }
+      }
+    },
+    {
+      "text": "Ich besuche meine Oma oft.",
+      "text_hash": "787bb4bc913411aa394c88c092a219e17e5769ccb98a0def901de9e2af2a6132",
+      "refs": [
+        "m02|vocab|15|use|1"
+      ],
+      "audio": {
+        "normal": {
+          "key": "2d869e08bd0dbd8158cfca603a70b3c28da4e067747111fd8e2ea9f6fbb09b15",
+          "path": "/audio/de/2d/2d869e08bd0dbd8158cfca603a70b3c28da4e067747111fd8e2ea9f6fbb09b15.opus",
+          "duration_ms": 1917,
+          "bytes": 6027
+        }
+      }
+    },
+    {
+      "text": "Wo wohnst du jetzt?",
+      "text_hash": "7b86b3f857f9cb900ca8dc0df674c773ed51197366b0c80843f2439ab1a71f8a",
+      "refs": [
+        "m01|text-extra|p9|c2"
+      ],
+      "audio": {
+        "normal": {
+          "key": "d019298662b2a91b6d65999e513560ea3ae5faace9fc11a183a43e65a43ff64b",
+          "path": "/audio/de/d0/d019298662b2a91b6d65999e513560ea3ae5faace9fc11a183a43e65a43ff64b.opus",
+          "duration_ms": 1354,
+          "bytes": 4327
+        }
+      }
+    },
+    {
+      "text": "Meine Freundin heißt Nina.",
+      "text_hash": "7bc3beb51318d6110dd2ac0d26472eaad5e112cf1bcb17d1c722be8b5396d843",
+      "refs": [
+        "m01|text-main|p5|c1"
+      ],
+      "audio": {
+        "normal": {
+          "key": "5d0f26dcf18cf0e4972d72adac4ee837bffa970082804a9aab63129c665e9077",
+          "path": "/audio/de/5d/5d0f26dcf18cf0e4972d72adac4ee837bffa970082804a9aab63129c665e9077.opus",
+          "duration_ms": 3064,
+          "bytes": 8973
+        }
+      }
+    },
+    {
+      "text": "Buchstabieren Sie bitte Ihren Namen.",
+      "text_hash": "7e24ed620ea646a59db37a5cf1d9bd6789922f36ca1174e1062a677e02357041",
+      "refs": [
+        "m01|vocab|4|use|0"
+      ],
+      "audio": {
+        "normal": {
+          "key": "c149b927ccfe6d2fa21fa0f6b1fcd473b79e81ddda32ed0d7c9f2d381101aabe",
+          "path": "/audio/de/c1/c149b927ccfe6d2fa21fa0f6b1fcd473b79e81ddda32ed0d7c9f2d381101aabe.opus",
+          "duration_ms": 1955,
+          "bytes": 6098
+        }
+      }
+    },
+    {
+      "text": "Frankreich?",
+      "text_hash": "7edac4f49d498398f8be2051b45c6880e284d3fca20de6ed4c1ce7b06dcbef0f",
+      "refs": [
+        "m01|text-extra|p5|c2"
+      ],
+      "audio": {
+        "normal": {
+          "key": "0a3071ea25fefd5731dcc50951accb7a5a4878b0972c1023e7e47eb647e3ddc1",
+          "path": "/audio/de/0a/0a3071ea25fefd5731dcc50951accb7a5a4878b0972c1023e7e47eb647e3ddc1.opus",
+          "duration_ms": 1225,
+          "bytes": 3945
+        }
+      }
+    },
+    {
+      "text": "Foto 1: Das ist mein Opa mit meinem Onkel.",
+      "text_hash": "7fb3ee577011874236963c681109357dbd511653a3f351ece1da01598344d26e",
+      "refs": [
+        "m02|text-extra|p1|c1"
+      ],
+      "audio": {
+        "normal": {
+          "key": "2c56fb5fc124a842e1e0a1e2e3d0780dde2c6e8b111319677fb6cae84d12f23a",
+          "path": "/audio/de/2c/2c56fb5fc124a842e1e0a1e2e3d0780dde2c6e8b111319677fb6cae84d12f23a.opus",
+          "duration_ms": 3126,
+          "bytes": 9758
+        }
+      }
+    },
+    {
+      "text": "Ich heiße Anna.",
+      "text_hash": "8018f2f68b239b9a02a8b2b9613cbf2977a478d0786afc872de48115beb8e9a3",
+      "refs": [
+        "m01|vocab|1|use|0"
+      ],
+      "audio": {
+        "normal": {
+          "key": "32820b16b838b4c2afd60ebfc8d33c6ea92b46264e9f1bc9b4f7408450ee39db",
+          "path": "/audio/de/32/32820b16b838b4c2afd60ebfc8d33c6ea92b46264e9f1bc9b4f7408450ee39db.opus",
+          "duration_ms": 1887,
+          "bytes": 5633
+        }
+      }
+    },
+    {
+      "text": "Deutsch",
+      "text_hash": "801cfe0fa1182664d16f4aaf7856cc73412f79ef508a866eebc2e5ccf125ff0a",
+      "refs": [
+        "m01|vocab|17|term"
+      ],
+      "audio": {
+        "normal": {
+          "key": "9196b1995b6929f624a9537ebdb429115e1be15005d26d53ad0857a8ed52dfe9",
+          "path": "/audio/de/91/9196b1995b6929f624a9537ebdb429115e1be15005d26d53ad0857a8ed52dfe9.opus",
+          "duration_ms": 851,
+          "bytes": 2839
+        }
+      }
+    },
+    {
+      "text": "Ich komme aus Deutschland.",
+      "text_hash": "82a727d66eb4b6cde8fd3cb7abb362bd320a618896d4023cd0b54ef1ac69eff1",
+      "refs": [
+        "m01|theory|watchout|1|good",
+        "m01|vocab|13|use|0"
+      ],
+      "audio": {
+        "normal": {
+          "key": "fb520f3948a70228e6291264eaaf8a04c6bbfe5723ae5e9af09d786044c32633",
+          "path": "/audio/de/fb/fb520f3948a70228e6291264eaaf8a04c6bbfe5723ae5e9af09d786044c32633.opus",
+          "duration_ms": 1601,
+          "bytes": 5081
+        }
+      }
+    },
+    {
+      "text": "Im Alter von dreißig Jahren.",
+      "text_hash": "8563fcbc70214825123339890ad575cd9ce73a2b90538cc89c15c210084517d5",
+      "refs": [
+        "m02|vocab|11|use|0"
+      ],
+      "audio": {
+        "normal": {
+          "key": "88240f1fdf8477a120b18eab0de129e490edb66bf55ffe096564402d7a84a793",
+          "path": "/audio/de/88/88240f1fdf8477a120b18eab0de129e490edb66bf55ffe096564402d7a84a793.opus",
+          "duration_ms": 2009,
+          "bytes": 6349
+        }
+      }
+    },
+    {
+      "text": "jung",
+      "text_hash": "85b37832ed953d79b1cb6b8b03fd3fc6f8aff7f6b3edb49a759886e76321b4df",
+      "refs": [
+        "m02|vocab|23|term"
+      ],
+      "audio": {
+        "normal": {
+          "key": "10d6c7acec9c6fc4f2446fa274ffa75c7ae5f80097d9d18039ea08efda656a67",
+          "path": "/audio/de/10/10d6c7acec9c6fc4f2446fa274ffa75c7ae5f80097d9d18039ea08efda656a67.opus",
+          "duration_ms": 815,
+          "bytes": 2689
+        }
+      }
+    },
+    {
+      "text": "Ich lerne Spanisch.",
+      "text_hash": "8639e261aee7248b12f29b83a0d6b5b26dd9f05c53d98bf940844eb16b3bcea7",
+      "refs": [
+        "m01|vocab|20|use|1"
+      ],
+      "audio": {
+        "normal": {
+          "key": "df63d9b845e3e9717af41e0e8f80fc1174b6d12a3a9f084ad8a60c28aa740963",
+          "path": "/audio/de/df/df63d9b845e3e9717af41e0e8f80fc1174b6d12a3a9f084ad8a60c28aa740963.opus",
+          "duration_ms": 2075,
+          "bytes": 6261
+        }
+      }
+    },
+    {
+      "text": "die Frau",
+      "text_hash": "86d4dc95732c901f3619fa0dbb4dd81cb877db5029eea6d62f6067f5d0186aba",
+      "refs": [
+        "m02|vocab|14|term"
+      ],
+      "audio": {
+        "normal": {
+          "key": "6f153aca51facce170d2c4227760df3534b49cdfc51f5ffdc3b90fbaea8ae2b5",
+          "path": "/audio/de/6f/6f153aca51facce170d2c4227760df3534b49cdfc51f5ffdc3b90fbaea8ae2b5.opus",
+          "duration_ms": 933,
+          "bytes": 3017
+        }
+      }
+    },
+    {
+      "text": "Wir besuchen sie oft.",
+      "text_hash": "8d0165b80d7c5363a808262f068c604e2b2899a7c9bb4fcab2b340fd38b26085",
+      "refs": [
+        "m02|text-main|p4|c4"
+      ],
+      "audio": {
+        "normal": {
+          "key": "107cf846fa05d987efc9d199a106374d2a067230cf84c9eb1d5a8c9ff201c5c0",
+          "path": "/audio/de/10/107cf846fa05d987efc9d199a106374d2a067230cf84c9eb1d5a8c9ff201c5c0.opus",
+          "duration_ms": 1383,
+          "bytes": 4457
+        }
+      }
+    },
+    {
+      "text": "Berlin liegt in Deutschland.",
+      "text_hash": "8dbc7de1c9c0770212aaaf76462632ea94f4c353d690e6c942e605fbdf8dc5f5",
+      "refs": [
+        "m01|vocab|13|use|1"
+      ],
+      "audio": {
+        "normal": {
+          "key": "7f2f3fbc3083a1e5ac63188221e4f3fcbbe449e79e913aa2a4a475993a5efe02",
+          "path": "/audio/de/7f/7f2f3fbc3083a1e5ac63188221e4f3fcbbe449e79e913aa2a4a475993a5efe02.opus",
+          "duration_ms": 1680,
+          "bytes": 5318
+        }
+      }
+    },
+    {
+      "text": "Wir besuchen die Großeltern oft.",
+      "text_hash": "8de687d6fa16b853ceb7ac9c3f0f2a55e422390a49728d42f058d1cefae67ab2",
+      "refs": [
+        "m02|vocab|7|use|1"
+      ],
+      "audio": {
+        "normal": {
+          "key": "5469a4fc44d935ed74a7428943e0edaaf19c16895b464a4c7885147cdec36919",
+          "path": "/audio/de/54/5469a4fc44d935ed74a7428943e0edaaf19c16895b464a4c7885147cdec36919.opus",
+          "duration_ms": 2523,
+          "bytes": 7818
+        }
+      }
+    },
+    {
+      "text": "Oma ist schon vierundsiebzig, aber sie ist noch sehr aktiv.",
+      "text_hash": "8f8c6302b46fdbcfdc5df41a84996b3570b8f4edebe6ffe216b65173911a1c01",
+      "refs": [
+        "m02|text-main|p4|c3"
+      ],
+      "audio": {
+        "normal": {
+          "key": "638781affe7b307537d01723d7dd87661ac816020264d1d8c80f6b33bdf745ea",
+          "path": "/audio/de/63/638781affe7b307537d01723d7dd87661ac816020264d1d8c80f6b33bdf745ea.opus",
+          "duration_ms": 4015,
+          "bytes": 12298
+        }
+      }
+    },
+    {
+      "text": "Mein Opa kommt aus Österreich.",
+      "text_hash": "9065d370f9ad8cb0e4d0dd99036c58e7c908ca58c981fd4ab7890a533437bdec",
+      "refs": [
+        "m02|vocab|16|use|0"
+      ],
+      "audio": {
+        "normal": {
+          "key": "7baac15570af86e30cceacc55d7565671326c1ef7e3ab3716207b6fa1e687587",
+          "path": "/audio/de/7b/7baac15570af86e30cceacc55d7565671326c1ef7e3ab3716207b6fa1e687587.opus",
+          "duration_ms": 2278,
+          "bytes": 7354
+        }
+      }
+    },
+    {
+      "text": "ledig",
+      "text_hash": "91173dad46b7dd776eb2e3beaf0ffb4a07e9d2441dad9fe86e776ecc8aee83cf",
+      "refs": [
+        "m01|vocab|11|term"
+      ],
+      "audio": {
+        "normal": {
+          "key": "257b4ab89deea43d5d779362f57ac94066d5532c854cb612da1114472c997f76",
+          "path": "/audio/de/25/257b4ab89deea43d5d779362f57ac94066d5532c854cb612da1114472c997f76.opus",
+          "duration_ms": 898,
+          "bytes": 3038
+        }
+      }
+    },
+    {
+      "text": "Und wo wohnst du?",
+      "text_hash": "92b73862e35acbc79bf9fc5366409331e946f626c64586198cef75212650511b",
+      "refs": [
+        "m01|text-main|p6|c4"
+      ],
+      "audio": {
+        "normal": {
+          "key": "6017f42f5e2d5f2c9d09d77804791f85dc0f3fcc14b6e268e7ac0a5800736fa4",
+          "path": "/audio/de/60/6017f42f5e2d5f2c9d09d77804791f85dc0f3fcc14b6e268e7ac0a5800736fa4.opus",
+          "duration_ms": 1602,
+          "bytes": 5081
+        }
+      }
+    },
+    {
+      "text": "Er ist noch ein Kind.",
+      "text_hash": "92d602394d068e3595d550298aef9445a712ec45783c1f64edf47f1d2c168cf8",
+      "refs": [
+        "m02|text-extra|p4|c2"
+      ],
+      "audio": {
+        "normal": {
+          "key": "8498f8cddacb54d57f73275ef3696101d9b40d6d862506f6d6407decd25d653c",
+          "path": "/audio/de/84/8498f8cddacb54d57f73275ef3696101d9b40d6d862506f6d6407decd25d653c.opus",
+          "duration_ms": 1486,
+          "bytes": 4719
+        }
+      }
+    },
+    {
+      "text": "die Eltern",
+      "text_hash": "941ada4ee93bc215e72fb4f2a67e2917f9a87999a81789f29ce9458507bd8631",
+      "refs": [
+        "m02|vocab|2|term"
+      ],
+      "audio": {
+        "normal": {
+          "key": "cd48a07f895b51cbbae6b9a7fbdd178316eba50a5b561d2db216f9ecf0f83920",
+          "path": "/audio/de/cd/cd48a07f895b51cbbae6b9a7fbdd178316eba50a5b561d2db216f9ecf0f83920.opus",
+          "duration_ms": 1006,
+          "bytes": 3340
+        }
+      }
+    },
+    {
+      "text": "Meine Eltern wohnen in Berlin.",
+      "text_hash": "952b82cb0a7ba3f4436b58322150c29ec7e8919a8f27a37163ce581bfab88e98",
+      "refs": [
+        "m02|theory|watchout|4|good",
+        "m02|vocab|2|use|0"
+      ],
+      "audio": {
+        "normal": {
+          "key": "3a7954bbec64aca2a6b933870956e73877b36b096f60a115875f5d3070b7729f",
+          "path": "/audio/de/3a/3a7954bbec64aca2a6b933870956e73877b36b096f60a115875f5d3070b7729f.opus",
+          "duration_ms": 2142,
+          "bytes": 6954
+        }
+      }
+    },
+    {
+      "text": "Wie ist deine Telefonnummer?",
+      "text_hash": "98058d2c2947148adfbb22a3ab5e5d58a03ecb740b36c738afb23339fa2b3e8d",
+      "refs": [
+        "m01|vocab|9|use|0"
+      ],
+      "audio": {
+        "normal": {
+          "key": "ab7aa56d90ba2d02b246755ffefaa51f5b8002ac0a0bdeb34df551d8f4ef1e89",
+          "path": "/audio/de/ab/ab7aa56d90ba2d02b246755ffefaa51f5b8002ac0a0bdeb34df551d8f4ef1e89.opus",
+          "duration_ms": 1794,
+          "bytes": 5602
+        }
+      }
+    },
+    {
+      "text": "Englisch",
+      "text_hash": "983ea57f2212eb74c09837138f8672bb7c59d1248afd6ef68eb5a9c33d91f508",
+      "refs": [
+        "m01|vocab|18|term"
+      ],
+      "audio": {
+        "normal": {
+          "key": "d8acd5e8bfdce5526cf84209a86c718f0c3254495223caf6e0f9210ac89680eb",
+          "path": "/audio/de/d8/d8acd5e8bfdce5526cf84209a86c718f0c3254495223caf6e0f9210ac89680eb.opus",
+          "duration_ms": 914,
+          "bytes": 3059
+        }
+      }
+    },
+    {
+      "text": "Meine Tochter heißt Sophie.",
+      "text_hash": "9aa458abeccec2592292281984d3a9e6b713cb93d8adcf5a438134544d6ddd94",
+      "refs": [
+        "m02|vocab|10|use|0"
+      ],
+      "audio": {
+        "normal": {
+          "key": "916aabab53f6714bda7af0f7e2131161ed8fa7b6e405d7929fd6b1e876af89e6",
+          "path": "/audio/de/91/916aabab53f6714bda7af0f7e2131161ed8fa7b6e405d7929fd6b1e876af89e6.opus",
+          "duration_ms": 3581,
+          "bytes": 10683
+        }
+      }
+    },
+    {
+      "text": "Ich bin verheiratet.",
+      "text_hash": "9d81260aa5824ce44ab8a2f44ae41af37d9c3681f49cbd70faa44cff6a6af535",
+      "refs": [
+        "m01|vocab|10|use|0"
+      ],
+      "audio": {
+        "normal": {
+          "key": "11b69464a31bdad0de33521564f05cc8de6200b667fc6877211ecf2aa14bfd47",
+          "path": "/audio/de/11/11b69464a31bdad0de33521564f05cc8de6200b667fc6877211ecf2aa14bfd47.opus",
+          "duration_ms": 1113,
+          "bytes": 3629
+        }
+      }
+    },
+    {
+      "text": "Ich lerne Deutsch.",
+      "text_hash": "9e8ddb9e87743d9ba6d69e615ee16741b3fe7d5de99c3b746a6335a13d82d1a1",
+      "refs": [
+        "m01|vocab|17|use|0"
+      ],
+      "audio": {
+        "normal": {
+          "key": "7643b92865d31a42ec6f39f170c09ac9fa51dfaf47c7d2874c16121bb0cbc7c4",
+          "path": "/audio/de/76/7643b92865d31a42ec6f39f170c09ac9fa51dfaf47c7d2874c16121bb0cbc7c4.opus",
+          "duration_ms": 1616,
+          "bytes": 5136
+        }
+      }
+    },
+    {
+      "text": "Sara: Hallo!",
+      "text_hash": "9edfb0a3013c4182c52dedc0ae44e3bef25e6f2b812dde07e6b6c57d85ed8f90",
+      "refs": [
+        "m01|text-extra|p1|c1"
+      ],
+      "audio": {
+        "normal": {
+          "key": "13d2959c1c33bc59ba23f5865ab6b6ac4cadb0bed99961f06aa6bb1829ab2262",
+          "path": "/audio/de/13/13d2959c1c33bc59ba23f5865ab6b6ac4cadb0bed99961f06aa6bb1829ab2262.opus",
+          "duration_ms": 1897,
+          "bytes": 5837
+        }
+      }
+    },
+    {
+      "text": "Deutsch ist schwer, aber schön.",
+      "text_hash": "9ee19369e550cdb2bd6c1cd8256ae0d941f2c242ff6d1fe8617dce55556885e4",
+      "refs": [
+        "m01|text-main|p3|c3"
+      ],
+      "audio": {
+        "normal": {
+          "key": "b27626ccc40af9cb9a49faca72aca63267daa40aacb9ed38b1c1b193e74a65f7",
+          "path": "/audio/de/b2/b27626ccc40af9cb9a49faca72aca63267daa40aacb9ed38b1c1b193e74a65f7.opus",
+          "duration_ms": 2398,
+          "bytes": 7365
+        }
+      }
+    },
+    {
+      "text": "Mein Vater ist fünfzig Jahre alt.",
+      "text_hash": "9f4bc8c31372532976e7ca1a07c8bdb91fdf1b12927c57948b9691de34003ef9",
+      "refs": [
+        "m02|vocab|12|use|0"
+      ],
+      "audio": {
+        "normal": {
+          "key": "2a7ffd4b4bcb43bc4e2d4e6b359f16ae669861661f340aba3f2d371cc68c2245",
+          "path": "/audio/de/2a/2a7ffd4b4bcb43bc4e2d4e6b359f16ae669861661f340aba3f2d371cc68c2245.opus",
+          "duration_ms": 2329,
+          "bytes": 7251
+        }
+      }
+    },
+    {
+      "text": "Meine Eltern sind noch jung.",
+      "text_hash": "a0da90ee323cc7bc3ed99e698da61daab57eaf4e12927ef4f7a7e25cae361ef7",
+      "refs": [
+        "m02|vocab|23|use|0"
+      ],
+      "audio": {
+        "normal": {
+          "key": "8cff2d1e21eee4c68335756b9d4338b64150ca4f036c8dd91919be2b3abcfdd0",
+          "path": "/audio/de/8c/8cff2d1e21eee4c68335756b9d4338b64150ca4f036c8dd91919be2b3abcfdd0.opus",
+          "duration_ms": 1806,
+          "bytes": 5732
+        }
+      }
+    },
+    {
+      "text": "Von Beruf bin ich Studentin.",
+      "text_hash": "a17981be88314512a2a38e291bbe966cf959ee4fdf9cd9ba9ecd480494b2df26",
+      "refs": [
+        "m01|text-main|p3|c1"
+      ],
+      "audio": {
+        "normal": {
+          "key": "f481525309e715690e17b3e4294fd6a7858d113274167ecd0c927af4bc0d481b",
+          "path": "/audio/de/f4/f481525309e715690e17b3e4294fd6a7858d113274167ecd0c927af4bc0d481b.opus",
+          "duration_ms": 2765,
+          "bytes": 8574
+        }
+      }
+    },
+    {
+      "text": "Paris ist in Frankreich.",
+      "text_hash": "a3b44194afc4987cc66bdfedf29bebfac708ecef3512b7ead41944d4d4a40e68",
+      "refs": [
+        "m01|vocab|15|use|0"
+      ],
+      "audio": {
+        "normal": {
+          "key": "c38c7b2479db85ec767641a7ee48bfdb780c22c5499eef50b59f01b58910244d",
+          "path": "/audio/de/c3/c38c7b2479db85ec767641a7ee48bfdb780c22c5499eef50b59f01b58910244d.opus",
+          "duration_ms": 2654,
+          "bytes": 8116
+        }
+      }
+    },
+    {
+      "text": "Ich lerne hier Deutsch.",
+      "text_hash": "a4ee60bf3d691b5f31d76a6dfcc272a62650ad3f7ea3ebff728e480f30d676d0",
+      "refs": [
+        "m01|text-main|p3|c2"
+      ],
+      "audio": {
+        "normal": {
+          "key": "eecfb2bb7ddf71223596d42fcf65d71660d56a62c4e7e772395da2c85ad43219",
+          "path": "/audio/de/ee/eecfb2bb7ddf71223596d42fcf65d71660d56a62c4e7e772395da2c85ad43219.opus",
+          "duration_ms": 1529,
+          "bytes": 4888
+        }
+      }
+    },
+    {
+      "text": "die Mutter",
+      "text_hash": "a684f7ded98364581976f682a1a3cd6f6ec7d4c765283b190b40af5149fe0b3c",
+      "refs": [
+        "m02|vocab|4|term"
+      ],
+      "audio": {
+        "normal": {
+          "key": "7191f40214f4aeb4f86703ba1dca6adb25883dbf59d35fbfd66f672949341beb",
+          "path": "/audio/de/71/7191f40214f4aeb4f86703ba1dca6adb25883dbf59d35fbfd66f672949341beb.opus",
+          "duration_ms": 888,
+          "bytes": 2856
+        }
+      }
+    },
+    {
+      "text": "Hast du Geschwister?",
+      "text_hash": "a7277c618861e5078f94de36c7c8863bb17b80ea05a3b2b4f1c9434e745151dd",
+      "refs": [
+        "m02|text-main|p5|c3"
+      ],
+      "audio": {
+        "normal": {
+          "key": "dcac34c3177bca288c8645e734c7b7729859581859c745a9d970372cc9c994d2",
+          "path": "/audio/de/dc/dcac34c3177bca288c8645e734c7b7729859581859c745a9d970372cc9c994d2.opus",
+          "duration_ms": 1366,
+          "bytes": 4382
+        }
+      }
+    },
+    {
+      "text": "Meine Adresse ist Bahnstraße 12. Meine Telefonnummer ist null eins sieben sechs, zwei drei drei.",
+      "text_hash": "a88253fdf7d309f65e739613d3a36dd9a626d9ca017bbd64fe7ed2cf66e104ea",
+      "refs": [
+        "m01|text-main|p2|c1"
+      ],
+      "audio": {
+        "normal": {
+          "key": "2cf87b73eb09fd2c52ece7dff4573fbf1952be77f78b0538709b018a1c640f09",
+          "path": "/audio/de/2c/2cf87b73eb09fd2c52ece7dff4573fbf1952be77f78b0538709b018a1c640f09.opus",
+          "duration_ms": 6958,
+          "bytes": 21005
+        }
+      }
+    },
+    {
+      "text": "Ich spreche drei Sprachen: Spanisch, Englisch und ein bisschen Deutsch.",
+      "text_hash": "a99c044d73526e970c37acc9094195f356ada688056894d8047fb445ec04539b",
+      "refs": [
+        "m01|text-main|p4|c1"
+      ],
+      "audio": {
+        "normal": {
+          "key": "7e148514f6318435417ccdebf9d1d74b28e128db7a584de39ba311570de00e10",
+          "path": "/audio/de/7e/7e148514f6318435417ccdebf9d1d74b28e128db7a584de39ba311570de00e10.opus",
+          "duration_ms": 5337,
+          "bytes": 16093
+        }
+      }
+    },
+    {
+      "text": "Wie buchstabiert man Lyon?",
+      "text_hash": "aa3824ed9f3edc73897181783545c9feee354bd15c557eee07bc494af3983a6a",
+      "refs": [
+        "m01|text-extra|p5|c4"
+      ],
+      "audio": {
+        "normal": {
+          "key": "86bca51ffc1265b4f09efedfc56d28872d770e4df4265637734a4d83b43349a4",
+          "path": "/audio/de/86/86bca51ffc1265b4f09efedfc56d28872d770e4df4265637734a4d83b43349a4.opus",
+          "duration_ms": 2699,
+          "bytes": 8288
+        }
+      }
+    },
+    {
+      "text": "die Tante",
+      "text_hash": "aaa4bd61c6da16cc74a3cfff3690b01ca87dd0775047560c68c7107520dfafe0",
+      "refs": [
+        "m02|vocab|18|term"
+      ],
+      "audio": {
+        "normal": {
+          "key": "5d8bcdf267bda1978b005b3a64f479d6b6ee5bc02b5650ed419be22ebe0facf1",
+          "path": "/audio/de/5d/5d8bcdf267bda1978b005b3a64f479d6b6ee5bc02b5650ed419be22ebe0facf1.opus",
+          "duration_ms": 888,
+          "bytes": 2941
+        }
+      }
+    },
+    {
+      "text": "Meine Oma ist achtundsiebzig Jahre alt.",
+      "text_hash": "abe15077861dec9ce166fa4aa467600573e453c6897298e3309bffd3b45005d8",
+      "refs": [
+        "m02|vocab|15|use|0"
+      ],
+      "audio": {
+        "normal": {
+          "key": "8dd05706fa13e520ee376ca738e9597a648a7085fb33faa38fc87c65e99569e1",
+          "path": "/audio/de/8d/8dd05706fa13e520ee376ca738e9597a648a7085fb33faa38fc87c65e99569e1.opus",
+          "duration_ms": 3475,
+          "bytes": 10772
+        }
+      }
+    },
+    {
+      "text": "Deutschland",
+      "text_hash": "af6e56aacd8097c3fb7597b08ecb3d87a040f6ab58067a4b8ff9f5b747adb9be",
+      "refs": [
+        "m01|vocab|13|term"
+      ],
+      "audio": {
+        "normal": {
+          "key": "9f50519a975f0688c851d0d36199216965159d43e7be851c3f456bb06bf592f1",
+          "path": "/audio/de/9f/9f50519a975f0688c851d0d36199216965159d43e7be851c3f456bb06bf592f1.opus",
+          "duration_ms": 975,
+          "bytes": 3181
+        }
+      }
+    },
+    {
+      "text": "Österreich",
+      "text_hash": "b1b763860d4f30c2e1feafdcd57b714a1422b4fbc1a93d94969118a0faa65288",
+      "refs": [
+        "m01|vocab|14|term"
+      ],
+      "audio": {
+        "normal": {
+          "key": "dc6fd7d693d33a9021d7c860e36a2801dd783a1ac5e3d054a88e48734b4857ce",
+          "path": "/audio/de/dc/dc6fd7d693d33a9021d7c860e36a2801dd783a1ac5e3d054a88e48734b4857ce.opus",
+          "duration_ms": 1041,
+          "bytes": 3443
+        }
+      }
+    },
+    {
+      "text": "Das Baby ist erst ein Jahr alt.",
+      "text_hash": "b30ffda962b35b9d8f87a4243828e2afaf254af981ddb4bb757759ee71ca3800",
+      "refs": [
+        "m02|vocab|22|use|1"
+      ],
+      "audio": {
+        "normal": {
+          "key": "151cbc3abdc9c20ea811072297eca996ce7ee98a087da5d01bdb29ba7026d4dd",
+          "path": "/audio/de/15/151cbc3abdc9c20ea811072297eca996ce7ee98a087da5d01bdb29ba7026d4dd.opus",
+          "duration_ms": 2447,
+          "bytes": 7713
+        }
+      }
+    },
+    {
+      "text": "Ich habe zwei Brüder. Hast du Geschwister? Wir haben ein Baby.",
+      "text_hash": "b3acf7b96fc338bc6958e0a5ced233c04529799a5c484e2a245e58da98c4f7cb",
+      "refs": [
+        "m02|theory|spotlight|1|1|example"
+      ],
+      "audio": {
+        "normal": {
+          "key": "6960c6826fdd1e41610d6454e4bfab702c1205c4f25063fa4b0cee8c2955fffe",
+          "path": "/audio/de/69/6960c6826fdd1e41610d6454e4bfab702c1205c4f25063fa4b0cee8c2955fffe.opus",
+          "duration_ms": 4515,
+          "bytes": 13643
+        }
+      }
+    },
+    {
+      "text": "Mein Vater heißt Thomas.",
+      "text_hash": "b734aee9264cffe3fb706cbf204f46faa22e6b072b9e50ae4c95c5bfc7990f40",
+      "refs": [
+        "m02|vocab|3|use|0"
+      ],
+      "audio": {
+        "normal": {
+          "key": "aa6107f5917ee243f123a6e7a4c905ec811ec17d2ca5a1da222be18ab8a37fc7",
+          "path": "/audio/de/aa/aa6107f5917ee243f123a6e7a4c905ec811ec17d2ca5a1da222be18ab8a37fc7.opus",
+          "duration_ms": 2159,
+          "bytes": 6689
+        }
+      }
+    },
+    {
+      "text": "Englisch und Deutsch sind zwei Sprachen.",
+      "text_hash": "b832fc4f0847ecfa4d5eef4ce6577e5fd8ec9d221e88fe6947572d275eb3d009",
+      "refs": [
+        "m01|vocab|18|use|1"
+      ],
+      "audio": {
+        "normal": {
+          "key": "d4bd1d6e22c50288bc6a4aeda5f75ff1c899ea971ee9cde8861245a48722a5c1",
+          "path": "/audio/de/d4/d4bd1d6e22c50288bc6a4aeda5f75ff1c899ea971ee9cde8861245a48722a5c1.opus",
+          "duration_ms": 2393,
+          "bytes": 7629
+        }
+      }
+    },
+    {
+      "text": "verheiratet",
+      "text_hash": "b98f104a1cad9f2753dcfb3c7c987c12239ead74b2d6e1cabdb9b11744622dc9",
+      "refs": [
+        "m01|vocab|10|term"
+      ],
+      "audio": {
+        "normal": {
+          "key": "b528c38e14b3c1d981f9b28742e63be29bfd02eb07e160dca15cdd93f0d65858",
+          "path": "/audio/de/b5/b528c38e14b3c1d981f9b28742e63be29bfd02eb07e160dca15cdd93f0d65858.opus",
+          "duration_ms": 1311,
+          "bytes": 4248
+        }
+      }
+    },
+    {
+      "text": "Was sind Sie von Beruf?",
+      "text_hash": "bad67a0dde04dd09cc2d285df44b6e03ef49439cdcc595a489f1112e56a9e2a7",
+      "refs": [
+        "m01|vocab|7|use|0"
+      ],
+      "audio": {
+        "normal": {
+          "key": "bc59204c1a3efb231abb45606fec79018ca803643c33e4c5d3b0abbfab8975a5",
+          "path": "/audio/de/bc/bc59204c1a3efb231abb45606fec79018ca803643c33e4c5d3b0abbfab8975a5.opus",
+          "duration_ms": 1552,
+          "bytes": 4949
+        }
+      }
+    },
+    {
+      "text": "Hast du einen Bruder?",
+      "text_hash": "bb0ffaeeee41898e4f9fcc2224dac8ef8284a341562c0b028c9a3b89916f9a00",
+      "refs": [
+        "m02|vocab|5|use|1"
+      ],
+      "audio": {
+        "normal": {
+          "key": "281d1caae22b077f90e99046a1cf6fb8799caae205b1d4e9bb71a58f116eb348",
+          "path": "/audio/de/28/281d1caae22b077f90e99046a1cf6fb8799caae205b1d4e9bb71a58f116eb348.opus",
+          "duration_ms": 1569,
+          "bytes": 5033
+        }
+      }
+    },
+    {
+      "text": "Ich lerne Französisch.",
+      "text_hash": "bcaf95be3aa35dcbac8cf51257fee14801e150b646045af44c79075d82abed0f",
+      "refs": [
+        "m01|vocab|19|use|1"
+      ],
+      "audio": {
+        "normal": {
+          "key": "12498e9d3b9d9fd7870326b915c270d18f8fa92d1e09cf38791148e31332bf82",
+          "path": "/audio/de/12/12498e9d3b9d9fd7870326b915c270d18f8fa92d1e09cf38791148e31332bf82.opus",
+          "duration_ms": 1596,
+          "bytes": 5153
+        }
+      }
+    },
+    {
+      "text": "Französisch",
+      "text_hash": "be9fb855d369b99f5343feb50b1b76d1f0cef0e1e3aae545a51ff7003f4c43cd",
+      "refs": [
+        "m01|vocab|19|term"
+      ],
+      "audio": {
+        "normal": {
+          "key": "0f7492fb266341d8843a19c295e6f86655e7a79a2f4f68360290c1636d1698c2",
+          "path": "/audio/de/0f/0f7492fb266341d8843a19c295e6f86655e7a79a2f4f68360290c1636d1698c2.opus",
+          "duration_ms": 1163,
+          "bytes": 3728
+        }
+      }
+    },
+    {
+      "text": "Ich habe eine große Familie.",
+      "text_hash": "bf0527f3abd4b750ca3ff84def821dcad57448417f937fdb4c691680c83bb94e",
+      "refs": [
+        "m02|vocab|1|use|0"
+      ],
+      "audio": {
+        "normal": {
+          "key": "10df9a2fadfc79417f4e6e9f44f1cc80337e22da35ddcb6661c6a9e94cc46efa",
+          "path": "/audio/de/10/10df9a2fadfc79417f4e6e9f44f1cc80337e22da35ddcb6661c6a9e94cc46efa.opus",
+          "duration_ms": 1979,
+          "bytes": 6179
+        }
+      }
+    },
+    {
+      "text": "Wie ist deine Adresse?",
+      "text_hash": "bf1af7000cc8d7f6b3a5a9539dfe5942da26c82d780332543ee79899ff7ef712",
+      "refs": [
+        "m01|vocab|8|use|0"
+      ],
+      "audio": {
+        "normal": {
+          "key": "2c47f21f4c39c9083eeb329eca692732c127d76bb6fb7e76a95b4a1fae789feb",
+          "path": "/audio/de/2c/2c47f21f4c39c9083eeb329eca692732c127d76bb6fb7e76a95b4a1fae789feb.opus",
+          "duration_ms": 2381,
+          "bytes": 7088
+        }
+      }
+    },
+    {
+      "text": "Sara: Danke!",
+      "text_hash": "bf7f4460bce8b7dd1c8e1fa0fac50c0b80d7664ca934e8cfa64705f4feb59fa8",
+      "refs": [
+        "m01|text-extra|p7|c1"
+      ],
+      "audio": {
+        "normal": {
+          "key": "a19ed8ef4f74d6a7bd3d13ea6abf64e45f019491dc69251ee02b39876da6ec30",
+          "path": "/audio/de/a1/a19ed8ef4f74d6a7bd3d13ea6abf64e45f019491dc69251ee02b39876da6ec30.opus",
+          "duration_ms": 1458,
+          "bytes": 4543
+        }
+      }
+    },
+    {
+      "text": "Ich bin ledig.",
+      "text_hash": "c0d74967aa54984c5099817fc850ccff40a8a77d668eea08c399da22a2197f3a",
+      "refs": [
+        "m01|vocab|11|use|0"
+      ],
+      "audio": {
+        "normal": {
+          "key": "69b7ed1ab093e1b80aea7c33102209bb33216c18286f0fe5878e4a17e2cf1713",
+          "path": "/audio/de/69/69b7ed1ab093e1b80aea7c33102209bb33216c18286f0fe5878e4a17e2cf1713.opus",
+          "duration_ms": 1138,
+          "bytes": 3693
+        }
+      }
+    },
+    {
+      "text": "Das ist meine Mutter.",
+      "text_hash": "c16c5400da1b2c7248f9378e4b6f62648e4c46b1caa178cad2a1846b809e8c0b",
+      "refs": [
+        "m02|theory|watchout|2|good"
+      ],
+      "audio": {
+        "normal": {
+          "key": "14cbe559905bc193605babbea28920508fe15ada67fa697b93cb5f2f582c7720",
+          "path": "/audio/de/14/14cbe559905bc193605babbea28920508fe15ada67fa697b93cb5f2f582c7720.opus",
+          "duration_ms": 3545,
+          "bytes": 11075
+        }
+      }
+    },
+    {
+      "text": "Die Sprache in Frankreich ist Französisch.",
+      "text_hash": "c7467e8ea35e36513d4e17da43f309aba4bdfb50163f5d482b0ecb1489136565",
+      "refs": [
+        "m01|vocab|19|use|0"
+      ],
+      "audio": {
+        "normal": {
+          "key": "cc483582834833caa6384895afacadc3706faee890a7232225ef4b74a04c6822",
+          "path": "/audio/de/cc/cc483582834833caa6384895afacadc3706faee890a7232225ef4b74a04c6822.opus",
+          "duration_ms": 4248,
+          "bytes": 12629
+        }
+      }
+    },
+    {
+      "text": "Ihr Vater arbeitet in Berlin.",
+      "text_hash": "c90919c53b11b0c5e8305be874744f7eaaa361b41e185f368f68e2223b887d78",
+      "refs": [
+        "m02|vocab|3|use|1"
+      ],
+      "audio": {
+        "normal": {
+          "key": "9966b842043163a44405bcdbb338fc2f42e2656fac02ef180626dcd6da2ca7c4",
+          "path": "/audio/de/99/9966b842043163a44405bcdbb338fc2f42e2656fac02ef180626dcd6da2ca7c4.opus",
+          "duration_ms": 2059,
+          "bytes": 6586
+        }
+      }
+    },
+    {
+      "text": "Onkel Ben ist sehr nett.",
+      "text_hash": "cae94496c23fd7c1b2dea49220acc47ae93aadc69adaacc323ef5b6f3583795a",
+      "refs": [
+        "m02|vocab|17|use|1"
+      ],
+      "audio": {
+        "normal": {
+          "key": "af6ea84d51d00d261626f69578f21a0ff95634cefbdd702b82e63537eb13e7ef",
+          "path": "/audio/de/af/af6ea84d51d00d261626f69578f21a0ff95634cefbdd702b82e63537eb13e7ef.opus",
+          "duration_ms": 2231,
+          "bytes": 6971
+        }
+      }
+    },
+    {
+      "text": "Ich wohne in Berlin.",
+      "text_hash": "cbc22fb85adca904671d884da2f7622bef7b4b7438eed3f25ff7e904d883d598",
+      "refs": [
+        "m01|vocab|3|use|0"
+      ],
+      "audio": {
+        "normal": {
+          "key": "593a03e74a3eef142ca959c6718670d4632cc2e3744ba331b8a13c73675cb596",
+          "path": "/audio/de/59/593a03e74a3eef142ca959c6718670d4632cc2e3744ba331b8a13c73675cb596.opus",
+          "duration_ms": 1775,
+          "bytes": 5547
+        }
+      }
+    },
+    {
+      "text": "Sprechen Sie Deutsch?",
+      "text_hash": "cbfb07ee91560bffb376b7c5108d0c61e7a5f2531a70b6256459406dfe849f7d",
+      "refs": [
+        "m01|vocab|17|use|1"
+      ],
+      "audio": {
+        "normal": {
+          "key": "ba17567d9e6101506d682ecb159398d1a5512d522b9306388bec52e9df5ac536",
+          "path": "/audio/de/ba/ba17567d9e6101506d682ecb159398d1a5512d522b9306388bec52e9df5ac536.opus",
+          "duration_ms": 2630,
+          "bytes": 7810
+        }
+      }
+    },
+    {
+      "text": "der Opa",
+      "text_hash": "cc2ddd75671aa87f0553a34bbb083ee14d15eb71b82f6ab2a6dd7b6bef8e6be1",
+      "refs": [
+        "m02|vocab|16|term"
+      ],
+      "audio": {
+        "normal": {
+          "key": "c84c572e49689731c92678c61a500f0422fa2edba196ce94e4a81c7fe8f71139",
+          "path": "/audio/de/c8/c84c572e49689731c92678c61a500f0422fa2edba196ce94e4a81c7fe8f71139.opus",
+          "duration_ms": 988,
+          "bytes": 3322
+        }
+      }
+    },
+    {
+      "text": "Lukas: Ich komme aus Frankreich, aus Lyon.",
+      "text_hash": "d04eca3b519068bdd1ed3bc11ee0da2b049d8e7886dce0f81e6ab5879df7dbb8",
+      "refs": [
+        "m01|text-extra|p4|c1"
+      ],
+      "audio": {
+        "normal": {
+          "key": "cc624ba49e9a15988391855a6b1e4b0bc4d4f45ebaf8213e781682154ae60802",
+          "path": "/audio/de/cc/cc624ba49e9a15988391855a6b1e4b0bc4d4f45ebaf8213e781682154ae60802.opus",
+          "duration_ms": 3467,
+          "bytes": 10553
+        }
+      }
+    },
+    {
+      "text": "der Sohn",
+      "text_hash": "d0e50ed238208fd5d2c70ecb4317d4a6498395cf46166ad633259accde0d87df",
+      "refs": [
+        "m02|vocab|9|term"
+      ],
+      "audio": {
+        "normal": {
+          "key": "d9697a99c62bda582f6d8dbd052d4c83fde95be7bd53cd398690f728f23307af",
+          "path": "/audio/de/d9/d9697a99c62bda582f6d8dbd052d4c83fde95be7bd53cd398690f728f23307af.opus",
+          "duration_ms": 996,
+          "bytes": 3285
+        }
+      }
+    },
+    {
+      "text": "heißen",
+      "text_hash": "d291857f6b4bf46279355394bf9394ead82239e293ab38596bff32a0d7078792",
+      "refs": [
+        "m01|vocab|1|term"
+      ],
+      "audio": {
+        "normal": {
+          "key": "905db65c0d93a46fecf231f45ed597f5b16df93657ebdbae5117dc90123649dc",
+          "path": "/audio/de/90/905db65c0d93a46fecf231f45ed597f5b16df93657ebdbae5117dc90123649dc.opus",
+          "duration_ms": 853,
+          "bytes": 2774
+        }
+      }
+    },
+    {
+      "text": "Ich bin Lehrer von Beruf.",
+      "text_hash": "d3aa95e426611d08b29b76f12947dbaaf77079f0cbac10249c6ea921aa211045",
+      "refs": [
+        "m01|vocab|7|use|1"
+      ],
+      "audio": {
+        "normal": {
+          "key": "52af463828e24db8c00d40568e5d0c6100d1506e3008ec86eaee5a8bb27dc08e",
+          "path": "/audio/de/52/52af463828e24db8c00d40568e5d0c6100d1506e3008ec86eaee5a8bb27dc08e.opus",
+          "duration_ms": 1978,
+          "bytes": 6225
+        }
+      }
+    },
+    {
+      "text": "Schön!",
+      "text_hash": "d6e813459ae86b3ee726425aca637d33393cb6f7f0def2b83e673bd3cee7d623",
+      "refs": [
+        "m01|text-extra|p5|c3"
+      ],
+      "audio": {
+        "normal": {
+          "key": "0348f9910404b26dd4532431d8060d913464ed1f1cf950d2e2253baceab9720b",
+          "path": "/audio/de/03/0348f9910404b26dd4532431d8060d913464ed1f1cf950d2e2253baceab9720b.opus",
+          "duration_ms": 1053,
+          "bytes": 3388
+        }
+      }
+    },
+    {
+      "text": "Erzähl mir von deiner Familie!",
+      "text_hash": "da7bd991062fac1fc0654614fd45f075c49b07697b208f8c6623ec112b6f15bd",
+      "refs": [
+        "m02|text-main|p5|c5"
+      ],
+      "audio": {
+        "normal": {
+          "key": "ff12501464c4288501f78e104a0574333884378b79695220bec89817e7a0a132",
+          "path": "/audio/de/ff/ff12501464c4288501f78e104a0574333884378b79695220bec89817e7a0a132.opus",
+          "duration_ms": 1844,
+          "bytes": 5831
+        }
+      }
+    },
+    {
+      "text": "Meine Telefonnummer ist 0176 12 20.",
+      "text_hash": "e00a984e8b04af280a80bda44a6c4a9ed61a5207842786b7639e6a047bc14250",
+      "refs": [
+        "m01|vocab|9|use|1"
+      ],
+      "audio": {
+        "normal": {
+          "key": "fd81e3b003efe3a8d1fa98e1882ad45f2646efd2bf0ce783a1ae07c1cb594954",
+          "path": "/audio/de/fd/fd81e3b003efe3a8d1fa98e1882ad45f2646efd2bf0ce783a1ae07c1cb594954.opus",
+          "duration_ms": 3699,
+          "bytes": 11410
+        }
+      }
+    },
+    {
+      "text": "Sie kommt aus Österreich.",
+      "text_hash": "e30c415e3d376f1c709d95f8e524a987a4abed7d6c9555d6a83f9ae1d062bde2",
+      "refs": [
+        "m01|vocab|14|use|1",
+        "m02|text-main|p2|c4"
+      ],
+      "audio": {
+        "normal": {
+          "key": "f4f61bbae160f4d22456b21404e7e211530a0f541d77fde7ecdaa06831e5bc35",
+          "path": "/audio/de/f4/f4f61bbae160f4d22456b21404e7e211530a0f541d77fde7ecdaa06831e5bc35.opus",
+          "duration_ms": 1574,
+          "bytes": 4968
+        }
+      }
+    },
+    {
+      "text": "Meine Muttersprache ist Spanisch.",
+      "text_hash": "e486367a7010e6179e218c5425168a2183642dc6efe3b7520e3e70ba15afce09",
+      "refs": [
+        "m01|text-main|p4|c2"
+      ],
+      "audio": {
+        "normal": {
+          "key": "13e0b943641529744f2ae5b457086836b76c80319ed5deaebd2dec0306ec4990",
+          "path": "/audio/de/13/13e0b943641529744f2ae5b457086836b76c80319ed5deaebd2dec0306ec4990.opus",
+          "duration_ms": 3870,
+          "bytes": 11387
+        }
+      }
+    },
+    {
+      "text": "der Bruder",
+      "text_hash": "e6dda6d1456e9ab28b674a2d2301e14945704e7f75a09097b560867d79b4b1bb",
+      "refs": [
+        "m02|vocab|5|term"
+      ],
+      "audio": {
+        "normal": {
+          "key": "57eb73439ae925fd7b995fc181c5f51fc453bea1a11d58007f5529195ca229bc",
+          "path": "/audio/de/57/57eb73439ae925fd7b995fc181c5f51fc453bea1a11d58007f5529195ca229bc.opus",
+          "duration_ms": 2079,
+          "bytes": 6357
+        }
+      }
+    },
+    {
+      "text": "Das Kind heißt Max.",
+      "text_hash": "e6ef11cd56d9c822e0fed4f6ed62961e3be4379932a4d2047e588d287ea3b80b",
+      "refs": [
+        "m02|vocab|8|use|1"
+      ],
+      "audio": {
+        "normal": {
+          "key": "f93a95f37805eaf1efdd3cec03a566e30ac1eeb31192061a4397ab64ffe55c93",
+          "path": "/audio/de/f9/f93a95f37805eaf1efdd3cec03a566e30ac1eeb31192061a4397ab64ffe55c93.opus",
+          "duration_ms": 1487,
+          "bytes": 4734
+        }
+      }
+    },
+    {
+      "text": "Wir leben gern hier.",
+      "text_hash": "e87446d1dd065d57e7129c11004d0751a87fb9552418d557dffba58f5bab5476",
+      "refs": [
+        "m02|vocab|24|use|1"
+      ],
+      "audio": {
+        "normal": {
+          "key": "58df8749ac19a076707bf9473ea60644030f38ed2318482ddc3418135f02d811",
+          "path": "/audio/de/58/58df8749ac19a076707bf9473ea60644030f38ed2318482ddc3418135f02d811.opus",
+          "duration_ms": 2672,
+          "bytes": 8288
+        }
+      }
+    },
+    {
+      "text": "Ich heiße Jonas und das ist meine Familie.",
+      "text_hash": "ea150c0194a3748e8e8b09c272b4590940d93bc288bc821c0227ca97b006433e",
+      "refs": [
+        "m02|text-main|p1|c2"
+      ],
+      "audio": {
+        "normal": {
+          "key": "329a51d85fcac3949ac795e35a6d72d3594582d7361738b155aeeec4c72e8de6",
+          "path": "/audio/de/32/329a51d85fcac3949ac795e35a6d72d3594582d7361738b155aeeec4c72e8de6.opus",
+          "duration_ms": 4406,
+          "bytes": 12696
+        }
+      }
+    },
+    {
+      "text": "Lukas: Ich wohne in Berlin.",
+      "text_hash": "eadcab9bb61e4719f7f0ce900d0410239fbca94c38a29450ba8a2a9741e220d6",
+      "refs": [
+        "m01|text-extra|p10|c1"
+      ],
+      "audio": {
+        "normal": {
+          "key": "7dd9c4fcaf68c0de23b0b65a39c655bb71e38b08b46a630f882c3ccdd7238960",
+          "path": "/audio/de/7d/7dd9c4fcaf68c0de23b0b65a39c655bb71e38b08b46a630f882c3ccdd7238960.opus",
+          "duration_ms": 1890,
+          "bytes": 5962
+        }
+      }
+    },
+    {
+      "text": "Ich spreche Englisch und Deutsch.",
+      "text_hash": "eb70887b7ffa489c53f29ee9316f3ef01e7c73cef6a43015529360dac9a3daa9",
+      "refs": [
+        "m01|vocab|18|use|0"
+      ],
+      "audio": {
+        "normal": {
+          "key": "57a89f7cec46f3ba0d47653f658d99aaa08c12976b081f70cb7f73eb2bd2f50f",
+          "path": "/audio/de/57/57a89f7cec46f3ba0d47653f658d99aaa08c12976b081f70cb7f73eb2bd2f50f.opus",
+          "duration_ms": 1882,
+          "bytes": 5907
+        }
+      }
+    },
+    {
+      "text": "Sie ist auch Studentin.",
+      "text_hash": "ebfdaf4da950026fa542da2c04f0c9fbfcddcce703ac574a06b00d2bd078a8d1",
+      "refs": [
+        "m01|text-main|p5|c3"
+      ],
+      "audio": {
+        "normal": {
+          "key": "a246322e7efbcc6059657e9edc20afcf00fdbb36d39362c0b6423caf3e442fbd",
+          "path": "/audio/de/a2/a246322e7efbcc6059657e9edc20afcf00fdbb36d39362c0b6423caf3e442fbd.opus",
+          "duration_ms": 1904,
+          "bytes": 5620
+        }
+      }
+    },
+    {
+      "text": "Sind Sie verheiratet?",
+      "text_hash": "ec0466b25d42e1257892a4f8e2b585e867c62b9bbae335ff1d089c86b867df18",
+      "refs": [
+        "m01|vocab|10|use|1"
+      ],
+      "audio": {
+        "normal": {
+          "key": "f62b98216e17ee40a1c64acbc630a769422cc3ab613be8925b1d95442638868c",
+          "path": "/audio/de/f6/f62b98216e17ee40a1c64acbc630a769422cc3ab613be8925b1d95442638868c.opus",
+          "duration_ms": 1545,
+          "bytes": 4953
+        }
+      }
+    },
+    {
+      "text": "Opa und Oma leben zusammen.",
+      "text_hash": "ec57793212186a08632b5b0004680504c33a1bf8d3b64c23fd9ee811e41e175d",
+      "refs": [
+        "m02|vocab|16|use|1"
+      ],
+      "audio": {
+        "normal": {
+          "key": "d9ce053070f58de048627326cb27412ef7d696490e8c9ced8a5167856be5d584",
+          "path": "/audio/de/d9/d9ce053070f58de048627326cb27412ef7d696490e8c9ced8a5167856be5d584.opus",
+          "duration_ms": 3167,
+          "bytes": 9395
+        }
+      }
+    },
+    {
+      "text": "Foto 4: Und das ist mein Sohn Felix.",
+      "text_hash": "ed68e16586f2ed49506f82c43e02489947b8a4e98ad53e92b9fbc6f7bbea02ed",
+      "refs": [
+        "m02|text-extra|p4|c1"
+      ],
+      "audio": {
+        "normal": {
+          "key": "24347f2f12b6721aafa9ab92797867dda970e6b96d04def9192656140dc4bf32",
+          "path": "/audio/de/24/24347f2f12b6721aafa9ab92797867dda970e6b96d04def9192656140dc4bf32.opus",
+          "duration_ms": 2722,
+          "bytes": 8448
+        }
+      }
+    },
+    {
+      "text": "Wo wohnst du?",
+      "text_hash": "f13f25a375359b4c00b1dbfb60026f25be4000e9cec2e329fdb541aa6c36df0e",
+      "refs": [
+        "m01|vocab|3|use|1"
+      ],
+      "audio": {
+        "normal": {
+          "key": "d852c61e120d2db0a865d2401c94b996907e4d781a3e6eed4b58f8550afcba5c",
+          "path": "/audio/de/d8/d852c61e120d2db0a865d2401c94b996907e4d781a3e6eed4b58f8550afcba5c.opus",
+          "duration_ms": 1853,
+          "bytes": 5594
+        }
+      }
+    },
+    {
+      "text": "Sie haben eine Tochter und einen Sohn.",
+      "text_hash": "f167135dfbb64ed688c15c2909c085d900a67bd800607162bd0ec400cfaac111",
+      "refs": [
+        "m02|vocab|10|use|1"
+      ],
+      "audio": {
+        "normal": {
+          "key": "6c329a6e468de18acb38c8c346010ff845cfd3ddbb35a4645912147872231a88",
+          "path": "/audio/de/6c/6c329a6e468de18acb38c8c346010ff845cfd3ddbb35a4645912147872231a88.opus",
+          "duration_ms": 2829,
+          "bytes": 8819
+        }
+      }
+    },
+    {
+      "text": "Er ist noch ledig.",
+      "text_hash": "f2e9d56f1ebeae32e6c99096d33a020db304abfaed18bf88f0e76cad19416d11",
+      "refs": [
+        "m01|vocab|11|use|1"
+      ],
+      "audio": {
+        "normal": {
+          "key": "80a9cf8183441886a78439011767b0e99931f54c79948d83a163aee3eaab79cd",
+          "path": "/audio/de/80/80a9cf8183441886a78439011767b0e99931f54c79948d83a163aee3eaab79cd.opus",
+          "duration_ms": 1256,
+          "bytes": 4106
+        }
+      }
+    },
+    {
+      "text": "Mein Bruder Leon ist neunzehn und studiert in Berlin.",
+      "text_hash": "f8c1681c66d3fd21bb04051698ea3f2a16a9e0da5aec4b586e70db7d9798f65d",
+      "refs": [
+        "m02|text-main|p3|c2"
+      ],
+      "audio": {
+        "normal": {
+          "key": "ae1d3fab8103a6538585b125f9e939e2786ef41d0f924abbda62fd9a023f5edb",
+          "path": "/audio/de/ae/ae1d3fab8103a6538585b125f9e939e2786ef41d0f924abbda62fd9a023f5edb.opus",
+          "duration_ms": 4337,
+          "bytes": 13319
+        }
+      }
+    },
+    {
+      "text": "das Alter",
+      "text_hash": "f9c202035068db9b6dfb21ec7ab944d78b849effa8c2cc78ce830ea47ef9dd5a",
+      "refs": [
+        "m02|vocab|11|term"
+      ],
+      "audio": {
+        "normal": {
+          "key": "82e19c6c899260d1a81ffd203e8f8781e64db8b3741175edb180fcfe5889d2ef",
+          "path": "/audio/de/82/82e19c6c899260d1a81ffd203e8f8781e64db8b3741175edb180fcfe5889d2ef.opus",
+          "duration_ms": 1015,
+          "bytes": 3311
+        }
+      }
+    },
+    {
+      "text": "Und du?",
+      "text_hash": "fafa366bebf80e883e808319f93a3879366c0ea3f45a86126f29383f8c52ea71",
+      "refs": [
+        "m01|text-extra|p2|c2",
+        "m01|text-extra|p8|c2",
+        "m01|text-main|p6|c1",
+        "m02|text-main|p5|c2"
+      ],
+      "audio": {
+        "normal": {
+          "key": "ceb79fcc7874e19bee8c281fe1cef646f14fdae9bd59457bbce802fce56eeece",
+          "path": "/audio/de/ce/ceb79fcc7874e19bee8c281fe1cef646f14fdae9bd59457bbce802fce56eeece.opus",
+          "duration_ms": 888,
+          "bytes": 2945
+        }
+      }
+    },
+    {
+      "text": "die Oma",
+      "text_hash": "fdeaf263fada1e89d63eab41ad66b4002fc83f20572fb12b1c067a49395cd707",
+      "refs": [
+        "m02|vocab|15|term"
+      ],
+      "audio": {
+        "normal": {
+          "key": "4a03a70071aab5d14cbaf19a93efc9bb27f8069fe030da84fe7cb73ff8a13958",
+          "path": "/audio/de/4a/4a03a70071aab5d14cbaf19a93efc9bb27f8069fe030da84fe7cb73ff8a13958.opus",
+          "duration_ms": 1020,
+          "bytes": 3401
+        }
+      }
+    },
+    {
+      "text": "Lukas: Ich heiße Lukas.",
+      "text_hash": "ff2a80dbf95882be4ae9ad72b10aeb1ed5d9e132cdc301847ccd301d12fe4a65",
+      "refs": [
+        "m01|text-extra|p2|c1"
+      ],
+      "audio": {
+        "normal": {
+          "key": "1e50f0d8a64202ded89584aa28ce85be5945629d7a142f4472151e1ec3b080fc",
+          "path": "/audio/de/1e/1e50f0d8a64202ded89584aa28ce85be5945629d7a142f4472151e1ec3b080fc.opus",
+          "duration_ms": 2929,
+          "bytes": 8902
+        }
+      }
+    }
+  ]
+}

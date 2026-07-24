@@ -1,0 +1,239 @@
+# Course skeleton — Deutsch с нуля → A1, 54 hours (courses/de-a1/PLAN.md).
+# See docs/COURSE-DESIGN-GUIDE.md for how the numbers below were derived.
+#
+# Двуязычный курс: немецкое ядро + английский метаязык объяснений (PLAN.md §5,
+# docs/COURSE-DESIGN-GUIDE.md §10). Поэтому заголовки шагов здесь по-английски, а
+# module.title остаётся немецким. Комментарии и sibling PLAN.md — по-русски, они
+# адресованы автору, а не учащемуся.
+#
+# В отличие от de-a2: нет диагностики (у новичка нечего картировать, а немецкий
+# глоссарий терминов не нужен — термины называются прямо по-английски) и нет блока
+# Auffrischung (ниже A1 повторять нечего). checkpoints без diagnostic валиден —
+# схема не требует её (web/lib/course-schema.ts).
+#
+# Positions come from array order. A module's planned_minutes is the sum of the
+# protocol's session minutes (55+55+55+45 = 210 = 3.5 h).
+#
+# 14 modules × 3.5 h + 5 h of assessment = 54 h (PLAN.md §2).
+
+slug: de-a1
+language: de
+name: Deutsch
+level_label: A1
+position: 2
+
+blocks:
+  - slug: a
+    name: First steps
+    color: '#2F6FB0'
+    tint: '#E7F0F8'
+    modules:
+      - slug: m01
+        dir: module-01
+        title: Hallo! Ich bin …
+        standfirst: The verb sein, pronouns and W-questions · 20 words · introduce yourself and spell your name.
+      - slug: m02
+        dir: module-02
+        title: Meine Familie
+        standfirst: haben, the present tense and possessives · 24 words · talk about your family.
+      - slug: m03
+        dir: module-03
+        title: Der, die, das
+        standfirst: Gender, articles and noun plurals · 24 words · name the things around you.
+      - slug: m04
+        dir: module-04
+        title: Kein Problem!
+        standfirst: Negation with nicht and kein, yes/no questions · 24 words · say what you don't do.
+      - slug: m05
+        dir: module-05
+        title: Was machst du gern?
+        standfirst: Stem-changing verbs and word order · 24 words · say what you like to do.
+
+  - slug: b
+    name: Everyday life
+    color: '#2E8B57'
+    tint: '#E7F3EC'
+    modules:
+      - slug: m06
+        dir: module-06
+        title: Im Café
+        standfirst: The accusative — der becomes den · 24 words · order in a café.
+      - slug: m07
+        dir: module-07
+        title: Einkaufen
+        standfirst: es gibt, quantities and kein in the accusative · 24 words · go shopping.
+      - slug: m08
+        dir: module-08
+        title: Ich kann das!
+        standfirst: Modal verbs and the verb bracket · 24 words · say what you can and want to do.
+      - slug: m09
+        dir: module-09
+        title: Mein Tag
+        standfirst: Separable verbs and telling the time · 24 words · describe your day.
+      - slug: m10
+        dir: module-10
+        title: Rund ums Haus
+        standfirst: Place phrases and the question wo? · 24 words · describe your home.
+
+  - slug: c
+    name: Out and about
+    color: '#7A5BA6'
+    tint: '#EFEAF6'
+    modules:
+      - slug: m11
+        dir: module-11
+        title: Wie komme ich zum …?
+        standfirst: The imperative and giving directions · 24 words · ask and give the way.
+      - slug: m12
+        dir: module-12
+        title: Termine
+        standfirst: müssen and dürfen, dates and ordinals · 24 words · make an appointment.
+      - slug: m13
+        dir: module-13
+        title: Beim Arzt
+        standfirst: The imperative and talking about health · 24 words · say how you feel.
+      - slug: m14
+        dir: module-14
+        title: Was hast du gemacht?
+        standfirst: The perfect as fixed chunks, connectors · 24 words · write a postcard about a trip.
+
+checkpoints:
+  - slug: cp-a
+    kind: block
+    block: a
+    dir: checkpoint-a
+    title: Checkpoint A · Modules 1–5
+    pass_mark: 75
+    planned_minutes: 90
+  - slug: cp-b
+    kind: block
+    block: b
+    dir: checkpoint-b
+    title: Checkpoint B · Modules 6–10
+    pass_mark: 75
+    planned_minutes: 90
+  - slug: final
+    kind: final
+    block: c
+    dir: final
+    title: Final test · Goethe A1 (Start Deutsch 1) format
+    pass_mark: 60
+    planned_minutes: 120
+
+# Vier Sitzungen pro Modul, 210 Minuten — wie in de-a2. Titel auf Englisch, weil
+# der Metasprache-Rahmen des Kurses Englisch ist (PLAN.md §5).
+protocol:
+  - type: prime
+    title: Start
+    planned_minutes: 55
+    steps:
+      - kind: opener
+        title: Your goals this week
+        detail: See what you'll be able to do by the end of the week
+        minutes: 3
+      - kind: reading
+        title: Skim the text
+        detail: Read once without a dictionary — just the gist
+        minutes: 8
+        config: { reading_kind: main, mode: skim }
+      - kind: theory
+        title: Grammar in focus · Part 1
+        detail: Learn the first half of the rules — with a table and examples
+        minutes: 16
+        config: { part: 1, of: 2 }
+      - kind: vocab
+        title: Vocabulary · 1 of 3
+        detail: Learn the first words and mark the most important
+        minutes: 20
+        config: { batch: 1, of: 3 }
+      - kind: flashcards_intro
+        title: New cards into your deck
+        detail: This module's words join your daily review
+        minutes: 8
+
+  - type: input
+    title: Reading
+    planned_minutes: 55
+    steps:
+      - kind: review_slot
+        title: Review
+        detail: Solve 8 tasks from your review queue
+        minutes: 10
+        config: { count: 8 }
+      - kind: vocab
+        title: Vocabulary · 2 of 3
+        detail: You'll meet these words in the text in a moment
+        minutes: 8
+        config: { batch: 2, of: 3 }
+      - kind: reading
+        title: Reading with glosses
+        detail: Hunt for this module's words and rules in the text
+        minutes: 12
+        config: { reading_kind: main, mode: close }
+      - kind: exercise_set
+        title: Reading check
+        detail: Show you caught the details too
+        minutes: 7
+        config: { types: [reading_comprehension] }
+      - kind: vocab
+        title: Vocabulary · 3 of 3
+        detail: The last words before you practise
+        minutes: 8
+        config: { batch: 3, of: 3 }
+      - kind: exercise_set
+        title: Vocabulary drills
+        detail: Practise until the words stick
+        minutes: 10
+        config: { group_key: vocab }
+
+  - type: workout
+    title: Training
+    planned_minutes: 55
+    steps:
+      - kind: review_slot
+        title: Review
+        detail: Solve 8 tasks from your review queue
+        minutes: 10
+        config: { count: 8 }
+      - kind: theory
+        title: Grammar in focus · Part 2
+        detail: The rest of the rules — you'll practise them right after
+        minutes: 12
+        config: { part: 2, of: 2 }
+      - kind: exercise_set
+        title: Drills & gap-fill
+        detail: Forms, endings and word order
+        minutes: 18
+        config: { types: [grammar_drill, open_cloze] }
+      - kind: exercise_set
+        title: Transform & fix
+        detail: Reshape sentences and spot typical mistakes
+        minutes: 10
+        config: { types: [key_word_transformation, error_correction] }
+      - kind: harvest
+        title: Collect your mistakes
+        detail: Every mistake comes back — in 2, 7 and 21 days
+        minutes: 5
+
+  - type: output
+    title: Doing
+    planned_minutes: 45
+    steps:
+      - kind: reading
+        title: Second text
+        detail: A dialogue on the topic — the material for your task
+        minutes: 8
+        config: { reading_kind: extra, mode: close }
+      - kind: production
+        title: Write or speak
+        detail: Use this module's words and grammar yourself
+        minutes: 20
+      - kind: self_check
+        title: Self-check
+        detail: Compare with the model and go through the list
+        minutes: 7
+      - kind: module_quiz
+        title: Module quiz
+        detail: 10 tasks — then the module is done, review in 7 and 21 days
+        minutes: 10
+        config: { count: 10, pool: review }
