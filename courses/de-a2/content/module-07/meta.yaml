@@ -25,10 +25,10 @@ grammar_points:
 texts:
 - kind: main
   title: Die Besichtigung
-  word_count: 321
+  word_count: 326
 - kind: extra
   title: Vier Wohnungsanzeigen
-  word_count: 142
+  word_count: 135
 production:
   mode: writing
   genre: E-Mail an den Vermieter mit Fragen

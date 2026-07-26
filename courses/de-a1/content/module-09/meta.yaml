@@ -1,0 +1,32 @@
+# Module 09 · Mein Tag. Scaffolding (goals, standfirst) English, title German
+# (§5). grammar_points repeat the module card's opis (3) with no additions. The
+# word-formation extension of this module is the separable verb: infinitive →
+# sentence with the prefix at the end (aufstehen → Ich stehe um 7 Uhr auf) — it
+# lives in the theory table and in the word_formation tasks, not as separate
+# vocab entries.
+slug: m09
+title: Mein Tag
+standfirst: Separable verbs, the clock and time phrases with um and am · 24 words · describe your own day.
+goals:
+  - text: Use separable verbs — the prefix travels to the end of the sentence
+    achieved_by: workout
+  - text: Tell the time both ways — acht Uhr fünfzehn and Viertel nach acht
+    achieved_by: workout
+  - text: Learn 24 words for the day, the parts of the day and the days of the week
+    achieved_by: input
+  - text: Write about your own day from the morning to the evening
+    achieved_by: output
+grammar_points:
+  - Separable verbs (aufstehen, anfangen, aufhören, einkaufen, fernsehen, mitkommen) — the prefix goes to the end
+  - Telling the time (official time and Viertel nach, halb)
+  - Time adverbials with um and am
+texts:
+  - kind: main
+    title: Ein Tag von Anna
+    word_count: 140
+  - kind: extra
+    title: Terminkalender von Anna
+    word_count: 59
+production:
+  mode: writing
+  genre: a short text about your own day

@@ -1,0 +1,226 @@
+# Module 08 · 24 words: skills, courses, problems and plans. 11 anchors of the
+# card (können, wollen, möchten, die Idee, der Plan, das Problem, die Lösung,
+# schwierig, einfach, allein, besonders) plus 13 words of the same domain
+# (der Kurs, lernen, üben, die Aufgabe, der Fehler, die Prüfung, das Ziel,
+# brauchen, versuchen, das Klavier, zeichnen, der Lehrer, möglich). The card also
+# lists gut — module 4 already owns it as an entry, so it is used freely in the
+# texts and tasks but is not an entry here. Scaffolding rule (§5): term,
+# use_cases, collocations and register German, definition English with a synonym
+# or an opposite. The three modals carry their full paradigm in register, so the
+# flashcard shows the forms the tasks ask for. Nouns carry article and plural.
+entries:
+  - term: können
+    tag: Modalverb
+    definition: to be able to do something; you have learned it and you can do it
+    use_cases:
+      - Ich kann gut zeichnen.
+      - "Kannst du Klavier spielen?"
+    collocations: gut können · nicht können · Deutsch können
+    register: "ich kann · du kannst · er/sie/es kann · wir können · ihr könnt · sie/Sie können"
+
+  - term: wollen
+    tag: Modalverb
+    definition: to want to do something; it is your own plan. Stronger than möchten
+    use_cases:
+      - Ich will einen Kurs machen.
+      - Wir wollen viel üben.
+    collocations: lernen wollen · machen wollen
+    register: "ich will · du willst · er/sie/es will · wir wollen · ihr wollt · sie/Sie wollen"
+
+  - term: möchten
+    tag: Modalverb
+    definition: would like to; a polite wish. Softer and friendlier than wollen
+    use_cases:
+      - Ich möchte die Prüfung machen.
+      - "Möchtest du auch Deutsch lernen?"
+    collocations: gern möchten · lernen möchten
+    register: "ich möchte · du möchtest · er/sie/es möchte · wir möchten · ihr möchtet · sie/Sie möchten"
+
+  - term: die Idee
+    tag: Nomen
+    definition: an idea; something new in your head. Gute Idee! = I like that
+    use_cases:
+      - Ich habe eine Idee.
+      - Deine Idee ist sehr gut.
+    collocations: eine Idee haben · keine Idee haben
+    register: "Plural: die Ideen"
+
+  - term: der Plan
+    tag: Nomen
+    definition: a plan — what you want to do, and when. A plan comes before the work
+    use_cases:
+      - Ich habe einen Plan.
+      - "Was ist dein Plan?"
+    collocations: einen Plan haben · einen Plan machen
+    register: "Plural: die Pläne"
+
+  - term: das Problem
+    tag: Nomen
+    definition: "a problem; something that is not easy. Opposite: die Lösung"
+    use_cases:
+      - Ich habe ein Problem.
+      - Das Problem ist nicht schwierig.
+    collocations: ein Problem haben · kein Problem
+    register: "Plural: die Probleme"
+
+  - term: die Lösung
+    tag: Nomen
+    definition: "a solution; the answer to a problem. Opposite: das Problem"
+    use_cases:
+      - Ich brauche eine Lösung.
+      - Die Lösung ist sehr einfach.
+    collocations: eine Lösung finden · keine Lösung
+    register: "Plural: die Lösungen"
+
+  - term: schwierig
+    tag: Adjektiv
+    definition: "difficult, hard. You need time and work for it. Opposite: einfach"
+    use_cases:
+      - Die Aufgabe ist sehr schwierig.
+      - Deutsch finde ich schwierig.
+    collocations: sehr schwierig · zu schwierig
+    register: "Auch: schwer"
+
+  - term: einfach
+    tag: Adjektiv
+    definition: "easy, simple; you can do it without a problem. Opposite: schwierig"
+    use_cases:
+      - Das ist einfach.
+      - Der Kurs ist einfach und interessant.
+    collocations: sehr einfach · ganz einfach
+    register: "Auch als Adverb: Das geht einfach."
+
+  - term: allein
+    tag: Adverb
+    definition: alone, on your own; nobody is there and nobody helps
+    use_cases:
+      - Ich lerne allein.
+      - Er wohnt allein.
+    collocations: allein lernen · allein wohnen · allein leben
+    register: "Auch: alleine"
+
+  - term: besonders
+    tag: Adverb
+    definition: especially; more than the rest of the group
+    use_cases:
+      - Ich lerne gern Sprachen, besonders Deutsch.
+      - Der Kurs ist besonders gut.
+    collocations: besonders gut · besonders schwierig
+    register: "Steht vor dem Wort: besonders schwierig."
+
+  - term: der Kurs
+    tag: Nomen
+    definition: a course; lessons in a school, for example a language course
+    use_cases:
+      - Ich mache einen Kurs.
+      - Der Kurs kostet hundert Euro.
+    collocations: einen Kurs machen · der Deutschkurs
+    register: "Plural: die Kurse"
+
+  - term: lernen
+    tag: Verb
+    definition: to learn, to study something new
+    use_cases:
+      - Ich lerne Deutsch.
+      - "Was lernst du gern?"
+    collocations: Deutsch lernen · viel lernen · allein lernen
+    register: "ich lerne · du lernst · er lernt"
+
+  - term: üben
+    tag: Verb
+    definition: to practise; you do the same thing again and again until it is easy
+    use_cases:
+      - Ich übe sehr viel.
+      - Wir üben Deutsch.
+    collocations: viel üben · allein üben
+    register: "ich übe · du übst · er übt"
+
+  - term: die Aufgabe
+    tag: Nomen
+    definition: a task, an exercise; the work the teacher gives you
+    use_cases:
+      - Die Aufgabe ist einfach.
+      - Ich mache die Aufgaben allein.
+    collocations: eine Aufgabe machen · die Aufgabe verstehen
+    register: "Plural: die Aufgaben"
+
+  - term: der Fehler
+    tag: Nomen
+    definition: "a mistake; something that is not right. Opposite: richtig"
+    use_cases:
+      - Ich mache viele Fehler.
+      - Das ist ein Fehler.
+    collocations: einen Fehler machen · viele Fehler
+    register: "Plural: die Fehler (kein -n)"
+
+  - term: die Prüfung
+    tag: Nomen
+    definition: an exam, a test at the end of a course
+    use_cases:
+      - Die Prüfung ist schwierig.
+      - Ich möchte die Prüfung machen.
+    collocations: eine Prüfung machen · die Prüfung A1
+    register: "Plural: die Prüfungen"
+
+  - term: das Ziel
+    tag: Nomen
+    definition: a goal; what you want to have or to be at the end
+    use_cases:
+      - Mein Ziel ist die Prüfung A1.
+      - Wir haben ein Ziel.
+    collocations: ein Ziel haben · das Ziel ist …
+    register: "Plural: die Ziele"
+
+  - term: brauchen
+    tag: Verb
+    definition: to need something; you do not have it, but you want it now
+    use_cases:
+      - Ich brauche eine Lösung.
+      - Wir brauchen einen Plan.
+    collocations: Zeit brauchen · einen Kurs brauchen
+    register: "ich brauche · du brauchst · er braucht"
+
+  - term: versuchen
+    tag: Verb
+    definition: to try; you do it and you do not know — maybe it works, maybe not
+    use_cases:
+      - Ich versuche es noch einmal.
+      - Er versucht es allein.
+    collocations: es versuchen · noch einmal versuchen
+    register: "ich versuche · du versuchst · er versucht"
+
+  - term: das Klavier
+    tag: Nomen
+    definition: a piano; the big instrument with black and white keys
+    use_cases:
+      - Ich spiele Klavier.
+      - Sie kann sehr gut Klavier spielen.
+    collocations: Klavier spielen · Klavier lernen
+    register: "Plural: die Klaviere. Ohne Artikel: Klavier spielen."
+
+  - term: zeichnen
+    tag: Verb
+    definition: to draw a picture with a pencil. Not the same as malen
+    use_cases:
+      - Ich zeichne gern.
+      - "Kannst du gut zeichnen?"
+    collocations: gut zeichnen · gern zeichnen
+    register: "ich zeichne · du zeichnest · er zeichnet"
+
+  - term: der Lehrer
+    tag: Nomen
+    definition: a teacher; he gives the lessons. A woman is die Lehrerin
+    use_cases:
+      - Der Lehrer kommt aus Berlin.
+      - Mein Lehrer ist sehr gut.
+    collocations: der Deutschlehrer · der Lehrer sagt …
+    register: "Plural: die Lehrer · weiblich: die Lehrerin"
+
+  - term: möglich
+    tag: Adjektiv
+    definition: "possible; it can happen. Opposite: nicht möglich"
+    use_cases:
+      - Das ist möglich.
+      - "Ist das möglich?"
+    collocations: nicht möglich · alles ist möglich
+    register: "Nur nach dem Verb: Das ist möglich."

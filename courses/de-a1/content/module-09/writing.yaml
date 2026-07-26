@@ -1,0 +1,30 @@
+# Module 09 · production. Scaffolding (prompt, checklist) English; model answer
+# German (§5). The model stays inside what modules 1–9 can produce: separable
+# verbs with the prefix at the end, clock times with um, time phrases with am, the
+# days of the week, the present tense and und. No dative, no imperative, no
+# müssen/dürfen/sollen, no date, no Perfekt.
+mode: writing
+genre: a short text about your own day
+word_target: [30, 40]
+prompt: |
+  Your German course has a small blog. Write a short post about your own day.
+  30–40 words.
+
+  Say something about each point:
+  • when you get up (um … Uhr, halb …, Viertel nach …)
+  • when your work or your course starts and stops (anfangen, aufhören)
+  • what you do in the evening (am Abend)
+  • what is different at the weekend (am Wochenende)
+
+  Use at least three separable verbs (aufstehen, anfangen, aufhören, fernsehen,
+  einkaufen, mitkommen) and at least one am phrase with a day of the week.
+model_answer: |
+  Am Morgen stehe ich um halb sieben auf. Um sieben Uhr frühstücke ich.
+  Die Arbeit fängt um neun Uhr an und hört um fünf Uhr auf. Am Abend sehe
+  ich fern. Am Wochenende stehe ich spät auf und kaufe ein.
+checklist:
+  - Three or more separable verbs, each with the prefix at the end of the sentence
+  - At least one clock time with um and one phrase with am
+  - One sentence about the weekend or a day of the week
+  - The verb stands second, also after a time phrase in front
+  - The post is 30–40 words long

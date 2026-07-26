@@ -1,0 +1,105 @@
+# Module 08 · theory. Two spotlights, 5 items — three items for the three grammar
+# points of the card (können, wollen, möchten) plus the verb bracket and the modal
+# in questions. The word-formation extension of this module is the form of the
+# modal verb (können → ich kann, du kannst); it lives in these tables and in the
+# word_formation tasks. Scaffolding rule (§5): intro and note English, every
+# example and table German. Grammar terms are named in English directly (§5.1) —
+# there is no German grammar glossary in this course.
+spotlights:
+  - title: können and wollen — the forms
+    intro: A modal verb says what you can do or what you want to do. It never stands alone for long — a second verb comes with it, and that second verb waits at the end of the sentence.
+    items:
+      - form: "können — the present tense"
+        example: "Ich kann gut zeichnen. Du kannst Klavier spielen. Er kann Deutsch sprechen. Wir können die Aufgabe machen."
+        note: "können = to be able to. ich and er/sie/es take no ending: kann."
+        table:
+          headers: ["", "können"]
+          rows:
+            - ["ich", "kann"]
+            - ["du", "kannst"]
+            - ["er/sie/es", "kann"]
+            - ["wir", "können"]
+            - ["ihr", "könnt"]
+            - ["sie/Sie", "können"]
+      - form: "wollen — the present tense"
+        example: "Ich will einen Kurs machen. Du willst die Prüfung machen. Sie will allein lernen. Wir wollen viel üben."
+        note: "wollen = to want to. Same pattern: no ending for ich and er/sie/es."
+        table:
+          headers: ["", "wollen"]
+          rows:
+            - ["ich", "will"]
+            - ["du", "willst"]
+            - ["er/sie/es", "will"]
+            - ["wir", "wollen"]
+            - ["ihr", "wollt"]
+            - ["sie/Sie", "wollen"]
+      - form: "The verb bracket: modal second, infinitive last"
+        example: "Ich kann gut Klavier spielen. Heute will ich allein üben. Anna möchte die Prüfung machen."
+        note: The modal is verb number two. The second verb stays an infinitive and waits at the end.
+        table:
+          headers: ["Position 1", "Position 2 (Modalverb)", "Mitte", "Ende (Infinitiv)"]
+          rows:
+            - ["Ich", "kann", "gut Klavier", "spielen."]
+            - ["Heute", "will", "ich allein", "üben."]
+            - ["Anna", "möchte", "die Prüfung", "machen."]
+            - ["Wir", "können", "das Problem", "sehen."]
+
+  - title: möchten and modals in questions
+    intro: möchten is the polite modal. You already say Ich möchte einen Kaffee — here it gets its full set of forms and a second verb at the end.
+    items:
+      - form: "möchten — the present tense"
+        example: "Ich möchte einen Kurs machen. Möchtest du auch Deutsch lernen? Er möchte die Prüfung machen. Wir möchten viel üben."
+        note: "Polite: I would like to. ich and er/sie/es both take möchte."
+        table:
+          headers: ["", "möchten"]
+          rows:
+            - ["ich", "möchte"]
+            - ["du", "möchtest"]
+            - ["er/sie/es", "möchte"]
+            - ["wir", "möchten"]
+            - ["ihr", "möchtet"]
+            - ["sie/Sie", "möchten"]
+      - form: "The modal in a question"
+        example: "Kannst du gut zeichnen? Was willst du heute lernen? Möchtest du einen Kurs machen?"
+        note: The modal comes first, or after the question word. The infinitive still stands at the end.
+        table:
+          headers: ["Fragewort / Modalverb", "Mitte", "Infinitiv"]
+          rows:
+            - ["Kannst du", "gut Klavier", "spielen?"]
+            - ["Was willst du", "heute", "lernen?"]
+            - ["Möchtest du", "einen Kurs", "machen?"]
+            - ["Wo können wir", "Deutsch", "lernen?"]
+
+watchouts:
+  - title: The infinitive goes to the end
+    bad: Ich kann sprechen gut Deutsch.
+    good: Ich kann gut Deutsch sprechen.
+    note: English keeps the two verbs together; German does not. The second verb closes the sentence.
+  - title: ich kann, not ich kanne
+    bad: Ich kanne gut zeichnen.
+    good: Ich kann gut zeichnen.
+    note: "Modal verbs have no -e in the ich form: ich kann, ich will, ich möchte."
+  - title: möchten and wollen take no zu
+    bad: Ich möchte zu Deutsch lernen.
+    good: Ich möchte Deutsch lernen.
+    note: "German uses the bare infinitive after a modal — there is no word for to here."
+
+cloze_cards:
+  - text: "Ich {{c1::kann}} gut Klavier spielen."
+    hint: können
+    rule: "können in the ich form has no ending: ich kann."
+  - text: "Was {{c1::willst}} du heute lernen?"
+    hint: wollen
+    rule: "du + wollen → du willst. The infinitive lernen stays at the end."
+  - text: "Wir {{c1::können}} die Aufgabe machen."
+    hint: können
+    rule: "wir + können → können. The plural keeps the ö."
+  - text: "Ich {{c1::möchte}} die Prüfung machen."
+    hint: möchten
+    rule: "möchten is polite. ich möchte — no ending, no zu before the infinitive."
+  - text: "Er möchte heute nicht {{c1::üben}}."
+    hint: üben
+    rule: "The second verb is an infinitive and closes the sentence: … nicht üben."
+  - text: "{{c1::Kannst}} du das Problem sehen?"
+    hint: können
+    rule: "In a yes/no question the modal comes first: Kannst du …? The infinitive stays at the end."

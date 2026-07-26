@@ -267,7 +267,7 @@
 | Немецкий (target — вход и продукция) | Английский (scaffolding — объяснение) |
 |---|---|
 | `vocab.term`, `vocab.use_cases[]` | `vocab.definition` |
-| `theory.items[].example`, `theory.items[].table`, `watchouts[].good`/`bad` | `theory.spotlights[].intro`, `items[].note`, `watchouts[].note` |
+| `theory.items[].example`, `theory.items[].table`, `watchouts[].good`/`bad` | `theory.spotlights[].title`, `items[].form`, `spotlights[].intro`, `items[].note`, `watchouts[].note` |
 | тела `text-main`/`text-extra`, `glosses[].example` | `glosses[].definition`, `glosses[].pos_label` |
 | `exercises`: `pre`/`post`/`prompt`/`options`/`answers`/`answer_shown`/`correction`/`words`; `cloze_cards.text` | `exercise.explanation` |
 | `writing.model_answer` | `writing.prompt`, `writing.checklist`, `meta.goals[].text` |
@@ -275,7 +275,7 @@
 
 **Правила, обязательные для каждого модуля:**
 
-1. **Никакого Grammatik-Wörterbuch.** Грамматические термины называются прямо по-английски — `the accusative`, `separable verb`, `verb bracket`, `stem-changing verb`. Немецкий глоссарий из 28 терминов, который de-a2 вводит диагностикой, здесь не строится, и диагностики поэтому нет (§1a, §2).
+1. **Никакого Grammatik-Wörterbuch.** Грамматические термины называются прямо по-английски — `the accusative`, `separable verb`, `verb bracket`, `stem-changing verb`. Немецкий глоссарий из 28 терминов, который de-a2 вводит диагностикой, здесь не строится, и диагностики поэтому нет (§1a, §2). Запрет — на **леса**: `Verbklammer`, `Zeitangabe`, `trennbares Verb` не могут стоять в `form`, `title`, `intro`, `note`, `explanation`. Внутри немецких полей (шапки `table`, `prompt` упражнения) немецкий ярлык законен — это подпись к немецкому же артефакту, а не термин, который курс требует знать: `headers: ["Nominativ", "Akkusativ", "Beispiel"]` остаётся.
 2. **Таблица вместо прозы — по-прежнему.** Парадигму делают немецкие `example` и `table`. Поле `note` — короткое английское пояснение (≤ 15 слов).
    ```yaml
    - form: den + noun (accusative)

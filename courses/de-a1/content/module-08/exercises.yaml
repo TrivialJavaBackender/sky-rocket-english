@@ -1,0 +1,513 @@
+# Module 08 · 46 core tasks + 16 review. Distribution (PLAN.md §6):
+# 8 mc_cloze · 8 open_cloze · 6 word_formation · 2 key_word_transformation ·
+# 10 grammar_drill · 4 error_correction · 4 collocation_match · 4 reading_comprehension.
+#
+# Spiral revision of earlier modules (marked "SPIRAL"): mc_cloze 7 and open_cloze 7
+# (accusative of ein / der, M6), open_cloze 6 (kein in the accusative, M7),
+# grammar_drill 8 (inversion after a front adverbial, M5), grammar_drill 9
+# (kein in the accusative, M4/M7), word_formation 6 (conjugation, M2).
+#
+# One task = one operation: nothing asks for a separable verb, a clock time, a
+# dative form, an imperative, müssen/dürfen/sollen, a Perfekt form, aber/denn or
+# a possessive in the accusative. Those appear only as input in frames and
+# distractors. Explanations English (§5); frames, options and answers German.
+core:
+  # ───────────────────────── Multiple Choice ─────────────────────────
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Ich "
+      post: " gut zeichnen."
+      options: [kann, kanne, kannst, könnt]
+      answer: 0
+    explanation: "können takes no ending in the ich form: ich kann. There is no kanne."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Anna, "
+      post: " du Klavier spielen?"
+      options: [kann, kannst, könnt, können]
+      answer: 1
+    explanation: "du + können → du kannst. The infinitive spielen stays at the end."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Wir "
+      post: " einen Kurs machen."
+      options: [will, willst, wollt, wollen]
+      answer: 3
+    explanation: "wir + wollen → wollen. The plural form is the same as the infinitive."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Er "
+      post: " die Prüfung machen."
+      options: [möchtest, möchten, möchte, möchtet]
+      answer: 2
+    explanation: "er/sie/es + möchten → möchte, the same form as ich möchte."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Ich kann heute nicht "
+      post: "."
+      options: [üben, übe, übst, übt]
+      answer: 0
+    explanation: "After a modal the second verb is an infinitive and closes the sentence: … nicht üben."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Was "
+      post: " du heute lernen?"
+      options: [will, wollen, wollt, willst]
+      answer: 3
+    explanation: "After the question word Was the modal comes second: Was willst du …?"
+  # SPIRAL · M6 — accusative of the indefinite article
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Ich brauche "
+      post: " Plan."
+      options: [der, einen, ein, dem]
+      answer: 1
+    explanation: "brauchen takes a direct object, and masculine ein becomes einen in the accusative."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "Deutsch ist nicht einfach. Deutsch ist "
+      post: "."
+      options: [einfach, allein, schwierig, besonders]
+      answer: 2
+    explanation: "schwierig is the opposite of einfach: nicht einfach = schwierig."
+
+  # ───────────────────────── Open Cloze ─────────────────────────
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Ich "
+      post: " gut zeichnen."
+      hint: können
+      answers: [kann]
+      answer_shown: kann
+    explanation: "ich + können → kann, with no ending."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Anna, "
+      post: " du Deutsch sprechen?"
+      hint: können
+      answers: [kannst]
+      answer_shown: kannst
+    explanation: "du + können → kannst. In a yes/no question the modal stands in front of du."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Ich möchte einen Kurs "
+      post: "."
+      hint: machen
+      answers: [machen]
+      answer_shown: machen
+    explanation: "The second verb after a modal is an infinitive and stands at the end: einen Kurs machen."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Wir "
+      post: " die Prüfung machen."
+      hint: wollen
+      answers: [wollen]
+      answer_shown: wollen
+    explanation: "wir + wollen → wollen. The infinitive machen waits at the end."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Er "
+      post: " heute nicht üben."
+      hint: wollen
+      answers: [will]
+      answer_shown: will
+    explanation: "er + wollen → will, with no ending."
+  # SPIRAL · M7 — kein in the accusative
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Ich habe einen Plan. Du hast leider "
+      post: " Plan."
+      answers: [keinen]
+      answer_shown: keinen
+    explanation: "leider says the second sentence is negative. der Plan is masculine → keinen Plan."
+  # SPIRAL · M6 — accusative of the definite article
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Hier ist der Plan. Ich finde "
+      post: " Plan sehr gut."
+      answers: [den]
+      answer_shown: den
+    explanation: "The plan is already known — der Plan — and finden takes the accusative: den Plan."
+  - type: open_cloze
+    group: vocab
+    content:
+      pre: "Wir haben ein Problem. Wir brauchen eine "
+      post: "."
+      hint: die Lösung
+      answers: [Lösung]
+      answer_shown: Lösung
+    explanation: "The answer to a problem is die Lösung; feminine eine does not change in the accusative."
+
+  # ───────────────────────── Wortbildung ─────────────────────────
+  - type: word_formation
+    group: grammar
+    content:
+      pre: "Ich "
+      post: " gut Klavier spielen."
+      prompt: "können (ich)"
+      answers: [kann]
+      answer_shown: kann
+    explanation: "können → ich kann. The ich form of a modal has no ending."
+  - type: word_formation
+    group: grammar
+    content:
+      pre: ""
+      post: " du Deutsch sprechen?"
+      prompt: "können (du)"
+      answers: [Kannst]
+      answer_shown: Kannst
+    explanation: "können → du kannst. In the question the form comes first, so it starts with a capital letter."
+  - type: word_formation
+    group: grammar
+    content:
+      pre: "Wir "
+      post: " einen Kurs machen."
+      prompt: "wollen (wir)"
+      answers: [wollen]
+      answer_shown: wollen
+    explanation: "wollen → wir wollen. In the plural the form is the same as the infinitive."
+  - type: word_formation
+    group: grammar
+    content:
+      pre: "Er "
+      post: " die Prüfung machen."
+      prompt: "möchten (er)"
+      answers: [möchte]
+      answer_shown: möchte
+    explanation: "möchten → er möchte, the same form as ich möchte."
+  - type: word_formation
+    group: grammar
+    content:
+      pre: "Ihr "
+      post: " sehr gut zeichnen."
+      prompt: "können (ihr)"
+      answers: [könnt]
+      answer_shown: könnt
+    explanation: "können → ihr könnt. The ihr form keeps the ö and takes -t."
+  # SPIRAL · M2 — conjugation
+  - type: word_formation
+    group: grammar
+    content:
+      pre: "Du "
+      post: " sehr viel."
+      prompt: "üben (du)"
+      answers: [übst]
+      answer_shown: übst
+    explanation: "üben is a regular verb: stem üb- + -st → du übst."
+
+  # ───────────────────────── Umformung ─────────────────────────
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: Du kannst gut zeichnen.
+      key: FRAGE
+      pre: ""
+      post: " du gut zeichnen?"
+      answers: [Kannst]
+      hint: 1 Wort
+      answer_shown: Kannst
+    explanation: "In a yes/no question the modal comes first: Kannst du gut zeichnen?"
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: Ich will einen Kurs machen.
+      key: MÖCHTEN
+      pre: "Ich "
+      post: " einen Kurs machen."
+      answers: [möchte]
+      hint: 1 Wort
+      answer_shown: möchte
+    explanation: "möchte is the polite form of the same wish: ich will → ich möchte."
+
+  # ───────────────────────── Grammatik-Drill ─────────────────────────
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Ich "
+      post: " gut Klavier spielen."
+      prompt: können
+      options: [kann, kannst, könnt, können]
+      answer: 0
+    explanation: "ich + können → kann."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Du "
+      post: " sehr gut zeichnen."
+      prompt: können
+      options: [kann, kannst, könnt, können]
+      answer: 1
+    explanation: "du + können → kannst."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Wir "
+      post: " Deutsch lernen."
+      prompt: wollen
+      options: [will, willst, wollt, wollen]
+      answer: 3
+    explanation: "wir + wollen → wollen."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Ihr "
+      post: " die Aufgabe machen."
+      prompt: können
+      options: [kann, kannst, könnt, können]
+      answer: 2
+    explanation: "ihr + können → könnt."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Er "
+      post: " die Prüfung machen."
+      prompt: möchten
+      options: [möchtest, möchte, möchten, möchtet]
+      answer: 1
+    explanation: "er + möchten → möchte."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: ""
+      post: " du heute üben?"
+      prompt: wollen
+      options: [Willst, Will, Wollt, Wollen]
+      answer: 0
+    explanation: "du + wollen → willst; in a yes/no question it comes first: Willst du …?"
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Ich "
+      post: ""
+      prompt: Verbklammer
+      options:
+        - kann sprechen gut Deutsch.
+        - gut kann Deutsch sprechen.
+        - kann gut Deutsch sprechen.
+        - sprechen kann gut Deutsch.
+      answer: 2
+    explanation: "The modal stands second and the infinitive last: Ich kann gut Deutsch sprechen."
+  # SPIRAL · M5 — inversion after a front adverbial
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Heute "
+      post: ""
+      prompt: Verbklammer
+      options:
+        - ich will allein üben.
+        - will ich allein üben.
+        - ich allein üben will.
+        - will allein üben ich.
+      answer: 1
+    explanation: "Heute takes position 1, so the modal comes second and ich follows: Heute will ich allein üben."
+  # SPIRAL · M4 / M7 — kein in the accusative
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Ich habe "
+      post: " Idee."
+      prompt: kein
+      options: [keinen, kein, keine, keiner]
+      answer: 2
+    explanation: "die Idee is feminine, so keine stays keine in the accusative."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Sie "
+      post: " die Aufgaben machen."
+      prompt: möchten
+      options: [möchte, möchtest, möchtet, möchten]
+      answer: 3
+    explanation: "sie (Plural) + möchten → möchten, the same form as the infinitive."
+
+  # ───────────────────────── Fehlerkorrektur ─────────────────────────
+  - type: error_correction
+    group: grammar
+    content: { words: [Ich, kann, sprechen, gut, "Deutsch."], wrong: 2, correction: "sprechen → Ich kann gut Deutsch sprechen." }
+    explanation: "German does not keep the two verbs together. The infinitive closes the sentence."
+  - type: error_correction
+    group: grammar
+    content: { words: [Ich, kanne, gut, "zeichnen."], wrong: 1, correction: "kanne → kann" }
+    explanation: "A modal verb has no -e in the ich form: ich kann."
+  - type: error_correction
+    group: grammar
+    content: { words: [Ich, möchte, zu, Deutsch, "lernen."], wrong: 2, correction: "zu lernen → lernen" }
+    explanation: "After a modal German uses the bare infinitive — there is no zu."
+  - type: error_correction
+    group: grammar
+    content: { words: [Du, wollst, einen, Kurs, "machen."], wrong: 1, correction: "wollst → willst" }
+    explanation: "wollen changes the vowel in the singular: du willst, not du wollst."
+
+  # ───────────────────────── Wort-Paare ─────────────────────────
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [Klavier, Deutsch, einen Plan, eine Prüfung]
+      right: [haben, spielen, machen, sprechen]
+      pairs: { 0: 1, 1: 3, 2: 0, 3: 2 }
+    explanation: "Klavier spielen · Deutsch sprechen · einen Plan haben · eine Prüfung machen."
+  - type: collocation_match
+    group: grammar
+    content:
+      left: [ich, du, wir, ihr]
+      right: [könnt, kann, können, kannst]
+      pairs: { 0: 1, 1: 3, 2: 2, 3: 0 }
+    explanation: "ich kann · du kannst · wir können · ihr könnt."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [ein Problem, eine Lösung, Fehler, viel]
+      right: [üben, machen, haben, finden]
+      pairs: { 0: 2, 1: 3, 2: 1, 3: 0 }
+    explanation: "ein Problem haben · eine Lösung finden · Fehler machen · viel üben."
+  - type: collocation_match
+    group: grammar
+    content:
+      left: [Ich kann gut Klavier, Ich möchte Deutsch, Wir wollen viel, Ihr könnt die Aufgabe]
+      right: [üben, spielen, machen, lernen]
+      pairs: { 0: 1, 1: 3, 2: 0, 3: 2 }
+    explanation: "The infinitive closes every sentence: … Klavier spielen · … Deutsch lernen · … viel üben · … die Aufgabe machen."
+
+  # ───────────────────────── Leseverstehen ─────────────────────────
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Ich kann gut zeichnen. Das ist einfach für mich."
+      q: "Was kann Marta gut?"
+      options:
+        - Klavier spielen
+        - Zeichnen
+        - Kochen
+        - Singen
+      answer: 1
+    explanation: "The text says: Ich kann gut zeichnen."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Ich lerne allein und ich mache viele Fehler. Jetzt habe ich einen Plan: Ich will einen Kurs machen."
+      q: "Was will Marta jetzt machen?"
+      options:
+        - Einen Kurs
+        - Eine Prüfung in Berlin
+        - Ein Klavier
+        - Eine Idee
+      answer: 0
+    explanation: "The text says: Ich will einen Kurs machen."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Ich kann nicht singen und ich kann nicht kochen. Aber Klavier spielen kann ich sehr gut."
+      q: "Was kann Ben sehr gut?"
+      options:
+        - Singen
+        - Kochen
+        - Klavier spielen
+        - Zeichnen
+      answer: 2
+    explanation: "The text says: Aber Klavier spielen kann ich sehr gut."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Fehler sind kein Problem, und für jedes Problem gibt es eine Lösung."
+      q: "Sind Fehler ein Problem?"
+      options:
+        - "Ja, Fehler sind sehr schwierig."
+        - "Ja, immer."
+        - "Fehler kosten Geld."
+        - "Nein, Fehler sind kein Problem."
+      answer: 3
+    explanation: "Sonja says: Fehler sind kein Problem."
+
+review_pool:
+  - type: mc_cloze
+    group: grammar
+    content: { pre: "Er ", post: " gut Klavier spielen.", options: [kann, kannst, können, könnt], answer: 0 }
+    explanation: "er + können → kann."
+  - type: mc_cloze
+    group: grammar
+    content: { pre: "", post: " du heute üben?", options: [Will, Willst, Wollt, Wollen], answer: 1 }
+    explanation: "du + wollen → willst, and in a question it comes first."
+  - type: mc_cloze
+    group: grammar
+    content: { pre: "Ich ", post: " einen Kurs machen.", options: [möchtest, möchtet, möchte, möchten], answer: 2 }
+    explanation: "ich + möchten → möchte."
+  - type: mc_cloze
+    group: grammar
+    content: { pre: "Wir können die Aufgabe ", post: ".", options: [machen, machst, macht, mache], answer: 0 }
+    explanation: "The second verb after a modal is an infinitive: … die Aufgabe machen."
+  - type: mc_cloze
+    group: vocab
+    content: { pre: "Das ist nicht einfach. Das ist ", post: ".", options: [allein, schwierig, besonders, möglich], answer: 1 }
+    explanation: "nicht einfach = schwierig."
+  - type: open_cloze
+    group: grammar
+    content: { pre: "Meine Schwester ", post: " sehr gut singen.", hint: können, answers: [kann], answer_shown: kann }
+    explanation: "er/sie/es + können → kann, with no ending."
+  - type: open_cloze
+    group: grammar
+    content: { pre: "Wir ", post: " einen Kurs machen.", hint: wollen, answers: [wollen], answer_shown: wollen }
+    explanation: "wir + wollen → wollen."
+  - type: open_cloze
+    group: grammar
+    content: { pre: "Er möchte heute nicht ", post: ".", hint: üben, answers: [üben], answer_shown: üben }
+    explanation: "The infinitive closes the sentence: … heute nicht üben."
+  - type: open_cloze
+    group: vocab
+    content: { pre: "Ich habe ein Problem. Ich brauche eine ", post: ".", hint: die Lösung, answers: [Lösung], answer_shown: Lösung }
+    explanation: "die Lösung is the answer to a problem; eine does not change in the accusative."
+  - type: grammar_drill
+    group: grammar
+    content: { pre: "Du ", post: " sehr gut Klavier spielen.", prompt: können, options: [kann, kannst, könnt, können], answer: 1 }
+    explanation: "du + können → kannst."
+  - type: grammar_drill
+    group: grammar
+    content: { pre: "Ihr ", post: " die Prüfung machen.", prompt: wollen, options: [will, willst, wollt, wollen], answer: 2 }
+    explanation: "ihr + wollen → wollt."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Mein Bruder "
+      post: ""
+      prompt: Verbklammer
+      options:
+        - kann gut zeichnen.
+        - kann zeichnen gut.
+        - gut zeichnen kann.
+        - zeichnen kann gut.
+      answer: 0
+    explanation: "Modal second, infinitive last: Mein Bruder kann gut zeichnen."
+  - type: grammar_drill
+    group: grammar
+    content: { pre: "Sie ", post: " Deutsch lernen.", prompt: möchten, options: [möchte, möchtest, möchten, möchtet], answer: 2 }
+    explanation: "sie (Plural) + möchten → möchten."
+  - type: error_correction
+    group: grammar
+    content: { words: [Ich, will, lernen, "Deutsch."], wrong: 2, correction: "will lernen Deutsch → will Deutsch lernen" }
+    explanation: "The infinitive goes to the end: Ich will Deutsch lernen."
+  - type: error_correction
+    group: grammar
+    content: { words: [Du, kannst, gut, "zeichnest."], wrong: 3, correction: "zeichnest → zeichnen" }
+    explanation: "Only the modal takes the ending. The second verb stays an infinitive."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [Klavier, Deutsch, eine Prüfung, einen Plan]
+      right: [machen, spielen, haben, sprechen]
+      pairs: { 0: 1, 1: 3, 2: 0, 3: 2 }
+    explanation: "Klavier spielen · Deutsch sprechen · eine Prüfung machen · einen Plan haben."

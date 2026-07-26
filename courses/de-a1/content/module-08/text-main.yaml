@@ -1,0 +1,44 @@
+# Module 08 · main text — a real forum page: one question of the day and three
+# answers. The genre carries every target construction (können, wollen, möchten,
+# the verb bracket in a statement, after a front adverbial and in a question) and
+# 21 of the 24 target words; die Idee, versuchen and möglich come in the extra
+# text. Glosses (4) sit on words whose form in the text is the dictionary form.
+kind: main
+kicker: FORUM
+title: Was kannst du gut?
+meta: ≈ 2 min · dotted words have a note — tap to reveal
+word_count: 134
+body:
+  - - t: "Forum Deutsch. Die Frage heute: Was kannst du gut, und was willst du lernen?"
+  - - t: "Marta, 24: Ich kann gut zeichnen. Das ist einfach für mich. Deutsch finde ich schwierig, besonders die "
+    - g: Grammatik
+    - t: ". Ich lerne allein und ich mache viele Fehler. Jetzt habe ich einen Plan: Ich will einen Kurs machen. Mein Ziel ist die Prüfung A1."
+  - - t: "Ben, 31: Ich kann nicht singen und ich kann nicht kochen. Aber Klavier spielen kann ich sehr gut. Ich möchte "
+    - g: jetzt
+    - t: " "
+    - g: auch
+    - t: " Deutsch lernen. Ein Problem: Ich habe keinen Lehrer. Vielleicht ist ein Kurs die Lösung."
+  - - t: "Sonja, 45: Ich bin Lehrerin. Meine Studenten sagen oft: Das kann ich nicht! Das ist nicht richtig. Die Aufgaben sind nicht schwierig. Fehler sind kein Problem, und für jedes Problem gibt es eine Lösung. Ihr könnt das! Ihr braucht "
+    - g: nur
+    - t: " einen Plan: üben, üben, üben."
+glosses:
+  - key: Grammatik
+    term: die Grammatik
+    pos_label: noun
+    definition: grammar — the rules of a language
+    example: Die Grammatik ist nicht schwierig.
+  - key: jetzt
+    term: jetzt
+    pos_label: adverb
+    definition: now, at this moment. Not later
+    example: Jetzt habe ich einen Plan.
+  - key: auch
+    term: auch
+    pos_label: adverb
+    definition: too, as well — one more thing of the same kind
+    example: Ich möchte auch Deutsch lernen.
+  - key: nur
+    term: nur
+    pos_label: adverb
+    definition: only, no more than that
+    example: Ihr braucht nur einen Plan.

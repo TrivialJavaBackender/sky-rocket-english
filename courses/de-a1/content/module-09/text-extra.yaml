@@ -1,0 +1,42 @@
+# Module 09 · extra text — a real Terminkalender: one week, day by day, with the
+# clock times of the entries. It shows the same target material in a second genre
+# (official time as a grid, the seven days, the separable verbs in the infinitive
+# of a calendar entry) and closes with a note in full sentences. der Termin and
+# der Kalender appear here as input only — they are anchors of module 12 and are
+# not vocab entries of this module.
+kind: extra
+kicker: TERMINKALENDER
+title: Terminkalender von Anna
+meta: ≈ 1 min · dotted words have a note — tap to reveal
+word_count: 59
+body:
+  - - t: "MONTAG · 7.00 Uhr aufstehen · 7.30 Uhr "
+    - g: Frühstück
+    - t: " · 9.00 Uhr Arbeit · 19.30 Uhr "
+    - g: Kurs
+    - t: ": Deutsch"
+  - - t: "DIENSTAG · 9.00 Uhr Arbeit · 13.00 Uhr Mittag mit Lena · 17.00 Uhr Arbeit hört auf"
+  - - t: "MITTWOCH · 9.00 Uhr Arbeit · 20.15 Uhr fernsehen"
+  - - t: "DONNERSTAG · 9.00 Uhr Arbeit · 18.00 Uhr "
+    - g: Termin
+    - t: ": Frau Klein"
+  - - t: "FREITAG · 9.00 Uhr Arbeit · 16.00 Uhr Wochenende!"
+  - - t: "SAMSTAG · 10.00 Uhr einkaufen · 15.00 Uhr Lena kommt mit"
+  - - t: "SONNTAG · halb elf aufstehen · Anna arbeitet nicht"
+  - - t: "NOTIZ: Am Wochenende stehe ich spät auf."
+glosses:
+  - key: Frühstück
+    term: das Frühstück
+    pos_label: noun
+    definition: breakfast, the first food of the day
+    example: Das Frühstück ist um halb acht.
+  - key: Kurs
+    term: der Kurs
+    pos_label: noun
+    definition: a course, lessons at a school
+    example: Der Kurs fängt um sieben Uhr an.
+  - key: Termin
+    term: der Termin
+    pos_label: noun
+    definition: an appointment, a fixed time to meet somebody
+    example: Am Donnerstag habe ich einen Termin.

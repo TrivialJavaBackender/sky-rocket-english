@@ -1,0 +1,224 @@
+# Module 09 · 24 words: the day, the parts of the day, the days of the week.
+# The 12 anchors of the card + the seven days of the week (19) + five words that
+# finish the same domain: the two remaining separable verbs of the grammar opis
+# (einkaufen, mitkommen) and the three missing time nouns (der Tag, der Mittag,
+# die Nacht). Scaffolding rule (§5): term/use_cases/collocations/register German,
+# definition English with a synonym or an opposite. Separable verbs carry the
+# split form ready-made in the use_cases (Ich stehe um sieben Uhr auf) — that is
+# the shape the exercises ask for. Nouns carry their article and their plural.
+entries:
+  - term: aufstehen
+    tag: Verb (trennbar)
+    definition: to get up, to leave your bed in the morning. The opposite is schlafen
+    use_cases:
+      - Ich stehe um sieben Uhr auf.
+      - Am Sonntag steht Anna spät auf.
+    collocations: früh aufstehen · spät aufstehen · um sechs Uhr aufstehen
+    register: "Trennbar: auf + stehen. Im Satz: Ich stehe … auf."
+
+  - term: frühstücken
+    tag: Verb
+    definition: to have breakfast, to eat in the morning
+    use_cases:
+      - Ich frühstücke um halb acht.
+      - Am Wochenende frühstücken wir lange.
+    collocations: lange frühstücken · schnell frühstücken
+    register: "Nicht trennbar: Ich frühstücke am Morgen."
+
+  - term: arbeiten
+    tag: Verb
+    definition: to work, to do your job. A person who works has einen Beruf
+    use_cases:
+      - Ich arbeite am Montag und am Dienstag.
+      - Am Wochenende arbeitet Anna nicht.
+    collocations: viel arbeiten · lange arbeiten · am Freitag arbeiten
+    register: "Du-Form mit -e-: du arbeitest, er arbeitet."
+
+  - term: anfangen
+    tag: Verb (trennbar)
+    definition: to start, to begin. The opposite is aufhören
+    use_cases:
+      - Die Arbeit fängt um neun Uhr an.
+      - Wann fängt der Kurs an?
+    collocations: früh anfangen · um acht Uhr anfangen
+    register: "Trennbar und mit Vokalwechsel: du fängst an, er fängt an."
+
+  - term: aufhören
+    tag: Verb (trennbar)
+    definition: to stop, to finish. The opposite is anfangen
+    use_cases:
+      - Die Arbeit hört um fünf Uhr auf.
+      - Wann hörst du auf?
+    collocations: spät aufhören · um vier Uhr aufhören
+    register: "Trennbar: auf + hören. Im Satz: Es hört … auf."
+
+  - term: fernsehen
+    tag: Verb (trennbar)
+    definition: to watch television
+    use_cases:
+      - Am Abend sehe ich fern.
+      - Wir sehen nicht viel fern.
+    collocations: viel fernsehen · am Abend fernsehen
+    register: "Trennbar und mit Vokalwechsel: du siehst fern, er sieht fern."
+
+  - term: einkaufen
+    tag: Verb (trennbar)
+    definition: to shop, to buy food for the week. A shop for food is der Supermarkt
+    use_cases:
+      - Am Samstag kaufe ich ein.
+      - Anna kauft am Freitag ein.
+    collocations: am Samstag einkaufen · viel einkaufen
+    register: "Trennbar: ein + kaufen. Im Satz: Ich kaufe … ein."
+
+  - term: mitkommen
+    tag: Verb (trennbar)
+    definition: to come too, to come with somebody
+    use_cases:
+      - Kommst du am Samstag mit?
+      - Lena kommt gern mit.
+    collocations: gern mitkommen · nicht mitkommen
+    register: "Trennbar: mit + kommen. Im Satz: Er kommt … mit."
+
+  - term: früh
+    tag: Adjektiv
+    definition: early, before the normal time. The opposite is spät
+    use_cases:
+      - Ich stehe sehr früh auf.
+      - Am Montag fängt die Arbeit früh an.
+    collocations: früh aufstehen · sehr früh · zu früh
+    register: "Auch Adverb: Ich komme früh."
+
+  - term: spät
+    tag: Adjektiv
+    definition: late, after the normal time. The opposite is früh
+    use_cases:
+      - Am Sonntag stehe ich spät auf.
+      - Wie spät ist es?
+    collocations: spät aufstehen · zu spät · "Wie spät ist es?"
+    register: "Frage nach der Uhrzeit: Wie spät ist es?"
+
+  - term: der Morgen
+    tag: Nomen
+    definition: the morning, the first hours of the day. The opposite is der Abend
+    use_cases:
+      - Am Morgen trinke ich Kaffee.
+      - Der Morgen ist kurz.
+    collocations: am Morgen · Guten Morgen!
+    register: "Plural: die Morgen. Zeitangabe: am Morgen."
+
+  - term: der Abend
+    tag: Nomen
+    definition: the evening, the last hours of the day. The opposite is der Morgen
+    use_cases:
+      - Am Abend sehe ich fern.
+      - Der Abend ist lang.
+    collocations: am Abend · Guten Abend!
+    register: "Plural: die Abende. Zeitangabe: am Abend."
+
+  - term: der Mittag
+    tag: Nomen
+    definition: midday, the middle of the day, around 12
+    use_cases:
+      - Am Mittag esse ich eine Suppe.
+      - Der Mittag ist kurz.
+    collocations: am Mittag · Mittag essen
+    register: "Plural: die Mittage. Zeitangabe: am Mittag."
+
+  - term: die Nacht
+    tag: Nomen
+    definition: the night, the dark hours. The opposite is der Tag
+    use_cases:
+      - Die Nacht ist lang.
+      - Gute Nacht!
+    collocations: Gute Nacht! · die Nacht ist kurz
+    register: "Plural: die Nächte."
+
+  - term: der Tag
+    tag: Nomen
+    definition: the day, 24 hours. The opposite is die Nacht
+    use_cases:
+      - Der Tag fängt um sieben Uhr an.
+      - Guten Tag!
+    collocations: jeden Tag · Guten Tag! · der Tag ist lang
+    register: "Plural: die Tage."
+
+  - term: die Woche
+    tag: Nomen
+    definition: the week, seven days from Monday to Sunday
+    use_cases:
+      - Die Woche hat sieben Tage.
+      - Diese Woche arbeite ich viel.
+    collocations: die Woche hat sieben Tage · diese Woche
+    register: "Plural: die Wochen."
+
+  - term: das Wochenende
+    tag: Nomen
+    definition: the weekend, Saturday and Sunday
+    use_cases:
+      - Am Wochenende arbeite ich nicht.
+      - Das Wochenende ist zu kurz.
+    collocations: am Wochenende · das Wochenende ist kurz
+    register: "Plural: die Wochenenden. Zeitangabe: am Wochenende."
+
+  - term: der Montag
+    tag: Nomen
+    definition: Monday, the first day of the week
+    use_cases:
+      - Am Montag fängt die Arbeit an.
+      - Der Montag ist lang.
+    collocations: am Montag · jeden Montag
+    register: "Zeitangabe: am Montag. Plural: die Montage."
+
+  - term: der Dienstag
+    tag: Nomen
+    definition: Tuesday, the day after Monday
+    use_cases:
+      - Am Dienstag arbeite ich lange.
+      - Am Dienstag fängt der Kurs an.
+    collocations: am Dienstag · jeden Dienstag
+    register: "Zeitangabe: am Dienstag."
+
+  - term: der Mittwoch
+    tag: Nomen
+    definition: Wednesday, the day in the middle of the week
+    use_cases:
+      - Am Mittwoch stehe ich früh auf.
+      - Ich kaufe am Mittwoch ein.
+    collocations: am Mittwoch · jeden Mittwoch
+    register: "Zeitangabe: am Mittwoch."
+
+  - term: der Donnerstag
+    tag: Nomen
+    definition: Thursday, the day after Wednesday
+    use_cases:
+      - Am Donnerstag kaufe ich ein.
+      - Der Donnerstag ist kein Wochenende.
+    collocations: am Donnerstag · jeden Donnerstag
+    register: "Zeitangabe: am Donnerstag."
+
+  - term: der Freitag
+    tag: Nomen
+    definition: Friday, the last day of work in the week
+    use_cases:
+      - Am Freitag hört die Arbeit früh auf.
+      - Der Freitag ist mein Lieblingstag.
+    collocations: am Freitag · jeden Freitag
+    register: "Zeitangabe: am Freitag."
+
+  - term: der Samstag
+    tag: Nomen
+    definition: Saturday, the first day of the weekend
+    use_cases:
+      - Am Samstag kaufe ich ein.
+      - Der Samstag ist ein Tag ohne Arbeit.
+    collocations: am Samstag · jeden Samstag
+    register: "Zeitangabe: am Samstag. Auch: der Sonnabend."
+
+  - term: der Sonntag
+    tag: Nomen
+    definition: Sunday, the last day of the week
+    use_cases:
+      - Am Sonntag arbeite ich nicht.
+      - Am Sonntag sehe ich viel fern.
+    collocations: am Sonntag · jeden Sonntag
+    register: "Zeitangabe: am Sonntag."

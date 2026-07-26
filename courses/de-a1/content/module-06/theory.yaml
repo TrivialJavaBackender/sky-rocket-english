@@ -55,7 +55,7 @@ spotlights:
             - ["es", "es", "Ich nehme es."]
             - ["wir", "uns", "Er sieht uns nicht."]
             - ["ihr", "euch", "Ich frage euch."]
-      - form: "möchte + Nomen (a polite way to order)"
+      - form: "möchte + noun (a polite way to order)"
         example: "Ich möchte einen Kaffee, bitte. Möchtest du ein Eis? Wir möchten die Rechnung, bitte."
         note: "Learn möchte as a ready-made polite phrase. The modal verbs come in module 8."
         table:

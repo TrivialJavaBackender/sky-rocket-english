@@ -1,0 +1,33 @@
+# Module 08 · Ich kann das! Scaffolding (goals, standfirst) English, title German
+# (§5). grammar_points repeat the module card's opis (3) with no additions. The
+# word-formation extension of this module is the form of the modal verb
+# (können → ich kann, du kannst) — it lives in the theory tables and in the
+# word_formation tasks, not as separate vocab entries.
+slug: m08
+title: Ich kann das!
+standfirst: können, wollen and möchten, plus the verb bracket · 24 words · write about what you can do and what you want to learn.
+goals:
+  - text: Say what you can and cannot do with können in all persons
+    achieved_by: workout
+  - text: Say what you want with wollen and the polite möchten
+    achieved_by: workout
+  - text: Learn 24 words for skills, courses, problems and plans
+    achieved_by: input
+  - text: Keep the verb bracket — modal second, infinitive at the very end
+    achieved_by: input
+  - text: Write a short forum post about your skills and your plan
+    achieved_by: output
+grammar_points:
+  - The modal verbs können and wollen in the present tense (all persons)
+  - The modal möchten
+  - The verb bracket (the modal in second position, the infinitive at the end)
+texts:
+  - kind: main
+    title: Was kannst du gut?
+    word_count: 134
+  - kind: extra
+    title: Kursangebot Deutsch
+    word_count: 76
+production:
+  mode: writing
+  genre: a short forum post about what you can do and what you want to learn

@@ -1,0 +1,499 @@
+# Module 09 · 46 core tasks + 16 review. Distribution (PLAN.md §6):
+# 8 mc_cloze · 8 open_cloze · 6 word_formation · 2 key_word_transformation ·
+# 10 grammar_drill · 4 error_correction · 4 collocation_match · 4 reading_comprehension.
+#
+# Spiral revision of earlier modules (marked "SPIRAL"): mc_cloze 6 and
+# key_word_transformation 2 (the modal frame, M8), mc_cloze 7 and grammar_drill 10
+# (the accusative, M6/M7), open_cloze 6 (kein, M4/M7), grammar_drill 3 and
+# error_correction 4 (verb-second and inversion, M5), word_formation 5 (plural, M3),
+# word_formation 6 (conjugation, M2).
+#
+# One task = one operation. Nothing asks for a dative form, an imperative, a
+# müssen/dürfen/sollen form, an ordinal, a date or a Perfekt. am Montag, am Morgen,
+# am Abend, am Wochenende and um … Uhr are asked for as whole phrases — they are
+# the opis of this module. Explanations English (§5); frames, options and answers
+# German.
+core:
+  # ───────────────────────── Multiple Choice ─────────────────────────
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Ich "
+      post: " um sieben Uhr auf."
+      options: [steht, stehen, stehe, stehst]
+      answer: 2
+    explanation: "aufstehen splits. ich takes the ending -e: Ich stehe … auf."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Die Arbeit fängt um neun Uhr "
+      post: "."
+      options: [an, auf, ein, fern]
+      answer: 0
+    explanation: "The verb is anfangen, so the prefix at the end is an: fängt … an."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Am Abend "
+      post: " ich fern."
+      options: [sieht, sehen, seht, sehe]
+      answer: 3
+    explanation: "fernsehen splits, and after Am Abend the verb keeps position two: sehe ich fern."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Es ist 7.30 Uhr. Es ist "
+      post: " acht."
+      options: [Viertel, halb, nach, um]
+      answer: 1
+    explanation: "7.30 is half an hour before eight, and German counts forward: halb acht."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Ich frühstücke "
+      post: " halb acht."
+      options: [um, am, in, an]
+      answer: 0
+    explanation: "A clock time takes um: um halb acht, um sieben Uhr."
+  # SPIRAL · M8 — the modal frame
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Am Wochenende will ich lange "
+      post: "."
+      options: [schläft, schlafe, schlafen, schläfst]
+      answer: 2
+    explanation: "After a modal verb the second verb stands at the end as an infinitive: will … schlafen."
+  # SPIRAL · M6 — accusative of the definite article
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Anna kocht Kaffee. Am Morgen trinkt sie "
+      post: " Kaffee."
+      options: [der, den, dem, des]
+      answer: 1
+    explanation: "trinken takes a direct object, and masculine der becomes den in the accusative."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "Montag, Dienstag, "
+      post: ", Donnerstag."
+      options: [Freitag, Samstag, Sonntag, Mittwoch]
+      answer: 3
+    explanation: "The week runs Montag, Dienstag, Mittwoch, Donnerstag, Freitag, Samstag, Sonntag."
+
+  # ───────────────────────── Open Cloze ─────────────────────────
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Ich stehe um sechs Uhr "
+      post: "."
+      answers: [auf]
+      answer_shown: auf
+    explanation: "stehe … at the end of a time sentence is aufstehen: the prefix auf closes it."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Die Arbeit fängt "
+      post: " acht Uhr an."
+      answers: [um]
+      answer_shown: um
+    explanation: "A clock time takes um: um acht Uhr."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Ich arbeite "
+      post: " Montag und am Dienstag."
+      answers: [am]
+      answer_shown: am
+    explanation: "Days of the week take am, as the second half of the sentence shows: am Dienstag."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Am Abend sehe ich "
+      post: "."
+      hint: fernsehen
+      answers: [fern]
+      answer_shown: fern
+    explanation: "fernsehen splits: sehe stands second, fern stands last."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Wir kaufen am Samstag "
+      post: "."
+      hint: einkaufen
+      answers: [ein]
+      answer_shown: ein
+    explanation: "einkaufen splits: kaufen takes the ending, ein goes to the end."
+  # SPIRAL · M4 / M7 — kein
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Nein, am Montag habe ich "
+      post: " Zeit."
+      answers: [keine]
+      answer_shown: keine
+    explanation: "Nein makes the sentence negative. die Zeit is feminine, so kein → keine."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Wann "
+      post: " du am Montag auf?"
+      hint: aufstehen
+      answers: [stehst]
+      answer_shown: stehst
+    explanation: "In a W-question the verb stands second: Wann stehst du … auf?"
+  - type: open_cloze
+    group: reading
+    content:
+      pre: "Es ist 8.15 Uhr. Es ist Viertel "
+      post: " acht."
+      answers: [nach]
+      answer_shown: nach
+    explanation: "8.15 is a quarter past eight, so it is Viertel nach acht."
+
+  # ───────────────────────── Wortbildung ─────────────────────────
+  - type: word_formation
+    group: grammar
+    content:
+      pre: "Ich "
+      post: " um sieben Uhr auf."
+      prompt: "aufstehen (ich)"
+      answers: [stehe]
+      answer_shown: stehe
+    explanation: "The infinitive aufstehen becomes stehe … auf. The first part takes the ending -e."
+  - type: word_formation
+    group: grammar
+    content:
+      pre: "Der Kurs fängt um neun Uhr "
+      post: "."
+      prompt: anfangen
+      answers: [an]
+      answer_shown: an
+    explanation: "anfangen = an + fangen. The prefix an is the last word of the sentence."
+  - type: word_formation
+    group: grammar
+    content:
+      pre: "Anna "
+      post: " am Abend fern."
+      prompt: "fernsehen (sie)"
+      answers: [sieht]
+      answer_shown: sieht
+    explanation: "fernsehen also changes the vowel: sie sieht … fern."
+  - type: word_formation
+    group: grammar
+    content:
+      pre: "Wir kaufen am Samstag "
+      post: "."
+      prompt: einkaufen
+      answers: [ein]
+      answer_shown: ein
+    explanation: "einkaufen = ein + kaufen, so the sentence ends with ein."
+  # SPIRAL · M3 — plural
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Die Woche hat sieben "
+      post: "."
+      prompt: "der Tag (Plural)"
+      answers: [Tage]
+      answer_shown: Tage
+    explanation: "der Tag → die Tage. After sieben the noun is plural."
+  # SPIRAL · M2 — conjugation
+  - type: word_formation
+    group: grammar
+    content:
+      pre: "Am Wochenende "
+      post: " Lena nicht."
+      prompt: "arbeiten (sie)"
+      answers: [arbeitet]
+      answer_shown: arbeitet
+    explanation: "arbeiten keeps an -e- before the ending: sie arbeitet."
+
+  # ───────────────────────── Umformung ─────────────────────────
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: Ich stehe um sechs Uhr auf.
+      key: WIR
+      pre: "Wir "
+      post: " um sechs Uhr auf."
+      answers: [stehen]
+      hint: 1 Wort
+      answer_shown: stehen
+    explanation: "wir takes the ending -en, and the prefix auf stays at the end: Wir stehen … auf."
+  # SPIRAL · M8 — the modal frame
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: Ich sehe am Abend fern.
+      key: WOLLEN
+      pre: "Ich will am Abend "
+      post: "."
+      answers: [fernsehen]
+      hint: 1 Wort
+      answer_shown: fernsehen
+    explanation: "After a modal verb the two parts come back together as one infinitive: fernsehen."
+
+  # ───────────────────────── Grammatik-Drill ─────────────────────────
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Du "
+      post: " um sechs Uhr auf."
+      prompt: aufstehen
+      options: [stehe, stehst, steht, stehen]
+      answer: 1
+    explanation: "du takes the ending -st: Du stehst … auf."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Die Arbeit hört um fünf Uhr "
+      post: "."
+      prompt: aufhören
+      options: [an, ein, mit, auf]
+      answer: 3
+    explanation: "aufhören = auf + hören, so the last word is auf."
+  # SPIRAL · M5 — inversion after a front adverbial
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Um sieben Uhr "
+      post: "."
+      prompt: Wortstellung
+      options: [stehe ich auf, ich stehe auf, ich aufstehe, stehe auf ich]
+      answer: 0
+    explanation: "A time phrase in front pushes the subject behind the verb, and the prefix still ends the sentence."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "7.15 Uhr = "
+      post: ""
+      prompt: Uhrzeit
+      options: [Viertel vor sieben, Viertel nach sieben, halb sieben, sieben Uhr fünfzig]
+      answer: 1
+    explanation: "15 minutes after seven is Viertel nach sieben."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "8.30 Uhr = "
+      post: ""
+      prompt: Uhrzeit
+      options: [halb acht, acht Uhr halb, halb neun, Viertel nach acht]
+      answer: 2
+    explanation: "halb counts forward to the next hour, so 8.30 is halb neun."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Ich arbeite "
+      post: " Freitag."
+      prompt: Zeitangabe
+      options: [um, in, an, am]
+      answer: 3
+    explanation: "Days of the week take am: am Freitag."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Der Kurs fängt "
+      post: " neun Uhr an."
+      prompt: Zeitangabe
+      options: [am, um, im, an]
+      answer: 1
+    explanation: "A clock time takes um: um neun Uhr."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: ""
+      post: " Morgen frühstücke ich."
+      prompt: Zeitangabe
+      options: [Am, Um, In, An]
+      answer: 0
+    explanation: "Parts of the day take am: am Morgen, am Mittag, am Abend."
+  # SPIRAL · M8 — the modal frame with a separable verb
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Kannst du am Samstag "
+      post: "?"
+      prompt: mitkommen
+      options: [mit kommen, mitkommst, mitkommen, kommst mit]
+      answer: 2
+    explanation: "After a modal verb the separable verb stands at the end in one piece: mitkommen."
+  # SPIRAL · M6 / M7 — ein in the accusative
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Am Samstag kaufe ich "
+      post: " Apfelsaft."
+      prompt: ein
+      options: [ein, einen, eine, einem]
+      answer: 1
+    explanation: "der Apfelsaft is masculine, so ein → einen in the accusative."
+
+  # ───────────────────────── Fehlerkorrektur ─────────────────────────
+  - type: error_correction
+    group: grammar
+    content: { words: [Anna, fernsieht, am, "Abend."], wrong: 1, correction: "fernsieht → sieht … fern" }
+    explanation: "fernsehen splits in a sentence: Anna sieht am Abend fern."
+  - type: error_correction
+    group: grammar
+    content: { words: [Ich, arbeite, in, "Montag."], wrong: 2, correction: "in → am" }
+    explanation: "Days of the week take am, never in: Ich arbeite am Montag."
+  - type: error_correction
+    group: grammar
+    content: { words: [Die, Arbeit, fängt, neun, Uhr, "an."], wrong: 3, correction: "neun → um neun" }
+    explanation: "A clock time needs um: Die Arbeit fängt um neun Uhr an."
+  # SPIRAL · M5 — verb second after a front adverbial
+  - type: error_correction
+    group: grammar
+    content: { words: [Am, Wochenende, ich, stehe, spät, "auf."], wrong: 2, correction: "ich stehe → stehe ich" }
+    explanation: "With a time phrase in front the verb still comes second: Am Wochenende stehe ich spät auf."
+
+  # ───────────────────────── Wort-Paare ─────────────────────────
+  - type: collocation_match
+    group: grammar
+    content:
+      left: [aufstehen, anfangen, fernsehen, einkaufen]
+      right: [ein, auf, fern, an]
+      pairs: { 0: 1, 1: 3, 2: 2, 3: 0 }
+    explanation: "Ich stehe … auf · Es fängt … an · Ich sehe … fern · Wir kaufen … ein."
+  - type: collocation_match
+    group: grammar
+    content:
+      left: ["7.30 Uhr", "8.15 Uhr", "9.00 Uhr", "20.00 Uhr"]
+      right: [neun Uhr, halb acht, zwanzig Uhr, Viertel nach acht]
+      pairs: { 0: 1, 1: 3, 2: 0, 3: 2 }
+    explanation: "7.30 halb acht · 8.15 Viertel nach acht · 9.00 neun Uhr · 20.00 zwanzig Uhr."
+  - type: collocation_match
+    group: grammar
+    content:
+      left: ["Wann? 7.00 Uhr", "Wann? Montag", "Wann? Morgen", "Wann? Samstag + Sonntag"]
+      right: [am Morgen, am Wochenende, um sieben Uhr, am Montag]
+      pairs: { 0: 2, 1: 3, 2: 0, 3: 1 }
+    explanation: "um sieben Uhr · am Montag · am Morgen · am Wochenende."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [Kaffee, fern, die Zeitung, eine Pause]
+      right: [sehen, machen, trinken, lesen]
+      pairs: { 0: 2, 1: 0, 2: 3, 3: 1 }
+    explanation: "Kaffee trinken · fernsehen · die Zeitung lesen · eine Pause machen."
+
+  # ───────────────────────── Leseverstehen ─────────────────────────
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Am Morgen stehe ich um halb sieben auf. Um sieben Uhr frühstücke ich: Brot, Käse und Kaffee."
+      q: "Wann steht Anna auf?"
+      options:
+        - Um sieben Uhr
+        - Um halb sieben
+        - Um halb acht
+        - Um sechs Uhr
+      answer: 1
+    explanation: "The text says: Am Morgen stehe ich um halb sieben auf."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Die Arbeit fängt um neun Uhr an und hört um fünf Uhr auf."
+      q: "Wann hört die Arbeit auf?"
+      options:
+        - Um neun Uhr
+        - Um zehn Uhr
+        - Um halb fünf
+        - Um fünf Uhr
+      answer: 3
+    explanation: "The text says: … und hört um fünf Uhr auf."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Am Abend bin ich um Viertel nach sechs zu Hause. Ich koche, und dann sehe ich fern."
+      q: "Was macht Anna am Abend?"
+      options:
+        - Sie kocht und sieht fern
+        - Sie arbeitet lange
+        - Sie kauft ein
+        - Sie frühstückt
+      answer: 0
+    explanation: "The text says: Ich koche, und dann sehe ich fern."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Am Samstag kaufe ich ein und meine Freundin Lena kommt oft mit. Am Sonntag stehe ich spät auf, um halb elf."
+      q: "Wann steht Anna spät auf?"
+      options:
+        - Am Samstag
+        - Am Montag
+        - Am Sonntag
+        - Am Freitag
+      answer: 2
+    explanation: "The text says: Am Sonntag stehe ich spät auf, um halb elf."
+
+review_pool:
+  - type: mc_cloze
+    group: grammar
+    content: { pre: "Ich ", post: " um halb sieben auf.", options: [stehe, stehst, steht, stehen], answer: 0 }
+    explanation: "ich takes the ending -e, and auf closes the sentence."
+  - type: mc_cloze
+    group: grammar
+    content: { pre: "Der Kurs fängt um zehn Uhr ", post: ".", options: [auf, an, ein, mit], answer: 1 }
+    explanation: "anfangen ends the sentence with an."
+  - type: mc_cloze
+    group: grammar
+    content: { pre: "8.30 Uhr = ", post: "", options: [halb acht, Viertel nach acht, halb neun, acht Uhr halb], answer: 2 }
+    explanation: "halb counts forward: 8.30 is halb neun."
+  - type: mc_cloze
+    group: grammar
+    content: { pre: "Ich arbeite ", post: " Mittwoch.", options: [um, im, in, am], answer: 3 }
+    explanation: "Days of the week take am: am Mittwoch."
+  - type: mc_cloze
+    group: grammar
+    content: { pre: "Am Abend ", post: " wir fern.", options: [sehen, sieht, seht, siehst], answer: 0 }
+    explanation: "wir takes the ending -en: Am Abend sehen wir fern."
+  - type: open_cloze
+    group: grammar
+    content: { pre: "Meine Mutter kauft am Montag ", post: ".", hint: einkaufen, answers: [ein], answer_shown: ein }
+    explanation: "einkaufen splits: the prefix ein stands last."
+  - type: open_cloze
+    group: grammar
+    content: { pre: "Die Arbeit hört ", post: " fünf Uhr auf.", answers: [um], answer_shown: um }
+    explanation: "A clock time takes um: um fünf Uhr."
+  - type: open_cloze
+    group: grammar
+    content: { pre: "Anna steht ", post: " Sonntag spät auf.", answers: [am], answer_shown: am }
+    explanation: "Days of the week take am: am Sonntag."
+  - type: open_cloze
+    group: reading
+    content: { pre: "Es ist 7.15 Uhr. Es ist Viertel ", post: " sieben.", answers: [nach], answer_shown: nach }
+    explanation: "7.15 is a quarter past seven: Viertel nach sieben."
+  - type: grammar_drill
+    group: grammar
+    content: { pre: "Du ", post: " am Abend fern.", prompt: fernsehen, options: [sehe, siehst, sieht, seht], answer: 1 }
+    explanation: "fernsehen changes the vowel in the du form: du siehst … fern."
+  - type: grammar_drill
+    group: grammar
+    content: { pre: "Um acht Uhr ", post: ".", prompt: Wortstellung, options: [ich frühstücke, frühstücke ich, ich frühstücken, frühstücken ich], answer: 1 }
+    explanation: "A time phrase in front pushes the subject behind the verb: Um acht Uhr frühstücke ich."
+  - type: grammar_drill
+    group: vocab
+    content: { pre: "Die Woche hat sieben ", post: ".", prompt: Plural, options: [Tag, Tagen, Tage, Täge], answer: 2 }
+    explanation: "der Tag → die Tage."
+  - type: grammar_drill
+    group: grammar
+    content: { pre: "Wann ", post: " du auf?", prompt: aufstehen, options: [stehst, steht, stehe, stehen], answer: 0 }
+    explanation: "In a W-question the verb stands second: Wann stehst du auf?"
+  - type: error_correction
+    group: grammar
+    content: { words: [Ich, fernsehe, am, "Abend."], wrong: 1, correction: "fernsehe → sehe … fern" }
+    explanation: "fernsehen splits: Ich sehe am Abend fern."
+  - type: error_correction
+    group: grammar
+    content: { words: [Der, Kurs, fängt, in, neun, Uhr, "an."], wrong: 3, correction: "in → um" }
+    explanation: "A clock time takes um: um neun Uhr."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [Kaffee, fern, eine Pause, die Zeitung]
+      right: [machen, lesen, trinken, sehen]
+      pairs: { 0: 2, 1: 3, 2: 0, 3: 1 }
+    explanation: "Kaffee trinken · fernsehen · eine Pause machen · die Zeitung lesen."

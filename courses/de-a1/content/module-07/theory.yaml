@@ -18,7 +18,7 @@ spotlights:
             - ["f", "die / eine Banane", "Es gibt eine Banane."]
             - ["n", "das / ein Ei", "Es gibt ein Ei."]
             - ["Plural", "die Äpfel", "Es gibt Äpfel."]
-      - form: "Menge + Nomen (ein Kilo Äpfel)"
+      - form: "Quantity + noun: ein Kilo Äpfel"
         example: "Ich kaufe ein Kilo Äpfel. Ich nehme einen Liter Milch. Eine Flasche Wasser, bitte. Ich möchte ein Stück Kuchen und hundert Gramm Käse."
         note: The quantity comes first, then the noun. Nothing stands between them — no von, no article.
         table:
@@ -29,7 +29,7 @@ spotlights:
             - ["eine Flasche", "eine Flasche Wasser"]
             - ["ein Stück", "ein Stück Kuchen"]
             - ["100 Gramm", "hundert Gramm Butter"]
-      - form: "kein im Akkusativ (keinen / keine / kein)"
+      - form: "kein in the accusative: keinen / keine / kein"
         example: "Es gibt keinen Käse. Es gibt keine Milch. Es gibt kein Fleisch. Ich habe kein Geld. Ich esse keine Eier."
         note: "kein takes the same endings as ein. Only the masculine changes: kein → keinen."
         table:
@@ -54,7 +54,7 @@ spotlights:
             - ["das Gemüse", "die Suppe", "die Gemüsesuppe"]
             - ["die Butter", "das Brot", "das Butterbrot"]
             - ["der Käse", "das Brötchen", "das Käsebrötchen"]
-      - form: "Zahlen bis 1000 und Preise"
+      - form: "Numbers up to 1000, and prices"
         example: "Das kostet zwanzig Euro. Ein Kilo Äpfel kostet zwei Euro dreißig. Der Supermarkt hat tausend Produkte."
         note: "Say the number, then Euro. Euro has no -s in the plural: zwei Euro."
         table:

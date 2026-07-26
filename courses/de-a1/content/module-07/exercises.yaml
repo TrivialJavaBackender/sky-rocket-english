@@ -464,8 +464,8 @@ review_pool:
     explanation: "die Banane is feminine → eine Banane."
   - type: grammar_drill
     group: grammar
-    content: { pre: "Ich habe ", post: " Geld.", prompt: kein, options: [keinen, kein, keine, keins], answer: 1 }
-    explanation: "das Geld is neuter → kein Geld."
+    content: { pre: "Wir haben ", post: " Milch.", prompt: kein, options: [keinen, keine, kein, keiner], answer: 1 }
+    explanation: "die Milch is feminine → keine Milch."
   - type: grammar_drill
     group: vocab
     content: { pre: "Ich kaufe ", post: " Käse.", prompt: Menge, options: [zweihundert Gramm, zweihundert Gramms, zweihundert Gramme, zweihundert von Gramm], answer: 0 }

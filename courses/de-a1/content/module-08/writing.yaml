@@ -1,0 +1,30 @@
+# Module 08 · production. Scaffolding (prompt, checklist) English; model answer
+# German (§5). The model stays inside what modules 1–8 can produce: können,
+# wollen and möchten in the ich form, the verb bracket in a statement and after a
+# front adverbial, nicht and kein, und, and the present tense. No separable verb,
+# no clock time, no dative, no imperative, no Perfekt — the post says what the
+# writer can do now and what the plan is.
+mode: writing
+genre: a short forum post about what you can do and what you want to learn
+word_target: [30, 40]
+prompt: |
+  The forum in the reading text asks: Was kannst du gut? Write your answer for
+  the forum. 30–40 words.
+
+  Say something about each point:
+  • one thing you can do well (Ich kann … gut …)
+  • one thing you cannot do (Ich kann nicht …)
+  • what you want to learn now (Ich will … / Ich möchte …)
+
+  Use können once and wollen or möchten once, and put the second verb at the end
+  of the sentence.
+model_answer: |
+  Hallo! Ich kann sehr gut Klavier spielen. Ich übe viel und ich spiele auch
+  gern für meine Familie. Singen kann ich leider nicht. Jetzt möchte ich Deutsch
+  lernen. Ich will einen Kurs machen. Das ist mein Ziel.
+checklist:
+  - You say one thing you can do (kann) and one thing you cannot do (kann nicht)
+  - One sentence uses will or möchte for your plan
+  - Every modal sentence keeps the infinitive at the very end
+  - The modal stands in second position, also after Jetzt or Heute
+  - The post is 30–40 words long

@@ -652,7 +652,7 @@ review_pool:
   - type: word_formation
     group: vocab
     content:
-      pre: "Die Verkäuferin ist sehr "
+      pre: "Die Frau an der Kasse ist immer "
       post: "."
       prompt: Freund
       answers: [freundlich]

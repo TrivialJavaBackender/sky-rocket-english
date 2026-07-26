@@ -25,10 +25,10 @@ grammar_points:
 texts:
   - kind: main
     title: Im Kaufhaus
-    word_count: 311
+    word_count: 316
   - kind: extra
     title: Umtausch und Rückgabe
-    word_count: 132
+    word_count: 135
 production:
   mode: speaking
   genre: Gespräch im Geschäft

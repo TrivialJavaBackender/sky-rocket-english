@@ -706,15 +706,15 @@ review_pool:
 - type: mc_cloze
   group: grammar
   content:
-    pre: 'Ich möchte eine '
-    post: ' Wohnung mieten.'
+    pre: 'Wir suchen eine '
+    post: ' Wohnung mit Balkon.'
     options:
-    - ruhige
-    - ruhiger
-    - ruhiges
-    - ruhigen
-    answer: 0
-  explanation: 'die Wohnung ist feminin. Nach eine steht -e: eine ruhige Wohnung.'
+    - großer
+    - große
+    - großes
+    - großen
+    answer: 1
+  explanation: 'die Wohnung ist feminin. Nach eine steht -e: eine große Wohnung.'
 - type: mc_cloze
   group: grammar
   content:

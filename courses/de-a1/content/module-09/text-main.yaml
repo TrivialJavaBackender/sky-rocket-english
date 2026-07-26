@@ -1,0 +1,45 @@
+# Module 09 · main text — a short blog post: Anna tells her day from the morning
+# to the night. Real genre, not an exercise: it carries all 24 target words and
+# every target construction (six separable verbs with the prefix at the end,
+# official time and halb / Viertel nach, time phrases with um and am, the seven
+# days of the week). Glosses (4) sit only on words whose form in the text is the
+# dictionary form and which are not vocab entries of the module.
+kind: main
+kicker: BLOG
+title: Ein Tag von Anna
+meta: ≈ 2 min · dotted words have a note — tap to reveal
+word_count: 140
+body:
+  - - t: "Ich heiße Anna und ich arbeite in Hamburg. Mein Tag fängt früh an. Am Morgen stehe ich um halb sieben auf. Um sieben Uhr frühstücke ich: Brot, Käse und Kaffee. Dann lese ich die "
+    - g: Zeitung
+    - t: "."
+  - - t: "Die Arbeit fängt um neun Uhr an und hört um fünf Uhr auf. Am Mittag mache ich eine "
+    - g: Pause
+    - t: " und esse eine Suppe. Ich arbeite am Montag, am Dienstag, am Mittwoch, am Donnerstag und am Freitag."
+  - - t: "Am Abend bin ich um "
+    - g: Viertel
+    - t: " nach sechs zu Hause. Ich koche, und dann sehe ich fern. Um zehn Uhr ist der Tag zu Ende. Die Nacht ist lang."
+  - - t: "Am Samstag kaufe ich ein und meine Freundin Lena kommt oft mit. Am Sonntag stehe ich spät auf, um halb elf. Ich arbeite nicht, ich sehe fern und lese. Die Woche ist lang und das Wochenende ist immer zu "
+    - g: kurz
+    - t: "."
+glosses:
+  - key: Zeitung
+    term: die Zeitung
+    pos_label: noun
+    definition: newspaper; you read the news in it
+    example: Am Morgen lese ich die Zeitung.
+  - key: Pause
+    term: die Pause
+    pos_label: noun
+    definition: a break, a short stop in your work
+    example: Am Mittag mache ich eine Pause.
+  - key: Viertel
+    term: das Viertel
+    pos_label: noun
+    definition: a quarter, 15 minutes
+    example: Es ist Viertel nach sechs.
+  - key: kurz
+    term: kurz
+    pos_label: adjective
+    definition: short, not long. The opposite is lang
+    example: Das Wochenende ist zu kurz.

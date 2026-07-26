@@ -1,0 +1,38 @@
+# Module 08 · extra text — a real Kursangebot, the advertisement of a language
+# school. It carries the three target words the main text does not use (die Idee,
+# versuchen, möglich) and shows the same constructions in a second genre and in a
+# second register: the school writes Sie, and every modal sentence keeps its
+# infinitive at the end. Glosses (3) sit on words whose form in the text is the
+# dictionary form.
+kind: extra
+kicker: KURSANGEBOT
+title: Kursangebot Deutsch
+meta: ≈ 1 min · dotted words have a note — tap to reveal
+word_count: 76
+body:
+  - - t: "Sprachschule Aktiv: Kursangebot Deutsch. Sie wollen Deutsch lernen, aber Sie haben keinen Plan? Kein Problem, wir haben eine Idee für Sie."
+  - - t: "Kurs A1 für "
+    - g: Anfänger
+    - t: ". Der Kurs ist einfach und die "
+    - g: Gruppe
+    - t: " ist klein: nur acht Studenten. Unsere Lehrer kommen aus Deutschland und aus Österreich."
+  - - t: "Sie möchten allein üben? Das ist auch möglich: Die Aufgaben sind "
+    - g: online
+    - t: ". Sie können es einfach versuchen."
+  - - t: "Kurs A1: hundert Euro. Die Prüfung kostet zwanzig Euro. Sie haben eine Frage? Telefon 030 55 12 40."
+glosses:
+  - key: Anfänger
+    term: der Anfänger
+    pos_label: noun
+    definition: a beginner; somebody who starts and knows nothing yet
+    example: Der Kurs ist für Anfänger.
+  - key: Gruppe
+    term: die Gruppe
+    pos_label: noun
+    definition: a group; here — the people in one course
+    example: Die Gruppe ist klein.
+  - key: online
+    term: online
+    pos_label: adverb
+    definition: online, on the internet
+    example: Die Aufgaben sind online.

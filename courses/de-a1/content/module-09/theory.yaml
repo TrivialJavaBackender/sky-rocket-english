@@ -1,0 +1,111 @@
+# Module 09 · theory. Two spotlights, 6 items — three items for the separable
+# verb (sentence, question and inversion, modal frame) and three for the second
+# and third grammar points of the card (official time, Viertel nach / halb, time
+# adverbials with um and am). The word-formation extension of this module lives
+# in the first table: infinitive → sentence with the prefix at the end.
+# Scaffolding rule (§5): intro and note English, every example and table German.
+# Grammar terms are named in English directly (§5.1).
+spotlights:
+  - title: Separable verbs — the prefix goes to the end
+    intro: "Many German verbs come in two parts, auf + stehen = aufstehen. In a sentence the verb splits: the first part takes the person ending, the small part travels to the very end. It is the same movement you know from the verb bracket of module 8."
+    items:
+      - form: "Infinitive → sentence: aufstehen → Ich stehe … auf"
+        example: "Ich stehe um sieben Uhr auf. Die Arbeit fängt um neun Uhr an. Am Abend sehe ich fern. Wir kaufen am Samstag ein."
+        note: The first part stays in position two and takes the ending. The prefix closes the sentence.
+        table:
+          headers: ["Infinitiv", "Satz"]
+          rows:
+            - ["aufstehen", "Ich stehe um sieben Uhr auf."]
+            - ["anfangen", "Der Kurs fängt um neun Uhr an."]
+            - ["aufhören", "Die Arbeit hört um fünf Uhr auf."]
+            - ["einkaufen", "Wir kaufen am Samstag ein."]
+            - ["fernsehen", "Anna sieht am Abend fern."]
+            - ["mitkommen", "Lena kommt am Sonntag mit."]
+      - form: "Questions, and a time phrase in front"
+        example: "Wann stehst du auf? Stehst du früh auf? Am Montag stehe ich um sechs Uhr auf."
+        note: The verb keeps its old place — second, or first in a yes/no question. The prefix still ends the sentence.
+        table:
+          headers: ["Satztyp", "Beispiel"]
+          rows:
+            - ["Aussage", "Ich stehe früh auf."]
+            - ["Zeit vorn", "Am Montag stehe ich früh auf."]
+            - ["W-Frage", "Wann stehst du auf?"]
+            - ["Ja/Nein-Frage", "Stehst du früh auf?"]
+      - form: "A modal verb plus a separable verb"
+        example: "Ich will am Wochenende spät aufstehen. Kannst du am Samstag mitkommen? Ich möchte um acht Uhr anfangen."
+        note: With a modal verb the two parts stay together at the end, as one infinitive.
+        table:
+          headers: ["ohne Modalverb", "mit Modalverb"]
+          rows:
+            - ["Ich stehe früh auf.", "Ich will früh aufstehen."]
+            - ["Wir kaufen am Samstag ein.", "Wir wollen am Samstag einkaufen."]
+            - ["Kommst du mit?", "Kannst du mitkommen?"]
+
+  - title: Wie spät ist es? — the clock and time phrases
+    intro: German tells the time in two ways. The official one says the full number, the everyday one uses Viertel and halb. Careful with halb — it looks forward to the next hour.
+    items:
+      - form: "Official time: 8.15 Uhr → acht Uhr fünfzehn"
+        example: "Es ist acht Uhr. Es ist acht Uhr fünfzehn. Es ist acht Uhr dreißig. Es ist zwanzig Uhr."
+        note: Say the hour, then Uhr, then the minutes. This is the time of timetables and the radio.
+        table:
+          headers: ["Uhrzeit", "Offiziell"]
+          rows:
+            - ["8.00", "acht Uhr"]
+            - ["8.15", "acht Uhr fünfzehn"]
+            - ["8.30", "acht Uhr dreißig"]
+            - ["8.45", "acht Uhr fünfundvierzig"]
+            - ["20.00", "zwanzig Uhr"]
+      - form: "Everyday time: Viertel nach, halb"
+        example: "Es ist Viertel nach acht. Es ist halb neun. Wie spät ist es? Es ist halb sieben."
+        note: "halb neun is 8.30, not 9.30: halb counts to the next hour."
+        table:
+          headers: ["Uhrzeit", "Alltag", "Offiziell"]
+          rows:
+            - ["8.00", "acht", "acht Uhr"]
+            - ["8.15", "Viertel nach acht", "acht Uhr fünfzehn"]
+            - ["8.30", "halb neun", "acht Uhr dreißig"]
+            - ["7.30", "halb acht", "sieben Uhr dreißig"]
+      - form: "Time phrases with um and am"
+        example: "Ich stehe um sieben Uhr auf. Am Montag arbeite ich. Am Morgen trinke ich Kaffee. Am Wochenende sehe ich fern."
+        note: um for a clock time, am for a day or a part of the day. Learn them as whole phrases.
+        table:
+          headers: ["Frage", "Antwort"]
+          rows:
+            - ["Wann? (Uhrzeit)", "um acht Uhr · um halb neun"]
+            - ["Wann? (Tag)", "am Montag · am Freitag"]
+            - ["Wann? (Tageszeit)", "am Morgen · am Mittag · am Abend"]
+            - ["Wann? (Samstag + Sonntag)", "am Wochenende"]
+
+watchouts:
+  - title: The prefix goes to the end
+    bad: Ich aufstehe um sieben Uhr.
+    good: Ich stehe um sieben Uhr auf.
+    note: "aufstehen splits in a sentence: stehe takes the ending, auf closes the sentence."
+  - title: halb acht is 7.30
+    bad: Es ist halb acht. Es ist acht Uhr dreißig.
+    good: Es ist halb acht. Es ist sieben Uhr dreißig.
+    note: halb looks forward — halb acht is half an hour before eight.
+  - title: am Montag, not in Montag
+    bad: Ich arbeite in Montag.
+    good: Ich arbeite am Montag.
+    note: "Days and parts of the day take am: am Montag, am Morgen, am Abend."
+
+cloze_cards:
+  - text: "Ich {{c1::stehe}} um sieben Uhr auf."
+    hint: aufstehen
+    rule: "aufstehen splits. The first part takes the person ending: ich stehe … auf."
+  - text: "Die Arbeit fängt um acht Uhr {{c1::an}}."
+    hint: anfangen
+    rule: "The prefix closes the sentence: fängt … an."
+  - text: "Am Abend sehe ich {{c1::fern}}."
+    hint: fernsehen
+    rule: "fernsehen splits into sehe and fern. The prefix stands last."
+  - text: "Wir kaufen am Samstag {{c1::ein}}."
+    hint: einkaufen
+    rule: "einkaufen splits: kaufen takes the ending, ein goes to the end."
+  - text: "Ich arbeite {{c1::am}} Montag und am Dienstag."
+    hint: an
+    rule: "Days of the week take am: am Montag, am Dienstag. Never in Montag."
+  - text: "Die Arbeit {{c1::hört}} um fünf Uhr auf."
+    hint: aufhören
+    rule: "aufhören is the opposite of anfangen. hört takes the ending, auf ends the sentence."
