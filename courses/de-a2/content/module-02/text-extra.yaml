@@ -6,7 +6,6 @@ kind: extra
 kicker: DIALOG
 title: Wie komme ich zum Museum?
 meta: ≈ 1 Min · zwei Menschen auf der Straße
-word_count: 146
 body:
   - - t: "– Entschuldigung, wie komme ich von hier zum Museum?"
   - - t: "– Zu Fuß oder mit dem Bus?"

@@ -18,13 +18,6 @@ grammar_points:
   - stellen, legen und hängen
   - stehen, liegen und hängen
   - Die Paare im Überblick
-texts:
-  - kind: main
-    title: Endlich eingerichtet
-    word_count: 289
-  - kind: extra
-    title: Fünf Möbelanzeigen
-    word_count: 150
 production:
   mode: writing
   genre: Beschreibung des eigenen Zimmers

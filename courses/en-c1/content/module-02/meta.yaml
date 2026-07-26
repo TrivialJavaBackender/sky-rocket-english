@@ -18,13 +18,6 @@ grammar_points:
   - "Impersonal passive (It is said / believed that…)"
   - Causative structures (have / get something done)
   - Two-object passives and information structure
-texts:
-  - kind: main
-    title: The Algorithm Will See You Now
-    word_count: 850
-  - kind: extra
-    title: Artificial Cornea Restores Sight in First Human Trial
-    word_count: 270
 production:
   mode: speaking
   genre: recorded monologue (Speaking Part 2 style)

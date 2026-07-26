@@ -18,13 +18,6 @@ grammar_points:
   - let and make in the passive
   - to as a preposition (look forward to doing, be used to doing)
   - Perfect and passive -ing forms (deny having done, need doing)
-texts:
-  - kind: main
-    title: Why Cramming Fails
-    word_count: 1035
-  - kind: extra
-    title: Everything I Learnt After I Stopped Studying
-    word_count: 354
 production:
   mode: speaking
   genre: recorded monologue (Speaking Part 2 style)

@@ -20,13 +20,6 @@ grammar_points:
   - es gibt + the accusative
   - Quantity phrases (ein Kilo, ein Liter, eine Flasche, ein Stück, 100 Gramm)
   - kein in the accusative (keinen, keine)
-texts:
-  - kind: main
-    title: Im Supermarkt
-    word_count: 120
-  - kind: extra
-    title: Einkaufszettel und Prospekt
-    word_count: 63
 production:
   mode: writing
   genre: a shopping list and a short polite request

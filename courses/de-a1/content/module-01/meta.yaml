@@ -18,13 +18,6 @@ grammar_points:
   - The verb sein in all persons
   - Personal pronouns in the nominative
   - W-questions with wie, wer, woher and wo
-texts:
-  - kind: main
-    title: Das bin ich
-    word_count: 103
-  - kind: extra
-    title: Wie heißt du?
-    word_count: 64
 production:
   mode: writing
   genre: registration form and a short self-introduction

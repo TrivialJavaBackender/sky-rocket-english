@@ -98,6 +98,16 @@ export const CourseSchema = z
     name: z.string().min(1),
     level_label: z.string().min(1),
     position: z.number().int().positive().default(1),
+    // Length gate for `pnpm validate-content` (scripts/validate-content.ts):
+    // text-main/text-extra word counts (derived, never authored — see
+    // lib/word-count.ts) must fall inside these [min, max] ranges. Optional so
+    // a new course does not fail validation before its profile is calibrated.
+    content_profile: z
+      .object({
+        text_main: z.tuple([z.number().int().positive(), z.number().int().positive()]),
+        text_extra: z.tuple([z.number().int().positive(), z.number().int().positive()]),
+      })
+      .optional(),
     blocks: z.array(CourseBlockSchema).min(1),
     checkpoints: z.array(CourseCheckpointSchema),
     protocol: z.array(StudySessionSchema).min(1),

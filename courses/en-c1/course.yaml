@@ -13,6 +13,14 @@ name: English
 level_label: B2+ → C1
 position: 1
 
+# Length gate for `pnpm validate-content`: text-main/text-extra word counts,
+# both derived from body rather than authored. Wider than PLAN.md §6's
+# 800–900 for text-main — that number and the actual content (main 780–1052,
+# extra 266–475) have drifted; this profile matches the content as written.
+content_profile:
+  text_main: [750, 1100]
+  text_extra: [250, 500]
+
 blocks:
   - slug: a
     name: Consolidate

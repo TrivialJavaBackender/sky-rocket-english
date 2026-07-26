@@ -36,13 +36,6 @@ export const MetaSchema = z.object({
   standfirst: z.string().min(1),
   goals: z.array(GoalSchema).min(1),
   grammar_points: z.array(z.string().min(1)).min(1),
-  texts: z.array(
-    z.object({
-      kind: z.enum(['main', 'extra']),
-      title: z.string().min(1),
-      word_count: z.number().int().positive(),
-    }),
-  ),
   production: z.object({
     mode: z.enum(['writing', 'speaking']),
     genre: z.string().min(1),
@@ -185,7 +178,6 @@ export const ReadingPackageSchema = z.object({
   kicker: z.string().optional(),
   title: z.string().min(1),
   meta: z.string().optional(),
-  word_count: z.number().int().positive().optional(),
   body: z.array(z.array(TextSegmentSchema).min(1)).min(1),
   glosses: z.array(GlossSchema),
 });

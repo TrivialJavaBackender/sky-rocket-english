@@ -32,6 +32,9 @@ language: de                 # выбирает списки служебных 
 name: Deutsch
 level_label: A1 → A2
 position: 2
+content_profile:             # опционально — диапазон длины [min, max] для validate-content
+  text_main: [280, 330]
+  text_extra: [130, 150]
 blocks:
   - slug: a
     name: Basis
@@ -51,6 +54,8 @@ protocol:                    # применяется к каждому моду
 ```
 
 Позиции берутся из порядка в массивах, а `planned_minutes` модуля — из суммы минут сессий протокола: дублировать числа значит позволить им разойтись. `title`/`standfirst` модуля здесь — карта до появления контента; `meta.yaml` перезаписывает их при синке пакета.
+
+`content_profile` (опционально, `web/lib/course-schema.ts`) — гейт длины текста: `pnpm validate-content` считает слова `text-main.yaml`/`text-extra.yaml` (`web/lib/word-count.ts`) и роняет прогон (`exit 1`), если хоть один текст выходит за объявленные `[min, max]`. Число слов в БД (`reading_text.word_count`) — не декларация, а то же самое производное значение, которое считает `pnpm sync`; поле опционально ровно затем, чтобы новый курс без откалиброванного профиля не падал.
 
 ## Форматы файлов
 
@@ -121,7 +126,6 @@ kind: main                             # main | extra
 kicker: LONG-READ
 title: The Death of the Nine-to-Five
 meta: ≈ 6 min · dotted words carry glosses — tap to reveal
-word_count: 800
 body:                                  # абзацы из сегментов; {g: key} — тап-глосса
   - - t: "For most of the twentieth century, a career was a ladder: you joined a firm, accumulated "
     - g: tenure
@@ -133,6 +137,8 @@ glosses:
     definition: the length of time you hold a position; also the secure form of it
     example: Professors with tenure cannot easily be dismissed.
 ```
+
+`reading_text.word_count` в БД — не поле пакета, а производное число: `pnpm sync` считает его из `body` (`web/lib/word-count.ts`) при каждом апсерте. Длина текста проверяется не сверкой с декларацией (её больше нет), а `pnpm validate-content` против диапазона `content_profile` из `course.yaml` — см. ниже.
 
 ### exercises.yaml → `exercise`
 `content` — типоспецифичный, формы совпадают с плеером дизайна (`docs/design/skyrocket/content.js`, массив `exercises`).

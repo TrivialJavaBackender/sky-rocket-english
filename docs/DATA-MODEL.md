@@ -162,7 +162,7 @@ erDiagram
 | `grammar_spotlight` | Панель теории юнита | `items jsonb` `[{form, example, note}]` |
 | `watchout` | Панель «Watch out!» | `bad_example` / `good_example` / `note` |
 | `grammar_point` | Конструкции модуля | база статуса Reliable; unique(module, title) |
-| `reading_text` | Лонгрид и доп. текст | `body jsonb` — абзацы из сегментов `{t}` / `{g: key}` |
+| `reading_text` | Лонгрид и доп. текст | `body jsonb` — абзацы из сегментов `{t}` / `{g: key}`; `word_count` — производная, считает `pnpm sync` из `body`, в контенте не объявляется |
 | `gloss` | Тап-глоссы текста | unique(text, key); «Add to deck» — источник карточки |
 | `vocab_entry` | Лексика 45/модуль | `use_cases jsonb` (2–3 примера), `tag`, `collocations`, `register_note` |
 | `exercise_type` | Справочник 8 типов | `interaction`: choice / text_input / word_tap / match; сид в 0001 |

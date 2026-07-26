@@ -10,12 +10,17 @@
  *
  * It also prints every number the module profile (PLAN.md §6) requires to match
  * exactly, so the counts and the schema check are one command instead of two.
+ * Text length is one of those numbers, but it isn't just printed: it's a gate —
+ * the word count is derived, not authored, so main/extra body length is
+ * checked against the [min, max] range in course.yaml's content_profile, and a
+ * text outside that range fails the run the same way a schema violation does.
  *
  * Usage:
  *   pnpm validate-content de-a1 module-06 module-07 checkpoint-a
  *   pnpm validate-content de-a1                 # every content dir of the course
  *
- * Exit code 1 if any package fails the schema, so it works as a gate.
+ * Exit code 1 if any package fails the schema or falls outside content_profile,
+ * so it works as a gate.
  */
 
 import { readFile, readdir } from 'node:fs/promises';
@@ -33,6 +38,13 @@ import {
   makeExercisesPackageSchema,
   WritingPackageSchema,
 } from '../lib/content-schema';
+import { countReadingWords } from '../lib/word-count';
+
+/** `course.yaml`'s optional length gate (lib/course-schema.ts's CourseSchema). */
+type ContentProfile = {
+  text_main: [number, number];
+  text_extra: [number, number];
+};
 
 const SCRIPT_DIR = path.dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = path.resolve(SCRIPT_DIR, '..', '..');
@@ -48,20 +60,6 @@ async function readYamlFile<T>(filePath: string, schema: z.ZodType<T>): Promise<
     throw new Error(`${path.relative(REPO_ROOT, filePath)}:\n${issues}`);
   }
   return result.data;
-}
-
-/**
- * Words of a reading body. Counts glossed segments too (`{ g: … }`, which the
- * player renders as a word) and drops tokens with no letter, so menu prices and
- * `·` separators do not inflate the count.
- */
-function countWords(body: unknown): number {
-  const segments = (body as Array<Array<Record<string, string>>>).flat();
-  return segments
-    .map((s) => s.t ?? s.g ?? '')
-    .join(' ')
-    .split(/\s+/)
-    .filter((w) => /\p{L}/u.test(w)).length;
 }
 
 /** `model_answer` is optional in the schema — say so rather than crashing. */
@@ -101,7 +99,11 @@ function fmtCounts(counts: Record<string, number>): string {
     .join(' · ');
 }
 
-async function reportModule(dir: string, language: string): Promise<void> {
+async function reportModule(
+  dir: string,
+  language: string,
+  contentProfile: ContentProfile | undefined,
+): Promise<number> {
   const meta = await readYamlFile(path.join(dir, 'meta.yaml'), MetaSchema);
   const vocab = await readYamlFile(path.join(dir, 'vocab.yaml'), VocabPackageSchema);
   const theory = await readYamlFile(path.join(dir, 'theory.yaml'), TheoryPackageSchema);
@@ -123,18 +125,23 @@ async function reportModule(dir: string, language: string): Promise<void> {
   console.log(`  core ${exercises.core.length}: ${fmtCounts(byType(exercises.core))}`);
   console.log(`  review_pool ${review.length}: ${fmtCounts(byType(review))}`);
 
-  // Declared word_count lives in two places (meta.yaml and the text file); both
-  // are checked against the real count, because they drift independently.
+  // The word count is derived (lib/word-count.ts), never authored, so there is
+  // no declaration left to reconcile it against. What's worth checking instead
+  // is the text's actual length against the range course.yaml declares
+  // (content_profile) — that range is the gate; a course without one yet just
+  // gets the raw count printed, no verdict.
+  let outOfProfile = 0;
   for (const [kind, pkg] of [['main', main], ['extra', extra]] as const) {
-    const real = countWords(pkg.body);
-    const inMeta = meta.texts.find((t) => t.kind === kind)?.word_count;
-    const marks = [
-      inMeta === real ? null : `meta ${inMeta}`,
-      pkg.word_count === real ? null : `header ${pkg.word_count}`,
-    ].filter(Boolean);
+    const words = countReadingWords(pkg.body);
+    const range = contentProfile?.[kind === 'main' ? 'text_main' : 'text_extra'];
+    if (!range) {
+      console.log(`  text-${kind} ${words} words`);
+      continue;
+    }
+    const inRange = words >= range[0] && words <= range[1];
+    if (!inRange) outOfProfile++;
     console.log(
-      `  text-${kind} ${real} words` +
-        (marks.length ? `  ✗ РАСХОЖДЕНИЕ: ${marks.join(', ')}` : '  ✓ word_count'),
+      `  text-${kind} ${words} words  ${inRange ? '✓' : '✗ ВНЕ ПРОФИЛЯ'} [${range[0]}, ${range[1]}]`,
     );
   }
 
@@ -151,6 +158,7 @@ async function reportModule(dir: string, language: string): Promise<void> {
   }
 
   console.log(`  writing: ${writing.mode} · model_answer ${describeModel(writing)}`);
+  return outOfProfile;
 }
 
 async function reportCheckpoint(dir: string, language: string): Promise<void> {
@@ -206,20 +214,23 @@ async function main(): Promise<void> {
   const courseDir = path.join(REPO_ROOT, 'courses', slug);
   const courseYaml = parseYaml(await readFile(path.join(courseDir, 'course.yaml'), 'utf8')) as {
     language: string;
+    content_profile?: ContentProfile;
   };
   const language = courseYaml.language;
+  const contentProfile = courseYaml.content_profile;
 
   const contentRoot = path.join(courseDir, 'content');
   const targets = dirs.length ? dirs : (await readdir(contentRoot)).sort();
 
   console.log(`${slug} (language: ${language}) — ${targets.length} пакет(ов)\n`);
   let failed = 0;
+  let outOfProfile = 0;
   for (const name of targets) {
     const dir = path.join(contentRoot, name);
     console.log(`${name}:`);
     try {
       if (existsSync(path.join(dir, 'meta.yaml'))) {
-        await reportModule(dir, language);
+        outOfProfile += await reportModule(dir, language, contentProfile);
       } else {
         await reportCheckpoint(dir, language);
       }
@@ -233,6 +244,11 @@ async function main(): Promise<void> {
 
   if (failed) {
     console.error(`${failed} пакет(ов) не прошли схему.`);
+  }
+  if (outOfProfile) {
+    console.error(`${outOfProfile} текст(ов) вне профиля длины (content_profile).`);
+  }
+  if (failed || outOfProfile) {
     process.exit(1);
   }
   console.log('Все пакеты валидны. Скелет и БД не затронуты — их синкает pnpm sync.');

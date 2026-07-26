@@ -21,13 +21,6 @@ grammar_points:
   - Gender and the definite article (der / die / das)
   - The indefinite article (ein / eine)
   - Plural forms (-e, -en, -er, -s, umlaut)
-texts:
-  - kind: main
-    title: Was ist das? Mein Zimmer
-    word_count: 120
-  - kind: extra
-    title: Bildwörterbuch
-    word_count: 57
 production:
   mode: writing
   genre: a short description of the things around you

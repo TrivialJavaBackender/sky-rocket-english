@@ -21,13 +21,6 @@ grammar_points:
   - Negation with nicht (verbs, adjectives, adverbials)
   - Negation with kein/keine (nouns) and how it differs from nicht
   - Yes/no questions (verb first) and answering with doch
-texts:
-  - kind: main
-    title: Drei Fragen an Lena
-    word_count: 111
-  - kind: extra
-    title: Ja oder Nein?
-    word_count: 55
 production:
   mode: writing
   genre: a short note about what you do and do not do

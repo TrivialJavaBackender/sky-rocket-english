@@ -2,7 +2,6 @@ kind: main
 kicker: LONG-READ
 title: The Algorithm Will See You Now
 meta: ≈ 6 min · dotted words carry glosses — tap to reveal
-word_count: 850
 body:
   - - t: "For more than a century, the chest X-ray has been read the same way: a tired human being, a lightbox and a judgement formed in seconds. That judgement is now being quietly outsourced. In hospitals from Seoul to Stockholm, state-of-the-art image-recognition systems are being rolled out alongside radiologists, and in some departments the machine now reads first. The pitch writes itself: software never sleeps, never hurries and never lets a difficult night skew its attention. The reality, as ever in medicine, is more complicated — and more interesting."
   - - t: "The breakthrough behind the headlines is real. In 2018, a deep-learning system was shown, in a peer-reviewed study, to detect certain lung cancers earlier than experienced consultants could. The findings have since been replicated on data from three continents — the strongest empirical evidence yet that machines can, in narrow tasks, outperform the very people who trained them. The engineering is cutting-edge, but the idea is old: harness pattern recognition, feed it millions of labelled images, and let it crunch the numbers until the invisible becomes obvious. None of it happened overnight, either: the groundbreaking papers rest on a decade of unglamorous work in which archives were digitised, labels were argued over, and models were rebuilt each time they failed."

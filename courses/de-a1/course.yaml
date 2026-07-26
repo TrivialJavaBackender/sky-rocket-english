@@ -22,6 +22,12 @@ name: Deutsch
 level_label: A1
 position: 2
 
+# Length gate for `pnpm validate-content` (PLAN.md §6): text-main/text-extra
+# word counts, both derived from body rather than authored.
+content_profile:
+  text_main: [100, 150]
+  text_extra: [50, 80]
+
 blocks:
   - slug: a
     name: First steps

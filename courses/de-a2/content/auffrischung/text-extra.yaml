@@ -2,7 +2,6 @@ kind: extra
 kicker: DIALOG
 title: Im Sprachkurs
 meta: ≈ 1 Min · die erste Stunde, Frage und Antwort
-word_count: 136
 body:
   - - t: "FRAU WEBER: Guten Abend! Willkommen im Kurs. Darf ich mich kurz vorstellen? Mein Name ist Weber, Anna Weber. Und wie heißen Sie?"
   - - t: "MAREK: Ich heiße Marek Nowak."

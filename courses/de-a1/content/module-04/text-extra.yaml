@@ -6,7 +6,6 @@ kind: extra
 kicker: QUIZ
 title: Ja oder Nein?
 meta: ≈ 1 min · dotted words have a note — tap to reveal
-word_count: 55
 body:
   - - t: "Hier ist ein Quiz. Die Antworten sind Ja, Nein oder Doch."
   - - t: "1. Ist ein Stift ein Buch? — Nein, das ist falsch."

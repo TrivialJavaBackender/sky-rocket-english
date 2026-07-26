@@ -1,8 +1,7 @@
 # Modul 06 · Kleidung und Einkaufen — Kopf des Moduls.
 # grammar_points: 6 Punkte, genau die Grammatik-Liste der Modulkarte (PLAN.md §4),
 # in der Theorie als 2 Spotlights × 3 gegliedert.
-# standfirst wörtlich aus course.yaml. word_count der Texte = tatsächliche Zahl
-# im body (siehe text-main.yaml und text-extra.yaml).
+# standfirst wörtlich aus course.yaml.
 slug: m06
 title: Kleidung und Einkaufen
 standfirst: "Adjektive nach dem bestimmten Artikel · 30 Wörter · ein Gespräch im Geschäft."
@@ -22,13 +21,6 @@ grammar_points:
   - der, das, die als kurze Antwort („Welchen nimmst du?" — „Den da.")
   - dieser oder jeder mit dem Adjektiv (Dieser gestreifte Pullover ist zu eng)
   - Überblick über die Endungen nach der, das, die, den im Nominativ und Akkusativ
-texts:
-  - kind: main
-    title: Im Kaufhaus
-    word_count: 316
-  - kind: extra
-    title: Umtausch und Rückgabe
-    word_count: 135
 production:
   mode: speaking
   genre: Gespräch im Geschäft

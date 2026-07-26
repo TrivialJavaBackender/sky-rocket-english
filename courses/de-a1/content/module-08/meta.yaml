@@ -21,13 +21,6 @@ grammar_points:
   - The modal verbs können and wollen in the present tense (all persons)
   - The modal möchten
   - The verb bracket (the modal in second position, the infinitive at the end)
-texts:
-  - kind: main
-    title: Was kannst du gut?
-    word_count: 134
-  - kind: extra
-    title: Kursangebot Deutsch
-    word_count: 76
 production:
   mode: writing
   genre: a short forum post about what you can do and what you want to learn

@@ -18,13 +18,6 @@ grammar_points:
   - Passive reporting (is alleged to / is rumoured to have)
   - Questions, requests and advice in reported speech
   - Patterns with suggest (and recommend)
-texts:
-  - kind: main
-    title: Manufacturing Outrage
-    word_count: 832
-  - kind: extra
-    title: One Vote, Two Front Pages
-    word_count: 477
 production:
   mode: writing
   genre: opinion article

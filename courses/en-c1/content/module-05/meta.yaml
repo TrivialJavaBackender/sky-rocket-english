@@ -20,13 +20,6 @@ grammar_points:
   - Alternatives to if (provided, as long as, on condition that, unless, supposing)
   - but for, otherwise and or else
   - in case vs if
-texts:
-  - kind: main
-    title: The Last Harvest
-    word_count: 1062
-  - kind: extra
-    title: Nothing We Build Will Outlast the Soil
-    word_count: 360
 production:
   mode: writing
   genre: CAE Writing Part 1 essay

@@ -6,12 +6,10 @@
 # mir, Die nehme ich).
 # Vier Glossen stehen auf Wörtern in der Grundform: der Ärmel, die
 # Umkleidekabine, das Sonderangebot, die Quittung.
-# word_count zählt die Wörter im body (mit den vier Glossen-Wörtern).
 kind: main
 kicker: LESETEXT
 title: Im Kaufhaus
 meta: ≈ 3 Min · die Wörter mit Punkten haben eine Erklärung — zum Antippen
-word_count: 316
 body:
   - - t: 'Am Samstag geht Lena mit ihrer Freundin Mara in ein großes Kaufhaus in der Stadt. Draußen ist es kalt, und ihr alter Mantel ist zu dünn. Lena sucht einen warmen Mantel für den Winter. Schon im Schaufenster sieht sie den blauen Mantel und die rote Jacke. „Schau mal", sagt Lena, „der blaue Mantel dort. Der gefällt mir sehr gut."'
   - - t: 'Im ersten Stock ist die Kleidung für Damen. Die Auswahl ist wirklich groß. Neben den Mänteln hängen die Kleider, die Röcke und die warmen Pullover. „So viele schöne Sachen!", sagt Mara. Lena nimmt den blauen Mantel und sucht ihre Größe. „Welche Größe hast du?", fragt Mara. „Achtunddreißig", sagt Lena und geht in die '

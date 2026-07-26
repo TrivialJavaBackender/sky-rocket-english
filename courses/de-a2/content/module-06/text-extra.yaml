@@ -4,12 +4,10 @@
 # Sonderangebot, reduziert) und Zielformen des Moduls: jeden Artikel, jede
 # Verkäuferin, das gestreifte Hemd, den warmen Mantel.
 # Drei Glossen auf Wörtern in der Grundform: der Umtausch, die Ware, das Etikett.
-# word_count zählt die Wörter im body (mit den drei Glossen-Wörtern).
 kind: extra
 kicker: INFO
 title: Umtausch und Rückgabe
 meta: ≈ 1 Min · ein Aushang im Geschäft
-word_count: 135
 body:
   - - t: 'Liebe Kundin, lieber Kunde, Sie haben etwas gekauft, aber es passt leider nicht? Kein Problem. Bei uns können Sie jeden Artikel umtauschen. So einfach geht der '
     - g: Umtausch

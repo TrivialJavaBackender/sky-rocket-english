@@ -18,13 +18,6 @@ grammar_points:
   - Die Präpositionen mit Akkusativ
   - Die Formen im Akkusativ
   - Dativ oder Akkusativ? Die Präposition entscheidet
-texts:
-  - kind: main
-    title: Mit dem Zug nach Wien
-    word_count: 323
-  - kind: extra
-    title: Wie komme ich zum Museum?
-    word_count: 146
 production:
   mode: speaking
   genre: Der Weg von zu Hause zur Arbeit

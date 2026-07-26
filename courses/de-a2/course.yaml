@@ -18,6 +18,12 @@ name: Deutsch
 level_label: A1 → A2
 position: 3
 
+# Length gate for `pnpm validate-content` (PLAN.md §6): text-main/text-extra
+# word counts, both derived from body rather than authored.
+content_profile:
+  text_main: [280, 330]
+  text_extra: [130, 150]
+
 blocks:
   # Outside the 54 h and outside the gate (db/migrations/0008): the course
   # assumes the learner holds A1, and this block is the safety net for whoever

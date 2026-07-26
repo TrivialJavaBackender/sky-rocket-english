@@ -21,13 +21,6 @@ grammar_points:
   - The accusative of the indefinite article (ein → einen)
   - Personal pronouns in the accusative (mich, dich, ihn, sie, es, uns, euch)
   - The direct object with nehmen, essen, trinken and haben
-texts:
-  - kind: main
-    title: Im Café
-    word_count: 134
-  - kind: extra
-    title: Café Sonne · Speisekarte
-    word_count: 55
 production:
   mode: speaking
   genre: a recorded dialogue — ordering in a café

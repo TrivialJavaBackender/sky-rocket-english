@@ -18,13 +18,6 @@ grammar_points:
   - Die W-Frage
   - Die Ja/Nein-Frage
   - Die Fragewörter
-texts:
-  - kind: main
-    title: Neu in der Stadt
-    word_count: 281
-  - kind: extra
-    title: Im Sprachkurs
-    word_count: 136
 production:
   mode: writing
   genre: Steckbrief und Anmeldeformular

@@ -20,13 +20,6 @@ grammar_points:
   - Regular verbs in the present tense (stem + -e/-st/-t/-en)
   - Possessives in the nominative (mein, dein, sein, ihr, unser)
   - The verb in second position (statement word order)
-texts:
-  - kind: main
-    title: Meine Familie
-    word_count: 119
-  - kind: extra
-    title: Familienfotos
-    word_count: 64
 production:
   mode: writing
   genre: a short text about your family

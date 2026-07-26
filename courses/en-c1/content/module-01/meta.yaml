@@ -18,13 +18,6 @@ grammar_points:
   - Future forms with an edge (continuous, perfect, be to, be about to)
   - Future in the past (was going to, was to have done)
   - State verbs and the continuous
-texts:
-  - kind: main
-    title: The Death of the Nine-to-Five
-    word_count: 800
-  - kind: extra
-    title: "Inside the Hiring Room: A Recruiter Speaks"
-    word_count: 360
 production:
   mode: writing
   genre: formal application email

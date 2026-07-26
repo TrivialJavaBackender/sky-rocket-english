@@ -18,13 +18,6 @@ grammar_points:
   - Das Perfekt mit sein
   - Die Stellung im Satz
   - Die Zeitangaben
-texts:
-  - kind: main
-    title: Was hast du am Wochenende gemacht?
-    word_count: 282
-  - kind: extra
-    title: Drei Posts vom Wochenende
-    word_count: 135
 production:
   mode: writing
   genre: Bericht vom Wochenende

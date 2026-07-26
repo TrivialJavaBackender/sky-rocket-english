@@ -20,13 +20,6 @@ grammar_points:
   - "it's (high) time + past"
   - as if / as though + unreal
   - "The subjunctive (demand / insist / suggest that it be…)"
-texts:
-  - kind: main
-    title: Born on the Wrong Side of Town
-    word_count: 1017
-  - kind: extra
-    title: Three Readers Reply
-    word_count: 401
 production:
   mode: speaking
   genre: comparative monologue (Speaking Part 2 style)

@@ -62,6 +62,7 @@ import {
   type AudioManifestClip,
 } from '../lib/content-schema';
 import { AUDIO_PROFILE, audioManifestPath, blobFsPath } from '../lib/audio/config';
+import { countReadingWords } from '../lib/word-count';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = path.resolve(__dirname, '..', '..');
@@ -296,8 +297,9 @@ async function upsertWatchout(client: Client, moduleId: number, w: Watchout, pos
 // ───────────────────────────── upserts: reading_text / gloss ─────────────────────────────
 
 async function upsertReadingText(client: Client, moduleId: number, pkg: ReadingPackage, position: number, counter: Counter): Promise<number> {
+  const wordCount = countReadingWords(pkg.body);
   const hash = sha256(
-    canonical({ kicker: pkg.kicker ?? null, title: pkg.title, meta: pkg.meta ?? null, word_count: pkg.word_count ?? null, body: pkg.body }),
+    canonical({ kicker: pkg.kicker ?? null, title: pkg.title, meta: pkg.meta ?? null, word_count: wordCount, body: pkg.body }),
   );
   const existing = await client.query<{ id: number; content_hash: string | null }>(
     'select id, content_hash from reading_text where module_id = $1 and kind = $2 and position = $3',
@@ -307,7 +309,7 @@ async function upsertReadingText(client: Client, moduleId: number, pkg: ReadingP
     const ins = await client.query<{ id: number }>(
       `insert into reading_text (module_id, kind, kicker, title, meta, body, word_count, position, content_hash)
        values ($1,$2::reading_kind,$3,$4,$5,$6,$7,$8,$9) returning id`,
-      [moduleId, pkg.kind, pkg.kicker ?? null, pkg.title, pkg.meta ?? null, JSON.stringify(pkg.body), pkg.word_count ?? null, position, hash],
+      [moduleId, pkg.kind, pkg.kicker ?? null, pkg.title, pkg.meta ?? null, JSON.stringify(pkg.body), wordCount, position, hash],
     );
     counter.added++;
     return ins.rows[0].id;
@@ -318,7 +320,7 @@ async function upsertReadingText(client: Client, moduleId: number, pkg: ReadingP
       pkg.title,
       pkg.meta ?? null,
       JSON.stringify(pkg.body),
-      pkg.word_count ?? null,
+      wordCount,
       hash,
       existing.rows[0].id,
     ]);

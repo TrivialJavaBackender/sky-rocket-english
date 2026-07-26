@@ -6,7 +6,6 @@ kind: extra
 kicker: DIALOG
 title: Wie heißt du?
 meta: ≈ 1 min · dotted words have a note — tap to reveal
-word_count: 64
 body:
   - - t: "Sara: Hallo! Wie heißt du?"
   - - t: "Lukas: Ich heiße Lukas. Und du?"

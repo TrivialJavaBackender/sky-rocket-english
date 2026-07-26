@@ -20,13 +20,6 @@ grammar_points:
   - Separable verbs (aufstehen, anfangen, aufhören, einkaufen, fernsehen, mitkommen) — the prefix goes to the end
   - Telling the time (official time and Viertel nach, halb)
   - Time adverbials with um and am
-texts:
-  - kind: main
-    title: Ein Tag von Anna
-    word_count: 140
-  - kind: extra
-    title: Terminkalender von Anna
-    word_count: 59
 production:
   mode: writing
   genre: a short text about your own day

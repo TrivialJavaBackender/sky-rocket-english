@@ -18,13 +18,6 @@ grammar_points:
   - Die Personalpronomen im Dativ
   - mein, dein und unser im Dativ
   - Der Dativ im Überblick
-texts:
-  - kind: main
-    title: Ein Geschenk für Oma
-    word_count: 304
-  - kind: extra
-    title: Chat am Donnerstagabend
-    word_count: 146
 production:
   mode: writing
   genre: E-Mail mit einer Bitte um einen Gefallen

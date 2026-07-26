@@ -20,13 +20,6 @@ grammar_points:
   - Verb-second word order and inversion after a front adverbial
   - gern and nicht gern
   - The conjunctions und and oder
-texts:
-  - kind: main
-    title: Meine Freizeit
-    word_count: 131
-  - kind: extra
-    title: Forum · Was ist dein Hobby?
-    word_count: 69
 production:
   mode: writing
   genre: a short forum post about your free time

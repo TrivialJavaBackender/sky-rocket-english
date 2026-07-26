@@ -17,13 +17,6 @@ grammar_points:
   - als — einmal in der Vergangenheit
   - wenn — immer wieder in der Vergangenheit
   - Die Zeitangaben der Vergangenheit
-texts:
-  - kind: main
-    title: Als ich ein Kind war
-    word_count: 316
-  - kind: extra
-    title: Interview mit meiner Großmutter
-    word_count: 150
 production:
   mode: writing
   genre: Erzählung über die eigene Kindheit
