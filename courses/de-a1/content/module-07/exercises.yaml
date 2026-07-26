@@ -1,0 +1,491 @@
+# Module 07 · 46 core tasks + 16 review. Distribution (PLAN.md §6):
+# 8 mc_cloze · 8 open_cloze · 6 word_formation · 2 key_word_transformation ·
+# 10 grammar_drill · 4 error_correction · 4 collocation_match · 4 reading_comprehension.
+#
+# Spiral revision of earlier modules (marked "SPIRAL"): open_cloze 5 (kein in the
+# nominative, M4), grammar_drill 10 and word_formation 5 (plural, M3), mc_cloze 7
+# (accusative of the definite article, M6), word_formation 6 (conjugation, M2).
+#
+# One task = one operation: nothing asks for a dative form, a modal verb, a
+# separable verb or an imperative. Requests appear only as the fixed frames the
+# module hands over whole (Ich möchte …, …, bitte). Explanations English (§5);
+# frames, options and answers German.
+core:
+  # ───────────────────────── Multiple Choice ─────────────────────────
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Es gibt hier "
+      post: " Supermarkt."
+      options: [ein, einen, einem, eines]
+      answer: 1
+    explanation: "es gibt takes the accusative, so masculine ein becomes einen. Es gibt einen Supermarkt."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Heute gibt es "
+      post: " Fleisch."
+      options: [kein, keinen, keine, keiner]
+      answer: 0
+    explanation: "das Fleisch is neuter, so kein does not change: Es gibt kein Fleisch."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Im Supermarkt gibt es "
+      post: " Käse."
+      options: [keine, keinem, keinen, kein]
+      answer: 2
+    explanation: "der Käse is masculine, so kein → keinen in the accusative."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "Ich nehme einen "
+      post: " Milch."
+      options: [Kilo, Gramm, Stück, Liter]
+      answer: 3
+    explanation: "Milk is measured in litres, and der Liter is masculine — that is why the frame says einen."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Ein Kilo Äpfel "
+      post: " zwei Euro dreißig."
+      options: [kosten, kostet, koste, kostest]
+      answer: 1
+    explanation: "ein Kilo is singular, so the verb is kostet."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "Der Käse ist billig. Er kostet nur zwei "
+      post: "."
+      options: [Euros, Euroen, Euro, Euron]
+      answer: 2
+    explanation: "After a number Euro has no plural ending: zwei Euro, hundert Euro."
+  # SPIRAL · M6 — accusative of the definite article
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Der Apfelkuchen ist lecker. Ich nehme "
+      post: " Apfelkuchen."
+      options: [der, das, dem, den]
+      answer: 3
+    explanation: "nehmen takes a direct object, and masculine der becomes den in the accusative."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "der Apfel + der Saft = "
+      post: ""
+      options: [das Apfelsaft, der Apfelsaft, die Apfelsaft, der Saftapfel]
+      answer: 1
+    explanation: "The second noun gives the gender: der Saft → der Apfelsaft."
+
+  # ───────────────────────── Open Cloze ─────────────────────────
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Es "
+      post: " hier einen Supermarkt."
+      answers: [gibt]
+      answer_shown: gibt
+    explanation: "es … einen Supermarkt is the frame es gibt. The verb never changes."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Gibt es hier einen Supermarkt? — Ja, es gibt "
+      post: " Supermarkt in der Stadt."
+      answers: [einen]
+      answer_shown: einen
+    explanation: "Ja makes the answer positive, so it is einen, not keinen. Masculine ein → einen after es gibt."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Nein, heute gibt es "
+      post: " Käse."
+      answers: [keinen]
+      answer_shown: keinen
+    explanation: "Nein makes the answer negative. der Käse is masculine → keinen Käse."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Ich möchte "
+      post: " Flasche Wasser, bitte."
+      answers: [eine]
+      answer_shown: eine
+    explanation: "die Flasche is feminine, so eine stays eine in the accusative."
+  # SPIRAL · M4 — kein in the nominative
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Das ist "
+      post: " Apfel, das ist eine Banane."
+      answers: [kein]
+      answer_shown: kein
+    explanation: "das ist eine Banane says what it is, so the first part says what it is not: kein Apfel."
+  - type: open_cloze
+    group: vocab
+    content:
+      pre: "Ich kaufe einen "
+      post: " Wasser."
+      hint: der Liter
+      answers: [Liter]
+      answer_shown: Liter
+    explanation: "Water comes in litres, and einen shows the word is masculine: einen Liter Wasser."
+  - type: open_cloze
+    group: reading
+    content:
+      pre: "Ein Kilo Äpfel "
+      post: " zwei Euro dreißig."
+      hint: kosten
+      answers: [kostet]
+      answer_shown: kostet
+    explanation: "kosten gives the price. ein Kilo is singular → kostet."
+  - type: open_cloze
+    group: reading
+    content:
+      pre: "Der Käse ist billig. Er kostet nur drei "
+      post: "."
+      hint: der Euro
+      answers: [Euro]
+      answer_shown: Euro
+    explanation: "After a number Euro has no -s: drei Euro."
+
+  # ───────────────────────── Wortbildung ─────────────────────────
+  - type: word_formation
+    group: vocab
+    content:
+      pre: ""
+      post: " kostet zwei Euro."
+      prompt: "der Apfel + der Saft (mit Artikel)"
+      answers: [Der Apfelsaft]
+      answer_shown: Der Apfelsaft
+    explanation: "The second noun gives the gender: der Saft → der Apfelsaft."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: ""
+      post: " ist sehr lecker."
+      prompt: "das Gemüse + die Suppe (mit Artikel)"
+      answers: [Die Gemüsesuppe]
+      answer_shown: Die Gemüsesuppe
+    explanation: "die Suppe stands last, so the new word is feminine: die Gemüsesuppe."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: ""
+      post: " ist billig."
+      prompt: "die Butter + das Brot (mit Artikel)"
+      answers: [Das Butterbrot]
+      answer_shown: Das Butterbrot
+    explanation: "das Brot stands last, so the new word is neuter: das Butterbrot."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: ""
+      post: " kostet einen Euro."
+      prompt: "der Käse + das Brötchen (mit Artikel)"
+      answers: [Das Käsebrötchen]
+      answer_shown: Das Käsebrötchen
+    explanation: "das Brötchen stands last, so the new word is neuter: das Käsebrötchen."
+  # SPIRAL · M3 — plural
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Ich kaufe ein Kilo "
+      post: "."
+      prompt: "der Apfel (Plural)"
+      answers: [Äpfel]
+      answer_shown: Äpfel
+    explanation: "der Apfel → die Äpfel (umlaut, no ending). A kilo always holds more than one."
+  # SPIRAL · M2 — conjugation
+  - type: word_formation
+    group: grammar
+    content:
+      pre: "Ein Stück Kuchen "
+      post: " zwei Euro."
+      prompt: "kosten (es)"
+      answers: [kostet]
+      answer_shown: kostet
+    explanation: "ein Stück is singular, so kosten → kostet."
+
+  # ───────────────────────── Umformung ─────────────────────────
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: Hier ist ein Supermarkt.
+      key: GIBT
+      pre: "Hier "
+      post: " Supermarkt."
+      answers: [gibt es einen]
+      hint: 3 Wörter
+      answer_shown: gibt es einen
+    explanation: "es gibt takes the accusative, so ein becomes einen: Hier gibt es einen Supermarkt."
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: Es gibt Käse.
+      key: KEIN
+      pre: "Es gibt "
+      post: "."
+      answers: [keinen Käse]
+      hint: 2 Wörter
+      answer_shown: keinen Käse
+    explanation: "der Käse is masculine, so the negative form in the accusative is keinen Käse."
+
+  # ───────────────────────── Grammatik-Drill ─────────────────────────
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Es gibt "
+      post: " Apfel."
+      prompt: ein
+      options: [ein, einen, eine, einem]
+      answer: 1
+    explanation: "der Apfel is masculine, so ein → einen after es gibt."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Es gibt "
+      post: " Käse."
+      prompt: kein
+      options: [kein, keine, keinen, keiner]
+      answer: 2
+    explanation: "der Käse is masculine, so kein → keinen in the accusative."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Es gibt "
+      post: " Milch."
+      prompt: kein
+      options: [keinen, keine, kein, keinem]
+      answer: 1
+    explanation: "die Milch is feminine, so keine stays keine in the accusative."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Ich möchte "
+      post: " Banane."
+      prompt: ein
+      options: [ein, einen, eine, einer]
+      answer: 2
+    explanation: "die Banane is feminine, so the accusative is eine Banane."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Ich kaufe ein Kilo "
+      post: "."
+      prompt: Menge
+      options: [Äpfel, von Äpfeln, der Äpfel, von Apfel]
+      answer: 0
+    explanation: "The noun follows the quantity directly: ein Kilo Äpfel."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Die Bananen "
+      post: " ein Euro zwanzig."
+      prompt: kosten
+      options: [kostet, kosten, koste, kostest]
+      answer: 1
+    explanation: "die Bananen is plural, so the verb is kosten."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: ""
+      post: " hier einen Supermarkt?"
+      prompt: Frage
+      options: [Gibt es, Es gibt, Gibt, Es gibt es]
+      answer: 0
+    explanation: "In a yes/no question the verb comes first: Gibt es hier einen Supermarkt?"
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Ich habe "
+      post: " Geld."
+      prompt: kein
+      options: [keinen, kein, keine, keinem]
+      answer: 1
+    explanation: "das Geld is neuter, so kein does not change: Ich habe kein Geld."
+  - type: grammar_drill
+    group: vocab
+    content:
+      pre: ""
+      post: " Butter, bitte."
+      prompt: Menge
+      options: [Hundert Gramm, Hundert Gramme, Hundert Gramms, Hundert von Gramm]
+      answer: 0
+    explanation: "After a number Gramm has no ending: hundert Gramm Butter."
+  # SPIRAL · M3 — plural
+  - type: grammar_drill
+    group: vocab
+    content:
+      pre: "Ich kaufe drei "
+      post: "."
+      prompt: Plural
+      options: [Banane, Bananen, Bananes, Bananer]
+      answer: 1
+    explanation: "die Banane → die Bananen. After drei the noun is plural."
+
+  # ───────────────────────── Fehlerkorrektur ─────────────────────────
+  - type: error_correction
+    group: grammar
+    content: { words: [Es, gibt, ein, Supermarkt, in, "Berlin."], wrong: 2, correction: "ein → einen" }
+    explanation: "es gibt takes the accusative: Es gibt einen Supermarkt in Berlin."
+  - type: error_correction
+    group: grammar
+    content: { words: [Heute, gibt, es, kein, "Käse."], wrong: 3, correction: "kein → keinen" }
+    explanation: "der Käse is masculine, so the accusative form is keinen Käse."
+  - type: error_correction
+    group: grammar
+    content: { words: [Ich, kaufe, ein, Kilo, von, "Äpfeln."], wrong: 4, correction: "von Äpfeln → Äpfel" }
+    explanation: "German puts the noun straight after the quantity: ein Kilo Äpfel."
+  - type: error_correction
+    group: vocab
+    content: { words: [Der, Käse, kostet, drei, "Euros."], wrong: 4, correction: "Euros → Euro" }
+    explanation: "After a number Euro has no -s: drei Euro."
+
+  # ───────────────────────── Wort-Paare ─────────────────────────
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [ein Kilo, ein Liter, eine Flasche, hundert Gramm]
+      right: [Milch, Butter, Äpfel, Apfelsaft]
+      pairs: { 0: 2, 1: 0, 2: 3, 3: 1 }
+    explanation: "ein Kilo Äpfel · ein Liter Milch · eine Flasche Apfelsaft · hundert Gramm Butter."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [der Apfel, das Gemüse, die Butter, der Käse]
+      right: [die Suppe, das Brötchen, der Saft, das Brot]
+      pairs: { 0: 2, 1: 0, 2: 3, 3: 1 }
+    explanation: "der Apfelsaft · die Gemüsesuppe · das Butterbrot · das Käsebrötchen."
+  - type: collocation_match
+    group: grammar
+    content:
+      left: ["ein · der Apfel", "kein · der Käse", "ein · die Banane", "kein · das Ei"]
+      right: [keinen, kein, einen, eine]
+      pairs: { 0: 2, 1: 0, 2: 3, 3: 1 }
+    explanation: "einen Apfel · keinen Käse · eine Banane · kein Ei. Only the masculine takes -en."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [Das kostet, Es gibt heute, Ein Kilo, Zweihundert]
+      right: [Gramm Käse, zwei Euro, keinen Apfelsaft, Bananen]
+      pairs: { 0: 1, 1: 2, 2: 3, 3: 0 }
+    explanation: "Das kostet zwei Euro · Es gibt heute keinen Apfelsaft · ein Kilo Bananen · zweihundert Gramm Käse."
+
+  # ───────────────────────── Leseverstehen ─────────────────────────
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Ich nehme ein Kilo Äpfel und drei Bananen. Ein Kilo Äpfel kostet zwei Euro dreißig."
+      q: "Was kostet ein Kilo Äpfel?"
+      options:
+        - Zwei Euro dreißig
+        - Drei Euro
+        - Ein Euro zwanzig
+        - Neunzehn Euro
+      answer: 0
+    explanation: "The text says: Ein Kilo Äpfel kostet zwei Euro dreißig."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Ich möchte einen Apfelsaft. Aber heute gibt es keinen Apfelsaft. Es gibt auch kein Fleisch."
+      q: "Was gibt es heute nicht?"
+      options:
+        - Äpfel und Bananen
+        - Apfelsaft und Fleisch
+        - Milch und Butter
+        - Käse und Eier
+      answer: 1
+    explanation: "The text says: heute gibt es keinen Apfelsaft. Es gibt auch kein Fleisch."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Kein Problem: ich nehme eine Flasche Wasser und ein Stück Kuchen."
+      q: "Was nimmt Lukas?"
+      options:
+        - Einen Apfelsaft
+        - Ein Kilo Fleisch
+        - Zehn Eier und Butter
+        - Eine Flasche Wasser und ein Stück Kuchen
+      answer: 3
+    explanation: "The text says: ich nehme eine Flasche Wasser und ein Stück Kuchen."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "alles kostet neunzehn Euro. Ich habe genug Geld. Die Preise sind hier wirklich billig."
+      q: "Wie findet Lukas die Preise?"
+      options:
+        - Sehr teuer
+        - Nicht gut
+        - Billig
+        - Zu lang
+      answer: 2
+    explanation: "The text says: Die Preise sind hier wirklich billig."
+
+review_pool:
+  - type: mc_cloze
+    group: grammar
+    content: { pre: "Es gibt ", post: " Apfel.", options: [ein, einen, eine, einem], answer: 1 }
+    explanation: "der Apfel is masculine → einen after es gibt."
+  - type: mc_cloze
+    group: grammar
+    content: { pre: "Heute gibt es ", post: " Milch.", options: [kein, keinen, keine, keinem], answer: 2 }
+    explanation: "die Milch is feminine → keine Milch."
+  - type: mc_cloze
+    group: vocab
+    content: { pre: "Ich nehme ein ", post: " Kuchen.", options: [Kilo, Liter, Stück, Gramm], answer: 2 }
+    explanation: "One piece of cake = ein Stück Kuchen."
+  - type: mc_cloze
+    group: vocab
+    content: { pre: "Der Käse kostet vier ", post: ".", options: [Euros, Euro, Euroen, Euron], answer: 1 }
+    explanation: "After a number Euro has no -s: vier Euro."
+  - type: mc_cloze
+    group: vocab
+    content: { pre: "der Käse + das Brötchen = ", post: "", options: [die Käsebrötchen, das Käsebrötchen, der Käsebrötchen, das Brötchenkäse], answer: 1 }
+    explanation: "das Brötchen stands last, so the compound is neuter."
+  - type: open_cloze
+    group: grammar
+    content: { pre: "Es ", post: " hier keinen Apfelsaft.", answers: [gibt], answer_shown: gibt }
+    explanation: "es … keinen Apfelsaft is the frame es gibt."
+  - type: open_cloze
+    group: vocab
+    content: { pre: "Ich möchte einen ", post: " Milch.", hint: der Liter, answers: [Liter], answer_shown: Liter }
+    explanation: "Milk comes in litres, and einen shows the word is masculine."
+  - type: open_cloze
+    group: grammar
+    content: { pre: "Nein, hier gibt es ", post: " Fleisch.", answers: [kein], answer_shown: kein }
+    explanation: "das Fleisch is neuter, so kein does not change."
+  - type: open_cloze
+    group: reading
+    content: { pre: "Ein Kilo Bananen ", post: " ein Euro zwanzig.", hint: kosten, answers: [kostet], answer_shown: kostet }
+    explanation: "ein Kilo is singular → kostet."
+  - type: grammar_drill
+    group: grammar
+    content: { pre: "Es gibt ", post: " Banane.", prompt: ein, options: [ein, einen, eine, einer], answer: 2 }
+    explanation: "die Banane is feminine → eine Banane."
+  - type: grammar_drill
+    group: grammar
+    content: { pre: "Ich habe ", post: " Geld.", prompt: kein, options: [keinen, kein, keine, keins], answer: 1 }
+    explanation: "das Geld is neuter → kein Geld."
+  - type: grammar_drill
+    group: vocab
+    content: { pre: "Ich kaufe ", post: " Käse.", prompt: Menge, options: [zweihundert Gramm, zweihundert Gramms, zweihundert Gramme, zweihundert von Gramm], answer: 0 }
+    explanation: "After a number Gramm has no ending: zweihundert Gramm Käse."
+  - type: grammar_drill
+    group: grammar
+    content: { pre: "", post: " es hier Obst?", prompt: Frage, options: [Gibt, Gibst, Geben, Gebt], answer: 0 }
+    explanation: "The frame is es gibt; in a question the verb comes first: Gibt es …?"
+  - type: error_correction
+    group: grammar
+    content: { words: [Es, gibt, kein, "Käse."], wrong: 2, correction: "kein → keinen" }
+    explanation: "der Käse is masculine → keinen Käse in the accusative."
+  - type: error_correction
+    group: grammar
+    content: { words: [Es, gibt, ein, "Banane."], wrong: 2, correction: "ein → eine" }
+    explanation: "die Banane is feminine, so the accusative is eine Banane."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [ein Kilo, ein Liter, eine Flasche, hundert Gramm]
+      right: [Butter, Äpfel, Wasser, Milch]
+      pairs: { 0: 1, 1: 3, 2: 2, 3: 0 }
+    explanation: "ein Kilo Äpfel · ein Liter Milch · eine Flasche Wasser · hundert Gramm Butter."

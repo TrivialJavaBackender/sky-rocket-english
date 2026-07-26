@@ -1,0 +1,29 @@
+# Module 04 · production. Scaffolding (prompt, checklist) English; model answer
+# German (§5). The model stays inside what module 4 can produce: sein, haben,
+# the regular present, possessives, nicht and kein/keine in the nominative.
+# It avoids keinen (module 7), separable verbs (module 9) and modals (module 8),
+# and it keeps nicht at the end of its clause, which is the point of the task.
+mode: writing
+genre: a short note about what you do and do not do
+word_target: [25, 35]
+prompt: |
+  Write a short note to a friend about your day. 25–35 words.
+
+  Say something about each point:
+  • one thing you do today
+  • one thing you do NOT do today (use nicht)
+  • one thing you do not have (use kein or keine)
+  • what you think about German — is it interesting or boring?
+
+  Use nicht at least twice and kein or keine at least once.
+model_answer: |
+  Hallo Tim! Ich lerne heute Deutsch. Ich arbeite nicht, ich habe keine
+  Zeit. Die Grammatik ist nicht einfach, aber sie ist wirklich interessant.
+  Ich mag Deutsch sehr. Und du? Bis bald! Lena
+checklist:
+  - You name one thing you do and one thing you do not do
+  - nicht comes at the end when it negates the verb (Ich arbeite nicht)
+  - You use kein or keine in front of a noun, never nicht
+  - You say what you think about German (interessant, langweilig, gut, schlecht)
+  - Every noun starts with a capital letter
+  - The note is 25–35 words long

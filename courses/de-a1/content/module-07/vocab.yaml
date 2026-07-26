@@ -1,0 +1,224 @@
+# Module 07 · 24 words: the supermarket, food, quantities, prices and money.
+# 14 anchors of the card + the five quantity words of this module (das Kilo,
+# der Liter, die Flasche, das Stück, das Gramm) + the numbers hundert and
+# tausend + das Geld, der Preis, die Kasse. Scaffolding rule (§5):
+# term/use_cases/collocations/register German, definition English with a synonym
+# or an opposite. Nouns carry their article and their plural; the quantity words
+# show in the use_cases exactly the frame the exercises ask for (ein Kilo Äpfel,
+# einen Liter Milch, hundert Gramm Butter) — no von between quantity and noun.
+entries:
+  - term: der Supermarkt
+    tag: Nomen
+    definition: a supermarket; a big shop for food. A small one is ein Laden
+    use_cases:
+      - Es gibt hier einen Supermarkt.
+      - Der Supermarkt ist groß und billig.
+    collocations: in den Supermarkt gehen · im Supermarkt einkaufen
+    register: "Plural: die Supermärkte"
+
+  - term: das Obst
+    tag: Nomen
+    definition: fruit — apples, bananas, oranges
+    use_cases:
+      - Ich esse gern Obst.
+      - Obst und Gemüse sind heute billig.
+    collocations: Obst kaufen · Obst essen
+    register: "Kein Plural: Obst ist immer Singular."
+
+  - term: das Gemüse
+    tag: Nomen
+    definition: vegetables. Not fruit — that is Obst
+    use_cases:
+      - Ich kaufe Obst und Gemüse.
+      - Das Gemüse ist sehr billig.
+    collocations: Gemüse kaufen · die Gemüsesuppe
+    register: "Kein Plural: Gemüse ist immer Singular."
+
+  - term: der Apfel
+    tag: Nomen
+    definition: an apple; a green or red fruit
+    use_cases:
+      - Ein Kilo Äpfel kostet zwei Euro.
+      - Ich esse jeden Tag einen Apfel.
+    collocations: ein Kilo Äpfel · der Apfelsaft · der Apfelkuchen
+    register: "Plural: die Äpfel"
+
+  - term: die Banane
+    tag: Nomen
+    definition: a banana; a long yellow fruit
+    use_cases:
+      - Ich kaufe drei Bananen.
+      - Die Bananen sind heute sehr billig.
+    collocations: ein Kilo Bananen · eine Banane essen
+    register: "Plural: die Bananen"
+
+  - term: die Milch
+    tag: Nomen
+    definition: milk; the white drink from a cow
+    use_cases:
+      - Ich trinke gern Milch.
+      - Ein Liter Milch kostet einen Euro.
+    collocations: ein Liter Milch · der Milchkaffee
+    register: "Kein Plural."
+
+  - term: der Käse
+    tag: Nomen
+    definition: cheese; food made from milk
+    use_cases:
+      - Ich esse sehr gern Käse.
+      - Heute gibt es keinen Käse.
+    collocations: hundert Gramm Käse · das Käsebrötchen
+    register: "Plural (selten): die Käse"
+
+  - term: die Butter
+    tag: Nomen
+    definition: butter; the yellow fat you put on bread
+    use_cases:
+      - Hundert Gramm Butter, bitte.
+      - Die Butter ist heute teuer.
+    collocations: hundert Gramm Butter · das Butterbrot
+    register: "Kein Plural."
+
+  - term: das Ei
+    tag: Nomen
+    definition: an egg; it comes from a hen
+    use_cases:
+      - Ich nehme zehn Eier.
+      - Ein Ei kostet nicht viel.
+    collocations: sechs Eier · ein Ei essen
+    register: "Plural: die Eier"
+
+  - term: das Fleisch
+    tag: Nomen
+    definition: meat — from a cow, a pig or a hen
+    use_cases:
+      - Ich esse kein Fleisch.
+      - Fleisch ist oft teuer.
+    collocations: Fleisch essen · kein Fleisch
+    register: "Kein Plural."
+
+  - term: kosten
+    tag: Verb
+    definition: to cost; to have a price
+    use_cases:
+      - "Was kostet ein Kilo Äpfel?"
+      - Die Bananen kosten ein Euro zwanzig.
+    collocations: "Was kostet …? · Wie viel kostet das?"
+    register: "es kostet (Singular) · sie kosten (Plural)"
+
+  - term: der Euro
+    tag: Nomen
+    definition: the euro, the money in Germany and Austria
+    use_cases:
+      - Das kostet drei Euro.
+      - Ich habe zwanzig Euro.
+    collocations: zwei Euro dreißig · hundert Euro
+    register: "Nach einer Zahl ohne -s: zwei Euro (nicht zwei Euros)"
+
+  - term: billig
+    tag: Adjektiv
+    definition: cheap; it costs little. Opposite — teuer
+    use_cases:
+      - Der Supermarkt ist sehr billig.
+      - Bananen sind heute billig.
+    collocations: sehr billig · billig einkaufen
+    register: "Nicht teuer = billig"
+
+  - term: teuer
+    tag: Adjektiv
+    definition: expensive; it costs a lot. Opposite — billig
+    use_cases:
+      - Fleisch ist teuer.
+      - Das ist zu teuer!
+    collocations: sehr teuer · zu teuer
+    register: "Neutral: Der Preis ist hoch."
+
+  - term: das Kilo
+    tag: Nomen
+    definition: a kilo, 1000 grams. Long form — das Kilogramm
+    use_cases:
+      - Ich kaufe ein Kilo Äpfel.
+      - Ein Kilo Bananen kostet ein Euro zwanzig.
+    collocations: ein Kilo Äpfel · zwei Kilo Bananen
+    register: "Nach einer Zahl ohne Plural: zwei Kilo"
+
+  - term: der Liter
+    tag: Nomen
+    definition: a litre, 1000 millilitres — for milk, water, juice
+    use_cases:
+      - Ich nehme einen Liter Milch.
+      - Ein Liter Wasser kostet einen Euro.
+    collocations: ein Liter Milch · zwei Liter Wasser
+    register: "Nach einer Zahl ohne Plural: zwei Liter"
+
+  - term: die Flasche
+    tag: Nomen
+    definition: a bottle; you buy water and juice in one
+    use_cases:
+      - Ich möchte eine Flasche Wasser.
+      - Die Flasche Apfelsaft kostet zwei Euro.
+    collocations: eine Flasche Wasser · eine Flasche Apfelsaft
+    register: "Plural: die Flaschen"
+
+  - term: das Stück
+    tag: Nomen
+    definition: a piece; one part of something bigger
+    use_cases:
+      - Ich nehme ein Stück Kuchen.
+      - Ein Stück Käse, bitte.
+    collocations: ein Stück Kuchen · zwei Stück Butter
+    register: "Nach einer Zahl ohne Plural: drei Stück"
+
+  - term: das Gramm
+    tag: Nomen
+    definition: a gram; 1000 grams are one kilo
+    use_cases:
+      - Zweihundert Gramm Käse, bitte.
+      - Hundert Gramm Butter kosten einen Euro.
+    collocations: hundert Gramm Käse · 250 Gramm Butter
+    register: "Nach einer Zahl ohne Plural: 100 Gramm"
+
+  - term: hundert
+    tag: Zahl
+    definition: one hundred, 100
+    use_cases:
+      - Hundert Gramm Käse, bitte.
+      - Das Fahrrad kostet zweihundert Euro.
+    collocations: hundert Gramm · zweihundert Euro
+    register: "Auch: einhundert"
+
+  - term: tausend
+    tag: Zahl
+    definition: one thousand, 1000. Ten times hundert
+    use_cases:
+      - Der Supermarkt hat tausend Produkte.
+      - Tausend Euro ist sehr viel Geld.
+    collocations: tausend Produkte · tausend Euro
+    register: "Auch: eintausend"
+
+  - term: das Geld
+    tag: Nomen
+    definition: money; you pay with it
+    use_cases:
+      - Ich habe nicht viel Geld.
+      - "Wo ist mein Geld?"
+    collocations: Geld haben · kein Geld
+    register: "Kein Plural."
+
+  - term: der Preis
+    tag: Nomen
+    definition: the price; how much a thing costs
+    use_cases:
+      - Der Preis ist gut.
+      - Die Preise sind hier billig.
+    collocations: der Preis ist hoch · gute Preise
+    register: "Plural: die Preise"
+
+  - term: die Kasse
+    tag: Nomen
+    definition: the till, the checkout — where you pay in a shop
+    use_cases:
+      - "Wo ist die Kasse?"
+      - Ich bezahle an der Kasse.
+    collocations: an der Kasse bezahlen · zur Kasse gehen
+    register: "Plural: die Kassen"

@@ -1,0 +1,290 @@
+# Checkpoint A · 30 items over modules 1–5 (Block A) of Deutsch von null → A1.
+# Pass mark 75% (23/30) — declared in course.yaml (cp-a), not here. 90 minutes:
+# 30 items plus the short message in writing.yaml, sat in one sitting.
+#
+# Every item is built from what Block A actually taught: the 15 grammar points of
+# M01–M05 and the lexemes of their vocab.yaml files. Nothing here is copied from
+# a module — the sentences are new, the operations are not.
+#
+# Design: exactly 6 items per module, types 1–7 of the catalogue mixed throughout
+# (never grouped in blocks of one type), ordered by module.
+# reading_comprehension is excluded — a checkpoint package carries no
+# reading_text, so sync would store reading_text_id = null.
+#
+# Type spread: 6 grammar_drill · 5 mc_cloze · 5 open_cloze · 4 word_formation ·
+#              4 error_correction · 3 collocation_match ·
+#              3 key_word_transformation = 30
+#
+# Per module (6 each):
+#   M01 grammar_drill 2 · open_cloze 1 · word_formation 1 · mc_cloze 1 · error_correction 1
+#   M02 mc_cloze 1 · word_formation 1 · open_cloze 1 · grammar_drill 1 · error_correction 1 · key_word_transformation 1
+#   M03 open_cloze 1 · mc_cloze 1 · word_formation 1 · grammar_drill 1 · error_correction 1 · collocation_match 1
+#   M04 open_cloze 1 · mc_cloze 1 · grammar_drill 1 · error_correction 1 · collocation_match 1 · key_word_transformation 1
+#   M05 mc_cloze 1 · grammar_drill 1 · open_cloze 1 · word_formation 1 · collocation_match 1 · key_word_transformation 1
+#
+# ATTRIBUTION: checkpoint exercises cannot carry `grammar_point` (the column is
+# module-scoped and syncCheckpoint passes an empty map), so the owning module and
+# grammar point travel in the explanation prefix — "M03 · Gender and the definite
+# article — …", the heading taken verbatim from that module's meta.yaml. The
+# debrief in writing.yaml sorts misses by that prefix.
+#
+# review_pool is empty: a checkpoint is sat once and does not seed spaced review.
+#
+# Frames and answers German, explanations English (bridge metalanguage, PLAN §5).
+# All 30 idents are distinct; every mc_cloze/grammar_drill answer index is used.
+# One task = one operation. No answer needs anything past Block A: no accusative
+# forms (den/einen/keinen/mich/dich/ihn), no dative, no modals, no Perfekt, no
+# imperative — those start in module 6.
+
+core:
+  # ══════════════ M01 · Hallo! Ich bin … ══════════════
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Ihr "
+      post: " aus Frankreich."
+      prompt: sein
+      options: [bin, bist, sind, seid]
+      answer: 3
+    explanation: "M01 · The verb sein in all persons — ihr (you, more than one person) takes seid: Ihr seid aus Frankreich. sind belongs to wir and sie."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: ""
+      post: " kommst du? — Aus Spanien."
+      answers: [Woher]
+      answer_shown: Woher
+    explanation: "M01 · W-questions with wie, wer, woher and wo — The answer names the country you come from, so the question word is woher (from where): Woher kommst du?"
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Mein "
+      post: " ist Deutschland."
+      prompt: "land (Nomen)"
+      answers: [Land]
+      answer_shown: Land
+    explanation: "M01 · Capital letters on nouns — Every German noun starts with a capital letter: land → Land. This is a spelling rule, not a choice."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Anna und Tom sind ledig. "
+      post: " kommen aus Frankreich."
+      options: [Er, Sie, Wir, Ihr]
+      answer: 1
+    explanation: "M01 · Personal pronouns in the nominative — Two other people are the subject, so the pronoun is sie (they) with the verb form kommen: Sie kommen aus Frankreich."
+  - type: error_correction
+    group: grammar
+    content: { words: [Du, ist, aus, "Frankreich."], wrong: 1, correction: "ist → bist" }
+    explanation: "M01 · The verb sein in all persons — du takes bist, not ist: Du bist aus Frankreich."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: ""
+      post: " ist das? — Das ist meine Mutter."
+      prompt: W-Frage
+      options: [Wie, Wer, Wo, Woher]
+      answer: 1
+    explanation: "M01 · W-questions with wie, wer, woher and wo — The answer names a person, so the question word is wer: Wer ist das? wo asks for a place, woher for an origin."
+
+  # ══════════════ M02 · Meine Familie ══════════════
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Wir "
+      post: " zwei Kinder."
+      options: [habe, hast, hat, haben]
+      answer: 3
+    explanation: "M02 · The verb haben in all persons — wir takes haben: Wir haben zwei Kinder."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Du "
+      post: " in Österreich."
+      prompt: "wohnen (du)"
+      answers: [wohnst]
+      answer_shown: wohnst
+    explanation: "M02 · Regular verbs in the present tense — Take the stem wohn- and add the du ending -st: wohnen → du wohnst."
+  - type: open_cloze
+    group: reading
+    content:
+      pre: "Ich bin Anna. "
+      post: " Bruder heißt Tom."
+      answers: [Mein]
+      answer_shown: Mein
+    explanation: "M02 · Possessives in the nominative — The speaker is ich, so the possessive is mein, and der Bruder is masculine: Mein Bruder heißt Tom."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Mein Onkel "
+      post: " in Frankreich."
+      prompt: leben
+      options: [lebe, lebst, lebt, leben]
+      answer: 2
+    explanation: "M02 · Regular verbs in the present tense — mein Onkel is er, so the ending is -t: er lebt in Frankreich."
+  - type: error_correction
+    group: grammar
+    content: { words: [Meine, Eltern, in, Wien, "leben."], wrong: 2, correction: "in Wien leben → leben in Wien" }
+    explanation: "M02 · The verb in second position — In a German statement the verb is the second element: Meine Eltern leben in Wien. The verb never waits until the end."
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: Ich habe eine Schwester.
+      key: MEINE
+      pre: ""
+      post: " heißt Anna."
+      answers: [Meine Schwester]
+      hint: 2 Wörter
+      answer_shown: Meine Schwester
+    explanation: "M02 · Possessives in the nominative — The family member becomes the subject with a possessive: die Schwester is feminine, so meine Schwester heißt Anna."
+
+  # ══════════════ M03 · Der, die, das ══════════════
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Hier ist ein Fenster. "
+      post: " Fenster ist groß."
+      answers: [Das]
+      answer_shown: Das
+    explanation: "M03 · Gender and the definite article — The window is already known from the first sentence, so the second mention takes the definite article, and Fenster is neuter: Das Fenster ist groß."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: ""
+      post: " Tasche ist schwarz."
+      options: [Der, Die, Das, Den]
+      answer: 1
+    explanation: "M03 · Gender and the definite article — Tasche is feminine, so the article is die: Die Tasche ist schwarz."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Ein Stuhl, vier "
+      post: "."
+      prompt: "der Stuhl (Plural)"
+      answers: [Stühle]
+      answer_shown: Stühle
+    explanation: "M03 · Plural forms — der Stuhl → die Stühle: the plural adds -e and the u becomes ü."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Das ist "
+      post: " Uhr."
+      prompt: "ein / eine"
+      options: [ein, eine, einen, der]
+      answer: 1
+    explanation: "M03 · The indefinite article — Uhr is feminine (die Uhr), so the indefinite article is eine: Das ist eine Uhr."
+  - type: error_correction
+    group: grammar
+    content: { words: [Das, Buch, ist, rot, und, die, Stift, ist, "blau."], wrong: 5, correction: "die Stift → der Stift" }
+    explanation: "M03 · Gender and the definite article — Stift is masculine: der Stift. Gender in German does not follow your first language, so it is learnt with the word."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [das Buch, der Stift, das Fenster, die Blume]
+      right: [die Blumen, die Bücher, die Fenster, die Stifte]
+      pairs: { 0: 1, 1: 3, 2: 2, 3: 0 }
+    explanation: "M03 · Plural forms — das Buch → die Bücher (-er + umlaut) · der Stift → die Stifte (-e) · das Fenster → die Fenster (no change) · die Blume → die Blumen (-n). Every plural takes die."
+
+  # ══════════════ M04 · Kein Problem! ══════════════
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Ich verstehe die Frage nicht. Ich habe "
+      post: " Antwort."
+      answers: [keine]
+      answer_shown: keine
+    explanation: "M04 · Negation with kein/keine (nouns) — A noun is negated with kein, and Antwort is feminine: keine Antwort. eine would say the opposite."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Das ist "
+      post: " richtig."
+      options: [nicht, kein, keine, nichts]
+      answer: 0
+    explanation: "M04 · Negation with nicht — An adjective is negated with nicht: Das ist nicht richtig. kein only works in front of a noun."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Findest du das nicht interessant? — "
+      post: ", sehr interessant!"
+      prompt: "Ja / Nein / Doch"
+      options: [Ja, Nein, Doch, Nicht]
+      answer: 2
+    explanation: "M04 · Yes/no questions and answering with doch — The question is negative and you disagree with it, so the answer is doch, not ja: Doch, sehr interessant!"
+  - type: error_correction
+    group: grammar
+    content: { words: [Das, ist, kein, "wichtig."], wrong: 2, correction: "kein → nicht" }
+    explanation: "M04 · Negation with kein/keine and how it differs from nicht — kein negates nouns only. wichtig is an adjective, so it takes nicht: Das ist nicht wichtig."
+  - type: collocation_match
+    group: grammar
+    content:
+      left: [ein Stift, eine Frage, ein Buch, wichtig]
+      right: [nicht wichtig, kein Stift, keine Frage, kein Buch]
+      pairs: { 0: 1, 1: 2, 2: 3, 3: 0 }
+    explanation: "M04 · Negation with kein/keine (nouns) and how it differs from nicht — ein becomes kein and eine becomes keine, but an adjective takes nicht: nicht wichtig."
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: Du kommst aus Spanien.
+      key: JA/NEIN-FRAGE
+      pre: ""
+      post: " du aus Spanien?"
+      answers: [Kommst]
+      hint: 1 Wort
+      answer_shown: Kommst
+    explanation: "M04 · Yes/no questions (verb first) — A question without a question word puts the verb first and the subject second: Kommst du aus Spanien?"
+
+  # ══════════════ M05 · Was machst du gern? ══════════════
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Mein Cousin "
+      post: " Französisch und Spanisch."
+      options: [spreche, sprichst, spricht, sprechen]
+      answer: 2
+    explanation: "M05 · Stem-changing verbs (e → i/ie, a → ä) in the du and er/sie/es forms — mein Cousin is er and sprechen changes e → i: er spricht."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Ich singe "
+      post: " ich tanze. Beides ist toll."
+      prompt: "und / oder"
+      options: [und, oder, aber, nicht]
+      answer: 0
+    explanation: "M05 · The conjunctions und and oder — Beides ist toll says both things are true, so they are joined with und. oder would offer a choice."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Ich mag Musik nicht. Ich höre nicht "
+      post: " Musik."
+      answers: [gern, gerne]
+      answer_shown: gern
+    explanation: "M05 · gern and nicht gern — mögen … nicht and nicht gern say the same thing about an activity: Ich höre nicht gern Musik."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Mein Opa "
+      post: " gern zu Hause."
+      prompt: "essen (er)"
+      answers: [isst]
+      answer_shown: isst
+    explanation: "M05 · Stem-changing verbs (e → i/ie, a → ä) in the du and er/sie/es forms — essen changes e → i in the er form: er isst."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [Musik, Sport, Fußball, Fahrrad]
+      right: [spielen, hören, fahren, machen]
+      pairs: { 0: 1, 1: 3, 2: 0, 3: 2 }
+    explanation: "M05 · gern and nicht gern — Each free-time noun keeps its own verb: Musik hören · Sport machen · Fußball spielen · Fahrrad fahren. Ich höre gern Musik."
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: Ich tanze manchmal.
+      key: MANCHMAL
+      pre: "Manchmal "
+      post: "."
+      answers: [tanze ich]
+      hint: 2 Wörter
+      answer_shown: tanze ich
+    explanation: "M05 · Verb-second word order and inversion after a front adverbial — Manchmal takes position 1, so the verb stays in position 2 and ich moves behind it: Manchmal tanze ich."
+
+review_pool: []

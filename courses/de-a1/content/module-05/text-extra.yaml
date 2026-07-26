@@ -1,0 +1,27 @@
+# Module 05 · extra text — three forum posts about hobbies. It carries the target
+# words the main text uses less: singen, tanzen, reisen, das Kino, nie, oder, and
+# it shows the same constructions in three different voices.
+kind: extra
+kicker: FORUM
+title: Forum · Was ist dein Hobby?
+meta: ≈ 1 min · dotted words have a note — tap to reveal
+word_count: 69
+body:
+  - - t: "Lena: Mein Hobby ist Musik. Ich singe im "
+    - g: Chor
+    - t: " und ich tanze sehr gern. Am Freitag tanze ich immer."
+  - - t: "Jonas: Ich lese sehr viel — "
+    - g: fast
+    - t: " jeden Abend ein Buch. Ich mache nie Sport. Manchmal sehe ich einen Film im Kino."
+  - - t: "Mia: Ich reise gern. Im Sommer fahre ich nach Spanien oder nach Italien. Ich koche auch gern. Mein Lieblingsessen ist Pasta. Und du? Was machst du in der Freizeit?"
+glosses:
+  - key: Chor
+    term: Chor
+    pos_label: noun
+    definition: a choir — a group that sings together (der Chor)
+    example: Ich singe im Chor.
+  - key: fast
+    term: fast
+    pos_label: adverb
+    definition: almost, nearly
+    example: Ich lese fast jeden Abend.

@@ -1,0 +1,100 @@
+# Module 06 · theory. Two spotlights, 5 items — one item per grammar point of the
+# card (definite article in the accusative, indefinite article in the accusative,
+# personal pronouns in the accusative, the direct object with nehmen/essen/
+# trinken/haben) plus möchte + noun as a ready-made polite phrase. Scaffolding
+# rule (§5): intro and note English, every example and table German. Grammar
+# terms are named in English directly (§5.1) — there is no German grammar
+# glossary in this course.
+spotlights:
+  - title: The accusative — der becomes den
+    intro: "The direct object of a sentence takes the accusative. Only one article really changes: der becomes den. das, die and the plural die stay the same."
+    items:
+      - form: "der → den (definite article, accusative)"
+        example: "Ich nehme den Kaffee. Ich esse den Kuchen. Ich trinke das Wasser. Ich esse die Suppe."
+        note: "Only masculine der changes. das, die and plural die stay the same."
+        table:
+          headers: ["", "Nominativ (subject)", "Akkusativ (object)"]
+          rows:
+            - ["m", "der Kaffee", "den Kaffee"]
+            - ["n", "das Brot", "das Brot"]
+            - ["f", "die Suppe", "die Suppe"]
+            - ["Plural", "die Brötchen", "die Brötchen"]
+      - form: "ein → einen (indefinite article, accusative)"
+        example: "Ich nehme einen Kaffee. Ich möchte ein Brötchen. Ich bestelle eine Suppe."
+        note: "The same rule: only masculine changes. ein → einen; ein (n) and eine (f) stay."
+        table:
+          headers: ["", "Nominativ", "Akkusativ"]
+          rows:
+            - ["m", "ein Saft", "einen Saft"]
+            - ["n", "ein Eis", "ein Eis"]
+            - ["f", "eine Cola", "eine Cola"]
+      - form: "The verbs with a direct object: nehmen, essen, trinken, haben"
+        example: "Ich nehme den Salat. Tom isst das Brot. Wir trinken einen Saft. Ich habe Hunger."
+        note: "These verbs take an object in the accusative. Hunger and Durst take no article."
+        table:
+          headers: ["Verb", "Beispiel"]
+          rows:
+            - ["nehmen", "Ich nehme den Kuchen."]
+            - ["essen", "Du isst die Suppe."]
+            - ["trinken", "Er trinkt einen Tee."]
+            - ["haben", "Wir haben Hunger und Durst."]
+
+  - title: Pronouns in the accusative and ordering with möchte
+    intro: A pronoun in the object slot also takes the accusative. er becomes ihn — sie and es do not change.
+    items:
+      - form: "mich, dich, ihn, sie, es, uns, euch"
+        example: "Der Kaffee ist lecker. Ich trinke ihn oft. Die Suppe ist gut. Ich esse sie gern. Das Eis? Ich esse es immer. Der Kellner sieht uns nicht."
+        note: "Use ihn for a der-noun, sie for a die-noun, es for a das-noun."
+        table:
+          headers: ["Nominativ", "Akkusativ", "Beispiel"]
+          rows:
+            - ["ich", "mich", "Du siehst mich."]
+            - ["du", "dich", "Ich sehe dich."]
+            - ["er", "ihn", "Ich trinke ihn."]
+            - ["sie", "sie", "Ich esse sie."]
+            - ["es", "es", "Ich nehme es."]
+            - ["wir", "uns", "Er sieht uns nicht."]
+            - ["ihr", "euch", "Ich frage euch."]
+      - form: "möchte + Nomen (a polite way to order)"
+        example: "Ich möchte einen Kaffee, bitte. Möchtest du ein Eis? Wir möchten die Rechnung, bitte."
+        note: "Learn möchte as a ready-made polite phrase. The modal verbs come in module 8."
+        table:
+          headers: ["Person", "Satz"]
+          rows:
+            - ["ich", "Ich möchte einen Tee."]
+            - ["du", "Möchtest du einen Saft?"]
+            - ["wir", "Wir möchten die Rechnung."]
+
+watchouts:
+  - title: ein Kaffee or einen Kaffee?
+    bad: Ich nehme ein Kaffee.
+    good: Ich nehme einen Kaffee.
+    note: der Kaffee is the object here, so ein becomes einen. This is the most frequent mistake in a café.
+  - title: den is only for the object
+    bad: Den Kaffee ist sehr lecker.
+    good: Der Kaffee ist sehr lecker.
+    note: The subject always stays der. Use den only after a verb like nehmen or trinken.
+  - title: das and die never change
+    bad: Ich trinke den Wasser.
+    good: Ich trinke das Wasser.
+    note: Only der becomes den. Do not put den in front of a das-noun or a die-noun.
+
+cloze_cards:
+  - text: "Ich nehme {{c1::den}} Kuchen, bitte."
+    hint: der
+    rule: "der Kuchen is the direct object of nehmen → den Kuchen."
+  - text: "Möchtest du {{c1::einen}} Tee?"
+    hint: ein
+    rule: "der Tee is the object → ein becomes einen."
+  - text: "Ich habe Hunger und ich nehme {{c1::eine}} Suppe."
+    hint: ein
+    rule: "die Suppe is feminine, so eine stays eine in the accusative."
+  - text: "Der Kaffee hier ist lecker. Ich trinke {{c1::ihn}} sehr gern."
+    hint: er
+    rule: "The object is der Kaffee → er becomes ihn."
+  - text: "Die Suppe ist lecker. Ich esse {{c1::sie}} oft."
+    hint: sie
+    rule: "die Suppe is feminine — sie stays sie in the accusative."
+  - text: "Wir möchten bezahlen, aber der Kellner sieht {{c1::uns}} nicht."
+    hint: wir
+    rule: "wir becomes uns in the accusative."

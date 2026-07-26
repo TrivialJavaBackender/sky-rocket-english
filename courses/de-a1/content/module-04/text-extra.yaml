@@ -1,0 +1,30 @@
+# Module 04 · extra text — a yes/no quiz. It carries the module words the
+# interview does not use (toll, sicher, genau) and shows all three answers —
+# ja, nein and doch — next to each other. The nouns come from module 3
+# (der Stift, das Buch, die Uhr, das Handy), so nothing new has to be looked up.
+kind: extra
+kicker: QUIZ
+title: Ja oder Nein?
+meta: ≈ 1 min · dotted words have a note — tap to reveal
+word_count: 55
+body:
+  - - t: "Hier ist ein Quiz. Die Antworten sind Ja, Nein oder Doch."
+  - - t: "1. Ist ein Stift ein Buch? — Nein, das ist falsch."
+  - - t: "2. Ist eine Uhr nicht wichtig? — Doch, eine Uhr ist sehr wichtig."
+  - - t: "3. Ist Deutsch langweilig? — Nein, Deutsch ist nicht langweilig. Deutsch ist toll."
+  - - t: "4. Bist du "
+    - g: jetzt
+    - t: " sicher? — Ja, "
+    - g: ganz
+    - t: " genau! Sehr gut."
+glosses:
+  - key: jetzt
+    term: jetzt
+    pos_label: adverb
+    definition: now, at this moment
+    example: Bist du jetzt sicher?
+  - key: ganz
+    term: ganz
+    pos_label: adverb
+    definition: completely, totally — it makes the next word stronger
+    example: Das ist ganz richtig.

@@ -1,0 +1,48 @@
+# Module 05 · main text — Nina writes about her free time. German body; glosses
+# carry the German term and example, English pos_label and definition (§5). All
+# 24 target words appear here or in the extra text, and every construction of the
+# card is inside: stem changes (fährt, sieht, liest, schläft), inversion after a
+# front adverbial (Am Montag … mache ich, Am Abend lese ich, Am Sonntag schläft
+# Tom), gern / nicht gern, und and oder. Glosses sit only on words whose form in
+# the text is the dictionary form — never on a changed stem such as fährt.
+# Later grammar appears as input only: accusative (ein Buch, einen Film),
+# dative (im Sommer, ins Kino), the conjunction aber.
+kind: main
+kicker: LESETEXT
+title: Meine Freizeit
+meta: ≈ 2 min · dotted words have a note — tap to reveal
+word_count: 131
+body:
+  - - t: "Hallo! Ich heiße Nina. Ich arbeite viel, und meine Freizeit ist mir sehr "
+    - g: wichtig
+    - t: ". Ich habe drei Hobbys: Sport, Musik und Kochen."
+  - - t: "Am Montag und am Mittwoch mache ich Sport. Ich schwimme sehr gern, und am Wochenende bin ich oft "
+    - g: draußen
+    - t: ". Manchmal spiele ich Fußball. Ich fahre auch gern Fahrrad. Mein Freund Tom fährt nie Fahrrad. Er sieht Fußball immer im Fernsehen. Er macht nicht gern Sport."
+  - - t: "Am Abend lese ich oder ich höre Musik. Ich lese "
+    - g: fast
+    - t: " jeden Tag. Ich singe und ich tanze auch gern, aber nicht gut! Tom liest nicht gern. Er geht oft ins Kino."
+  - - t: "Am Sonntag schläft Tom sehr lange. Dann kochen wir "
+    - g: zusammen
+    - t: ". Wir essen und wir sprechen viel. Mein Lieblingsessen ist Pizza. Im Sommer reisen wir nach Italien. Und du? Was machst du gern?"
+glosses:
+  - key: wichtig
+    term: wichtig
+    pos_label: adjective
+    definition: important; it matters a lot to you
+    example: Meine Freizeit ist mir sehr wichtig.
+  - key: draußen
+    term: draußen
+    pos_label: adverb
+    definition: outside, outdoors. Opposite — drinnen
+    example: Am Wochenende bin ich oft draußen.
+  - key: fast
+    term: fast
+    pos_label: adverb
+    definition: almost, nearly — not quite 100 %
+    example: Ich lese fast jeden Tag.
+  - key: zusammen
+    term: zusammen
+    pos_label: adverb
+    definition: together; not alone
+    example: Am Sonntag kochen wir zusammen.

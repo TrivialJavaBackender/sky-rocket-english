@@ -1,0 +1,222 @@
+# Module 06 · 24 words: café, food, drinks, ordering and paying. Scaffolding rule
+# (§5): term/use_cases/collocations/register German, definition English with a
+# synonym or an opposite. Nouns carry their article and their plural. The three
+# accusative verbs of the card (nehmen, trinken, haben — essen came in M5) show
+# a direct object right in the use_cases, and nehmen shows its du/er forms
+# (nimmst, nimmt) because the word_formation task asks for them.
+entries:
+  - term: das Café
+    tag: Nomen
+    definition: a café; a small place where you drink coffee and eat cake — bigger and warmer than a Kiosk
+    use_cases:
+      - Das Café Sonne ist sehr gut.
+      - Im Café trinke ich immer einen Kaffee.
+    collocations: ins Café gehen · im Café sein
+    register: "Plural: die Cafés"
+
+  - term: der Kaffee
+    tag: Nomen
+    definition: coffee; the hot dark drink — the opposite choice is Tee
+    use_cases:
+      - Ich nehme einen Kaffee, bitte.
+      - Der Kaffee hier ist sehr lecker.
+    collocations: einen Kaffee trinken · einen Kaffee bestellen
+    register: "Plural: die Kaffees"
+
+  - term: der Tee
+    tag: Nomen
+    definition: tea; a hot drink with water and leaves, not with coffee
+    use_cases:
+      - Trinkst du gern Tee?
+      - Ich möchte einen Tee, bitte.
+    collocations: einen Tee trinken · einen Tee bestellen
+    register: "Plural: die Tees"
+
+  - term: das Wasser
+    tag: Nomen
+    definition: water; the drink with no sugar and no taste
+    use_cases:
+      - Ich trinke das Wasser sehr schnell.
+      - Wir nehmen ein Wasser, bitte.
+    collocations: ein Wasser bestellen · Wasser trinken
+    register: "Plural: die Wasser (selten)"
+
+  - term: der Saft
+    tag: Nomen
+    definition: juice; a cold sweet drink from fruit
+    use_cases:
+      - Der Saft ist sehr lecker.
+      - Ich nehme einen Saft.
+    collocations: einen Saft trinken · einen Saft bestellen
+    register: "Plural: die Säfte"
+
+  - term: das Brot
+    tag: Nomen
+    definition: bread; the big brown or white food you eat every day
+    use_cases:
+      - Ich esse das Brot sehr gern.
+      - Wir haben Brot und Suppe.
+    collocations: Brot essen · ein Brot nehmen
+    register: "Plural: die Brote"
+
+  - term: das Brötchen
+    tag: Nomen
+    definition: a bread roll; a small round Brot for breakfast
+    use_cases:
+      - Ich nehme ein Brötchen.
+      - Das Brötchen ist frisch.
+    collocations: ein Brötchen essen · ein Brötchen bestellen
+    register: "Plural: die Brötchen"
+
+  - term: der Kuchen
+    tag: Nomen
+    definition: cake; the sweet food in a café — not bread
+    use_cases:
+      - Ich nehme den Kuchen, bitte.
+      - Der Kuchen hier ist sehr lecker.
+    collocations: Kuchen essen · den Kuchen bestellen
+    register: "Plural: die Kuchen"
+
+  - term: die Suppe
+    tag: Nomen
+    definition: soup; warm food that you eat with a spoon
+    use_cases:
+      - Ich esse die Suppe sehr gern.
+      - Die Suppe schmeckt gut.
+    collocations: eine Suppe essen · eine Suppe bestellen
+    register: "Plural: die Suppen"
+
+  - term: der Salat
+    tag: Nomen
+    definition: salad; cold green food — light, not warm like Suppe
+    use_cases:
+      - Ich nehme einen Salat.
+      - Der Salat ist sehr frisch.
+    collocations: einen Salat essen · einen Salat bestellen
+    register: "Plural: die Salate"
+
+  - term: das Bier
+    tag: Nomen
+    definition: beer; the cold drink with alcohol — Germany is famous for it
+    use_cases:
+      - Tom trinkt gern ein Bier.
+      - Ich nehme kein Bier, ich nehme Wasser.
+    collocations: ein Bier trinken · ein Bier bestellen
+    register: "Plural: die Biere"
+
+  - term: die Cola
+    tag: Nomen
+    definition: cola, coke; a sweet dark drink, cold and with a lot of sugar
+    use_cases:
+      - Ich trinke eine Cola.
+      - Die Cola hier ist sehr gut.
+    collocations: eine Cola trinken · eine Cola bestellen
+    register: "Plural: die Colas"
+
+  - term: das Eis
+    tag: Nomen
+    definition: ice cream; the sweet cold food you eat in summer — also ice
+    use_cases:
+      - Ich esse das Eis sehr gern.
+      - Möchtest du ein Eis?
+    collocations: ein Eis essen · ein Eis bestellen
+    register: "kein Plural"
+
+  - term: die Rechnung
+    tag: Nomen
+    definition: the bill, the check; the paper that says what you pay
+    use_cases:
+      - Die Rechnung, bitte!
+      - Der Kellner bringt die Rechnung.
+    collocations: die Rechnung bezahlen · die Rechnung bringen
+    register: "Plural: die Rechnungen"
+
+  - term: die Speisekarte
+    tag: Nomen
+    definition: the menu; the card with all the food and drinks
+    use_cases:
+      - Hier ist die Speisekarte.
+      - Ich lese die Speisekarte.
+    collocations: die Speisekarte lesen · die Speisekarte bringen
+    register: "Plural: die Speisekarten · kurz: die Karte"
+
+  - term: der Kellner
+    tag: Nomen
+    definition: the waiter; the person who brings the food and the bill
+    use_cases:
+      - Der Kellner ist sehr freundlich.
+      - Ich sehe den Kellner nicht.
+    collocations: den Kellner fragen · der Kellner bringt …
+    register: "Plural: die Kellner · Frau: die Kellnerin"
+
+  - term: der Hunger
+    tag: Nomen
+    definition: hunger; you want to eat — with Durst you want to drink
+    use_cases:
+      - Ich habe Hunger.
+      - Hast du auch Hunger?
+    collocations: Hunger haben · Hunger und Durst haben
+    register: "kein Plural · Ich habe Hunger — ohne Artikel!"
+
+  - term: der Durst
+    tag: Nomen
+    definition: thirst; you want to drink — like Hunger, but for drinks
+    use_cases:
+      - Ich habe Durst.
+      - Tom hat Durst und trinkt ein Wasser.
+    collocations: Durst haben · Durst und Hunger haben
+    register: "kein Plural · Ich habe Durst — ohne Artikel!"
+
+  - term: nehmen
+    tag: Verb
+    definition: to take; in a café it means to choose and order something
+    use_cases:
+      - Ich nehme einen Kaffee.
+      - Nimmst du den Kuchen?
+    collocations: einen Kaffee nehmen · die Suppe nehmen
+    register: "du nimmst · er/sie nimmt (e → i)"
+
+  - term: trinken
+    tag: Verb
+    definition: to drink — you eat food and you drink water, tea or coffee
+    use_cases:
+      - Ich trinke gern Tee.
+      - Trinkst du einen Saft?
+    collocations: Kaffee trinken · ein Bier trinken
+    register: "regelmäßig: du trinkst · er trinkt"
+
+  - term: bestellen
+    tag: Verb
+    definition: to order; you say what you want, and later you pay (bezahlen)
+    use_cases:
+      - Ich bestelle eine Suppe.
+      - Bestellst du einen Kaffee?
+    collocations: das Essen bestellen · einen Tee bestellen
+    register: "regelmäßig: du bestellst · er bestellt"
+
+  - term: bezahlen
+    tag: Verb
+    definition: to pay; you give money for the food — the opposite of getting it free
+    use_cases:
+      - Ich bezahle die Rechnung.
+      - Bezahlst du den Kaffee?
+    collocations: die Rechnung bezahlen · das Essen bezahlen
+    register: "regelmäßig: du bezahlst · er bezahlt"
+
+  - term: schmecken
+    tag: Verb
+    definition: to taste good; Das schmeckt! means it is lecker
+    use_cases:
+      - Die Suppe schmeckt sehr gut.
+      - Schmeckt der Kuchen?
+    collocations: gut schmecken · lecker schmecken
+    register: "regelmäßig: es schmeckt · sie schmecken"
+
+  - term: lecker
+    tag: Adjektiv
+    definition: tasty, delicious; food that schmeckt — the opposite is nicht gut
+    use_cases:
+      - Der Kuchen ist sehr lecker.
+      - Die Suppe ist lecker, oder?
+    collocations: sehr lecker · lecker schmecken
+    register: "auch: Das ist lecker!"

@@ -1,0 +1,51 @@
+# Module 07 · main text — Lukas reports on his Saturday shopping trip. German
+# body; glosses carry the German term and example, English pos_label and
+# definition (§5). 23 of the 24 target words are here (only tausend waits for the
+# extra text), and every construction of the card is inside: es gibt + accusative
+# (einen Supermarkt, keinen Apfelsaft), quantity phrases (ein Kilo Äpfel, einen
+# Liter Milch, hundert Gramm Butter, eine Flasche Wasser, ein Stück Kuchen),
+# kein in the accusative, a compound noun (der Apfelsaft, das Butterbrot) and
+# numbers up to 1000 with prices. Glosses sit only on words whose form in the
+# text is the dictionary form.
+# Later grammar appears as input only: möchte, the separable einkaufen inside
+# "gehe ich einkaufen", the dative after an (an der Kasse) and the conjunction
+# aber.
+kind: main
+kicker: LESETEXT
+title: Im Supermarkt
+meta: ≈ 2 min · dotted words have a note — tap to reveal
+word_count: 120
+body:
+  - - t: "Am Samstag gehe ich einkaufen. Ich heiße Lukas. Mein "
+    - g: Einkaufszettel
+    - t: " ist heute lang. Der Supermarkt Neumann ist groß und sehr billig."
+  - - t: "Obst und Gemüse gibt es "
+    - g: links
+    - t: ". Ich nehme ein Kilo Äpfel und drei Bananen. Ein Kilo Äpfel kostet zwei Euro dreißig. Das ist nicht teuer! Dann kaufe ich einen Liter Milch, hundert Gramm Butter und zweihundert Gramm Käse. Ich nehme auch zehn Eier."
+  - - t: "Ich möchte einen Apfelsaft. Aber heute gibt es keinen Apfelsaft. Es gibt auch kein Fleisch. Kein Problem: ich nehme eine Flasche Wasser und ein Stück Kuchen."
+  - - t: "Dann bezahle ich an der Kasse: "
+    - g: alles
+    - t: " kostet neunzehn Euro. Ich habe "
+    - g: genug
+    - t: " Geld. Die Preise sind hier wirklich billig. Am Abend esse ich ein Butterbrot und ich trinke Tee."
+glosses:
+  - key: Einkaufszettel
+    term: der Einkaufszettel
+    pos_label: noun
+    definition: a shopping list — the paper with everything you want to buy
+    example: Mein Einkaufszettel ist heute lang.
+  - key: links
+    term: links
+    pos_label: adverb
+    definition: on the left. Opposite — rechts
+    example: Obst und Gemüse gibt es links.
+  - key: alles
+    term: alles
+    pos_label: pronoun
+    definition: everything, all of it. Opposite — nichts
+    example: Alles kostet neunzehn Euro.
+  - key: genug
+    term: genug
+    pos_label: adverb
+    definition: enough; not too little
+    example: Ich habe genug Geld.

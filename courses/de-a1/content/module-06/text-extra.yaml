@@ -1,0 +1,30 @@
+# Module 06 · extra text — the menu of the café from the main text. It carries the
+# three target words the dialogue does not use (der Salat, das Bier, die Cola)
+# and shows the articles of every dish, so the learner can build the accusative
+# forms in the exercises. The last block shows ein → einen and möchte + noun in a
+# real menu voice. Prices use the € sign, not the word Euro (module 8).
+kind: extra
+kicker: SPEISEKARTE
+title: Café Sonne · Speisekarte
+meta: ≈ 1 min · dotted words have a note — tap to reveal
+word_count: 55
+body:
+  - - t: "Getränke: der Kaffee 2,50 € · der Tee 2,20 € · das Wasser 1,80 € · die Cola 2,50 € · der Saft 3,00 € · das Bier 3,50 €"
+  - - t: "Essen: die Suppe 4,50 € · der Salat 5,00 € · das Brot 2,00 € · das Brötchen 1,50 €"
+  - - t: "Kuchen und Eis: der Kuchen 3,20 € · das Eis 3,80 €"
+  - - t: "Unser Brot ist "
+    - g: frisch
+    - t: ", und wir haben "
+    - g: täglich
+    - t: " Kuchen. Sie möchten einen Kaffee und ein Stück Kuchen? Der Kellner bringt die Speisekarte und später die Rechnung."
+glosses:
+  - key: frisch
+    term: frisch
+    pos_label: Adjektiv
+    definition: fresh; made today, not old
+    example: Das Brot ist frisch.
+  - key: täglich
+    term: täglich
+    pos_label: Adverb
+    definition: every day; on all seven days
+    example: Wir haben täglich Kuchen.

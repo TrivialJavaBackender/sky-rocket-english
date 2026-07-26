@@ -1,0 +1,225 @@
+# Module 03 · 24 words: 16 everyday objects + groß/klein + 6 colours. Scaffolding
+# rule (§5): term/use_cases/collocations/register German, definition English with
+# a synonym or an opposite. Every noun carries its article in `term` and its
+# plural in `register` — this module IS gender and plural, so the learner must be
+# able to read both off the entry, otherwise the word_formation tasks (singular →
+# plural) have no source. The 16 nouns cover all five plural models: -e (Tische),
+# -e + umlaut (Stühle), -en (Türen), -er (Bücher), -s (Handys), no change
+# (Fenster). Adjectives stay predicative (Der Tisch ist groß) — adjective endings
+# are far outside A1 module 3.
+entries:
+  - term: der Tisch
+    tag: Nomen
+    definition: a table; the flat piece of furniture you sit at
+    use_cases:
+      - Der Tisch ist groß und schwarz.
+      - Hier ist ein Tisch und da sind zwei Tische.
+    collocations: ein großer Tisch · am Tisch
+    register: "Plural: die Tische (-e)"
+
+  - term: der Stuhl
+    tag: Nomen
+    definition: a chair; one seat for one person, opposite of a table
+    use_cases:
+      - Der Stuhl ist rot.
+      - Ein Stuhl, zwei Stühle, drei Stühle.
+    collocations: ein roter Stuhl · Tisch und Stuhl
+    register: "Plural: die Stühle (-e + Umlaut)"
+
+  - term: das Fenster
+    tag: Nomen
+    definition: a window; the glass part of a wall you look through
+    use_cases:
+      - Das Fenster ist groß.
+      - Ein Fenster, zwei Fenster — der Plural ist gleich.
+    collocations: ein großes Fenster · am Fenster
+    register: "Plural: die Fenster (ohne Endung)"
+
+  - term: die Tür
+    tag: Nomen
+    definition: a door; you open it to go in or out
+    use_cases:
+      - Die Tür ist gelb.
+      - Das Zimmer hat zwei Türen.
+    collocations: die Tür ist offen · an der Tür
+    register: "Plural: die Türen (-en)"
+
+  - term: das Buch
+    tag: Nomen
+    definition: a book; pages with a text, you read it
+    use_cases:
+      - Das Buch ist rot und sehr alt.
+      - Hier sind drei Bücher.
+    collocations: ein gutes Buch · das Buch lesen
+    register: "Plural: die Bücher (-er + Umlaut)"
+
+  - term: der Stift
+    tag: Nomen
+    definition: a pen or pencil; you write with it
+    use_cases:
+      - Der Stift ist blau.
+      - Ich habe zwei Stifte.
+    collocations: ein blauer Stift · Stift und Papier
+    register: "Plural: die Stifte (-e)"
+
+  - term: die Tasche
+    tag: Nomen
+    definition: a bag; you carry your things in it
+    use_cases:
+      - Die Tasche ist schwarz.
+      - Hier sind zwei Taschen.
+    collocations: eine große Tasche · die Tasche ist voll
+    register: "Plural: die Taschen (-en)"
+
+  - term: das Handy
+    tag: Nomen
+    definition: a mobile phone; a small phone you have with you
+    use_cases:
+      - Das Handy ist neu.
+      - Wir haben drei Handys.
+    collocations: ein neues Handy · das Handy ist kaputt
+    register: "Plural: die Handys (-s)"
+
+  - term: die Uhr
+    tag: Nomen
+    definition: a clock or a watch; it shows the time
+    use_cases:
+      - Die Uhr ist klein und grün.
+      - Zwei Uhren sind hier, eine Uhr ist da.
+    collocations: eine kleine Uhr · die Uhr ist alt
+    register: "Plural: die Uhren (-en)"
+
+  - term: die Brille
+    tag: Nomen
+    definition: glasses; you wear them to see better (one word, one pair)
+    use_cases:
+      - Meine Brille ist blau.
+      - Hier sind zwei Brillen.
+    collocations: eine neue Brille · die Brille ist kaputt
+    register: "Plural: die Brillen (-en)"
+
+  - term: das Zimmer
+    tag: Nomen
+    definition: a room; one part of a flat or a house
+    use_cases:
+      - Mein Zimmer ist klein, aber schön.
+      - Die Wohnung hat vier Zimmer.
+    collocations: ein kleines Zimmer · mein Zimmer
+    register: "Plural: die Zimmer (ohne Endung)"
+
+  - term: der Schlüssel
+    tag: Nomen
+    definition: a key; you open a door with it
+    use_cases:
+      - Der Schlüssel ist klein.
+      - Ein Schlüssel oder drei Schlüssel — das Wort ist gleich.
+    collocations: der Schlüssel für die Tür · ein kleiner Schlüssel
+    register: "Plural: die Schlüssel (ohne Endung)"
+
+  - term: das Bild
+    tag: Nomen
+    definition: a picture; a photo or a painting on a wall
+    use_cases:
+      - Das Bild ist sehr schön.
+      - Hier sind zwei Bilder.
+    collocations: ein schönes Bild · das Bild an der Wand
+    register: "Plural: die Bilder (-er)"
+
+  - term: die Blume
+    tag: Nomen
+    definition: a flower; it grows and is often a present
+    use_cases:
+      - Die Blume ist blau.
+      - Das Zimmer hat zwei Blumen.
+    collocations: eine blaue Blume · Blumen und Bilder
+    register: "Plural: die Blumen (-n)"
+
+  - term: das Heft
+    tag: Nomen
+    definition: an exercise book; a thin book you write in
+    use_cases:
+      - Das Heft ist weiß und klein.
+      - Wir haben zwei Hefte.
+    collocations: ein weißes Heft · das Heft und der Stift
+    register: "Plural: die Hefte (-e)"
+
+  - term: der Computer
+    tag: Nomen
+    definition: a computer; the machine with a screen you work on
+    use_cases:
+      - Der Computer ist neu.
+      - Hier sind zwei Computer.
+    collocations: ein neuer Computer · am Computer
+    register: "Plural: die Computer (ohne Endung)"
+
+  - term: groß
+    tag: Adjektiv
+    definition: big, large — opposite of klein
+    use_cases:
+      - Der Tisch ist groß.
+      - Das Fenster ist groß und die Tür ist klein.
+    collocations: ein großes Zimmer · sehr groß
+    register: "Gegenteil: klein"
+
+  - term: klein
+    tag: Adjektiv
+    definition: small, little — opposite of groß
+    use_cases:
+      - Die Uhr ist klein.
+      - Mein Zimmer ist klein, aber schön.
+    collocations: ein kleines Buch · sehr klein
+    register: "Gegenteil: groß"
+
+  - term: rot
+    tag: Farbe
+    definition: red — the colour of a tomato
+    use_cases:
+      - Die Stühle sind rot.
+      - Mein Buch ist rot.
+    collocations: ein roter Stuhl · rot und gelb
+    register: "Frage: Welche Farbe ist das?"
+
+  - term: blau
+    tag: Farbe
+    definition: blue — the colour of the sky
+    use_cases:
+      - Der Stift ist blau.
+      - Meine Tasche ist blau.
+    collocations: ein blauer Stift · blau und grün
+    register: "Frage: Welche Farbe ist das?"
+
+  - term: grün
+    tag: Farbe
+    definition: green — the colour of grass
+    use_cases:
+      - Die Uhr ist grün.
+      - Zwei Bücher sind grün.
+    collocations: eine grüne Tasche · grün und gelb
+    register: "Frage: Welche Farbe ist das?"
+
+  - term: gelb
+    tag: Farbe
+    definition: yellow — the colour of a lemon
+    use_cases:
+      - Die Tür ist gelb.
+      - Mein Stuhl ist gelb.
+    collocations: eine gelbe Tür · gelb und rot
+    register: "Frage: Welche Farbe ist das?"
+
+  - term: schwarz
+    tag: Farbe
+    definition: black — opposite of weiß
+    use_cases:
+      - Der Tisch ist schwarz.
+      - Das Handy ist klein und schwarz.
+    collocations: ein schwarzes Handy · schwarz und weiß
+    register: "Gegenteil: weiß"
+
+  - term: weiß
+    tag: Farbe
+    definition: white — opposite of schwarz
+    use_cases:
+      - Das Heft ist weiß.
+      - Die Türen sind weiß.
+    collocations: ein weißes Heft · schwarz und weiß
+    register: "Gegenteil: schwarz"

@@ -39,15 +39,15 @@ blocks:
       - slug: m03
         dir: module-03
         title: Der, die, das
-        standfirst: Gender, articles and noun plurals · 24 words · name the things around you.
+        standfirst: Gender, the articles der/die/das and ein/eine, and the plural · 24 words · describe the things around you.
       - slug: m04
         dir: module-04
         title: Kein Problem!
-        standfirst: Negation with nicht and kein, yes/no questions · 24 words · say what you don't do.
+        standfirst: nicht, kein and yes/no questions · 24 words · a short note about what you do and do not do.
       - slug: m05
         dir: module-05
         title: Was machst du gern?
-        standfirst: Stem-changing verbs and word order · 24 words · say what you like to do.
+        standfirst: Stem-changing verbs, word order and gern · 24 words · say what you like doing.
 
   - slug: b
     name: Everyday life
@@ -57,11 +57,11 @@ blocks:
       - slug: m06
         dir: module-06
         title: Im Café
-        standfirst: The accusative — der becomes den · 24 words · order in a café.
+        standfirst: The accusative — der → den, ein → einen, pronouns · 24 words · order in a café.
       - slug: m07
         dir: module-07
         title: Einkaufen
-        standfirst: es gibt, quantities and kein in the accusative · 24 words · go shopping.
+        standfirst: es gibt with the accusative, quantities, keinen · 24 words · write a shopping list.
       - slug: m08
         dir: module-08
         title: Ich kann das!

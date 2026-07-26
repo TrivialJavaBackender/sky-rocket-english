@@ -1,0 +1,93 @@
+# Module 03 · theory. Two spotlights, 4 items — they realise the three grammar
+# points of the card (the definite article and gender, the indefinite article,
+# the plural), plus the one fact that makes the plural usable at all: in the
+# plural the article is always die. Scaffolding rule (§5): intro and note
+# English, every example and table German. Grammar terms are named in English
+# directly (§5.1) — there is no German metalanguage in this course.
+spotlights:
+  - title: der, die, das — gender and the articles
+    intro: Every German noun has a gender — masculine, feminine or neuter. The gender is not in the meaning, it is in the word, so you learn der, die or das together with the noun.
+    items:
+      - form: "The definite article: der, die, das"
+        example: "Der Tisch ist groß. Die Tür ist gelb. Das Buch ist rot."
+        note: One word for "the", three forms. Learn the article with every new noun.
+        table:
+          headers: ["der (m)", "die (f)", "das (n)"]
+          rows:
+            - ["der Tisch", "die Tür", "das Buch"]
+            - ["der Stuhl", "die Tasche", "das Fenster"]
+            - ["der Stift", "die Uhr", "das Handy"]
+            - ["der Schlüssel", "die Brille", "das Zimmer"]
+      - form: "The indefinite article: ein, eine"
+        example: "Das ist ein Tisch. Das ist eine Tasche. Das ist ein Fenster."
+        note: "Only two forms: eine for a die-word, ein for der- and das-words."
+        table:
+          headers: ["", "der / das", "die"]
+          rows:
+            - ["the", "der Tisch · das Buch", "die Tür"]
+            - ["a", "ein Tisch · ein Buch", "eine Tür"]
+            - ["Was ist das?", "Das ist ein Stuhl.", "Das ist eine Uhr."]
+
+  - title: One or many — the plural
+    intro: German has five plural models. There is no rule you can apply to a new word, so the plural is part of the word, like the gender. Learn it as der Tisch — die Tische.
+    items:
+      - form: "Plural models: -e, -en, -er, -s, umlaut, no ending"
+        example: "Ein Tisch, zwei Tische. Ein Buch, zwei Bücher. Ein Handy, zwei Handys."
+        note: "Some words add nothing: das Fenster — die Fenster. Some add an umlaut too."
+        table:
+          headers: ["Modell", "Singular", "Plural"]
+          rows:
+            - ["-e", "der Tisch", "die Tische"]
+            - ["-e + Umlaut", "der Stuhl", "die Stühle"]
+            - ["-en", "die Tür", "die Türen"]
+            - ["-er + Umlaut", "das Buch", "die Bücher"]
+            - ["-er", "das Bild", "die Bilder"]
+            - ["-s", "das Handy", "die Handys"]
+            - ["—", "das Fenster", "die Fenster"]
+      - form: In the plural the article is always die
+        example: "Der Stuhl ist rot. Die Stühle sind rot. Das Bild ist schön. Die Bilder sind schön."
+        note: "Gender only exists in the singular: der, die, das → die."
+        table:
+          headers: ["Singular", "Plural"]
+          rows:
+            - ["der Stuhl", "die Stühle"]
+            - ["die Tasche", "die Taschen"]
+            - ["das Bild", "die Bilder"]
+
+watchouts:
+  - title: Nouns start with a capital letter
+    bad: Der tisch ist groß und schwarz.
+    good: Der Tisch ist groß und schwarz.
+    note: Every German noun takes a capital letter — Tisch, Tür, Buch, Handy.
+  - title: The gender is in the word, not in the meaning
+    bad: Der Buch ist rot.
+    good: Das Buch ist rot.
+    note: Your first language does not tell you der, die or das. Learn the article with the noun.
+  - title: A singular noun needs an article
+    bad: Das ist Stuhl.
+    good: Das ist ein Stuhl.
+    note: German almost never leaves a singular noun bare — say ein Stuhl or der Stuhl.
+  - title: The plural is not always -s
+    bad: Hier sind zwei Buchs.
+    good: Hier sind zwei Bücher.
+    note: "-s is rare in German: Handys, Autos. Most words take -e, -en or -er."
+
+cloze_cards:
+  - text: "{{c1::Der}} Stuhl ist rot."
+    hint: der / die / das
+    rule: "Stuhl is a der-word: der Stuhl."
+  - text: "{{c1::Die}} Tür ist gelb."
+    hint: der / die / das
+    rule: "Tür is a die-word: die Tür."
+  - text: "{{c1::Das}} Buch ist sehr alt."
+    hint: der / die / das
+    rule: "Buch is a das-word: das Buch."
+  - text: "Was ist das? — Das ist {{c1::ein}} Tisch."
+    hint: ein / eine
+    rule: "der Tisch is masculine, so the indefinite article has no ending: ein Tisch."
+  - text: "Was ist das? — Das ist {{c1::eine}} Tasche."
+    hint: ein / eine
+    rule: "die Tasche is feminine, so the indefinite article takes -e: eine Tasche."
+  - text: "Ein Buch, zwei {{c1::Bücher}}."
+    hint: das Buch
+    rule: "Buch takes -er and an umlaut: die Bücher."

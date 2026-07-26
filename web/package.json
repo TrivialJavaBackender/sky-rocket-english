@@ -10,6 +10,7 @@
     "lint": "next lint",
     "migrate": "tsx scripts/migrate.ts",
     "sync": "tsx scripts/sync.ts",
+    "validate-content": "tsx scripts/validate-content.ts",
     "audio": "tsx scripts/audio.ts",
     "verify-backend": "tsx scripts/verify-backend.ts",
     "reset-progress": "tsx scripts/reset-progress.ts",

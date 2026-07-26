@@ -1,0 +1,222 @@
+# Module 05 · 24 words: hobbies, free time and frequency. Scaffolding rule (§5):
+# term/use_cases/collocations/register German, definition English with a synonym
+# or an opposite. Nouns carry their article and their plural. The six
+# stem-changing verbs of the card (essen, sprechen, lesen, sehen, fahren,
+# schlafen) show the du and er forms right in the use_cases — the word_formation
+# tasks ask for exactly those forms, so the learner has to have met them here.
+entries:
+  - term: das Hobby
+    tag: Nomen
+    definition: a hobby; something you do because you like it, not for money
+    use_cases:
+      - Mein Hobby ist Musik.
+      - Hast du ein Hobby?
+    collocations: ein Hobby haben · mein Lieblingshobby
+    register: "Plural: die Hobbys"
+
+  - term: die Freizeit
+    tag: Nomen
+    definition: free time, leisure — the time when you do not work
+    use_cases:
+      - Was machst du in der Freizeit?
+      - Meine Freizeit ist kurz.
+    collocations: in der Freizeit · viel Freizeit haben
+    register: "Nur Singular"
+
+  - term: Sport machen
+    tag: Wendung
+    definition: to do sport, to exercise. Opposite here — auf dem Sofa liegen
+    use_cases:
+      - Ich mache oft Sport.
+      - Machst du gern Sport?
+    collocations: viel Sport machen · Sport im Verein
+    register: "Ohne Artikel: Sport machen"
+
+  - term: Fußball spielen
+    tag: Wendung
+    definition: to play football (soccer)
+    use_cases:
+      - Am Samstag spiele ich Fußball.
+      - Mein Freund spielt nicht gern Fußball.
+    collocations: Fußball spielen · Tennis spielen · Karten spielen
+    register: "Ohne Artikel: Fußball spielen"
+
+  - term: schwimmen
+    tag: Verb
+    definition: to swim; to move in the water
+    use_cases:
+      - Ich schwimme sehr gern.
+      - Sie schwimmt jeden Montag.
+    collocations: im Meer schwimmen · schwimmen gehen
+    register: "Regelmäßig: ich schwimme, du schwimmst"
+
+  - term: tanzen
+    tag: Verb
+    definition: to dance; to move to music
+    use_cases:
+      - Wir tanzen gern.
+      - Tanzt du gern?
+    collocations: Salsa tanzen · gern tanzen
+    register: "Regelmäßig: ich tanze, du tanzt"
+
+  - term: singen
+    tag: Verb
+    definition: to sing; to make music with your voice
+    use_cases:
+      - Ich singe im Chor.
+      - Sie singt sehr gut.
+    collocations: im Chor singen · laut singen
+    register: "Regelmäßig: ich singe, du singst"
+
+  - term: kochen
+    tag: Verb
+    definition: to cook; to make food. Opposite — im Restaurant essen
+    use_cases:
+      - Am Sonntag koche ich.
+      - Kochst du gern?
+    collocations: gern kochen · für die Familie kochen
+    register: "Regelmäßig: ich koche, du kochst"
+
+  - term: reisen
+    tag: Verb
+    definition: to travel; to go to other places or countries
+    use_cases:
+      - Im Sommer reisen wir nach Italien.
+      - Ich reise sehr gern.
+    collocations: nach Spanien reisen · viel reisen
+    register: "Regelmäßig: ich reise, du reist"
+
+  - term: das Lieblingsessen
+    tag: Nomen
+    definition: your favourite food — the food you like best
+    use_cases:
+      - Mein Lieblingsessen ist Pizza.
+      - Was ist dein Lieblingsessen?
+    collocations: mein Lieblingsessen · das Lieblingshobby · der Lieblingssport
+    register: "Plural: die Lieblingsessen"
+
+  - term: oft
+    tag: Adverb
+    definition: often, many times. Opposite — selten
+    use_cases:
+      - Ich spiele oft Fußball.
+      - Wir gehen oft ins Kino.
+    collocations: sehr oft · nicht oft
+    register: "Häufigkeit: immer – oft – manchmal – nie"
+
+  - term: manchmal
+    tag: Adverb
+    definition: sometimes; not always, but from time to time
+    use_cases:
+      - Manchmal koche ich für Freunde.
+      - Ich tanze manchmal.
+    collocations: nur manchmal · manchmal am Wochenende
+    register: "Häufigkeit: zwischen oft und nie"
+
+  - term: immer
+    tag: Adverb
+    definition: always, every time. Opposite — nie
+    use_cases:
+      - Ich höre immer Musik.
+      - Am Montag schwimmt sie immer.
+    collocations: fast immer · immer am Abend
+    register: "Häufigkeit: 100 %"
+
+  - term: nie
+    tag: Adverb
+    definition: never, not one time. Opposite — immer
+    use_cases:
+      - Ich singe nie.
+      - Er macht nie Sport.
+    collocations: fast nie · nie mehr
+    register: "Häufigkeit: 0 %. Ohne nicht: Ich singe nie."
+
+  - term: Musik hören
+    tag: Wendung
+    definition: to listen to music
+    use_cases:
+      - Ich höre gern Musik.
+      - Hörst du oft Musik?
+    collocations: laut Musik hören · Musik im Radio hören
+    register: "Ohne Artikel: Musik hören"
+
+  - term: das Kino
+    tag: Nomen
+    definition: a cinema, a movie theatre — the place where you see films
+    use_cases:
+      - Am Freitag gehen wir ins Kino.
+      - Das Kino ist sehr groß.
+    collocations: ins Kino gehen · das Kino am Markt
+    register: "Plural: die Kinos"
+
+  - term: der Freund
+    tag: Nomen
+    definition: a friend; also a boyfriend. Female form — die Freundin
+    use_cases:
+      - Mein Freund heißt Tom.
+      - Meine Freunde spielen gern Tennis.
+    collocations: ein guter Freund · Freunde treffen
+    register: "Plural: die Freunde · feminin: die Freundin"
+
+  - term: das Fahrrad
+    tag: Nomen
+    definition: a bicycle, a bike
+    use_cases:
+      - Ich fahre oft Fahrrad.
+      - Mein Fahrrad ist rot.
+    collocations: Fahrrad fahren · das Fahrrad kaufen
+    register: "Plural: die Fahrräder. Ohne Artikel: Fahrrad fahren"
+
+  - term: essen
+    tag: Verb
+    definition: to eat; to take food. Related noun — das Essen
+    use_cases:
+      - Du isst gern Pizza.
+      - Er isst nie am Morgen.
+    collocations: gern essen · viel essen
+    register: "Stammwechsel e → i: ich esse, du isst, er isst"
+
+  - term: sprechen
+    tag: Verb
+    definition: to speak, to talk. Similar — sagen
+    use_cases:
+      - Du sprichst sehr gut Deutsch.
+      - Sie spricht laut.
+    collocations: Deutsch sprechen · leise sprechen
+    register: "Stammwechsel e → i: ich spreche, du sprichst, er spricht"
+
+  - term: lesen
+    tag: Verb
+    definition: to read. Opposite here — schreiben
+    use_cases:
+      - Du liest sehr viel.
+      - Meine Mutter liest gern Bücher.
+    collocations: ein Buch lesen · laut lesen
+    register: "Stammwechsel e → ie: ich lese, du liest, er liest"
+
+  - term: sehen
+    tag: Verb
+    definition: to see; also to watch. Similar — schauen
+    use_cases:
+      - Du siehst nicht gut.
+      - Er sieht gern Fußball.
+    collocations: gut sehen · einen Film sehen
+    register: "Stammwechsel e → ie: ich sehe, du siehst, er sieht"
+
+  - term: fahren
+    tag: Verb
+    definition: to go by vehicle, to drive or ride
+    use_cases:
+      - Du fährst zu schnell.
+      - Sie fährt jeden Tag Fahrrad.
+    collocations: Fahrrad fahren · nach Berlin fahren
+    register: "Stammwechsel a → ä: ich fahre, du fährst, er fährt"
+
+  - term: schlafen
+    tag: Verb
+    definition: to sleep. Opposite — wach sein
+    use_cases:
+      - Du schläfst zu lange.
+      - Am Sonntag schläft er sehr lange.
+    collocations: lange schlafen · gut schlafen
+    register: "Stammwechsel a → ä: ich schlafe, du schläfst, er schläft"

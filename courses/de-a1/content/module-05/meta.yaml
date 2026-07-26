@@ -1,0 +1,32 @@
+# Module 05 · Was machst du gern? Scaffolding (goals, standfirst) English, title
+# German (§5). grammar_points repeat the module card's opis (4) with no
+# additions. The word-formation extension of this module is the du/er form of a
+# stem-changing verb (fahren → er fährt) — it lives in the theory table and in
+# the word_formation tasks, not as separate vocab entries.
+slug: m05
+title: Was machst du gern?
+standfirst: Stem-changing verbs, word order and gern · 24 words · say what you like doing.
+goals:
+  - text: Use stem-changing verbs (e → i/ie, a → ä) in the du and er forms
+    achieved_by: workout
+  - text: Keep the verb in second position, also after heute, am Montag or im Sommer
+    achieved_by: workout
+  - text: Learn 24 words for hobbies, free time and how often you do things
+    achieved_by: input
+  - text: Write a short forum post about what you like doing
+    achieved_by: output
+grammar_points:
+  - Stem-changing verbs (e → i/ie, a → ä) in the du and er/sie/es forms
+  - Verb-second word order and inversion after a front adverbial
+  - gern and nicht gern
+  - The conjunctions und and oder
+texts:
+  - kind: main
+    title: Meine Freizeit
+    word_count: 131
+  - kind: extra
+    title: Forum · Was ist dein Hobby?
+    word_count: 69
+production:
+  mode: writing
+  genre: a short forum post about your free time

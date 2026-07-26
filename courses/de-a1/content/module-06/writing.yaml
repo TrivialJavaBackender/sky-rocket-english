@@ -1,0 +1,39 @@
+# Module 06 · production. Scaffolding (prompt, checklist) English; model answer
+# German (§5). This is a speaking task: the learner records a 30–60 second café
+# dialogue and plays both voices. The model stays inside what modules 1–6 can
+# produce: present tense, verb-second word order, kein, gern, und / oder, the
+# accusative of der/ein and the pronouns ihn, sie, es. möchte + noun is used only
+# as the ready-made polite phrase from the theory — no other modal verb, no
+# dative, no Perfekt.
+mode: speaking
+genre: a recorded dialogue — ordering in a café
+prompt: |
+  Record a short dialogue in a café: 30–60 seconds. You speak both voices —
+  the guest (Gast) and the waiter (Kellner). Speak slowly and clearly.
+
+  Say something about each point:
+  • the waiter greets you and brings the menu
+  • you order one drink and one thing to eat
+  • you say that something is lecker, and you use a pronoun for it (ihn, sie, es)
+  • you ask for the bill and you pay
+
+  Use einen / ein / eine correctly after nehmen, möchte, essen and trinken, and
+  use one accusative pronoun for a drink or a dish.
+model_answer: |
+  Kellner: Guten Tag! Hier ist die Speisekarte. Was möchten Sie?
+  Gast: Ich habe Hunger und Durst. Ich nehme einen Kaffee und ein Brötchen, bitte.
+  Kellner: Möchten Sie auch eine Suppe? Die Suppe ist heute sehr lecker.
+  Gast: Ja, gern! Ich esse sie sehr oft hier.
+  Kellner: Und ein Bier?
+  Gast: Nein, danke. Ich trinke kein Bier. Ich trinke nur Wasser.
+  Gast: Der Kaffee ist sehr gut. Ich trinke ihn immer hier.
+  Kellner: Möchten Sie auch den Kuchen?
+  Gast: Nein, danke. Die Rechnung, bitte!
+  Kellner: Hier, bitte.
+  Gast: Ich bezahle die Rechnung. Danke, das Café ist toll!
+checklist:
+  - You order one drink and one thing to eat
+  - einen / ein / eine are correct after nehmen, möchte, essen and trinken
+  - You use at least one accusative pronoun (ihn, sie or es)
+  - You ask for the bill and you pay
+  - The recording is 30–60 seconds long, both voices

@@ -1,0 +1,51 @@
+# Module 04 · main text — a three-question interview. German body; glosses carry
+# a German term + example and an English pos_label + definition (§5). The four
+# glossed words (einfach, alles, dann, immer) keep the exact form they have in
+# the text, so the dictionary entry and the line on the page match.
+# Constructions from later modules appear as input only: the inversion
+# "Vielleicht ist eine Antwort falsch" (module 5) and the accusative inside
+# "Ich frage dann meine Lehrerin" (module 6) are read, never produced.
+kind: main
+kicker: INTERVIEW
+title: Drei Fragen an Lena
+meta: ≈ 2 min · dotted words have a note — tap to reveal
+word_count: 111
+body:
+  - - t: "Lena ist Studentin und lernt Deutsch. Wir haben drei Fragen an Lena. Sie antwortet gern."
+  - - t: "Frage 1: Lernst du gern Deutsch?"
+  - - t: "Lena: Ja, natürlich! Ich mag die Sprache. Deutsch ist nicht "
+    - g: einfach
+    - t: ", aber es ist wirklich interessant."
+  - - t: "Frage 2: Ist die Grammatik langweilig?"
+  - - t: "Lena: Nein, das ist falsch! Die Grammatik ist nicht langweilig. Ich finde sie sehr wichtig. Ich denke, Deutsch ist nicht schlecht."
+  - - t: "Frage 3: Hast du keine Probleme?"
+  - - t: "Lena: Doch, ich habe Probleme! Ich verstehe leider nicht "
+    - g: alles
+    - t: ". Meine Antworten sind oft nicht richtig. Aber das ist kein Problem. Ich frage "
+    - g: dann
+    - t: " meine Lehrerin."
+  - - t: "Sie sagt "
+    - g: immer
+    - t: ": Vielleicht ist eine Antwort falsch, aber die Frage ist gut."
+  - - t: "Danke, Lena!"
+glosses:
+  - key: einfach
+    term: einfach
+    pos_label: adjective
+    definition: easy, simple — the opposite of hard
+    example: Deutsch ist nicht einfach.
+  - key: alles
+    term: alles
+    pos_label: pronoun
+    definition: everything, all of it
+    example: Ich verstehe leider nicht alles.
+  - key: dann
+    term: dann
+    pos_label: adverb
+    definition: then, after that
+    example: Ich frage dann meine Lehrerin.
+  - key: immer
+    term: immer
+    pos_label: adverb
+    definition: always, every time — the opposite of nie
+    example: "Sie sagt immer: Das ist kein Problem."

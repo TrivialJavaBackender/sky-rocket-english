@@ -1,0 +1,33 @@
+# Module 04 · Kein Problem!. Scaffolding (goals, standfirst) English, title German
+# (§5). grammar_points repeat the module card's opis (3), no additions. The word
+# formation of this module (ein → kein in the nominative) is not a fourth point:
+# it is the second grammar point seen from the form side, so it lives in the
+# theory table and in the word_formation tasks.
+slug: m04
+title: Kein Problem!
+standfirst: nicht, kein and yes/no questions · 24 words · a short note about what you do and do not do.
+goals:
+  - text: Say no with nicht — with a verb, an adjective or a time word
+    achieved_by: workout
+  - text: Say no to a noun with kein and keine, and know when nicht is wrong
+    achieved_by: workout
+  - text: Ask a yes/no question and answer it with ja, nein or doch
+    achieved_by: prime
+  - text: Learn 24 words for everyday opinions — good, bad, right, wrong, maybe
+    achieved_by: input
+  - text: Write a short note about what you do and what you do not do
+    achieved_by: output
+grammar_points:
+  - Negation with nicht (verbs, adjectives, adverbials)
+  - Negation with kein/keine (nouns) and how it differs from nicht
+  - Yes/no questions (verb first) and answering with doch
+texts:
+  - kind: main
+    title: Drei Fragen an Lena
+    word_count: 111
+  - kind: extra
+    title: Ja oder Nein?
+    word_count: 55
+production:
+  mode: writing
+  genre: a short note about what you do and do not do

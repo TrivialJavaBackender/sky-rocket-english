@@ -1,0 +1,32 @@
+# Module 07 · production. Scaffolding (prompt, checklist) English; model answer
+# German (§5). The model stays inside what modules 1–7 can produce: quantity
+# phrases, es gibt / kein in the accusative, a compound noun, prices with Euro,
+# the present tense and a yes/no question. The polite request uses only the fixed
+# frames the module hands over whole (Ich möchte …, …, bitte) — no imperative, no
+# modal verb, no dative.
+mode: writing
+genre: a shopping list and a short polite request
+word_target: [30, 40]
+prompt: |
+  You share a flat with Tom. Write him a note: your shopping list for Saturday
+  and one short request. 30–40 words.
+
+  Say something about each point:
+  • five things you need, each with a quantity (ein Kilo …, ein Liter …, 100 Gramm …)
+  • one thing you do not want (Kein …!)
+  • one short request to Tom, with the price
+
+  Use es gibt or kein in the accusative at least once, and write one price in
+  words (zwei Euro dreißig).
+model_answer: |
+  Einkaufszettel: ein Kilo Äpfel, zwei Liter Milch, hundert Gramm Butter,
+  sechs Eier und ein Stück Käse. Kein Fleisch!
+
+  Hallo Tom, ich habe keinen Apfelsaft. Kaufst du eine Flasche Apfelsaft?
+  Sie kostet zwei Euro. Danke! Anna
+checklist:
+  - Your list has five things, each with a quantity and no von
+  - You use keinen, keine or kein once in the accusative
+  - One price is written in words, with Euro and no -s
+  - The request is a question or the frame Ich möchte …, bitte
+  - The note is 30–40 words long

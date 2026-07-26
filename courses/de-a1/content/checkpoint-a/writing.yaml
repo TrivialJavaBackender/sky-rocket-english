@@ -1,0 +1,75 @@
+# Checkpoint A production task + debrief. The scenario is chosen so that all five
+# modules of Block A are needed to answer it: who you are and where you are from
+# (M01), your family (M02), objects with articles and plurals (M03), what you do
+# not have or do not do (M04), and what you like doing, with the verb second
+# after a front adverbial (M05). Genre and length follow the Goethe A1 format:
+# a short message of 30–40 words.
+mode: writing
+genre: kurze Nachricht
+word_target: [30, 40]
+prompt: |
+  Written under test conditions: 20 minutes, 30–40 words, no dictionary and no
+  second draft. Write it straight after the 30 test items, in the same session.
+
+  ## The task
+
+  You have a new friend in Germany. Her name is Anna. She wrote to you: "Hallo!
+  Wer bist du? Woher kommst du? Was machst du gern?"
+
+  Write a short message back to Anna. Say who you are, where you are from and
+  what language you speak. Say something about your family. Name one or two
+  things you have — and one thing you do not have. Say what you like doing and
+  what you do not like doing.
+
+  Begin with a greeting (Hallo Anna,) and end with Tschüss and your name. Keep
+  the sentences short. Do not try to write anything you have not learnt yet.
+
+  ## Deliberately deploy
+
+  This is a checkpoint, so the grammar of the whole block should be visible:
+  · M01 — sein and a W-question answer: who you are, your country, your
+    language (Ich bin …, Ich komme aus …, Ich spreche …);
+  · M02 — haben, a regular verb and possessives for your family (mein Vater,
+    meine Mutter, Ich habe zwei Brüder);
+  · M03 — at least one noun with its article and one plural, with a colour
+    (Meine Bücher sind rot);
+  · M04 — one negative sentence: kein/keine in front of a noun, or nicht in
+    front of an adjective or a verb (Ich habe kein Handy);
+  · M05 — gern, and one sentence that starts with oft, manchmal, immer or nie,
+    so the verb stays second and the subject follows it (Oft höre ich gern
+    Musik).
+
+  ## Afterwards · debrief
+
+  Mark the 30 items first and work out the percentage. The pass mark is 75%,
+  which is 23 out of 30. Then, before you read the model answer:
+
+  1. Sort every miss by the module named at the start of its explanation —
+    M01 … M05. Three misses spread over three modules is noise; three in one
+    module is a gap.
+  2. For each gap, reread that module's watchouts and redo only the exercises
+    you got wrong, not the whole set.
+  3. Write each miss into the error map as error → rule → card, and check
+    whether it repeats a mistake you already made in that module.
+  4. Only then compare your message with the model answer. Look for the
+    structures you avoided, not only for the mistakes you made.
+
+  Below 75%: take a revision week before Module 6 — cards on the weak words
+  plus the failed items — and sit the checkpoint again.
+model_answer: |
+  Hallo Anna,
+
+  ich bin Tom und komme aus Österreich. Ich spreche Deutsch. Meine Familie ist
+  klein: mein Vater, meine Mutter und zwei Brüder. Meine Bücher sind rot. Ich
+  habe kein Handy. Oft höre ich gern Musik.
+
+  Tschüss, Tom
+checklist:
+  - 30–40 words, written in 20 minutes without a dictionary or a second draft
+  - Opens with a greeting to Anna and closes with Tschüss and your name
+  - Answers all three of Anna's questions — who, where from, what you like doing
+  - Says who you are and where you are from with sein and kommen aus
+  - Names your family with mein / meine and one form of haben
+  - Uses one noun with its article and one plural noun, and one colour
+  - Has one negative sentence with kein / keine or nicht
+  - Has one sentence starting with oft, manchmal, immer or nie, with the verb second

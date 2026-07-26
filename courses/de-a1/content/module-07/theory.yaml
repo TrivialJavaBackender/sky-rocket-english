@@ -1,0 +1,103 @@
+# Module 07 · theory. Two spotlights, 5 items — three items for the three grammar
+# points of the card (es gibt + accusative, quantity phrases, kein in the
+# accusative) plus the word-formation extension (compound noun, gender from the
+# second stem) and the numbers up to 1000 with prices. Scaffolding rule (§5):
+# intro and note English, every example and table German. Grammar terms are named
+# in English directly (§5.1) — there is no German grammar glossary in this course.
+spotlights:
+  - title: es gibt, quantities and kein in the accusative
+    intro: German says what is in a shop with es gibt. The thing that is there is a direct object, so it stands in the accusative — the case you met in module 6.
+    items:
+      - form: es gibt + accusative
+        example: "Es gibt einen Supermarkt. Es gibt eine Banane. Es gibt ein Ei. Es gibt Äpfel. Gibt es hier Milch?"
+        note: "es gibt is fixed — es never changes. Masculine ein → einen; eine and ein stay."
+        table:
+          headers: ["", "Nominativ", "es gibt + Akkusativ"]
+          rows:
+            - ["m", "der / ein Apfel", "Es gibt einen Apfel."]
+            - ["f", "die / eine Banane", "Es gibt eine Banane."]
+            - ["n", "das / ein Ei", "Es gibt ein Ei."]
+            - ["Plural", "die Äpfel", "Es gibt Äpfel."]
+      - form: "Menge + Nomen (ein Kilo Äpfel)"
+        example: "Ich kaufe ein Kilo Äpfel. Ich nehme einen Liter Milch. Eine Flasche Wasser, bitte. Ich möchte ein Stück Kuchen und hundert Gramm Käse."
+        note: The quantity comes first, then the noun. Nothing stands between them — no von, no article.
+        table:
+          headers: ["Menge", "Beispiel"]
+          rows:
+            - ["ein Kilo", "ein Kilo Äpfel"]
+            - ["ein Liter", "ein Liter Milch"]
+            - ["eine Flasche", "eine Flasche Wasser"]
+            - ["ein Stück", "ein Stück Kuchen"]
+            - ["100 Gramm", "hundert Gramm Butter"]
+      - form: "kein im Akkusativ (keinen / keine / kein)"
+        example: "Es gibt keinen Käse. Es gibt keine Milch. Es gibt kein Fleisch. Ich habe kein Geld. Ich esse keine Eier."
+        note: "kein takes the same endings as ein. Only the masculine changes: kein → keinen."
+        table:
+          headers: ["", "Nominativ", "Akkusativ"]
+          rows:
+            - ["m (der Käse)", "kein Käse", "keinen Käse"]
+            - ["f (die Milch)", "keine Milch", "keine Milch"]
+            - ["n (das Ei)", "kein Ei", "kein Ei"]
+            - ["Plural (die Eier)", "keine Eier", "keine Eier"]
+
+  - title: Compound nouns and the numbers up to 1000
+    intro: German builds long words out of short ones, and the last part decides everything. Numbers and prices are written as one word too.
+    items:
+      - form: "der Apfel + der Saft → der Apfelsaft"
+        example: "Der Apfelsaft kostet zwei Euro. Die Gemüsesuppe ist lecker. Das Butterbrot ist billig. Ich nehme ein Käsebrötchen."
+        note: Two nouns become one word. The second noun gives the gender and the plural.
+        table:
+          headers: ["Wort 1", "Wort 2", "Neues Wort"]
+          rows:
+            - ["der Apfel", "der Saft", "der Apfelsaft"]
+            - ["der Apfel", "der Kuchen", "der Apfelkuchen"]
+            - ["das Gemüse", "die Suppe", "die Gemüsesuppe"]
+            - ["die Butter", "das Brot", "das Butterbrot"]
+            - ["der Käse", "das Brötchen", "das Käsebrötchen"]
+      - form: "Zahlen bis 1000 und Preise"
+        example: "Das kostet zwanzig Euro. Ein Kilo Äpfel kostet zwei Euro dreißig. Der Supermarkt hat tausend Produkte."
+        note: "Say the number, then Euro. Euro has no -s in the plural: zwei Euro."
+        table:
+          headers: ["Zahl", "Wort"]
+          rows:
+            - ["20", "zwanzig"]
+            - ["30", "dreißig"]
+            - ["100", "hundert"]
+            - ["200", "zweihundert"]
+            - ["250", "zweihundertfünfzig"]
+            - ["1000", "tausend"]
+            - ["2,30 €", "zwei Euro dreißig"]
+
+watchouts:
+  - title: es gibt takes the accusative
+    bad: Es gibt ein Supermarkt hier.
+    good: Es gibt hier einen Supermarkt.
+    note: "es gibt always has a direct object. Masculine ein → einen: einen Supermarkt."
+  - title: keinen for masculine nouns
+    bad: Heute gibt es kein Käse.
+    good: Heute gibt es keinen Käse.
+    note: "der Käse is masculine, so kein → keinen in the accusative."
+  - title: ein Kilo Äpfel — no von
+    bad: Ich kaufe ein Kilo von Äpfeln.
+    good: Ich kaufe ein Kilo Äpfel.
+    note: The noun stands straight after the quantity. German needs no word for "of" here.
+
+cloze_cards:
+  - text: "Es {{c1::gibt}} hier einen Supermarkt."
+    hint: geben
+    rule: "es gibt says what is there. es and gibt never change."
+  - text: "Gibt es hier einen Supermarkt? — Ja, es gibt {{c1::einen}} Supermarkt in der Stadt."
+    hint: ein
+    rule: "der Supermarkt is masculine, so ein → einen after es gibt."
+  - text: "Nein, heute gibt es {{c1::keinen}} Käse."
+    hint: kein
+    rule: "der Käse is masculine: kein → keinen in the accusative."
+  - text: "Ich kaufe ein {{c1::Kilo}} Äpfel."
+    hint: das Kilo
+    rule: "1000 Gramm = ein Kilo. The noun follows the quantity directly, with no von."
+  - text: "Der Apfelsaft {{c1::kostet}} zwei Euro."
+    hint: kosten
+    rule: "kosten = to have a price. One bottle → es kostet."
+  - text: "Ich möchte {{c1::eine}} Flasche Milch, bitte."
+    hint: ein
+    rule: "die Flasche is feminine, so eine stays eine in the accusative."

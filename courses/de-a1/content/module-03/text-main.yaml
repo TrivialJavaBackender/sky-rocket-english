@@ -1,0 +1,48 @@
+# Module 03 · main text — Nina shows her room and names the things in it. German
+# body; glosses carry German term + example, English pos_label + definition (§5).
+# All 24 target words appear here, and so do the three target structures: der/die/
+# das, ein/eine and four plurals (Stühle, Bilder, Bücher, Schlüssel). Words that
+# belong to later modules (the possessive plural meine Schlüssel is module 2, the
+# question Wo ist …? is module 1) are already available; nothing here asks for a
+# structure the learner cannot produce.
+kind: main
+kicker: LESETEXT
+title: Was ist das? Mein Zimmer
+meta: ≈ 2 min · dotted words have a note — tap to reveal
+word_count: 120
+body:
+  - - t: "Hallo! Ich bin Nina. Das ist mein Zimmer. Es ist klein, aber sehr "
+    - g: schön
+    - t: "."
+  - - t: "Hier ist der Tisch. Der Tisch ist groß und schwarz. Da sind zwei Stühle. Die Stühle sind rot."
+  - - t: "Das Fenster ist groß und die Tür ist gelb. Hier sind "
+    - g: auch
+    - t: " zwei Bilder. Die Bilder sind sehr schön."
+  - - t: "Was ist das? Das ist eine Blume. Die Blume ist blau. Und das? Das ist eine Uhr. Die Uhr ist klein und grün."
+  - - t: "Hier sind drei Bücher, ein Stift und meine Brille. Die Bücher sind "
+    - g: alt
+    - t: ". Mein Heft ist weiß und mein Computer ist "
+    - g: neu
+    - t: "."
+  - - t: "Und wo ist mein Handy? Wo ist meine Tasche? Wo sind meine Schlüssel? Ah, hier! Mein Zimmer ist klein, aber es ist mein Zimmer."
+glosses:
+  - key: schön
+    term: schön
+    pos_label: adjective
+    definition: nice, beautiful — opposite of hässlich
+    example: Mein Zimmer ist sehr schön.
+  - key: auch
+    term: auch
+    pos_label: adverb
+    definition: also, too — one more thing of the same kind
+    example: Hier sind auch zwei Bilder.
+  - key: alt
+    term: alt
+    pos_label: adjective
+    definition: old — opposite of neu
+    example: Die Bücher sind alt.
+  - key: neu
+    term: neu
+    pos_label: adjective
+    definition: new — opposite of alt
+    example: Mein Computer ist neu.

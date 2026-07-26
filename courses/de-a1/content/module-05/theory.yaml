@@ -1,0 +1,91 @@
+# Module 05 · theory. Two spotlights, 4 items — one item per grammar point of
+# the card (stem-changing verbs, verb-second and inversion, gern / nicht gern,
+# und and oder). Scaffolding rule (§5): intro and note English, every example and
+# table German. Grammar terms are named in English directly (§5.1) — there is no
+# German grammar glossary in this course.
+spotlights:
+  - title: Stem-changing verbs
+    intro: Some very common verbs change their stem vowel — but only in two forms, du and er/sie/es. Everything else stays regular.
+    items:
+      - form: "e → i / ie and a → ä (only du and er/sie/es)"
+        example: "Ich esse gern Pizza. Du isst gern Pizza. Du sprichst sehr gut Deutsch. Sie liest ein Buch. Du fährst zu schnell. Am Sonntag schläft er sehr lange."
+        note: "ich, wir, ihr and sie/Sie keep the normal stem: ich esse, wir essen, ihr esst."
+        table:
+          headers: ["Infinitiv", "du", "er / sie / es"]
+          rows:
+            - ["essen (e → i)", "isst", "isst"]
+            - ["sprechen (e → i)", "sprichst", "spricht"]
+            - ["lesen (e → ie)", "liest", "liest"]
+            - ["sehen (e → ie)", "siehst", "sieht"]
+            - ["fahren (a → ä)", "fährst", "fährt"]
+            - ["schlafen (a → ä)", "schläfst", "schläft"]
+
+  - title: Word order, gern and und / oder
+    intro: The verb is always the second element. If you start with a time word, the subject moves behind the verb — that is called inversion.
+    items:
+      - form: "Position 1 – Verb – Rest (inversion after a front adverbial)"
+        example: "Ich spiele heute Fußball. Heute spiele ich Fußball. Am Sonntag koche ich."
+        note: "Move a time word to the front and the subject goes after the verb. The verb never moves."
+        table:
+          headers: ["Position 1", "Position 2 (Verb)", "Rest"]
+          rows:
+            - ["Ich", "spiele", "heute Fußball."]
+            - ["Heute", "spiele", "ich Fußball."]
+            - ["Am Sonntag", "koche", "ich."]
+            - ["Im Sommer", "reisen", "wir nach Italien."]
+            - ["Manchmal", "liest", "er ein Buch."]
+      - form: "gern and nicht gern"
+        example: "Ich schwimme gern. Ich tanze nicht gern. Kochst du gern?"
+        note: "gern comes after the verb. For the opposite say nicht gern — never gern nicht."
+        table:
+          headers: ["", "Satz"]
+          rows:
+            - ["+", "Ich koche gern."]
+            - ["−", "Ich koche nicht gern."]
+            - ["Frage", "Kochst du gern?"]
+      - form: "und and oder"
+        example: "Ich lese und ich höre Musik. Wir gehen ins Kino oder wir bleiben zu Hause."
+        note: "und adds, oder gives a choice. The word order after them does not change."
+        table:
+          headers: ["Wort", "Beispiel"]
+          rows:
+            - ["und", "Ich singe und ich tanze."]
+            - ["oder", "Wir spielen Fußball oder wir schwimmen."]
+
+watchouts:
+  - title: The verb stays second after a time word
+    bad: Heute ich spiele Fußball.
+    good: Heute spiele ich Fußball.
+    note: Position 1 is the time word, position 2 is the verb — so the subject comes third.
+  - title: du and er change the stem
+    bad: Du fahrst sehr schnell.
+    good: Du fährst sehr schnell.
+    note: "fahren takes ä in du and er: du fährst, er fährt."
+  - title: gern comes after the verb
+    bad: Ich gern spiele Fußball.
+    good: Ich spiele gern Fußball.
+    note: The verb is second, so gern can only stand behind it.
+  - title: nicht gern, not gern nicht
+    bad: Ich tanze gern nicht.
+    good: Ich tanze nicht gern.
+    note: "nicht stands in front of gern: nicht gern = you do not like it."
+
+cloze_cards:
+  - text: "Du {{c1::fährst}} sehr gern Fahrrad."
+    hint: fahren
+    rule: "du + fahren = fährst (a → ä)."
+  - text: "Meine Schwester {{c1::liest}} jeden Abend."
+    hint: lesen
+    rule: "er/sie + lesen = liest (e → ie)."
+  - text: "Heute {{c1::spiele}} ich Fußball."
+    hint: spielen
+    rule: "The time word is position 1, so the verb is position 2 and ich comes after it."
+  - text: "Er {{c1::spricht}} Deutsch und Englisch."
+    hint: sprechen
+    rule: "er + sprechen = spricht (e → i)."
+  - text: "Ich koche sehr {{c1::gern}}."
+    hint: gern
+    rule: "gern comes after the verb and says that you like doing it."
+  - text: "Was {{c1::isst}} du gern?"
+    hint: essen
+    rule: "du + essen = isst (e → i)."

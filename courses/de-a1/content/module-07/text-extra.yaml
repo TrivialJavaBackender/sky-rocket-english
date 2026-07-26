@@ -1,0 +1,35 @@
+# Module 07 · extra text — a real shopping list and a supermarket leaflet with
+# prices. It carries the one target word the main text does not use (tausend) and
+# shows the same constructions in a second genre: quantity phrases in a list, es
+# gibt + accusative and kein in the leaflet, numbers up to 1000 as prices.
+kind: extra
+kicker: EINKAUFSZETTEL & PROSPEKT
+title: Einkaufszettel und Prospekt
+meta: ≈ 1 min · dotted words have a note — tap to reveal
+word_count: 63
+body:
+  - - t: "Einkaufszettel "
+    - g: für
+    - t: " Samstag: ein Kilo Äpfel · "
+    - g: sechs
+    - t: " Eier · zweihundert Gramm Käse · ein Liter Milch · eine Flasche Apfelsaft. Kein Fleisch! Anna isst kein Fleisch."
+  - - t: "SUPERMARKT NEUMANN — heute sehr billig! Ein Kilo Bananen: "
+    - g: nur
+    - t: " ein Euro zwanzig. Bei uns gibt es tausend Produkte, und die Preise sind gut."
+  - - t: "Achtung: Heute gibt es keinen Apfelkuchen und keine Gemüsesuppe. Aber es gibt einen Apfelsaft für zwei Euro."
+glosses:
+  - key: für
+    term: für
+    pos_label: preposition
+    definition: for
+    example: Einkaufszettel für Samstag.
+  - key: sechs
+    term: sechs
+    pos_label: number
+    definition: six, 6
+    example: sechs Eier
+  - key: nur
+    term: nur
+    pos_label: adverb
+    definition: only, no more than that
+    example: Ein Kilo Bananen kostet nur ein Euro zwanzig.

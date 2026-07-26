@@ -1,0 +1,506 @@
+# Module 04 · 46 core tasks + 16 review. Distribution (PLAN.md §6):
+# 8 mc_cloze · 8 open_cloze · 6 word_formation · 2 key_word_transformation ·
+# 10 grammar_drill · 4 error_correction · 4 collocation_match · 4 reading_comprehension.
+#
+# Spiral revision of modules 1–3 (marked "SPIRAL"): grammar_drill 7 (sein, M1),
+# grammar_drill 8 (possessive, M2), word_formation 6 (plural, M3).
+#
+# Every required answer is nominative: kein / keine only, never keinen — the
+# accusative is module 7. mögen is used with the ready-made forms the vocab
+# hands over (ich mag, du magst), not built from the module-2 rule. Frames and
+# answers German, explanations English (§5).
+core:
+  # ───────────────────────── Multiple Choice ─────────────────────────
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Das ist "
+      post: " Buch."
+      options: [keine, kein, nicht, nichts]
+      answer: 1
+    explanation: "das Buch is a das-word, so ein → kein: kein Buch."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Die Antwort ist "
+      post: " richtig."
+      options: [kein, keine, nichts, nicht]
+      answer: 3
+    explanation: "richtig is an adjective, and adjectives are negated with nicht."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: ""
+      post: " du Musik?"
+      options: [Mögen, Mag, Magst, Mögt]
+      answer: 2
+    explanation: "A yes/no question starts with the verb: du magst → Magst du …?"
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Ist das nicht gut? — "
+      post: ", das ist sehr gut."
+      options: [Doch, Ja, Nein, Vielleicht]
+      answer: 0
+    explanation: "The question is negative and the answer is positive, so it is Doch."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Lena lernt heute "
+      post: "."
+      options: [kein, nicht, keine, nichts]
+      answer: 1
+    explanation: "With a verb and a time word, nicht goes at the end of the sentence."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Das sind "
+      post: " Stühle."
+      options: [kein, nicht, nichts, keine]
+      answer: 3
+    explanation: "Plural nouns take keine — keine Stühle."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Ich habe "
+      post: " Idee."
+      options: [keine, kein, nicht, nichts]
+      answer: 0
+    explanation: "die Idee is a die-word, so kein takes -e: keine Idee."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: ""
+      post: " ihr eine Frage?"
+      options: [Haben, Hast, Habt, Hat]
+      answer: 2
+    explanation: "ihr + haben = habt, and in a yes/no question the verb comes first: Habt ihr …?"
+
+  # ───────────────────────── Open Cloze ─────────────────────────
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Ist das ein Buch? — Nein, das ist "
+      post: " Buch. Das ist ein Stift."
+      answers: [kein]
+      answer_shown: kein
+    explanation: "Nein plus das Buch (a das-word) gives kein Buch."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Hast du eine Idee? — Nein, ich habe "
+      post: " Idee."
+      answers: [keine]
+      answer_shown: keine
+    explanation: "die Idee → keine Idee. A noun is never negated with nicht."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Ist die Antwort richtig? — Nein, sie ist "
+      post: " richtig, sie ist falsch."
+      answers: [nicht]
+      answer_shown: nicht
+    explanation: "An adjective takes nicht, and nicht stands right in front of it."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Verstehst du das nicht? — "
+      post: ", ich verstehe das gut."
+      answers: [Doch]
+      answer_shown: Doch
+    explanation: "A positive answer to a negative question is Doch, never Ja."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: ""
+      post: " du Deutsch? — Ja, ich lerne Deutsch gern."
+      hint: lernen
+      answers: [Lernst]
+      answer_shown: Lernst
+    explanation: "The answer says ich lerne, so the question is Lernst du …? — verb first."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: ""
+      post: " du das nicht? — Doch, ich verstehe das."
+      hint: verstehen
+      answers: [Verstehst]
+      answer_shown: Verstehst
+    explanation: "The answer says ich verstehe, so the question is Verstehst du …?"
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Ich arbeite heute "
+      post: ". Ich habe keine Zeit."
+      answers: [nicht]
+      answer_shown: nicht
+    explanation: "The verb is negated, so nicht goes to the end — after heute."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Ist das eine Frage? — Nein, das ist "
+      post: " Frage. Das ist eine Antwort."
+      answers: [keine]
+      answer_shown: keine
+    explanation: "die Frage → keine Frage. eine becomes keine."
+
+  # ───────────────────────── Word Formation ─────────────────────────
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Das ist "
+      post: " Auto."
+      prompt: "ein (negativ)"
+      answers: [kein]
+      answer_shown: kein
+    explanation: "das Auto: ein Auto → kein Auto."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Das ist "
+      post: " Idee."
+      prompt: "eine (negativ)"
+      answers: [keine]
+      answer_shown: keine
+    explanation: "die Idee: eine Idee → keine Idee."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Das ist "
+      post: " Frage."
+      prompt: "eine (negativ)"
+      answers: [keine]
+      answer_shown: keine
+    explanation: "die Frage: eine Frage → keine Frage."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Das ist "
+      post: " Handy."
+      prompt: "ein (negativ)"
+      answers: [kein]
+      answer_shown: kein
+    explanation: "das Handy: ein Handy → kein Handy."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Hier ist ein Stuhl. Dort ist "
+      post: " Stuhl."
+      prompt: "ein (negativ)"
+      answers: [kein]
+      answer_shown: kein
+    explanation: "der Stuhl: ein Stuhl → kein Stuhl. der- and das-words both take kein."
+  # SPIRAL M3 — plural
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Das sind zwei "
+      post: "."
+      prompt: "das Buch (Plural)"
+      answers: [Bücher]
+      answer_shown: Bücher
+    explanation: "das Buch → die Bücher (-er plus umlaut)."
+
+  # ───────────────────────── Key Word Transformation ─────────────────────────
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: Du kommst aus Berlin.
+      key: FRAGE
+      pre: ""
+      post: " du aus Berlin?"
+      answers: [Kommst]
+      hint: 1 Wort
+      answer_shown: Kommst
+    explanation: "A statement becomes a yes/no question when the verb moves to position 1: Kommst du aus Berlin?"
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: Das ist eine Antwort.
+      key: KEINE
+      pre: "Das ist "
+      post: " Antwort."
+      answers: [keine]
+      hint: 1 Wort
+      answer_shown: keine
+    explanation: "To negate the noun, eine becomes keine: Das ist keine Antwort."
+
+  # ───────────────────────── Grammar Drill ─────────────────────────
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Die Antwort ist "
+      post: " falsch."
+      prompt: Negation
+      options: [kein, keine, nicht, nichts]
+      answer: 2
+    explanation: "falsch is an adjective → nicht falsch."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Das ist "
+      post: " Frage."
+      prompt: "kein / keine"
+      options: [keine, kein, nicht, nichts]
+      answer: 0
+    explanation: "die Frage is a die-word → keine Frage."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Das ist "
+      post: " Buch."
+      prompt: "kein / keine"
+      options: [keine, nicht, nichts, kein]
+      answer: 3
+    explanation: "das Buch is a das-word → kein Buch."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: ""
+      post: " du Deutsch?"
+      prompt: Ja/Nein-Frage
+      options: [Lernen, Lernst, Lerne, Lernt]
+      answer: 1
+    explanation: "du + lernen = lernst, and the verb comes first: Lernst du Deutsch?"
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Ist das nicht interessant? — "
+      post: ", das ist sehr interessant."
+      prompt: Antwort
+      options: [Ja, Nein, Vielleicht, Doch]
+      answer: 3
+    explanation: "Negative question plus positive answer = Doch."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Das ist "
+      post: " richtig, das ist falsch."
+      prompt: Negation
+      options: [kein, keine, nicht, nichts]
+      answer: 2
+    explanation: "richtig is an adjective → nicht richtig."
+  # SPIRAL M1 — sein
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: ""
+      post: " du sicher?"
+      prompt: Ja/Nein-Frage
+      options: [Bist, Sein, Ist, Seid]
+      answer: 0
+    explanation: "du + sein = bist, and in a yes/no question it comes first: Bist du sicher?"
+  # SPIRAL M2 — possessive
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: ""
+      post: " Antwort ist richtig."
+      prompt: Possessiv
+      options: [Mein, Meine, Meinen, Meinem]
+      answer: 1
+    explanation: "die Antwort is a die-word, so the possessive takes -e: Meine Antwort."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Das sind "
+      post: " Stifte."
+      prompt: "kein / keine"
+      options: [kein, nicht, keine, nichts]
+      answer: 2
+    explanation: "Plural → keine Stifte."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Ich verstehe die Frage "
+      post: "."
+      prompt: Negation
+      options: [nicht, kein, keine, nichts]
+      answer: 0
+    explanation: "The verb is negated, so nicht goes at the end."
+
+  # ───────────────────────── Error Correction ─────────────────────────
+  - type: error_correction
+    group: grammar
+    content: { words: [Ich, habe, nicht, "Zeit."], wrong: 2, correction: "nicht → keine" }
+    explanation: "die Zeit is a noun, and nouns take keine, not nicht: Ich habe keine Zeit."
+  - type: error_correction
+    group: grammar
+    content: { words: [Das, ist, keine, "Buch."], wrong: 2, correction: "keine → kein" }
+    explanation: "das Buch is a das-word, so there is no -e: kein Buch."
+  - type: error_correction
+    group: grammar
+    content: { words: ["Verstehst", du, das, "nicht?", "Ja,", ich, verstehe, "das."], wrong: 4, correction: "Ja → Doch" }
+    explanation: "The question is negative, so the positive answer is Doch."
+  - type: error_correction
+    group: grammar
+    content: { words: [Ich, nicht, verstehe, die, "Frage."], wrong: 1, correction: "nicht verstehe → verstehe … nicht" }
+    explanation: "The verb stays in second position and nicht moves to the end: Ich verstehe die Frage nicht."
+
+  # ───────────────────────── Collocation Match ─────────────────────────
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [gut, richtig, interessant, die Frage]
+      right: [die Antwort, falsch, schlecht, langweilig]
+      pairs: { 0: 2, 1: 1, 2: 3, 3: 0 }
+    explanation: "Opposites: gut ↔ schlecht, richtig ↔ falsch, interessant ↔ langweilig, die Frage ↔ die Antwort."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [eine Frage, eine Antwort, gern Musik, gar]
+      right: [nicht, hören, stellen, geben]
+      pairs: { 0: 2, 1: 3, 2: 1, 3: 0 }
+    explanation: "Fixed pairs: eine Frage stellen, eine Antwort geben, gern Musik hören, gar nicht."
+  - type: collocation_match
+    group: reading
+    content:
+      left: ["Ist das richtig?", "Verstehst du das nicht?", "Hast du eine Idee?", "Magst du Deutsch?"]
+      right: ["Doch, ich verstehe das.", "Nein, ich habe keine Idee.", "Ja, das ist richtig.", "Ja, sehr gern."]
+      pairs: { 0: 2, 1: 0, 2: 1, 3: 3 }
+    explanation: "Only the negative question takes Doch; the other three take Ja or Nein."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [natürlich, leider, vielleicht, genau]
+      right: ["ja oder nein — ich sage es nicht", "ja, sicher!", "richtig, so ist es", "das ist schlecht"]
+      pairs: { 0: 1, 1: 3, 2: 0, 3: 2 }
+    explanation: "natürlich = a strong yes; leider = bad news; vielleicht = not sure; genau = completely right."
+
+  # ───────────────────────── Reading Comprehension ─────────────────────────
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Lena: Ja, natürlich! Ich mag die Sprache. Deutsch ist nicht einfach, aber es ist wirklich interessant."
+      q: Wie findet Lena Deutsch?
+      options:
+        - Langweilig
+        - Nicht interessant
+        - Sehr schlecht
+        - Interessant
+      answer: 3
+    explanation: "She says: es ist wirklich interessant."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Lena: Nein, das ist falsch! Die Grammatik ist nicht langweilig. Ich finde sie sehr wichtig."
+      q: Ist die Grammatik für Lena langweilig?
+      options:
+        - "Ja, sehr"
+        - "Nein, sie ist wichtig"
+        - Das sagt sie nicht
+        - Vielleicht
+      answer: 1
+    explanation: "She says die Grammatik ist nicht langweilig and sehr wichtig."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Lena: Doch, ich habe Probleme! Ich verstehe leider nicht alles. Meine Antworten sind oft nicht richtig."
+      q: Was sagt Lena über ihre Antworten?
+      options:
+        - Sie sind immer richtig
+        - Sie hat keine Antworten
+        - Sie sind oft nicht richtig
+        - Sie sind immer falsch
+      answer: 2
+    explanation: "The text says: Meine Antworten sind oft nicht richtig — oft, not immer."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Lena ist Studentin und lernt Deutsch. Wir haben drei Fragen an Lena. Sie antwortet gern."
+      q: Wie viele Fragen hat das Interview?
+      options:
+        - Drei
+        - Zwei
+        - Vier
+        - Eine
+      answer: 0
+    explanation: "The text says: Wir haben drei Fragen an Lena."
+
+review_pool:
+  - type: mc_cloze
+    group: grammar
+    content: { pre: "Das ist ", post: " Frage.", options: [kein, keine, nicht, nichts], answer: 1 }
+    explanation: "die Frage → keine Frage."
+  - type: mc_cloze
+    group: grammar
+    content: { pre: "Er ist ", post: " sicher.", options: [nicht, kein, keine, nichts], answer: 0 }
+    explanation: "sicher is an adjective → nicht sicher."
+  - type: mc_cloze
+    group: grammar
+    content: { pre: "", post: " du Deutsch?", options: [Mögen, Mag, Mögt, Magst], answer: 3 }
+    explanation: "du magst → Magst du Deutsch?"
+  - type: mc_cloze
+    group: grammar
+    content: { pre: "Ist das nicht richtig? — ", post: ", das ist richtig.", options: [Ja, Nein, Doch, Bitte], answer: 2 }
+    explanation: "Negative question, positive answer → Doch."
+  - type: mc_cloze
+    group: grammar
+    content: { pre: "Das ist ", post: " Stift.", options: [kein, keine, nicht, nichts], answer: 0 }
+    explanation: "der Stift → kein Stift."
+  - type: mc_cloze
+    group: grammar
+    content: { pre: "Das sind ", post: " Bücher.", options: [kein, nicht, nichts, keine], answer: 3 }
+    explanation: "Plural → keine Bücher."
+  - type: grammar_drill
+    group: grammar
+    content: { pre: "Das ist ", post: " gut.", prompt: Negation, options: [kein, keine, nicht, nichts], answer: 2 }
+    explanation: "gut is an adjective → nicht gut."
+  - type: grammar_drill
+    group: grammar
+    content: { pre: "Das ist ", post: " Antwort.", prompt: "kein / keine", options: [kein, keine, nicht, nichts], answer: 1 }
+    explanation: "die Antwort → keine Antwort."
+  - type: grammar_drill
+    group: grammar
+    content: { pre: "", post: " ihr eine Frage?", prompt: Ja/Nein-Frage, options: [Haben, Hast, Hat, Habt], answer: 3 }
+    explanation: "ihr + haben = habt, and the verb comes first."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Ist das richtig? — Nein, das ist "
+      post: " richtig, das ist falsch."
+      answers: [nicht]
+      answer_shown: nicht
+    explanation: "An adjective is negated with nicht."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Hast du eine Frage? — Nein, ich habe "
+      post: " Frage."
+      answers: [keine]
+      answer_shown: keine
+    explanation: "die Frage → keine Frage."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Ist Deutsch nicht interessant? — "
+      post: ", Deutsch ist sehr interessant."
+      answers: [Doch]
+      answer_shown: Doch
+    explanation: "Negative question, positive answer → Doch."
+  - type: error_correction
+    group: grammar
+    content: { words: [Das, ist, nicht, eine, "Antwort."], wrong: 2, correction: "nicht eine → keine" }
+    explanation: "A noun is negated with keine, so nicht eine becomes keine."
+  - type: error_correction
+    group: grammar
+    content: { words: [Das, ist, keine, "idee."], wrong: 3, correction: "idee → Idee" }
+    explanation: "Every German noun keeps its capital letter, also after keine."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Das ist "
+      post: " Stuhl."
+      prompt: "ein (negativ)"
+      answers: [kein]
+      answer_shown: kein
+    explanation: "der Stuhl: ein Stuhl → kein Stuhl."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Das ist "
+      post: " Uhr."
+      prompt: "eine (negativ)"
+      answers: [keine]
+      answer_shown: keine
+    explanation: "die Uhr: eine Uhr → keine Uhr."

@@ -1,0 +1,49 @@
+# Module 06 · main text — a real café dialogue: Anna and Tom order, eat and pay.
+# German body; glosses carry the German term and example, English pos_label and
+# definition (§5). 21 of the 24 target words are here (Salat, Bier and Cola sit
+# in the menu of text-extra), and every construction of the card is inside:
+# den + noun (den Kuchen, den Kaffee), einen + noun (einen Kaffee, einen Saft),
+# das/die unchanged (ein Brötchen, eine Suppe, die Rechnung), the accusative
+# pronouns ihn, sie, es, uns, and nehmen / essen / trinken / haben with a direct
+# object, plus möchte + noun as the polite ordering phrase. Glosses sit only on
+# words whose form in the text is the dictionary form. Later grammar appears as
+# input only: möchte + Nomen, Guten Tag, zu heiß.
+kind: main
+kicker: DIALOG
+title: Im Café
+meta: ≈ 2 min · dotted words have a note — tap to reveal
+word_count: 134
+body:
+  - - t: "Anna: Ich habe Hunger und Durst! Das Café Sonne ist gut, und der Kellner ist sehr "
+    - g: freundlich
+    - t: ". Tom: Ich habe auch Hunger. Ich nehme ein Brot."
+  - - t: "Kellner: Guten Tag! Hier ist die Speisekarte. Was möchten Sie? Anna: Ich nehme einen Kaffee und ein Brötchen. Tom: Ich möchte eine Suppe und einen Saft, bitte. Kellner: Der Kuchen ist heute sehr lecker. Anna: Dann bestelle ich auch den Kuchen!"
+  - - t: "Tom: Der Kaffee ist gut. Trinkst du ihn oft? Anna: Der Tee ist manchmal zu "
+    - g: heiß
+    - t: ". Tom: Die Suppe schmeckt gut. Ich esse sie gern. Anna: Und das Eis? Ich esse es immer hier. Tom: Ich trinke "
+    - g: nur
+    - t: " Wasser."
+  - - t: "Anna: Wir bezahlen jetzt. Aber der Kellner sieht uns nicht. Tom: Doch, er kommt "
+    - g: sofort
+    - t: ". Kellner: Hier ist die Rechnung. Anna: Ich bezahle sie. Das Café ist toll!"
+glosses:
+  - key: freundlich
+    term: freundlich
+    pos_label: Adjektiv
+    definition: friendly, kind; a friendly person says hello and smiles
+    example: Der Kellner ist sehr freundlich.
+  - key: heiß
+    term: heiß
+    pos_label: Adjektiv
+    definition: hot; too hot to drink now — the opposite is kalt
+    example: Der Tee ist zu heiß.
+  - key: nur
+    term: nur
+    pos_label: Adverb
+    definition: only, just; nothing more than that
+    example: Ich trinke nur Wasser.
+  - key: sofort
+    term: sofort
+    pos_label: Adverb
+    definition: right now, immediately; not in five minutes
+    example: Der Kellner kommt sofort.

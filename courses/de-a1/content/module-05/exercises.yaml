@@ -1,0 +1,496 @@
+# Module 05 · 46 core tasks + 16 review. Distribution (PLAN.md §6):
+# 8 mc_cloze · 8 open_cloze · 6 word_formation · 2 key_word_transformation ·
+# 10 grammar_drill · 4 error_correction · 4 collocation_match · 4 reading_comprehension.
+#
+# Spiral revision of earlier modules (marked "SPIRAL"): open_cloze 7 (kein, M4),
+# open_cloze 8 (W-Frage, M1), word_formation 6 (plural, M3).
+#
+# One task = one operation: where a sentence needs both inversion and a stem
+# change, the frame supplies one of them and the learner adds the other. Nothing
+# asks for an accusative form — objects are fixed phrases without an article
+# (Fußball spielen, Musik hören, Sport machen) or neuter/plural nouns given in
+# the frame. Explanations English (§5); frames and answers German.
+core:
+  # ───────────────────────── Multiple Choice ─────────────────────────
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Du "
+      post: " zu schnell."
+      options: [spreche, sprichst, sprechst, sprechen]
+      answer: 1
+    explanation: "sprechen changes e → i in du: du sprichst (never sprechst)."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Er "
+      post: " jeden Abend ein Buch."
+      options: [lese, lesen, lest, liest]
+      answer: 3
+    explanation: "lesen changes e → ie in er: er liest."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Heute "
+      post: " ich Fußball."
+      options: [spiele, spielst, spielt, spielen]
+      answer: 0
+    explanation: "Heute is position 1, the verb is position 2, and the subject is ich → spiele."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Mein Freund "
+      post: " nach Berlin."
+      options: [fahre, fahrst, fährt, fahren]
+      answer: 2
+    explanation: "fahren changes a → ä in er: mein Freund fährt."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Ich tanze "
+      post: "."
+      options: [gern nicht, nicht gern, kein gern, nicht kein]
+      answer: 1
+    explanation: "nicht stands in front of gern: Ich tanze nicht gern."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Ich spiele Tennis "
+      post: " ich schwimme. Beides macht Spaß."
+      options: [und, oder, aber, denn]
+      answer: 0
+    explanation: "Beides (both) adds the two activities together → und."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Was "
+      post: " du gern?"
+      options: [esse, essen, esst, isst]
+      answer: 3
+    explanation: "essen changes e → i in du: du isst."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Am Sonntag "
+      post: " lange."
+      options: [ich schlafe, ich schlafen, schlafe ich, schlafen ich]
+      answer: 2
+    explanation: "Am Sonntag is position 1, so the verb comes second and ich follows it."
+  # ───────────────────────── Lückentext (open_cloze) ─────────────────────────
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Ich spiele gern Fußball "
+      post: " ich schwimme auch gern."
+      answers: [und]
+      answer_shown: und
+    explanation: "auch gern adds a second activity, so the two parts are joined with und."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Am Samstag gehen wir ins Kino "
+      post: " wir bleiben zu Hause. Wir wissen es noch nicht."
+      answers: [oder]
+      answer_shown: oder
+    explanation: "Wir wissen es noch nicht means the two plans are a choice → oder."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Ich mag Tennis nicht. Ich spiele nicht "
+      post: " Tennis."
+      answers: [gern, gerne]
+      answer_shown: gern
+    explanation: "nicht gern is the opposite of gern — you do not like doing it."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Du "
+      post: " sehr gut Deutsch."
+      hint: sprechen
+      answers: [sprichst]
+      answer_shown: sprichst
+    explanation: "du + sprechen = sprichst (e → i)."
+  - type: open_cloze
+    group: reading
+    content:
+      pre: "Meine Freundin "
+      post: " gern Bücher."
+      hint: lesen
+      answers: [liest]
+      answer_shown: liest
+    explanation: "sie (meine Freundin) + lesen = liest (e → ie)."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Am Freitag "
+      post: " ich Tennis."
+      hint: spielen
+      answers: [spiele]
+      answer_shown: spiele
+    explanation: "The time word takes position 1, so the verb comes second and ich follows it."
+  # SPIRAL M4 — kein with a noun
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Ich habe "
+      post: " Hobby. Ich arbeite nur."
+      answers: [kein]
+      answer_shown: kein
+    explanation: "A noun is negated with kein, not nicht — das Hobby → kein Hobby (revision of module 4)."
+  # SPIRAL M1 — W-Frage
+  - type: open_cloze
+    group: reading
+    content:
+      pre: ""
+      post: " machst du gern in der Freizeit?"
+      answers: [Was]
+      answer_shown: Was
+    explanation: "The question asks for a thing, not a person or a place → Was …? (revision of module 1)."
+
+  # ───────────────────────── Wortbildung (infinitive → du / er form) ─────────────────────────
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Du "
+      post: " zu schnell."
+      prompt: "fahren (du)"
+      answers: [fährst]
+      answer_shown: fährst
+    explanation: "fahren → du fährst (a → ä)."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Mein Freund "
+      post: " sehr lange."
+      prompt: "schlafen (er)"
+      answers: [schläft]
+      answer_shown: schläft
+    explanation: "schlafen → er schläft (a → ä)."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: ""
+      post: " du gern Pizza?"
+      prompt: "essen (du)"
+      answers: [Isst]
+      answer_shown: Isst
+    explanation: "essen → du isst (e → i). In a yes/no question the verb starts the sentence."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Meine Mutter "
+      post: " jeden Abend."
+      prompt: "lesen (sie)"
+      answers: [liest]
+      answer_shown: liest
+    explanation: "lesen → sie liest (e → ie)."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Meine Oma "
+      post: " nicht gut."
+      prompt: "sehen (sie)"
+      answers: [sieht]
+      answer_shown: sieht
+    explanation: "sehen → sie sieht (e → ie)."
+  # SPIRAL M3 — plural
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Ein Buch, zwei "
+      post: "."
+      prompt: "das Buch (Plural)"
+      answers: [Bücher]
+      answer_shown: Bücher
+    explanation: "das Buch → die Bücher (plural with -er and umlaut, revision of module 3)."
+
+  # ───────────────────────── Umformung (key_word_transformation) ─────────────────────────
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: Ich spiele heute Fußball.
+      key: HEUTE
+      pre: "Heute "
+      post: " Fußball."
+      answers: [spiele ich]
+      hint: 2 Wörter
+      answer_shown: spiele ich
+    explanation: "Heute moves to position 1, the verb stays second and ich goes behind it: Heute spiele ich Fußball."
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: Du kochst gern.
+      key: FRAGE
+      pre: ""
+      post: " gern?"
+      answers: [Kochst du]
+      hint: 2 Wörter
+      answer_shown: Kochst du
+    explanation: "In a yes/no question the verb comes first and the subject second: Kochst du gern?"
+
+  # ───────────────────────── Grammatik-Drill ─────────────────────────
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Du "
+      post: " gern Pizza."
+      prompt: essen
+      options: [esse, isst, esst, essen]
+      answer: 1
+    explanation: "du + essen = isst (e → i)."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Er "
+      post: " Fahrrad."
+      prompt: fahren
+      options: [fahre, fahren, fährt, fahrst]
+      answer: 2
+    explanation: "er + fahren = fährt (a → ä)."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Im Sommer "
+      post: " nach Italien."
+      prompt: Wortstellung
+      options: [reisen wir, wir reisen, reise wir, wir reise]
+      answer: 0
+    explanation: "After a front time word the verb keeps position 2: Im Sommer reisen wir nach Italien."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Meine Mutter "
+      post: " ein Buch."
+      prompt: lesen
+      options: [lese, lesen, lest, liest]
+      answer: 3
+    explanation: "sie (meine Mutter) + lesen = liest (e → ie)."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Du "
+      post: " zu lange."
+      prompt: schlafen
+      options: [schlafst, schläfst, schläft, schlafen]
+      answer: 1
+    explanation: "du + schlafen = schläfst (a → ä)."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Ich "
+      post: " Fußball."
+      prompt: gern
+      options: [spiele gern, gern spiele, gern spielen, spielen gern]
+      answer: 0
+    explanation: "gern comes after the verb: Ich spiele gern Fußball."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Meine Oma "
+      post: " nicht gut."
+      prompt: sehen
+      options: [sehe, sehen, sieht, siehst]
+      answer: 2
+    explanation: "sie (meine Oma) + sehen = sieht (e → ie)."
+  - type: grammar_drill
+    group: vocab
+    content:
+      pre: "Ich mache "
+      post: " Sport. Ich mag Sport nicht."
+      prompt: Häufigkeit
+      options: [immer, oft, manchmal, nie]
+      answer: 3
+    explanation: "Ich mag Sport nicht means 0 % → nie."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Wir gehen ins Kino "
+      post: " wir bleiben zu Hause. Wir wissen es noch nicht."
+      prompt: und / oder
+      options: [und, oder, aber, denn]
+      answer: 1
+    explanation: "Two plans and no decision yet → oder."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Ihr "
+      post: " sehr gut Deutsch."
+      prompt: sprechen
+      options: [sprichst, spricht, sprecht, sprechen]
+      answer: 2
+    explanation: "Only du and er change the stem — ihr keeps it: ihr sprecht."
+
+  # ───────────────────────── Fehlerkorrektur ─────────────────────────
+  - type: error_correction
+    group: grammar
+    content: { words: [Am, Sonntag, ich, koche, "gern."], wrong: 2, correction: "ich koche → koche ich" }
+    explanation: "The verb must stay in position 2: Am Sonntag koche ich gern."
+  - type: error_correction
+    group: grammar
+    content: { words: [Du, fahrst, sehr, "schnell."], wrong: 1, correction: "fahrst → fährst" }
+    explanation: "fahren takes ä in du: du fährst."
+  - type: error_correction
+    group: grammar
+    content: { words: [Meine, Schwester, lest, gern, "Bücher."], wrong: 2, correction: "lest → liest" }
+    explanation: "sie (meine Schwester) + lesen = liest. lest is the ihr form."
+  - type: error_correction
+    group: grammar
+    content: { words: [Er, spricht, gern, nicht, "Deutsch."], wrong: 2, correction: "gern nicht → nicht gern" }
+    explanation: "nicht comes before gern: Er spricht nicht gern Deutsch."
+
+  # ───────────────────────── Zuordnung (collocation_match) ─────────────────────────
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [Fußball, Sport, Musik, das Essen]
+      right: [hören, machen, kochen, spielen]
+      pairs: { 0: 3, 1: 1, 2: 0, 3: 2 }
+    explanation: "Fußball spielen · Sport machen · Musik hören · das Essen kochen."
+  - type: collocation_match
+    group: grammar
+    content:
+      left: [essen, fahren, lesen, sprechen]
+      right: [fährst, sprichst, isst, liest]
+      pairs: { 0: 2, 1: 0, 2: 3, 3: 1 }
+    explanation: "The du forms: du isst, du fährst, du liest, du sprichst."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [immer, oft, manchmal, nie]
+      right: ["0 %", "100 %", "30 %", "80 %"]
+      pairs: { 0: 1, 1: 3, 2: 2, 3: 0 }
+    explanation: "immer 100 % · oft 80 % · manchmal 30 % · nie 0 %."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [schwimmen, tanzen, singen, reisen]
+      right: [im Chor, im Wasser, nach Italien, in der Disco]
+      pairs: { 0: 1, 1: 3, 2: 0, 3: 2 }
+    explanation: "im Wasser schwimmen · in der Disco tanzen · im Chor singen · nach Italien reisen."
+
+  # ───────────────────────── Leseverstehen (passages from the main text) ─────────────────────────
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Am Montag und am Mittwoch mache ich Sport. Ich schwimme sehr gern, und am Wochenende bin ich oft draußen."
+      q: Wann macht Nina Sport?
+      options:
+        - Am Sonntag
+        - Am Freitag
+        - Am Montag und am Mittwoch
+        - Nie
+      answer: 2
+    explanation: "The text says: Am Montag und am Mittwoch mache ich Sport."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Mein Freund Tom fährt nie Fahrrad. Er sieht Fußball immer im Fernsehen. Er macht nicht gern Sport."
+      q: Was macht Tom nicht gern?
+      options:
+        - Sport
+        - Musik hören
+        - Kochen
+        - Lesen
+      answer: 0
+    explanation: "The text says: Er macht nicht gern Sport."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Am Abend lese ich oder ich höre Musik. Ich lese fast jeden Tag. Ich singe und ich tanze auch gern, aber nicht gut!"
+      q: Wie oft liest Nina?
+      options:
+        - Nie
+        - Manchmal
+        - Am Sonntag
+        - Fast jeden Tag
+      answer: 3
+    explanation: "The text says: Ich lese fast jeden Tag."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Am Sonntag schläft Tom sehr lange. Dann kochen wir zusammen. Wir essen und wir sprechen viel. Mein Lieblingsessen ist Pizza."
+      q: Was ist Ninas Lieblingsessen?
+      options:
+        - Pasta
+        - Pizza
+        - Suppe
+        - Kuchen
+      answer: 1
+    explanation: "The text says: Mein Lieblingsessen ist Pizza."
+
+review_pool:
+  - type: mc_cloze
+    group: grammar
+    content: { pre: "Du ", post: " zu lange.", options: [schlafe, schläfst, schlafst, schlafen], answer: 1 }
+    explanation: "du + schlafen = schläfst (a → ä)."
+  - type: mc_cloze
+    group: grammar
+    content: { pre: "Er ", post: " gern Fußball.", options: [sehe, siehst, sieht, sehen], answer: 2 }
+    explanation: "er + sehen = sieht (e → ie)."
+  - type: mc_cloze
+    group: grammar
+    content: { pre: "Am Freitag ", post: " ich Musik.", options: [höre, hörst, hört, hören], answer: 0 }
+    explanation: "The verb is second and the subject is ich → höre."
+  - type: mc_cloze
+    group: grammar
+    content: { pre: "Ich singe ", post: ".", options: [gern nicht, nicht gern, kein gern, nicht kein], answer: 1 }
+    explanation: "nicht gern, never gern nicht."
+  - type: open_cloze
+    group: grammar
+    content: { pre: "Ich singe ", post: " ich tanze auch gern.", answers: [und], answer_shown: und }
+    explanation: "auch gern adds a second activity → und."
+  - type: open_cloze
+    group: grammar
+    content: { pre: "Du ", post: " sehr schnell.", hint: fahren, answers: [fährst], answer_shown: fährst }
+    explanation: "du + fahren = fährst."
+  - type: open_cloze
+    group: grammar
+    content: { pre: "Ich mag Kochen nicht. Ich koche nicht ", post: ".", answers: [gern, gerne], answer_shown: gern }
+    explanation: "nicht gern = you do not like doing it."
+  # SPIRAL M1 — W-Frage
+  - type: open_cloze
+    group: reading
+    content: { pre: "", post: " ist dein Hobby? — Musik.", answers: [Was], answer_shown: Was }
+    explanation: "The answer names a thing → Was ist dein Hobby? (module 1)."
+  - type: grammar_drill
+    group: grammar
+    content: { pre: "Du ", post: " sehr laut.", prompt: sprechen, options: [spreche, sprichst, sprecht, sprechen], answer: 1 }
+    explanation: "du + sprechen = sprichst."
+  - type: grammar_drill
+    group: grammar
+    content: { pre: "Am Sonntag ", post: " lange.", prompt: Wortstellung, options: [ich schlafe, schlafe ich, schlafen ich, ich schlafen], answer: 1 }
+    explanation: "Am Sonntag is position 1, so the verb comes second: Am Sonntag schlafe ich lange."
+  - type: grammar_drill
+    group: vocab
+    content: { pre: "Ich mache ", post: " Sport. Sport ist nicht mein Hobby.", prompt: Häufigkeit, options: [immer, oft, nie, manchmal], answer: 2 }
+    explanation: "Sport ist nicht mein Hobby → nie (0 %)."
+  - type: word_formation
+    group: vocab
+    content: { pre: "Du ", post: " gern Pizza.", prompt: "essen (du)", answers: [isst], answer_shown: isst }
+    explanation: "essen → du isst (e → i)."
+  - type: word_formation
+    group: vocab
+    content: { pre: "Meine Schwester ", post: " gern Bücher.", prompt: "lesen (sie)", answers: [liest], answer_shown: liest }
+    explanation: "lesen → sie liest (e → ie)."
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: Ich schwimme am Montag.
+      key: AM MONTAG
+      pre: "Am Montag "
+      post: "."
+      answers: [schwimme ich]
+      hint: 2 Wörter
+      answer_shown: schwimme ich
+    explanation: "Am Montag takes position 1, the verb stays second: Am Montag schwimme ich."
+  - type: error_correction
+    group: grammar
+    content: { words: [Morgen, ich, spiele, "Tennis."], wrong: 1, correction: "ich spiele → spiele ich" }
+    explanation: "After a front time word the verb comes second: Morgen spiele ich Tennis."
+  - type: collocation_match
+    group: grammar
+    content:
+      left: [ich, du, er, wir]
+      right: [sprechen, spricht, spreche, sprichst]
+      pairs: { 0: 2, 1: 3, 2: 1, 3: 0 }
+    explanation: "ich spreche · du sprichst · er spricht · wir sprechen."

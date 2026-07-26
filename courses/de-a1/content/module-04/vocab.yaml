@@ -1,0 +1,224 @@
+# Module 04 · 24 words for everyday life and opinion. Scaffolding rule (§5):
+# term / use_cases / collocations / register German, definition English with a
+# synonym or an opposite. The 12 anchors of the module card come first in each
+# group (mögen, gern, verstehen, gut, schlecht, richtig, falsch, vielleicht,
+# natürlich, leider, die Frage, die Antwort); the other 12 fill the same domains.
+# mögen is irregular, so its forms are handed over ready-made in `register` —
+# the module never asks the learner to build them from the module-02 rule.
+# Nouns carry their article, and the plural sits in `register`.
+entries:
+  - term: mögen
+    tag: Verb
+    definition: to like something or someone; the opposite of to hate
+    use_cases:
+      - Ich mag Deutsch.
+      - Magst du Musik?
+    collocations: sehr mögen · gar nicht mögen
+    register: "Unregelmäßig: ich mag · du magst · er/sie/es mag · wir mögen · ihr mögt · sie mögen"
+
+  - term: gern
+    tag: Adverb
+    definition: gladly, with pleasure; it goes with a verb, not alone
+    use_cases:
+      - Ich lerne gern Deutsch.
+      - Sie antwortet gern.
+    collocations: sehr gern · gern lernen
+    register: "Auch: gerne"
+
+  - term: verstehen
+    tag: Verb
+    definition: to understand; to get what something means
+    use_cases:
+      - Ich verstehe die Frage nicht.
+      - Verstehst du das?
+    collocations: gut verstehen · alles verstehen
+    register: "Regelmäßig: ich verstehe · du verstehst · er versteht"
+
+  - term: sagen
+    tag: Verb
+    definition: to say; to speak words to someone
+    use_cases:
+      - Was sagst du?
+      - "Lena sagt: Deutsch ist toll."
+    collocations: ja sagen · nein sagen
+    register: "Regelmäßig: ich sage · du sagst · er sagt"
+
+  - term: fragen
+    tag: Verb
+    definition: to ask; the opposite of to answer
+    use_cases:
+      - Ich frage die Lehrerin.
+      - Ich frage viel.
+    collocations: viel fragen · immer fragen
+    register: "Regelmäßig: ich frage · du fragst · er fragt"
+
+  - term: antworten
+    tag: Verb
+    definition: to answer; to give a reply
+    use_cases:
+      - Lena antwortet gern.
+      - Ich antworte nicht.
+    collocations: schnell antworten · richtig antworten
+    register: "Regelmäßig: ich antworte · du antwortest · er antwortet"
+
+  - term: denken
+    tag: Verb
+    definition: to think; to have something in your head
+    use_cases:
+      - Ich denke, das ist richtig.
+      - Was denkst du?
+    collocations: viel denken · positiv denken
+    register: "Regelmäßig: ich denke · du denkst · er denkt"
+
+  - term: finden
+    tag: Verb
+    definition: to think of, to have an opinion about; also to find
+    use_cases:
+      - Ich finde Deutsch interessant.
+      - Wie findest du das?
+    collocations: gut finden · langweilig finden
+    register: "Regelmäßig: ich finde · du findest · er findet"
+
+  - term: gut
+    tag: Adjektiv
+    definition: good, fine; the opposite of schlecht
+    use_cases:
+      - Die Antwort ist gut.
+      - Ich verstehe das gut.
+    collocations: sehr gut · nicht gut
+    register: "Auch Adverb: Ich lerne gut."
+
+  - term: schlecht
+    tag: Adjektiv
+    definition: bad, poor; the opposite of gut
+    use_cases:
+      - Meine Antwort ist schlecht.
+      - Das ist nicht schlecht!
+    collocations: sehr schlecht · gar nicht schlecht
+    register: "Auch Adverb: Ich verstehe schlecht."
+
+  - term: richtig
+    tag: Adjektiv
+    definition: right, correct; the opposite of falsch
+    use_cases:
+      - Ist die Antwort richtig?
+      - Ja, das ist richtig.
+    collocations: ganz richtig · nicht richtig
+    register: "Auch Adverb: Sie sagt das richtig."
+
+  - term: falsch
+    tag: Adjektiv
+    definition: wrong, not correct; the opposite of richtig
+    use_cases:
+      - Nein, das ist falsch.
+      - Meine Antwort ist falsch.
+    collocations: total falsch · falsch oder richtig
+    register: "Auch Adverb: Ich sage das falsch."
+
+  - term: wichtig
+    tag: Adjektiv
+    definition: important; something you really need
+    use_cases:
+      - Die Grammatik ist wichtig.
+      - Das ist nicht so wichtig.
+    collocations: sehr wichtig · wichtig für mich
+    register: "Steigerung: wichtig · wichtiger"
+
+  - term: interessant
+    tag: Adjektiv
+    definition: interesting; the opposite of langweilig
+    use_cases:
+      - Deutsch ist interessant.
+      - Findest du das interessant?
+    collocations: sehr interessant · nicht interessant
+    register: "Steigerung: interessant · interessanter"
+
+  - term: langweilig
+    tag: Adjektiv
+    definition: boring; the opposite of interessant
+    use_cases:
+      - Die Frage ist langweilig.
+      - Deutsch ist nicht langweilig.
+    collocations: sehr langweilig · total langweilig
+    register: "Steigerung: langweilig · langweiliger"
+
+  - term: toll
+    tag: Adjektiv
+    definition: great, wonderful; a stronger word for gut
+    use_cases:
+      - Deutsch ist toll!
+      - Ich finde Deutsch toll.
+    collocations: ganz toll · toll finden
+    register: "Informell. Formeller: sehr gut"
+
+  - term: vielleicht
+    tag: Adverb
+    definition: maybe, perhaps; you are not sure
+    use_cases:
+      - Die Antwort ist vielleicht falsch.
+      - Kommst du heute? — Vielleicht.
+    collocations: vielleicht ja · vielleicht nicht
+    register: "Antwort zwischen ja und nein"
+
+  - term: natürlich
+    tag: Adverb
+    definition: of course, naturally; a strong yes
+    use_cases:
+      - Ja, natürlich!
+      - Natürlich, das ist richtig.
+    collocations: ja, natürlich · natürlich nicht
+    register: "Auch: klar (informell)"
+
+  - term: leider
+    tag: Adverb
+    definition: unfortunately; you are sorry about it
+    use_cases:
+      - Ich verstehe leider nicht alles.
+      - Das ist leider falsch.
+    collocations: leider nicht · leider nein
+    register: "Gegenteil: zum Glück"
+
+  - term: sicher
+    tag: Adjektiv
+    definition: sure, certain; you have no doubt
+    use_cases:
+      - Bist du sicher?
+      - Ich bin nicht sicher.
+    collocations: ganz sicher · sicher nicht
+    register: "Auch Adverb: Das ist sicher richtig."
+
+  - term: genau
+    tag: Adverb
+    definition: exactly; you say it when something is completely right
+    use_cases:
+      - Ja, genau!
+      - Das ist genau richtig.
+    collocations: ganz genau · genau so
+    register: "Auch Adjektiv: eine genaue Antwort"
+
+  - term: wirklich
+    tag: Adverb
+    definition: really, truly; you make the word after it stronger
+    use_cases:
+      - Deutsch ist wirklich interessant.
+      - Ist das wirklich richtig?
+    collocations: wirklich gut · wirklich nicht
+    register: "Auch Adjektiv: eine wirkliche Frage"
+
+  - term: die Frage
+    tag: Nomen
+    definition: a question; the opposite of an answer
+    use_cases:
+      - Ich habe eine Frage.
+      - Die Frage ist nicht einfach.
+    collocations: eine Frage stellen · eine gute Frage
+    register: "Plural: die Fragen"
+
+  - term: die Antwort
+    tag: Nomen
+    definition: an answer, a reply; the opposite of a question
+    use_cases:
+      - Meine Antwort ist richtig.
+      - Hast du eine Antwort?
+    collocations: eine Antwort geben · die richtige Antwort
+    register: "Plural: die Antworten"

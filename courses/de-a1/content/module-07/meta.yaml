@@ -1,0 +1,32 @@
+# Module 07 · Einkaufen. Scaffolding (goals, standfirst) English, title German
+# (§5). grammar_points repeat the module card's opis (3) with no additions. The
+# word-formation extension of this module is the compound noun built from two
+# stems (der Apfel + der Saft → der Apfelsaft, gender from the second stem) — it
+# lives in the theory table and in the word_formation tasks, not as separate
+# vocab entries.
+slug: m07
+title: Einkaufen
+standfirst: es gibt with the accusative, quantities, keinen · 24 words · write a shopping list.
+goals:
+  - text: Say what is there with es gibt and the accusative
+    achieved_by: workout
+  - text: Ask for quantities — ein Kilo Äpfel, ein Liter Milch, 100 Gramm Käse
+    achieved_by: workout
+  - text: Learn 24 words for food, prices and money, and the numbers up to 1000
+    achieved_by: input
+  - text: Write a shopping list and a short polite request
+    achieved_by: output
+grammar_points:
+  - es gibt + the accusative
+  - Quantity phrases (ein Kilo, ein Liter, eine Flasche, ein Stück, 100 Gramm)
+  - kein in the accusative (keinen, keine)
+texts:
+  - kind: main
+    title: Im Supermarkt
+    word_count: 120
+  - kind: extra
+    title: Einkaufszettel und Prospekt
+    word_count: 63
+production:
+  mode: writing
+  genre: a shopping list and a short polite request

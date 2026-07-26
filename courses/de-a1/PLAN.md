@@ -216,7 +216,7 @@
 - Грамматика (3): указание места как готовый оборот (`in der Küche`, `im Bad`, `auf dem Balkon` — дательный даётся как заученный чан, **не как система**); вопрос `wo?`; `es gibt` + Akkusativ в теме жилья (повторение).
 - Дательный падеж здесь — лексикализованный оборот из входного уровня de-a2, требовать построить форму нельзя. Система падежа — курс A2.
 - Словообразование: сложное существительное (`schlafen` + `das Zimmer` → `das Schlafzimmer`).
-- Лексика (24): жильё и мебель — *die Wohnung · das Zimmer · die Küche · das Bad · das Schlafzimmer · das Wohnzimmer · der Balkon · das Bett · der Schrank · die Lampe · der Kühlschrank · gemütlich*.
+- Лексика (24): жильё и мебель — *die Wohnung · die Küche · das Bad · das Schlafzimmer · das Wohnzimmer · der Balkon · das Bett · der Schrank · die Lampe · der Kühlschrank · gemütlich* (`das Zimmer` принадлежит М3 — его текст «Mein Zimmer»; здесь оно уже известно и служит основой для `das Schlafzimmer`).
 - Тексты: «Meine neue Wohnung» (120) + eine Wohnungsanzeige (60).
 - Продукция: описать своё жильё (40 слов).
 

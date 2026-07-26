@@ -1,0 +1,33 @@
+# Module 06 · Im Café. Scaffolding (goals, standfirst) English, title German (§5).
+# grammar_points repeat the module card's opis (4) with no additions. The
+# word-formation extension of this module is the accusative of the masculine
+# article (der → den, ein → einen) — it lives in the theory tables and in the
+# word_formation tasks, not as separate vocab entries. möchte appears only as a
+# ready-made polite phrase with a noun; the modal verbs are module 8.
+slug: m06
+title: Im Café
+standfirst: The accusative — der → den, ein → einen, pronouns · 24 words · order in a café.
+goals:
+  - text: Use the accusative after nehmen, essen, trinken and haben — der → den, ein → einen
+    achieved_by: workout
+  - text: Replace an object with the right pronoun (ihn, sie, es, uns)
+    achieved_by: workout
+  - text: Learn 24 words for a café — food, drinks, ordering and paying
+    achieved_by: input
+  - text: Order food and drinks in a café in a recorded dialogue
+    achieved_by: output
+grammar_points:
+  - The accusative of the definite article (der → den; das and die do not change)
+  - The accusative of the indefinite article (ein → einen)
+  - Personal pronouns in the accusative (mich, dich, ihn, sie, es, uns, euch)
+  - The direct object with nehmen, essen, trinken and haben
+texts:
+  - kind: main
+    title: Im Café
+    word_count: 134
+  - kind: extra
+    title: Café Sonne · Speisekarte
+    word_count: 55
+production:
+  mode: speaking
+  genre: a recorded dialogue — ordering in a café

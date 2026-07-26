@@ -1,0 +1,31 @@
+# Module 03 · extra text — a page from a picture dictionary. The genre is the
+# point: a Bildwörterbuch entry is exactly "article + noun — die + plural", so the
+# text shows the learner the shape a German dictionary entry has, which is the
+# form every new noun has to be learned in from now on. Five entries, five plural
+# models (-e, -en, -er + Umlaut, -s, no ending).
+kind: extra
+kicker: BILDWÖRTERBUCH
+title: Bildwörterbuch
+meta: ≈ 1 min · dotted words have a note — tap to reveal
+word_count: 57
+body:
+  - - t: "der Tisch — die Tische. Der Tisch ist groß und schwarz."
+  - - t: "die Tür — die Türen. Hier ist eine Tür. Die Tür ist gelb."
+  - - t: "das Buch — die Bücher. Ein Buch ist rot, zwei Bücher sind grün."
+  - - t: "das Handy — die Handys. Das Handy ist klein und schwarz."
+  - - t: "der Schlüssel — die Schlüssel. Ein Schlüssel "
+    - g: oder
+    - t: " drei Schlüssel — das Wort ist "
+    - g: gleich
+    - t: "."
+glosses:
+  - key: oder
+    term: oder
+    pos_label: conjunction
+    definition: or — this one, not both
+    example: Ein Schlüssel oder drei Schlüssel?
+  - key: gleich
+    term: gleich
+    pos_label: adjective
+    definition: the same — not different
+    example: Singular und Plural sind gleich.

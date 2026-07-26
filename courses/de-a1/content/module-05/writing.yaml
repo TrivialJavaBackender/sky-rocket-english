@@ -1,0 +1,31 @@
+# Module 05 · production. Scaffolding (prompt, checklist) English; model answer
+# German (§5). The model stays inside what modules 1–5 can produce: the present
+# tense with the stem changes of this module, verb-second word order with one
+# inversion, gern / nicht gern, und and oder, and frequency adverbs. It uses no
+# accusative article — the objects are fixed phrases (Fußball spielen, Musik
+# hören) or a neuter noun given whole (ein Buch is avoided; das Kino stays out
+# of the object slot).
+mode: writing
+genre: a short forum post about your free time
+word_target: [30, 40]
+prompt: |
+  Write a forum post for a German learners' website: what do you like doing in
+  your free time? 30–40 words.
+
+  Say something about each point:
+  • one or two hobbies you have
+  • something you do often, and something you never do
+  • one thing you do not like doing
+
+  Use gern and nicht gern, join two sentences with und or oder, and start one
+  sentence with a time word (Am Wochenende …, Im Sommer …).
+model_answer: |
+  Hallo! Ich habe drei Hobbys. Ich schwimme sehr gern und ich koche oft.
+  Am Wochenende spiele ich Fußball. Ich höre immer Musik. Ich tanze nicht
+  gern. Manchmal fahre ich Fahrrad. Mein Lieblingsessen ist Pizza. Und du?
+checklist:
+  - You name at least two hobbies
+  - You use gern and nicht gern in the right place — after the verb
+  - You join two sentences with und or oder
+  - One sentence starts with a time word and the verb still comes second
+  - The post is 30–40 words long

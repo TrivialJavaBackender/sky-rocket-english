@@ -1,0 +1,30 @@
+# Module 03 · production. Scaffolding (prompt, checklist) English; model answer
+# German (§5). The model stays inside what module 3 can produce: sein, der/die/das,
+# ein/eine, plurals and the module's colours. It uses no accusative (Ich habe …
+# would need module 6), no negation and no verb-first question — every sentence is
+# a plain statement with the verb in second position.
+mode: writing
+genre: a short description of the things around you
+word_target: [25, 35]
+prompt: |
+  Look around you and describe what you see. Write it for your class blog.
+  25–35 words (about 30).
+
+  Say something about each point:
+  • which room it is
+  • two or three things you can see
+  • the colour of each thing
+  • one thing in the plural (two chairs, three books …)
+
+  Use der / die / das, ein / eine, and at least one plural.
+model_answer: |
+  Das ist mein Zimmer. Hier ist ein Tisch. Der Tisch ist groß und
+  schwarz. Da sind zwei Stühle. Die Stühle sind rot. Das Fenster ist
+  klein und die Tür ist gelb. Meine Tasche ist blau.
+checklist:
+  - You name at least three things around you
+  - Every noun has an article — der, die, das or ein, eine
+  - You use at least one plural (zwei Stühle, drei Bücher)
+  - You give a colour for each thing (rot, blau, grün, gelb, schwarz, weiß)
+  - The verb comes second in every sentence
+  - The text is 25–35 words long

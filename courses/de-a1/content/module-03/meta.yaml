@@ -1,0 +1,33 @@
+# Module 03 · Der, die, das. Scaffolding (goals, standfirst) English, title German
+# (§5). grammar_points repeat the module card's opis (3), no additions. The
+# word-formation operation of this module (singular → plural) is not a separate
+# grammar point: it is the visible side of "Plural forms" and is drilled in the
+# word_formation tasks.
+slug: m03
+title: Der, die, das
+standfirst: Gender, the articles der/die/das and ein/eine, and the plural · 24 words · describe the things around you.
+goals:
+  - text: Say der, die or das for every new noun and learn the gender with the word
+    achieved_by: workout
+  - text: Use ein and eine to name a thing you see
+    achieved_by: workout
+  - text: Learn 24 words for everyday objects and colours
+    achieved_by: input
+  - text: Build the plural with -e, -en, -er, -s and the umlaut
+    achieved_by: input
+  - text: Write a short description of the things around you
+    achieved_by: output
+grammar_points:
+  - Gender and the definite article (der / die / das)
+  - The indefinite article (ein / eine)
+  - Plural forms (-e, -en, -er, -s, umlaut)
+texts:
+  - kind: main
+    title: Was ist das? Mein Zimmer
+    word_count: 120
+  - kind: extra
+    title: Bildwörterbuch
+    word_count: 57
+production:
+  mode: writing
+  genre: a short description of the things around you
