@@ -1,0 +1,38 @@
+# Module 10 · extra text — a real Wohnungsanzeige: the flat of the main text seen
+# from the other side, in the short language of a classified ad, plus the two
+# questions an ad always answers (Wo? Wann?). It shows the same material in a
+# second genre — es gibt with einen / eine / ein and keinen, the place phrases as
+# fixed chunks, the compound nouns — and closes with a line in full sentences.
+# der Termin, frei and der Bus are anchors of later modules and stay out of it.
+kind: extra
+kicker: WOHNUNGSANZEIGE
+title: 3-Zimmer-Wohnung in Hamburg
+meta: ≈ 1 min · dotted words have a note — tap to reveal
+body:
+  - - t: "3-ZIMMER-WOHNUNG IN HAMBURG · 68 "
+    - g: Quadratmeter
+    - t: " · Miete 620 Euro"
+  - - t: "Die Wohnung ist klein, hell und gemütlich. Es gibt eine Küche, ein Bad mit Dusche, ein Schlafzimmer und ein Wohnzimmer. Der Flur ist dunkel."
+  - - t: "Es gibt auch einen Balkon und einen "
+    - g: Keller
+    - t: ". Einen Garten gibt es nicht."
+  - - t: "Das Haus ist alt und ruhig: es gibt keinen "
+    - g: Aufzug
+    - t: "."
+  - - t: "Wo? Blumenstraße 12, Hamburg. Wann? Am Samstag um 15 Uhr. Fragen? Herr Klein, Telefon 040 55 12 33."
+glosses:
+  - key: Quadratmeter
+    term: der Quadratmeter
+    pos_label: noun
+    definition: a square metre; how you say how big a flat is
+    example: Die Wohnung hat 68 Quadratmeter.
+  - key: Keller
+    term: der Keller
+    pos_label: noun
+    definition: a cellar, a basement; the dark room under the house
+    example: Im Keller ist mein Fahrrad.
+  - key: Aufzug
+    term: der Aufzug
+    pos_label: noun
+    definition: a lift, an elevator; it takes you up without the stairs
+    example: Im Haus gibt es keinen Aufzug.

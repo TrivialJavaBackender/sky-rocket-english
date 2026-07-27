@@ -1,0 +1,227 @@
+# Module 10 · 24 words: the flat, the rooms and the furniture. The 11 anchors of
+# the card + 13 words that finish the same domain — the rooms an A1 flat still
+# needs (das Haus, der Garten, der Flur), the furniture the text puts into them
+# (das Sofa, der Teppich, das Regal, die Dusche), the two words of a housing ad
+# (die Miete, der Nachbar), the light/dark pair (hell, dunkel) and the two verbs
+# the topic runs on (umziehen, suchen). das Zimmer, die Tür and das Fenster
+# belong to module 3 and are input here, not entries.
+# Scaffolding rule (§5): term/use_cases/collocations/register German, definition
+# English with a synonym or an opposite. Every noun carries its article, its
+# plural and — new in this module — its place phrase (Ortsangabe: im Bad), which
+# is exactly the chunk the exercises ask for. Compound nouns show their two parts.
+entries:
+  - term: die Wohnung
+    tag: Nomen
+    definition: a flat, an apartment; the rooms where you live
+    use_cases:
+      - Meine Wohnung ist klein und hell.
+      - In der Wohnung gibt es einen Balkon.
+    collocations: eine Wohnung suchen · in der Wohnung · die Wohnung ist klein
+    register: "Plural: die Wohnungen. Ortsangabe: in der Wohnung."
+
+  - term: das Haus
+    tag: Nomen
+    definition: a house; a building with a door to the street. A Wohnung is inside it
+    use_cases:
+      - Das Haus ist alt und groß.
+      - Im Haus gibt es zwölf Wohnungen.
+    collocations: ein altes Haus · im Haus · zu Hause
+    register: "Plural: die Häuser. Ortsangabe: im Haus."
+
+  - term: die Küche
+    tag: Nomen
+    definition: the kitchen; the room where you cook
+    use_cases:
+      - Wir frühstücken in der Küche.
+      - In der Küche steht ein Kühlschrank.
+    collocations: in der Küche kochen · die Küche ist klein
+    register: "Plural: die Küchen. Ortsangabe: in der Küche."
+
+  - term: das Bad
+    tag: Nomen
+    definition: the bathroom; the room with a shower. The long word is das Badezimmer
+    use_cases:
+      - Im Bad gibt es eine Dusche.
+      - Das Bad ist klein und hell.
+    collocations: im Bad · ein Bad mit Dusche
+    register: "Plural: die Bäder. Ortsangabe: im Bad."
+
+  - term: das Schlafzimmer
+    tag: Nomen
+    definition: the bedroom; the room where you sleep
+    use_cases:
+      - Im Schlafzimmer stehen mein Bett und ein Schrank.
+      - Das Schlafzimmer ist dunkel.
+    collocations: im Schlafzimmer · ein großes Schlafzimmer
+    register: "schlafen + das Zimmer. Plural: die Schlafzimmer. Ortsangabe: im Schlafzimmer."
+
+  - term: das Wohnzimmer
+    tag: Nomen
+    definition: the living room; the room where you sit in the evening
+    use_cases:
+      - Am Abend sehe ich im Wohnzimmer fern.
+      - Das Wohnzimmer ist hell und gemütlich.
+    collocations: im Wohnzimmer · das Wohnzimmer ist groß
+    register: "wohnen + das Zimmer. Plural: die Wohnzimmer. Ortsangabe: im Wohnzimmer."
+
+  - term: der Balkon
+    tag: Nomen
+    definition: a balcony; a small place outside, at the window
+    use_cases:
+      - Am Morgen trinke ich Kaffee auf dem Balkon.
+      - In der Wohnung gibt es einen Balkon.
+    collocations: auf dem Balkon · einen Balkon haben
+    register: "Plural: die Balkone. Ortsangabe: auf dem Balkon, nicht im Balkon."
+
+  - term: der Garten
+    tag: Nomen
+    definition: a garden; the green place at a house. Flowers grow there
+    use_cases:
+      - Im Garten gibt es Blumen.
+      - Einen Garten gibt es leider nicht.
+    collocations: im Garten · einen Garten haben
+    register: "Plural: die Gärten. Ortsangabe: im Garten."
+
+  - term: der Flur
+    tag: Nomen
+    definition: the hall, the corridor; the first room after the door
+    use_cases:
+      - Im Flur steht ein Schrank.
+      - Der Flur ist lang und dunkel.
+    collocations: im Flur · ein langer Flur
+    register: "Plural: die Flure. Ortsangabe: im Flur."
+
+  - term: das Bett
+    tag: Nomen
+    definition: a bed; you sleep in it
+    use_cases:
+      - Das Bett steht im Schlafzimmer.
+      - Mein Bett ist groß und gemütlich.
+    collocations: im Bett · ein großes Bett
+    register: "Plural: die Betten."
+
+  - term: der Schrank
+    tag: Nomen
+    definition: a cupboard, a wardrobe; a big box with doors for your things
+    use_cases:
+      - Im Schlafzimmer steht ein Schrank.
+      - Meine Brille ist im Schrank.
+    collocations: im Schrank · ein großer Schrank
+    register: "Plural: die Schränke. Ortsangabe: im Schrank."
+
+  - term: die Lampe
+    tag: Nomen
+    definition: a lamp; it makes a room hell
+    use_cases:
+      - Die Lampe ist im Wohnzimmer.
+      - Wo ist die Lampe? Im Flur.
+    collocations: die Lampe im Wohnzimmer · eine Lampe kaufen
+    register: "Plural: die Lampen."
+
+  - term: der Kühlschrank
+    tag: Nomen
+    definition: a fridge; the cold cupboard for milk, butter and cheese
+    use_cases:
+      - Der Kühlschrank steht in der Küche.
+      - Im Kühlschrank gibt es Milch und Butter.
+    collocations: im Kühlschrank · der Kühlschrank ist voll
+    register: "kühl + der Schrank. Plural: die Kühlschränke."
+
+  - term: das Sofa
+    tag: Nomen
+    definition: a sofa, a couch; you sit on it in the living room
+    use_cases:
+      - Im Wohnzimmer steht ein Sofa.
+      - Das Sofa ist gemütlich.
+    collocations: auf dem Sofa · ein gemütliches Sofa
+    register: "Plural: die Sofas. Ortsangabe: auf dem Sofa."
+
+  - term: der Teppich
+    tag: Nomen
+    definition: a carpet, a rug; it lies on the floor
+    use_cases:
+      - Der Teppich im Wohnzimmer ist blau.
+      - Im Schlafzimmer gibt es einen Teppich.
+    collocations: auf dem Teppich · ein blauer Teppich
+    register: "Plural: die Teppiche."
+
+  - term: das Regal
+    tag: Nomen
+    definition: a shelf, a bookcase; your books stand in it
+    use_cases:
+      - Im Regal stehen meine Bücher.
+      - Das Regal ist im Wohnzimmer.
+    collocations: im Regal · ein Regal für Bücher
+    register: "Plural: die Regale. Ortsangabe: im Regal."
+
+  - term: die Dusche
+    tag: Nomen
+    definition: a shower; you use it in the morning in the bathroom
+    use_cases:
+      - Die Dusche ist im Bad.
+      - Ein Bad mit Dusche kostet mehr.
+    collocations: im Bad eine Dusche · ein Bad mit Dusche
+    register: "Plural: die Duschen. Verb: duschen."
+
+  - term: die Miete
+    tag: Nomen
+    definition: the rent; the money you pay every month for a flat
+    use_cases:
+      - Die Miete kostet 620 Euro.
+      - Die Miete ist nicht teuer.
+    collocations: die Miete bezahlen · die Miete kostet …
+    register: "Plural: die Mieten. Verb: mieten."
+
+  - term: der Nachbar
+    tag: Nomen
+    definition: a neighbour; the person who lives in the flat next to you
+    use_cases:
+      - Mein Nachbar heißt Herr Klein.
+      - Der Nachbar von Anna hat einen Garten.
+    collocations: mein Nachbar · die Nachbarn im Haus
+    register: "Plural: die Nachbarn. Auch: die Nachbarin."
+
+  - term: gemütlich
+    tag: Adjektiv
+    definition: cosy, comfortable; a place where you like to stay
+    use_cases:
+      - Das Sofa ist gemütlich.
+      - Meine Wohnung ist klein und gemütlich.
+    collocations: gemütlich wohnen · ein gemütliches Zimmer
+    register: "Sehr deutsches Wort. Oft für Zimmer, Sofa, Abend."
+
+  - term: hell
+    tag: Adjektiv
+    definition: bright, light; a room with big windows. The opposite is dunkel
+    use_cases:
+      - Das Wohnzimmer ist hell.
+      - Die Küche ist groß und hell.
+    collocations: ein helles Zimmer · hell und gemütlich
+    register: "Gegenteil: dunkel."
+
+  - term: dunkel
+    tag: Adjektiv
+    definition: dark; a room without light. The opposite is hell
+    use_cases:
+      - Der Flur ist dunkel.
+      - Am Abend ist das Zimmer dunkel.
+    collocations: ein dunkles Zimmer · dunkel und kalt
+    register: "Gegenteil: hell."
+
+  - term: umziehen
+    tag: Verb (trennbar)
+    definition: to move house, to go and live in another flat
+    use_cases:
+      - Am Samstag ziehe ich um.
+      - Anna zieht am Montag um.
+    collocations: nach Hamburg umziehen · am Samstag umziehen
+    register: "Trennbar: um + ziehen. Im Satz: Ich ziehe … um."
+
+  - term: suchen
+    tag: Verb
+    definition: to look for something you do not have or cannot find
+    use_cases:
+      - Ich suche eine Wohnung in Hamburg.
+      - Wir suchen ein Zimmer für zwei Personen.
+    collocations: eine Wohnung suchen · ein Zimmer suchen
+    register: "Regelmäßig: ich suche, du suchst, er sucht."

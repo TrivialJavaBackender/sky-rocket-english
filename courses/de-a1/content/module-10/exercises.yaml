@@ -1,0 +1,501 @@
+# Module 10 · 46 core tasks + 16 review. Distribution (PLAN.md §6):
+# 8 mc_cloze · 8 open_cloze · 6 word_formation · 2 key_word_transformation ·
+# 10 grammar_drill · 4 error_correction · 4 collocation_match · 4 reading_comprehension.
+#
+# Spiral revision of earlier modules (marked "SPIRAL"): mc_cloze 6 and
+# word_formation 6 and grammar_drill 9 (separable verbs, M9), grammar_drill 8
+# (the modal frame, M8), mc_cloze 7 and grammar_drill 7 and key_word_transformation 2
+# (es gibt with the accusative, M6/M7), open_cloze 8 and grammar_drill 6 (kein in
+# the accusative, M4/M7), word_formation 5 (plural, M3), grammar_drill 5 and
+# error_correction 4 (verb-second and the capital noun, M5/M1).
+#
+# One task = one operation. The dative is never built here: im, in der and auf dem
+# are asked for as whole chunks that the theory table lists room by room — the same
+# way am Montag was asked for in module 9. Nothing asks for an imperative, a
+# müssen/dürfen/sollen form, an adjective ending, an ordinal, a date or a Perfekt.
+# Explanations English (§5); frames, options and answers German.
+core:
+  # ───────────────────────── Multiple Choice ─────────────────────────
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Das Bett steht "
+      post: " Schlafzimmer."
+      options: [in, im, auf, an]
+      answer: 1
+    explanation: "das Schlafzimmer takes the ready-made phrase im Schlafzimmer."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Wir frühstücken "
+      post: " Küche."
+      options: [im, in die, in der, auf dem]
+      answer: 2
+    explanation: "die Küche keeps both small words: in der Küche."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Am Morgen trinke ich Kaffee "
+      post: " Balkon."
+      options: [auf dem, im, in der, an der]
+      answer: 0
+    explanation: "A balcony is a surface, so the phrase is auf dem Balkon."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: ""
+      post: " ist die Lampe? — Im Wohnzimmer."
+      options: [Wer, Wo, Wie, Woher]
+      answer: 1
+    explanation: "The answer names a place, so the question word is wo."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "In der Wohnung gibt es "
+      post: " Balkon."
+      options: [ein, eine, einem, einen]
+      answer: 3
+    explanation: "es gibt takes the accusative: der Balkon → einen Balkon."
+  # SPIRAL · M9 — separable verbs
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Am Samstag "
+      post: " ich um."
+      options: [ziehe, zieht, ziehen, ziehst]
+      answer: 0
+    explanation: "umziehen splits. ich takes the ending -e and um closes the sentence."
+  # SPIRAL · M6 / M7 — the accusative in front of the verb
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: ""
+      post: " Garten gibt es leider nicht."
+      options: [Ein, Einen, Eine, Einem]
+      answer: 1
+    explanation: "The object of es gibt stays accusative, also at the front: Einen Garten gibt es nicht."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "Im Bad gibt es eine "
+      post: "."
+      options: [Dusche, Küche, Lampe, Miete]
+      answer: 0
+    explanation: "A shower belongs in the bathroom: Im Bad gibt es eine Dusche."
+
+  # ───────────────────────── Open Cloze ─────────────────────────
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Der Schrank steht "
+      post: " Flur."
+      answers: [im]
+      answer_shown: im
+    explanation: "der Flur takes im Flur — in + dem is always shortened to im."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Wir frühstücken in "
+      post: " Küche."
+      answers: [der]
+      answer_shown: der
+    explanation: "The phrase for die Küche is in der Küche. Learn it as one piece."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Am Morgen trinke ich Kaffee "
+      post: " dem Balkon."
+      answers: [auf]
+      answer_shown: auf
+    explanation: "A room takes in, a surface takes auf: auf dem Balkon."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: ""
+      post: " ist die Dusche? — Im Bad."
+      answers: [Wo]
+      answer_shown: Wo
+    explanation: "The answer is a place, so the question starts with Wo and the verb follows."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "In der Wohnung gibt "
+      post: " einen Balkon."
+      answers: [es]
+      answer_shown: es
+    explanation: "es gibt is one fixed pair of words — gibt never stands alone."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Im Bad gibt es "
+      post: " Dusche und eine Toilette."
+      answers: [eine]
+      answer_shown: eine
+    explanation: "die Dusche is feminine, and eine does not change in the accusative."
+  # SPIRAL · M9 — separable verbs
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Am Samstag ziehe ich "
+      post: "."
+      hint: umziehen
+      answers: [um]
+      answer_shown: um
+    explanation: "umziehen = um + ziehen, so the prefix um is the last word."
+  # SPIRAL · M4 / M7 — kein in the accusative
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Die Wohnung hat keinen Garten. Es gibt "
+      post: " Garten."
+      answers: [keinen]
+      answer_shown: keinen
+    explanation: "der Garten is masculine, so the negative after es gibt is keinen."
+
+  # ───────────────────────── Wortbildung ─────────────────────────
+  - type: word_formation
+    group: grammar
+    content:
+      pre: "Ich schlafe im "
+      post: "."
+      prompt: "schlafen + das Zimmer"
+      answers: [Schlafzimmer]
+      answer_shown: Schlafzimmer
+    explanation: "Two words become one, and the last part keeps its article: das Schlafzimmer."
+  - type: word_formation
+    group: grammar
+    content:
+      pre: "Am Abend sehe ich im "
+      post: " fern."
+      prompt: "wohnen + das Zimmer"
+      answers: [Wohnzimmer]
+      answer_shown: Wohnzimmer
+    explanation: "wohnen + das Zimmer = das Wohnzimmer, the room where you live."
+  - type: word_formation
+    group: grammar
+    content:
+      pre: "Die Milch ist im "
+      post: "."
+      prompt: "kühl + der Schrank"
+      answers: [Kühlschrank]
+      answer_shown: Kühlschrank
+    explanation: "The cold cupboard is der Kühlschrank — the article comes from der Schrank."
+  - type: word_formation
+    group: grammar
+    content:
+      pre: "Die "
+      post: " ist blau."
+      prompt: "das Haus + die Tür"
+      answers: [Haustür]
+      answer_shown: Haustür
+    explanation: "das Haus + die Tür = die Haustür. The second part gives the article: die."
+  # SPIRAL · M3 — plural
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Im Schlafzimmer stehen zwei "
+      post: "."
+      prompt: "das Bett (Plural)"
+      answers: [Betten]
+      answer_shown: Betten
+    explanation: "das Bett → die Betten. After zwei the noun is plural."
+  # SPIRAL · M9 — separable verb, infinitive → sentence
+  - type: word_formation
+    group: grammar
+    content:
+      pre: "Anna "
+      post: " am Montag um."
+      prompt: "umziehen (sie)"
+      answers: [zieht]
+      answer_shown: zieht
+    explanation: "The first part takes the ending -t: sie zieht … um."
+
+  # ───────────────────────── Umformung ─────────────────────────
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: Die Lampe ist im Wohnzimmer.
+      key: WO
+      pre: ""
+      post: " ist die Lampe?"
+      answers: [Wo]
+      hint: 1 Wort
+      answer_shown: Wo
+    explanation: "A statement about a place becomes a question with Wo, and the verb comes second."
+  # SPIRAL · M7 — es gibt with the accusative
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: In der Wohnung ist ein Balkon.
+      key: ES GIBT
+      pre: "In der Wohnung "
+      post: " einen Balkon."
+      answers: [gibt es]
+      hint: 2 Wörter
+      answer_shown: gibt es
+    explanation: "With a place phrase in front the pair turns around: In der Wohnung gibt es …"
+
+  # ───────────────────────── Grammatik-Drill ─────────────────────────
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Die Dusche ist "
+      post: " Bad."
+      prompt: Ortsangabe
+      options: [in, im, in der, auf dem]
+      answer: 1
+    explanation: "das Bad → im Bad."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Wir kochen "
+      post: " Küche."
+      prompt: Ortsangabe
+      options: [im, in dem, in der, auf der]
+      answer: 2
+    explanation: "die Küche → in der Küche."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Die Blume ist "
+      post: " Balkon."
+      prompt: Ortsangabe
+      options: [auf dem, im, in der, an der]
+      answer: 0
+    explanation: "der Balkon → auf dem Balkon, not im Balkon."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: ""
+      post: " wohnst du?"
+      prompt: W-Frage
+      options: [Wer, Wo, Wie, Was]
+      answer: 1
+    explanation: "wo asks for the place: Wo wohnst du? — In Hamburg."
+  # SPIRAL · M5 — verb second after a phrase in front
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Im Wohnzimmer "
+      post: "."
+      prompt: Wortstellung
+      options: [ein Sofa steht, steht ein Sofa, ein Sofa ist steht, steht ein Sofa nicht]
+      answer: 1
+    explanation: "A place phrase in front pushes the subject behind the verb: Im Wohnzimmer steht ein Sofa."
+  # SPIRAL · M4 / M7 — kein in the accusative
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Im Haus gibt es "
+      post: " Aufzug."
+      prompt: Akkusativ
+      options: [kein, keine, keinen, keinem]
+      answer: 2
+    explanation: "der Aufzug is masculine, so the negative after es gibt is keinen."
+  # SPIRAL · M6 / M7 — ein in the accusative
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Im Wohnzimmer gibt es "
+      post: " Sofa."
+      prompt: Akkusativ
+      options: [einen, ein, eine, einem]
+      answer: 1
+    explanation: "das Sofa is neuter, and ein does not change in the accusative."
+  # SPIRAL · M8 — the verb bracket
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Am Samstag will ich "
+      post: "."
+      prompt: umziehen
+      options: [um ziehen, umziehe, ziehe um, umziehen]
+      answer: 3
+    explanation: "After a modal verb the separable verb stands at the end in one piece: umziehen."
+  # SPIRAL · M9 — separable verb in a question
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Wann "
+      post: " du um?"
+      prompt: umziehen
+      options: [ziehst, zieht, ziehen, ziehe]
+      answer: 0
+    explanation: "In a W-question the verb stands second: Wann ziehst du um?"
+  - type: grammar_drill
+    group: vocab
+    content:
+      pre: ""
+      post: " Kühlschrank steht in der Küche."
+      prompt: Artikel
+      options: [Die, Das, Der, Den]
+      answer: 2
+    explanation: "The article comes from the last part, der Schrank: der Kühlschrank."
+
+  # ───────────────────────── Fehlerkorrektur ─────────────────────────
+  - type: error_correction
+    group: grammar
+    content: { words: [Ich, koche, in, "Küche."], wrong: 2, correction: "in → in der" }
+    explanation: "The place phrase keeps its small word: Ich koche in der Küche."
+  - type: error_correction
+    group: grammar
+    content: { words: [In, der, Wohnung, gibt, es, ein, "Balkon."], wrong: 5, correction: "ein → einen" }
+    explanation: "es gibt takes the accusative, and der Balkon becomes einen Balkon."
+  - type: error_correction
+    group: grammar
+    content: { words: [Wo, die, Lampe, "ist?"], wrong: 1, correction: "die Lampe ist → ist die Lampe" }
+    explanation: "In a W-question the verb comes second: Wo ist die Lampe?"
+  # SPIRAL · M1 — nouns keep their capital letter
+  - type: error_correction
+    group: grammar
+    content: { words: [Die, wohnung, ist, hell, und, "gemütlich."], wrong: 1, correction: "wohnung → Wohnung" }
+    explanation: "Every German noun starts with a capital letter: die Wohnung."
+
+  # ───────────────────────── Wort-Paare ─────────────────────────
+  - type: collocation_match
+    group: grammar
+    content:
+      left: [das Bad, das Schlafzimmer, die Küche, der Balkon]
+      right: [im Schlafzimmer, auf dem Balkon, im Bad, in der Küche]
+      pairs: { 0: 2, 1: 0, 2: 3, 3: 1 }
+    explanation: "im Bad · im Schlafzimmer · in der Küche · auf dem Balkon."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [die Dusche, der Kühlschrank, das Bett, das Sofa]
+      right: [das Wohnzimmer, das Bad, das Schlafzimmer, die Küche]
+      pairs: { 0: 1, 1: 3, 2: 2, 3: 0 }
+    explanation: "Die Dusche ist im Bad · der Kühlschrank in der Küche · das Bett im Schlafzimmer · das Sofa im Wohnzimmer."
+  - type: collocation_match
+    group: grammar
+    content:
+      left: [das Schlafzimmer, das Wohnzimmer, der Kühlschrank, die Haustür]
+      right: ["kühl + der Schrank", "wohnen + das Zimmer", "das Haus + die Tür", "schlafen + das Zimmer"]
+      pairs: { 0: 3, 1: 1, 2: 0, 3: 2 }
+    explanation: "The last part always gives the article: das Zimmer → das Schlafzimmer, die Tür → die Haustür."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [eine Wohnung, Kaffee, fern, die Miete]
+      right: [sehen, bezahlen, suchen, trinken]
+      pairs: { 0: 2, 1: 3, 2: 0, 3: 1 }
+    explanation: "eine Wohnung suchen · Kaffee trinken · fernsehen · die Miete bezahlen."
+
+  # ───────────────────────── Leseverstehen ─────────────────────────
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "In der Wohnung gibt es vier Zimmer: eine Küche, ein Bad, ein Schlafzimmer und ein Wohnzimmer."
+      q: "Wie viele Zimmer hat die Wohnung?"
+      options:
+        - Zwei
+        - Drei
+        - Vier
+        - Fünf
+      answer: 2
+    explanation: "The text lists four rooms: eine Küche, ein Bad, ein Schlafzimmer und ein Wohnzimmer."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Im Bad gibt es eine Dusche und eine Toilette. Einen Garten gibt es leider nicht."
+      q: "Was gibt es nicht?"
+      options:
+        - Einen Garten
+        - Ein Bad
+        - Eine Dusche
+        - Einen Balkon
+      answer: 0
+    explanation: "The text says: Einen Garten gibt es leider nicht."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Am Morgen trinke ich Kaffee auf dem Balkon. Am Abend ist es hier ruhig."
+      q: "Wo trinkt Jonas Kaffee?"
+      options:
+        - In der Küche
+        - Im Wohnzimmer
+        - Im Bad
+        - Auf dem Balkon
+      answer: 3
+    explanation: "The text says: Am Morgen trinke ich Kaffee auf dem Balkon."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Im Schlafzimmer stehen mein Bett und ein Schrank. Im Wohnzimmer gibt es ein Sofa, ein Regal und eine Lampe."
+      q: "Wo steht das Bett?"
+      options:
+        - Im Wohnzimmer
+        - Im Schlafzimmer
+        - Im Flur
+        - Auf dem Balkon
+      answer: 1
+    explanation: "The text says: Im Schlafzimmer stehen mein Bett und ein Schrank."
+
+review_pool:
+  - type: mc_cloze
+    group: grammar
+    content: { pre: "Die Lampe ist ", post: " Flur.", options: [im, in der, auf dem, in], answer: 0 }
+    explanation: "der Flur → im Flur."
+  - type: mc_cloze
+    group: grammar
+    content: { pre: "Wir kochen ", post: " Küche.", options: [im, in der, auf dem, an der], answer: 1 }
+    explanation: "die Küche → in der Küche."
+  - type: mc_cloze
+    group: grammar
+    content: { pre: "Das Handy ist ", post: " Tisch.", options: [im, in der, auf dem, in dem], answer: 2 }
+    explanation: "A table is a surface: auf dem Tisch."
+  - type: mc_cloze
+    group: grammar
+    content: { pre: "", post: " wohnt Anna? — In Hamburg.", options: [Wer, Wie, Was, Wo], answer: 3 }
+    explanation: "The answer is a place, so the question word is Wo."
+  - type: mc_cloze
+    group: grammar
+    content: { pre: "Es gibt ", post: " Schrank im Flur.", options: [einen, ein, eine, einem], answer: 0 }
+    explanation: "der Schrank → einen Schrank after es gibt."
+  - type: open_cloze
+    group: grammar
+    content: { pre: "Meine Bücher sind ", post: " Regal.", answers: [im], answer_shown: im }
+    explanation: "das Regal → im Regal."
+  - type: open_cloze
+    group: grammar
+    content: { pre: "Das Sofa steht ", post: " Wohnzimmer.", answers: [im], answer_shown: im }
+    explanation: "das Wohnzimmer → im Wohnzimmer."
+  - type: open_cloze
+    group: grammar
+    content: { pre: "Anna zieht am Montag ", post: ".", hint: umziehen, answers: [um], answer_shown: um }
+    explanation: "umziehen splits: the prefix um stands last."
+  - type: open_cloze
+    group: grammar
+    content: { pre: "", post: " ist der Kühlschrank? — In der Küche.", answers: [Wo], answer_shown: Wo }
+    explanation: "wo asks for a place, and the verb follows it directly."
+  - type: grammar_drill
+    group: grammar
+    content: { pre: "Auf dem Balkon ", post: " ich Kaffee.", prompt: trinken, options: [trinke, trinkst, trinkt, trinken], answer: 0 }
+    explanation: "The place phrase in front keeps the verb second, and ich takes -e."
+  - type: grammar_drill
+    group: grammar
+    content: { pre: "Es gibt ", post: " Garten.", prompt: Akkusativ, options: [kein, keine, keinen, keinem], answer: 2 }
+    explanation: "der Garten is masculine: es gibt keinen Garten."
+  - type: grammar_drill
+    group: grammar
+    content: { pre: "", post: " ist mein Handy?", prompt: W-Frage, options: [Wer, Was, Wo, Wie], answer: 2 }
+    explanation: "You are asking for a place, so the question word is Wo."
+  - type: grammar_drill
+    group: grammar
+    content: { pre: "Der Teppich ist ", post: " Wohnzimmer.", prompt: Ortsangabe, options: [in, im, in der, auf der], answer: 1 }
+    explanation: "das Wohnzimmer → im Wohnzimmer."
+  - type: error_correction
+    group: grammar
+    content: { words: [Die, Dusche, ist, in, "Bad."], wrong: 3, correction: "in → im" }
+    explanation: "das Bad takes im: Die Dusche ist im Bad."
+  - type: error_correction
+    group: grammar
+    content: { words: [Im, Wohnzimmer, ich, sehe, "fern."], wrong: 2, correction: "ich sehe → sehe ich" }
+    explanation: "With a place phrase in front the verb still comes second: Im Wohnzimmer sehe ich fern."
+  - type: collocation_match
+    group: grammar
+    content:
+      left: [die Küche, das Bad, das Regal, der Balkon]
+      right: [im Regal, in der Küche, auf dem Balkon, im Bad]
+      pairs: { 0: 1, 1: 3, 2: 0, 3: 2 }
+    explanation: "in der Küche · im Bad · im Regal · auf dem Balkon."

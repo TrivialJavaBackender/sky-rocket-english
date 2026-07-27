@@ -1,0 +1,53 @@
+# Module 10 · main text — a short blog post: Jonas moves into a new flat and
+# walks the reader through it, room by room. Real genre, not an exercise: it
+# carries all 24 target words and every target construction (place phrases with
+# im / in der / auf dem, the question wo?, es gibt with einen / eine / ein and
+# the negative, a place phrase in front with the verb second, the compound nouns
+# Schlafzimmer / Wohnzimmer / Kühlschrank, and the separable umziehen from
+# module 9). Glosses (5) sit only on words whose form in the text is the
+# dictionary form and which are not vocab entries of the module.
+kind: main
+kicker: BLOG
+title: Meine neue Wohnung
+meta: ≈ 2 min · dotted words have a note — tap to reveal
+body:
+  - - t: "Ich heiße Jonas und ich suche lange eine Wohnung. Am Samstag ziehe ich um. Meine Wohnung ist klein und hell, und die Miete ist nicht teuer. Das Haus ist alt: die "
+    - g: Treppe
+    - t: " ist lang, der "
+    - g: Keller
+    - t: " ist dunkel."
+  - - t: "In der Wohnung gibt es vier Zimmer: eine Küche, ein Bad, ein Schlafzimmer und ein Wohnzimmer. Der Flur ist klein und dunkel. Im Bad gibt es eine Dusche und eine "
+    - g: Toilette
+    - t: ". Einen Garten gibt es leider nicht."
+  - - t: "Im Schlafzimmer stehen mein Bett und ein Schrank. Im Wohnzimmer gibt es ein Sofa, ein Regal und eine Lampe. Der Teppich ist blau. In der Küche steht der Kühlschrank."
+  - - t: "Am Morgen trinke ich Kaffee auf dem Balkon. Am Abend ist es hier "
+    - g: ruhig
+    - t: ". Mein Nachbar heißt Herr Klein und wohnt allein. Wo ist mein Handy? Im Regal? Auf dem Sofa? Die Wohnung ist "
+    - g: neu
+    - t: " und gemütlich."
+glosses:
+  - key: Treppe
+    term: die Treppe
+    pos_label: noun
+    definition: stairs; you use them to go up in a house
+    example: Die Treppe im Haus ist lang.
+  - key: Keller
+    term: der Keller
+    pos_label: noun
+    definition: a cellar, a basement; the dark room under the house
+    example: Der Keller ist dunkel und kalt.
+  - key: Toilette
+    term: die Toilette
+    pos_label: noun
+    definition: a toilet; it is in the bathroom or next to it
+    example: Im Bad gibt es eine Toilette.
+  - key: ruhig
+    term: ruhig
+    pos_label: adjective
+    definition: quiet, calm; no noise. The opposite is laut
+    example: Am Abend ist die Wohnung ruhig.
+  - key: neu
+    term: neu
+    pos_label: adjective
+    definition: new, not old. The opposite is alt
+    example: Meine Wohnung ist neu.

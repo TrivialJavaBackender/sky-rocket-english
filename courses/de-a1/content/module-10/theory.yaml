@@ -1,0 +1,115 @@
+# Module 10 · theory. Two spotlights, 6 items — three for the place phrase and
+# the question wo? (grammar points 1 and 2 of the card), three for es gibt in the
+# home, the compound noun (the word-formation extension of this module) and the
+# old verb-second rule meeting the new phrase.
+# The dative is NEVER presented as a system here: every phrase comes ready-made
+# in a table, the note says "learn the room together with its phrase", and no
+# item explains why it is der or dem. Building a case form is module A2 work.
+# Scaffolding rule (§5): intro and note English, every example and table German.
+# Grammar terms are named in English directly (§5.1).
+spotlights:
+  - title: Wo? — place comes as one ready-made phrase
+    intro: "German says where something is with a small phrase in front of the noun: im Bad, in der Küche, auf dem Balkon. The phrase changes with the room, and you do not have to build it — you learn the room and its phrase together, exactly the way you learned am Montag in module 9."
+    items:
+      - form: "in + room → im (der / das rooms) · in der (die rooms)"
+        example: "Das Bett steht im Schlafzimmer. Im Bad gibt es eine Dusche. Wir frühstücken in der Küche. In der Wohnung gibt es einen Balkon."
+        note: "im is short for in + dem. Learn each room with its own phrase — never in Küche alone."
+        table:
+          headers: ["Artikel", "Zimmer", "Wo?"]
+          rows:
+            - ["das", "das Bad", "im Bad"]
+            - ["das", "das Wohnzimmer", "im Wohnzimmer"]
+            - ["das", "das Schlafzimmer", "im Schlafzimmer"]
+            - ["der", "der Flur", "im Flur"]
+            - ["der", "der Garten", "im Garten"]
+            - ["die", "die Küche", "in der Küche"]
+            - ["die", "die Wohnung", "in der Wohnung"]
+      - form: "auf dem Balkon — auf for a surface"
+        example: "Am Morgen trinke ich Kaffee auf dem Balkon. Die Brille ist auf dem Sofa. Das Buch ist auf dem Tisch."
+        note: "in for a room you go into, auf for a surface you put something on. Both phrases come ready-made."
+        table:
+          headers: ["Wo?", "Beispiel"]
+          rows:
+            - ["auf dem Balkon", "Ich trinke Kaffee auf dem Balkon."]
+            - ["auf dem Sofa", "Die Zeitung ist auf dem Sofa."]
+            - ["auf dem Tisch", "Das Handy ist auf dem Tisch."]
+            - ["im Regal", "Meine Bücher sind im Regal."]
+            - ["im Schrank", "Die Brille ist im Schrank."]
+      - form: "The question wo?"
+        example: "Wo ist die Lampe? — Im Wohnzimmer. Wo wohnst du? — In Hamburg. Wo frühstückt ihr? — In der Küche."
+        note: "wo asks for a place. The verb comes second, as in every W-question you know."
+        table:
+          headers: ["Frage", "Antwort"]
+          rows:
+            - ["Wo ist der Kühlschrank?", "In der Küche."]
+            - ["Wo ist die Dusche?", "Im Bad."]
+            - ["Wo steht das Bett?", "Im Schlafzimmer."]
+            - ["Wo wohnst du?", "In Hamburg."]
+
+  - title: In the flat — es gibt, long words and word order
+    intro: Three things you already know come back in the flat. es gibt from module 7 says what is there, German glues two short words into one long one, and the verb keeps standing in position two — also after a place phrase.
+    items:
+      - form: "es gibt + accusative"
+        example: "In der Wohnung gibt es einen Balkon. Im Bad gibt es eine Dusche. Es gibt ein Regal. Einen Garten gibt es leider nicht."
+        note: "es gibt always takes the accusative: der → einen, die and das stay. The negative is keinen / keine / kein."
+        table:
+          headers: ["Nomen", "es gibt …", "negativ"]
+          rows:
+            - ["der Balkon", "Es gibt einen Balkon.", "Es gibt keinen Balkon."]
+            - ["die Dusche", "Es gibt eine Dusche.", "Es gibt keine Dusche."]
+            - ["das Regal", "Es gibt ein Regal.", "Es gibt kein Regal."]
+            - ["der Garten", "Es gibt einen Garten.", "Es gibt keinen Garten."]
+      - form: "Two words, one word: schlafen + das Zimmer → das Schlafzimmer"
+        example: "Das Schlafzimmer ist dunkel. Das Wohnzimmer ist hell. Der Kühlschrank steht in der Küche. Die Haustür ist blau."
+        note: "The last part gives the article and the plural. The first part says what kind of thing it is."
+        table:
+          headers: ["Teil 1", "Teil 2", "Ein Wort"]
+          rows:
+            - ["schlafen", "das Zimmer", "das Schlafzimmer"]
+            - ["wohnen", "das Zimmer", "das Wohnzimmer"]
+            - ["kühl", "der Schrank", "der Kühlschrank"]
+            - ["das Haus", "die Tür", "die Haustür"]
+            - ["das Bad", "das Zimmer", "das Badezimmer"]
+      - form: "A place phrase in front — the verb still comes second"
+        example: "Im Wohnzimmer steht ein Sofa. In der Küche gibt es einen Kühlschrank. Auf dem Balkon trinke ich Kaffee."
+        note: "Same rule as with a time phrase in module 5: the subject moves behind the verb."
+        table:
+          headers: ["Normal", "Ort vorn"]
+          rows:
+            - ["Ein Sofa steht im Wohnzimmer.", "Im Wohnzimmer steht ein Sofa."]
+            - ["Ich trinke Kaffee auf dem Balkon.", "Auf dem Balkon trinke ich Kaffee."]
+            - ["Ich sehe im Wohnzimmer fern.", "Im Wohnzimmer sehe ich fern."]
+
+watchouts:
+  - title: in der Küche, not in Küche
+    bad: Ich koche in Küche.
+    good: Ich koche in der Küche.
+    note: "The place phrase always keeps its small word: in der, im, auf dem."
+  - title: es gibt takes the accusative
+    bad: In der Wohnung gibt es ein Balkon.
+    good: In der Wohnung gibt es einen Balkon.
+    note: "der words become einen after es gibt: einen Balkon, einen Garten, einen Schrank."
+  - title: Wo ist …? — the verb comes second
+    bad: Wo die Lampe ist?
+    good: Wo ist die Lampe?
+    note: After wo the verb follows immediately, like in every W-question.
+
+cloze_cards:
+  - text: "Das Bett steht {{c1::im}} Schlafzimmer."
+    hint: in
+    rule: "in + das Schlafzimmer → im Schlafzimmer. Learn the room together with its phrase."
+  - text: "Wir frühstücken {{c1::in}} der Küche."
+    hint: in
+    rule: "die Küche takes in der Küche — the phrase keeps both small words."
+  - text: "Am Morgen trinke ich Kaffee {{c1::auf}} dem Balkon."
+    hint: auf
+    rule: "A balcony is a surface: auf dem Balkon. A room takes in."
+  - text: "{{c1::Wo}} ist die Lampe? — Im Wohnzimmer."
+    hint: wo
+    rule: "wo asks for a place, and the verb comes second: Wo ist die Lampe?"
+  - text: "In der Wohnung gibt es {{c1::einen}} Balkon."
+    hint: ein
+    rule: "es gibt takes the accusative, so der Balkon → einen Balkon."
+  - text: "In der Küche {{c1::steht}} ein Kühlschrank."
+    hint: stehen
+    rule: "A place phrase in front keeps the verb in position two: In der Küche steht …"

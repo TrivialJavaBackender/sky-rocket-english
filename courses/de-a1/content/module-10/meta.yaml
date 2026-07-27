@@ -1,0 +1,26 @@
+# Module 10 · Rund ums Haus. Scaffolding (goals, standfirst) English, title German
+# (§5). grammar_points repeat the module card's opis (3) with no additions. The
+# dative in this module is a memorised chunk, never a system: in der Küche, im
+# Bad, auf dem Balkon are learnt whole, the way am Montag was learnt in module 9.
+# The word-formation extension is the compound noun (schlafen + das Zimmer →
+# das Schlafzimmer) — it lives in the theory table and in the word_formation
+# tasks, not as separate vocab entries.
+slug: m10
+title: Rund ums Haus
+standfirst: Place phrases as fixed chunks, the question wo? and es gibt · 24 words · describe your home.
+goals:
+  - text: Say where something is with a ready-made phrase — im Bad, in der Küche, auf dem Balkon
+    achieved_by: workout
+  - text: Ask and answer the question wo?
+    achieved_by: workout
+  - text: Learn 24 words for the flat, the rooms and the furniture
+    achieved_by: input
+  - text: Write a short text about your own home
+    achieved_by: output
+grammar_points:
+  - Place as a ready-made phrase (in der Küche, im Bad, auf dem Balkon) — learnt whole, not as a case system
+  - The question wo?
+  - es gibt with the accusative in the home (revision)
+production:
+  mode: writing
+  genre: a short text about your own home

@@ -79,7 +79,7 @@ blocks:
       - slug: m10
         dir: module-10
         title: Rund ums Haus
-        standfirst: Place phrases and the question wo? · 24 words · describe your home.
+        standfirst: Place phrases as fixed chunks, the question wo? and es gibt · 24 words · describe your home.
 
   - slug: c
     name: Out and about

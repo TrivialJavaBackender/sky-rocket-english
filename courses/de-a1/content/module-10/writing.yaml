@@ -1,0 +1,31 @@
+# Module 10 · production. Scaffolding (prompt, checklist) English; model answer
+# German (§5). The model stays inside what modules 1–10 can produce: place phrases
+# as whole chunks (im …, in der …, auf dem …), es gibt with einen/eine/ein and
+# the negative, the question wo?, the present tense, verb-second after a place
+# phrase and und. No dative built from scratch, no imperative, no müssen/dürfen,
+# no adjective endings, no date, no Perfekt.
+mode: writing
+genre: a short text about your own home
+word_target: [30, 40]
+prompt: |
+  A German friend is looking for a flat and asks about yours. Write a short text
+  about your home for the course blog. 30–40 words.
+
+  Say something about each point:
+  • what your home is like (klein, groß, hell, dunkel, gemütlich)
+  • which rooms there are (es gibt eine Küche, ein Bad …)
+  • what is not there (Einen Garten gibt es nicht.)
+  • what stands in one room and where you like to be
+
+  Use at least three place phrases (im …, in der …, auf dem …) and es gibt
+  at least twice.
+model_answer: |
+  Meine Wohnung ist nicht groß, und sie ist sehr gemütlich. Es gibt eine
+  Küche, ein Bad und zwei Zimmer. Einen Balkon gibt es leider nicht. Im
+  Wohnzimmer stehen ein Sofa und ein Regal. Am Abend sehe ich hier fern.
+checklist:
+  - Three or more place phrases, each one complete — im, in der or auf dem
+  - es gibt at least twice, once with einen, eine or ein
+  - One sentence says what your home does not have
+  - The verb stands second, also after a place phrase in front
+  - Every noun has a capital letter, and the text is 30–40 words long
