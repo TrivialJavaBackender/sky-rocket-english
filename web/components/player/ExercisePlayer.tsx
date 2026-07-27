@@ -89,9 +89,16 @@ export function ExercisePlayer({
   initialResults?: Array<boolean | null>;
   initialIndex?: number;
 }) {
-  const [i, setI] = useState(() => (initialIndex > 0 && initialIndex < items.length ? initialIndex : 0));
+  // Grading calls `revalidatePath('/review')` (and '/', '/progress'), which
+  // refetches whichever route assembled this queue and hands us an `items`
+  // prop that no longer matches the run in progress — e.g. a review-slot item
+  // just graded can drop out of the list entirely. Indexing against that
+  // shifting list would skip or misalign items mid-run, so the run works off
+  // a snapshot taken when the player mounted.
+  const [deck] = useState(items);
+  const [i, setI] = useState(() => (initialIndex > 0 && initialIndex < deck.length ? initialIndex : 0));
   const [results, setResults] = useState<Array<boolean | null>>(() =>
-    initialResults && initialResults.length === items.length ? initialResults : items.map(() => null),
+    initialResults && initialResults.length === deck.length ? initialResults : deck.map(() => null),
   );
   const [attempts, setAttempts] = useState<ExercisePlayerAttempt[]>([]);
   const [phase, setPhase] = useState<'ans' | 'chk'>('ans');
@@ -104,7 +111,7 @@ export function ExercisePlayer({
   const [startedAt] = useState(() => Date.now());
   const router = useRouter();
 
-  const item = items[i];
+  const item = deck[i];
 
   async function handleSubmit(given: GivenAnswer) {
     if (phase !== 'ans' || grading || !item) return;
@@ -131,12 +138,12 @@ export function ExercisePlayer({
   }
 
   async function handleNext() {
-    if (i + 1 >= items.length) {
+    if (i + 1 >= deck.length) {
       setDone(true);
       if (onFinished) {
         setFinishing(true);
         const correct = results.filter((r) => r === true).length;
-        await onFinished({ total: items.length, correct, score: items.length === 0 ? 0 : Math.round((correct / items.length) * 100), attempts, harvestedCount: Object.keys(harvestedMap).length });
+        await onFinished({ total: deck.length, correct, score: deck.length === 0 ? 0 : Math.round((correct / deck.length) * 100), attempts, harvestedCount: Object.keys(harvestedMap).length });
         setFinishing(false);
       }
       return;
@@ -149,13 +156,13 @@ export function ExercisePlayer({
   if (done) {
     const correct = results.filter((r) => r === true).length;
     const harvestedCount = Object.keys(harvestedMap).length;
-    const missed = items.length - correct;
+    const missed = deck.length - correct;
     return (
       <div className="fixed inset-0 z-50 overflow-y-auto bg-bg">
         <div className="animate-fade-up mx-auto max-w-[560px] px-2 py-11 text-center">
           <Kicker>Practice complete</Kicker>
           <div className="my-1.5 text-[56px] font-bold tracking-tight tabular-nums">
-            {correct} / {items.length}
+            {correct} / {deck.length}
           </div>
           <div className="text-[15px] text-fg-muted">
             {harvestedCount === 0 ? 'Nothing logged — a clean run.' : `${harvestedCount} ${harvestedCount === 1 ? 'mistake' : 'mistakes'} logged in your error map.`}
@@ -215,7 +222,7 @@ export function ExercisePlayer({
           <div className="mb-3.5 flex items-center justify-between">
             <Kicker tone="green">{EXERCISE_TYPE_LABELS[item.typeCode]}</Kicker>
             <span className="text-xs tabular-nums text-fg-faint">
-              {i + 1} of {items.length}
+              {i + 1} of {deck.length}
             </span>
           </div>
 
@@ -239,7 +246,7 @@ export function ExercisePlayer({
           {phase === 'chk' && (
             <div className="mt-4 flex justify-end">
               <Button onClick={handleNext} disabled={finishing}>
-                {i + 1 >= items.length ? 'Finish →' : 'Next →'}
+                {i + 1 >= deck.length ? 'Finish →' : 'Next →'}
               </Button>
             </div>
           )}
