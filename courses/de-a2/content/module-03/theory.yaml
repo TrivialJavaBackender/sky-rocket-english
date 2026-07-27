@@ -1,20 +1,31 @@
-# Modul 03 · Wohnen und Einrichten — Grammatik im Fokus, Watch out! und Lückenkarten.
-# 7 Punkte — genau die Grammatik-Liste der Modulkarte (courses/de-a2/PLAN.md §4).
+# Modul 03 · Wohnen und Einrichten — theory. Two spotlights, 9 items realising
+# the seven grammar points of the module card (courses/de-a2/PLAN.md §4).
 #
-# Die Formen des Dativs kommen aus Modul 02 und werden hier nicht neu erklärt,
-# sondern dem Akkusativ gegenübergestellt. Deshalb steht dieses Modul nach den
-# Präpositionen mit festem Kasus und nicht davor.
+# The dative forms come from module 02 and are not explained again here, only
+# contrasted with the accusative. That is why this module comes after the
+# prepositions with a fixed case and not before them.
 #
-# Fachwörter: alle aus dem Grammatik-Wörterbuch der Diagnostik. „Wechselpräposition“
-# nennt die Konstruktion, die dieses Modul einführt, und steht deshalb hier (§5.2).
-# Der Plural bleibt draußen: das -n im Dativ Plural gehört einem späteren Modul,
-# darum stehen in allen Tabellen nur Formen im Singular.
+# The plural stays out: the -n of the dative plural belongs to a later module,
+# so every table here shows the singular only.
+#
+# Scaffolding rule (§5, revised 2026-07): title, intro, form and note in English,
+# every example and table in German. Two-way prepositions and the stellen/stehen
+# pairs: courses/_reference/basic-german/ unit 24.
 spotlights:
-  - title: "Die Wechselpräpositionen"
-    intro: "Den Dativ kennen Sie schon. Neun Präpositionen nehmen ihn aber nur manchmal — die Frage entscheidet: Wo? oder Wohin?"
+  - title: The two-way prepositions
+    intro: >-
+      Module 02 gave you two closed lists: seven prepositions that always take
+      the dative and six that always take the accusative. Nine more sit between
+      them and take either, depending on what the sentence is about. The test is
+      a question. If the sentence answers Wo? — where something is — the case is
+      dative. If it answers Wohin? — where something is going — the case is
+      accusative. Nothing else matters: not the verb, not the noun, not the
+      preposition itself. Get into the habit of asking the question before you
+      choose the article, and the whole system falls into place.
     items:
-      - form: "Die neun Präpositionen"
-        note: "Nur diese neun wechseln. Alle anderen haben immer den gleichen Kasus."
+      - form: The nine two-way prepositions
+        example: "Das Buch liegt auf dem Tisch. Ich lege das Buch auf den Tisch."
+        note: Only these nine alternate. Every other preposition keeps one case for good.
         table:
           headers: ["Präposition", "Bedeutung"]
           rows:
@@ -27,24 +38,37 @@ spotlights:
             - ["hinter", "dahinter, weiter weg"]
             - ["neben", "direkt daneben"]
             - ["zwischen", "in der Mitte von zwei Dingen"]
-      - form: "Wo? — der Dativ"
-        note: "Die Formen kennen Sie von mit, bei und zu. Nichts bewegt sich, etwas ist einfach da."
+      - form: "Wo? — the dative"
+        example: "Die Lampe steht auf dem Tisch. Das Bild hängt an der Wand. Die Bücher sind im Regal."
+        note: You already know these forms from mit, bei and zu. Nothing moves — something simply is somewhere.
         table:
-          headers: ["Nominativ", "Wo? — Dativ"]
+          headers: ["Nominativ", "Wo? — Dativ", "Beispiel"]
           rows:
-            - ["der Tisch", "auf dem Tisch"]
-            - ["die Wand", "an der Wand"]
-            - ["das Regal", "in dem Regal"]
-      - form: "Wohin? — der Akkusativ"
-        note: "Etwas bewegt sich von A nach B und kommt dort an."
+            - ["der Tisch", "auf dem Tisch", "Die Lampe steht auf dem Tisch."]
+            - ["die Wand", "an der Wand", "Das Bild hängt an der Wand."]
+            - ["das Regal", "in dem Regal", "Das Buch liegt im Regal."]
+      - form: "Wohin? — the accusative"
+        example: "Ich stelle die Lampe auf den Tisch. Ich hänge das Bild an die Wand."
+        note: Something travels from A to B and arrives there. The end point takes the accusative.
         table:
-          headers: ["Nominativ", "Wohin? — Akkusativ"]
+          headers: ["Nominativ", "Wohin? — Akkusativ", "Beispiel"]
           rows:
-            - ["der Tisch", "auf den Tisch"]
-            - ["die Wand", "an die Wand"]
-            - ["das Regal", "in das Regal"]
-      - form: "Die kurzen Formen"
-        note: "Wie bei zum und beim. Neu sind hier nur ins und ans für Wohin?."
+            - ["der Tisch", "auf den Tisch", "Ich stelle die Lampe auf den Tisch."]
+            - ["die Wand", "an die Wand", "Ich hänge das Bild an die Wand."]
+            - ["das Regal", "in das Regal", "Ich lege das Buch ins Regal."]
+      - form: Ask the question first
+        example: "Wo ist der Sessel? — In der Ecke. Wohin stellst du den Sessel? — In die Ecke."
+        note: One sentence pair, both cases. The words are almost identical; only the question behind them differs.
+        table:
+          headers: ["Frage", "Kasus", "Beispiel"]
+          rows:
+            - ["Wo?", "Dativ", "Der Sessel steht in der Ecke."]
+            - ["Wohin?", "Akkusativ", "Ich stelle den Sessel in die Ecke."]
+            - ["Wo?", "Dativ", "Der Teppich liegt auf dem Boden."]
+            - ["Wohin?", "Akkusativ", "Ich lege den Teppich auf den Boden."]
+      - form: The contracted forms
+        example: "Die Bücher sind im Regal. Ich lege sie ins Regal."
+        note: "Same idea as zum and beim. New here are ins and ans, which belong to Wohin?"
         table:
           headers: ["lang", "kurz", "Frage"]
           rows:
@@ -53,12 +77,18 @@ spotlights:
             - ["an dem", "am", "Wo?"]
             - ["an das", "ans", "Wohin?"]
 
-  - title: "Stellen oder stehen?"
-    intro: "Zu jeder Frage gehört ein anderes Verb. Das Verb und der Kasus passen immer zusammen."
+  - title: stellen or stehen?
+    intro: >-
+      German splits in two what English covers with 'put' and 'be'. Each question
+      has its own verb, and the verb and the case always agree. stellen, legen
+      and hängen describe the moving — they need an object and go with Wohin? and
+      the accusative. stehen, liegen and hängen describe the result — no object,
+      Wo?, dative. Notice that hängen appears in both columns: it is the one verb
+      where only the case tells you which of the two you mean.
     items:
       - form: "Wohin? — stellen, legen, hängen"
         example: Ich stelle die Lampe auf den Tisch. Er legt das Buch ins Regal.
-        note: "Diese Verben brauchen ein Objekt und den Akkusativ."
+        note: These verbs need an object and the accusative. Someone is doing something to a thing.
         table:
           headers: ["Verb", "Beispiel"]
           rows:
@@ -67,15 +97,16 @@ spotlights:
             - ["hängen", "Ich hänge das Bild an die Wand."]
       - form: "Wo? — stehen, liegen, hängen"
         example: Die Lampe steht auf dem Tisch. Das Buch liegt im Regal.
-        note: "Diese Verben brauchen kein Objekt und den Dativ."
+        note: These verbs take no object and the dative. The thing itself is the subject.
         table:
           headers: ["Verb", "Beispiel"]
           rows:
             - ["stehen", "Der Sessel steht in der Ecke."]
             - ["liegen", "Der Teppich liegt auf dem Boden."]
             - ["hängen", "Das Bild hängt an der Wand."]
-      - form: "Die Paare"
-        note: "hängen steht in beiden Spalten — nur der Kasus zeigt den Unterschied."
+      - form: The three pairs
+        example: "Ich stelle das Glas auf den Tisch. Das Glas steht auf dem Tisch."
+        note: hängen sits in both columns — only the case shows the difference.
         table:
           headers: ["Wohin? + Akkusativ", "Wo? + Dativ"]
           rows:
@@ -83,47 +114,66 @@ spotlights:
             - ["legen", "liegen"]
             - ["hängen", "hängen"]
             - ["Ich stelle das Glas auf den Tisch.", "Das Glas steht auf dem Tisch."]
+      - form: "stehen or liegen — upright or flat"
+        example: "Die Flasche steht auf dem Tisch. Das Buch liegt auf dem Tisch."
+        note: German asks how the thing rests. Upright objects stehen, flat ones liegen — English says 'is' for both.
+        table:
+          headers: ["Ding", "Verb", "Satz"]
+          rows:
+            - ["die Flasche", "stehen", "Die Flasche steht im Schrank."]
+            - ["das Buch", "liegen", "Das Buch liegt auf dem Tisch."]
+            - ["der Teppich", "liegen", "Der Teppich liegt auf dem Boden."]
+            - ["die Lampe", "stehen", "Die Lampe steht neben dem Bett."]
+            - ["das Bild", "hängen", "Das Bild hängt über dem Sofa."]
 
 watchouts:
-  - title: "Wohin? braucht den Akkusativ"
+  - title: "Wohin? needs the accusative"
     bad: Ich lege das Buch auf dem Tisch.
     good: Ich lege das Buch auf den Tisch.
-    note: "Das Buch bewegt sich: Frage Wohin? — also der Akkusativ."
-  - title: "Wo? braucht den Dativ"
+    note: "The book is moving, so the question is Wohin? — and the case is accusative."
+  - title: "Wo? needs the dative"
     bad: Der Schrank steht in die Ecke.
     good: Der Schrank steht in der Ecke.
-    note: "Der Schrank bewegt sich nicht: Frage Wo? — also der Dativ."
-  - title: "stellen und stehen sind zwei Verben"
+    note: "The wardrobe is not moving, so the question is Wo? — and the case is dative."
+  - title: stellen and stehen are two different verbs
     bad: Die Lampe stellt auf dem Tisch.
     good: Die Lampe steht auf dem Tisch.
-    note: "stellen braucht ein Objekt: Ich stelle die Lampe. Ohne Objekt steht stehen."
-  - title: "Ein Wort, nicht zwei"
+    note: "stellen needs an object: Ich stelle die Lampe. With no object the verb is stehen."
+  - title: One word, not two
     bad: Wir haben ein neues Schlaf Zimmer.
     good: Wir haben ein neues Schlafzimmer.
-    note: "Zwei Nomen werden im Deutschen immer ein Wort: das Schlafzimmer, der Kleiderschrank."
+    note: "Two nouns always become one word in German: das Schlafzimmer, der Kleiderschrank."
+  - title: A bottle stands, a book lies
+    bad: Die Flasche liegt im Schrank.
+    good: Die Flasche steht im Schrank.
+    note: German distinguishes upright from flat. A bottle on its base steht, a book on the table liegt.
+  - title: in das is normally ins
+    bad: Ich lege das Buch in das Regal.
+    good: Ich lege das Buch ins Regal.
+    note: The contracted form is the everyday one, exactly like im, am and zum.
 
 cloze_cards:
   - text: "Die Lampe steht auf {{c1::dem}} Schreibtisch."
     hint: der Schreibtisch
-    rule: "stehen fragt Wo? — also der Dativ. der Schreibtisch → dem Schreibtisch."
+    rule: "stehen answers Wo?, so the case is dative. der Schreibtisch → dem Schreibtisch."
   - text: "Ich hänge das Bild an {{c1::die}} Wand."
     hint: die Wand
-    rule: "hängen mit Objekt fragt Wohin? — also der Akkusativ. die Wand bleibt die."
+    rule: "hängen with an object answers Wohin?, so the case is accusative. die Wand stays die."
   - text: "Der Schrank steht in {{c1::der}} Ecke neben dem Fenster."
     hint: die Ecke
-    rule: "stehen fragt Wo? — Dativ. die Ecke → der Ecke."
+    rule: "stehen answers Wo? — dative. die Ecke → der Ecke."
   - text: "Leg den Teppich bitte auf {{c1::den}} Boden!"
     hint: der Boden
-    rule: "legen fragt Wohin? — Akkusativ. der Boden → den Boden."
+    rule: "legen answers Wohin? — accusative. der Boden → den Boden."
   - text: "Die Bücher liegen {{c1::im}} Regal, nicht auf dem Tisch."
     hint: in dem
-    rule: "liegen fragt Wo? — Dativ. in dem wird kurz zu im."
+    rule: "liegen answers Wo? — dative, and in dem contracts to im."
   - text: "Stell den Sessel bitte {{c1::ans}} Fenster!"
     hint: an das
-    rule: "stellen fragt Wohin? — Akkusativ. an das wird kurz zu ans."
+    rule: "stellen answers Wohin? — accusative, and an das contracts to ans."
   - text: "Das Regal hängt über {{c1::dem}} Sofa."
     hint: das Sofa
-    rule: "hängen ohne Objekt fragt Wo? — Dativ. das Sofa → dem Sofa."
+    rule: "hängen without an object answers Wo? — dative. das Sofa → dem Sofa."
   - text: "Wir haben den Tisch zwischen {{c1::das}} Regal und den Sessel gestellt."
     hint: das Regal
-    rule: "stellen fragt Wohin? — Akkusativ. das Regal bleibt das."
+    rule: "stellen answers Wohin? — accusative. das Regal stays das."

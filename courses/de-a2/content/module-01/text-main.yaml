@@ -2,9 +2,9 @@
 # ReadingText rendert `gloss.term` direkt in den Fließtext (components/reading/
 # ReadingText.tsx). Ein Gloss auf einer gebeugten Stelle würde den Satz zerstören.
 kind: main
-kicker: LESETEXT
+kicker: READING
 title: Was hast du am Wochenende gemacht?
-meta: ≈ 3 Min · Wörter mit Punkten haben eine Erklärung — tippen Sie darauf
+meta: ≈ 3 min · dotted words carry glosses — tap to reveal
 body:
   - - t: "Am Montag im Büro fragen alle das Gleiche: Was hast du am Wochenende gemacht? Für Nina ist die Antwort diesmal lang geworden."
   - - t: "Am Freitagabend ist sie früh nach Hause gekommen und hat zuerst die Wohnung aufgeräumt. „Das klingt langweilig“, sagt sie und lacht, „aber so habe ich danach zwei freie Tage gehabt.“"
@@ -21,16 +21,16 @@ body:
 glosses:
   - key: Mitternacht
     term: Mitternacht
-    pos_label: Nomen
-    definition: Zwölf Uhr in der Nacht. Der Tag ist zu Ende, der neue beginnt.
+    pos_label: noun
+    definition: midnight; twelve at night, when one day ends and the next begins
     example: Wir haben bis nach Mitternacht geredet.
   - key: gemütlich
     term: gemütlich
-    pos_label: Adjektiv
-    definition: Ruhig und angenehm. Man fühlt sich wohl und hat keine Eile.
+    pos_label: adjective
+    definition: cosy, relaxed — calm and pleasant, with no hurry
     example: Das Café ist klein und sehr gemütlich.
   - key: anstrengend
     term: anstrengend
-    pos_label: Adjektiv
-    definition: Man braucht viel Kraft. Danach ist man müde.
+    pos_label: adjective
+    definition: tiring, exhausting — it takes a lot out of you
     example: Die Wanderung war schön, aber anstrengend.

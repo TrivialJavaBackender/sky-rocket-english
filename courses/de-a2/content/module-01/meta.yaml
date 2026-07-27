@@ -1,23 +1,23 @@
 slug: m01
 title: Mein Wochenende
-standfirst: Perfekt mit haben und sein · 30 Wörter · vom Wochenende berichten.
+standfirst: The perfect tense with haben and sein · 30 words · report on your weekend.
 goals:
-  - text: Das Partizip von regelmäßigen, unregelmäßigen und trennbaren Verben bilden
+  - text: Build the past participle of regular, irregular and separable verbs
     achieved_by: workout
-  - text: haben oder sein als richtige Perfektform wählen
+  - text: Choose haben or sein correctly as the auxiliary
     achieved_by: workout
-  - text: 30 Wörter zu Freizeit und Wochenende sicher benutzen
+  - text: Use 30 words about free time and the weekend
     achieved_by: input
-  - text: In einem kurzen Text vom letzten Wochenende erzählen
+  - text: Tell the story of last weekend in a short text
     achieved_by: output
 grammar_points:
-  - Das Partizip der regelmäßigen Verben
-  - Das Partizip der unregelmäßigen Verben
-  - Das Partizip der trennbaren Verben
-  - Das Perfekt mit haben
-  - Das Perfekt mit sein
-  - Die Stellung im Satz
-  - Die Zeitangaben
+  - The past participle of regular verbs
+  - The past participle of irregular verbs
+  - The past participle of separable verbs
+  - The perfect tense with haben
+  - The perfect tense with sein
+  - "Word order: auxiliary second, participle last"
+  - Time expressions for the past
 production:
   mode: writing
-  genre: Bericht vom Wochenende
+  genre: a post about your weekend

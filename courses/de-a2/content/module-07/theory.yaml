@@ -1,30 +1,27 @@
-# Modul 07 · Wohnungssuche — Grammatik im Fokus, Watch out! und Lückenkarten.
-# 6 Punkte — genau die Grammatik-Liste der Modulkarte (PLAN.md §4), als
-# 2 Spotlights zu je 3 Punkten. Erster Spotlight: das Adjektiv nach ein, kein,
-# mein und ohne Artikel (Nominativ und Akkusativ). Zweiter Spotlight: das
-# Adjektiv im Dativ und ein Überblick über alle Endungen.
+# Modul 07 · Wohnungssuche — theory. Two spotlights, 8 items realising the six
+# grammar points of the module card (courses/de-a2/PLAN.md §4).
 #
-# Fachwörter nur aus dem Grammatik-Wörterbuch der Diagnostik: das Adjektiv, die
-# Endung, der Artikel, das Nomen, das Genus, der Kasus mit Nominativ, Akkusativ
-# und Dativ, der Singular und der Plural. Der Begriff für die Konstruktion selbst
-# kommt nicht vor — die Regel steht als Beispiel in der Tabelle.
+# Module 06 covered the endings after der, das, die. This module adds the other
+# two patterns: after ein, kein, mein, and with no article at all — plus the
+# dative, where all three collapse into one ending.
 #
-# Der erste Punkt bindet die Endung an das schon bekannte Genus: ohne der, das,
-# die zeigt jetzt das Adjektiv das Genus (der wird -er, das wird -es, die wird -e).
-# Die schwierige Form ohne Artikel im Dativ (gutem, ruhiger) steht bewusst in
-# keiner Tabelle und wird nirgends verlangt; im Dativ steht überall -en.
-#
-# Die vier Watch-outs treffen die typischen Fehler: Endung nach ein bei den drei
-# Genus, vergessenes -en im Dativ, fehlendes Signal ohne Artikel und der
-# Akkusativ maskulin (einen, nicht ein). Die acht Lückenkarten wandern als
-# open_cloze in den Wiederholungspool; der Tipp ist die Grundform des Adjektivs.
+# Scaffolding rule (§5, revised 2026-07): title, intro, form and note in English,
+# every example and table in German. Adjective endings: courses/_reference/
+# basic-german/ unit 25.
 spotlights:
-- title: Das Adjektiv nach ein, kein, mein und ohne Artikel
-  intro: Auch nach ein, kein und mein bekommt das Adjektiv eine Endung. Ohne der, das, die zeigt jetzt das Adjektiv das Genus vom Nomen.
+- title: The adjective after ein, kein, mein and with no article
+  intro: >-
+    Module 06 gave you the easy pattern: after der, das and die the adjective
+    only ever takes -e or -en, because the article has already shown the gender.
+    Take the article away, or replace it with ein, and the adjective has to do
+    that job itself. That is why ein schöner Balkon carries -er where der schöne
+    Balkon carries -e — the -er is the signal that der would have given. Read
+    the two tables side by side and the logic becomes visible: the ending simply
+    moves from the article to the adjective.
   items:
-  - form: Nach ein, kein, mein im Nominativ
+  - form: "After ein, kein, mein in the nominative"
     example: Das ist ein schöner Balkon.
-    note: der wird -er, das wird -es, die wird -e.
+    note: "The article ending moves onto the adjective: der → -er, das → -es, die → -e."
     table:
       headers:
       - Genus
@@ -40,9 +37,9 @@ spotlights:
       - - die (feminin)
         - -e
         - eine ruhige Straße
-  - form: Nach ein, kein, mein im Akkusativ
+  - form: "After ein, kein, mein in the accusative"
     example: Ich suche einen hellen Raum.
-    note: 'Nur maskulin ändert sich: ein wird einen, -er wird -en.'
+    note: "Only the masculine moves: ein becomes einen and -er becomes -en. The other two are unchanged."
     table:
       headers:
       - Genus
@@ -58,9 +55,9 @@ spotlights:
       - - die (feminin)
         - eine ...-e
         - Ich suche eine ruhige Wohnung.
-  - form: Ohne Artikel im Nominativ und Akkusativ
+  - form: "With no article at all"
     example: Helles Zimmer, ruhige Lage, niedrige Nebenkosten.
-    note: 'Ohne Artikel trägt das Adjektiv das Signal: -er, -es, -e.'
+    note: "With nothing in front, the adjective carries the whole signal: -er, -es, -e. This is the language of small ads."
     table:
       headers:
       - Genus
@@ -79,12 +76,35 @@ spotlights:
       - - Plural
         - -e
         - niedrige Nebenkosten
-- title: Das Adjektiv im Dativ und der Überblick
-  intro: 'Im Dativ ist es leicht: Das Adjektiv hat immer die Endung -en. Das gilt für alle drei Genus und auch im Plural.'
+  - form: "der or ein — the same adjective, two endings"
+    example: Der schöne Balkon gefällt mir. Das ist ein schöner Balkon.
+    note: One rule explains both columns — the gender has to be visible once, either on the article or on the adjective.
+    table:
+      headers:
+      - Genus
+      - nach der, das, die
+      - nach ein, kein, mein
+      rows:
+      - - der (maskulin)
+        - der schöne Balkon
+        - ein schöner Balkon
+      - - das (neutral)
+        - das helle Zimmer
+        - ein helles Zimmer
+      - - die (feminin)
+        - die ruhige Lage
+        - eine ruhige Lage
+- title: The adjective in the dative, and the whole picture
+  intro: >-
+    The dative is the easy part of the system. Whatever stands in front of the
+    adjective and whatever the gender is, the ending is -en — masculine,
+    feminine, neuter and plural alike. One ending, no exceptions, nothing to
+    weigh up. The last item of this spotlight puts all three patterns on one
+    page; it is the table to come back to whenever an ending feels uncertain.
   items:
-  - form: 'Im Dativ nach dem, einem: Endung -en'
+  - form: "In the dative after dem or einem: always -en"
     example: Wir wohnen in einem großen Haus.
-    note: 'Egal ob der, das oder die: im Dativ immer -en.'
+    note: "der, das or die — in the dative it makes no difference. The ending is -en every time."
     table:
       headers:
       - Genus
@@ -100,9 +120,9 @@ spotlights:
       - - die (feminin)
         - der / einer ...-en
         - mit einer schönen Küche
-  - form: 'Im Dativ Plural: auch -en'
+  - form: "The dative plural: -en as well"
     example: Am Stadtrand wohnt man in ruhigen Straßen.
-    note: Im Plural steht kein ein. Das Adjektiv endet auf -en.
+    note: There is no ein in the plural, so nothing stands in front — and the adjective still ends in -en.
     table:
       headers:
       - Nomen
@@ -115,9 +135,25 @@ spotlights:
       - - die Kosten
         - -en
         - mit hohen Nebenkosten
-  - form: 'Überblick: die Endungen nach ein, kein, mein'
+  - form: How to read a flat advert
+    example: "Helle 2-Zimmer-Wohnung, ruhige Lage, mit großem Balkon, provisionsfrei."
+    note: Small ads drop the article to save space, so nearly every adjective there carries the full signal. Learning to read them is half of flat-hunting.
+    table:
+      headers:
+      - In der Anzeige
+      - Ganzer Satz
+      rows:
+      - - helle Wohnung
+        - Die Wohnung ist hell.
+      - - ruhige Lage
+        - Die Wohnung hat eine ruhige Lage.
+      - - mit großem Balkon
+        - Die Wohnung hat einen großen Balkon.
+      - - niedrige Nebenkosten
+        - Die Nebenkosten sind niedrig.
+  - form: "All three patterns on one page"
     example: ein schöner Balkon, einen schönen Balkon, mit einem schönen Balkon.
-    note: Vom Nominativ zum Dativ wird die Endung zu -en.
+    note: Read it downwards and the pattern is simple — everything drifts towards -en as you move from nominative to dative.
     table:
       headers:
       - Kasus
@@ -145,41 +181,41 @@ watchouts:
 - title: ein schöner, ein schönes, eine schöne
   bad: Das ist ein schöne Balkon.
   good: Das ist ein schöner Balkon.
-  note: 'der Balkon ist maskulin: ein schöner Balkon. das wird -es, die wird -e.'
-- title: Im Dativ immer -en
+  note: "der Balkon is masculine, so it is ein schöner Balkon. A das-noun takes -es, a die-noun -e."
+- title: The dative is always -en
   bad: Wir wohnen in einem groß Haus.
   good: Wir wohnen in einem großen Haus.
-  note: Im Dativ endet das Adjektiv immer auf -en.
-- title: helles Zimmer, nicht hell Zimmer
+  note: In the dative the adjective ends in -en, whatever the gender and whatever stands in front of it.
+- title: helles Zimmer, not hell Zimmer
   bad: 'Zu vermieten: hell Zimmer mit Balkon.'
   good: 'Zu vermieten: helles Zimmer mit Balkon.'
-  note: 'Ohne Artikel trägt das Adjektiv das Signal: helles Zimmer.'
+  note: "With no article the adjective carries the signal itself: helles Zimmer."
 - title: einen hellen Raum
   bad: Ich suche ein hellen Raum.
   good: Ich suche einen hellen Raum.
-  note: 'der Raum ist maskulin im Akkusativ: einen hellen Raum.'
+  note: "der Raum in the accusative is einen, and the adjective follows with -en: einen hellen Raum."
 cloze_cards:
 - text: Das ist ein {{c1::schöner}} Balkon mit viel Sonne.
   hint: schön
-  rule: 'der Balkon ist maskulin. Nach ein steht -er: ein schöner Balkon.'
+  rule: "der Balkon is masculine. After ein the ending is -er: ein schöner Balkon."
 - text: 'In der Anzeige steht: ein {{c1::helles}} Zimmer im Zentrum.'
   hint: hell
-  rule: 'das Zimmer ist neutral. Nach ein steht -es: ein helles Zimmer.'
+  rule: "das Zimmer is neuter. After ein the ending is -es: ein helles Zimmer."
 - text: Ich suche einen {{c1::hellen}} Raum für mein Büro.
   hint: hell
-  rule: 'der Raum ist maskulin im Akkusativ. Nach einen steht -en: einen hellen Raum.'
+  rule: "der Raum is masculine accusative. After einen the ending is -en: einen hellen Raum."
 - text: Wir möchten eine {{c1::ruhige}} Wohnung mieten.
   hint: ruhig
-  rule: 'die Wohnung ist feminin. Nach eine steht -e: eine ruhige Wohnung.'
+  rule: "die Wohnung is feminine. After eine the ending is -e: eine ruhige Wohnung."
 - text: Die Anzeige verspricht {{c1::niedrige}} Nebenkosten.
   hint: niedrig
-  rule: 'Ohne Artikel steht im Plural -e: niedrige Nebenkosten.'
+  rule: "With no article the plural ending is -e: niedrige Nebenkosten."
 - text: Die Wohnung kommt mit einem {{c1::schönen}} Balkon.
   hint: schön
-  rule: 'Im Dativ ist die Endung immer -en: mit einem schönen Balkon.'
+  rule: "In the dative the ending is always -en: mit einem schönen Balkon."
 - text: Wir wohnen jetzt in einem {{c1::großen}} Haus am Stadtrand.
   hint: groß
-  rule: 'Im Dativ ist die Endung immer -en: in einem großen Haus.'
+  rule: "In the dative the ending is always -en: in einem großen Haus."
 - text: 'Zu vermieten: {{c1::möbliertes}} Zimmer, ruhige Lage.'
   hint: möbliert
-  rule: 'Ohne Artikel trägt das Adjektiv das Signal: möbliertes Zimmer.'
+  rule: "With no article the adjective carries the signal: möbliertes Zimmer."

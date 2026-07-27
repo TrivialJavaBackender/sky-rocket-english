@@ -7,9 +7,9 @@
 # Glossen nur auf Wörtern, deren Form im Text die Wörterbuchform ist:
 # besichtigen (Infinitiv), die Aussicht, provisionsfrei, die Wohnfläche.
 kind: main
-kicker: LESETEXT
+kicker: READING
 title: Die Besichtigung
-meta: ≈ 3 Min · Wörter mit Punkten tragen eine Erklärung — tippen und lesen
+meta: ≈ 3 min · dotted words carry glosses — tap to reveal
 body:
 - - t: 'Am Samstagmorgen fährt Lena zum Stadtrand. Sie sucht eine neue Wohnung, denn ihre alte Wohnung ist zu klein und zu teuer. In der Zeitung hat sie eine Anzeige gefunden: „Helle Zwei-Zimmer-Wohnung, ruhige Lage, mit Balkon.“ Jetzt will sie die Wohnung '
   - g: besichtigen
@@ -29,21 +29,21 @@ body:
 glosses:
 - key: besichtigen
   term: besichtigen
-  pos_label: Verb
-  definition: Eine Wohnung genau ansehen, bevor man sie mietet.
+  pos_label: verb
+  definition: to view a flat — to look at it properly before you rent it
   example: Wir besichtigen morgen eine Wohnung am Stadtrand.
 - key: Aussicht
   term: Aussicht
-  pos_label: Nomen, die
-  definition: Der Blick nach draußen, zum Beispiel vom Balkon oder Fenster.
+  pos_label: noun, die
+  definition: the view — what you see outside, e.g. from the balcony or the window
   example: Vom Balkon hat man eine schöne Aussicht auf den Park.
 - key: provisionsfrei
   term: provisionsfrei
-  pos_label: Adjektiv
-  definition: Ohne Provision. Man zahlt dem Vermieter nur die Miete, kein extra Geld.
+  pos_label: adjective
+  definition: with no agency fee — you pay the landlord the rent and nothing on top
   example: Die Wohnung ist provisionsfrei, das ist günstig.
 - key: Wohnfläche
   term: Wohnfläche
-  pos_label: Nomen, die
-  definition: Wie groß eine Wohnung ist, gemessen in Quadratmetern.
+  pos_label: noun, die
+  definition: the floor area — how big a flat is, measured in square metres
   example: Die Wohnfläche beträgt achtzig Quadratmeter.

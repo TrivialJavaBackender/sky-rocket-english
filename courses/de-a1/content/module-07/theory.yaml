@@ -1,16 +1,26 @@
-# Module 07 · theory. Two spotlights, 5 items — three items for the three grammar
-# points of the card (es gibt + accusative, quantity phrases, kein in the
-# accusative) plus the word-formation extension (compound noun, gender from the
-# second stem) and the numbers up to 1000 with prices. Scaffolding rule (§5):
-# intro and note English, every example and table German. Grammar terms are named
-# in English directly (§5.1) — there is no German grammar glossary in this course.
+# Module 07 · theory. Two spotlights, 9 items realising the three grammar points
+# of the card (es gibt + accusative, quantity phrases, kein in the accusative)
+# plus the word-formation extension (compound noun, gender from the second stem)
+# and the numbers up to 1000 with prices. Scaffolding rule (§5): intro and note
+# English, every example and table German. Grammar terms are named in English
+# directly (§5.1) — there is no German grammar glossary in this course.
+# Numbers over 100 and the compound rule: courses/_reference/basic-german/
+# units 26 (numbers and dates) and 08 (compound nouns).
 spotlights:
   - title: es gibt, quantities and kein in the accusative
-    intro: German says what is in a shop with es gibt. The thing that is there is a direct object, so it stands in the accusative — the case you met in module 6.
+    intro: >-
+      Shopping needs three things: a way to say what a shop has, a way to say
+      how much of it you want, and a way to say that something is not there.
+      German says what exists with es gibt — literally 'it gives'. Whatever
+      follows it is a direct object, so it stands in the accusative, the case
+      you met in module 6. That means the masculine article changes again:
+      einen Supermarkt, keinen Käse. The other two genders and the plural look
+      exactly as they do in the nominative, so once more only one form is
+      actually new.
     items:
       - form: es gibt + accusative
         example: "Es gibt einen Supermarkt. Es gibt eine Banane. Es gibt ein Ei. Es gibt Äpfel. Gibt es hier Milch?"
-        note: "es gibt is fixed — es never changes. Masculine ein → einen; eine and ein stay."
+        note: "es gibt is fixed — es never changes, and gibt stays in the singular even before a plural noun."
         table:
           headers: ["", "Nominativ", "es gibt + Akkusativ"]
           rows:
@@ -18,6 +28,16 @@ spotlights:
             - ["f", "die / eine Banane", "Es gibt eine Banane."]
             - ["n", "das / ein Ei", "Es gibt ein Ei."]
             - ["Plural", "die Äpfel", "Es gibt Äpfel."]
+      - form: "Asking and denying with es gibt"
+        example: "Gibt es hier Milch? — Ja, es gibt Milch. Gibt es Käse? — Nein, es gibt keinen Käse."
+        note: "In a question the two words swap: Gibt es …? A place word can go in front — Hier gibt es …"
+        table:
+          headers: ["Satzart", "Beispiel"]
+          rows:
+            - ["Aussage", "Es gibt hier einen Markt."]
+            - ["Ort vorn", "Hier gibt es einen Markt."]
+            - ["Frage", "Gibt es hier einen Markt?"]
+            - ["negativ", "Es gibt keinen Markt."]
       - form: "Quantity + noun: ein Kilo Äpfel"
         example: "Ich kaufe ein Kilo Äpfel. Ich nehme einen Liter Milch. Eine Flasche Wasser, bitte. Ich möchte ein Stück Kuchen und hundert Gramm Käse."
         note: The quantity comes first, then the noun. Nothing stands between them — no von, no article.
@@ -29,6 +49,7 @@ spotlights:
             - ["eine Flasche", "eine Flasche Wasser"]
             - ["ein Stück", "ein Stück Kuchen"]
             - ["100 Gramm", "hundert Gramm Butter"]
+            - ["eine Packung", "eine Packung Butter"]
       - form: "kein in the accusative: keinen / keine / kein"
         example: "Es gibt keinen Käse. Es gibt keine Milch. Es gibt kein Fleisch. Ich habe kein Geld. Ich esse keine Eier."
         note: "kein takes the same endings as ein. Only the masculine changes: kein → keinen."
@@ -39,13 +60,30 @@ spotlights:
             - ["f (die Milch)", "keine Milch", "keine Milch"]
             - ["n (das Ei)", "kein Ei", "kein Ei"]
             - ["Plural (die Eier)", "keine Eier", "keine Eier"]
+      - form: "With an article or without one"
+        example: "Ich kaufe Milch. Ich kaufe eine Flasche Milch. Ich kaufe Äpfel. Ich kaufe ein Kilo Äpfel."
+        note: A plural noun and a substance take no article when you mean 'some'. Add a quantity and the article belongs to the quantity, not to the food.
+        table:
+          headers: ["Was du meinst", "Deutsch"]
+          rows:
+            - ["some milk", "Milch"]
+            - ["a bottle of milk", "eine Flasche Milch"]
+            - ["apples", "Äpfel"]
+            - ["a kilo of apples", "ein Kilo Äpfel"]
+            - ["no milk", "keine Milch"]
 
   - title: Compound nouns and the numbers up to 1000
-    intro: German builds long words out of short ones, and the last part decides everything. Numbers and prices are written as one word too.
+    intro: >-
+      German builds long words out of short ones and writes them as a single
+      word — Apfelsaft, Käsebrötchen, Telefonnummer. There is nothing to learn
+      by heart here: the last part carries the meaning and hands over its
+      article and its plural, everything in front of it just describes. Numbers
+      work the same way — a whole number is one word, however long it gets, and
+      prices are simply a number followed by Euro.
     items:
       - form: "der Apfel + der Saft → der Apfelsaft"
         example: "Der Apfelsaft kostet zwei Euro. Die Gemüsesuppe ist lecker. Das Butterbrot ist billig. Ich nehme ein Käsebrötchen."
-        note: Two nouns become one word. The second noun gives the gender and the plural.
+        note: Two nouns become one word. The second noun gives the gender and the plural; the first one only says which kind.
         table:
           headers: ["Wort 1", "Wort 2", "Neues Wort"]
           rows:
@@ -54,19 +92,37 @@ spotlights:
             - ["das Gemüse", "die Suppe", "die Gemüsesuppe"]
             - ["die Butter", "das Brot", "das Butterbrot"]
             - ["der Käse", "das Brötchen", "das Käsebrötchen"]
+      - form: "The plural also comes from the second word"
+        example: "Zwei Apfelsäfte, bitte. Wir nehmen drei Käsebrötchen."
+        note: Build the plural of the last part and leave the front of the word alone. Nothing else changes.
+        table:
+          headers: ["Wort", "Plural", "Warum"]
+          rows:
+            - ["der Apfelsaft", "die Apfelsäfte", "der Saft → die Säfte"]
+            - ["das Käsebrötchen", "die Käsebrötchen", "das Brötchen → die Brötchen"]
+            - ["die Gemüsesuppe", "die Gemüsesuppen", "die Suppe → die Suppen"]
       - form: "Numbers up to 1000, and prices"
         example: "Das kostet zwanzig Euro. Ein Kilo Äpfel kostet zwei Euro dreißig. Der Supermarkt hat tausend Produkte."
-        note: "Say the number, then Euro. Euro has no -s in the plural: zwei Euro."
+        note: "Hundreds come first, then the units-and-tens block. Modern German puts no und after hundert."
         table:
           headers: ["Zahl", "Wort"]
           rows:
-            - ["20", "zwanzig"]
-            - ["30", "dreißig"]
             - ["100", "hundert"]
             - ["200", "zweihundert"]
+            - ["202", "zweihundertzwei"]
             - ["250", "zweihundertfünfzig"]
+            - ["456", "vierhundertsechsundfünfzig"]
             - ["1000", "tausend"]
-            - ["2,30 €", "zwei Euro dreißig"]
+      - form: "How a price is said"
+        example: "Was kostet der Käse? — Zwei Euro dreißig. Das macht zusammen fünf Euro."
+        note: "German writes a comma where English writes a point: 2,30 €. Euro takes no -s in the plural."
+        table:
+          headers: ["Preis", "Man sagt", "Nicht"]
+          rows:
+            - ["2,30 €", "zwei Euro dreißig", "zwei Punkt dreißig"]
+            - ["1,00 €", "ein Euro", "eine Euro"]
+            - ["12,00 €", "zwölf Euro", "zwölf Euros"]
+            - ["0,99 €", "neunundneunzig Cent", "null Euro neunundneunzig"]
 
 watchouts:
   - title: es gibt takes the accusative
@@ -81,6 +137,14 @@ watchouts:
     bad: Ich kaufe ein Kilo von Äpfeln.
     good: Ich kaufe ein Kilo Äpfel.
     note: The noun stands straight after the quantity. German needs no word for "of" here.
+  - title: Euro has no plural -s
+    bad: Der Kuchen kostet drei Euros.
+    good: Der Kuchen kostet drei Euro.
+    note: After a number, Euro, Cent and Gramm stay in the singular.
+  - title: A compound is one word
+    bad: Ich möchte einen Apfel Saft.
+    good: Ich möchte einen Apfelsaft.
+    note: Two nouns written apart are two things. Write them together and the second one gives the article.
 
 cloze_cards:
   - text: "Es {{c1::gibt}} hier einen Supermarkt."

@@ -27,7 +27,7 @@ core:
       post: " Mantel."
       options: [neuer, neue, neuen, neu]
       answer: 1
-    explanation: "Nach der heißt die Endung im Nominativ -e: der neue Mantel."
+    explanation: "After der the nominative ending is -e: der neue Mantel."
   - type: mc_cloze
     group: grammar
     content:
@@ -35,7 +35,7 @@ core:
       post: " Pullover."
       options: [rote, roter, roten, rot]
       answer: 2
-    explanation: "Im Akkusativ maskulin: den roten Pullover. Nur maskulin ändert sich zu -en."
+    explanation: "Masculine accusative: den roten Pullover. Only the masculine switches to -en."
   - type: mc_cloze
     group: grammar
     content:
@@ -43,7 +43,7 @@ core:
       post: " Kleid steht dir wirklich gut."
       options: [rote, roten, rotes, rot]
       answer: 0
-    explanation: "Nach das heißt die Endung -e: das rote Kleid. Nominativ und Akkusativ sind gleich."
+    explanation: "After das the ending is -e: das rote Kleid. Nominative and accusative are identical."
   - type: mc_cloze
     group: grammar
     content:
@@ -51,7 +51,7 @@ core:
       post: " gestreifte Hemd ist modern."
       options: [Dieser, Dieses, Diese, Diesen]
       answer: 1
-    explanation: "das Hemd ist neutrum: dieses Hemd. Das Adjektiv danach hat -e: dieses gestreifte Hemd."
+    explanation: "das Hemd is neuter: dieses Hemd. The adjective after it takes -e: dieses gestreifte Hemd."
   - type: mc_cloze
     group: grammar
     content:
@@ -59,7 +59,7 @@ core:
       post: ' da, den blauen."'
       options: [Der, Dem, Den, Das]
       answer: 2
-    explanation: "kurze Antwort im Akkusativ maskulin: Den da. der Mantel → den."
+    explanation: "Short answer in the masculine accusative: Den da. der Mantel → den."
   - type: mc_cloze
     group: grammar
     content:
@@ -67,7 +67,7 @@ core:
       post: " Schuhe."
       options: [neues, neuer, neue, neuen]
       answer: 3
-    explanation: "Im Plural nach die bekommt das Adjektiv -en: die neuen Schuhe."
+    explanation: "In the plural after die the adjective takes -en: die neuen Schuhe."
 
   # ───────────────────────── Lückentext ─────────────────────────
   - type: open_cloze
@@ -78,7 +78,7 @@ core:
       answers: [graue]
       hint: grau
       answer_shown: graue
-    explanation: "Nach der heißt die Endung im Nominativ -e: der graue Rock."
+    explanation: "After der the nominative ending is -e: der graue Rock."
   - type: open_cloze
     group: grammar
     content:
@@ -87,7 +87,7 @@ core:
       answers: [weiße]
       hint: weiß
       answer_shown: weiße
-    explanation: "dieses endet wie das. Das Adjektiv danach hat -e: dieses weiße Hemd."
+    explanation: "dieses ends like das, and the adjective after it takes -e: dieses weiße Hemd."
   - type: open_cloze
     group: grammar
     content:
@@ -96,7 +96,7 @@ core:
       answers: [rote]
       hint: rot
       answer_shown: rote
-    explanation: "Nach die heißt die Endung -e: die rote Jacke."
+    explanation: "After die the ending is -e: die rote Jacke."
   - type: open_cloze
     group: grammar
     content:
@@ -105,7 +105,7 @@ core:
       answers: [schwarzen]
       hint: schwarz
       answer_shown: schwarzen
-    explanation: "Im Plural nach die bekommt das Adjektiv -en: die schwarzen Schuhe."
+    explanation: "In the plural after die the adjective takes -en: die schwarzen Schuhe."
   - type: open_cloze
     group: grammar
     content:
@@ -114,7 +114,7 @@ core:
       answers: [grauen]
       hint: grau
       answer_shown: grauen
-    explanation: "Im Akkusativ maskulin: den grauen Mantel (-en)."
+    explanation: "Masculine accusative: den grauen Mantel, with -en."
   - type: open_cloze
     group: grammar
     content:
@@ -122,7 +122,7 @@ core:
       post: " blauen Mantel."
       answers: [den, diesen]
       answer_shown: den
-    explanation: "nehmen fragt Wen? — Akkusativ maskulin: den (oder diesen) blauen Mantel."
+    explanation: "nehmen asks Wen? — masculine accusative: den (or diesen) blauen Mantel."
   # Spiralisches Wiederholen: die Präposition mit + Dativ aus Modul 02.
   - type: open_cloze
     group: grammar
@@ -131,7 +131,7 @@ core:
       post: " dem Bus ins Kaufhaus."
       answers: [mit]
       answer_shown: mit
-    explanation: "Für ein Verkehrsmittel steht mit + Dativ (Modul 02): mit dem Bus."
+    explanation: "A means of transport takes mit + dative (module 02): mit dem Bus."
   # Spiralisches Wiederholen: das Präteritum von sein aus Modul 05.
   - type: open_cloze
     group: grammar
@@ -140,7 +140,7 @@ core:
       post: " der graue Mantel noch reduziert."
       answers: [war]
       answer_shown: war
-    explanation: "sein im Präteritum: er war (Modul 05). Gestern zeigt die Vergangenheit."
+    explanation: "sein in the simple past: er war (module 05). Gestern marks the past."
 
   # ───────────────────────── Wortbildung ─────────────────────────
   - type: word_formation
@@ -151,7 +151,7 @@ core:
       prompt: Farbe
       answers: [farbig]
       answer_shown: farbig
-    explanation: "Mit -ig wird aus dem Nomen ein Adjektiv: die Farbe → farbig."
+    explanation: "-ig turns the noun into an adjective: die Farbe → farbig."
   - type: word_formation
     group: vocab
     content:
@@ -160,7 +160,7 @@ core:
       prompt: Freund
       answers: [freundlich]
       answer_shown: freundlich
-    explanation: "Mit -lich wird aus dem Nomen ein Adjektiv: der Freund → freundlich."
+    explanation: "-lich turns the noun into an adjective: der Freund → freundlich."
   - type: word_formation
     group: vocab
     content:
@@ -169,7 +169,7 @@ core:
       prompt: Sonne
       answers: [sonnig]
       answer_shown: sonnig
-    explanation: "Mit -ig wird aus die Sonne das Adjektiv sonnig."
+    explanation: "-ig again: die Sonne → sonnig."
   - type: word_formation
     group: vocab
     content:
@@ -178,7 +178,7 @@ core:
       prompt: Wolke
       answers: [wolkig]
       answer_shown: wolkig
-    explanation: "Mit -ig: die Wolke → wolkig."
+    explanation: "-ig again: die Wolke → wolkig."
   - type: word_formation
     group: vocab
     content:
@@ -187,7 +187,7 @@ core:
       prompt: Sport
       answers: [sportlich]
       answer_shown: sportlich
-    explanation: "Mit -lich: der Sport → sportlich."
+    explanation: "-lich again: der Sport → sportlich."
   # Spiralisches Wiederholen: das Partizip II aus Modul 01.
   - type: word_formation
     group: vocab
@@ -197,7 +197,7 @@ core:
       prompt: kaufen
       answers: [gekauft]
       answer_shown: gekauft
-    explanation: "Partizip II von kaufen: gekauft (Modul 01). Das Perfekt steht mit haben."
+    explanation: "Participle of kaufen: gekauft (module 01), and the perfect takes haben."
 
   # ───────────────────────── Umformung ─────────────────────────
   - type: key_word_transformation
@@ -210,7 +210,7 @@ core:
       answers: [neuen]
       hint: 1 Wort
       answer_shown: neuen
-    explanation: "Aus dem Satz wird eine Akkusativ-Gruppe: den neuen Mantel (maskulin: -en)."
+    explanation: "The sentence becomes an accusative phrase: den neuen Mantel (masculine takes -en)."
   - type: key_word_transformation
     group: grammar
     content:
@@ -221,7 +221,7 @@ core:
       answers: [rote]
       hint: 1 Wort
       answer_shown: rote
-    explanation: "das rote Kleid: nach das heißt die Endung -e, im Akkusativ gleich."
+    explanation: "das rote Kleid: after das the ending is -e, and the accusative looks the same."
   - type: key_word_transformation
     group: grammar
     content:
@@ -232,7 +232,7 @@ core:
       answers: [schwarzen]
       hint: 1 Wort
       answer_shown: schwarzen
-    explanation: "Im Plural nach die: die schwarzen Schuhe (-en)."
+    explanation: "In the plural after die: die schwarzen Schuhe, with -en."
   - type: key_word_transformation
     group: grammar
     content:
@@ -243,7 +243,7 @@ core:
       answers: [diesen]
       hint: 1 Wort
       answer_shown: diesen
-    explanation: "dieser wird im Akkusativ maskulin zu diesen: diesen gestreiften Pullover."
+    explanation: "In the masculine accusative dieser becomes diesen: diesen gestreiften Pullover."
 
   # ───────────────────────── Grammatik-Drill ─────────────────────────
   - type: grammar_drill
@@ -254,7 +254,7 @@ core:
       prompt: AKKUSATIV
       options: [der, den, dem, das]
       answer: 1
-    explanation: "nehmen fragt Wen? — Akkusativ maskulin: den blauen Mantel."
+    explanation: "nehmen asks Wen? — masculine accusative: den blauen Mantel."
   - type: grammar_drill
     group: grammar
     content:
@@ -263,7 +263,7 @@ core:
       prompt: NOMINATIV
       options: [Der, Den, Dem, Das]
       answer: 0
-    explanation: "Der Rock ist das Subjekt → Nominativ: Der rote Rock."
+    explanation: "The skirt is the subject → nominative: Der rote Rock."
   - type: grammar_drill
     group: grammar
     content:
@@ -272,7 +272,7 @@ core:
       prompt: ENDUNG
       options: [weiß, weiße, weißen, weißes]
       answer: 1
-    explanation: "das weiße Hemd: nach das heißt die Endung -e."
+    explanation: "das weiße Hemd: after das the ending is -e."
   - type: grammar_drill
     group: grammar
     content:
@@ -281,7 +281,7 @@ core:
       prompt: DIESER
       options: [Dieser, Dieses, Diese, Diesen]
       answer: 2
-    explanation: "die Jacke ist feminin: diese Jacke."
+    explanation: "die Jacke is feminine: diese Jacke."
   - type: grammar_drill
     group: grammar
     content:
@@ -290,7 +290,7 @@ core:
       prompt: ENDUNG
       options: [roten, rote, roter, rotes]
       answer: 0
-    explanation: "Im Plural nach die: die roten Schuhe (-en)."
+    explanation: "In the plural after die: die roten Schuhe, with -en."
   - type: grammar_drill
     group: grammar
     content:
@@ -299,7 +299,7 @@ core:
       prompt: AKKUSATIV
       options: [der, dem, das, den]
       answer: 3
-    explanation: "nehmen fragt Wen? — Akkusativ maskulin: den karierten Rock."
+    explanation: "nehmen asks Wen? — masculine accusative: den karierten Rock."
   # Spiralisches Wiederholen: die Frage Wohin? aus Modul 03.
   - type: grammar_drill
     group: grammar
@@ -309,7 +309,7 @@ core:
       prompt: "WOHIN?"
       options: [auf dem, auf den, auf der, im]
       answer: 1
-    explanation: "legen fragt Wohin? — Akkusativ (Modul 03): auf den Tisch."
+    explanation: "legen answers Wohin? — accusative (module 03): auf den Tisch."
   # Spiralisches Wiederholen: der Dativ nach stehen aus Modul 04.
   - type: grammar_drill
     group: grammar
@@ -319,7 +319,7 @@ core:
       prompt: DATIV
       options: [du, dich, dir, dein]
       answer: 2
-    explanation: "stehen mit einer Person steht im Dativ (Modul 04): Der Mantel steht dir gut."
+    explanation: "stehen with a person takes the dative (module 04): Der Mantel steht dir gut."
 
   # ───────────────────────── Fehlersuche ─────────────────────────
   - type: error_correction
@@ -328,35 +328,35 @@ core:
       words: [Der, neu, Mantel, ist, sehr, "warm."]
       wrong: 1
       correction: "neu → neue"
-    explanation: "Vor dem Nomen braucht das Adjektiv eine Endung: der neue Mantel."
+    explanation: "In front of a noun the adjective needs an ending: der neue Mantel."
   - type: error_correction
     group: grammar
     content:
       words: [Ich, nehme, den, neue, "Mantel."]
       wrong: 3
       correction: "neue → neuen"
-    explanation: "Im Akkusativ maskulin: den neuen Mantel."
+    explanation: "Masculine accusative: den neuen Mantel."
   - type: error_correction
     group: grammar
     content:
       words: [Ich, möchte, die, neue, Schuhe, "anprobieren."]
       wrong: 3
       correction: "neue → neuen"
-    explanation: "Im Plural nach die bekommt das Adjektiv -en: die neuen Schuhe."
+    explanation: "In the plural after die the adjective takes -en: die neuen Schuhe."
   - type: error_correction
     group: grammar
     content:
       words: [Das, rot, Kleid, gefällt, mir, "gut."]
       wrong: 1
       correction: "rot → rote"
-    explanation: "Nach das heißt die Endung -e: das rote Kleid."
+    explanation: "After das the ending is -e: das rote Kleid."
   - type: error_correction
     group: grammar
     content:
       words: [Diese, Pullover, ist, zu, "eng."]
       wrong: 0
       correction: "Diese → Dieser"
-    explanation: "der Pullover ist maskulin: Dieser Pullover ist zu eng."
+    explanation: "der Pullover is masculine: Dieser Pullover ist zu eng."
   # Spiralisches Wiederholen: das Partizip II aus Modul 01.
   - type: error_correction
     group: grammar
@@ -364,7 +364,7 @@ core:
       words: [Ich, habe, einen, Mantel, "gekaufen."]
       wrong: 4
       correction: "gekaufen → gekauft"
-    explanation: "Partizip II von kaufen: gekauft (Modul 01), nicht gekaufen."
+    explanation: "Participle of kaufen: gekauft (module 01), not gekaufen."
 
   # ───────────────────────── Wörter verbinden ─────────────────────────
   - type: collocation_match
@@ -373,56 +373,56 @@ core:
       left: [der neue, das rote, die blaue, die neuen]
       right: [Kleid, Schuhe, Mantel, Jacke]
       pairs: { 0: 2, 1: 0, 2: 3, 3: 1 }
-    explanation: "der neue Mantel, das rote Kleid, die blaue Jacke, die neuen Schuhe — der Artikel zeigt das Genus."
+    explanation: "der neue Mantel, das rote Kleid, die blaue Jacke, die neuen Schuhe — the article shows the gender."
   - type: collocation_match
     group: grammar
     content:
       left: [den neuen, das rote, die blaue, die neuen]
       right: [Jacke, Mantel, Schuhe, Kleid]
       pairs: { 0: 1, 1: 3, 2: 0, 3: 2 }
-    explanation: "Ich nehme den neuen Mantel, das rote Kleid, die blaue Jacke, die neuen Schuhe. Nur maskulin: den neuen."
+    explanation: "Ich nehme den neuen Mantel, das rote Kleid, die blaue Jacke, die neuen Schuhe. Only the masculine moves: den neuen."
   - type: collocation_match
     group: vocab
     content:
       left: [weit, groß, neu, teuer]
       right: [alt, eng, billig, klein]
       pairs: { 0: 1, 1: 3, 2: 0, 3: 2 }
-    explanation: "Gegenteile: weit und eng, groß und klein, neu und alt, teuer und billig."
+    explanation: "Opposites: weit and eng, groß and klein, neu and alt, teuer and billig."
   - type: collocation_match
     group: vocab
     content:
       left: [die Umkleidekabine, das Sonderangebot, der Ärmel, die Quittung]
       right: [hier ist die Ware billiger, ein Teil vom Hemd für den Arm, ein kleiner Raum zum Anprobieren, ein Papier vom Bezahlen]
       pairs: { 0: 2, 1: 0, 2: 1, 3: 3 }
-    explanation: "Vier Nomen aus dem Modul, jedes mit seiner Umschreibung."
+    explanation: "Four nouns from the module, each with its paraphrase."
   - type: collocation_match
     group: vocab
     content:
       left: [die Kasse, das Schaufenster, tragen, anprobieren]
       right: [das große Fenster vorne am Laden, vor dem Kauf anziehen und prüfen, dort bezahlt man im Geschäft, Kleidung am Körper haben]
       pairs: { 0: 2, 1: 0, 2: 3, 3: 1 }
-    explanation: "An der Kasse bezahlt man, im Schaufenster liegt die Ware, tragen heißt am Körper haben, anprobieren heißt vor dem Kauf prüfen."
+    explanation: "You pay an der Kasse, the goods lie im Schaufenster, tragen means having it on, anprobieren means testing it before you buy."
   - type: collocation_match
     group: vocab
     content:
       left: [die Mütze, die Schuhe, der Schal, der Mantel]
       right: [an den Füßen, auf dem Kopf, am ganzen Körper, um den Hals]
       pairs: { 0: 1, 1: 0, 2: 3, 3: 2 }
-    explanation: "Wo trägt man was? Die Mütze auf dem Kopf, die Schuhe an den Füßen, den Schal um den Hals, den Mantel am Körper."
+    explanation: "Where do you wear what? Die Mütze auf dem Kopf, die Schuhe an den Füßen, den Schal um den Hals, den Mantel am Körper."
   - type: collocation_match
     group: vocab
     content:
       left: [anziehen, ausziehen, umtauschen, anprobieren]
       right: [zurückbringen und eine andere nehmen, Kleidung an den Körper tun, im Geschäft testen, Kleidung vom Körper wegnehmen]
       pairs: { 0: 1, 1: 3, 2: 0, 3: 2 }
-    explanation: "anziehen und ausziehen sind Gegenteile. umtauschen heißt zurückbringen, anprobieren heißt im Geschäft testen."
+    explanation: "anziehen and ausziehen are opposites. umtauschen means bringing it back, anprobieren means testing it in the shop."
   - type: collocation_match
     group: vocab
     content:
       left: [gestreift, kariert, reduziert, preiswert]
       right: [nicht teuer, mit Linien, jetzt billiger als vorher, mit kleinen Quadraten]
       pairs: { 0: 1, 1: 3, 2: 2, 3: 0 }
-    explanation: "gestreift hat Linien, kariert hat Quadrate, reduziert heißt jetzt billiger, preiswert heißt nicht teuer."
+    explanation: "gestreift has lines, kariert has squares, reduziert means cheaper now, preiswert means not expensive."
 
   # ───────────────────────── Leseverstehen ─────────────────────────
   - type: reading_comprehension
@@ -436,7 +436,7 @@ core:
         - Ein gestreiftes Hemd
         - Neue Schuhe
       answer: 0
-    explanation: "Im Text steht: Lena sucht einen warmen Mantel für den Winter."
+    explanation: "The text says: Lena sucht einen warmen Mantel für den Winter."
   - type: reading_comprehension
     group: reading
     content:
@@ -448,7 +448,7 @@ core:
         - Im Erdgeschoss
         - Neben der Kasse
       answer: 1
-    explanation: "Im Text steht: Im ersten Stock ist die Kleidung für Damen."
+    explanation: "The text says: Im ersten Stock ist die Kleidung für Damen."
   - type: reading_comprehension
     group: reading
     content:
@@ -460,7 +460,7 @@ core:
         - Der Ärmel ist zu lang und er ist zu weit
         - Die Farbe gefällt nicht
       answer: 2
-    explanation: "Im Text steht: der Ärmel ist ein bisschen zu lang, und der Mantel ist auch ein wenig zu weit."
+    explanation: "The text says: der Ärmel ist ein bisschen zu lang, und der Mantel ist auch ein wenig zu weit."
   - type: reading_comprehension
     group: reading
     content:
@@ -472,7 +472,7 @@ core:
         - Der alte Mantel
         - Der graue Mantel
       answer: 3
-    explanation: "Im Text steht: Lena probiert auch den grauen Mantel an. Dieser Mantel passt perfekt."
+    explanation: "The text says: Lena probiert auch den grauen Mantel an. Dieser Mantel passt perfekt."
   - type: reading_comprehension
     group: reading
     content:
@@ -484,7 +484,7 @@ core:
         - Sie sind kaputt
         - Sie sind zu klein
       answer: 0
-    explanation: "Im Text steht: An einem großen Tisch liegt das Sonderangebot. Heute sind alle Schuhe reduziert."
+    explanation: "The text says: An einem großen Tisch liegt das Sonderangebot. Heute sind alle Schuhe reduziert."
   - type: reading_comprehension
     group: reading
     content:
@@ -496,7 +496,7 @@ core:
         - Dann geht sie in die Umkleidekabine
         - Dann findet sie ihre Größe
       answer: 1
-    explanation: "Im Text steht: Bewahren Sie die Quittung gut auf. Dann können Sie jeden Artikel umtauschen."
+    explanation: "The text says: Bewahren Sie die Quittung gut auf. Dann können Sie jeden Artikel umtauschen."
 
 # ───────────────────────── Wiederholungspool ─────────────────────────
 # 20 kurze Aufgaben für das Modul-Quiz und die Wiederholung nach 7 und 21 Tagen.
@@ -511,7 +511,7 @@ review_pool:
       post: " Schal ist schön warm."
       options: [rot, rote, roten, roter]
       answer: 1
-    explanation: "Nach der heißt die Endung im Nominativ -e: der rote Schal."
+    explanation: "After der the nominative ending is -e: der rote Schal."
   - type: mc_cloze
     group: grammar
     content:
@@ -519,7 +519,7 @@ review_pool:
       post: " Bluse."
       options: [karierte, karierten, kariertes, kariert]
       answer: 0
-    explanation: "Nach die heißt die Endung -e, im Akkusativ gleich: die karierte Bluse."
+    explanation: "After die the ending is -e, and the accusative is the same: die karierte Bluse."
   - type: mc_cloze
     group: grammar
     content:
@@ -527,7 +527,7 @@ review_pool:
       post: " Kleid anprobieren."
       options: [dieser, dieses, diese, diesen]
       answer: 1
-    explanation: "das Kleid ist neutrum: dieses Kleid, im Akkusativ gleich."
+    explanation: "das Kleid is neuter: dieses Kleid, unchanged in the accusative."
   - type: mc_cloze
     group: grammar
     content:
@@ -535,7 +535,7 @@ review_pool:
       post: ' da."'
       options: [Der, Das, Die, Den]
       answer: 2
-    explanation: "kurze Antwort im Plural: Die da. die Schuhe → Die."
+    explanation: "Short answer in the plural: Die da. die Schuhe → Die."
   - type: open_cloze
     group: grammar
     content:
@@ -544,7 +544,7 @@ review_pool:
       answers: [gestreifte]
       hint: gestreift
       answer_shown: gestreifte
-    explanation: "Nach das heißt die Endung -e: das gestreifte Hemd."
+    explanation: "After das the ending is -e: das gestreifte Hemd."
   - type: open_cloze
     group: grammar
     content:
@@ -553,7 +553,7 @@ review_pool:
       answers: [karierte]
       hint: kariert
       answer_shown: karierte
-    explanation: "Nach die heißt die Endung -e: die karierte Bluse."
+    explanation: "After die the ending is -e: die karierte Bluse."
   - type: open_cloze
     group: grammar
     content:
@@ -562,7 +562,7 @@ review_pool:
       answers: [warmen]
       hint: warm
       answer_shown: warmen
-    explanation: "Im Akkusativ maskulin: den warmen Schal (-en)."
+    explanation: "Masculine accusative: den warmen Schal, with -en."
   - type: open_cloze
     group: grammar
     content:
@@ -571,7 +571,7 @@ review_pool:
       answers: [roten]
       hint: rot
       answer_shown: roten
-    explanation: "Im Plural nach die bekommt das Adjektiv -en: die roten Schuhe."
+    explanation: "In the plural after die the adjective takes -en: die roten Schuhe."
   # Spiralisches Wiederholen: die Präposition mit + Dativ aus Modul 02.
   - type: open_cloze
     group: grammar
@@ -580,7 +580,7 @@ review_pool:
       post: " dem Bus zum Kaufhaus."
       answers: [mit]
       answer_shown: mit
-    explanation: "Für ein Verkehrsmittel steht mit + Dativ (Modul 02): mit dem Bus."
+    explanation: "A means of transport takes mit + dative (module 02): mit dem Bus."
   - type: open_cloze
     group: grammar
     content:
@@ -589,7 +589,7 @@ review_pool:
       answers: [neue]
       hint: neu
       answer_shown: neue
-    explanation: "jede endet wie die (feminin). Das Adjektiv danach hat -e: jede neue Hose."
+    explanation: "jede ends like feminine die, and the adjective after it takes -e: jede neue Hose."
   - type: grammar_drill
     group: grammar
     content:
@@ -598,7 +598,7 @@ review_pool:
       prompt: AKKUSATIV
       options: [der, den, dem, das]
       answer: 1
-    explanation: "kaufen fragt Wen? — Akkusativ maskulin: den warmen Mantel."
+    explanation: "kaufen asks Wen? — masculine accusative: den warmen Mantel."
   - type: grammar_drill
     group: grammar
     content:
@@ -607,7 +607,7 @@ review_pool:
       prompt: NOMINATIV
       options: [Der, Die, Den, Das]
       answer: 1
-    explanation: "die Jacke ist das Subjekt → Nominativ: Die blaue Jacke."
+    explanation: "die Jacke is the subject → nominative: Die blaue Jacke."
   - type: grammar_drill
     group: grammar
     content:
@@ -616,7 +616,7 @@ review_pool:
       prompt: ENDUNG
       options: [karierte, karierten, kariertes, kariert]
       answer: 0
-    explanation: "Nach das heißt die Endung -e: das karierte Kleid."
+    explanation: "After das the ending is -e: das karierte Kleid."
   # Spiralisches Wiederholen: das Perfekt mit sein aus Modul 01.
   - type: grammar_drill
     group: grammar
@@ -626,21 +626,21 @@ review_pool:
       prompt: PERFEKT
       options: [habe, bin, hat, ist]
       answer: 1
-    explanation: "gehen ist eine Bewegung: Perfekt mit sein (Modul 01). ich + sein = bin."
+    explanation: "gehen is movement, so the perfect takes sein (module 01). ich + sein = bin."
   - type: error_correction
     group: grammar
     content:
       words: [Ich, nehme, den, neue, "Schal."]
       wrong: 3
       correction: "neue → neuen"
-    explanation: "Im Akkusativ maskulin: den neuen Schal."
+    explanation: "Masculine accusative: den neuen Schal."
   - type: error_correction
     group: grammar
     content:
       words: [Diese, Kleid, ist, "schön."]
       wrong: 0
       correction: "Diese → Dieses"
-    explanation: "das Kleid ist neutrum: Dieses Kleid ist schön."
+    explanation: "das Kleid is neuter: Dieses Kleid ist schön."
   # Spiralisches Wiederholen: die Präposition für + Akkusativ aus Modul 02.
   - type: error_correction
     group: grammar
@@ -648,7 +648,7 @@ review_pool:
       words: [Ich, kaufe, den, Mantel, für, mein, "Vater."]
       wrong: 5
       correction: "mein → meinen"
-    explanation: "für steht mit dem Akkusativ (Modul 02): für meinen Vater."
+    explanation: "für takes the accusative (module 02): für meinen Vater."
   - type: word_formation
     group: vocab
     content:
@@ -657,14 +657,14 @@ review_pool:
       prompt: Freund
       answers: [freundlich]
       answer_shown: freundlich
-    explanation: "Mit -lich wird aus dem Nomen ein Adjektiv: der Freund → freundlich."
+    explanation: "-lich turns the noun into an adjective: der Freund → freundlich."
   - type: collocation_match
     group: vocab
     content:
       left: [anziehen, ausziehen, umtauschen, anprobieren]
       right: [im Geschäft anziehen und prüfen, Kleidung an den Körper tun, zurückbringen und tauschen, Kleidung vom Körper wegnehmen]
       pairs: { 0: 1, 1: 3, 2: 2, 3: 0 }
-    explanation: "anziehen und ausziehen sind Gegenteile. umtauschen heißt zurückbringen, anprobieren heißt im Geschäft prüfen."
+    explanation: "anziehen and ausziehen are opposites. umtauschen means bringing it back, anprobieren means testing it in the shop."
   - type: key_word_transformation
     group: grammar
     content:
@@ -675,4 +675,4 @@ review_pool:
       answers: [blaue]
       hint: 1 Wort
       answer_shown: blaue
-    explanation: "die blaue Jacke: nach die heißt die Endung -e, im Akkusativ gleich."
+    explanation: "die blaue Jacke: after die the ending is -e, and the accusative is the same."

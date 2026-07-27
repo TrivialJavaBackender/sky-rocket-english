@@ -4,7 +4,7 @@
 kind: extra
 kicker: CHAT
 title: Chat am Donnerstagabend
-meta: ≈ 1 Min · Lena schreibt ihrem Freund Tom
+meta: ≈ 1 min · Lena messages her friend Tom
 body:
   - - t: "Lena, 19:02"
   - - t: "Tom, ich habe eine dringende Bitte. Kannst du mir am Samstag einen "
@@ -33,11 +33,11 @@ body:
 glosses:
   - key: Gefallen
     term: Gefallen
-    pos_label: Nomen
-    definition: Eine kleine Hilfe für eine Person. Man macht sie gern und ohne Geld.
+    pos_label: noun
+    definition: a favour — a small kindness, done gladly and for free
     example: Kannst du mir einen Gefallen tun?
   - key: gegenseitig
     term: gegenseitig
-    pos_label: Adjektiv
-    definition: Einer macht es für den anderen, und der andere macht es auch.
+    pos_label: adjective
+    definition: mutual — each one does it for the other
     example: Im Kurs helfen wir uns gegenseitig.

@@ -1,38 +1,61 @@
-# Module 08 · theory. Two spotlights, 5 items — three items for the three grammar
-# points of the card (können, wollen, möchten) plus the verb bracket and the modal
-# in questions. The word-formation extension of this module is the form of the
-# modal verb (können → ich kann, du kannst); it lives in these tables and in the
+# Module 08 · theory. Two spotlights, 9 items realising the three grammar points
+# of the card (können, wollen, möchten) plus the verb bracket and the modal in
+# questions. The word-formation extension of this module is the form of the modal
+# verb (können → ich kann, du kannst); it lives in these tables and in the
 # word_formation tasks. Scaffolding rule (§5): intro and note English, every
 # example and table German. Grammar terms are named in English directly (§5.1) —
-# there is no German grammar glossary in this course.
+# there is no German grammar glossary in this course. müssen, dürfen and sollen
+# are not shown: they belong to modules 12 and 13.
+# The shared modal pattern and the bracket: courses/_reference/basic-german/
+# units 20 (modal verbs) and 28 (word order).
 spotlights:
   - title: können and wollen — the forms
-    intro: A modal verb says what you can do or what you want to do. It never stands alone for long — a second verb comes with it, and that second verb waits at the end of the sentence.
+    intro: >-
+      A modal verb says what you can do, want to do or would like to do. It
+      almost never travels alone: a second verb comes with it, stays in the
+      infinitive, and waits at the very end of the sentence. That gap between
+      the modal in position two and the infinitive at the end is called the verb
+      bracket, and it is one of the most German things in the language — English
+      keeps its two verbs side by side, German pulls them apart. All modals also
+      share one odd trait: the ich form and the er/sie/es form are identical and
+      carry no ending at all.
     items:
+      - form: "One pattern for every modal verb"
+        example: "Ich kann gut singen. Er kann gut singen. Ich will nach Berlin. Sie will nach Berlin."
+        note: "Two things to notice: ich and er/sie/es are the same form, and the singular loses the umlaut — können → ich kann."
+        table:
+          headers: ["", "können", "wollen", "möchten"]
+          rows:
+            - ["ich", "kann", "will", "möchte"]
+            - ["du", "kannst", "willst", "möchtest"]
+            - ["er / sie / es", "kann", "will", "möchte"]
+            - ["wir", "können", "wollen", "möchten"]
+            - ["ihr", "könnt", "wollt", "möchtet"]
+            - ["sie / Sie", "können", "wollen", "möchten"]
       - form: "können — the present tense"
         example: "Ich kann gut zeichnen. Du kannst Klavier spielen. Er kann Deutsch sprechen. Wir können die Aufgabe machen."
         note: "können = to be able to. ich and er/sie/es take no ending: kann."
         table:
-          headers: ["", "können"]
+          headers: ["", "können", "Beispiel"]
           rows:
-            - ["ich", "kann"]
-            - ["du", "kannst"]
-            - ["er/sie/es", "kann"]
-            - ["wir", "können"]
-            - ["ihr", "könnt"]
-            - ["sie/Sie", "können"]
+            - ["ich", "kann", "Ich kann Deutsch sprechen."]
+            - ["du", "kannst", "Kannst du mir helfen?"]
+            - ["er/sie/es", "kann", "Sie kann sehr gut kochen."]
+            - ["wir", "können", "Wir können das machen."]
+            - ["ihr", "könnt", "Könnt ihr das lesen?"]
+            - ["sie/Sie", "können", "Können Sie das erklären?"]
       - form: "wollen — the present tense"
         example: "Ich will einen Kurs machen. Du willst die Prüfung machen. Sie will allein lernen. Wir wollen viel üben."
-        note: "wollen = to want to. Same pattern: no ending for ich and er/sie/es."
+        note: "wollen = to want to. Same pattern: no ending for ich and er/sie/es, no umlaut in the singular."
         table:
-          headers: ["", "wollen"]
+          headers: ["", "wollen", "Beispiel"]
           rows:
-            - ["ich", "will"]
-            - ["du", "willst"]
-            - ["er/sie/es", "will"]
-            - ["wir", "wollen"]
-            - ["ihr", "wollt"]
-            - ["sie/Sie", "wollen"]
+            - ["ich", "will", "Ich will das Problem lösen."]
+            - ["du", "willst", "Was willst du machen?"]
+            - ["er/sie/es", "will", "Er will allein arbeiten."]
+            - ["wir", "wollen", "Wir wollen einen Plan machen."]
+            - ["ihr", "wollt", "Wollt ihr mitkommen?"]
+            - ["sie/Sie", "wollen", "Sie wollen viel lernen."]
       - form: "The verb bracket: modal second, infinitive last"
         example: "Ich kann gut Klavier spielen. Heute will ich allein üben. Anna möchte die Prüfung machen."
         note: The modal is verb number two. The second verb stays an infinitive and waits at the end.
@@ -43,22 +66,47 @@ spotlights:
             - ["Heute", "will", "ich allein", "üben."]
             - ["Anna", "möchte", "die Prüfung", "machen."]
             - ["Wir", "können", "das Problem", "sehen."]
+      - form: "What goes inside the bracket"
+        example: "Ich kann heute nicht kommen. Wir wollen morgen einen Kurs machen."
+        note: Everything else — the time, the object, nicht — lives between the two verbs. nicht therefore stands just before the infinitive.
+        table:
+          headers: ["Modalverb", "Mitte", "Infinitiv"]
+          rows:
+            - ["Ich kann", "heute nicht", "kommen."]
+            - ["Ich will", "das Problem allein", "lösen."]
+            - ["Sie möchte", "morgen einen Kurs", "machen."]
+            - ["Wir können", "die Aufgabe nicht", "verstehen."]
 
   - title: möchten and modals in questions
-    intro: möchten is the polite modal. You already say Ich möchte einen Kaffee — here it gets its full set of forms and a second verb at the end.
+    intro: >-
+      möchten is the polite modal, and you have been using it since the café in
+      module 6 — Ich möchte einen Kaffee. Here it gets its full set of forms and
+      a second verb at the end. It is worth keeping möchte and will apart: they
+      both say what you want, but will is blunt and möchte is polite, and in a
+      shop or an office the polite one is the only safe choice. In a question,
+      the modal simply moves to the front; the infinitive does not move at all.
     items:
       - form: "möchten — the present tense"
         example: "Ich möchte einen Kurs machen. Möchtest du auch Deutsch lernen? Er möchte die Prüfung machen. Wir möchten viel üben."
         note: "Polite: I would like to. ich and er/sie/es both take möchte."
         table:
-          headers: ["", "möchten"]
+          headers: ["", "möchten", "Beispiel"]
           rows:
-            - ["ich", "möchte"]
-            - ["du", "möchtest"]
-            - ["er/sie/es", "möchte"]
-            - ["wir", "möchten"]
-            - ["ihr", "möchtet"]
-            - ["sie/Sie", "möchten"]
+            - ["ich", "möchte", "Ich möchte Deutsch lernen."]
+            - ["du", "möchtest", "Möchtest du einen Kaffee?"]
+            - ["er/sie/es", "möchte", "Sie möchte allein arbeiten."]
+            - ["wir", "möchten", "Wir möchten die Rechnung."]
+            - ["ihr", "möchtet", "Möchtet ihr mitkommen?"]
+            - ["sie/Sie", "möchten", "Was möchten Sie?"]
+      - form: "wollen or möchten?"
+        example: "Ich möchte einen Kaffee, bitte. Ich will das nicht machen."
+        note: Both say what you want. will is direct and can sound rude to a stranger; möchte is the polite everyday form.
+        table:
+          headers: ["Situation", "Besser", "Nicht so gut"]
+          rows:
+            - ["im Café", "Ich möchte einen Tee.", "Ich will einen Tee."]
+            - ["im Kurs", "Ich möchte eine Frage stellen.", "Ich will eine Frage stellen."]
+            - ["ein Plan", "Ich will Deutsch lernen.", "—"]
       - form: "The modal in a question"
         example: "Kannst du gut zeichnen? Was willst du heute lernen? Möchtest du einen Kurs machen?"
         note: The modal comes first, or after the question word. The infinitive still stands at the end.
@@ -69,6 +117,15 @@ spotlights:
             - ["Was willst du", "heute", "lernen?"]
             - ["Möchtest du", "einen Kurs", "machen?"]
             - ["Wo können wir", "Deutsch", "lernen?"]
+      - form: "A modal without a second verb"
+        example: "Ich kann Deutsch. Ich möchte einen Kaffee. Wir wollen nach Berlin."
+        note: When the second verb is obvious — speak, have, go — German simply leaves it out. The modal then behaves like a normal verb.
+        table:
+          headers: ["Kurz", "Lang"]
+          rows:
+            - ["Ich kann Deutsch.", "Ich kann Deutsch sprechen."]
+            - ["Ich möchte einen Kaffee.", "Ich möchte einen Kaffee trinken."]
+            - ["Wir wollen nach Berlin.", "Wir wollen nach Berlin fahren."]
 
 watchouts:
   - title: The infinitive goes to the end
@@ -83,6 +140,14 @@ watchouts:
     bad: Ich möchte zu Deutsch lernen.
     good: Ich möchte Deutsch lernen.
     note: "German uses the bare infinitive after a modal — there is no word for to here."
+  - title: er kann, not er kannt
+    bad: Er kannt sehr gut singen.
+    good: Er kann sehr gut singen.
+    note: The er-form of a modal has no -t. It is identical with the ich-form.
+  - title: nicht stands before the infinitive
+    bad: Ich kann nicht kommen heute.
+    good: Ich kann heute nicht kommen.
+    note: Everything, including nicht, lives inside the bracket. The infinitive is always the last word.
 
 cloze_cards:
   - text: "Ich {{c1::kann}} gut Klavier spielen."

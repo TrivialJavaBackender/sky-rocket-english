@@ -1,47 +1,45 @@
-# Checkpoint A · Schreiben und Auswertung. Das Szenario ist so gewählt, dass die
-# Grammatik von allen fünf Modulen von selbst nötig wird: der Umzug am
-# Wochenende (M01 · Perfekt), der Weg zur neuen Wohnung (M02 · Präposition mit
-# festem Kasus), die Möbel im Zimmer (M03 · wo und wohin), die Person, die
-# geholfen hat (M04 · Dativ als Objekt), und die alte Wohnung von früher
-# (M05 · war, hatte, musste und als/wenn).
+# Checkpoint A · writing task and marking. The scenario is chosen so that the
+# grammar of all five modules becomes necessary by itself: the move at the
+# weekend (M01 · perfect), the way to the new flat (M02 · prepositions with a
+# fixed case), the furniture in the room (M03 · wo and wohin), the person who
+# helped (M04 · dative object) and the old flat back then (M05 · war, hatte,
+# musste and als/wenn).
 #
-# 60–80 Wörter sind mehr als im Profil (PLAN.md §6: 50–60). Das ist Absicht:
-# Die Aufgabe muss die Grammatik von fünf Modulen auf einmal zeigen. In 60
-# Wörter passt das nicht.
+# 60–80 words is more than the profile allows (PLAN.md §6: 50–60), deliberately:
+# the task has to show the grammar of five modules at once, and that does not
+# fit into 60 words.
 mode: writing
-genre: E-Mail über den Umzug
+genre: an email about moving house
 word_target: [60, 80]
 prompt: |
-  Schreiben Sie diesen Text direkt nach den 30 Aufgaben, in der gleichen
-  Sitzung. 20 Minuten, kein Wörterbuch.
+  Write this text straight after the 30 tasks, in the same sitting.
+  20 minutes, no dictionary.
 
-  ## Die Aufgabe
+  ## The task
 
-  Sie sind letzten Monat umgezogen. Eine Freundin oder ein Freund aus Ihrem
-  Deutschkurs wohnt in einer anderen Stadt. Schreiben Sie eine E-Mail über
-  Ihre neue Wohnung. 60–80 Wörter.
+  You moved house last month. A friend from your German course lives in
+  another town. Write them an email about your new flat, in German.
+  60–80 words.
 
-  Schreiben Sie zu allen fünf Punkten:
-  • Was Sie am Wochenende gemacht haben — der Umzug
-  • Wer Ihnen geholfen hat und was Sie dieser Person geschenkt haben
-  • Wo im Zimmer jetzt die Möbel stehen, liegen oder hängen
-  • Wie es in der alten Wohnung früher war
-  • Wie man vom Bahnhof zu Ihnen kommt
+  Cover all five points:
+  • what you did at the weekend — the move
+  • who helped you and what you gave that person
+  • where the furniture now stands, lies or hangs in the room
+  • what the old flat used to be like
+  • how to get to you from the station
 
-  Benutzen Sie das Perfekt mit haben und sein, eine Präposition mit Dativ, den
-  Dativ nach helfen, danken oder schenken, das Präteritum von sein und haben
-  und einmal als oder wenn.
+  Use the perfect with haben and sein, a preposition that takes the dative,
+  the dative after helfen, danken or schenken, the simple past of sein and
+  haben, and als or wenn once.
 
-  ## Nach dem Test
+  ## After the test
 
-  • 23 von 30 sind 75 Prozent. So viele Aufgaben müssen richtig sein.
-  • Sortieren Sie jeden Fehler nach dem Modul. Vorn in der Erklärung steht
-    M01, M02, M03, M04 oder M05.
-  • Ein Fehler hier und ein Fehler dort ist normal. Drei Fehler in einem
-    Modul sind eine Lücke: Lesen Sie dort die Regeln noch einmal und machen
-    Sie die Aufgaben von diesem Modul neu.
-  • Weniger als 23 richtig? Dann kommt zuerst eine Woche Wiederholung,
-    danach Block B.
+  • 23 out of 30 is 75 per cent — that is the pass mark.
+  • Sort every mistake by module. The explanation starts with M01, M02, M03,
+    M04 or M05.
+  • One mistake here and one there is normal. Three mistakes in the same
+    module is a gap: reread that module's rules and redo its tasks.
+  • Fewer than 23 right? Then take a week of revision before block B.
 model_answer: |
   Liebe Sara,
 
@@ -55,14 +53,14 @@ model_answer: |
   Liebe Grüße
   Ella
 checklist:
-  - 60–80 Wörter
-  - Alle fünf Punkte stehen im Text
-  - Anrede (Liebe … / Lieber …) und Gruß am Ende
-  - Die Sätze über das Wochenende stehen im Perfekt, das Partizip am Ende
-  - haben oder sein ist richtig gewählt (Bewegung → sein)
-  - Nach mit, bei, nach, von, zu, aus und seit steht der Dativ
-  - Bei stehen, liegen und hängen steht der Dativ (Wo?), bei stellen, legen und hängen der Akkusativ (Wohin?)
-  - Nach helfen, danken und schenken steht die Person im Dativ
-  - sein und haben stehen im Präteritum (war, waren, hatte, hatten)
-  - als oder wenn kommt einmal vor, und das Verb steht am Ende
-  - Mindestens zehn Wörter aus den Modulen 1–5 kommen vor
+  - 60–80 words
+  - All five points are covered
+  - It opens with Liebe … / Lieber … and closes with a greeting
+  - The weekend sentences are in the perfect, with the participle at the end
+  - haben or sein is chosen correctly (movement → sein)
+  - mit, bei, nach, von, zu, aus and seit are followed by the dative
+  - stehen, liegen and hängen take the dative (Wo?), stellen, legen and hängen the accusative (Wohin?)
+  - helfen, danken and schenken put the person in the dative
+  - sein and haben are in the simple past (war, waren, hatte, hatten)
+  - als or wenn appears once, with the verb at the end
+  - At least ten words from modules 1–5 appear

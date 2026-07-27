@@ -1,24 +1,24 @@
-# Modul 07 · Wohnungssuche — Schreibaufgabe: E-Mail an den Vermieter.
-# Echtes A2-Format (Goethe/telc Brief): kurze E-Mail, 50 bis 60 Wörter, vier
-# vorgegebene Punkte, Anrede und Gruß. Der Lernende fragt beim Vermieter nach
-# Miete, Nebenkosten, Möbeln und einem Termin — genau das nachfragen aus dem
-# standfirst. Das Modell nutzt die Zielformen des Moduls (eine ruhige Wohnung,
-# mit freundlichen Grüßen) und keine Grammatik aus späteren Modulen.
+# Modul 07 · Wohnungssuche — writing task: an email to the landlord.
+# The real A2 format (Goethe/telc letter): a short email, 50 to 60 words, four
+# given points, an opening and a closing. The learner asks the landlord about
+# rent, service charges, furniture and a viewing — exactly the nachfragen of the
+# standfirst. The model uses this module's target forms (eine ruhige Wohnung,
+# mit freundlichen Grüßen) and no grammar from later modules.
 mode: writing
-genre: E-Mail an den Vermieter mit Fragen
+genre: an email to a landlord with questions
 word_target:
 - 50
 - 60
 prompt: |
-  Sie haben in der Zeitung eine Wohnungsanzeige gelesen und finden die Wohnung interessant. Schreiben Sie eine E-Mail an den Vermieter, Herrn Kraus. Schreiben Sie 50 bis 60 Wörter.
+  You have read a flat advert in the paper and the flat looks interesting. Write an email to the landlord, Herr Kraus, in German. Write 50 to 60 words.
 
-  Schreiben Sie etwas zu allen vier Punkten:
-  - Sagen Sie, welche Anzeige Sie gelesen haben.
-  - Fragen Sie nach der Miete und den Nebenkosten.
-  - Fragen Sie, ob die Wohnung möbliert ist.
-  - Fragen Sie nach einem Termin für eine Besichtigung.
+  Cover all four points:
+  - say which advert you read
+  - ask about the rent and the service charges
+  - ask whether the flat is furnished
+  - ask for an appointment to view it
 
-  Vergessen Sie die Anrede und den Gruß nicht.
+  Do not forget the opening and the closing.
 model_answer: |
   Sehr geehrter Herr Kraus,
 
@@ -27,8 +27,8 @@ model_answer: |
   Mit freundlichen Grüßen
   Anna Weber
 checklist:
-- Anrede (Sehr geehrter Herr Kraus) und Gruß (Mit freundlichen Grüßen) nicht vergessen
-- 50 bis 60 Wörter
-- 'Zu allen vier Punkten etwas schreiben: Anzeige, Miete und Nebenkosten, möbliert, Termin'
-- 'Fragen mit Fragezeichen stellen: Wie hoch ist die Miete? Ist die Wohnung möbliert?'
-- 'Die Adjektive richtig beenden: eine ruhige Wohnung, mit freundlichen Grüßen'
+- Opening (Sehr geehrter Herr Kraus) and closing (Mit freundlichen Grüßen) are there
+- 50 to 60 words
+- 'All four points are covered: the advert, rent and service charges, furnished, a viewing'
+- 'The questions carry a question mark: Wie hoch ist die Miete? Ist die Wohnung möbliert?'
+- 'The adjectives end correctly: eine ruhige Wohnung, mit freundlichen Grüßen'

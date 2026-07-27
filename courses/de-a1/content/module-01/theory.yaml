@@ -1,70 +1,125 @@
-# Module 01 · theory. Two spotlights, 7 items — they realise the four grammar
+# Module 01 · theory. Two spotlights, 12 items — they realise the four grammar
 # points of the module card (PLAN.md §4). Scaffolding rule (§5): intro and note
 # in English, every example and table in German. Grammar terms are named in
 # English directly (no German Grammatik-Wörterbuch — PLAN.md §5.1).
+# Source for the paradigms and the special cases: courses/_reference/basic-german/
+# units 01 (spelling, genders), 04 (sein) and 07 (questions).
 spotlights:
   - title: Sounds and spelling — reading German aloud
-    intro: German is written much as it sounds. A few letters and letter pairs are new, and every noun starts with a capital.
+    intro: >-
+      German spelling is far more regular than English: a letter almost always
+      keeps the same sound, so once you know a handful of letters and letter
+      pairs you can read a word you have never seen aloud. Two things look
+      strange at first. German has four characters English does not have
+      (ä, ö, ü, ß), and it writes every noun with a capital — not only names,
+      but Land, Beruf, Adresse too. Work through the tables below out loud; the
+      whole course reads more easily afterwards.
     items:
       - form: The special letters ä ö ü ß
-        note: ä ö ü are separate vowels, not decorated a/o/u. ß sounds like a sharp s (ss).
+        example: "Länder · schön · Tür · Straße · heißen"
+        note: ä ö ü are separate vowels, not decorated a/o/u. ß sounds like a sharp s (ss) and never starts a word.
         table:
-          headers: ["Letter", "Sounds like", "Word"]
+          headers: ["Letter", "Sounds like", "Words"]
           rows:
-            - ["ä", "e in 'bed'", "Länder"]
-            - ["ö", "u in 'fur'", "schön"]
-            - ["ü", "ee with round lips", "Tür"]
-            - ["ß", "sharp s (ss)", "heißen"]
+            - ["ä", "e in 'bed'", "Länder · Mädchen"]
+            - ["ö", "u in 'fur'", "schön · Österreich"]
+            - ["ü", "ee with round lips", "Tür · über · Bücher"]
+            - ["ß", "sharp s (ss)", "heißen · Straße · groß"]
       - form: "Letter pairs: sch, ch, ei, ie, eu/äu"
-        note: "ei sounds like 'eye', ie sounds like 'ee' — opposites, so watch the order."
+        example: "Sprache · heißen · vier · Deutschland · Buch"
+        note: "ei sounds like 'eye', ie sounds like 'ee' — opposites, so watch the order. ch has two sounds: soft after i/e, hard after a/o/u."
         table:
-          headers: ["Pair", "Sounds like", "Word"]
+          headers: ["Pair", "Sounds like", "Words"]
           rows:
-            - ["sch", "sh", "Sprache"]
-            - ["ei", "eye", "heißen"]
-            - ["ie", "ee", "Sie, wie"]
-            - ["eu / äu", "oy", "Deutschland"]
-            - ["ch", "soft h / kh", "ich, Buch"]
+            - ["sch", "sh", "Sprache · schön · Deutsch"]
+            - ["ei", "eye", "heißen · mein · Wein"]
+            - ["ie", "ee", "Sie · wie · vier · Familie"]
+            - ["eu / äu", "oy", "Deutschland · neun · Häuser"]
+            - ["ch (after i, e)", "soft h", "ich · nicht · sprechen"]
+            - ["ch (after a, o, u)", "kh", "Buch · machen · auch"]
       - form: "sp-, st- and final -er"
         example: "Sprache · Straße · sprechen · Vater · Wasser"
-        note: At the start of a word sp-/st- sound like 'shp-/sht-'. Final -er sounds like a soft 'a'.
+        note: At the start of a word sp-/st- sound like 'shp-/sht-'. Final -er sounds like a soft 'a', never like English '-er'.
+        table:
+          headers: ["Spelling", "Sound", "Words"]
+          rows:
+            - ["sp- at the start", "shp", "Sprache · Spanien · spielen"]
+            - ["st- at the start", "sht", "Straße · Student · Stadt"]
+            - ["-er at the end", "soft 'a'", "Vater · Wasser · Bruder"]
       - form: Every noun starts with a capital letter
         example: "der Beruf · die Adresse · das Land · die Telefonnummer"
-        note: Nouns always take a capital — Land, not land. This is how you spot a noun.
+        note: Nouns always take a capital — Land, not land. This is how you spot a noun in a German sentence.
+      - form: "ich is small, Sie is always capital"
+        example: "Woher kommen Sie? Ich komme aus Spanien. Wie heißen Sie?"
+        note: The opposite of English. German writes ich small even in mid-sentence, but polite Sie always with a capital S.
+      - form: "The alphabet — spelling a name out loud"
+        example: "Wie schreibt man das? — M wie Meyer: M-E-Y-E-R."
+        note: Say a name letter by letter with buchstabieren. Six letter names are worth learning first — the rest sound close to English.
+        table:
+          headers: ["Letter", "You say", "Letter", "You say"]
+          rows:
+            - ["j", "jott", "y", "üpsilon"]
+            - ["v", "fau", "z", "tsett"]
+            - ["w", "weh", "ß", "eszett"]
+            - ["ä", "a-umlaut", "ü", "u-umlaut"]
 
   - title: sein, pronouns and asking questions
-    intro: The most important verb is sein (to be). With the question words wie, wer, woher and wo you can ask about any person.
+    intro: >-
+      With one verb and four question words you can already hold a first
+      conversation. The verb is sein ('to be') — the most frequent verb in
+      German and, as in English, completely irregular, so its six forms are
+      learned by heart rather than built from a rule. The question words wie,
+      wer, woher and wo open a question, and the verb follows immediately
+      after them. Note one thing German does not do: there is no 'do' in
+      questions. 'Where do you live?' is simply Wo wohnst du? — three words.
     items:
       - form: Personal pronouns (nominative)
-        note: du = one friend, ihr = several friends, Sie = polite (always a capital S).
+        example: "Ich bin Student. Er ist Lehrer. Wir sind aus Berlin."
+        note: "du = one friend, ihr = several friends, Sie = polite for one person or many. sie can be 'she' or 'they' — the verb form tells you which."
         table:
           headers: ["Singular", "", "Plural", ""]
           rows:
             - ["ich", "I", "wir", "we"]
             - ["du", "you (a friend)", "ihr", "you (a group)"]
             - ["er / sie / es", "he / she / it", "sie", "they"]
-            - ["Sie", "you (polite)", "", ""]
+            - ["Sie", "you (polite)", "Sie", "you (polite, group)"]
       - form: The verb sein (to be)
         example: "Ich bin Anna. Du bist Student. Wir sind aus Spanien."
-        note: sein is irregular — learn these six forms by heart.
+        note: sein is irregular — learn these six forms by heart. They come back in every single module.
         table:
-          headers: ["", "sein"]
+          headers: ["", "sein", "Beispiel"]
           rows:
-            - ["ich", "bin"]
-            - ["du", "bist"]
-            - ["er / sie / es", "ist"]
-            - ["wir", "sind"]
-            - ["ihr", "seid"]
-            - ["sie / Sie", "sind"]
-      - form: "W-questions: question word first, verb second"
-        note: "wer = who, wie = how/what, woher = where from, wo = where. The verb comes right after."
+            - ["ich", "bin", "Ich bin aus Deutschland."]
+            - ["du", "bist", "Du bist sehr nett."]
+            - ["er / sie / es", "ist", "Sie ist Lehrerin."]
+            - ["wir", "sind", "Wir sind aus Österreich."]
+            - ["ihr", "seid", "Seid ihr verheiratet?"]
+            - ["sie / Sie", "sind", "Sind Sie Herr Meyer?"]
+      - form: "sein + job or country — no article"
+        example: "Ich bin Lehrer. Sie ist Studentin. Er ist Amerikaner."
+        note: "German drops the article in front of a job or a nationality: Ich bin Lehrer, never Ich bin ein Lehrer."
+      - form: "The question words: wer, wie, woher, wo"
+        note: Each word asks about one thing. Learn them with a ready answer next to them.
         table:
-          headers: ["Question", "Answer"]
+          headers: ["Frage", "Asks about", "Antwort"]
           rows:
-            - ["Wie heißt du?", "Ich heiße Anna."]
-            - ["Wer ist das?", "Das ist Herr Meyer."]
-            - ["Woher kommst du?", "Ich komme aus Spanien."]
-            - ["Wo wohnst du?", "Ich wohne in Berlin."]
+            - ["Wie heißt du?", "the name", "Ich heiße Anna."]
+            - ["Wer ist das?", "the person", "Das ist Herr Meyer."]
+            - ["Woher kommst du?", "the country", "Ich komme aus Spanien."]
+            - ["Wo wohnst du?", "the place", "Ich wohne in Berlin."]
+            - ["Was sind Sie von Beruf?", "the job", "Ich bin Lehrerin."]
+      - form: "Question word — verb — subject"
+        example: "Woher kommen Sie? Wo wohnt Anna? Wie heißt dein Bruder?"
+        note: The verb comes straight after the question word, before the subject. There is no German word for 'do' in a question.
+        table:
+          headers: ["1 · Question word", "2 · Verb", "3 · Subject", "4 · Rest"]
+          rows:
+            - ["Woher", "kommen", "Sie", ""]
+            - ["Wo", "wohnt", "Anna", "in Deutschland?"]
+            - ["Wie", "ist", "deine Adresse", ""]
+      - form: "wie — not was — for a name, an address or a number"
+        example: "Wie ist deine Adresse? Wie ist deine Telefonnummer? Wie ist Ihr Name?"
+        note: English asks 'what', German asks wie. Was ist deine Adresse? is simply wrong.
 
 watchouts:
   - title: Country names take a capital
@@ -83,6 +138,14 @@ watchouts:
     bad: Ich Anna.
     good: Ich bin Anna.
     note: "Don't drop the verb: say Ich bin Anna, not Ich Anna."
+  - title: No article in front of a job
+    bad: Ich bin ein Lehrer.
+    good: Ich bin Lehrer.
+    note: After sein a job or a nationality stands bare — no ein, no eine.
+  - title: wie for an address, not was
+    bad: Was ist deine Telefonnummer?
+    good: Wie ist deine Telefonnummer?
+    note: German uses wie to ask for a name, an address or a phone number.
 
 cloze_cards:
   - text: "Hallo! Ich {{c1::bin}} Anna und komme aus Spanien."

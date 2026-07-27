@@ -3,9 +3,9 @@
 # über bis zur Kreuzung, nach der Ampel, vom Hauptbahnhof, durch die Straße.
 # Das ist die Vorlage für die eigene Aufgabe in writing.yaml.
 kind: extra
-kicker: DIALOG
+kicker: DIALOGUE
 title: Wie komme ich zum Museum?
-meta: ≈ 1 Min · zwei Menschen auf der Straße
+meta: ≈ 1 min · two people in the street
 body:
   - - t: "– Entschuldigung, wie komme ich von hier zum Museum?"
   - - t: "– Zu Fuß oder mit dem Bus?"
@@ -30,11 +30,11 @@ body:
 glosses:
   - key: Glas
     term: Glas
-    pos_label: Nomen
-    definition: Man sieht durch dieses Material. Fenster sind daraus.
+    pos_label: noun
+    definition: glass — the material you can see through, that windows are made of
     example: Das Museum ist ganz aus Glas.
   - key: Hauptbahnhof
     term: Hauptbahnhof
-    pos_label: Nomen
-    definition: Der größte Bahnhof in der Stadt. Dort fahren fast alle Züge ab.
+    pos_label: noun
+    definition: the main station — the biggest one in town, where almost every train leaves from
     example: Der Bus fährt vom Hauptbahnhof bis zum Museum.

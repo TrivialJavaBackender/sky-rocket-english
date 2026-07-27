@@ -1,10 +1,12 @@
 # Course skeleton — Deutsch A1 → A2, 40 hours (courses/de-a2/PLAN.md).
 # See docs/COURSE-DESIGN-GUIDE.md for how the numbers below were derived.
 #
-# Everything a learner reads is German, including the step titles: the course is
-# built for full immersion (PLAN.md §«Immersion»). Only this file's comments and
-# the sibling PLAN.md are in Russian — they are addressed to the author, not the
-# learner.
+# German core, English scaffolding (PLAN.md §5, boundary by field). Module titles
+# stay German — they name the topic; block names, standfirsts and every step title
+# are English, exactly as in courses/de-a1. The course ran on full immersion until
+# July 2026; the decision to drop it and why is recorded in PLAN.md §5. Only this
+# file's comments and the sibling PLAN.md are in Russian — they address the author,
+# not the learner.
 #
 # Positions come from array order. A module's planned_minutes is the sum of the
 # protocol's session minutes (55+55+55+45 = 210 = 3.5 h).
@@ -30,7 +32,7 @@ blocks:
   # the placement test says has gaps. Open from the start, carries no checkpoint,
   # and no required module may lean on it — it can be skipped entirely.
   - slug: refresh
-    name: Auffrischung
+    name: Refresher
     optional: true
     color: '#7A7A7A'
     tint: '#F0EFEE'
@@ -38,174 +40,177 @@ blocks:
       - slug: a01
         dir: auffrischung
         title: Ich und du
-        standfirst: Präsens, sein und haben, Fragen · 30 Wörter · sich und andere vorstellen.
+        standfirst: The present tense, sein and haben, questions · 30 words · introduce yourself and others.
 
   - slug: a
-    name: Erzählen
+    name: Telling stories
     color: '#C9622E'
     tint: '#FAEDE6'
     modules:
       - slug: m01
         dir: module-01
         title: Mein Wochenende
-        standfirst: Perfekt mit haben und sein · 30 Wörter · vom Wochenende berichten.
+        standfirst: The perfect tense with haben and sein · 30 words · report on your weekend.
       - slug: m02
         dir: module-02
         title: Unterwegs
-        standfirst: Der Dativ und die Präpositionen · 30 Wörter · den Weg beschreiben.
+        standfirst: The dative and the prepositions that take it · 30 words · describe a route.
       - slug: m03
         dir: module-03
         title: Wohnen und Einrichten
-        standfirst: Wechselpräpositionen, wo und wohin · 30 Wörter · das eigene Zimmer beschreiben.
+        standfirst: Two-way prepositions, wo and wohin · 30 words · describe your own room.
       - slug: m04
         dir: module-04
         title: Geschenke und Gefälligkeiten
-        standfirst: Der Dativ als Objekt, mir und dir · 30 Wörter · um einen Gefallen bitten.
+        standfirst: The dative as an object, mir and dir · 30 words · ask someone for a favour.
       - slug: m05
         dir: module-05
         title: Früher und heute
-        standfirst: Präteritum, als und wenn · 30 Wörter · aus der Kindheit erzählen.
+        standfirst: The simple past, als and wenn · 30 words · tell a story from your childhood.
 
   - slug: b
-    name: Beschreiben
+    name: Describing
     color: '#B8452F'
     tint: '#F9E9E6'
     modules:
       - slug: m06
         dir: module-06
         title: Kleidung und Einkaufen
-        standfirst: Adjektive nach dem bestimmten Artikel · 30 Wörter · ein Gespräch im Geschäft.
+        standfirst: Adjective endings after the definite article · 30 words · a conversation in a shop.
       - slug: m07
         dir: module-07
         title: Wohnungssuche
-        standfirst: Adjektive nach ein- und ohne Artikel · 30 Wörter · beim Vermieter nachfragen.
+        standfirst: Adjective endings after ein- and with no article · 30 words · question a landlord.
       - slug: m08
         dir: module-08
         title: Vergleichen und Bewerten
-        standfirst: Komparativ und Superlativ · 30 Wörter · Dinge vergleichen und bewerten.
+        standfirst: Comparative and superlative · 30 words · compare things and judge them.
       - slug: m09
         dir: module-09
         title: Körper und Gesundheit
-        standfirst: Reflexive Verben, dürfen und sollen · 30 Wörter · Ratschläge geben.
+        standfirst: Reflexive verbs, dürfen and sollen · 30 words · give advice.
 
   - slug: c
-    name: Verbinden
+    name: Connecting ideas
     color: '#8E3B5C'
     tint: '#F5E8EE'
     modules:
       - slug: m10
         dir: module-10
         title: Arbeit und Entscheidungen
-        standfirst: Nebensätze mit weil, dass und obwohl · 30 Wörter · eine kurze Bewerbung schreiben.
+        standfirst: Subordinate clauses with weil, dass and obwohl · 30 words · write a short application.
       - slug: m11
         dir: module-11
         title: Wünsche und Pläne
-        standfirst: Konjunktiv II und zu + Infinitiv · 30 Wörter · höflich bitten und absagen.
+        standfirst: Konjunktiv II and zu + infinitive · 30 words · make a polite request and decline one.
       - slug: m12
         dir: module-12
         title: Gefühle und Beziehungen
-        standfirst: Verben mit Präposition und Präpositionaladverbien · 30 Wörter · über Gefühle sprechen.
+        standfirst: Verbs with a fixed preposition and da-/wo- forms · 30 words · talk about feelings.
       - slug: m13
         dir: module-13
         title: Medien und Auskunft
-        standfirst: Indirekte Fragen und Relativsätze · 30 Wörter · nach Auskunft fragen.
+        standfirst: Indirect questions and relative clauses · 30 words · ask for information.
       - slug: m14
         dir: module-14
         title: Umwelt und Gesellschaft
-        standfirst: Passiv Präsens und Genitiv · 30 Wörter · Regeln erklären und begründen.
+        standfirst: The present passive and the genitive · 30 words · explain and justify rules.
 
 checkpoints:
   - slug: diagnostic
     kind: diagnostic
     dir: diagnostic
-    title: Einstufungstest · 40 Aufgaben und das Grammatik-Wörterbuch
+    title: Placement test · 40 tasks and the German grammar terms
     pass_mark: null
     planned_minutes: 60
   - slug: cp-a
     kind: block
     block: a
     dir: checkpoint-a
-    title: Checkpoint A · Module 1–5
+    title: Checkpoint A · Modules 1–5
     pass_mark: 75
     planned_minutes: 75
   - slug: cp-b
     kind: block
     block: b
     dir: checkpoint-b
-    title: Checkpoint B · Module 6–9
+    title: Checkpoint B · Modules 6–9
     pass_mark: 75
     planned_minutes: 75
   - slug: final
     kind: final
     block: c
     dir: final
-    title: Abschlusstest · im Format Goethe-Zertifikat A2
+    title: Final test · in the Goethe-Zertifikat A2 format
     pass_mark: 60
     planned_minutes: 90
 
-# Vier Sitzungen pro Modul, 210 Minuten. Kürzer als im Kurs en-c1 (270), weil auf
-# dem Niveau A1–A2 die Konzentration früher nachlässt — docs/COURSE-DESIGN-GUIDE.md §7.
+# Four sessions per module, 210 minutes. Shorter than in en-c1 (270) because at
+# A1–A2 concentration fades earlier — docs/COURSE-DESIGN-GUIDE.md §7. The step
+# titles are English scaffolding (PLAN.md §5) and are word-for-word the ones in
+# courses/de-a1/course.yaml: the same protocol should read the same in both
+# German courses.
 protocol:
   - type: prime
     title: Start
     planned_minutes: 55
     steps:
       - kind: opener
-        title: Ziele dieses Moduls
-        detail: Sieh, was du am Ende dieser Woche kannst
+        title: Your goals this week
+        detail: See what you'll be able to do by the end of the week
         minutes: 3
       - kind: reading
-        title: Text überfliegen
-        detail: Lies einmal ohne Wörterbuch — nur der Inhalt zählt
+        title: Skim the text
+        detail: Read once without a dictionary — just the gist
         minutes: 8
         config: { reading_kind: main, mode: skim }
       - kind: theory
-        title: Grammatik im Fokus · Teil 1
-        detail: Lerne die erste Hälfte der Regeln — mit Tabelle und Beispielen
+        title: Grammar in focus · Part 1
+        detail: Learn the first half of the rules — with a table and examples
         minutes: 16
         config: { part: 1, of: 2 }
       - kind: vocab
-        title: Wortschatz · 1 von 3
-        detail: Lerne die ersten Wörter und markiere die wichtigsten
+        title: Vocabulary · 1 of 3
+        detail: Learn the first words and mark the most important
         minutes: 20
         config: { batch: 1, of: 3 }
       - kind: flashcards_intro
-        title: Neue Karten in die Kartei
-        detail: Die Wörter dieses Moduls kommen in deine tägliche Wiederholung
+        title: New cards into your deck
+        detail: This module's words join your daily review
         minutes: 8
 
   - type: input
-    title: Lesen
+    title: Reading
     planned_minutes: 55
     steps:
       - kind: review_slot
-        title: Wiederholung
-        detail: Löse 8 Aufgaben aus deiner Wiederholungsliste
+        title: Review
+        detail: Solve 8 tasks from your review queue
         minutes: 10
         config: { count: 8 }
       - kind: vocab
-        title: Wortschatz · 2 von 3
-        detail: Diese Wörter findest du gleich im Text
+        title: Vocabulary · 2 of 3
+        detail: You'll meet these words in the text in a moment
         minutes: 8
         config: { batch: 2, of: 3 }
       - kind: reading
-        title: Lesen mit Glossen
-        detail: Suche im Text die Wörter und die Regeln dieses Moduls
+        title: Reading with glosses
+        detail: Hunt for this module's words and rules in the text
         minutes: 12
         config: { reading_kind: main, mode: close }
       - kind: exercise_set
-        title: Leseverstehen
-        detail: Zeig, dass du auch die Details verstanden hast
+        title: Reading check
+        detail: Show you caught the details too
         minutes: 7
         config: { types: [reading_comprehension] }
       - kind: vocab
-        title: Wortschatz · 3 von 3
-        detail: Die letzten Wörter, bevor du alles übst
+        title: Vocabulary · 3 of 3
+        detail: The last words before you practise
         minutes: 8
         config: { batch: 3, of: 3 }
       - kind: exercise_set
-        title: Wortschatz-Übungen
-        detail: Üben, bis die Wörter sitzen
+        title: Vocabulary drills
+        detail: Practise until the words stick
         minutes: 10
         config: { group_key: vocab }
 
@@ -214,49 +219,49 @@ protocol:
     planned_minutes: 55
     steps:
       - kind: review_slot
-        title: Wiederholung
-        detail: Löse 8 Aufgaben aus deiner Wiederholungsliste
+        title: Review
+        detail: Solve 8 tasks from your review queue
         minutes: 10
         config: { count: 8 }
       - kind: theory
-        title: Grammatik im Fokus · Teil 2
-        detail: Der Rest der Regeln — gleich danach übst du sie
+        title: Grammar in focus · Part 2
+        detail: The rest of the rules — you'll practise them right after
         minutes: 12
         config: { part: 2, of: 2 }
       - kind: exercise_set
-        title: Grammatik-Drill und Lückentext
-        detail: Formen, Endungen und die richtige Satzstellung
+        title: Drills & gap-fill
+        detail: Forms, endings and word order
         minutes: 18
         config: { types: [grammar_drill, open_cloze] }
       - kind: exercise_set
-        title: Umformung und Fehlersuche
-        detail: Sätze umformen und typische Fehler finden
+        title: Transform & fix
+        detail: Reshape sentences and spot typical mistakes
         minutes: 10
         config: { types: [key_word_transformation, error_correction] }
       - kind: harvest
-        title: Fehler sammeln
-        detail: Jeder Fehler kommt zurück — in 2, 7 und 21 Tagen
+        title: Collect your mistakes
+        detail: Every mistake comes back — in 2, 7 and 21 days
         minutes: 5
 
   - type: output
-    title: Anwenden
+    title: Doing
     planned_minutes: 45
     steps:
       - kind: reading
-        title: Zweiter Text
-        detail: Ein Dialog zum Thema — das Material für deine Aufgabe
+        title: Second text
+        detail: A dialogue on the topic — the material for your task
         minutes: 8
         config: { reading_kind: extra, mode: close }
       - kind: production
-        title: Schreiben oder Sprechen
-        detail: Benutze die Wörter und die Grammatik dieses Moduls selbst
+        title: Write or speak
+        detail: Use this module's words and grammar yourself
         minutes: 20
       - kind: self_check
-        title: Selbstkontrolle
-        detail: Vergleiche mit dem Musterbeispiel und prüfe die Liste
+        title: Self-check
+        detail: Compare with the model and go through the list
         minutes: 7
       - kind: module_quiz
-        title: Modul-Quiz
-        detail: 10 Aufgaben — danach ist das Modul fertig, Wiederholung in 7 und 21 Tagen
+        title: Module quiz
+        detail: 10 tasks — then the module is done, review in 7 and 21 days
         minutes: 10
         config: { count: 10, pool: review }

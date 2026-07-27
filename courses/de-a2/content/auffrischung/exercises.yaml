@@ -14,7 +14,7 @@ core:
       post: " aus Polen und wohnt jetzt in Leipzig."
       options: [komme, kommst, kommt, kommen]
       answer: 2
-    explanation: "Marek = er. Bei er/sie/es endet das Verb auf -t: er kommt."
+    explanation: "Marek = er. With er/sie/es the verb ends in -t: er kommt."
   - type: mc_cloze
     group: grammar
     content:
@@ -22,7 +22,7 @@ core:
       post: " Köchin und arbeite in einem Restaurant."
       options: [bin, bist, ist, sind]
       answer: 0
-    explanation: "ich + sein = bin. Vor dem Beruf steht kein Artikel: Ich bin Köchin."
+    explanation: "ich + sein = bin. A job takes no article: Ich bin Köchin."
   - type: mc_cloze
     group: grammar
     content:
@@ -30,7 +30,7 @@ core:
       post: " ihr noch Fragen zum Kurs?"
       options: [Habe, Hast, Hat, Habt]
       answer: 3
-    explanation: "ihr + haben = habt. Ohne Fragewort beginnt die Frage mit dem Verb."
+    explanation: "ihr + haben = habt. With no question word the question starts with the verb."
   - type: mc_cloze
     group: grammar
     content:
@@ -38,7 +38,7 @@ core:
       post: " wohnst du? — In der Bahnhofstraße."
       options: [Woher, Wo, Wohin, Wer]
       answer: 1
-    explanation: "wo fragt nach dem Ort. woher fragt nach der Herkunft: Woher kommst du?"
+    explanation: "wo asks where you are. woher asks where you come from: Woher kommst du?"
   - type: mc_cloze
     group: grammar
     content:
@@ -54,7 +54,7 @@ core:
       post: " Sie? — Mein Name ist Weber."
       options: [heiße, heißt, heißen, heißst]
       answer: 2
-    explanation: "Sie (höflich) + Verb = Stamm + -en: Wie heißen Sie? Für Fremde immer Sie."
+    explanation: "Polite Sie takes stem + -en: Wie heißen Sie? Use Sie with anyone you do not know."
 
   # ───────────────────────── Lückentext ─────────────────────────
   - type: open_cloze
@@ -64,7 +64,7 @@ core:
       post: " Polen, aus Krakau."
       answers: [aus]
       answer_shown: aus
-    explanation: "Herkunft: kommen aus + Land oder Stadt. Ich komme aus Italien, aus Wien."
+    explanation: "Origin is kommen aus + country or town: Ich komme aus Italien, aus Wien."
   - type: open_cloze
     group: grammar
     content:
@@ -72,7 +72,7 @@ core:
       post: " Koch von Beruf."
       answers: [bin]
       answer_shown: bin
-    explanation: "ich + sein = bin. Der Beruf steht mit sein und ohne Artikel."
+    explanation: "ich + sein = bin. A job goes with sein and with no article."
   - type: open_cloze
     group: grammar
     content:
@@ -80,7 +80,7 @@ core:
       post: " du? — Ich bin 27."
       answers: [bist]
       answer_shown: bist
-    explanation: "du + sein = bist. Das Alter steht immer mit sein, nicht mit haben."
+    explanation: "du + sein = bist. Age always goes with sein, never with haben."
   - type: open_cloze
     group: grammar
     content:
@@ -88,7 +88,7 @@ core:
       post: " zwei Brüder und eine Schwester."
       answers: [hat]
       answer_shown: hat
-    explanation: "Anna = sie. sie + haben = hat. Diese Form ist unregelmäßig."
+    explanation: "Anna = sie. sie + haben = hat — an irregular form."
   - type: open_cloze
     group: grammar
     content:
@@ -96,7 +96,7 @@ core:
       post: " ihr aus Spanien? — Nein, wir kommen aus Portugal."
       answers: [seid]
       answer_shown: seid
-    explanation: "ihr + sein = seid. Die Antwort wir kommen zeigt: die Frage geht an mehrere Personen."
+    explanation: "ihr + sein = seid. The answer wir kommen shows the question is aimed at several people."
   - type: open_cloze
     group: grammar
     content:
@@ -104,7 +104,7 @@ core:
       post: " Englisch, aber nur wenig Deutsch."
       answers: [und]
       answer_shown: und
-    explanation: "und verbindet zwei gleiche Teile. Danach folgt der Gegensatz mit aber."
+    explanation: "und joins two matching parts. What follows is the contrast, marked by aber."
   - type: open_cloze
     group: grammar
     content:
@@ -112,7 +112,7 @@ core:
       post: ". Sprechen Sie bitte langsam."
       answers: [nicht]
       answer_shown: nicht
-    explanation: "nicht verneint das Verb und steht am Ende: Ich verstehe Sie nicht."
+    explanation: "nicht negates the verb and goes to the end: Ich verstehe Sie nicht."
   - type: open_cloze
     group: grammar
     content:
@@ -120,7 +120,7 @@ core:
       post: " kommst du? — Aus der Türkei."
       answers: [woher]
       answer_shown: Woher
-    explanation: "Die Antwort nennt ein Land, also fragt man mit woher. wo wäre der Ort, wohin die Richtung."
+    explanation: "The answer names a country, so the question word is woher. wo would ask for the place, wohin for the direction."
 
   # ───────────────────────── Wortbildung ─────────────────────────
   - type: word_formation
@@ -131,7 +131,7 @@ core:
       prompt: Polen
       answers: [Polnisch]
       answer_shown: Polnisch
-    explanation: "Das Land heißt Polen, die Sprache heißt Polnisch. Sprachen schreibt man groß."
+    explanation: "The country is Polen, the language is Polnisch. Language names take a capital."
   - type: word_formation
     group: vocab
     content:
@@ -140,7 +140,7 @@ core:
       prompt: Italien
       answers: [Italienisch]
       answer_shown: Italienisch
-    explanation: "Italien ist das Land, Italienisch ist die Sprache. Die Endung ist meistens -isch."
+    explanation: "Italien is the country, Italienisch the language. The ending is usually -isch."
   - type: word_formation
     group: vocab
     content:
@@ -149,7 +149,7 @@ core:
       prompt: der Koch
       answers: [Köchin]
       answer_shown: Köchin
-    explanation: "Die weibliche Form endet auf -in: der Koch → die Köchin, der Arzt → die Ärztin."
+    explanation: "The feminine form ends in -in: der Koch → die Köchin, der Arzt → die Ärztin."
   - type: word_formation
     group: vocab
     content:
@@ -158,7 +158,7 @@ core:
       prompt: der Lehrer
       answers: [Lehrerin]
       answer_shown: Lehrerin
-    explanation: "der Lehrer → die Lehrerin. Vor dem Beruf steht kein Artikel: Sie ist Lehrerin."
+    explanation: "der Lehrer → die Lehrerin. A job takes no article: Sie ist Lehrerin."
   - type: word_formation
     group: vocab
     content:
@@ -167,7 +167,7 @@ core:
       prompt: das Telefon + die Nummer
       answers: [Telefonnummer]
       answer_shown: Telefonnummer
-    explanation: "Zwei Nomen werden ein Wort: das Telefon + die Nummer = die Telefonnummer."
+    explanation: "Two nouns become one word: das Telefon + die Nummer = die Telefonnummer."
   - type: word_formation
     group: vocab
     content:
@@ -176,7 +176,7 @@ core:
       prompt: der Student
       answers: [Studentin]
       answer_shown: Studentin
-    explanation: "Die weibliche Form endet auf -in: der Student → die Studentin."
+    explanation: "The feminine form ends in -in: der Student → die Studentin."
 
   # ───────────────────────── Umformung ─────────────────────────
   - type: key_word_transformation
@@ -189,7 +189,7 @@ core:
       answers: [heiße]
       hint: 1 Wort
       answer_shown: heiße
-    explanation: "Mein Name ist … und Ich heiße … bedeuten das Gleiche. ich + heißen = heiße."
+    explanation: "Mein Name ist … and Ich heiße … mean the same thing. ich + heißen = heiße."
   - type: key_word_transformation
     group: grammar
     content:
@@ -200,7 +200,7 @@ core:
       answers: [arbeite als]
       hint: 2 Wörter
       answer_shown: arbeite als
-    explanation: "arbeiten als + Beruf, ohne Artikel: Ich arbeite als Koch."
+    explanation: "arbeiten als + job, with no article: Ich arbeite als Koch."
   - type: key_word_transformation
     group: grammar
     content:
@@ -211,7 +211,7 @@ core:
       answers: [woher kommst]
       hint: 2 Wörter
       answer_shown: Woher kommst
-    explanation: "Aus der Ja/Nein-Frage wird eine W-Frage. Nach dem Fragewort steht sofort das Verb: Woher kommst du?"
+    explanation: "A yes/no question becomes a W-question. The verb follows the question word directly: Woher kommst du?"
   - type: key_word_transformation
     group: grammar
     content:
@@ -222,7 +222,7 @@ core:
       answers: [bin ledig]
       hint: 2 Wörter
       answer_shown: bin ledig
-    explanation: "ledig ist das Gegenteil von verheiratet. Im Formular steht dafür Familienstand: ledig."
+    explanation: "ledig is the opposite of verheiratet. On a form the field is called Familienstand: ledig."
 
   # ───────────────────────── Grammatik-Drill ─────────────────────────
   - type: grammar_drill
@@ -233,7 +233,7 @@ core:
       prompt: SPRECHEN
       options: [spreche, sprichst, spricht, sprechen]
       answer: 1
-    explanation: "sprechen hat besondere Formen. Man lernt sie als Wort: ich spreche, du sprichst, er spricht."
+    explanation: "sprechen has special forms. Learn them as one word: ich spreche, du sprichst, er spricht."
   - type: grammar_drill
     group: grammar
     content:
@@ -242,7 +242,7 @@ core:
       prompt: LERNEN
       options: [lerne, lernst, lernt, lernen]
       answer: 3
-    explanation: "wir + Verb = Stamm + -en. Die Form sieht aus wie der Infinitiv: wir lernen."
+    explanation: "wir takes stem + -en. The form looks like the infinitive: wir lernen."
   - type: grammar_drill
     group: grammar
     content:
@@ -251,7 +251,7 @@ core:
       prompt: WOHNEN
       options: [wohne, wohnst, wohnt, wohnen]
       answer: 0
-    explanation: "ich + Verb = Stamm + -e: ich wohne."
+    explanation: "ich takes stem + -e: ich wohne."
   - type: grammar_drill
     group: grammar
     content:
@@ -260,7 +260,7 @@ core:
       prompt: KOMMEN
       options: [komme, kommst, kommt, kommen]
       answer: 2
-    explanation: "ihr + Verb = Stamm + -t: ihr kommt. Die Endung ist gleich wie bei er/sie/es."
+    explanation: "ihr takes stem + -t: ihr kommt — the same ending as er/sie/es."
   - type: grammar_drill
     group: grammar
     content:
@@ -269,7 +269,7 @@ core:
       prompt: SEIN
       options: [bin, ist, sind, bist]
       answer: 1
-    explanation: "Das ist … stellt eine Person vor. Das = es, also die Form ist."
+    explanation: "Das ist … introduces a person. Das counts as es, so the form is ist."
   - type: grammar_drill
     group: grammar
     content:
@@ -278,7 +278,7 @@ core:
       prompt: SCHREIBEN
       options: [schreibt, schreibe, schreibst, schreiben]
       answer: 0
-    explanation: "man ist wie er/sie/es, also Endung -t: Wie schreibt man das?"
+    explanation: "man behaves like er/sie/es, so the ending is -t: Wie schreibt man das?"
   - type: grammar_drill
     group: grammar
     content:
@@ -287,7 +287,7 @@ core:
       prompt: WOHNEN
       options: [wohne, wohnst, wohnt, wohnen]
       answer: 3
-    explanation: "Meine Eltern sind mehrere Personen = sie. Die Endung ist -en: sie wohnen."
+    explanation: "Meine Eltern is more than one person = sie. The ending is -en: sie wohnen."
   - type: grammar_drill
     group: grammar
     content:
@@ -296,7 +296,7 @@ core:
       prompt: PERSON
       options: [Was, Wie, Wer, Wo]
       answer: 2
-    explanation: "wer fragt nach einer Person. was fragt nach einer Sache."
+    explanation: "wer asks about a person, was about a thing."
 
   # ───────────────────────── Fehlersuche ─────────────────────────
   - type: error_correction
@@ -305,42 +305,42 @@ core:
       words: [Ich, habe, "25", Jahre, "alt."]
       wrong: 1
       correction: "habe → bin"
-    explanation: "Das Alter steht mit sein: Ich bin 25 Jahre alt."
+    explanation: "Age goes with sein: Ich bin 25 Jahre alt."
   - type: error_correction
     group: grammar
     content:
       words: [Woher, du, kommst, "?"]
       wrong: 1
       correction: "du kommst → kommst du"
-    explanation: "Nach dem Fragewort steht sofort das Verb: Woher kommst du?"
+    explanation: "The verb follows the question word directly: Woher kommst du?"
   - type: error_correction
     group: grammar
     content:
       words: [Ich, bin, ein, Student, aus, "Polen."]
       wrong: 2
       correction: "ein → (nichts)"
-    explanation: "Vor einem Beruf und vor Student steht kein Artikel: Ich bin Student."
+    explanation: "No article in front of a job, and Student counts as one: Ich bin Student."
   - type: error_correction
     group: grammar
     content:
       words: [Meine, Schwester, sprechen, sehr, gut, "Deutsch."]
       wrong: 2
       correction: "sprechen → spricht"
-    explanation: "Meine Schwester = sie. Zu sie gehört die Form spricht."
+    explanation: "Meine Schwester = sie, and sie takes the form spricht."
   - type: error_correction
     group: grammar
     content:
       words: [Meine, Eltern, wohnt, in, "Krakau."]
       wrong: 2
       correction: "wohnt → wohnen"
-    explanation: "Meine Eltern sind mehrere Personen = sie. Die Endung ist -en: sie wohnen."
+    explanation: "Meine Eltern is more than one person = sie. The ending is -en: sie wohnen."
   - type: error_correction
     group: grammar
     content:
       words: [Wir, seid, alle, im, gleichen, "Kurs."]
       wrong: 1
       correction: "seid → sind"
-    explanation: "wir + sein = sind. seid gehört zu ihr."
+    explanation: "wir + sein = sind. seid belongs to ihr."
 
   # ───────────────────────── Wörter verbinden ─────────────────────────
   - type: collocation_match
@@ -349,21 +349,21 @@ core:
       left: [Deutsch, ein Formular, den Namen, eine Frage]
       right: [buchstabieren, sprechen, stellen, ausfüllen]
       pairs: { 0: 1, 1: 3, 2: 0, 3: 2 }
-    explanation: "Feste Verbindungen: Deutsch sprechen, ein Formular ausfüllen, den Namen buchstabieren, eine Frage stellen."
+    explanation: "Set combinations: Deutsch sprechen, ein Formular ausfüllen, den Namen buchstabieren, eine Frage stellen."
   - type: collocation_match
     group: vocab
     content:
       left: [der Vorname, der Nachname, das Alter, die Adresse]
       right: ["Nowak", "Bahnhofstraße 12", "Marek", "32 Jahre"]
       pairs: { 0: 2, 1: 0, 2: 3, 3: 1 }
-    explanation: "Im Formular: Vorname Marek, Nachname Nowak, Alter 32 Jahre, Adresse Bahnhofstraße 12."
+    explanation: "On the form: Vorname Marek, Nachname Nowak, Alter 32 Jahre, Adresse Bahnhofstraße 12."
   - type: collocation_match
     group: vocab
     content:
       left: [Polen, Krakau, Koch, Polnisch]
       right: [die Stadt, das Land, die Sprache, der Beruf]
       pairs: { 0: 1, 1: 0, 2: 3, 3: 2 }
-    explanation: "Polen ist ein Land, Krakau eine Stadt, Koch ein Beruf, Polnisch eine Sprache."
+    explanation: "Polen is a country, Krakau a town, Koch a job, Polnisch a language."
   - type: collocation_match
     group: grammar
     content:
@@ -384,21 +384,21 @@ core:
       left: [Woher, Wo, Wie, Was]
       right: ["wohnst du?", "machst du?", "kommst du?", "heißt du?"]
       pairs: { 0: 2, 1: 0, 2: 3, 3: 1 }
-    explanation: "woher → die Herkunft, wo → der Ort, wie → der Name, was → die Sache."
+    explanation: "woher → where from, wo → where, wie → the name, was → the thing."
   - type: collocation_match
     group: vocab
     content:
       left: [verheiratet, ledig, langsam, gern]
       right: [nicht schnell, mit Freude, hat eine Familie, nicht verheiratet]
       pairs: { 0: 2, 1: 3, 2: 0, 3: 1 }
-    explanation: "verheiratet und ledig sind Gegenteile. langsam ist das Gegenteil von schnell. gern zeigt Freude."
+    explanation: "verheiratet and ledig are opposites. langsam is the opposite of schnell. gern marks something you enjoy."
   - type: collocation_match
     group: vocab
     content:
       left: [sich vorstellen, kennenlernen, wiederholen, verstehen]
       right: [noch einmal sagen, den eigenen Namen sagen, wissen was es bedeutet, zum ersten Mal treffen]
       pairs: { 0: 1, 1: 3, 2: 0, 3: 2 }
-    explanation: "Diese vier Verben braucht man in jeder ersten Kursstunde."
+    explanation: "These four verbs come up in the first lesson of any course."
 
   # ───────────────────────── Leseverstehen ─────────────────────────
   - type: reading_comprehension
@@ -412,7 +412,7 @@ core:
         - Er sucht eine Wohnung.
         - Er besucht seine Familie.
       answer: 1
-    explanation: "Im Text steht: Von Beruf ist er Koch und arbeitet in einem kleinen Restaurant."
+    explanation: "The text says: Von Beruf ist er Koch und arbeitet in einem kleinen Restaurant."
   - type: reading_comprehension
     group: reading
     content:
@@ -424,7 +424,7 @@ core:
         - Englisch
         - Alle drei gleich gut
       answer: 0
-    explanation: "Polnisch ist seine Muttersprache — die erste Sprache. Deutsch spricht er nur ein bisschen."
+    explanation: "Polnisch is his mother tongue — his first language. He speaks only a little German."
   - type: reading_comprehension
     group: reading
     content:
@@ -436,7 +436,7 @@ core:
         - Am Wochenende
         - Zweimal pro Woche
       answer: 3
-    explanation: "Im Text steht: Zweimal pro Woche — am Montag und am Mittwoch."
+    explanation: "The text says: Zweimal pro Woche — am Montag und am Mittwoch."
   - type: reading_comprehension
     group: reading
     content:
@@ -448,7 +448,7 @@ core:
         - Sie studiert und ist nicht verheiratet.
         - Sie lernt seit einem Monat Deutsch.
       answer: 2
-    explanation: "Im Text steht: ist 27 und ledig … Sie studiert Informatik. ledig bedeutet nicht verheiratet."
+    explanation: "The text says: ist 27 und ledig … Sie studiert Informatik. ledig means not married."
   - type: reading_comprehension
     group: reading
     content:
@@ -460,7 +460,7 @@ core:
         - Die Adresse vom Restaurant
         - Die Adresse der Sprachschule
       answer: 0
-    explanation: "Im Text steht: seine neue Adresse in Leipzig. Die alte Adresse in Krakau steht nicht im Formular."
+    explanation: "The text says: seine neue Adresse in Leipzig. The old address in Krakau is not on the form."
   - type: reading_comprehension
     group: reading
     content:
@@ -472,7 +472,7 @@ core:
         - Weil die Lehrerin dabei ist.
         - Weil im Café nur Deutsch erlaubt ist.
       answer: 1
-    explanation: "Sie sprechen langsam und mit vielen Fehlern — aber sie sprechen. Das ist Üben, nicht Können."
+    explanation: "They speak slowly and with many mistakes — but they speak. That is practice, not mastery."
 
 # ───────────────────────── Wiederholungspool ─────────────────────────
 # 20 kurze Aufgaben für das Modul-Quiz und die Wiederholung nach 7 und 21 Tagen.
@@ -485,7 +485,7 @@ review_pool:
       post: " Informatik an der Universität."
       options: [studiere, studierst, studiert, studieren]
       answer: 2
-    explanation: "Fatima = sie, also Endung -t: sie studiert."
+    explanation: "Fatima = sie, so the ending is -t: sie studiert."
   - type: mc_cloze
     group: grammar
     content:
@@ -501,7 +501,7 @@ review_pool:
       post: " du Zeit am Mittwoch?"
       options: [Hast, Habe, Hat, Habt]
       answer: 0
-    explanation: "du + haben = hast. Die Ja/Nein-Frage beginnt mit dem Verb."
+    explanation: "du + haben = hast. A yes/no question starts with the verb."
   - type: mc_cloze
     group: grammar
     content:
@@ -509,7 +509,7 @@ review_pool:
       post: " deine Schwester?"
       options: [bin, bist, ist, sind]
       answer: 2
-    explanation: "deine Schwester = sie, also ist. Das Alter steht mit sein."
+    explanation: "deine Schwester = sie, so the form is ist. Age goes with sein."
   - type: open_cloze
     group: grammar
     content:
@@ -517,7 +517,7 @@ review_pool:
       post: " Leipzig, in der Bahnhofstraße."
       answers: [in]
       answer_shown: in
-    explanation: "wohnen in + Stadt: Ich wohne in Leipzig."
+    explanation: "wohnen in + town: Ich wohne in Leipzig."
   - type: open_cloze
     group: grammar
     content:
@@ -525,7 +525,7 @@ review_pool:
       post: " Koch und arbeitet abends."
       answers: [ist]
       answer_shown: ist
-    explanation: "er + sein = ist. Vor dem Beruf steht kein Artikel."
+    explanation: "er + sein = ist. A job takes no article."
   - type: open_cloze
     group: grammar
     content:
@@ -533,7 +533,7 @@ review_pool:
       post: " zwei Kinder, einen Sohn und eine Tochter."
       answers: [haben]
       answer_shown: haben
-    explanation: "wir + haben = haben. Die Form ist gleich wie der Infinitiv."
+    explanation: "wir + haben = haben. The form is the same as the infinitive."
   - type: open_cloze
     group: grammar
     content:
@@ -541,7 +541,7 @@ review_pool:
       post: " Englisch spreche ich nicht."
       answers: [aber]
       answer_shown: aber
-    explanation: "aber zeigt den Gegensatz zur Erwartung."
+    explanation: "aber marks the contrast with what you would expect."
   - type: open_cloze
     group: grammar
     content:
@@ -549,7 +549,7 @@ review_pool:
       post: " ist unsere Lehrerin."
       answers: [sie]
       answer_shown: Sie
-    explanation: "Frau Weber ist eine Person = sie. Das Personalpronomen ersetzt den Namen."
+    explanation: "Frau Weber is one person = sie. The pronoun replaces the name."
   - type: open_cloze
     group: grammar
     content:
@@ -557,7 +557,7 @@ review_pool:
       post: " alt bist du? — Ich bin 32."
       answers: [wie]
       answer_shown: Wie
-    explanation: "Wie alt …? fragt nach dem Alter."
+    explanation: "Wie alt …? asks for someone's age."
   - type: grammar_drill
     group: grammar
     content:
@@ -566,7 +566,7 @@ review_pool:
       prompt: LERNEN
       options: [lerne, lernst, lernt, lernen]
       answer: 2
-    explanation: "ihr + Verb = Stamm + -t: ihr lernt."
+    explanation: "ihr takes stem + -t: ihr lernt."
   - type: grammar_drill
     group: grammar
     content:
@@ -575,7 +575,7 @@ review_pool:
       prompt: BUCHSTABIEREN
       options: [buchstabiere, buchstabierst, buchstabiert, buchstabieren]
       answer: 0
-    explanation: "ich + Verb = Stamm + -e: ich buchstabiere."
+    explanation: "ich takes stem + -e: ich buchstabiere."
   - type: grammar_drill
     group: grammar
     content:
@@ -584,7 +584,7 @@ review_pool:
       prompt: SACHE
       options: [Wer, Wo, Was, Wie]
       answer: 2
-    explanation: "was fragt nach einer Sache oder Aktivität."
+    explanation: "was asks about a thing or an activity."
   - type: grammar_drill
     group: grammar
     content:
@@ -593,28 +593,28 @@ review_pool:
       prompt: SPRECHEN
       options: [spreche, sprichst, spricht, sprechen]
       answer: 2
-    explanation: "Frau Weber = sie. Zu sie gehört die Form spricht."
+    explanation: "Frau Weber = sie, and sie takes the form spricht."
   - type: error_correction
     group: grammar
     content:
       words: [Wie, alt, hast, "du?"]
       wrong: 2
       correction: "hast → bist"
-    explanation: "Das Alter steht mit sein: Wie alt bist du?"
+    explanation: "Age goes with sein: Wie alt bist du?"
   - type: error_correction
     group: grammar
     content:
       words: [Ich, bin, eine, Lehrerin, in, "Leipzig."]
       wrong: 2
       correction: "eine → (nichts)"
-    explanation: "Vor dem Beruf steht kein Artikel: Ich bin Lehrerin."
+    explanation: "No article in front of a job: Ich bin Lehrerin."
   - type: error_correction
     group: grammar
     content:
       words: [Wo, ihr, wohnt, "?"]
       wrong: 1
       correction: "ihr wohnt → wohnt ihr"
-    explanation: "Nach dem Fragewort steht sofort das Verb: Wo wohnt ihr?"
+    explanation: "The verb follows the question word directly: Wo wohnt ihr?"
   - type: word_formation
     group: vocab
     content:
@@ -623,7 +623,7 @@ review_pool:
       prompt: die Mutter + die Sprache
       answers: [Muttersprache]
       answer_shown: Muttersprache
-    explanation: "Zwei Nomen werden ein Wort: die Mutter + die Sprache = die Muttersprache."
+    explanation: "Two nouns become one word: die Mutter + die Sprache = die Muttersprache."
   - type: collocation_match
     group: vocab
     content:
@@ -641,4 +641,4 @@ review_pool:
       answers: [heißen]
       hint: 1 Wort
       answer_shown: heißen
-    explanation: "Wie ist Ihr Name? und Wie heißen Sie? bedeuten das Gleiche. Sie + Verb = Stamm + -en."
+    explanation: "Wie ist Ihr Name? and Wie heißen Sie? mean the same. Polite Sie takes stem + -en."

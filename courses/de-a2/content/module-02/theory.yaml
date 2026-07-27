@@ -1,31 +1,51 @@
-# Modul 02 · Unterwegs — Grammatik im Fokus, Watch out! und Lückenkarten.
-# 7 Punkte — genau die Grammatik-Liste der Modulkarte (courses/de-a2/PLAN.md §4).
+# Modul 02 · Unterwegs — theory. Two spotlights, 10 items realising the seven
+# grammar points of the module card (courses/de-a2/PLAN.md §4).
 #
-# Dies ist das Modul, das den Dativ als System einführt. Vorher kennt der Kurs
-# ihn nur als fertige Wendung aus dem Eingangsniveau (mit dem Bus). Deshalb
-# steht die Formentabelle hier — Modul 03 stellt sie dann dem Akkusativ
-# gegenüber und erklärt sie nicht noch einmal.
+# This is the module that introduces the dative as a system. Before it the course
+# knows the dative only as a ready-made phrase from the entry level (mit dem Bus),
+# which is why the form table lives here — module 03 contrasts it with the
+# accusative and does not explain it again.
 #
-# Der Plural bleibt draußen: das -n im Dativ Plural gehört Modul 06, darum
-# stehen in allen Tabellen nur Formen im Singular.
+# The plural stays out: the -n of the dative plural belongs to module 06, so every
+# table here shows the singular only.
 #
-# Fachwörter: alle aus dem Grammatik-Wörterbuch der Diagnostik. Die Namen der
-# Kasus kommen aus Aufgabe 6 (der Kasus: Nominativ · Akkusativ · Dativ), die
-# Präposition aus Aufgabe 7 (§5.2). Kein Modul-eigener Fachbegriff nötig.
+# Scaffolding rule (§5, revised 2026-07): title, intro, form and note in English,
+# every example and table in German. Case names stay German inside tables — they
+# label a German artefact. Preposition lists and the case overview come from
+# courses/_reference/basic-german/ units 13 and 24.
 spotlights:
-  - title: "Der Dativ nach der Präposition"
-    intro: "Die Präposition wählt den Kasus, nicht das Verb. Sieben Präpositionen nehmen immer den Dativ."
+  - title: The dative after a preposition
+    intro: >-
+      Up to now a German noun changed only when it was a direct object. Here a
+      second trigger appears, and it is a much simpler one: the preposition. Some
+      prepositions always put the noun that follows them into the dative, no
+      matter what the verb does or what the sentence means. mit is one of them,
+      so it is mit dem Bus and never mit den Bus. That makes them worth learning
+      as a closed list of seven — once you know the list, the form follows
+      automatically and there is nothing to decide.
     items:
-      - form: "Die Formen im Dativ"
-        note: "Nur der Artikel ändert sich. Das Nomen bleibt gleich."
+      - form: The dative forms of the article
+        example: "Ich fahre mit dem Zug. Ich komme mit der Bahn. Wir fahren mit dem Auto."
+        note: "Only the article changes; the noun itself stays as it is. Masculine and neuter share one form: dem."
         table:
-          headers: ["Nominativ", "Dativ"]
+          headers: ["", "Nominativ", "Dativ", "Beispiel"]
           rows:
-            - ["der Zug", "dem Zug"]
-            - ["die Bahn", "der Bahn"]
-            - ["das Auto", "dem Auto"]
-      - form: "Sieben Präpositionen mit Dativ"
-        note: "Diese sieben lernt man auswendig. Danach steht nie der Akkusativ."
+            - ["m", "der Zug", "dem Zug", "mit dem Zug"]
+            - ["f", "die Bahn", "der Bahn", "mit der Bahn"]
+            - ["n", "das Auto", "dem Auto", "mit dem Auto"]
+      - form: "ein, kein and mein in the dative"
+        example: "Ich fahre mit einem Freund. Ich komme von meiner Arbeit. Sie fährt mit ihrem Auto."
+        note: The endings are the same everywhere — masculine and neuter take -em, feminine takes -er.
+        table:
+          headers: ["", "der / das", "die"]
+          rows:
+            - ["bestimmt", "dem Zug · dem Auto", "der Bahn"]
+            - ["ein", "einem Zug · einem Auto", "einer Bahn"]
+            - ["kein", "keinem Zug", "keiner Bahn"]
+            - ["mein", "meinem Zug", "meiner Bahn"]
+      - form: "Seven prepositions that always take the dative"
+        example: "Ich fahre mit dem Bus. Ich arbeite bei der Post. Sie kommt aus der Schweiz."
+        note: Learn these seven by heart. After them the accusative is never possible.
         table:
           headers: ["Präposition", "Beispiel"]
           rows:
@@ -36,20 +56,21 @@ spotlights:
             - ["zu", "Ich gehe zum Arzt. (zu dem)"]
             - ["aus", "Sie kommt aus der Schweiz."]
             - ["seit", "Ich wohne seit dem Sommer hier."]
-      - form: "Die kurzen Formen"
+      - form: The contracted forms
         example: Ich fahre zum Bahnhof und dann mit der Bahn zur Arbeit.
-        note: "Man spricht und schreibt fast immer kurz. Die lange Form klingt schwer."
+        note: Spoken and written German almost always contracts. The long form sounds heavy and is rarely used.
         table:
-          headers: ["lang", "kurz"]
+          headers: ["lang", "kurz", "Beispiel"]
           rows:
-            - ["zu dem", "zum"]
-            - ["zu der", "zur"]
-            - ["bei dem", "beim"]
-            - ["von dem", "vom"]
-            - ["in dem", "im"]
-            - ["an dem", "am"]
-      - form: "nach, zu oder in?"
-        note: "Drei Präpositionen für die Richtung. Man lernt sie mit dem Ziel zusammen."
+            - ["zu dem", "zum", "zum Bahnhof"]
+            - ["zu der", "zur", "zur Arbeit"]
+            - ["bei dem", "beim", "beim Arzt"]
+            - ["von dem", "vom", "vom Bahnhof"]
+            - ["in dem", "im", "im Zug"]
+            - ["an dem", "am", "am Bahnsteig"]
+      - form: "nach, zu or in?"
+        example: "Ich fahre nach Wien. Ich gehe zum Arzt. Ich fahre in die Stadt."
+        note: Three prepositions for a destination. What decides is the destination itself, not the verb.
         table:
           headers: ["Präposition", "Ziel", "Beispiel"]
           rows:
@@ -57,12 +78,21 @@ spotlights:
             - ["zu", "Person, Firma, Gebäude", "Ich gehe zum Arzt."]
             - ["in", "Ziel mit Artikel", "Ich fahre in die Stadt."]
             - ["nach", "feste Wendung", "Ich gehe nach Hause."]
+            - ["seit + Präsens", "Zeit bis heute", "Ich wohne seit einem Jahr hier."]
 
-  - title: "Der Akkusativ nach der Präposition"
-    intro: "Sechs andere Präpositionen nehmen immer den Akkusativ. Die Frage nach dem Verb hilft hier nicht — nur die Präposition zählt."
+  - title: The accusative after a preposition
+    intro: >-
+      Six other prepositions do the opposite: after them the noun always goes
+      into the accusative. This is where German stops matching your intuition —
+      the same verb and the same noun take a different case depending only on
+      the little word in front. Ich fahre mit dem Auto but Ich fahre ohne das
+      Auto. Nothing about the meaning has changed; only the preposition has. Two
+      short lists, thirteen words in total, cover every preposition this module
+      needs.
     items:
-      - form: "Sechs Präpositionen mit Akkusativ"
-        note: "Auch diese sechs lernt man auswendig. bis steht meistens ohne Artikel."
+      - form: "Six prepositions that always take the accusative"
+        example: "Die Fahrkarte ist für den Zug. Der Zug fährt durch den Tunnel. Ich fahre ohne das Auto."
+        note: These six are learned by heart too. bis usually stands with no article at all.
         table:
           headers: ["Präposition", "Beispiel"]
           rows:
@@ -72,17 +102,18 @@ spotlights:
             - ["um", "Der Bus fährt um den Park."]
             - ["durch", "Der Zug fährt durch den Tunnel."]
             - ["bis", "Der Zug fährt bis München."]
-      - form: "Die Formen im Akkusativ"
-        note: "Nur der wird zu den. die und das bleiben gleich."
+      - form: The accusative forms of the article
+        example: "Ich nehme den Zug. Ich nehme die Bahn. Ich nehme das Auto."
+        note: "Nothing new here: only der becomes den. die and das stay exactly as they are."
         table:
-          headers: ["Nominativ", "Akkusativ"]
+          headers: ["", "Nominativ", "Akkusativ"]
           rows:
-            - ["der Zug", "den Zug"]
-            - ["die Bahn", "die Bahn"]
-            - ["das Auto", "das Auto"]
-      - form: "Dativ oder Akkusativ? Die Präposition entscheidet"
+            - ["m", "der Zug", "den Zug"]
+            - ["f", "die Bahn", "die Bahn"]
+            - ["n", "das Auto", "das Auto"]
+      - form: "Dative or accusative — the preposition decides"
         example: Ich fahre mit dem Auto. — Ich fahre ohne das Auto.
-        note: "Gleiches Verb, gleiches Nomen, anderer Kasus. Nur das Wort davor zählt."
+        note: Same verb, same noun, different case. Only the word in front of it counts.
         table:
           headers: ["mit Dativ", "mit Akkusativ"]
           rows:
@@ -90,47 +121,65 @@ spotlights:
             - ["von der Stadt", "durch die Stadt"]
             - ["nach dem Kurs", "für den Kurs"]
             - ["aus dem Park", "um den Park"]
+      - form: "The two lists side by side"
+        example: "Ich gehe zur Haltestelle und fahre mit der Bahn durch die Stadt."
+        note: Thirteen words. Learn them as two blocks and every preposition in this module is settled.
+        table:
+          headers: ["immer Dativ", "immer Akkusativ"]
+          rows:
+            - ["mit · bei · nach", "für · gegen · ohne"]
+            - ["von · zu · aus · seit", "um · durch · bis"]
+            - ["mit dem Bus", "für den Bus"]
+            - ["nach der Arbeit", "durch die Stadt"]
 
 watchouts:
-  - title: "Nach mit steht der Dativ"
+  - title: mit takes the dative
     bad: Ich fahre jeden Tag mit den Bus zur Arbeit.
     good: Ich fahre jeden Tag mit dem Bus zur Arbeit.
-    note: "mit nimmt immer den Dativ. der Bus → mit dem Bus."
-  - title: "Nach für steht der Akkusativ"
+    note: "mit always takes the dative. der Bus → mit dem Bus."
+  - title: für takes the accusative
     bad: Die Fahrkarte ist für dem Zug nach Wien.
     good: Die Fahrkarte ist für den Zug nach Wien.
-    note: "für nimmt immer den Akkusativ. der Zug → für den Zug."
-  - title: "Der Artikel bleibt stehen"
+    note: "für always takes the accusative. der Zug → für den Zug."
+  - title: The article stays
     bad: Ich fahre mit Bus zur Arbeit.
     good: Ich fahre mit dem Bus zur Arbeit.
-    note: "Im Deutschen steht fast immer ein Artikel. Ohne ihn fehlt der Kasus."
-  - title: "Städte und Länder bekommen nach"
+    note: German almost always keeps an article. Drop it and the case has nowhere to show.
+  - title: Towns and countries take nach
     bad: Wir sind am Wochenende zu Wien gefahren.
     good: Wir sind am Wochenende nach Wien gefahren.
-    note: "Stadt oder Land ohne Artikel: immer nach. zu steht vor Personen und Gebäuden."
+    note: "A town or country with no article always takes nach. zu is for people and buildings."
+  - title: zu dem is normally zum
+    bad: Ich gehe jetzt zu dem Bahnhof.
+    good: Ich gehe jetzt zum Bahnhof.
+    note: The contracted form is the normal one. The long form only appears when you stress the noun.
+  - title: seit goes with the present tense
+    bad: Ich habe seit einem Jahr hier gewohnt.
+    good: Ich wohne seit einem Jahr hier.
+    note: Something that started in the past and still goes on stays in the present tense in German.
 
 cloze_cards:
   - text: "Ich fahre jeden Morgen mit {{c1::dem}} Bus zur Arbeit."
     hint: der Bus
-    rule: "Nach mit steht immer der Dativ. der Bus → dem Bus."
+    rule: "mit always takes the dative. der Bus → dem Bus."
   - text: "Die Fahrkarte ist für {{c1::den}} Zug nach Wien."
     hint: der Zug
-    rule: "Nach für steht immer der Akkusativ. der Zug → den Zug."
+    rule: "für always takes the accusative. der Zug → den Zug."
   - text: "Nach {{c1::der}} Arbeit fahre ich sofort nach Hause."
     hint: die Arbeit
-    rule: "Nach nach steht der Dativ. die Arbeit → der Arbeit."
+    rule: "nach takes the dative. die Arbeit → der Arbeit."
   - text: "Wir gehen jetzt zu Fuß {{c1::zum}} Bahnhof."
     hint: zu dem
-    rule: "zu dem wird kurz zu zum. Nach zu steht der Dativ."
+    rule: "zu dem contracts to zum. zu takes the dative."
   - text: "Ich war gestern {{c1::beim}} Arzt und komme heute zu spät."
     hint: bei dem
-    rule: "bei dem wird kurz zu beim. Nach bei steht der Dativ."
+    rule: "bei dem contracts to beim. bei takes the dative."
   - text: "Der Zug fährt zehn Minuten durch {{c1::den}} Tunnel."
     hint: der Tunnel
-    rule: "Nach durch steht der Akkusativ. der Tunnel → den Tunnel."
+    rule: "durch takes the accusative. der Tunnel → den Tunnel."
   - text: "Heute fahre ich ohne {{c1::das}} Auto in die Stadt."
     hint: das Auto
-    rule: "Nach ohne steht der Akkusativ. Bei das ändert sich nichts."
+    rule: "ohne takes the accusative, but a das-noun looks the same in both cases."
   - text: "In Wien fahren wir immer mit {{c1::der}} Straßenbahn."
     hint: die Straßenbahn
-    rule: "Nach mit steht der Dativ. die Straßenbahn → der Straßenbahn."
+    rule: "mit takes the dative. die Straßenbahn → der Straßenbahn."

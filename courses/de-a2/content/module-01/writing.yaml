@@ -1,17 +1,17 @@
 mode: writing
-genre: Bericht vom Wochenende
+genre: a post about your weekend
 word_target: [50, 60]
 prompt: |
-  In Ihrer Sprachgruppe im Netz schreiben alle am Montag, was sie
-  am Wochenende gemacht haben. Schreiben Sie Ihren Beitrag. 50–60 Wörter.
+  Everyone in your online language group posts on Monday about what
+  they did at the weekend. Write your post. 50–60 words, in German.
 
-  Schreiben Sie zu allen vier Punkten:
-  • Was Sie am Samstag gemacht haben
-  • Was Sie am Sonntag gemacht haben
-  • Wen Sie getroffen oder besucht haben
-  • Wie das Wochenende war — spannend, gemütlich oder anstrengend
+  Cover all four points:
+  • what you did on Saturday
+  • what you did on Sunday
+  • who you met or visited
+  • how the weekend was — spannend, gemütlich or anstrengend
 
-  Benutzen Sie das Perfekt und mindestens zwei Zeitangaben.
+  Use the perfect tense and at least two time expressions.
 model_answer: |
   Mein Wochenende war voll. Am Samstag habe ich lange ausgeschlafen und
   dann die Wohnung aufgeräumt. Am Nachmittag habe ich eingekauft und einen
@@ -19,11 +19,11 @@ model_answer: |
   zusammen gekocht. Am Sonntag bin ich mit meinem Bruder an den See
   gefahren. Wir sind drei Stunden gewandert — sehr anstrengend, aber schön.
 checklist:
-  - 50–60 Wörter
-  - Alle vier Punkte stehen im Text
-  - Jeder Satz über das Wochenende steht im Perfekt
-  - haben oder sein ist richtig gewählt (Bewegung → sein)
-  - Das Partizip steht am Ende vom Satz
-  - Bei trennbaren Verben steht ge- in der Mitte (aufgeräumt, eingekauft)
-  - Mindestens zwei Zeitangaben kommen vor (am Samstag, gestern, vorgestern)
-  - Mindestens acht Wörter aus dem Modul kommen vor
+  - 50–60 words
+  - All four points are covered
+  - Every sentence about the weekend is in the perfect tense
+  - haben or sein is chosen correctly (movement → sein)
+  - The participle stands at the end of its sentence
+  - Separable verbs carry ge- in the middle (aufgeräumt, eingekauft)
+  - At least two time expressions appear (am Samstag, gestern, vorgestern)
+  - At least eight words from the module appear

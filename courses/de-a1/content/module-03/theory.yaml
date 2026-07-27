@@ -1,16 +1,29 @@
-# Module 03 · theory. Two spotlights, 4 items — they realise the three grammar
-# points of the card (the definite article and gender, the indefinite article,
-# the plural), plus the one fact that makes the plural usable at all: in the
-# plural the article is always die. Scaffolding rule (§5): intro and note
-# English, every example and table German. Grammar terms are named in English
-# directly (§5.1) — there is no German metalanguage in this course.
+# Module 03 · theory. Two spotlights, 12 items realising the three grammar points
+# of the card (the definite article and gender, the indefinite article, the
+# plural). The extra items are not extra points: gender clues, er/sie/es for
+# things and "no article in the plural" are all consequences of gender and
+# number, which is why grammar_points in meta.yaml stays at three — one item is
+# a way of showing a rule, not a rule of its own (PLAN.md §6).
+# Scaffolding rule (§5): intro and note English, every example and table German.
+# Grammar terms are named in English directly (§5.1).
+# Gender clues and plural models come from courses/_reference/basic-german/
+# units 08 (nouns and gender) and 09 (plural of nouns).
 spotlights:
   - title: der, die, das — gender and the articles
-    intro: Every German noun has a gender — masculine, feminine or neuter. The gender is not in the meaning, it is in the word, so you learn der, die or das together with the noun.
+    intro: >-
+      Every German noun has a gender — masculine, feminine or neuter — and the
+      article shows which: der, die or das. The gender is grammatical, not
+      biological: a table is masculine, a door is feminine, a window is neuter,
+      and das Mädchen ('the girl') is neuter. So the meaning of the word will
+      not tell you the article, and neither will your first language. The safe
+      habit is to learn every new noun with its article, never on its own. That
+      said, you are not defenceless: the ending of a word and the group it
+      belongs to give you a good guess in a large number of cases, and the two
+      tables below are worth coming back to.
     items:
       - form: "The definite article: der, die, das"
         example: "Der Tisch ist groß. Die Tür ist gelb. Das Buch ist rot."
-        note: One word for "the", three forms. Learn the article with every new noun.
+        note: One word for "the", three forms. Learn the article with every new noun — der Tisch, not just Tisch.
         table:
           headers: ["der (m)", "die (f)", "das (n)"]
           rows:
@@ -18,41 +31,124 @@ spotlights:
             - ["der Stuhl", "die Tasche", "das Fenster"]
             - ["der Stift", "die Uhr", "das Handy"]
             - ["der Schlüssel", "die Brille", "das Zimmer"]
+      - form: "A first clue: the ending of the word"
+        example: "Der Computer ist neu. Die Wohnung ist klein. Das Mädchen ist acht."
+        note: These endings are reliable enough to guess with. -e is the weakest of them — about nine words in ten, but der Name and der Käse break it.
+        table:
+          headers: ["Endung", "Genus", "Beispiele"]
+          rows:
+            - ["-er, -ling, -or", "der", "der Computer · der Frühling · der Motor"]
+            - ["-ung, -heit, -keit", "die", "die Wohnung · die Freiheit · die Möglichkeit"]
+            - ["-ion, -tät, -schaft", "die", "die Nation · die Universität · die Mannschaft"]
+            - ["-e", "die", "die Tasche · die Adresse · die Sprache"]
+            - ["-chen, -lein", "das", "das Mädchen · das Fräulein"]
+            - ["-um, -ment, -o", "das", "das Zentrum · das Dokument · das Kino"]
+      - form: "A second clue: the group the word belongs to"
+        example: "Der Montag ist frei. Der Sommer ist warm. Das Gold ist teuer."
+        note: Whole groups of words share one gender. Two exceptions worth knowing early — das Bier among the drinks, das Mädchen among the female persons.
+        table:
+          headers: ["Gruppe", "Genus", "Beispiele"]
+          rows:
+            - ["Tage, Monate, Jahreszeiten", "der", "der Montag · der Mai · der Winter"]
+            - ["männliche Personen", "der", "der Vater · der Sohn · der Bruder"]
+            - ["alkoholische Getränke", "der", "der Wein · der Whisky"]
+            - ["weibliche Personen", "die", "die Mutter · die Tochter"]
+            - ["Blumen und Bäume", "die", "die Rose · die Eiche"]
+            - ["junge Personen, Metalle", "das", "das Kind · das Baby · das Gold"]
       - form: "The indefinite article: ein, eine"
         example: "Das ist ein Tisch. Das ist eine Tasche. Das ist ein Fenster."
-        note: "Only two forms: eine for a die-word, ein for der- and das-words."
+        note: "Only two forms: eine for a die-word, ein for der- and das-words. In the plural there is no indefinite article at all."
         table:
           headers: ["", "der / das", "die"]
           rows:
             - ["the", "der Tisch · das Buch", "die Tür"]
             - ["a", "ein Tisch · ein Buch", "eine Tür"]
             - ["Was ist das?", "Das ist ein Stuhl.", "Das ist eine Uhr."]
+            - ["Plural", "Das sind Stühle.", "Das sind Uhren."]
+      - form: "er, sie, es follow the article, not the meaning"
+        example: "Wo ist der Stift? — Er ist hier. Wo ist die Brille? — Sie ist da."
+        note: A thing is er if it is a der-word and sie if it is a die-word. English says 'it' for all three, German does not.
+        table:
+          headers: ["Nomen", "Pronomen", "Beispiel"]
+          rows:
+            - ["der Tisch", "er", "Er ist groß."]
+            - ["die Tür", "sie", "Sie ist gelb."]
+            - ["das Buch", "es", "Es ist rot."]
+            - ["die Stühle", "sie", "Sie sind neu."]
+      - form: "Das ist … — one phrase for all three genders"
+        example: "Das ist ein Buch. Das ist eine Uhr. Das sind zwei Stifte."
+        note: The pointing das never changes, whatever the gender of what follows. Only the verb moves — ist for one thing, sind for several.
 
   - title: One or many — the plural
-    intro: German has five plural models. There is no rule you can apply to a new word, so the plural is part of the word, like the gender. Learn it as der Tisch — die Tische.
+    intro: >-
+      English adds -s and is done with it. German has five plural models, and no
+      rule tells you for certain which one a new word takes, so the plural is
+      part of the word, exactly like the gender: learn der Tisch — die Tische in
+      one go. Still, the gender narrows the field a lot. Masculine and neuter
+      words mostly take -e, feminine words almost always take -n or -en, and a
+      handful of endings change nothing at all. One thing is completely regular:
+      in the plural all three articles collapse into die.
     items:
-      - form: "Plural models: -e, -en, -er, -s, umlaut, no ending"
+      - form: "The five models at a glance"
         example: "Ein Tisch, zwei Tische. Ein Buch, zwei Bücher. Ein Handy, zwei Handys."
-        note: "Some words add nothing: das Fenster — die Fenster. Some add an umlaut too."
+        note: "Some words add nothing: das Fenster — die Fenster. Some add an umlaut on top of the ending."
         table:
           headers: ["Modell", "Singular", "Plural"]
           rows:
             - ["-e", "der Tisch", "die Tische"]
             - ["-e + Umlaut", "der Stuhl", "die Stühle"]
-            - ["-en", "die Tür", "die Türen"]
+            - ["-en / -n", "die Tür · die Tasche", "die Türen · die Taschen"]
             - ["-er + Umlaut", "das Buch", "die Bücher"]
             - ["-er", "das Bild", "die Bilder"]
             - ["-s", "das Handy", "die Handys"]
             - ["—", "das Fenster", "die Fenster"]
+      - form: "der- and das-words mostly add -e"
+        example: "Zwei Tische, drei Stifte, vier Berufe. Die Zimmer sind klein."
+        note: "The umlaut comes on top when the vowel is a, o or u — der Stuhl → die Stühle, der Ball → die Bälle."
+        table:
+          headers: ["Singular", "Plural", "Modell"]
+          rows:
+            - ["der Tisch", "die Tische", "-e"]
+            - ["der Stift", "die Stifte", "-e"]
+            - ["der Stuhl", "die Stühle", "Umlaut + -e"]
+            - ["das Jahr", "die Jahre", "-e"]
+            - ["das Buch", "die Bücher", "Umlaut + -er"]
+            - ["das Kind", "die Kinder", "-er"]
+      - form: "die-words almost always add -n or -en"
+        example: "Zwei Taschen, drei Uhren, vier Sprachen. Die Türen sind blau."
+        note: "A word ending in -e adds only -n, everything else adds -en. This is the safest plural rule in German."
+        table:
+          headers: ["Singular", "Plural", "Endung"]
+          rows:
+            - ["die Tasche", "die Taschen", "-n"]
+            - ["die Sprache", "die Sprachen", "-n"]
+            - ["die Brille", "die Brillen", "-n"]
+            - ["die Tür", "die Türen", "-en"]
+            - ["die Uhr", "die Uhren", "-en"]
+            - ["die Frau", "die Frauen", "-en"]
+      - form: "Words that do not change"
+        example: "Ein Fenster, zwei Fenster. Ein Mädchen, zwei Mädchen."
+        note: A der- or das-word ending in -er, -el, -en, -chen or -lein keeps its form. Only the article shows you the number.
+        table:
+          headers: ["Singular", "Plural", "Was passiert"]
+          rows:
+            - ["das Fenster", "die Fenster", "—"]
+            - ["das Zimmer", "die Zimmer", "—"]
+            - ["das Mädchen", "die Mädchen", "—"]
+            - ["der Apfel", "die Äpfel", "nur Umlaut"]
+            - ["die Mutter", "die Mütter", "nur Umlaut"]
+      - form: "Where -s really belongs"
+        example: "Zwei Handys, drei Autos, vier Partys."
+        note: "-s is for words that came into German from English or French. It is the exception, not the default."
       - form: In the plural the article is always die
         example: "Der Stuhl ist rot. Die Stühle sind rot. Das Bild ist schön. Die Bilder sind schön."
-        note: "Gender only exists in the singular: der, die, das → die."
+        note: "Gender only exists in the singular: der, die, das → die. The verb moves to the plural with it."
         table:
           headers: ["Singular", "Plural"]
           rows:
-            - ["der Stuhl", "die Stühle"]
-            - ["die Tasche", "die Taschen"]
-            - ["das Bild", "die Bilder"]
+            - ["der Stuhl ist …", "die Stühle sind …"]
+            - ["die Tasche ist …", "die Taschen sind …"]
+            - ["das Bild ist …", "die Bilder sind …"]
 
 watchouts:
   - title: Nouns start with a capital letter
@@ -71,6 +167,14 @@ watchouts:
     bad: Hier sind zwei Buchs.
     good: Hier sind zwei Bücher.
     note: "-s is rare in German: Handys, Autos. Most words take -e, -en or -er."
+  - title: A thing can be er or sie
+    bad: Wo ist die Uhr? — Es ist hier.
+    good: Wo ist die Uhr? — Sie ist hier.
+    note: The pronoun copies the article — die Uhr → sie, der Stift → er, das Buch → es.
+  - title: No article in front of a plural
+    bad: Das sind eine Stühle.
+    good: Das sind Stühle.
+    note: ein has no plural. Say Das sind Stühle or Das sind zwei Stühle.
 
 cloze_cards:
   - text: "{{c1::Der}} Stuhl ist rot."

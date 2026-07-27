@@ -16,7 +16,7 @@
 entries:
   - term: die Kleidung
     tag: Nomen
-    definition: "Alles, was man am Körper trägt: Hosen, Hemden, Jacken und Mäntel."
+    definition: clothes, clothing — trousers, shirts, jackets and coats
     use_cases:
       - Im ersten Stock ist die Kleidung für Damen.
       - Warme Kleidung ist im Winter wichtig.
@@ -25,7 +25,7 @@ entries:
 
   - term: die Größe
     tag: Nomen
-    definition: "Die Zahl bei der Kleidung. Sie sagt: klein, mittel oder groß."
+    definition: "size — the number on a garment: small, medium or large"
     use_cases:
       - "Welche Größe haben Sie?"
       - Der Mantel ist leider die falsche Größe.
@@ -34,7 +34,7 @@ entries:
 
   - term: anprobieren
     tag: Verb
-    definition: "Kleidung im Geschäft anziehen und schauen: Passt sie? Ist sie zu eng?"
+    definition: to try on — to put a garment on in the shop and see whether it fits
     use_cases:
       - Darf ich den Mantel anprobieren?
       - Sie probiert das rote Kleid an.
@@ -43,7 +43,7 @@ entries:
 
   - term: umtauschen
     tag: Verb
-    definition: Eine Sache ins Geschäft zurückbringen und eine andere dafür nehmen.
+    definition: to exchange — to bring something back to the shop and take another instead
     use_cases:
       - Kann ich die Jacke umtauschen?
       - Mit der Quittung darf man die Ware umtauschen.
@@ -52,7 +52,7 @@ entries:
 
   - term: der Ärmel
     tag: Nomen
-    definition: Der Teil vom Hemd oder Mantel für den Arm. Ein Hemd hat zwei Ärmel.
+    definition: a sleeve — the part of a shirt or coat for the arm
     use_cases:
       - Der Ärmel ist mir zu lang.
       - Das Hemd hat kurze Ärmel.
@@ -61,7 +61,7 @@ entries:
 
   - term: weit
     tag: Adjektiv
-    definition: Nicht eng. Es ist viel Platz. Gegenteil von eng.
+    definition: loose, wide — plenty of room; opposite of eng
     use_cases:
       - Die Hose ist mir zu weit.
       - Der Mantel ist oben ein bisschen zu weit.
@@ -70,7 +70,7 @@ entries:
 
   - term: gestreift
     tag: Adjektiv
-    definition: Mit Linien in zwei Farben, zum Beispiel blau und weiß.
+    definition: striped, with lines in two colours, e.g. blue and white
     use_cases:
       - Das Hemd ist blau und weiß gestreift.
       - Ich mag das gestreifte Hemd.
@@ -79,7 +79,7 @@ entries:
 
   - term: kariert
     tag: Adjektiv
-    definition: Mit kleinen Quadraten, wie ein Schachbrett. Oft rot und schwarz.
+    definition: checked, with small squares like a chessboard, often red and black
     use_cases:
       - Die Bluse ist rot kariert.
       - Ich finde das karierte Hemd schön.
@@ -88,7 +88,7 @@ entries:
 
   - term: das Sonderangebot
     tag: Nomen
-    definition: Eine Ware ist für kurze Zeit billiger. So spart man Geld.
+    definition: a special offer — a product is cheaper for a short time
     use_cases:
       - Die Schuhe sind heute im Sonderangebot.
       - Im Sonderangebot kostet der Mantel nur die Hälfte.
@@ -97,7 +97,7 @@ entries:
 
   - term: die Quittung
     tag: Nomen
-    definition: "Ein kleines Papier vom Geschäft. Es zeigt: Man hat bezahlt."
+    definition: a receipt — the small slip from the shop proving you paid
     use_cases:
       - Bewahren Sie die Quittung gut auf.
       - Ohne Quittung kann man nichts umtauschen.
@@ -106,7 +106,7 @@ entries:
 
   - term: der Mantel
     tag: Nomen
-    definition: Eine lange, warme Jacke für den Winter. Man trägt sie über der Kleidung.
+    definition: a coat — a long, warm garment worn over your clothes in winter
     use_cases:
       - Im Winter brauche ich einen Mantel.
       - Der blaue Mantel gefällt mir sehr.
@@ -115,7 +115,7 @@ entries:
 
   - term: die Jacke
     tag: Nomen
-    definition: Ein kurzes Kleidungsstück für die Arme und den Körper. Kürzer als ein Mantel.
+    definition: a jacket — a short garment for the arms and body, shorter than a coat
     use_cases:
       - Zieh die Jacke an, es ist kalt.
       - Die rote Jacke steht dir gut.
@@ -124,7 +124,7 @@ entries:
 
   - term: die Hose
     tag: Nomen
-    definition: Ein Kleidungsstück für die Beine. Sie hat zwei Beine.
+    definition: trousers — a garment for the legs, with two legs
     use_cases:
       - Die Hose ist mir zu lang.
       - Ich suche eine Hose in meiner Größe.
@@ -133,7 +133,7 @@ entries:
 
   - term: das Kleid
     tag: Nomen
-    definition: Ein Kleidungsstück für Frauen. Oben und unten ein Teil, keine Hose.
+    definition: a dress — a woman’s garment covering top and bottom in one piece
     use_cases:
       - Das rote Kleid steht dir gut.
       - Zum Fest trage ich ein Kleid.
@@ -142,7 +142,7 @@ entries:
 
   - term: der Rock
     tag: Nomen
-    definition: Ein Kleidungsstück für Frauen, nur unten. Kein Bein wie bei der Hose.
+    definition: a skirt — a woman’s garment for the lower body, with no separate legs
     use_cases:
       - Der Rock ist mir zu kurz.
       - Sie trägt einen Rock und eine Bluse.
@@ -151,7 +151,7 @@ entries:
 
   - term: das Hemd
     tag: Nomen
-    definition: Ein Kleidungsstück für den oberen Körper, oft mit Knöpfen. Man trägt es im Büro.
+    definition: a shirt — a garment for the upper body, often with buttons, worn to the office
     use_cases:
       - Das weiße Hemd trage ich zur Arbeit.
       - Sein Hemd ist blau gestreift.
@@ -160,7 +160,7 @@ entries:
 
   - term: die Bluse
     tag: Nomen
-    definition: Ein Hemd für Frauen. Leicht und oft aus dünnem Stoff.
+    definition: a blouse — a woman’s shirt, light and often made of thin fabric
     use_cases:
       - Die karierte Bluse gefällt mir.
       - Sie trägt eine Bluse zum Rock.
@@ -169,7 +169,7 @@ entries:
 
   - term: der Pullover
     tag: Nomen
-    definition: Ein warmes Kleidungsstück für den oberen Körper, oft aus Wolle.
+    definition: a jumper, a pullover — a warm garment for the upper body, often woollen
     use_cases:
       - Im Winter trage ich gern einen Pullover.
       - Der gestreifte Pullover ist mir zu eng.
@@ -178,7 +178,7 @@ entries:
 
   - term: die Schuhe
     tag: Nomen
-    definition: "Man trägt sie an den Füßen. Zwei Stück: für links und rechts."
+    definition: shoes — worn on your feet, one for the left and one for the right
     use_cases:
       - Die schwarzen Schuhe sind heute reduziert.
       - Diese Schuhe sind mir zu klein.
@@ -187,7 +187,7 @@ entries:
 
   - term: der Schal
     tag: Nomen
-    definition: Man trägt ihn im Winter um den Hals. Er ist lang und warm.
+    definition: a scarf — long and warm, worn round the neck in winter
     use_cases:
       - Bei Kälte trage ich einen Schal.
       - Der lange Schal ist aus Wolle.
@@ -196,7 +196,7 @@ entries:
 
   - term: die Mütze
     tag: Nomen
-    definition: Man trägt sie im Winter auf dem Kopf. Sie macht den Kopf warm.
+    definition: a hat, a cap — worn on your head in winter to keep it warm
     use_cases:
       - Setz die Mütze auf, es ist kalt.
       - Die rote Mütze steht dem Kind gut.
@@ -205,7 +205,7 @@ entries:
 
   - term: die Farbe
     tag: Nomen
-    definition: Zum Beispiel rot, blau, grün oder gelb. Die Sache hat eine Farbe.
+    definition: a colour — red, blue, green or yellow
     use_cases:
       - "Welche Farbe hat der Mantel?"
       - Die Farbe steht dir nicht.
@@ -214,7 +214,7 @@ entries:
 
   - term: anziehen
     tag: Verb
-    definition: Kleidung an den Körper tun. Gegenteil von ausziehen.
+    definition: to put on (clothes); opposite of ausziehen
     use_cases:
       - Zieh die warme Jacke an!
       - Ich ziehe heute das blaue Hemd an.
@@ -223,7 +223,7 @@ entries:
 
   - term: ausziehen
     tag: Verb
-    definition: Kleidung vom Körper wegnehmen. Gegenteil von anziehen.
+    definition: to take off (clothes); opposite of anziehen
     use_cases:
       - Zieh die nasse Jacke aus!
       - Zu Hause ziehe ich die Schuhe aus.
@@ -232,7 +232,7 @@ entries:
 
   - term: tragen
     tag: Verb
-    definition: Kleidung am Körper haben. Man hat sie an.
+    definition: to wear — to have a garment on your body
     use_cases:
       - Sie trägt heute ein rotes Kleid.
       - Im Büro trage ich ein weißes Hemd.
@@ -241,7 +241,7 @@ entries:
 
   - term: die Umkleidekabine
     tag: Nomen
-    definition: Ein kleiner Raum im Geschäft. Dort probiert man Kleidung an.
+    definition: a fitting room — the small cubicle where you try clothes on
     use_cases:
       - Die Umkleidekabine ist dort hinten.
       - Sie geht mit dem Mantel in die Umkleidekabine.
@@ -250,7 +250,7 @@ entries:
 
   - term: der Kassenbon
     tag: Nomen
-    definition: Ein kleines Papier von der Kasse. Es zeigt den Preis und das Datum.
+    definition: a till receipt — the slip showing the price and the date
     use_cases:
       - Der Kassenbon liegt in der Tüte.
       - Ohne Kassenbon ist der Umtausch schwer.
@@ -259,7 +259,7 @@ entries:
 
   - term: reduziert
     tag: Adjektiv
-    definition: Billiger als vorher. Der Preis ist kleiner geworden.
+    definition: reduced, marked down — cheaper than before
     use_cases:
       - Alle Mäntel sind heute reduziert.
       - Das reduzierte Kleid kostet nur zwanzig Euro.
@@ -268,7 +268,7 @@ entries:
 
   - term: das Schaufenster
     tag: Nomen
-    definition: Das große Fenster vorne am Geschäft. Dort sieht man die Ware von der Straße.
+    definition: a shop window — the big window at the front where the goods are displayed
     use_cases:
       - Im Schaufenster hängt der blaue Mantel.
       - Sie schaut lange ins Schaufenster.
@@ -277,7 +277,7 @@ entries:
 
   - term: die Kasse
     tag: Nomen
-    definition: Dort bezahlt man im Geschäft. Am Ende geht man zur Kasse.
+    definition: the till, the checkout — where you pay in a shop
     use_cases:
       - An der Kasse bezahle ich mit Karte.
       - Die Kasse ist gleich am Ausgang.

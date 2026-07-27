@@ -4,7 +4,7 @@
 entries:
   - term: heißen
     tag: Verb
-    definition: "Diesen Namen haben. Man fragt: Wie heißt du?"
+    definition: to be called; the verb for saying your name (Wie heißt du?)
     use_cases:
       - Ich heiße Marek und komme aus Polen.
       - Wie heißt deine Lehrerin? — Sie heißt Frau Weber.
@@ -13,7 +13,7 @@ entries:
 
   - term: kommen aus
     tag: Verb
-    definition: "Aus diesem Land oder dieser Stadt sein. Man fragt: Woher kommst du?"
+    definition: to come from a country or a town (Woher kommst du?)
     use_cases:
       - Ich komme aus Italien, aus Neapel.
       - Woher kommt ihr? — Wir kommen aus der Türkei.
@@ -22,7 +22,7 @@ entries:
 
   - term: wohnen
     tag: Verb
-    definition: An diesem Ort leben. Man hat dort ein Zimmer oder eine Wohnung.
+    definition: to live somewhere, to have your home there
     use_cases:
       - Ich wohne seit zwei Jahren in Leipzig.
       - Wo wohnst du? — In der Bahnhofstraße.
@@ -31,7 +31,7 @@ entries:
 
   - term: sprechen
     tag: Verb
-    definition: Wörter benutzen. Man spricht eine Sprache oder mit einer Person.
+    definition: to speak — a language, or to a person
     use_cases:
       - Ich spreche Polnisch, Englisch und ein bisschen Deutsch.
       - Sprechen Sie bitte langsam!
@@ -40,7 +40,7 @@ entries:
 
   - term: die Sprache
     tag: Nomen
-    definition: Deutsch, Polnisch oder Englisch. Damit sprechen die Menschen in einem Land.
+    definition: a language, e.g. German or Polish
     use_cases:
       - Deutsch ist keine leichte Sprache.
       - Wie viele Sprachen sprichst du?
@@ -49,7 +49,7 @@ entries:
 
   - term: die Muttersprache
     tag: Nomen
-    definition: Die erste Sprache. Diese Sprache lernt ein Kind zu Hause.
+    definition: mother tongue; the first language, learned at home
     use_cases:
       - Meine Muttersprache ist Arabisch.
       - Er spricht Deutsch fast wie eine Muttersprache.
@@ -58,7 +58,7 @@ entries:
 
   - term: der Beruf
     tag: Nomen
-    definition: Die Arbeit einer Person. Lehrer, Koch und Ärztin sind Berufe.
+    definition: job, profession — what you do for a living
     use_cases:
       - Was sind Sie von Beruf? — Ich bin Koch.
       - Mein Beruf gefällt mir sehr.
@@ -67,7 +67,7 @@ entries:
 
   - term: arbeiten als
     tag: Verb
-    definition: Diesen Beruf haben und dafür Geld bekommen.
+    definition: to work as — to hold that job and be paid for it
     use_cases:
       - Ich arbeite als Koch in einem Restaurant.
       - Sie arbeitet als Ärztin im Krankenhaus.
@@ -76,7 +76,7 @@ entries:
 
   - term: studieren
     tag: Verb
-    definition: An einer Universität lernen. Das machen Studenten.
+    definition: to study at a university
     use_cases:
       - Ich studiere Medizin in München.
       - Was studierst du? — Informatik.
@@ -85,7 +85,7 @@ entries:
 
   - term: verheiratet
     tag: Adjektiv
-    definition: "Eine Frau und ein Mann sind zusammen eine Familie. Gegenteil: ledig."
+    definition: married; opposite of ledig
     use_cases:
       - Ich bin seit fünf Jahren verheiratet.
       - Sind Sie verheiratet? — Nein, ich bin ledig.
@@ -94,7 +94,7 @@ entries:
 
   - term: ledig
     tag: Adjektiv
-    definition: Nicht verheiratet. Man hat keine Ehefrau und keinen Ehemann.
+    definition: single, not married
     use_cases:
       - "Familienstand: ledig."
       - Mein Bruder ist noch ledig.
@@ -103,7 +103,7 @@ entries:
 
   - term: das Alter
     tag: Nomen
-    definition: "Die Zahl der Jahre. Man fragt: Wie alt bist du?"
+    definition: age, the number of years (Wie alt bist du?)
     use_cases:
       - Bitte schreiben Sie Ihr Alter in das Formular.
       - Wir haben das gleiche Alter.
@@ -112,7 +112,7 @@ entries:
 
   - term: die Adresse
     tag: Nomen
-    definition: Straße, Hausnummer und Stadt. Dorthin kommt die Post.
+    definition: address — street, number and town
     use_cases:
       - Meine Adresse ist Bahnhofstraße 12, 04109 Leipzig.
       - Können Sie mir Ihre Adresse geben?
@@ -121,7 +121,7 @@ entries:
 
   - term: die Telefonnummer
     tag: Nomen
-    definition: Die Zahlen für das Telefon. Damit ruft man eine Person an.
+    definition: phone number
     use_cases:
       - Wie ist deine Telefonnummer?
       - Er hat mir seine Telefonnummer gegeben.
@@ -130,7 +130,7 @@ entries:
 
   - term: die E-Mail-Adresse
     tag: Nomen
-    definition: Die Adresse für Nachrichten am Computer. Dort steht immer ein @.
+    definition: email address; it always contains an @
     use_cases:
       - Schreiben Sie bitte Ihre E-Mail-Adresse hier.
       - Meine E-Mail-Adresse ist neu.
@@ -139,7 +139,7 @@ entries:
 
   - term: das Formular
     tag: Nomen
-    definition: Ein Papier mit Fragen. Man schreibt Name, Adresse und Alter hinein.
+    definition: a form — a sheet asking for your name, address and age
     use_cases:
       - Bitte füllen Sie dieses Formular aus.
       - Das Formular hat zwei Seiten.
@@ -148,7 +148,7 @@ entries:
 
   - term: ausfüllen
     tag: Verb
-    definition: In ein Formular alle Antworten schreiben.
+    definition: to fill in a form
     use_cases:
       - Ich fülle das Formular für den Kurs aus.
       - Füllen Sie bitte alles auf Deutsch aus.
@@ -157,7 +157,7 @@ entries:
 
   - term: der Name
     tag: Nomen
-    definition: Das Wort für eine Person. Zum Beispiel Anna oder Weber.
+    definition: name — Anna, Weber
     use_cases:
       - Mein Name ist Weber.
       - Wie schreibt man Ihren Namen?
@@ -166,7 +166,7 @@ entries:
 
   - term: der Vorname
     tag: Nomen
-    definition: Der erste Name. Bei Anna Weber ist das Anna.
+    definition: first name; in Anna Weber it is Anna
     use_cases:
       - "Vorname: Anna. Nachname: Weber."
       - Mein Vorname ist schwer für Deutsche.
@@ -175,7 +175,7 @@ entries:
 
   - term: der Nachname
     tag: Nomen
-    definition: Der Name der Familie. Bei Anna Weber ist das Weber.
+    definition: surname, family name; in Anna Weber it is Weber
     use_cases:
       - Mein Nachname ist Nowak.
       - Wie ist Ihr Nachname, bitte?
@@ -184,7 +184,7 @@ entries:
 
   - term: das Land
     tag: Nomen
-    definition: Ein großes Gebiet mit einer Regierung. Polen und Italien sind Länder.
+    definition: a country
     use_cases:
       - Aus welchem Land kommst du?
       - In diesem Land spricht man drei Sprachen.
@@ -193,7 +193,7 @@ entries:
 
   - term: die Stadt
     tag: Nomen
-    definition: Ein Ort mit vielen Häusern und Menschen. Berlin ist eine Stadt.
+    definition: a town, a city
     use_cases:
       - Leipzig ist eine schöne Stadt.
       - In welcher Stadt wohnst du?
@@ -202,7 +202,7 @@ entries:
 
   - term: kennenlernen
     tag: Verb
-    definition: Eine Person zum ersten Mal treffen und mit ihr sprechen.
+    definition: to get to know someone, to meet for the first time
     use_cases:
       - Im Kurs lerne ich viele Leute kennen.
       - Schön, Sie kennenzulernen!
@@ -211,7 +211,7 @@ entries:
 
   - term: sich vorstellen
     tag: Verb
-    definition: Den eigenen Namen sagen, damit andere einen kennen.
+    definition: to introduce yourself, to say who you are
     use_cases:
       - Darf ich mich kurz vorstellen? Ich heiße Marek.
       - Jeder stellt sich in der ersten Stunde vor.
@@ -220,7 +220,7 @@ entries:
 
   - term: buchstabieren
     tag: Verb
-    definition: "Ein Wort Buchstabe für Buchstabe sagen: N-o-w-a-k."
+    definition: to spell — to say a word letter by letter (N-o-w-a-k)
     use_cases:
       - Können Sie Ihren Namen bitte buchstabieren?
       - "Ich buchstabiere langsam: M-a-r-e-k."
@@ -229,7 +229,7 @@ entries:
 
   - term: wiederholen
     tag: Verb
-    definition: Etwas noch einmal sagen oder machen.
+    definition: to repeat, to say or do something again
     use_cases:
       - Können Sie das bitte wiederholen?
       - Wir wiederholen die Wörter aus Modul eins.
@@ -238,7 +238,7 @@ entries:
 
   - term: verstehen
     tag: Verb
-    definition: Wissen, was die Wörter bedeuten.
+    definition: to understand, to know what the words mean
     use_cases:
       - Entschuldigung, ich verstehe das nicht.
       - Verstehst du die Aufgabe?
@@ -247,7 +247,7 @@ entries:
 
   - term: langsam
     tag: Adjektiv
-    definition: "Mit wenig Tempo, mit viel Zeit. Gegenteil: schnell."
+    definition: slowly; opposite of schnell
     use_cases:
       - Sprechen Sie bitte langsam!
       - Ich lerne langsam, aber ich lerne jeden Tag.
@@ -256,7 +256,7 @@ entries:
 
   - term: gern
     tag: Adverb
-    definition: Mit Freude. Man macht diese Sache oft und mag sie.
+    definition: gladly, willingly — marks something you like doing
     use_cases:
       - Ich koche gern und fahre gern Fahrrad.
       - Trinkst du gern Kaffee? — Ja, sehr gern.
@@ -265,7 +265,7 @@ entries:
 
   - term: auch
     tag: Adverb
-    definition: "Ebenso, genauso. Zeigt: für eine zweite Person oder Sache gilt das Gleiche."
+    definition: too, also — the same goes for a second person or thing
     use_cases:
       - Ich komme aus Polen. Meine Frau kommt auch aus Polen.
       - Sprichst du auch Englisch?

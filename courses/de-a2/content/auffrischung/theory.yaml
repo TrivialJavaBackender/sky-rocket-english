@@ -1,25 +1,72 @@
-# Modul 01 · Ich und du — Grammatik im Fokus, Watch out! und Lückenkarten.
-# 7 Punkte — genau die Grammatik-Liste der Modulkarte (courses/de-a2/PLAN.md §4).
-# Die Obergrenze des Profils (§6) wäre 2 Spotlights × 4 Punkte.
-# Paradigmen stehen als Tabelle, nicht als Kette mit Punkten: „ich -e · du -st ·
-# er -t“ zwingt die Lesenden, das Raster selbst im Kopf zu bauen.
+# Auffrischung · theory. Two spotlights, 11 items realising the seven grammar
+# points of the module card (courses/de-a2/PLAN.md §4). This is the optional
+# refresher block: everything here is A1 material the course already assumes
+# (§1a), so the job of the theory is to close the holes the placement test found,
+# not to introduce anything.
+# Scaffolding rule (§5, revised 2026-07): title, intro, form and note in English,
+# every example and table in German. Grammar terms are named in English directly.
+# The spelling variations and the vowel changes — the two things the first
+# edition was missing — come from courses/_reference/basic-german/ units 02–04
+# and 07.
 spotlights:
-  - title: "Das Verb im Präsens"
-    intro: "Jedes Verb hat einen Stamm und eine Endung. Die Endung zeigt: Wer macht das?"
+  - title: The verb in the present tense
+    intro: >-
+      Every German verb is a stem plus an ending, and the ending tells you who is
+      doing it: lern-e is I, lern-st is you. There are only four endings and two
+      of them are -en, so the system is small. What takes practice is not the
+      table but the three groups of verbs that bend it — stems that need an extra
+      e, stems that already end in an s-sound, and the frequent verbs that change
+      their stem vowel in du and er/sie/es. All three come back in every module of
+      this course, so it is worth being fast at them.
     items:
-      - form: "Regelmäßige Verben: Stamm + Endung"
-        note: "Der Stamm bleibt gleich. Nur die Endung wechselt."
+      - form: "Regular verbs: stem plus ending"
+        example: "Ich lerne Deutsch. Du wohnst in Wien. Wir kommen aus Polen."
+        note: The stem does not move. Only the ending changes with the person.
         table:
-          headers: ["", "lernen", "wohnen", "kommen"]
+          headers: ["", "Endung", "lernen", "wohnen", "kommen"]
           rows:
-            - ["ich", "lerne", "wohne", "komme"]
-            - ["du", "lernst", "wohnst", "kommst"]
-            - ["er / sie / es", "lernt", "wohnt", "kommt"]
-            - ["wir", "lernen", "wohnen", "kommen"]
-            - ["ihr", "lernt", "wohnt", "kommt"]
-            - ["sie / Sie", "lernen", "wohnen", "kommen"]
-      - form: "Die Personalpronomen"
-        note: "Sie mit großem S ist höflich. Für fremde Personen immer Sie."
+            - ["ich", "-e", "lerne", "wohne", "komme"]
+            - ["du", "-st", "lernst", "wohnst", "kommst"]
+            - ["er / sie / es", "-t", "lernt", "wohnt", "kommt"]
+            - ["wir", "-en", "lernen", "wohnen", "kommen"]
+            - ["ihr", "-t", "lernt", "wohnt", "kommt"]
+            - ["sie / Sie", "-en", "lernen", "wohnen", "kommen"]
+      - form: "Stems in -t or -d take an extra e"
+        example: "Du arbeitest in einem Restaurant. Der Kurs kostet 90 Euro. Ihr redet zu schnell."
+        note: "arbeit- plus -st cannot be pronounced, so an e goes in between. Only du, er/sie/es and ihr are affected."
+        table:
+          headers: ["", "arbeiten", "kosten", "reden"]
+          rows:
+            - ["ich", "arbeite", "koste", "rede"]
+            - ["du", "arbeitest", "kostest", "redest"]
+            - ["er / sie / es", "arbeitet", "kostet", "redet"]
+            - ["wir", "arbeiten", "kosten", "reden"]
+            - ["ihr", "arbeitet", "kostet", "redet"]
+            - ["sie / Sie", "arbeiten", "kosten", "reden"]
+      - form: "Stems in -s, -ß or -z: du takes only -t"
+        example: "Du heißt Marek, oder? Wie heißt du? Du reist gern nach Polen."
+        note: The s of the -st ending is already in the stem, so du drops it. This is why it is du heißt, never du heißst.
+        table:
+          headers: ["Infinitiv", "du", "er / sie / es"]
+          rows:
+            - ["heißen", "du heißt", "er heißt"]
+            - ["reisen", "du reist", "sie reist"]
+            - ["tanzen", "du tanzt", "er tanzt"]
+      - form: "Frequent verbs change their stem: a → ä, e → i / ie"
+        example: "Du sprichst schon gut Deutsch. Marek fährt nach Krakau. Fatima liest ein Buch."
+        note: "Only du and er/sie/es change. ich, wir and ihr keep the plain stem: ich spreche, wir sprechen."
+        table:
+          headers: ["Infinitiv", "du", "er / sie / es"]
+          rows:
+            - ["sprechen", "sprichst", "spricht"]
+            - ["lesen", "liest", "liest"]
+            - ["sehen", "siehst", "sieht"]
+            - ["fahren", "fährst", "fährt"]
+            - ["schlafen", "schläfst", "schläft"]
+            - ["nehmen", "nimmst", "nimmt"]
+      - form: The personal pronouns
+        example: "Ich bin Koch. Wir wohnen in Leipzig. Sie sprechen sehr schnell."
+        note: "Sie with a capital is the polite form, for one person or several. Small sie means 'she' or 'they' — the verb tells you which."
         table:
           headers: ["", "Singular", "Plural"]
           rows:
@@ -27,36 +74,55 @@ spotlights:
             - ["2. Person", "du", "ihr"]
             - ["3. Person", "er / sie / es", "sie"]
             - ["höflich", "Sie", "Sie"]
-      - form: "sein — unregelmäßig"
-        example: Ich bin Koch. Du bist müde. Wir sind aus Polen.
-        note: "Diese Formen lernt man auswendig. Sie kommen sehr oft."
-        table:
-          headers: ["", "sein"]
-          rows:
-            - ["ich", "bin"]
-            - ["du", "bist"]
-            - ["er / sie / es", "ist"]
-            - ["wir", "sind"]
-            - ["ihr", "seid"]
-            - ["sie / Sie", "sind"]
-      - form: "haben — unregelmäßig"
-        example: Ich habe Zeit. Sie hat einen Bruder. Habt ihr Fragen?
-        note: "Nur du und er / sie / es sind besonders: hast, hat."
-        table:
-          headers: ["", "haben"]
-          rows:
-            - ["ich", "habe"]
-            - ["du", "hast"]
-            - ["er / sie / es", "hat"]
-            - ["wir", "haben"]
-            - ["ihr", "habt"]
-            - ["sie / Sie", "haben"]
 
-  - title: "Fragen stellen"
-    intro: "Es gibt zwei Fragen: mit Fragewort und ohne. Das Verb steht immer vorn."
+  - title: sein, haben and asking questions
+    intro: >-
+      Two verbs break the pattern badly enough to be learned by heart, and they
+      are the two you use most: sein and haben. They also carry a set of fixed
+      phrases where German and English part company — German says Ich bin 25
+      Jahre alt where English says 'I am 25', and Ich habe Hunger where English
+      says 'I am hungry'. The second half of this refresher is the question. There
+      are exactly two shapes: a question word plus the verb, or the verb on its
+      own at the front. In both, the verb comes before the subject.
     items:
-      - form: "W-Frage: Fragewort + Verb + Subjekt"
-        note: "Das Verb steht immer direkt nach dem Fragewort."
+      - form: "sein — irregular throughout"
+        example: "Ich bin Koch. Du bist müde. Wir sind aus Polen."
+        note: Learn these six forms by heart. They come back in every module of the course.
+        table:
+          headers: ["", "sein", "Beispiel"]
+          rows:
+            - ["ich", "bin", "Ich bin 32 Jahre alt."]
+            - ["du", "bist", "Du bist sehr geduldig."]
+            - ["er / sie / es", "ist", "Sie ist ledig."]
+            - ["wir", "sind", "Wir sind im Kurs."]
+            - ["ihr", "seid", "Seid ihr verheiratet?"]
+            - ["sie / Sie", "sind", "Sind Sie Herr Nowak?"]
+      - form: "haben — irregular in du and er/sie/es"
+        example: "Ich habe Zeit. Sie hat einen Bruder. Habt ihr Fragen?"
+        note: "Only du and er/sie/es are special — the b of the stem disappears: hast, hat."
+        table:
+          headers: ["", "haben", "Beispiel"]
+          rows:
+            - ["ich", "habe", "Ich habe eine Frage."]
+            - ["du", "hast", "Hast du Zeit?"]
+            - ["er / sie / es", "hat", "Marek hat eine Frau."]
+            - ["wir", "haben", "Wir haben Kurs am Montag."]
+            - ["ihr", "habt", "Habt ihr Fragen?"]
+            - ["sie / Sie", "haben", "Haben Sie eine Adresse in Leipzig?"]
+      - form: "Fixed phrases with sein and haben"
+        example: "Ich bin 32 Jahre alt. Ich bin Koch. Ich habe Hunger."
+        note: These are the phrases a Russian or English speaker most often builds with the wrong verb. Learn each one whole.
+        table:
+          headers: ["Deutsch", "English", "Nicht"]
+          rows:
+            - ["Ich bin 32 Jahre alt.", "I am 32.", "Ich habe 32 Jahre."]
+            - ["Ich bin Koch.", "I am a cook.", "Ich bin ein Koch."]
+            - ["Ich habe Hunger.", "I am hungry.", "Ich bin hungrig."]
+            - ["Ich habe Zeit.", "I am free.", "Ich bin frei."]
+            - ["Ich habe eine Frage.", "I have a question.", "—"]
+      - form: "W-question: question word, verb, subject"
+        example: "Woher kommen Sie? Wo wohnst du? Was sind Sie von Beruf?"
+        note: The verb follows the question word directly, before the subject. German has no 'do' in questions.
         table:
           headers: ["Fragewort", "Verb", "Subjekt", "Rest"]
           rows:
@@ -64,67 +130,79 @@ spotlights:
             - ["Wo", "wohnt", "sie", "—"]
             - ["Wie", "heißen", "Sie", "—"]
             - ["Was", "machst", "du", "am Wochenende?"]
-      - form: "Ja/Nein-Frage: Verb + Subjekt"
-        note: "Ohne Fragewort beginnt der Satz mit dem Verb."
+            - ["Wann", "beginnt", "der Kurs", "—"]
+      - form: "Yes/no question: verb, then subject"
+        example: "Hast du Zeit? Sprichst du Deutsch? Sind Sie verheiratet?"
+        note: With no question word the sentence simply starts with the verb. Everything else keeps its place.
         table:
-          headers: ["Verb", "Subjekt", "Rest"]
+          headers: ["Aussage", "Ja/Nein-Frage"]
           rows:
-            - ["Hast", "du", "Zeit?"]
-            - ["Sprichst", "du", "Deutsch?"]
-            - ["Seid", "ihr", "aus Spanien?"]
-            - ["Ist", "das", "dein Buch?"]
-      - form: "Die Fragewörter"
-        note: "wo = der Ort. woher = das Land oder die Herkunft."
+            - ["Du hast Zeit.", "Hast du Zeit?"]
+            - ["Du sprichst Deutsch.", "Sprichst du Deutsch?"]
+            - ["Ihr seid aus Spanien.", "Seid ihr aus Spanien?"]
+            - ["Das ist dein Buch.", "Ist das dein Buch?"]
+      - form: "Which question word to use"
+        example: "Wer ist das? Woher kommst du? Wohin fährst du am Wochenende?"
+        note: "Three of them look alike and are not: wo asks where something is, woher where it comes from, wohin where it is going."
         table:
-          headers: ["Fragewort", "fragt nach", "Beispielantwort"]
+          headers: ["Fragewort", "asks about", "Beispielantwort"]
           rows:
-            - ["wer", "der Person", "Das ist Frau Weber."]
-            - ["was", "der Sache", "Ich lerne Deutsch."]
-            - ["wie", "der Art, dem Namen", "Ich heiße Marek."]
-            - ["wo", "dem Ort", "In Leipzig."]
-            - ["woher", "der Herkunft", "Aus Polen."]
-            - ["wann", "der Zeit", "Um 18 Uhr."]
+            - ["wer", "the person", "Das ist Frau Weber."]
+            - ["was", "the thing", "Ich lerne Deutsch."]
+            - ["wie", "the manner, the name", "Ich heiße Marek."]
+            - ["wo", "the place you are", "In Leipzig."]
+            - ["woher", "the place you come from", "Aus Polen."]
+            - ["wohin", "the place you are going", "Nach Krakau."]
+            - ["wann", "the time", "Um 18 Uhr."]
 
 watchouts:
-  - title: "Beruf ohne Artikel"
+  - title: No article in front of a job
     bad: Ich bin ein Student.
     good: Ich bin Student.
-    note: "Vor Beruf, Nationalität und Religion steht kein Artikel."
-  - title: "Das Alter mit sein"
+    note: A job, a nationality or a religion stands bare after sein — no ein, no eine.
+  - title: Age goes with sein
     bad: Ich habe 25 Jahre.
     good: Ich bin 25 Jahre alt.
-    note: "Das Alter steht im Deutschen immer mit sein."
-  - title: "Das Verb in der Frage"
+    note: German counts age with sein and adds alt. Ich habe 25 Jahre is a direct calque and always wrong.
+  - title: The verb comes right after the question word
     bad: Woher du kommst?
     good: Woher kommst du?
-    note: "Nach dem Fragewort kommt sofort das Verb."
-  - title: "Sprache ohne das Wort Sprache"
+    note: Question word, then verb, then subject. Nothing may come between the first two.
+  - title: The language stands alone
     bad: Ich spreche die deutsche Sprache.
     good: Ich spreche Deutsch.
-    note: "Die Sprache steht allein und groß: Deutsch, Polnisch, Englisch."
+    note: "Names of languages are used bare and with a capital: Deutsch, Polnisch, Englisch."
+  - title: du arbeitest needs the extra e
+    bad: Du arbeitst in einem Restaurant.
+    good: Du arbeitest in einem Restaurant.
+    note: A stem in -t or -d takes an e before the ending — arbeitest, arbeitet, kostet.
+  - title: wo, woher or wohin
+    bad: Wo fährst du am Wochenende?
+    good: Wohin fährst du am Wochenende?
+    note: Movement to a place needs wohin, movement from a place woher. Plain wo asks where you are.
 
 cloze_cards:
   - text: "Woher {{c1::kommst}} du? — Ich komme aus Italien."
     hint: kommen
-    rule: "du + Verb = Stamm + -st. Nach dem Fragewort steht sofort das Verb."
+    rule: "du takes stem + -st. After the question word the verb comes immediately."
   - text: "Meine Schwester {{c1::wohnt}} seit drei Jahren in Wien."
     hint: wohnen
-    rule: "er/sie/es + Verb = Stamm + -t. Meine Schwester = sie."
+    rule: "er/sie/es takes stem + -t. Meine Schwester = sie."
   - text: "Wir {{c1::lernen}} zusammen Deutsch, denn wir sind im gleichen Kurs."
     hint: lernen
-    rule: "wir + Verb = Stamm + -en. Die Form ist gleich wie der Infinitiv."
+    rule: "wir takes stem + -en — the same form as the infinitive."
   - text: "Ich {{c1::bin}} Köchin und arbeite in einem Restaurant."
     hint: sein
-    rule: "sein ist unregelmäßig: ich bin. Vor dem Beruf steht kein Artikel."
+    rule: "sein is irregular: ich bin. And a job takes no article."
   - text: "{{c1::Seid}} ihr aus Spanien? — Nein, wir kommen aus Portugal."
     hint: sein
-    rule: "ihr + sein = seid. Ohne Fragewort beginnt die Frage mit dem Verb."
+    rule: "ihr + sein = seid. With no question word the question starts with the verb."
   - text: "Anna {{c1::hat}} zwei Brüder und eine Schwester."
     hint: haben
-    rule: "er/sie/es + haben = hat. Diese Form ist unregelmäßig."
+    rule: "er/sie/es + haben = hat. This form is irregular — the b drops out."
   - text: "{{c1::Habt}} ihr noch Fragen zum Kurs?"
     hint: haben
-    rule: "ihr + haben = habt. Die Ja/Nein-Frage beginnt mit dem Verb."
+    rule: "ihr + haben = habt. The yes/no question begins with the verb."
   - text: "Wie {{c1::heißen}} Sie? — Mein Name ist Weber."
     hint: heißen
-    rule: "Sie (höflich) + Verb = Stamm + -en. Für Fremde benutzt man immer Sie."
+    rule: "Polite Sie takes stem + -en. Use Sie with anyone you do not know."

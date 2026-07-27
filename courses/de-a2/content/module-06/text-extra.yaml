@@ -7,7 +7,7 @@
 kind: extra
 kicker: INFO
 title: Umtausch und Rückgabe
-meta: ≈ 1 Min · ein Aushang im Geschäft
+meta: ≈ 1 min · a notice on display in the shop
 body:
   - - t: 'Liebe Kundin, lieber Kunde, Sie haben etwas gekauft, aber es passt leider nicht? Kein Problem. Bei uns können Sie jeden Artikel umtauschen. So einfach geht der '
     - g: Umtausch
@@ -22,16 +22,16 @@ body:
 glosses:
   - key: Umtausch
     term: Umtausch
-    pos_label: Nomen
-    definition: Man gibt eine Sache zurück und bekommt eine andere dafür.
+    pos_label: noun
+    definition: an exchange — you give an item back and get another for it
     example: Der Umtausch ist nur mit der Quittung möglich.
   - key: Ware
     term: Ware
-    pos_label: Nomen
-    definition: "Alles, was ein Geschäft verkauft: Kleidung, Schuhe und mehr."
+    pos_label: noun
+    definition: goods, merchandise — everything a shop sells
     example: Die Ware muss sauber und neu sein.
   - key: Etikett
     term: Etikett
-    pos_label: Nomen
-    definition: Ein kleines Schild an der Kleidung. Dort stehen die Größe und der Preis.
+    pos_label: noun
+    definition: a label, a tag on a garment showing the size and the price
     example: "Das Etikett zeigt: Der Pullover kostet dreißig Euro."

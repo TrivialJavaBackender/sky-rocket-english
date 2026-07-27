@@ -1,15 +1,25 @@
-# Module 10 · theory. Two spotlights, 6 items — three for the place phrase and
-# the question wo? (grammar points 1 and 2 of the card), three for es gibt in the
-# home, the compound noun (the word-formation extension of this module) and the
-# old verb-second rule meeting the new phrase.
+# Module 10 · theory. Two spotlights, 9 items — five for the place phrase and the
+# question wo? (grammar points 1 and 2 of the card), four for es gibt in the home,
+# the compound noun (the word-formation extension of this module) and the old
+# verb-second rule meeting the new phrase.
 # The dative is NEVER presented as a system here: every phrase comes ready-made
 # in a table, the note says "learn the room together with its phrase", and no
-# item explains why it is der or dem. Building a case form is module A2 work.
+# item explains why it is der or dem. Building a case form is module A2 work —
+# which is why courses/_reference/basic-german/ unit 13 is deliberately NOT the
+# source for this module, only unit 24's list of ready phrases is.
 # Scaffolding rule (§5): intro and note English, every example and table German.
 # Grammar terms are named in English directly (§5.1).
 spotlights:
   - title: Wo? — place comes as one ready-made phrase
-    intro: "German says where something is with a small phrase in front of the noun: im Bad, in der Küche, auf dem Balkon. The phrase changes with the room, and you do not have to build it — you learn the room and its phrase together, exactly the way you learned am Montag in module 9."
+    intro: >-
+      German says where something is with a small phrase in front of the noun:
+      im Bad, in der Küche, auf dem Balkon. The phrase looks different from room
+      to room, and at this stage you do not build it — you learn the room and its
+      phrase together, exactly the way you learned am Montag in module 9. There
+      is a system behind it, and you will meet it in the A2 course; until then,
+      treating these as whole words costs nothing and saves a lot of guessing.
+      One thing is worth noticing right away: the phrase never changes with the
+      verb.
     items:
       - form: "in + room → im (der / das rooms) · in der (die rooms)"
         example: "Das Bett steht im Schlafzimmer. Im Bad gibt es eine Dusche. Wir frühstücken in der Küche. In der Wohnung gibt es einen Balkon."
@@ -35,6 +45,15 @@ spotlights:
             - ["auf dem Tisch", "Das Handy ist auf dem Tisch."]
             - ["im Regal", "Meine Bücher sind im Regal."]
             - ["im Schrank", "Die Brille ist im Schrank."]
+      - form: "zu Hause and nach Hause"
+        example: "Ich bin am Abend zu Hause. Ich gehe jetzt nach Hause. Bist du zu Hause?"
+        note: "Two fixed phrases, and they are not interchangeable: zu Hause is where you are, nach Hause is where you are going."
+        table:
+          headers: ["Frage", "Phrase", "Beispiel"]
+          rows:
+            - ["Wo?", "zu Hause", "Ich arbeite zu Hause."]
+            - ["Wohin?", "nach Hause", "Ich fahre nach Hause."]
+            - ["Wo?", "im Büro", "Ich arbeite im Büro."]
       - form: "The question wo?"
         example: "Wo ist die Lampe? — Im Wohnzimmer. Wo wohnst du? — In Hamburg. Wo frühstückt ihr? — In der Küche."
         note: "wo asks for a place. The verb comes second, as in every W-question you know."
@@ -45,9 +64,26 @@ spotlights:
             - ["Wo ist die Dusche?", "Im Bad."]
             - ["Wo steht das Bett?", "Im Schlafzimmer."]
             - ["Wo wohnst du?", "In Hamburg."]
+            - ["Wo bist du?", "Zu Hause."]
+      - form: "The phrase stays the same, whatever the verb"
+        example: "Ich bin in der Küche. Ich koche in der Küche. Der Kühlschrank steht in der Küche."
+        note: Once you know the phrase for a room, it works with every verb. Nothing in it changes.
+        table:
+          headers: ["Verb", "Satz"]
+          rows:
+            - ["sein", "Ich bin im Wohnzimmer."]
+            - ["stehen", "Das Sofa steht im Wohnzimmer."]
+            - ["frühstücken", "Wir frühstücken in der Küche."]
+            - ["es gibt", "Im Bad gibt es eine Dusche."]
 
   - title: In the flat — es gibt, long words and word order
-    intro: Three things you already know come back in the flat. es gibt from module 7 says what is there, German glues two short words into one long one, and the verb keeps standing in position two — also after a place phrase.
+    intro: >-
+      Three things you already know come back in the flat. es gibt from module 7
+      says what is there and still takes the accusative. German glues two short
+      words into one long one, and the last part decides the article — that is
+      how the whole vocabulary of a flat is built, from Schlafzimmer to
+      Kühlschrank. And the verb keeps standing in position two, also when a place
+      phrase opens the sentence.
     items:
       - form: "es gibt + accusative"
         example: "In der Wohnung gibt es einen Balkon. Im Bad gibt es eine Dusche. Es gibt ein Regal. Einen Garten gibt es leider nicht."
@@ -79,6 +115,18 @@ spotlights:
             - ["Ein Sofa steht im Wohnzimmer.", "Im Wohnzimmer steht ein Sofa."]
             - ["Ich trinke Kaffee auf dem Balkon.", "Auf dem Balkon trinke ich Kaffee."]
             - ["Ich sehe im Wohnzimmer fern.", "Im Wohnzimmer sehe ich fern."]
+            - ["Es gibt eine Dusche im Bad.", "Im Bad gibt es eine Dusche."]
+      - form: "Describing a flat — the sentences you need"
+        example: "Die Wohnung hat drei Zimmer. Das Wohnzimmer ist hell und gemütlich. Einen Balkon gibt es leider nicht."
+        note: Four patterns cover a whole description — how many rooms, what each room is like, what there is and what there is not.
+        table:
+          headers: ["Was du sagst", "Muster"]
+          rows:
+            - ["Größe", "Die Wohnung hat drei Zimmer."]
+            - ["Zimmer", "Das Bad ist klein."]
+            - ["Eindruck", "Das Wohnzimmer ist sehr gemütlich."]
+            - ["Ausstattung", "In der Küche gibt es einen Kühlschrank."]
+            - ["was fehlt", "Es gibt keinen Garten."]
 
 watchouts:
   - title: in der Küche, not in Küche
@@ -93,6 +141,14 @@ watchouts:
     bad: Wo die Lampe ist?
     good: Wo ist die Lampe?
     note: After wo the verb follows immediately, like in every W-question.
+  - title: nach Hause, not zu Hause, when you are going
+    bad: Ich gehe jetzt zu Hause.
+    good: Ich gehe jetzt nach Hause.
+    note: "zu Hause = where you are, nach Hause = where you are going. Two phrases, two jobs."
+  - title: A long word is written as one word
+    bad: Das Schlaf Zimmer ist klein.
+    good: Das Schlafzimmer ist klein.
+    note: German glues the parts together. Two separate words would be two separate things.
 
 cloze_cards:
   - text: "Das Bett steht {{c1::im}} Schlafzimmer."

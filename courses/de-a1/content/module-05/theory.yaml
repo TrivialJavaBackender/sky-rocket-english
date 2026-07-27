@@ -1,27 +1,84 @@
-# Module 05 · theory. Two spotlights, 4 items — one item per grammar point of
-# the card (stem-changing verbs, verb-second and inversion, gern / nicht gern,
+# Module 05 · theory. Two spotlights, 10 items realising the four grammar points
+# of the card (stem-changing verbs, verb-second and inversion, gern / nicht gern,
 # und and oder). Scaffolding rule (§5): intro and note English, every example and
 # table German. Grammar terms are named in English directly (§5.1) — there is no
 # German grammar glossary in this course.
+# Verb lists and the word-order tables: courses/_reference/basic-german/ units 03
+# (vowel changes), 28 (word order), 27 (und / oder).
 spotlights:
   - title: Stem-changing verbs
-    intro: Some very common verbs change their stem vowel — but only in two forms, du and er/sie/es. Everything else stays regular.
+    intro: >-
+      A group of very frequent German verbs changes the vowel in its stem — but
+      only in two of the six forms, du and er/sie/es. Everything else stays
+      exactly as you learned it in module 2. There are three patterns (a → ä,
+      e → i, e → ie), and the safest way to handle them is to learn each verb
+      with its du-form: sprechen — du sprichst. There is no rule that tells you
+      in advance whether a verb belongs to this group, so treat the tables below
+      as a list to know, not as a formula to apply.
     items:
-      - form: "e → i / ie and a → ä (only du and er/sie/es)"
-        example: "Ich esse gern Pizza. Du isst gern Pizza. Du sprichst sehr gut Deutsch. Sie liest ein Buch. Du fährst zu schnell. Am Sonntag schläft er sehr lange."
-        note: "ich, wir, ihr and sie/Sie keep the normal stem: ich esse, wir essen, ihr esst."
+      - form: "Only du and er/sie/es change"
+        example: "Ich spreche Deutsch. Du sprichst Deutsch. Wir sprechen Deutsch."
+        note: "The endings themselves stay the same as for any regular verb. Only the vowel of the stem moves, and only in two rows."
+        table:
+          headers: ["", "sprechen", "fahren", "lesen"]
+          rows:
+            - ["ich", "spreche", "fahre", "lese"]
+            - ["du", "sprichst", "fährst", "liest"]
+            - ["er / sie / es", "spricht", "fährt", "liest"]
+            - ["wir", "sprechen", "fahren", "lesen"]
+            - ["ihr", "sprecht", "fahrt", "lest"]
+            - ["sie / Sie", "sprechen", "fahren", "lesen"]
+      - form: "a → ä"
+        example: "Du fährst zu schnell. Am Sonntag schläft er sehr lange. Sie trägt eine Brille."
+        note: "The plain a comes back in every other form: ich fahre, wir fahren, ihr fahrt."
         table:
           headers: ["Infinitiv", "du", "er / sie / es"]
           rows:
-            - ["essen (e → i)", "isst", "isst"]
-            - ["sprechen (e → i)", "sprichst", "spricht"]
-            - ["lesen (e → ie)", "liest", "liest"]
-            - ["sehen (e → ie)", "siehst", "sieht"]
-            - ["fahren (a → ä)", "fährst", "fährt"]
-            - ["schlafen (a → ä)", "schläfst", "schläft"]
+            - ["fahren", "fährst", "fährt"]
+            - ["schlafen", "schläfst", "schläft"]
+            - ["tragen", "trägst", "trägt"]
+            - ["waschen", "wäschst", "wäscht"]
+            - ["laufen", "läufst", "läuft"]
+      - form: "e → i"
+        example: "Du sprichst sehr gut Deutsch. Was isst du gern? Er hilft seiner Mutter."
+        note: "nehmen belongs here too, but doubles the m and drops the h: du nimmst, er nimmt."
+        table:
+          headers: ["Infinitiv", "du", "er / sie / es"]
+          rows:
+            - ["sprechen", "sprichst", "spricht"]
+            - ["essen", "isst", "isst"]
+            - ["geben", "gibst", "gibt"]
+            - ["helfen", "hilfst", "hilft"]
+            - ["treffen", "triffst", "trifft"]
+            - ["nehmen", "nimmst", "nimmt"]
+      - form: "e → ie"
+        example: "Meine Schwester liest jeden Abend. Siehst du das? Er sieht gern Filme."
+        note: "The e stretches into ie. lesen also loses the s of the du-ending, because its stem already ends in s: du liest."
+        table:
+          headers: ["Infinitiv", "du", "er / sie / es"]
+          rows:
+            - ["lesen", "liest", "liest"]
+            - ["sehen", "siehst", "sieht"]
+            - ["empfehlen", "empfiehlst", "empfiehlt"]
+      - form: "Verbs that keep their vowel"
+        example: "Du gehst nach Hause. Er trinkt Kaffee. Sie kommt aus Spanien."
+        note: An e or an a in the stem does not mean the verb changes. Most verbs are regular, so the changing ones are worth marking in your deck.
+        table:
+          headers: ["Infinitiv", "du", "er / sie / es"]
+          rows:
+            - ["gehen", "gehst", "geht"]
+            - ["trinken", "trinkst", "trinkt"]
+            - ["kommen", "kommst", "kommt"]
+            - ["machen", "machst", "macht"]
 
   - title: Word order, gern and und / oder
-    intro: The verb is always the second element. If you start with a time word, the subject moves behind the verb — that is called inversion.
+    intro: >-
+      German word order looks free but rests on one iron rule: in a statement
+      the finite verb is the second element. Second element, not second word —
+      whatever stands in front of it counts as one, however many words it takes.
+      This is what lets you begin a sentence with a time expression: put Heute
+      first and the subject simply moves behind the verb. Note that the verb
+      itself never travels; only the words around it do.
     items:
       - form: "Position 1 – Verb – Rest (inversion after a front adverbial)"
         example: "Ich spiele heute Fußball. Heute spiele ich Fußball. Am Sonntag koche ich."
@@ -34,23 +91,47 @@ spotlights:
             - ["Am Sonntag", "koche", "ich."]
             - ["Im Sommer", "reisen", "wir nach Italien."]
             - ["Manchmal", "liest", "er ein Buch."]
+      - form: "What can stand in position 1"
+        example: "Meine Freundin und ich reisen oft. Am Wochenende reisen wir nach Wien."
+        note: "Position 1 holds exactly one idea — a subject, a time, a place. Two ideas in front of the verb is the classic beginner's mistake."
+        table:
+          headers: ["Was steht vorn", "Beispiel"]
+          rows:
+            - ["das Subjekt", "Wir machen oft Sport."]
+            - ["die Zeit", "Oft machen wir Sport."]
+            - ["der Ort", "In Berlin machen wir Sport."]
+            - ["ein langes Subjekt", "Mein Bruder und ich machen Sport."]
+      - form: "The same rule in a question"
+        example: "Was machst du gern? Spielst du Fußball? Wann kommst du?"
+        note: "A W-question puts the question word in position 1 and the verb in position 2. A yes/no question simply starts with the verb."
+        table:
+          headers: ["Satzart", "Position 1", "Verb"]
+          rows:
+            - ["Aussage", "Ich", "spiele Fußball."]
+            - ["Aussage + Zeit", "Heute", "spiele ich Fußball."]
+            - ["W-Frage", "Was", "spielst du?"]
+            - ["Ja/Nein-Frage", "—", "Spielst du Fußball?"]
       - form: "gern and nicht gern"
         example: "Ich schwimme gern. Ich tanze nicht gern. Kochst du gern?"
-        note: "gern comes after the verb. For the opposite say nicht gern — never gern nicht."
+        note: "gern comes after the verb, in front of the object. For the opposite say nicht gern — never gern nicht."
         table:
           headers: ["", "Satz"]
           rows:
             - ["+", "Ich koche gern."]
+            - ["+ Objekt", "Ich spiele gern Fußball."]
             - ["−", "Ich koche nicht gern."]
             - ["Frage", "Kochst du gern?"]
+            - ["Frage + Objekt", "Spielst du gern Fußball?"]
       - form: "und and oder"
         example: "Ich lese und ich höre Musik. Wir gehen ins Kino oder wir bleiben zu Hause."
-        note: "und adds, oder gives a choice. The word order after them does not change."
+        note: "und adds, oder gives a choice. Neither one moves the verb. If the subject is the same, you can say it once."
         table:
           headers: ["Wort", "Beispiel"]
           rows:
             - ["und", "Ich singe und ich tanze."]
+            - ["und (ein Subjekt)", "Ich singe und tanze."]
             - ["oder", "Wir spielen Fußball oder wir schwimmen."]
+            - ["und + Nomen", "Ich mag Musik und Sport."]
 
 watchouts:
   - title: The verb stays second after a time word
@@ -69,6 +150,14 @@ watchouts:
     bad: Ich tanze gern nicht.
     good: Ich tanze nicht gern.
     note: "nicht stands in front of gern: nicht gern = you do not like it."
+  - title: ich keeps the plain stem
+    bad: Ich spriche Deutsch und Englisch.
+    good: Ich spreche Deutsch und Englisch.
+    note: The vowel changes only in du and er/sie/es. ich, wir and ihr stay regular.
+  - title: nehmen doubles the m
+    bad: Du nehmst einen Kaffee.
+    good: Du nimmst einen Kaffee.
+    note: "nehmen is the most irregular of the e → i group: du nimmst, er nimmt."
 
 cloze_cards:
   - text: "Du {{c1::fährst}} sehr gern Fahrrad."

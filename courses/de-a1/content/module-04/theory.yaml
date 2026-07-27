@@ -1,13 +1,34 @@
-# Module 04 · theory. Two spotlights, 4 items — they realise the three grammar
-# points of the card (nicht, kein/keine vs nicht, yes/no questions with doch)
-# plus the word formation ein → kein, which is the second point seen from the
-# form side and lives in the ein/kein table. Scaffolding rule (§5): intro and
-# note English, every example and table German. Grammar terms are named in
-# English directly (§5.1). Only the nominative is shown — keinen is module 7.
+# Module 04 · theory. Two spotlights, 9 items realising the three grammar points
+# of the card (nicht, kein/keine vs nicht, yes/no questions with doch) plus the
+# word formation ein → kein, which is the second point seen from the form side
+# and lives in the ein/kein table. Scaffolding rule (§5): intro and note English,
+# every example and table German. Grammar terms are named in English directly
+# (§5.1). Only the nominative is shown — keinen is module 7.
+# Position of nicht and the kein/nicht split: courses/_reference/basic-german/
+# unit 18; the question forms: unit 07.
 spotlights:
   - title: Two ways to say no
-    intro: German has two negation words. Use kein in front of a noun, and nicht for everything else.
+    intro: >-
+      English negates almost everything with one word — 'not', usually propped
+      up by 'do'. German has no 'do' at all, and instead two negation words that
+      split the work between them. kein goes in front of a noun that would
+      otherwise take ein or no article; nicht does everything else — verbs,
+      adjectives, adverbs, and also nouns that already carry der or a
+      possessive. Get the choice right first, then worry about where the word
+      stands; the position of nicht is the part that takes time to feel natural.
     items:
+      - form: "nicht or kein? — make the choice first"
+        example: "Ich habe keine Zeit. Die Antwort ist nicht richtig. Das ist nicht mein Buch."
+        note: "The question is not 'verb or noun' but 'which article'. A noun with ein or with no article takes kein; anything else takes nicht."
+        table:
+          headers: ["Was ist negativ?", "Wort", "Beispiel"]
+          rows:
+            - ["das Verb", "nicht", "Ich verstehe das nicht."]
+            - ["das Adjektiv", "nicht", "Das ist nicht gut."]
+            - ["Nomen mit ein", "kein", "Ich habe kein Auto."]
+            - ["Nomen ohne Artikel", "kein", "Ich habe keine Zeit."]
+            - ["Nomen mit der / die / das", "nicht", "Ich mag den Film nicht."]
+            - ["Nomen mit mein / dein", "nicht", "Das ist nicht mein Buch."]
       - form: "nicht — with a verb, an adjective or a time word"
         example: "Ich verstehe die Frage nicht. Die Antwort ist nicht richtig. Ich lerne heute nicht."
         note: With a verb, nicht goes at the end. Before an adjective it stands right in front of it.
@@ -18,6 +39,17 @@ spotlights:
             - ["das Adjektiv", "Die Antwort ist nicht richtig."]
             - ["die Zeit", "Ich lerne heute nicht."]
             - ["gut / schlecht", "Das ist nicht gut."]
+      - form: "Where nicht stands in the sentence"
+        example: "Sie kommt heute nicht. Er spielt nicht gern Fußball. Ich verstehe die Frage nicht."
+        note: "The rule of thumb: nicht stands as late as possible, but always in front of the word it negates."
+        table:
+          headers: ["Regel", "Beispiel"]
+          rows:
+            - ["Verb negativ → am Ende", "Sie kommt nicht."]
+            - ["Zeit steht vor nicht", "Sie kommt heute nicht."]
+            - ["Adjektiv → nicht davor", "Das Buch ist nicht teuer."]
+            - ["gern → nicht davor", "Ich lerne nicht gern."]
+            - ["Objekt mit der → nicht danach", "Ich mag die Musik nicht."]
       - form: "kein / keine — in front of a noun"
         example: "Das ist kein Buch. Das ist keine Frage. Das sind keine Bücher."
         note: "Take ein and put a k in front. Plural nouns have no ein, but they do take keine."
@@ -28,9 +60,20 @@ spotlights:
             - ["die Idee", "eine Idee", "keine Idee"]
             - ["das Buch", "ein Buch", "kein Buch"]
             - ["die Bücher (Plural)", "Bücher", "keine Bücher"]
+            - ["die Zeit (ohne Artikel)", "Zeit", "keine Zeit"]
+      - form: "kein covers three English phrases"
+        example: "Ich habe kein Geld. Das ist keine Antwort. Wir haben keine Fragen."
+        note: "English says 'no money', 'not an answer', 'not any questions'. German says kein for all three — one word, no 'do'."
 
   - title: Yes/no questions and the answer doch
-    intro: A yes/no question has no question word — it starts with the verb. And a negative question has three possible answers, not two.
+    intro: >-
+      A yes/no question has no question word: the verb simply moves to the
+      front. That makes German questions shorter than English ones, because
+      there is no 'do' to add — Lernst du Deutsch? is three words against five.
+      The second thing to learn here is doch. When a question is asked in the
+      negative and your answer is positive, ja will not do: German has a
+      separate word for exactly this, and English has nothing to translate it
+      with.
     items:
       - form: The verb comes first
         example: "Lernst du Deutsch? Ist das richtig? Habt ihr eine Frage?"
@@ -42,15 +85,29 @@ spotlights:
             - ["Das ist richtig.", "Ist das richtig?"]
             - ["Ihr habt eine Frage.", "Habt ihr eine Frage?"]
             - ["Sie mag Musik.", "Mag sie Musik?"]
+            - ["Er hat keine Zeit.", "Hat er keine Zeit?"]
+      - form: "No 'do' in a German question"
+        example: "Verstehst du das? Trinkst du Kaffee? Wohnt sie in Berlin?"
+        note: German moves the verb itself to the front. Nothing is added, nothing is borrowed from another verb.
+        table:
+          headers: ["English", "Deutsch"]
+          rows:
+            - ["Do you understand?", "Verstehst du?"]
+            - ["Does she live here?", "Wohnt sie hier?"]
+            - ["Don't you understand?", "Verstehst du das nicht?"]
       - form: "ja · nein · doch"
         example: "Ist das richtig? — Ja, das ist richtig. Ist das nicht richtig? — Doch, das ist richtig."
-        note: doch is the yes that answers a negative question. English has no word for it.
+        note: doch is the yes that answers a negative question. English has no word for it and has to say 'yes, it is'.
         table:
           headers: ["Frage", "positiv", "negativ"]
           rows:
             - ["Ist das richtig?", "Ja.", "Nein."]
             - ["Ist das nicht richtig?", "Doch.", "Nein."]
             - ["Hast du keine Frage?", "Doch.", "Nein."]
+            - ["Kommst du nicht?", "Doch.", "Nein."]
+      - form: "Asking in the negative"
+        example: "Kommst du nicht? Hast du kein Handy? Verstehst du das nicht?"
+        note: The same nicht/kein choice applies inside a question. Expect doch back if the answer is positive.
 
 watchouts:
   - title: nicht in front of a noun
@@ -69,6 +126,14 @@ watchouts:
     bad: Das ist keine idee.
     good: Das ist keine Idee.
     note: Every German noun starts with a capital letter, also after kein.
+  - title: kein never stands before mein
+    bad: Das ist kein mein Buch.
+    good: Das ist nicht mein Buch.
+    note: A noun that already has mein or der takes nicht — kein replaces ein, nothing else.
+  - title: No 'do' in a question
+    bad: Tust du Deutsch lernen?
+    good: Lernst du Deutsch?
+    note: German has no helper verb in questions. The finite verb itself moves to position one.
 
 cloze_cards:
   - text: "Das ist ein Stift. Das ist {{c1::kein}} Buch."

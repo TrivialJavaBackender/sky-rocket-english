@@ -1,16 +1,26 @@
-# Modul 01 · Mein Wochenende — Grammatik im Fokus, Watch out! und Lückenkarten.
-# 7 Punkte — genau die Grammatik-Liste der Modulkarte (courses/de-a2/PLAN.md §4).
-# Die Obergrenze des Profils (§6) wäre 2 Spotlights × 4 Punkte.
-#
-# Fachwörter: alle aus dem Grammatik-Wörterbuch der Diagnostik, dazu „das
-# Perfekt“ — der Begriff nennt die Konstruktion, die dieses Modul einführt, und
-# steht deshalb hier (PLAN.md §5.2).
+# Modul 01 · Mein Wochenende — theory. Two spotlights, 11 items realising the
+# seven grammar points of the module card (courses/de-a2/PLAN.md §4).
+# Scaffolding rule (§5, revised 2026-07): title, intro, form and note in English,
+# every example and table in German. Grammar terms are named in English directly —
+# the German Grammatik-Wörterbuch is no longer the source of metalanguage.
+# The participle classes, the haben/sein split and the two exception groups
+# (-ieren verbs, inseparable prefixes) come from courses/_reference/basic-german/
+# unit 21.
 spotlights:
-  - title: "Das Partizip"
-    intro: "Für die Vergangenheit braucht man das Partizip. Es gibt drei Gruppen — die Endung zeigt, welche."
+  - title: The past participle
+    intro: >-
+      German tells a story about yesterday with the perfect tense, and the
+      perfect tense needs a past participle. Building one is mechanical once you
+      know which of three groups a verb belongs to: regular verbs wrap the stem
+      in ge- … -t, irregular verbs wrap it in ge- … -en and often change the
+      vowel, and separable verbs put the ge- inside the word. Two small groups
+      take no ge- at all. Learn every new verb together with its participle, the
+      way you learned nouns with their article — there is no rule that predicts
+      which group a verb falls into.
     items:
-      - form: "Regelmäßige Verben: ge- + Stamm + -t"
-        note: "Der Stamm bleibt gleich. Das ist die größte Gruppe."
+      - form: "Regular verbs: ge- + stem + -t"
+        example: "Ich habe gekocht. Wir haben Fußball gespielt. Sie hat viel gearbeitet."
+        note: The stem does not change. This is by far the largest group.
         table:
           headers: ["Infinitiv", "Stamm", "Partizip"]
           rows:
@@ -18,8 +28,10 @@ spotlights:
             - ["kochen", "koch-", "gekocht"]
             - ["spielen", "spiel-", "gespielt"]
             - ["wandern", "wander-", "gewandert"]
-      - form: "Unregelmäßige Verben: ge- + Stamm + -en"
-        note: "Oft ändert sich auch der Vokal. Diese Formen lernt man auswendig."
+            - ["arbeiten", "arbeit-", "gearbeitet"]
+      - form: "Irregular verbs: ge- + stem + -en"
+        example: "Ich habe zu viel gegessen. Wir sind nach Wien gefahren. Es ist schön gewesen."
+        note: The vowel often changes as well, so these have to be learned by heart. Your deck carries the participle with the verb.
         table:
           headers: ["Infinitiv", "Partizip"]
           rows:
@@ -29,8 +41,9 @@ spotlights:
             - ["gehen", "gegangen"]
             - ["kommen", "gekommen"]
             - ["sein", "gewesen"]
-      - form: "Trennbare Verben: ge- steht in der Mitte"
-        note: "Vorsilbe + ge- + Stamm + Endung. Alles bleibt ein Wort."
+      - form: "Separable verbs: ge- goes in the middle"
+        example: "Ich habe die Wohnung aufgeräumt. Wir haben eingekauft. Nina hat Freunde eingeladen."
+        note: "Prefix + ge- + stem + ending, written as one word. The prefix that separates in the present tense stays put here."
         table:
           headers: ["Infinitiv", "Vorsilbe", "Partizip"]
           rows:
@@ -39,12 +52,41 @@ spotlights:
             - ["einladen", "ein-", "eingeladen"]
             - ["mitbringen", "mit-", "mitgebracht"]
             - ["fernsehen", "fern-", "ferngesehen"]
+      - form: "Two groups take no ge- at all"
+        example: "Ich habe mit Anna telefoniert. Wir haben das Museum besucht. Er hat das nicht verstanden."
+        note: "Verbs in -ieren and verbs with an unstressed prefix (be-, er-, ver-, ge-) drop the ge-. Everything else is normal."
+        table:
+          headers: ["Gruppe", "Infinitiv", "Partizip"]
+          rows:
+            - ["-ieren", "telefonieren", "telefoniert"]
+            - ["-ieren", "fotografieren", "fotografiert"]
+            - ["be-", "besuchen", "besucht"]
+            - ["ver-", "verstehen", "verstanden"]
+            - ["er-", "erzählen", "erzählt"]
+      - form: "How to spot the group from the infinitive"
+        example: "Ich habe gespielt. Ich habe eingekauft. Ich habe studiert."
+        note: Three questions in order decide the shape, and they never conflict.
+        table:
+          headers: ["Frage", "Ja →", "Beispiel"]
+          rows:
+            - ["Endet auf -ieren?", "kein ge-", "studieren → studiert"]
+            - ["Vorsilbe be-, er-, ver-, ge-?", "kein ge-", "besuchen → besucht"]
+            - ["Trennbare Vorsilbe?", "ge- in der Mitte", "einkaufen → eingekauft"]
+            - ["Sonst", "ge- vorn", "spielen → gespielt"]
 
-  - title: "Das Perfekt im Satz"
-    intro: "Das Perfekt hat zwei Teile: haben oder sein und das Partizip. So erzählt man von gestern."
+  - title: The perfect tense in the sentence
+    intro: >-
+      The perfect tense has two parts, and they sit at opposite ends of the
+      sentence: haben or sein takes position two and carries the person ending,
+      the participle waits at the very end and never changes. Between them goes
+      everything else. The one real decision is haben or sein, and it is not
+      random — sein goes with movement from A to B and with a small group of
+      verbs of change, haben with everything else. Around eighty per cent of
+      verbs take haben, so when in doubt, haben is the better guess.
     items:
-      - form: "Das Perfekt mit haben"
-        note: "Die meisten Verben nehmen haben."
+      - form: "The perfect with haben"
+        example: "Ich habe gekocht. Hast du ferngesehen? Wir haben viel gelacht."
+        note: Most verbs take haben. Anything with a direct object always does.
         table:
           headers: ["", "haben", "Partizip"]
           rows:
@@ -54,8 +96,9 @@ spotlights:
             - ["wir", "haben", "gekocht"]
             - ["ihr", "habt", "gekocht"]
             - ["sie / Sie", "haben", "gekocht"]
-      - form: "Das Perfekt mit sein"
-        note: "Bewegung von A nach B und die Verben bleiben, sein, werden."
+      - form: "The perfect with sein"
+        example: "Ich bin nach Berlin gefahren. Wir sind zu Hause geblieben. Es ist spät geworden."
+        note: "sein marks movement from A to B, plus the three verbs bleiben, sein and werden — which do not move at all."
         table:
           headers: ["", "sein", "Partizip"]
           rows:
@@ -65,8 +108,19 @@ spotlights:
             - ["wir", "sind", "gefahren"]
             - ["ihr", "seid", "gefahren"]
             - ["sie / Sie", "sind", "gefahren"]
-      - form: "Die Stellung: Position 2 und am Ende"
-        note: "haben oder sein steht auf Position 2. Das Partizip steht ganz am Ende."
+      - form: "Which verbs take sein"
+        example: "Ich bin gegangen. Ich bin gekommen. Ich bin geblieben."
+        note: The list is short enough to learn whole. Everything not on it takes haben.
+        table:
+          headers: ["Gruppe", "Verben", "Beispiel"]
+          rows:
+            - ["Bewegung A → B", "gehen · kommen · fahren · fliegen", "Wir sind geflogen."]
+            - ["Bewegung A → B", "laufen · wandern · reisen", "Ich bin gewandert."]
+            - ["Veränderung", "aufstehen · einschlafen · aufwachen", "Ich bin früh aufgestanden."]
+            - ["drei Sonderfälle", "sein · bleiben · werden", "Es ist schön gewesen."]
+      - form: "Word order: position 2 and the very end"
+        example: "Ich habe am Samstag Fußball gespielt. Am Samstag habe ich Fußball gespielt."
+        note: haben or sein stands second, the participle last. Everything else lives in between.
         table:
           headers: ["Position 1", "haben / sein", "Mitte", "Ende"]
           rows:
@@ -74,8 +128,10 @@ spotlights:
             - ["Am Samstag", "habe", "ich Fußball", "gespielt."]
             - ["Wir", "sind", "um zehn nach Hause", "gekommen."]
             - ["Was", "hast", "du am Wochenende", "gemacht?"]
-      - form: "Die Zeitangaben"
-        note: "Sie stehen am Anfang oder in der Mitte — nie am Ende."
+            - ["Ich", "habe", "gestern nicht", "gearbeitet."]
+      - form: "Time expressions for the past"
+        example: "Gestern habe ich gearbeitet. Letzte Woche hat sie gefeiert. Am Samstag bin ich zu Hause geblieben."
+        note: They stand at the front or in the middle — never at the end, because the end belongs to the participle.
         table:
           headers: ["Zeitangabe", "Beispiel"]
           rows:
@@ -83,47 +139,57 @@ spotlights:
             - ["vorgestern", "Vorgestern sind wir gewandert."]
             - ["letzte Woche", "Letzte Woche hat sie gefeiert."]
             - ["am Samstag", "Am Samstag bin ich zu Hause geblieben."]
+            - ["neulich", "Neulich habe ich Anna getroffen."]
+            - ["am Wochenende", "Am Wochenende haben wir gefeiert."]
 
 watchouts:
-  - title: "Bewegung nimmt sein"
+  - title: Movement takes sein
     bad: Ich habe nach Berlin gefahren.
     good: Ich bin nach Berlin gefahren.
-    note: "Bewegung von A nach B: fahren, gehen, kommen, fliegen — immer mit sein."
-  - title: "Ohne Bewegung steht haben"
+    note: "Movement from A to B — fahren, gehen, kommen, fliegen — always takes sein."
+  - title: Without movement it is haben
     bad: Ich bin Fußball gespielt.
     good: Ich habe Fußball gespielt.
-    note: "spielen, kochen, arbeiten, lernen — alle mit haben."
-  - title: "Verben auf -ieren ohne ge-"
+    note: "spielen, kochen, arbeiten, lernen — all of them take haben."
+  - title: Verbs in -ieren have no ge-
     bad: Ich habe mit Anna getelefoniert.
     good: Ich habe mit Anna telefoniert.
-    note: "telefonieren, studieren, fotografieren — das Partizip endet auf -t, ohne ge-."
-  - title: "Das Partizip steht am Ende"
+    note: "telefonieren, studieren, fotografieren — the participle ends in -t with no ge-."
+  - title: The participle goes at the end
     bad: Wir haben gemacht einen Ausflug.
     good: Wir haben einen Ausflug gemacht.
-    note: "Zwischen haben und Partizip steht der Rest vom Satz."
+    note: The rest of the sentence stands between haben and the participle.
+  - title: besuchen keeps no ge- either
+    bad: Wir haben meine Oma gebesucht.
+    good: Wir haben meine Oma besucht.
+    note: "An unstressed prefix — be-, er-, ver-, ge- — blocks the ge-: besucht, erzählt, verstanden."
+  - title: A separable verb keeps its ge- inside
+    bad: Ich habe die Wohnung geaufräumt.
+    good: Ich habe die Wohnung aufgeräumt.
+    note: "The ge- sits between the prefix and the stem: auf-ge-räumt, ein-ge-kauft."
 
 cloze_cards:
   - text: "Am Samstag {{c1::habe}} ich bis zehn Uhr geschlafen."
     hint: haben
-    rule: "schlafen bildet das Perfekt mit haben. ich + haben = habe."
+    rule: "schlafen forms the perfect with haben. ich + haben = habe."
   - text: "Meine Schwester {{c1::ist}} am Sonntag zu mir gekommen."
     hint: sein
-    rule: "kommen ist Bewegung von A nach B, also Perfekt mit sein. sie + sein = ist."
+    rule: "kommen is movement from A to B, so the perfect takes sein. sie + sein = ist."
   - text: "Wir haben zusammen einen Kuchen {{c1::gebacken}}."
     hint: backen
-    rule: "backen ist unregelmäßig: ge- + Stamm + -en."
+    rule: "backen is irregular: ge- + stem + -en."
   - text: "Ich habe am Freitag meine Wohnung {{c1::aufgeräumt}}."
     hint: aufräumen
-    rule: "Trennbares Verb: das ge- steht in der Mitte — auf-ge-räumt."
+    rule: "Separable verb: the ge- goes in the middle — auf-ge-räumt."
   - text: "{{c1::Seid}} ihr gestern spazieren gegangen?"
     hint: sein
-    rule: "gehen bildet das Perfekt mit sein. ihr + sein = seid."
+    rule: "gehen forms the perfect with sein. ihr + sein = seid."
   - text: "Nina hat zehn Freunde zur Party {{c1::eingeladen}}."
     hint: einladen
-    rule: "ein-ge-laden: das ge- steht zwischen Vorsilbe und Stamm."
+    rule: "ein-ge-laden: the ge- sits between the prefix and the stem."
   - text: "Wir sind drei Stunden am See {{c1::gewandert}}."
     hint: wandern
-    rule: "wandern ist regelmäßig: ge- + Stamm + -t. Es ist Bewegung, also mit sein."
+    rule: "wandern is regular: ge- + stem + -t. It is movement, so it takes sein."
   - text: "Was {{c1::hast}} du am Wochenende gemacht?"
     hint: haben
-    rule: "machen nimmt haben. du + haben = hast. Das Partizip steht am Ende."
+    rule: "machen takes haben. du + haben = hast, and the participle stands at the end."

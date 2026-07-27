@@ -1,23 +1,23 @@
 slug: a01
 title: Ich und du
-standfirst: Präsens, sein und haben, Fragen · 30 Wörter · sich und andere vorstellen.
+standfirst: The present tense, sein and haben, questions · 30 words · introduce yourself and others.
 goals:
-  - text: Verben im Präsens richtig konjugieren — auch sein und haben
+  - text: Conjugate any verb in the present tense, including sein and haben
     achieved_by: workout
-  - text: Fragen mit und ohne Fragewort stellen und beantworten
+  - text: Ask and answer questions with and without a question word
     achieved_by: workout
-  - text: 30 Wörter zu Person, Herkunft und Beruf sicher benutzen
+  - text: Use 30 words about yourself, your origin and your job
     achieved_by: input
-  - text: Sich in einem kurzen Text vorstellen und ein Formular ausfüllen
+  - text: Introduce yourself in a short text and fill in a form
     achieved_by: output
 grammar_points:
-  - Regelmäßige Verben im Präsens
-  - Die Personalpronomen
-  - sein
-  - haben
-  - Die W-Frage
-  - Die Ja/Nein-Frage
-  - Die Fragewörter
+  - Regular verbs in the present tense
+  - Personal pronouns
+  - The verb sein
+  - The verb haben
+  - W-questions
+  - Yes/no questions
+  - The question words
 production:
   mode: writing
-  genre: Steckbrief und Anmeldeformular
+  genre: a personal profile and a registration form

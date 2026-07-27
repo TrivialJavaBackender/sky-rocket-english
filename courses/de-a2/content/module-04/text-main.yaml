@@ -3,9 +3,9 @@
 # Erzählt wird im Perfekt (Modul 01) — kein Präteritum, auch nicht war und
 # hatte: das gehört Modul 05. Deshalb steht hier ist … gewesen und hat … gehabt.
 kind: main
-kicker: LESETEXT
+kicker: READING
 title: Ein Geschenk für Oma
-meta: ≈ 3 Min · Wörter mit Punkten haben eine Erklärung — tippen Sie darauf
+meta: ≈ 3 min · dotted words carry glosses — tap to reveal
 body:
   - - t: "Am Samstag hat unsere Oma Geburtstag — sie wird achtzig. Seit drei Wochen suchen mein Bruder Jonas und ich ein Geschenk für sie. Blumen bekommt sie von allen, und letztes Jahr haben wir ihr ein Buch geschenkt. Ein Gutschein ist praktisch, aber nicht "
     - g: persönlich
@@ -24,21 +24,21 @@ body:
 glosses:
   - key: persönlich
     term: persönlich
-    pos_label: Adjektiv
-    definition: Nur für diese eine Person gemacht. Nicht für alle gleich.
+    pos_label: adjective
+    definition: personal — made for this one person, not the same for everyone
     example: Ein Gutschein ist praktisch, aber nicht persönlich.
   - key: Ausgerechnet
     term: Ausgerechnet
-    pos_label: Adverb
-    definition: Genau diese Person oder genau dieser Tag — und das passt gar nicht.
+    pos_label: adverb
+    definition: of all people, of all days — and it could not suit worse
     example: Ausgerechnet am Geburtstag hat es geregnet.
   - key: Gefallen
     term: Gefallen
-    pos_label: Nomen
-    definition: Eine kleine Hilfe für eine Person. Man macht sie gern und ohne Geld.
+    pos_label: noun
+    definition: a favour — a small kindness, done gladly and for free
     example: Kannst du mir einen Gefallen tun?
   - key: gegenseitig
     term: gegenseitig
-    pos_label: Adjektiv
-    definition: Einer macht es für den anderen, und der andere macht es auch.
+    pos_label: adjective
+    definition: mutual — each one does it for the other
     example: Im Kurs helfen wir uns gegenseitig.

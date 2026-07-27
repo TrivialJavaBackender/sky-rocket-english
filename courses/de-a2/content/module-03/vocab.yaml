@@ -5,7 +5,7 @@
 entries:
   - term: die Wohnung
     tag: Nomen
-    definition: Mehrere Zimmer in einem Haus. Dort lebt eine Person oder eine Familie.
+    definition: a flat, an apartment — several rooms where a person or family lives
     use_cases:
       - Unsere Wohnung hat drei Zimmer und einen Balkon.
       - Wir haben endlich eine Wohnung gefunden.
@@ -14,7 +14,7 @@ entries:
 
   - term: das Zimmer
     tag: Nomen
-    definition: Ein Raum in einer Wohnung. Küche, Bad und Schlafzimmer sind Zimmer.
+    definition: a room; kitchen, bathroom and bedroom are all Zimmer
     use_cases:
       - Mein Zimmer ist klein, aber hell.
       - Wie viele Zimmer hat die Wohnung?
@@ -23,7 +23,7 @@ entries:
 
   - term: der Schrank
     tag: Nomen
-    definition: Ein großes Möbelstück mit Türen. Darin liegen Kleider oder Teller.
+    definition: a wardrobe or cupboard — a large piece of furniture with doors
     use_cases:
       - Der Schrank steht neben dem Fenster.
       - Häng die Jacke bitte in den Schrank!
@@ -32,7 +32,7 @@ entries:
 
   - term: das Regal
     tag: Nomen
-    definition: Ein Möbelstück mit Brettern. Darauf stehen Bücher oder Gläser.
+    definition: a shelf unit, a bookcase — furniture made of boards
     use_cases:
       - Im Regal stehen über hundert Bücher.
       - Wir haben ein neues Regal an die Wand gehängt.
@@ -41,7 +41,7 @@ entries:
 
   - term: die Wand
     tag: Nomen
-    definition: Die Seite von einem Zimmer. Daran hängen Bilder.
+    definition: a wall of a room; pictures hang on it
     use_cases:
       - An der Wand hängt ein großes Foto.
       - Die Wand ist weiß.
@@ -50,7 +50,7 @@ entries:
 
   - term: der Teppich
     tag: Nomen
-    definition: Ein weiches Stück Stoff. Es liegt auf dem Boden.
+    definition: a rug, a carpet — a soft piece of fabric lying on the floor
     use_cases:
       - Der Teppich liegt zwischen dem Sofa und dem Tisch.
       - Wir haben einen neuen Teppich gekauft.
@@ -59,7 +59,7 @@ entries:
 
   - term: die Möbel
     tag: Nomen
-    definition: Schrank, Tisch, Bett und Sessel zusammen. Damit richtet man ein Zimmer ein.
+    definition: furniture — cupboard, table, bed and armchair together
     use_cases:
       - Die Möbel sind alt, aber sehr schön.
       - Wir haben die Möbel im Internet bestellt.
@@ -68,7 +68,7 @@ entries:
 
   - term: der Sessel
     tag: Nomen
-    definition: Ein weicher Stuhl mit Armlehnen. Darin sitzt man bequem.
+    definition: an armchair — a soft chair with arms, comfortable to sit in
     use_cases:
       - Der Sessel steht in der Ecke am Fenster.
       - Stell den Sessel bitte neben das Regal!
@@ -77,7 +77,7 @@ entries:
 
   - term: die Lampe
     tag: Nomen
-    definition: Damit wird es hell im Zimmer.
+    definition: a lamp — what makes the room bright
     use_cases:
       - Die Lampe steht auf dem Schreibtisch.
       - Häng die Lampe bitte über den Tisch!
@@ -86,7 +86,7 @@ entries:
 
   - term: der Boden
     tag: Nomen
-    definition: Die Fläche unten im Zimmer. Darauf steht man und geht man.
+    definition: the floor — the surface you stand and walk on
     use_cases:
       - Auf dem Boden liegt ein alter Teppich.
       - Das Buch ist auf den Boden gefallen.
@@ -95,7 +95,7 @@ entries:
 
   - term: die Ecke
     tag: Nomen
-    definition: Der Ort, wo zwei Wände zusammenkommen.
+    definition: a corner, where two walls meet
     use_cases:
       - In der Ecke steht eine große Pflanze.
       - Stell den Sessel in die Ecke!
@@ -104,7 +104,7 @@ entries:
 
   - term: das Schlafzimmer
     tag: Nomen
-    definition: Das Zimmer mit dem Bett. Dort schläft man.
+    definition: the bedroom, the room with the bed
     use_cases:
       - Unser Schlafzimmer ist das kleinste Zimmer.
       - Im Schlafzimmer steht nur ein Bett und ein Schrank.
@@ -113,7 +113,7 @@ entries:
 
   - term: einrichten
     tag: Verb
-    definition: Möbel in ein leeres Zimmer stellen, bis man dort leben kann.
+    definition: to furnish — to put furniture into an empty flat until you can live there
     use_cases:
       - Wir richten gerade unsere neue Wohnung ein.
       - Das Zimmer ist modern eingerichtet.
@@ -122,7 +122,7 @@ entries:
 
   - term: umziehen
     tag: Verb
-    definition: Aus einer Wohnung in eine andere Wohnung wechseln.
+    definition: to move house — to change from one flat to another
     use_cases:
       - Im Sommer ziehen wir nach Hamburg um.
       - Sie ist letzte Woche in eine größere Wohnung umgezogen.
@@ -131,7 +131,7 @@ entries:
 
   - term: stellen
     tag: Verb
-    definition: Etwas an einen Ort bringen, sodass es danach steht.
+    definition: to put, to stand something somewhere (upright)
     use_cases:
       - Ich stelle die Lampe auf den Schreibtisch.
       - Stell die Gläser bitte ins Regal!
@@ -140,7 +140,7 @@ entries:
 
   - term: legen
     tag: Verb
-    definition: Etwas an einen Ort bringen, sodass es danach flach liegt.
+    definition: to lay, to put something down flat
     use_cases:
       - Ich lege das Buch auf den Tisch.
       - Leg den Teppich bitte vor das Sofa!
@@ -149,7 +149,7 @@ entries:
 
   - term: hängen
     tag: Verb
-    definition: Etwas oben festmachen, zum Beispiel ein Bild an einer Wand.
+    definition: to hang something up, e.g. a picture on a wall
     use_cases:
       - Ich hänge das Foto an die Wand.
       - Das Foto hängt schon lange an der Wand.
@@ -158,7 +158,7 @@ entries:
 
   - term: stehen
     tag: Verb
-    definition: An einem Ort sein, aufrecht und nicht flach.
+    definition: to stand — to be somewhere, upright rather than flat
     use_cases:
       - Der Schrank steht neben der Tür.
       - Auf dem Tisch stehen zwei Gläser.
@@ -167,7 +167,7 @@ entries:
 
   - term: liegen
     tag: Verb
-    definition: An einem Ort sein, flach und nicht aufrecht.
+    definition: to lie — to be somewhere, flat rather than upright
     use_cases:
       - Das Buch liegt auf dem Boden.
       - Der Teppich liegt unter dem Tisch.
@@ -176,7 +176,7 @@ entries:
 
   - term: suchen
     tag: Verb
-    definition: Etwas finden wollen, das man gerade nicht sieht.
+    definition: to look for something you cannot see at the moment
     use_cases:
       - Wir suchen seit drei Monaten eine Wohnung.
       - Ich suche meine Schlüssel — hast du sie gesehen?
@@ -185,7 +185,7 @@ entries:
 
   - term: finden
     tag: Verb
-    definition: Etwas sehen, das man gesucht hat.
+    definition: to find — to see what you were looking for
     use_cases:
       - Endlich haben wir eine bezahlbare Wohnung gefunden.
       - Ich finde meine Brille nicht.
@@ -194,7 +194,7 @@ entries:
 
   - term: passen
     tag: Verb
-    definition: Die richtige Größe oder Farbe haben. Es steht gut zusammen.
+    definition: to fit, to go well — to be the right size or colour
     use_cases:
       - Der Schrank passt nicht in die Ecke — er ist zu breit.
       - Der neue Teppich passt gut zu den Möbeln.
@@ -203,7 +203,7 @@ entries:
 
   - term: praktisch
     tag: Adjektiv
-    definition: Man kann es gut benutzen. Es hilft im Alltag.
+    definition: practical, useful — easy to use in everyday life
     use_cases:
       - Das Regal ist klein, aber sehr praktisch.
       - Eine Küche mit Fenster ist praktisch.
@@ -212,7 +212,7 @@ entries:
 
   - term: hell
     tag: Adjektiv
-    definition: "Mit viel Licht. Gegenteil: dunkel."
+    definition: bright, light; opposite of dunkel
     use_cases:
       - Das Zimmer ist sehr hell, es hat zwei große Fenster.
       - Wir suchen eine helle Wohnung.
@@ -221,7 +221,7 @@ entries:
 
   - term: dunkel
     tag: Adjektiv
-    definition: "Mit wenig Licht. Gegenteil: hell."
+    definition: dark, with little light; opposite of hell
     use_cases:
       - Der Flur ist ziemlich dunkel.
       - Im Winter wird es früh dunkel.
@@ -230,7 +230,7 @@ entries:
 
   - term: eng
     tag: Adjektiv
-    definition: "Mit wenig Platz. Gegenteil: breit."
+    definition: narrow, cramped; opposite of breit
     use_cases:
       - Die Küche ist sehr eng, dort passen nur zwei Personen.
       - Der Flur ist lang und eng.
@@ -239,7 +239,7 @@ entries:
 
   - term: oben
     tag: Adverb
-    definition: "An einem hohen Ort. Gegenteil: unten."
+    definition: up, above; opposite of unten
     use_cases:
       - Die Gläser stehen oben im Schrank.
       - Wir wohnen oben, im vierten Stock.
@@ -248,7 +248,7 @@ entries:
 
   - term: unten
     tag: Adverb
-    definition: "An einem tiefen Ort. Gegenteil: oben."
+    definition: down, below; opposite of oben
     use_cases:
       - Die schweren Bücher liegen unten im Regal.
       - Unten im Haus ist eine Bäckerei.
@@ -257,7 +257,7 @@ entries:
 
   - term: daneben
     tag: Adverb
-    definition: Direkt neben dieser Sache.
+    definition: next to it, right beside it
     use_cases:
       - Links steht der Schrank, daneben das Regal.
       - Das Sofa ist neu, der Sessel daneben ist alt.
@@ -266,7 +266,7 @@ entries:
 
   - term: gegenüber
     tag: Adverb
-    definition: Auf der anderen Seite, genau vor dieser Sache.
+    definition: opposite, on the other side, directly facing it
     use_cases:
       - Der Schreibtisch steht gegenüber vom Fenster.
       - Gegenüber wohnt eine nette Familie.

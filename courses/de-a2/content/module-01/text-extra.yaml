@@ -1,7 +1,7 @@
 kind: extra
 kicker: POSTS
 title: Drei Posts vom Wochenende
-meta: ≈ 1 Min · drei kurze Beiträge aus einer Gruppe im Netz
+meta: ≈ 1 min · three short posts from an online group
 body:
   - - t: "TOM, Samstag 22:14"
   - - t: "Endlich Wochenende! Ich habe heute bis elf geschlafen, dann habe ich die ganze Wohnung aufgeräumt. Danach bin ich mit dem Rad an den Fluss gefahren und habe zwei Stunden in der Sonne gesessen. Kein Handy, kein Laptop. So "
@@ -16,11 +16,11 @@ body:
 glosses:
   - key: gemütlich
     term: gemütlich
-    pos_label: Adjektiv
-    definition: Ruhig und angenehm. Man fühlt sich wohl und hat keine Eile.
+    pos_label: adjective
+    definition: cosy, relaxed — calm and pleasant, with no hurry
     example: Wir hatten einen gemütlichen Abend zu Hause.
   - key: anstrengend
     term: anstrengend
-    pos_label: Adjektiv
-    definition: Man braucht viel Kraft. Danach ist man müde.
+    pos_label: adjective
+    definition: tiring, exhausting — it takes a lot out of you
     example: Der Tag im Garten war sehr anstrengend.

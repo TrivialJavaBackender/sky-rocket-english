@@ -1,26 +1,26 @@
-# Modul 07 · Wohnungssuche — Kopf des Moduls: Titel, Ziele, Grammatik.
-# standfirst wörtlich aus course.yaml. Die 6 grammar_points sind die
-# Grammatik-Liste der Modulkarte (PLAN.md §4), gruppiert als 2 Spotlights zu je
-# 3 Punkten (siehe theory.yaml).
+# Modul 07 · Wohnungssuche — module head: title, goals, grammar.
+# standfirst copied verbatim from course.yaml. The 6 grammar_points are the
+# grammar list on the module card (PLAN.md §4). Scaffolding is English
+# (PLAN.md §5); the module title stays German.
 slug: m07
 title: Wohnungssuche
-standfirst: Adjektive nach ein- und ohne Artikel · 30 Wörter · beim Vermieter nachfragen.
+standfirst: Adjective endings after ein- and with no article · 30 words · question a landlord.
 goals:
-- text: 30 Wörter zu Anzeige, Miete und Wohnlage verstehen und benutzen
+- text: Understand and use 30 words about ads, rent and location
   achieved_by: input
-- text: 'Das Adjektiv nach ein, kein, mein richtig beenden: ein schöner Balkon, einen hellen Raum'
+- text: 'End the adjective correctly after ein, kein, mein: ein schöner Balkon, einen hellen Raum'
   achieved_by: workout
-- text: 'Das Adjektiv ohne Artikel und im Dativ richtig beenden: helles Zimmer, in einem großen Haus'
+- text: 'End the adjective correctly with no article and in the dative: helles Zimmer, in einem großen Haus'
   achieved_by: workout
-- text: Eine E-Mail an den Vermieter mit vier Fragen schreiben
+- text: Write an email to a landlord with four questions
   achieved_by: output
 grammar_points:
-- Das Adjektiv nach ein, kein, mein im Nominativ (ein schöner Balkon, ein helles Zimmer, eine ruhige Straße)
-- Das Adjektiv nach ein, kein, mein im Akkusativ (einen hellen Raum, ein möbliertes Zimmer, eine ruhige Wohnung)
-- Das Adjektiv ohne Artikel im Nominativ und Akkusativ (helles Zimmer, ruhige Lage, niedrige Nebenkosten)
-- Das Adjektiv im Dativ nach dem und einem (in einem großen Haus, mit einem schönen Balkon)
-- Das Adjektiv im Dativ Plural (in ruhigen Straßen, mit hohen Nebenkosten)
-- 'Überblick: die Adjektiv-Endungen nach ein, kein, mein im Nominativ, Akkusativ und Dativ'
+- The adjective after ein, kein, mein in the nominative (ein schöner Balkon, ein helles Zimmer, eine ruhige Straße)
+- The adjective after ein, kein, mein in the accusative (einen hellen Raum, ein möbliertes Zimmer, eine ruhige Wohnung)
+- The adjective with no article, nominative and accusative (helles Zimmer, ruhige Lage, niedrige Nebenkosten)
+- The adjective in the dative after dem and einem (in einem großen Haus, mit einem schönen Balkon)
+- The adjective in the dative plural (in ruhigen Straßen, mit hohen Nebenkosten)
+- 'At a glance: adjective endings after ein, kein, mein in the nominative, accusative and dative'
 production:
   mode: writing
-  genre: E-Mail an den Vermieter mit Fragen
+  genre: an email to a landlord with questions

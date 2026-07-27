@@ -2,19 +2,19 @@
 # ohne word_target — content-schema.ts lässt es bei mode: speaking nicht zu.
 # Das Musterbeispiel hat 119 Wörter: gesprochen sind das rund anderthalb Minuten.
 mode: speaking
-genre: Der Weg von zu Hause zur Arbeit
+genre: your journey from home to work
 prompt: |
-  Ein Kollege aus einer anderen Stadt fragt Sie: „Wie kommst du eigentlich
-  jeden Morgen zur Arbeit?“ Beschreiben Sie Ihren Weg. Sprechen Sie
-  1–2 Minuten und nehmen Sie sich dabei auf.
+  A colleague from another city asks you: „Wie kommst du eigentlich jeden
+  Morgen zur Arbeit?“ Describe your journey, in German. Speak for
+  1–2 minutes and record yourself.
 
-  Sprechen Sie zu allen vier Punkten:
-  • Wie lange der Weg dauert und womit Sie fahren
-  • Wo Sie einsteigen, umsteigen und aussteigen
-  • Das Stück zu Fuß am Anfang oder am Ende — geradeaus, rechts, links
-  • Was am Morgen stört: der Verkehr, eine Verspätung oder eine volle Bahn
+  Cover all four points:
+  • how long the journey takes and what you travel by
+  • where you get on, change and get off
+  • the stretch on foot at the start or the end — geradeaus, rechts, links
+  • what makes the morning harder: traffic, a delay or a crowded train
 
-  Benutzen Sie mindestens sechs Präpositionen mit Dativ und zwei mit Akkusativ.
+  Use at least six prepositions with the dative and two with the accusative.
 model_answer: |
   Ich wohne im Zentrum, mein Büro ist weit draußen. Der Weg dauert ungefähr
   vierzig Minuten. Zuerst gehe ich fünf Minuten zu Fuß bis zur Haltestelle.
@@ -27,12 +27,12 @@ model_answer: |
   viel Verkehr fahre ich gern mit der Bahn. Nur mit Verspätung komme ich zu
   spät zur Arbeit.
 checklist:
-  - 1–2 Minuten frei sprechen, ohne Pause länger als fünf Sekunden
-  - Alle vier Punkte kommen vor
-  - Mindestens sechs Präpositionen mit Dativ (mit, bei, nach, von, zu, aus, seit)
-  - Mindestens zwei Präpositionen mit Akkusativ (für, gegen, ohne, um, durch, bis)
-  - Nach mit, bei, nach, von, zu, aus und seit steht der Dativ (mit dem Bus, zur Arbeit)
-  - Nach für, gegen, ohne, um, durch und bis steht der Akkusativ (durch den Park)
-  - "Die kurzen Formen kommen vor: zum, zur, beim, vom, im, am"
-  - nach vor Städten, zu vor Personen und Gebäuden (nach Wien, zum Arzt)
-  - Mindestens acht Wörter aus dem Modul kommen vor
+  - 1–2 minutes of free speech, no pause longer than five seconds
+  - All four points are covered
+  - At least six prepositions with the dative (mit, bei, nach, von, zu, aus, seit)
+  - At least two prepositions with the accusative (für, gegen, ohne, um, durch, bis)
+  - The dative follows mit, bei, nach, von, zu, aus, seit (mit dem Bus, zur Arbeit)
+  - The accusative follows für, gegen, ohne, um, durch, bis (durch den Park)
+  - "The contracted forms appear: zum, zur, beim, vom, im, am"
+  - nach before towns, zu before people and buildings (nach Wien, zum Arzt)
+  - At least eight words from the module appear

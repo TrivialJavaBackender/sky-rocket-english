@@ -1,28 +1,28 @@
 mode: writing
-genre: Steckbrief
+genre: a short personal profile
 word_target: [30, 40]
 prompt: |
-  Schreiben Sie einen kurzen Text über sich. 30–40 Wörter.
+  Write a short text about yourself, in German. 30–40 words.
 
-  Schreiben Sie etwas zu diesen Punkten:
-  • Name und Alter
-  • Land und Stadt
-  • Beruf oder Studium
-  • Sprachen
-  • ein Hobby
+  Cover these points:
+  • your name and age
+  • your country and town
+  • your job or your studies
+  • the languages you speak
+  • one hobby
 
-  Beispielanfang: „Ich heiße … und bin … Jahre alt.“
+  You can start like this: „Ich heiße … und bin … Jahre alt.“
 model_answer: |
   Ich heiße Marek Nowak und bin 32 Jahre alt. Ich komme aus Polen, aus Krakau.
   Jetzt wohne ich in Leipzig und arbeite als Koch in einem Restaurant.
   Ich spreche Polnisch, Englisch und ein bisschen Deutsch. In meiner Freizeit
   koche ich gern und fahre Fahrrad.
 checklist:
-  - 30–40 Wörter
-  - Name und Alter stehen im Text
-  - Land und Stadt stehen im Text
-  - Beruf oder Studium steht im Text
-  - Mindestens zwei Sprachen sind genannt
-  - Ein Hobby ist genannt
-  - Die Verben haben die richtige Endung (ich heiße, ich wohne, ich arbeite)
-  - Nomen beginnen mit einem großen Buchstaben
+  - 30–40 words
+  - Your name and age are there
+  - Your country and town are there
+  - Your job or your studies are there
+  - At least two languages are named
+  - One hobby is named
+  - Every verb carries the right ending (ich heiße, ich wohne, ich arbeite)
+  - Every noun starts with a capital letter

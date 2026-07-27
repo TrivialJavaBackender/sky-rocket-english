@@ -1,13 +1,24 @@
-# Module 09 · theory. Two spotlights, 6 items — three items for the separable
-# verb (sentence, question and inversion, modal frame) and three for the second
-# and third grammar points of the card (official time, Viertel nach / halb, time
-# adverbials with um and am). The word-formation extension of this module lives
-# in the first table: infinitive → sentence with the prefix at the end.
+# Module 09 · theory. Two spotlights, 9 items — five for the separable verb
+# (sentence, which prefixes separate, question and inversion, modal frame, two
+# clauses) and four for the second and third grammar points of the card (official
+# time, Viertel nach / halb, time adverbials with um and am, asking the time).
+# The word-formation extension of this module lives in the first table:
+# infinitive → sentence with the prefix at the end.
 # Scaffolding rule (§5): intro and note English, every example and table German.
 # Grammar terms are named in English directly (§5.1).
+# Prefix lists and the clause rule: courses/_reference/basic-german/ unit 05;
+# the clock and the time phrases: unit 26.
 spotlights:
   - title: Separable verbs — the prefix goes to the end
-    intro: "Many German verbs come in two parts, auf + stehen = aufstehen. In a sentence the verb splits: the first part takes the person ending, the small part travels to the very end. It is the same movement you know from the verb bracket of module 8."
+    intro: >-
+      Many German verbs come in two parts: auf + stehen = aufstehen. They work
+      much like English phrasal verbs ('to get up', 'to come along'), with one
+      big difference — in a German sentence the two parts come apart. The verb
+      itself stays in position two and takes the person ending; the little prefix
+      travels to the very end and closes the sentence. It is the same movement
+      you know from the verb bracket of module 8, and it explains why you often
+      have to wait until the last word of a German sentence to know what was
+      actually said.
     items:
       - form: "Infinitive → sentence: aufstehen → Ich stehe … auf"
         example: "Ich stehe um sieben Uhr auf. Die Arbeit fängt um neun Uhr an. Am Abend sehe ich fern. Wir kaufen am Samstag ein."
@@ -21,6 +32,17 @@ spotlights:
             - ["einkaufen", "Wir kaufen am Samstag ein."]
             - ["fernsehen", "Anna sieht am Abend fern."]
             - ["mitkommen", "Lena kommt am Sonntag mit."]
+      - form: "Which prefixes separate — and which never do"
+        example: "Ich rufe meine Mutter an. Ich bezahle die Rechnung. Ich verstehe die Frage nicht."
+        note: "A short prefix that is also a word of its own separates and carries the stress: AUFstehen. be-, er-, ge-, ver- are never words on their own, never stressed and never separate."
+        table:
+          headers: ["Trennbar", "Beispiel", "Untrennbar", "Beispiel"]
+          rows:
+            - ["auf-", "Ich stehe auf.", "be-", "Ich bezahle."]
+            - ["an-", "Ich rufe an.", "er-", "Ich erkläre es."]
+            - ["ein-", "Ich kaufe ein.", "ver-", "Ich verstehe."]
+            - ["mit-", "Ich komme mit.", "ge-", "Es gehört mir."]
+            - ["aus-, ab-, zu-", "Ich gehe aus.", "", ""]
       - form: "Questions, and a time phrase in front"
         example: "Wann stehst du auf? Stehst du früh auf? Am Montag stehe ich um sechs Uhr auf."
         note: The verb keeps its old place — second, or first in a yes/no question. The prefix still ends the sentence.
@@ -31,22 +53,40 @@ spotlights:
             - ["Zeit vorn", "Am Montag stehe ich früh auf."]
             - ["W-Frage", "Wann stehst du auf?"]
             - ["Ja/Nein-Frage", "Stehst du früh auf?"]
+            - ["negativ", "Ich stehe am Sonntag nicht früh auf."]
       - form: "A modal verb plus a separable verb"
         example: "Ich will am Wochenende spät aufstehen. Kannst du am Samstag mitkommen? Ich möchte um acht Uhr anfangen."
-        note: With a modal verb the two parts stay together at the end, as one infinitive.
+        note: With a modal verb the two parts stay together at the end, as one infinitive. The prefix has nowhere further to travel.
         table:
           headers: ["ohne Modalverb", "mit Modalverb"]
           rows:
             - ["Ich stehe früh auf.", "Ich will früh aufstehen."]
             - ["Wir kaufen am Samstag ein.", "Wir wollen am Samstag einkaufen."]
             - ["Kommst du mit?", "Kannst du mitkommen?"]
+            - ["Ich sehe am Abend fern.", "Ich möchte am Abend fernsehen."]
+      - form: "Two clauses, two prefixes"
+        example: "Ich stehe um sieben Uhr auf und dann frühstücke ich. Er sieht fern, aber ich kaufe ein."
+        note: The prefix ends its own clause, not the whole sentence. Each half of an und- or aber-sentence closes on its own.
+        table:
+          headers: ["Teil 1", "Teil 2"]
+          rows:
+            - ["Ich stehe auf", "und dann frühstücke ich."]
+            - ["Der Kurs fängt an,", "aber Lena kommt nicht mit."]
+            - ["Ich kaufe ein", "und dann koche ich."]
 
   - title: Wie spät ist es? — the clock and time phrases
-    intro: German tells the time in two ways. The official one says the full number, the everyday one uses Viertel and halb. Careful with halb — it looks forward to the next hour.
+    intro: >-
+      German tells the time in two ways and you need both. The official one
+      simply says the hour, the word Uhr and the minutes; it runs to 24 hours
+      and belongs to timetables, radio and appointments. The everyday one uses
+      Viertel, halb and vor/nach and stops at twelve. The trap for an English
+      speaker is halb: halb neun is not half past nine but half an hour before
+      nine, that is 8.30. German counts towards the coming hour, English counts
+      away from the one that has passed.
     items:
       - form: "Official time: 8.15 Uhr → acht Uhr fünfzehn"
         example: "Es ist acht Uhr. Es ist acht Uhr fünfzehn. Es ist acht Uhr dreißig. Es ist zwanzig Uhr."
-        note: Say the hour, then Uhr, then the minutes. This is the time of timetables and the radio.
+        note: Say the hour, then Uhr, then the minutes. This is the time of timetables and the radio, and it runs to 24.
         table:
           headers: ["Uhrzeit", "Offiziell"]
           rows:
@@ -54,20 +94,23 @@ spotlights:
             - ["8.15", "acht Uhr fünfzehn"]
             - ["8.30", "acht Uhr dreißig"]
             - ["8.45", "acht Uhr fünfundvierzig"]
+            - ["18.20", "achtzehn Uhr zwanzig"]
             - ["20.00", "zwanzig Uhr"]
-      - form: "Everyday time: Viertel nach, halb"
-        example: "Es ist Viertel nach acht. Es ist halb neun. Wie spät ist es? Es ist halb sieben."
-        note: "halb neun is 8.30, not 9.30: halb counts to the next hour."
+      - form: "Everyday time: Viertel nach, halb, Viertel vor"
+        example: "Es ist Viertel nach acht. Es ist halb neun. Es ist Viertel vor neun. Wie spät ist es?"
+        note: "halb neun is 8.30, not 9.30: halb counts to the next hour. nach adds minutes, vor takes them away."
         table:
           headers: ["Uhrzeit", "Alltag", "Offiziell"]
           rows:
             - ["8.00", "acht", "acht Uhr"]
+            - ["8.10", "zehn nach acht", "acht Uhr zehn"]
             - ["8.15", "Viertel nach acht", "acht Uhr fünfzehn"]
             - ["8.30", "halb neun", "acht Uhr dreißig"]
+            - ["8.45", "Viertel vor neun", "acht Uhr fünfundvierzig"]
             - ["7.30", "halb acht", "sieben Uhr dreißig"]
       - form: "Time phrases with um and am"
         example: "Ich stehe um sieben Uhr auf. Am Montag arbeite ich. Am Morgen trinke ich Kaffee. Am Wochenende sehe ich fern."
-        note: um for a clock time, am for a day or a part of the day. Learn them as whole phrases.
+        note: um for a clock time, am for a day or a part of the day. Learn them as whole phrases — there is nothing to work out.
         table:
           headers: ["Frage", "Antwort"]
           rows:
@@ -75,6 +118,18 @@ spotlights:
             - ["Wann? (Tag)", "am Montag · am Freitag"]
             - ["Wann? (Tageszeit)", "am Morgen · am Mittag · am Abend"]
             - ["Wann? (Samstag + Sonntag)", "am Wochenende"]
+            - ["Wie oft?", "jeden Tag · jeden Morgen"]
+            - ["Ausnahme", "in der Nacht"]
+      - form: "Asking about the time"
+        example: "Wie spät ist es? Um wie viel Uhr fängt der Kurs an? Wann stehst du auf?"
+        note: "Wie spät ist es? asks for the clock. Wann? asks for the moment and takes um, am or a day as an answer."
+        table:
+          headers: ["Frage", "Antwort"]
+          rows:
+            - ["Wie spät ist es?", "Es ist halb neun."]
+            - ["Wie viel Uhr ist es?", "Es ist acht Uhr dreißig."]
+            - ["Wann fängt der Kurs an?", "Um neun Uhr."]
+            - ["Wann arbeitest du?", "Am Montag und am Dienstag."]
 
 watchouts:
   - title: The prefix goes to the end
@@ -89,6 +144,14 @@ watchouts:
     bad: Ich arbeite in Montag.
     good: Ich arbeite am Montag.
     note: "Days and parts of the day take am: am Montag, am Morgen, am Abend."
+  - title: bezahlen and verstehen never split
+    bad: Ich zahle die Rechnung be.
+    good: Ich bezahle die Rechnung.
+    note: "be-, er-, ge- and ver- stay glued to the verb. Only a stressed prefix travels."
+  - title: With a modal the verb stays whole
+    bad: Ich will früh stehe auf.
+    good: Ich will früh aufstehen.
+    note: The modal takes the ending, so the separable verb keeps both parts together at the end.
 
 cloze_cards:
   - text: "Ich {{c1::stehe}} um sieben Uhr auf."

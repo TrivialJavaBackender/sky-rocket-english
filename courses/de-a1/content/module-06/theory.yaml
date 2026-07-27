@@ -1,14 +1,35 @@
-# Module 06 · theory. Two spotlights, 5 items — one item per grammar point of the
-# card (definite article in the accusative, indefinite article in the accusative,
-# personal pronouns in the accusative, the direct object with nehmen/essen/
-# trinken/haben) plus möchte + noun as a ready-made polite phrase. Scaffolding
-# rule (§5): intro and note English, every example and table German. Grammar
-# terms are named in English directly (§5.1) — there is no German grammar
-# glossary in this course.
+# Module 06 · theory. Two spotlights, 9 items realising the four grammar points of
+# the card (definite article in the accusative, indefinite article in the
+# accusative, personal pronouns in the accusative, the direct object with nehmen/
+# essen/trinken/haben) plus möchte + noun as a ready-made polite phrase.
+# Scaffolding rule (§5): intro and note English, every example and table German.
+# Grammar terms are named in English directly (§5.1) — there is no German grammar
+# glossary in this course. keinen stays out: it is module 7's point.
+# Case overview and the modifier table: courses/_reference/basic-german/ units 10
+# (the four cases), 12 (the accusative), 15 (pronouns).
 spotlights:
   - title: The accusative — der becomes den
-    intro: "The direct object of a sentence takes the accusative. Only one article really changes: der becomes den. das, die and the plural die stay the same."
+    intro: >-
+      This is the first case in the course, so it is worth saying what a case
+      is. A German noun changes its article according to the job it does in the
+      sentence. Doing the action makes it the subject and the article stays as
+      you learned it (der, die, das) — that form is called the nominative.
+      Receiving the action makes it the direct object, and then the article
+      switches to the accusative. The good news for a beginner: of the three
+      genders only the masculine actually changes. der becomes den and ein
+      becomes einen. Everything else looks exactly the same, so the whole of
+      this module rests on one letter pair.
     items:
+      - form: "Who does it, and who gets it"
+        example: "Der Mann trinkt den Kaffee. Der Kaffee ist lecker."
+        note: "Ask wer? to find the subject and wen? or was? to find the object. The same noun takes different articles in the two roles."
+        table:
+          headers: ["Frage", "Rolle", "Beispiel"]
+          rows:
+            - ["Wer trinkt?", "Subjekt (Nominativ)", "Der Mann trinkt."]
+            - ["Was trinkt er?", "Objekt (Akkusativ)", "Er trinkt den Kaffee."]
+            - ["Wer ist lecker?", "Subjekt", "Der Kaffee ist lecker."]
+            - ["Wen sieht er?", "Objekt", "Er sieht den Kellner."]
       - form: "der → den (definite article, accusative)"
         example: "Ich nehme den Kaffee. Ich esse den Kuchen. Ich trinke das Wasser. Ich esse die Suppe."
         note: "Only masculine der changes. das, die and plural die stay the same."
@@ -28,9 +49,19 @@ spotlights:
             - ["m", "ein Saft", "einen Saft"]
             - ["n", "ein Eis", "ein Eis"]
             - ["f", "eine Cola", "eine Cola"]
+      - form: "In the masculine, everything ends in -en"
+        example: "Ich nehme den Saft. Ich nehme einen Saft. Ich nehme meinen Saft."
+        note: One pattern covers every word in front of a masculine object. Learn the shape -en once and it works for all of them.
+        table:
+          headers: ["", "Nominativ", "Akkusativ"]
+          rows:
+            - ["der", "der Saft", "den Saft"]
+            - ["ein", "ein Saft", "einen Saft"]
+            - ["mein", "mein Saft", "meinen Saft"]
+            - ["dein", "dein Kuchen", "deinen Kuchen"]
       - form: "The verbs with a direct object: nehmen, essen, trinken, haben"
         example: "Ich nehme den Salat. Tom isst das Brot. Wir trinken einen Saft. Ich habe Hunger."
-        note: "These verbs take an object in the accusative. Hunger and Durst take no article."
+        note: "Most German verbs take their object in the accusative. Hunger and Durst take no article at all."
         table:
           headers: ["Verb", "Beispiel"]
           rows:
@@ -38,13 +69,21 @@ spotlights:
             - ["essen", "Du isst die Suppe."]
             - ["trinken", "Er trinkt einen Tee."]
             - ["haben", "Wir haben Hunger und Durst."]
+            - ["bestellen", "Wir bestellen einen Kaffee."]
+            - ["bezahlen", "Ich bezahle die Rechnung."]
 
   - title: Pronouns in the accusative and ordering with möchte
-    intro: A pronoun in the object slot also takes the accusative. er becomes ihn — sie and es do not change.
+    intro: >-
+      Once a thing has been named you stop repeating it and switch to a
+      pronoun — and a pronoun in the object slot takes the accusative just like
+      a noun. Here too the masculine is the one that moves: er becomes ihn,
+      while sie and es stay put. Remember that the pronoun copies the
+      grammatical gender, not the meaning: der Kaffee is ihn, die Suppe is sie,
+      even though English would call both of them 'it'.
     items:
       - form: "mich, dich, ihn, sie, es, uns, euch"
-        example: "Der Kaffee ist lecker. Ich trinke ihn oft. Die Suppe ist gut. Ich esse sie gern. Das Eis? Ich esse es immer. Der Kellner sieht uns nicht."
-        note: "Use ihn for a der-noun, sie for a die-noun, es for a das-noun."
+        example: "Der Kaffee ist lecker. Ich trinke ihn oft. Die Suppe ist gut. Ich esse sie gern. Das Eis? Ich esse es immer."
+        note: "Only three forms are new: mich, dich, ihn. uns and euch you already know from the nominative table."
         table:
           headers: ["Nominativ", "Akkusativ", "Beispiel"]
           rows:
@@ -55,15 +94,38 @@ spotlights:
             - ["es", "es", "Ich nehme es."]
             - ["wir", "uns", "Er sieht uns nicht."]
             - ["ihr", "euch", "Ich frage euch."]
+            - ["sie / Sie", "sie / Sie", "Ich verstehe Sie gut."]
+      - form: "The pronoun copies the article, not the meaning"
+        example: "Wo ist der Saft? — Ich trinke ihn gerade. Wo ist die Rechnung? — Ich bezahle sie."
+        note: English says 'it' for every object. German picks ihn, sie or es from the article the noun carries.
+        table:
+          headers: ["Nomen", "Pronomen (Akkusativ)", "Satz"]
+          rows:
+            - ["der Kaffee", "ihn", "Ich trinke ihn."]
+            - ["die Suppe", "sie", "Ich esse sie."]
+            - ["das Brot", "es", "Ich nehme es."]
+            - ["die Brötchen", "sie", "Ich esse sie gern."]
       - form: "möchte + noun (a polite way to order)"
         example: "Ich möchte einen Kaffee, bitte. Möchtest du ein Eis? Wir möchten die Rechnung, bitte."
-        note: "Learn möchte as a ready-made polite phrase. The modal verbs come in module 8."
+        note: "Learn möchte as a ready-made polite phrase. Note er möchte, with no -t. The modal verbs come in module 8."
         table:
           headers: ["Person", "Satz"]
           rows:
             - ["ich", "Ich möchte einen Tee."]
             - ["du", "Möchtest du einen Saft?"]
+            - ["er / sie", "Sie möchte ein Wasser."]
             - ["wir", "Wir möchten die Rechnung."]
+      - form: "Ordering and paying — the whole exchange"
+        example: "Ich nehme einen Kaffee, bitte. Und für mich einen Tee. Die Rechnung, bitte."
+        note: These are set phrases, not grammar. Learn them whole and you can run a whole café conversation on them.
+        table:
+          headers: ["Situation", "Satz"]
+          rows:
+            - ["bestellen", "Ich möchte einen Kaffee, bitte."]
+            - ["bestellen (kurz)", "Für mich einen Tee."]
+            - ["fragen", "Was möchten Sie?"]
+            - ["bezahlen", "Die Rechnung, bitte."]
+            - ["loben", "Der Kuchen ist sehr lecker."]
 
 watchouts:
   - title: ein Kaffee or einen Kaffee?
@@ -78,6 +140,14 @@ watchouts:
     bad: Ich trinke den Wasser.
     good: Ich trinke das Wasser.
     note: Only der becomes den. Do not put den in front of a das-noun or a die-noun.
+  - title: A der-noun becomes ihn, not es
+    bad: Der Kaffee ist gut. Ich trinke es gern.
+    good: Der Kaffee ist gut. Ich trinke ihn gern.
+    note: The pronoun follows the article — der → ihn, die → sie, das → es.
+  - title: er möchte, without -t
+    bad: Er möchtet einen Tee.
+    good: Er möchte einen Tee.
+    note: möchte behaves like a modal verb — ich möchte and er möchte are identical.
 
 cloze_cards:
   - text: "Ich nehme {{c1::den}} Kuchen, bitte."

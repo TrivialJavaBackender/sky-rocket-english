@@ -7,9 +7,9 @@
 # Vier Glossen stehen auf Wörtern in der Grundform: der Ärmel, die
 # Umkleidekabine, das Sonderangebot, die Quittung.
 kind: main
-kicker: LESETEXT
+kicker: READING
 title: Im Kaufhaus
-meta: ≈ 3 Min · die Wörter mit Punkten haben eine Erklärung — zum Antippen
+meta: ≈ 3 min · dotted words carry glosses — tap to reveal
 body:
   - - t: 'Am Samstag geht Lena mit ihrer Freundin Mara in ein großes Kaufhaus in der Stadt. Draußen ist es kalt, und ihr alter Mantel ist zu dünn. Lena sucht einen warmen Mantel für den Winter. Schon im Schaufenster sieht sie den blauen Mantel und die rote Jacke. „Schau mal", sagt Lena, „der blaue Mantel dort. Der gefällt mir sehr gut."'
   - - t: 'Im ersten Stock ist die Kleidung für Damen. Die Auswahl ist wirklich groß. Neben den Mänteln hängen die Kleider, die Röcke und die warmen Pullover. „So viele schöne Sachen!", sagt Mara. Lena nimmt den blauen Mantel und sucht ihre Größe. „Welche Größe hast du?", fragt Mara. „Achtunddreißig", sagt Lena und geht in die '
@@ -28,21 +28,21 @@ body:
 glosses:
   - key: Umkleidekabine
     term: Umkleidekabine
-    pos_label: Nomen
-    definition: Ein kleiner Raum im Geschäft. Dort probiert man Kleidung an.
+    pos_label: noun
+    definition: a fitting room — the cubicle where you try clothes on
     example: Die Umkleidekabine ist dort hinten, gleich neben den Blusen.
   - key: Ärmel
     term: Ärmel
-    pos_label: Nomen
-    definition: Der Teil vom Hemd oder Mantel für den Arm. Ein Hemd hat zwei Ärmel.
+    pos_label: noun
+    definition: a sleeve — the part of a shirt or coat for the arm
     example: Der Ärmel ist mir zu lang, ich brauche eine andere Größe.
   - key: Sonderangebot
     term: Sonderangebot
-    pos_label: Nomen
-    definition: Eine Ware ist für kurze Zeit billiger. So spart man Geld.
+    pos_label: noun
+    definition: a special offer — a product is cheaper for a short time
     example: Heute sind alle Schuhe im Sonderangebot und kosten die Hälfte.
   - key: Quittung
     term: Quittung
-    pos_label: Nomen
-    definition: "Ein kleines Papier vom Geschäft. Es zeigt: Man hat bezahlt."
+    pos_label: noun
+    definition: a receipt — the slip from the shop proving you paid
     example: Ohne die Quittung kann man die Ware nicht umtauschen.

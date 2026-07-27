@@ -1,26 +1,26 @@
-# Modul 06 · Kleidung und Einkaufen — Kopf des Moduls.
-# grammar_points: 6 Punkte, genau die Grammatik-Liste der Modulkarte (PLAN.md §4),
-# in der Theorie als 2 Spotlights × 3 gegliedert.
-# standfirst wörtlich aus course.yaml.
+# Modul 06 · Kleidung und Einkaufen — module head.
+# grammar_points: 6 points, exactly the grammar list on the module card (PLAN.md §4).
+# Scaffolding is English (PLAN.md §5); the module title stays German.
+# standfirst copied verbatim from course.yaml.
 slug: m06
 title: Kleidung und Einkaufen
-standfirst: "Adjektive nach dem bestimmten Artikel · 30 Wörter · ein Gespräch im Geschäft."
+standfirst: "Adjective endings after the definite article · 30 words · a conversation in a shop."
 goals:
-  - text: Kleidung, Größen und Farben benennen und im Geschäft danach fragen
+  - text: Name clothes, sizes and colours and ask for them in a shop
     achieved_by: input
-  - text: "Das Adjektiv vor dem Nomen richtig verändern: der neue Mantel, den neuen Mantel"
+  - text: "Give the adjective before a noun its right ending: der neue Mantel, den neuen Mantel"
     achieved_by: workout
-  - text: Mit dieser und jeder auf ein bestimmtes Kleidungsstück zeigen
+  - text: Point at a particular garment with dieser and jeder
     achieved_by: workout
-  - text: Ein Gespräch im Geschäft führen — fragen, anprobieren, kaufen und umtauschen
+  - text: Hold a conversation in a shop — ask, try on, buy and exchange
     achieved_by: output
 grammar_points:
-  - Das Adjektiv nach der, das, die im Nominativ (der neue Mantel, das rote Kleid, die neuen Schuhe)
-  - Das Adjektiv nach der, das, die im Akkusativ (Ich nehme den neuen Mantel — nur maskulin ändert sich)
-  - dieser und jeder (dieser Mantel, jede Jacke, jeden Tag)
-  - der, das, die als kurze Antwort („Welchen nimmst du?" — „Den da.")
-  - dieser oder jeder mit dem Adjektiv (Dieser gestreifte Pullover ist zu eng)
-  - Überblick über die Endungen nach der, das, die, den im Nominativ und Akkusativ
+  - The adjective after der, das, die in the nominative (der neue Mantel, das rote Kleid, die neuen Schuhe)
+  - The adjective after der, das, die in the accusative (only the masculine changes)
+  - dieser and jeder (dieser Mantel, jede Jacke, jeden Tag)
+  - der, das, die as a short answer („Welchen nimmst du?" — „Den da.")
+  - dieser or jeder together with an adjective (Dieser gestreifte Pullover ist zu eng)
+  - The endings after der, das, die, den at a glance — nominative and accusative
 production:
   mode: speaking
-  genre: Gespräch im Geschäft
+  genre: a conversation in a shop

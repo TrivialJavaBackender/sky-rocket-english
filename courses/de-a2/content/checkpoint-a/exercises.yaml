@@ -40,7 +40,7 @@ core:
       prompt: HABEN ODER SEIN
       options: [hat, ist, sind, war]
       answer: 1
-    explanation: "M01 · Das Perfekt mit sein — Rad fahren ist eine Bewegung von A nach B, deshalb steht das Perfekt mit sein: sie ist gefahren. Mit hat wäre der Satz falsch."
+    explanation: "M01 · The perfect with sein — Rad fahren is movement from A to B, so the perfect takes sein: sie ist gefahren. hat would be wrong here."
   - type: open_cloze
     group: grammar
     content:
@@ -48,7 +48,7 @@ core:
       post: " wir uns vor dem Kino getroffen und sind dann ins Konzert gegangen."
       answers: [haben]
       answer_shown: haben
-    explanation: "M01 · Das Perfekt mit haben — sich treffen nimmt haben: wir haben uns getroffen. Nur bei gehen steht im zweiten Satz sein."
+    explanation: "M01 · The perfect with haben — sich treffen takes haben: wir haben uns getroffen. Only gehen in the second clause takes sein."
   - type: word_formation
     group: vocab
     content:
@@ -57,7 +57,7 @@ core:
       prompt: mitbringen
       answers: [mitgebracht]
       answer_shown: mitgebracht
-    explanation: "M01 · Das Partizip der trennbaren Verben — Bei trennbaren Verben steht ge- in der Mitte: mit-ge-bracht. bringen ist unregelmäßig, deshalb gebracht und nicht gebringt."
+    explanation: "M01 · The participle of separable verbs — a separable verb carries ge- in the middle: mit-ge-bracht. bringen is irregular, hence gebracht and not gebringt."
   - type: key_word_transformation
     group: grammar
     content:
@@ -68,21 +68,21 @@ core:
       answers: [haben meine Freunde]
       hint: 3 Wörter
       answer_shown: haben meine Freunde
-    explanation: "M01 · Die Stellung im Satz — Nach der Zeitangabe am Anfang steht haben auf Position 2, danach kommt das Subjekt: Am Sonntag haben meine Freunde mich besucht. Das Partizip bleibt am Ende."
+    explanation: "M01 · Word order — after a time expression at the front, haben takes position 2 and the subject follows: Am Sonntag haben meine Freunde mich besucht. The participle stays at the end."
   - type: error_correction
     group: grammar
     content:
       words: [Wir, haben, am, Samstag, ins, Konzert, "gegangen."]
       wrong: 1
       correction: "haben → sind"
-    explanation: "M01 · Das Perfekt mit sein — gehen ist eine Bewegung von A nach B: Das Perfekt steht mit sein. Wir sind ins Konzert gegangen."
+    explanation: "M01 · The perfect with sein — gehen is movement from A to B, so the perfect takes sein: Wir sind ins Konzert gegangen."
   - type: collocation_match
     group: vocab
     content:
       left: [Sport, Kaffee, Geburtstag, Freunde]
       right: [einladen, treiben, feiern, kochen]
       pairs: { 0: 1, 1: 3, 2: 2, 3: 0 }
-    explanation: "M01 · Wortschatz: Freizeit und Wochenende — Diese Wörter stehen fest zusammen: Sport treiben, Kaffee kochen, Geburtstag feiern, Freunde einladen."
+    explanation: "M01 · Vocabulary: free time and the weekend — these words go together: Sport treiben, Kaffee kochen, Geburtstag feiern, Freunde einladen."
 
   # ══════════════ M02 · Unterwegs ══════════════
   - type: mc_cloze
@@ -92,7 +92,7 @@ core:
       post: " Konzert sind wir noch zu Fuß durch die Stadt gegangen."
       options: [den, die, dem, der]
       answer: 2
-    explanation: "M02 · Die Präpositionen mit Dativ — Nach nach steht immer der Dativ. das Konzert → nach dem Konzert."
+    explanation: "M02 · Prepositions with the dative — nach always takes the dative. das Konzert → nach dem Konzert."
   - type: open_cloze
     group: grammar
     content:
@@ -100,7 +100,7 @@ core:
       post: " Post gegangen und habe ein Paket abgeholt."
       answers: [zur]
       answer_shown: zur
-    explanation: "M02 · nach, zu oder in? — Vor einer Firma oder einem Gebäude steht zu + Dativ: zu der Post → zur Post. nach steht nur vor Städten und Ländern ohne Artikel."
+    explanation: "M02 · nach, zu or in? — a company or a building takes zu + dative: zu der Post → zur Post. nach is only for towns and countries with no article."
   - type: grammar_drill
     group: grammar
     content:
@@ -109,7 +109,7 @@ core:
       prompt: FÜR + KASUS
       options: [dem, der, das, den]
       answer: 3
-    explanation: "M02 · Die Präpositionen mit Akkusativ — Nach für steht immer der Akkusativ. der Weg → für den Weg. Nur der wird zu den."
+    explanation: "M02 · Prepositions with the accusative — für always takes the accusative. der Weg → für den Weg. Only der becomes den."
   - type: word_formation
     group: vocab
     content:
@@ -118,21 +118,21 @@ core:
       prompt: erklären
       answers: [Erklärung]
       answer_shown: Erklärung
-    explanation: "M02 · Wortbildung mit -ung — Mit -ung wird aus dem Verb ein Nomen, und der Artikel ist immer die: erklären → die Erklärung, verspäten → die Verspätung."
+    explanation: "M02 · Word formation with -ung — -ung turns a verb into a noun, and the article is always die: erklären → die Erklärung, verspäten → die Verspätung."
   - type: error_correction
     group: grammar
     content:
       words: [Wir, sind, gestern, mit, die, Straßenbahn, ins, Zentrum, "gefahren."]
       wrong: 4
       correction: "die → der"
-    explanation: "M02 · Die Präpositionen mit Dativ — mit nimmt immer den Dativ. die Straßenbahn → mit der Straßenbahn."
+    explanation: "M02 · Prepositions with the dative — mit always takes the dative. die Straßenbahn → mit der Straßenbahn."
   - type: collocation_match
     group: vocab
     content:
       left: [dauern, verpassen, abbiegen, erreichen]
       right: [nach rechts oder nach links fahren, den Zug noch schaffen, so viel Zeit brauchen, zu spät kommen und nicht mitfahren]
       pairs: { 0: 2, 1: 3, 2: 0, 3: 1 }
-    explanation: "M02 · Wortschatz: Verkehr und Weg — Die Fahrt dauert zwei Stunden. Ich habe den Zug verpasst. An der Ampel biegen wir rechts ab. So erreichen wir den Anschluss noch."
+    explanation: "M02 · Vocabulary: traffic and routes — Die Fahrt dauert zwei Stunden. Ich habe den Zug verpasst. An der Ampel biegen wir rechts ab. So erreichen wir den Anschluss noch."
 
   # ══════════════ M03 · Wohnen und Einrichten ══════════════
   - type: mc_cloze
@@ -142,7 +142,7 @@ core:
       post: " Haus gestellt."
       options: [das, dem, der, den]
       answer: 0
-    explanation: "M03 · Wohin? mit dem Akkusativ — stellen fragt Wohin? — also der Akkusativ. das Haus bleibt das: hinter das Haus. Bei Wo? hieße es: Das Fahrrad steht hinter dem Haus."
+    explanation: "M03 · Wohin? with the accusative — stellen asks Wohin?, so the case is accusative. das Haus stays das: hinter das Haus. With Wo? it would be Das Fahrrad steht hinter dem Haus."
   - type: open_cloze
     group: grammar
     content:
@@ -150,7 +150,7 @@ core:
       post: " Boden."
       answers: [dem]
       answer_shown: dem
-    explanation: "M03 · Wo? mit dem Dativ — liegen fragt Wo? — also der Dativ. der Boden → auf dem Boden. Nach legen (Wohin?) hieße es auf den Boden."
+    explanation: "M03 · Wo? with the dative — liegen asks Wo?, so the case is dative. der Boden → auf dem Boden. After legen (Wohin?) it would be auf den Boden."
   - type: grammar_drill
     group: grammar
     content:
@@ -159,7 +159,7 @@ core:
       prompt: "WO?"
       options: [in den, ins, im, in die]
       answer: 2
-    explanation: "M03 · Die kurzen Formen im, ins, am, ans — hängen ohne Objekt fragt Wo? — also der Dativ: in dem Schrank → im Schrank. Für Wohin? stünde hier ins."
+    explanation: "M03 · The contracted forms im, ins, am, ans — hängen without an object asks Wo?, so the case is dative: in dem Schrank → im Schrank. For Wohin? it would be ins."
   - type: key_word_transformation
     group: grammar
     content:
@@ -170,21 +170,21 @@ core:
       answers: [hängt über dem]
       hint: 3 Wörter
       answer_shown: hängt über dem
-    explanation: "M03 · stehen, liegen und hängen — Ohne Objekt fragt hängen Wo? — also der Dativ: über dem Tisch. hängen steht in beiden Spalten, nur der Kasus zeigt den Unterschied."
+    explanation: "M03 · stehen, liegen and hängen — with no object hängen asks Wo?, so the case is dative: über dem Tisch. hängen sits in both columns and only the case tells them apart."
   - type: error_correction
     group: grammar
     content:
       words: [Ich, habe, die, Schuhe, unter, dem, Bett, "gestellt."]
       wrong: 5
       correction: "dem → das"
-    explanation: "M03 · Wohin? mit dem Akkusativ — Die Schuhe bewegen sich: stellen fragt Wohin? — also der Akkusativ. Nur bei stehen (Wo?) hieße es unter dem Bett."
+    explanation: "M03 · Wohin? with the accusative — the shoes are moving, so stellen asks Wohin? and the case is accusative. Only stehen (Wo?) would give unter dem Bett."
   - type: collocation_match
     group: vocab
     content:
       left: [fahren + die Karte, die Woche + das Ende, die Schule + die Zeit, die Straße + die Bahn]
       right: [die Schulzeit, die Fahrkarte, die Straßenbahn, das Wochenende]
       pairs: { 0: 1, 1: 3, 2: 0, 3: 2 }
-    explanation: "M03 · Wortbildung: zwei Wörter werden ein Wort — Das zweite Wort gibt den Artikel: die Karte → die Fahrkarte, das Ende → das Wochenende."
+    explanation: "M03 · Word formation: two words become one — the second word sets the article: die Karte → die Fahrkarte, das Ende → das Wochenende."
 
   # ══════════════ M04 · Geschenke und Gefälligkeiten ══════════════
   - type: mc_cloze
@@ -194,7 +194,7 @@ core:
       post: " herzlich für die Blumen."
       options: [Sie, Ihr, ihn, Ihnen]
       answer: 3
-    explanation: "M04 · Die Personalpronomen im Dativ — danken fragt Wem? — also der Dativ. Sie → Ihnen: Ich danke Ihnen für die Blumen. Nicht: Ich danke Sie."
+    explanation: "M04 · Personal pronouns in the dative — danken asks Wem?, so the case is dative. Sie → Ihnen: Ich danke Ihnen für die Blumen, never Ich danke Sie."
   - type: open_cloze
     group: grammar
     content:
@@ -202,7 +202,7 @@ core:
       post: ", ich habe sie heute Morgen vergessen."
       answers: [mir]
       answer_shown: mir
-    explanation: "M04 · Die Verben helfen, danken, gehören und gratulieren — gehören fragt Wem? — also der Dativ. ich → mir: Die Jacke gehört mir."
+    explanation: "M04 · The verbs helfen, danken, gehören and gratulieren — gehören asks Wem?, so the case is dative. ich → mir: Die Jacke gehört mir."
   - type: grammar_drill
     group: grammar
     content:
@@ -211,7 +211,7 @@ core:
       prompt: REIHENFOLGE
       options: ["Ich erkläre ihm die Strecke.", "Ich erkläre die Strecke ihm.", "Ich erkläre ihn die Strecke.", "Ich erkläre ihm der Strecke."]
       answer: 0
-    explanation: "M04 · Zuerst der Dativ, dann der Akkusativ — Erst die Person (Wem? ihm), dann die Sache (Was? die Strecke). er → ihm, nicht ihn."
+    explanation: "M04 · Dative before accusative — the person first (Wem? ihm), then the thing (Was? die Strecke). er → ihm, not ihn."
   - type: word_formation
     group: vocab
     content:
@@ -220,7 +220,7 @@ core:
       prompt: fahren
       answers: [Fahrerin]
       answer_shown: Fahrerin
-    explanation: "M04 · Wortbildung mit -er und -in — Aus dem Verb wird die Person: fahren → der Fahrer, die Fahrerin. Der Artikel die zeigt hier die Form mit -in."
+    explanation: "M04 · Word formation with -er and -in — the verb becomes the person: fahren → der Fahrer, die Fahrerin. The article die points to the -in form here."
   - type: key_word_transformation
     group: grammar
     content:
@@ -231,14 +231,14 @@ core:
       answers: [ihnen]
       hint: 1 Wort
       answer_shown: ihnen
-    explanation: "M04 · Die Personalpronomen im Dativ — Zwei Personen zusammen sind sie, im Dativ ihnen: Ich habe ihnen Karten besorgt. Die Person steht vor der Sache."
+    explanation: "M04 · Personal pronouns in the dative — two people together are sie, and in the dative ihnen: Ich habe ihnen Karten besorgt. The person comes before the thing."
   - type: collocation_match
     group: vocab
     content:
       left: [versprechen, wünschen, einpacken, abholen]
       right: [Papier um das Geschenk machen, "sagen: Ich mache das sicher", jemanden am Bahnhof treffen und mitnehmen, alles Gute sagen]
       pairs: { 0: 1, 1: 3, 2: 0, 3: 2 }
-    explanation: "M04 · Wortschatz: Geschenke und Hilfe — Ich verspreche dir das. Wir wünschen dir alles Gute. Ich packe das Geschenk ein. Ich hole dich am Bahnhof ab."
+    explanation: "M04 · Vocabulary: presents and help — Ich verspreche dir das. Wir wünschen dir alles Gute. Ich packe das Geschenk ein. Ich hole dich am Bahnhof ab."
 
   # ══════════════ M05 · Früher und heute ══════════════
   - type: mc_cloze
@@ -248,7 +248,7 @@ core:
       post: " als Kinder nie ins Kino gehen."
       options: [dürfen, durften, gedurft, durfte]
       answer: 1
-    explanation: "M05 · Das Präteritum von können, müssen, wollen, dürfen und sollen — dürfen im Präteritum: wir durften. Aus ü wird u, bei wir steht die Endung -en."
+    explanation: "M05 · The simple past of können, müssen, wollen, dürfen and sollen — dürfen in the simple past: wir durften. The ü becomes u and wir takes -en."
   - type: open_cloze
     group: grammar
     content:
@@ -256,7 +256,7 @@ core:
       post: " mein Großvater Lehrer in einem Dorf bei Dresden."
       answers: [war]
       answer_shown: war
-    explanation: "M05 · Das Präteritum von sein — Von früher erzählt man mit war, nicht mit ist gewesen. Nach der Zeitangabe am Anfang steht das Verb auf Position 2."
+    explanation: "M05 · The simple past of sein — you talk about the past with war, not with ist gewesen. After a time expression at the front the verb takes position 2."
   - type: grammar_drill
     group: grammar
     content:
@@ -265,7 +265,7 @@ core:
       prompt: ALS ODER WENN
       options: [als, damals, dann, wenn]
       answer: 3
-    explanation: "M05 · wenn — immer wieder in der Vergangenheit — Nach immer steht wenn: Der Besuch war jedes Mal wieder so. Für einmal in der Vergangenheit steht als."
+    explanation: "M05 · wenn — a repeated occasion in the past — immer calls for wenn: the visit was like that every time. A single occasion takes als."
   - type: word_formation
     group: vocab
     content:
@@ -274,20 +274,20 @@ core:
       prompt: sechs
       answers: [sechste]
       answer_shown: sechste
-    explanation: "M05 · Die Zahlen im Datum — Bis neunzehn kommt -te an die Zahl: sechs → der sechste, vier → der vierte. Ab zwanzig steht -ste."
+    explanation: "M05 · Numbers in a date — up to nineteen the number takes -te: sechs → der sechste, vier → der vierte. From twenty it is -ste."
   - type: error_correction
     group: grammar
     content:
       words: [Meine, Schwester, hatte, damals, zehn, "Jahre."]
       wrong: 2
       correction: "hatte zehn Jahre → war zehn Jahre alt"
-    explanation: "M05 · Das Präteritum von sein — Das Alter steht mit sein und alt: Meine Schwester war damals zehn Jahre alt. Mit haben ist der Satz falsch."
+    explanation: "M05 · The simple past of sein — age goes with sein and alt: Meine Schwester war damals zehn Jahre alt. With haben the sentence is wrong."
   - type: collocation_match
     group: vocab
     content:
       left: [die Jugend, das Dorf, die Note, die Freiheit]
       right: [ein kleiner Ort auf dem Land, man darf selbst entscheiden, die Zeit nach der Kindheit, sie bekommt man in der Schule]
       pairs: { 0: 2, 1: 0, 2: 3, 3: 1 }
-    explanation: "M05 · Wortschatz: Kindheit und Jugend — Die Jugend kommt nach der Kindheit. Im Dorf wohnen wenige Menschen. Noten bekommt man in der Schule, und Freiheit heißt: Man darf selbst entscheiden."
+    explanation: "M05 · Vocabulary: childhood and youth — die Jugend follows die Kindheit. Few people live im Dorf. You get Noten at school, and Freiheit means you decide for yourself."
 
 review_pool: []

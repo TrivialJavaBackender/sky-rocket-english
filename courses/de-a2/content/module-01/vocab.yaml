@@ -5,7 +5,7 @@
 entries:
   - term: das Wochenende
     tag: Nomen
-    definition: Samstag und Sonntag. An diesen Tagen arbeiten die meisten Menschen nicht.
+    definition: the weekend — Saturday and Sunday, when most people do not work
     use_cases:
       - Am Wochenende bleibe ich gern zu Hause.
       - Was hast du am Wochenende gemacht?
@@ -14,7 +14,7 @@ entries:
 
   - term: die Freizeit
     tag: Nomen
-    definition: Die Zeit ohne Arbeit und ohne Schule. Man macht, was man will.
+    definition: free time — the hours with no work and no school
     use_cases:
       - In meiner Freizeit koche ich gern.
       - Ich habe wenig Freizeit.
@@ -23,7 +23,7 @@ entries:
 
   - term: das Hobby
     tag: Nomen
-    definition: Eine Sache, die man in der Freizeit regelmäßig und gern macht.
+    definition: a hobby; something you do regularly in your free time because you enjoy it
     use_cases:
       - Mein Hobby ist Fotografieren.
       - Hast du ein neues Hobby gefunden?
@@ -32,7 +32,7 @@ entries:
 
   - term: Sport treiben
     tag: Verb
-    definition: Sich regelmäßig bewegen — laufen, schwimmen, Fußball spielen.
+    definition: to do sport — to exercise regularly (running, swimming, football)
     use_cases:
       - Ich treibe dreimal pro Woche Sport.
       - Früher hat er viel Sport getrieben.
@@ -41,7 +41,7 @@ entries:
 
   - term: sich treffen
     tag: Verb
-    definition: Zusammenkommen. Zwei oder mehr Personen sind am gleichen Ort.
+    definition: to meet up — two or more people come to the same place
     use_cases:
       - Wir treffen uns um acht am Bahnhof.
       - Gestern haben wir uns im Café getroffen.
@@ -50,7 +50,7 @@ entries:
 
   - term: das Konzert
     tag: Nomen
-    definition: Eine Veranstaltung mit Musik. Man hört zu, die Musiker spielen.
+    definition: a concert; a music event you listen to
     use_cases:
       - Am Freitag waren wir im Konzert.
       - Das Konzert hat zwei Stunden gedauert.
@@ -59,7 +59,7 @@ entries:
 
   - term: der Ausflug
     tag: Nomen
-    definition: Eine kurze Reise für einen Tag. Man fährt weg und kommt zurück.
+    definition: a day trip — you go somewhere and come back the same day
     use_cases:
       - Am Sonntag haben wir einen Ausflug an den See gemacht.
       - Der Ausflug war leider sehr kurz.
@@ -68,7 +68,7 @@ entries:
 
   - term: wandern
     tag: Verb
-    definition: Lange in der Natur zu Fuß gehen, meistens in den Bergen.
+    definition: to hike — to walk a long way in the countryside, usually in the hills
     use_cases:
       - Wir wandern jeden Sommer in den Alpen.
       - Am Sonntag sind wir vier Stunden gewandert.
@@ -77,7 +77,7 @@ entries:
 
   - term: Rad fahren
     tag: Verb
-    definition: Mit dem Fahrrad fahren.
+    definition: to cycle, to ride a bike
     use_cases:
       - Ich fahre jeden Tag Rad.
       - Sie ist zum Markt Rad gefahren.
@@ -86,7 +86,7 @@ entries:
 
   - term: spazieren gehen
     tag: Verb
-    definition: Langsam gehen, ohne Ziel, nur zum Vergnügen.
+    definition: to go for a walk — slowly, with no destination, just for pleasure
     use_cases:
       - Nach dem Essen gehen wir immer spazieren.
       - Gestern bin ich zwei Stunden spazieren gegangen.
@@ -95,7 +95,7 @@ entries:
 
   - term: fernsehen
     tag: Verb
-    definition: Filme oder Sendungen am Fernseher ansehen.
+    definition: to watch television
     use_cases:
       - Abends sehe ich eine Stunde fern.
       - Am Sonntag haben wir den ganzen Tag ferngesehen.
@@ -104,7 +104,7 @@ entries:
 
   - term: besuchen
     tag: Verb
-    definition: Zu einer Person oder an einen Ort gehen und dort bleiben.
+    definition: to visit — to go to a person or a place and stay a while
     use_cases:
       - Ich besuche meine Oma jeden Monat.
       - Wir haben am Samstag ein Museum besucht.
@@ -113,7 +113,7 @@ entries:
 
   - term: einladen
     tag: Verb
-    definition: "Zu jemandem sagen: Komm zu mir!"
+    definition: to invite — to tell someone to come
     use_cases:
       - Ich lade dich zu meiner Party ein.
       - Sie hat zwanzig Leute eingeladen.
@@ -122,7 +122,7 @@ entries:
 
   - term: mitbringen
     tag: Verb
-    definition: Etwas dabeihaben, wenn man zu einer Person kommt.
+    definition: to bring something along when you visit someone
     use_cases:
       - Bringst du etwas zu trinken mit?
       - Alle haben Kuchen mitgebracht.
@@ -131,7 +131,7 @@ entries:
 
   - term: feiern
     tag: Verb
-    definition: Ein Fest machen — mit Musik, Essen und Gästen.
+    definition: to celebrate; to throw a party with music, food and guests
     use_cases:
       - Wir feiern am Samstag seinen Geburtstag.
       - Sie haben bis drei Uhr gefeiert.
@@ -140,7 +140,7 @@ entries:
 
   - term: kochen
     tag: Verb
-    definition: Essen warm machen. Man braucht einen Topf und einen Herd.
+    definition: to cook — to make food hot; you need a pot and a hob
     use_cases:
       - Am Wochenende koche ich für die ganze Familie.
       - Wir haben zusammen Suppe gekocht.
@@ -149,7 +149,7 @@ entries:
 
   - term: backen
     tag: Verb
-    definition: Kuchen oder Brot im Ofen machen.
+    definition: to bake — to make cake or bread in the oven
     use_cases:
       - Meine Mutter backt jeden Sonntag einen Kuchen.
       - Ich habe für die Party Brot gebacken.
@@ -158,7 +158,7 @@ entries:
 
   - term: aufräumen
     tag: Verb
-    definition: Alles wieder an seinen Platz stellen. Danach ist die Wohnung ordentlich.
+    definition: to tidy up — to put everything back in its place
     use_cases:
       - Ich räume jeden Freitag die Küche auf.
       - Hast du dein Zimmer schon aufgeräumt?
@@ -167,7 +167,7 @@ entries:
 
   - term: einkaufen
     tag: Verb
-    definition: Im Geschäft Sachen für zu Hause kaufen.
+    definition: to do the shopping, to buy things for the house
     use_cases:
       - Am Samstag kaufe ich für die ganze Woche ein.
       - Wir haben auf dem Markt eingekauft.
@@ -176,7 +176,7 @@ entries:
 
   - term: ausschlafen
     tag: Verb
-    definition: So lange schlafen, wie man will. Kein Wecker am Morgen.
+    definition: to sleep in — to sleep as long as you like, with no alarm
     use_cases:
       - Am Sonntag schlafe ich immer aus.
       - Endlich habe ich einmal ausgeschlafen.
@@ -185,7 +185,7 @@ entries:
 
   - term: spannend
     tag: Adjektiv
-    definition: "Sehr interessant. Man will unbedingt wissen, wie es weitergeht. Gegenteil: langweilig."
+    definition: exciting, gripping — you want to know what happens next; opposite of langweilig
     use_cases:
       - Der Film war wirklich spannend.
       - Ich finde Wandern spannend, meine Schwester nicht.
@@ -194,7 +194,7 @@ entries:
 
   - term: langweilig
     tag: Adjektiv
-    definition: "Ohne Interesse. Man wartet nur, bis es zu Ende ist. Gegenteil: spannend."
+    definition: boring — you are just waiting for it to end; opposite of spannend
     use_cases:
       - Das Konzert war leider ziemlich langweilig.
       - Mir ist langweilig.
@@ -203,7 +203,7 @@ entries:
 
   - term: anstrengend
     tag: Adjektiv
-    definition: Man braucht viel Kraft. Danach ist man müde.
+    definition: tiring, exhausting — it takes a lot out of you
     use_cases:
       - Die Wanderung war schön, aber anstrengend.
       - Ich hatte eine anstrengende Woche.
@@ -212,7 +212,7 @@ entries:
 
   - term: gemütlich
     tag: Adjektiv
-    definition: Ruhig und angenehm. Man fühlt sich wohl und hat keine Eile.
+    definition: cosy, relaxed — calm and pleasant, with no hurry
     use_cases:
       - Wir hatten einen gemütlichen Abend zu Hause.
       - Das Café ist klein und sehr gemütlich.
@@ -221,7 +221,7 @@ entries:
 
   - term: draußen
     tag: Adverb
-    definition: "Nicht im Haus, sondern an der frischen Luft. Gegenteil: drinnen."
+    definition: outdoors, outside; opposite of drinnen
     use_cases:
       - Bei gutem Wetter essen wir draußen.
       - Die Kinder sind den ganzen Tag draußen geblieben.
@@ -230,7 +230,7 @@ entries:
 
   - term: zusammen
     tag: Adverb
-    definition: Nicht allein, sondern mit anderen Personen.
+    definition: together — not alone, but with other people
     use_cases:
       - Wir haben zusammen gekocht.
       - Gehen wir zusammen ins Kino?
@@ -239,7 +239,7 @@ entries:
 
   - term: vorgestern
     tag: Adverb
-    definition: Der Tag vor gestern. Heute ist Freitag, also war vorgestern Mittwoch.
+    definition: the day before yesterday (if today is Friday, that is Wednesday)
     use_cases:
       - Vorgestern bin ich früh ins Bett gegangen.
       - Wir haben uns vorgestern getroffen.
@@ -248,7 +248,7 @@ entries:
 
   - term: neulich
     tag: Adverb
-    definition: Vor kurzer Zeit, aber nicht heute und nicht gestern.
+    definition: the other day, recently — but not today or yesterday
     use_cases:
       - Neulich habe ich deinen Bruder in der Stadt gesehen.
       - Wir waren neulich in einem sehr guten Restaurant.
@@ -257,7 +257,7 @@ entries:
 
   - term: endlich
     tag: Adverb
-    definition: Nach langem Warten. Man hat sich darauf gefreut.
+    definition: at last, finally — after a long wait you were looking forward to
     use_cases:
       - Endlich ist das Wochenende da!
       - Wir haben endlich unsere Wohnung aufgeräumt.
@@ -266,7 +266,7 @@ entries:
 
   - term: übrigens
     tag: Adverb
-    definition: Man sagt es, wenn man ein neues Thema beginnt.
+    definition: by the way — used when you open a new topic
     use_cases:
       - Übrigens, hast du am Samstag Zeit?
       - Das Essen war übrigens sehr gut.

@@ -1,7 +1,7 @@
 kind: extra
-kicker: DIALOG
+kicker: DIALOGUE
 title: Im Sprachkurs
-meta: ≈ 1 Min · die erste Stunde, Frage und Antwort
+meta: ≈ 1 min · the first lesson, question and answer
 body:
   - - t: "FRAU WEBER: Guten Abend! Willkommen im Kurs. Darf ich mich kurz vorstellen? Mein Name ist Weber, Anna Weber. Und wie heißen Sie?"
   - - t: "MAREK: Ich heiße Marek Nowak."
@@ -26,11 +26,11 @@ body:
 glosses:
   - key: buchstabieren
     term: buchstabieren
-    pos_label: Verb
-    definition: Ein Wort Buchstabe für Buchstabe sagen
+    pos_label: verb
+    definition: to spell — to say a word letter by letter
     example: Buchstabieren Sie bitte Ihren Namen.
   - key: berufstätig
     term: berufstätig
-    pos_label: Adjektiv
-    definition: Eine Person hat Arbeit und bekommt dafür Geld.
+    pos_label: adjective
+    definition: in work, employed — has a job and earns money
     example: Meine Eltern sind beide berufstätig.

@@ -1,35 +1,40 @@
-# Modul 04 · Geschenke und Gefälligkeiten — Grammatik im Fokus, Watch out! und
-# Lückenkarten. 7 Punkte — genau die Grammatik-Liste der Modulkarte
-# (courses/de-a2/PLAN.md §4).
+# Modul 04 · Geschenke und Gefälligkeiten — theory. Two spotlights, 9 items
+# realising the seven grammar points of the module card (courses/de-a2/PLAN.md §4).
 #
-# Die Formen des Dativs kommen aus Modul 02, dort stehen sie nach der
-# Präposition. Hier steht der gleiche Kasus direkt nach dem Verb. Deshalb wird
-# die Tabelle nicht neu erklärt, sondern nur ohne Präposition gezeigt.
+# The dative forms come from module 02, where they follow a preposition. Here the
+# same case stands straight after the verb, so the table is not re-explained —
+# only shown without a preposition in front of it.
 #
-# Fachwörter: alle aus dem Grammatik-Wörterbuch der Diagnostik (der Kasus mit
-# Nominativ · Akkusativ · Dativ, das Objekt, das Personalpronomen, der Artikel,
-# das Nomen, das Verb, die Endung). Dieses Modul führt keine neue Konstruktion
-# mit eigenem Namen ein — für mein, dein und unser im Dativ steht deshalb
-# überall die Form selbst und kein Fachwort (§5.2).
+# The plural stays out: the -n of the dative plural belongs to a later module, so
+# every noun table shows the singular only. The pronouns uns, euch and ihnen are
+# included — they are forms in their own right, not an ending on a noun.
 #
-# Der Plural bleibt draußen: das -n im Dativ Plural gehört einem späteren Modul,
-# darum stehen in allen Tabellen nur Formen im Singular. Bei den Pronomen sind
-# uns, euch und ihnen dabei — sie sind eine Form und keine Endung am Nomen.
+# Scaffolding rule (§5, revised 2026-07): title, intro, form and note in English,
+# every example and table in German. Dative verbs and pronouns come from
+# courses/_reference/basic-german/ units 13 and 15.
 spotlights:
-  - title: "Der Dativ als Objekt"
-    intro: "Bisher stand der Dativ nach mit, bei und zu. Jetzt kommt er direkt nach dem Verb — ganz ohne Präposition. Die Frage heißt Wem?"
+  - title: The dative as an object
+    intro: >-
+      So far the dative has always followed a preposition — mit dem Bus, bei der
+      Post. Here it turns up with no preposition at all, straight after the verb.
+      Two things cause it. A small group of verbs simply demands the dative
+      instead of the accusative (helfen, danken, gehören, gratulieren), and a
+      larger group takes two objects at once, in which case the person goes in
+      the dative and the thing in the accusative. The question to ask is Wem?
+      — to whom. Ask it before you choose the article and the case follows.
     items:
-      - form: "Wem? — der Dativ ohne Präposition"
+      - form: "Wem? — the dative with no preposition"
         example: Ich helfe dem Bruder. — Wem helfe ich? Dem Bruder.
-        note: "Die Formen kennen Sie aus Modul 02. Neu ist: keine Präposition davor."
+        note: The forms are the ones you know from module 02. What is new is that nothing stands in front of them.
         table:
           headers: ["Nominativ", "Dativ — Wem?"]
           rows:
             - ["der Bruder", "dem Bruder"]
             - ["die Kollegin", "der Kollegin"]
             - ["das Kind", "dem Kind"]
-      - form: "Vier Verben mit dem Dativ"
-        note: "Diese vier Verben nehmen nie den Akkusativ. Man lernt sie auswendig."
+      - form: "Four verbs that take the dative"
+        example: "Ich helfe meiner Kollegin. Das Fahrrad gehört der Nachbarin."
+        note: These four never take the accusative. There is no rule behind it — learn the list by heart.
         table:
           headers: ["Verb", "Beispiel"]
           rows:
@@ -37,9 +42,9 @@ spotlights:
             - ["danken", "Wir danken dem Verkäufer."]
             - ["gehören", "Das Fahrrad gehört der Nachbarin."]
             - ["gratulieren", "Ich gratuliere dem Kind zum Geburtstag."]
-      - form: "Verben mit zwei Objekten"
+      - form: Verbs with two objects
         example: Ich schenke meiner Oma ein Fotobuch.
-        note: "Zwei Fragen zu einem Verb: Wem? und Was? Die Person steht im Dativ."
+        note: "One verb, two questions: Wem? and Was? The person takes the dative, the thing the accusative."
         table:
           headers: ["Verb", "Wem? — Dativ", "Was? — Akkusativ"]
           rows:
@@ -47,22 +52,37 @@ spotlights:
             - ["schenken", "der Oma", "ein Fotobuch"]
             - ["zeigen", "dem Freund", "die Fotos"]
             - ["erklären", "der Kollegin", "den Weg"]
-      - form: "Zuerst der Dativ, dann der Akkusativ"
+      - form: Dative before accusative
         example: Ich schenke meinem Bruder ein Buch.
-        note: "Erst die Person, dann die Sache. So steht es fast immer."
+        note: The person comes first, the thing second. This is the normal order and you can rely on it.
         table:
           headers: ["Wer?", "Verb", "Wem? — Dativ", "Was? — Akkusativ"]
           rows:
             - ["Ich", "schenke", "meinem Bruder", "ein Buch."]
             - ["Er", "zeigt", "uns", "die Fotos."]
             - ["Wir", "besorgen", "der Oma", "einen Kuchen."]
+      - form: "Which case does the verb want?"
+        example: "Ich sehe meinen Bruder. Ich helfe meinem Bruder. Ich schenke meinem Bruder ein Buch."
+        note: The verb decides. Most verbs take the accusative, a short list takes the dative, and a middle group takes both.
+        table:
+          headers: ["Verb", "Objekt", "Beispiel"]
+          rows:
+            - ["sehen, nehmen, kaufen", "nur Akkusativ", "Ich kaufe das Geschenk."]
+            - ["helfen, danken, gehören", "nur Dativ", "Ich danke der Kollegin."]
+            - ["geben, schenken, zeigen", "Dativ + Akkusativ", "Ich zeige dem Kind das Buch."]
 
-  - title: "mir, dir, ihm — der Dativ bei Personen"
-    intro: "Die Person im Dativ ist sehr oft ein Personalpronomen. Diese acht Formen braucht man jeden Tag."
+  - title: "mir, dir, ihm — the dative for people"
+    intro: >-
+      Once a person has been named you stop repeating the name and switch to a
+      pronoun, so the dative pronouns are the forms you will actually use most.
+      There are eight of them and only two, uns and euch, look like the ones you
+      already know. They also carry a set of everyday phrases where German
+      insists on the dative and English does not: Wie geht es dir?, Das gefällt
+      mir, Es tut mir leid.
     items:
-      - form: "Die Personalpronomen im Dativ"
+      - form: Personal pronouns in the dative
         example: Kannst du mir bitte helfen? Ich zeige dir dann die Fotos.
-        note: "Nur uns und euch bleiben gleich. Alle anderen Formen ändern sich."
+        note: Only uns and euch stay as they are. Every other form changes.
         table:
           headers: ["Nominativ", "Dativ"]
           rows:
@@ -74,9 +94,9 @@ spotlights:
             - ["ihr", "euch"]
             - ["sie", "ihnen"]
             - ["Sie", "Ihnen"]
-      - form: "mein, dein, unser im Dativ"
+      - form: "mein, dein and unser in the dative"
         example: Ich habe meiner Schwester und meinem Bruder gratuliert.
-        note: "Die Endung ist die gleiche wie bei dem und der: -em und -er."
+        note: "The endings copy dem and der exactly: -em for masculine and neuter, -er for feminine."
         table:
           headers: ["Nominativ", "Dativ"]
           rows:
@@ -84,55 +104,67 @@ spotlights:
             - ["meine Schwester", "meiner Schwester"]
             - ["mein Kind", "meinem Kind"]
             - ["unsere Oma", "unserer Oma"]
-      - form: "Der Dativ im Überblick"
-        note: "Drei Wege, eine Endung. Das Wort vor dem Nomen zeigt den Kasus."
+      - form: The dative at a glance
+        example: "Ich helfe dem Bruder. Ich helfe meinem Bruder. Ich helfe ihm."
+        note: Three ways to name the same person, one set of endings. The word in front of the noun carries the case.
         table:
           headers: ["", "der Bruder", "die Schwester", "das Kind"]
           rows:
             - ["Artikel", "dem Bruder", "der Schwester", "dem Kind"]
             - ["mein", "meinem Bruder", "meiner Schwester", "meinem Kind"]
             - ["Personalpronomen", "ihm", "ihr", "ihm"]
+      - form: "Everyday phrases built on a dative pronoun"
+        example: "Wie geht es dir? Das gefällt mir sehr. Es tut mir leid."
+        note: German puts the person in the dative where English makes it the subject. Learn each phrase whole.
+        table:
+          headers: ["Deutsch", "English"]
+          rows:
+            - ["Wie geht es dir?", "How are you?"]
+            - ["Das gefällt mir.", "I like it."]
+            - ["Es tut mir leid.", "I am sorry."]
+            - ["Kannst du mir helfen?", "Can you help me?"]
+            - ["Das gehört mir.", "That is mine."]
 
 watchouts:
-  - title: "helfen fragt Wem?"
+  - title: "helfen asks Wem?"
     bad: Ich helfe meinen Bruder jeden Samstag.
     good: Ich helfe meinem Bruder jeden Samstag.
-    note: "helfen nimmt nie den Akkusativ. Immer: Wem helfe ich? Meinem Bruder."
-  - title: "danken und gratulieren fragen auch Wem?"
+    note: "helfen never takes the accusative. Always ask: Wem helfe ich? Meinem Bruder."
+  - title: "danken and gratulieren ask Wem? too"
     bad: Ich gratuliere dich zum Geburtstag.
     good: Ich gratuliere dir zum Geburtstag.
-    note: "Nicht dich, sondern dir. Genauso: Ich danke dir für das Geschenk."
-  - title: "Zuerst die Person, dann die Sache"
+    note: "Not dich but dir. The same goes for danken: Ich danke dir für das Geschenk."
+  - title: The person first, the thing second
     bad: Ich schenke ein Buch meinem Vater.
     good: Ich schenke meinem Vater ein Buch.
-    note: "Erst Wem?, dann Was? Der Dativ steht vor dem Akkusativ."
-  - title: "Perfekt mit haben"
+    note: "Wem? first, Was? second. The dative stands in front of the accusative."
+  - title: These verbs take haben in the perfect
     bad: Ich bin meiner Nachbarin beim Umzug geholfen.
     good: Ich habe meiner Nachbarin beim Umzug geholfen.
-    note: "helfen, danken und schenken bilden das Perfekt immer mit haben."
+    note: "helfen, danken and schenken always build their perfect with haben, never with sein."
 
 cloze_cards:
   - text: "Ich helfe {{c1::meinem}} Bruder jeden Samstag im Garten."
     hint: mein Bruder
-    rule: "helfen fragt Wem? — also der Dativ. mein Bruder → meinem Bruder."
+    rule: "helfen asks Wem?, so the case is dative. mein Bruder → meinem Bruder."
   - text: "Das Fahrrad im Hof gehört {{c1::der}} Nachbarin aus dem dritten Stock."
     hint: die Nachbarin
-    rule: "gehören fragt Wem? — also der Dativ. die Nachbarin → der Nachbarin."
+    rule: "gehören asks Wem?, so the case is dative. die Nachbarin → der Nachbarin."
   - text: "Tom hat heute Geburtstag. Wir gratulieren {{c1::ihm}} am Abend."
     hint: er
-    rule: "gratulieren fragt Wem? — Dativ. Tom = er → ihm."
+    rule: "gratulieren asks Wem? — dative. Tom = er → ihm."
   - text: "Ich schaffe das nicht allein. Kannst du {{c1::mir}} bitte helfen?"
     hint: ich
-    rule: "helfen fragt Wem? — Dativ. ich → mir."
+    rule: "helfen asks Wem? — dative. ich → mir."
   - text: "Ich habe {{c1::meiner}} Kollegin einen Gutschein geschenkt."
     hint: meine Kollegin
-    rule: "schenken fragt zuerst Wem? — Dativ. meine Kollegin → meiner Kollegin."
+    rule: "schenken asks Wem? first — dative. meine Kollegin → meiner Kollegin."
   - text: "Wir wollen die Bilder sehen. Zeig {{c1::uns}} bitte die Fotos!"
     hint: wir
-    rule: "zeigen fragt Wem? + Was? wir → uns. Danach kommt die Sache."
+    rule: "zeigen asks Wem? and Was? wir → uns, and the thing follows."
   - text: "Der Verkäufer hat {{c1::dem}} Kind den Gutschein erklärt."
     hint: das Kind
-    rule: "erklären fragt Wem? + Was? das Kind → dem Kind, danach den Gutschein."
+    rule: "erklären asks Wem? and Was? das Kind → dem Kind, then den Gutschein."
   - text: "Liebe Anna, lieber Tom, ich danke {{c1::euch}} für das Geschenk."
     hint: ihr
-    rule: "danken fragt Wem? — Dativ. Zwei Personen mit du = ihr → euch."
+    rule: "danken asks Wem? — dative. Two people you address with du = ihr → euch."

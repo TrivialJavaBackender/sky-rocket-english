@@ -6,7 +6,7 @@
 entries:
   - term: das Geschenk
     tag: Nomen
-    definition: Eine Sache für eine andere Person. Man gibt sie und nimmt kein Geld dafür.
+    definition: a present, a gift — something you give without taking money for it
     use_cases:
       - Zum Geburtstag bekommt Oma jedes Jahr viele Geschenke.
       - Wir haben das Geschenk gemeinsam besorgt.
@@ -15,7 +15,7 @@ entries:
 
   - term: der Gefallen
     tag: Nomen
-    definition: Eine kleine Hilfe für eine Person. Man macht sie gern und ohne Geld.
+    definition: a favour — a small kindness you do for someone, gladly and for free
     use_cases:
       - Kannst du mir einen Gefallen tun?
       - Meine Kollegin hat mir schon oft einen Gefallen getan.
@@ -24,7 +24,7 @@ entries:
 
   - term: die Überraschung
     tag: Nomen
-    definition: Niemand weiß davon. Plötzlich ist sie da und macht Freude.
+    definition: a surprise — nobody knows about it, then suddenly it is there
     use_cases:
       - Das Fotobuch ist eine große Überraschung gewesen.
       - Sag ihr bitte nichts, es soll eine Überraschung bleiben.
@@ -33,7 +33,7 @@ entries:
 
   - term: der Geburtstag
     tag: Nomen
-    definition: Jedes Jahr der gleiche Tag. An diesem Tag ist die Person geboren.
+    definition: a birthday — the same day every year, the day the person was born
     use_cases:
       - Meine Oma hat am Samstag Geburtstag.
       - Zum Geburtstag schenke ich meinem Bruder ein Buch.
@@ -42,7 +42,7 @@ entries:
 
   - term: die Hilfe
     tag: Nomen
-    definition: Eine Person macht eine Arbeit nicht allein. Eine andere Person macht mit.
+    definition: help, support — when someone does not have to do the work alone
     use_cases:
       - Ohne deine Hilfe bin ich nicht fertig geworden.
       - Vielen Dank für die Hilfe am Wochenende!
@@ -51,7 +51,7 @@ entries:
 
   - term: der Nachbar
     tag: Nomen
-    definition: Eine Person. Sie wohnt neben mir oder im gleichen Haus.
+    definition: a neighbour — someone who lives next door or in the same building
     use_cases:
       - Unser Nachbar hat uns beim Umzug geholfen.
       - Ich habe dem Nachbarn den Schlüssel gegeben.
@@ -60,7 +60,7 @@ entries:
 
   - term: die Kollegin
     tag: Nomen
-    definition: Eine Frau. Sie arbeitet in der gleichen Firma wie ich.
+    definition: a female colleague, a woman who works at the same company
     use_cases:
       - Meine Kollegin hat mir ihr Auto geliehen.
       - Wir haben unserer Kollegin zur Hochzeit gratuliert.
@@ -69,7 +69,7 @@ entries:
 
   - term: die Freundschaft
     tag: Nomen
-    definition: Zwei Menschen mögen sich und helfen sich lange Zeit.
+    definition: friendship — two people who like each other and help each other over time
     use_cases:
       - Unsere Freundschaft ist schon zwanzig Jahre alt.
       - Aus der Arbeit ist eine echte Freundschaft geworden.
@@ -78,7 +78,7 @@ entries:
 
   - term: der Gutschein
     tag: Nomen
-    definition: Ein Papier oder eine Karte. Damit bekommt man etwas im Laden, das Geld ist schon bezahlt.
+    definition: a voucher, a gift card — already paid for, exchangeable in a shop
     use_cases:
       - Zum Geburtstag haben wir ihr einen Gutschein geschenkt.
       - Der Gutschein für das Kino gilt ein Jahr.
@@ -87,7 +87,7 @@ entries:
 
   - term: die Bitte
     tag: Nomen
-    definition: Man fragt eine Person höflich nach Hilfe.
+    definition: a request — when you politely ask someone for help
     use_cases:
       - Ich habe eine Bitte an dich.
       - "Meine Bitte ist klein: Bring mir bitte das Paket mit."
@@ -96,7 +96,7 @@ entries:
 
   - term: der Verkäufer
     tag: Nomen
-    definition: Ein Mann. Er arbeitet im Laden und verkauft dort etwas.
+    definition: a shop assistant, a salesman who sells things in a shop
     use_cases:
       - Der Verkäufer hat uns das Papier geschenkt.
       - Fragen Sie bitte den Verkäufer nach dem Preis.
@@ -105,7 +105,7 @@ entries:
 
   - term: schenken
     tag: Verb
-    definition: Einer Person etwas geben und kein Geld dafür nehmen.
+    definition: to give as a present, to take no money for it
     use_cases:
       - Ich schenke meiner Oma ein Fotobuch.
       - Was hast du deinem Bruder zum Geburtstag geschenkt?
@@ -114,7 +114,7 @@ entries:
 
   - term: leihen
     tag: Verb
-    definition: Einer Person etwas kurz geben. Später bekommt man es zurück.
+    definition: to lend — to give something for a while and get it back later
     use_cases:
       - Kannst du mir dein Auto leihen?
       - Ich habe ihm mein Fahrrad geliehen.
@@ -123,7 +123,7 @@ entries:
 
   - term: gehören
     tag: Verb
-    definition: Es ist der Besitz von dieser Person.
+    definition: to belong to someone, to be their property
     use_cases:
       - Das Fahrrad im Hof gehört meiner Nachbarin.
       - Wem gehört diese Tasche?
@@ -132,7 +132,7 @@ entries:
 
   - term: helfen
     tag: Verb
-    definition: Eine Arbeit für eine andere Person leichter machen.
+    definition: to help — to make someone else’s work easier
     use_cases:
       - Ich helfe meinem Bruder jeden Samstag im Garten.
       - Frau Weber hat uns mit einer guten Idee geholfen.
@@ -141,7 +141,7 @@ entries:
 
   - term: danken
     tag: Verb
-    definition: Nach einer Hilfe oder einem Geschenk Danke sagen.
+    definition: to thank someone for help or for a present
     use_cases:
       - Ich danke dir für deine Hilfe.
       - Wir haben der Kollegin herzlich gedankt.
@@ -150,7 +150,7 @@ entries:
 
   - term: gratulieren
     tag: Verb
-    definition: Einer Person zum Geburtstag oder zur Hochzeit alles Gute sagen.
+    definition: to congratulate someone on a birthday or a wedding
     use_cases:
       - Wir gratulieren dir zum Geburtstag!
       - Ich habe meiner Kollegin zur Hochzeit gratuliert.
@@ -159,7 +159,7 @@ entries:
 
   - term: besorgen
     tag: Verb
-    definition: Etwas kaufen oder holen — für sich oder für eine andere Person.
+    definition: to get, to fetch — to buy or pick something up, for yourself or someone else
     use_cases:
       - Kannst du für die Party die Getränke besorgen?
       - Ich habe meiner Schwester Blumen besorgt.
@@ -168,7 +168,7 @@ entries:
 
   - term: erklären
     tag: Verb
-    definition: Einer Person eine Sache klar machen. Danach versteht sie.
+    definition: to explain — to make something clear so that the other person understands
     use_cases:
       - Der Lehrer erklärt uns die Regel noch einmal.
       - Kannst du mir bitte den Weg zum Museum erklären?
@@ -177,7 +177,7 @@ entries:
 
   - term: versprechen
     tag: Verb
-    definition: "Fest sagen: Ich mache das ganz sicher."
+    definition: to promise — to say firmly that you will definitely do it
     use_cases:
       - Ich verspreche dir alles Gute für morgen.
       - Er hat uns seine Hilfe versprochen.
@@ -186,7 +186,7 @@ entries:
 
   - term: wünschen
     tag: Verb
-    definition: "Einer Person schöne Worte zum Fest sagen: alles Gute, viel Glück."
+    definition: to wish someone well at a celebration (alles Gute, viel Glück)
     use_cases:
       - Wir wünschen dir alles Gute zum Geburtstag!
       - Oma hat uns viel Glück gewünscht.
@@ -195,7 +195,7 @@ entries:
 
   - term: abholen
     tag: Verb
-    definition: Zu einem Ort gehen oder fahren und eine Person oder eine Sache mitnehmen.
+    definition: to pick up, to collect — to go somewhere and bring a person or thing back
     use_cases:
       - Ich hole dich um acht am Bahnhof ab.
       - Wir haben das Paket bei der Nachbarin abgeholt.
@@ -204,7 +204,7 @@ entries:
 
   - term: einpacken
     tag: Verb
-    definition: Etwas in Papier legen — zum Beispiel ein Geschenk.
+    definition: to wrap — to put something in paper, e.g. a present
     use_cases:
       - Wir haben das Fotobuch schön eingepackt.
       - Packen Sie das bitte als Geschenk ein?
@@ -213,7 +213,7 @@ entries:
 
   - term: gemeinsam
     tag: Adjektiv
-    definition: Nicht allein. Zwei oder mehr Personen machen es zusammen.
+    definition: together, jointly — two or more people doing it as one
     use_cases:
       - Wir haben das Geschenk gemeinsam besorgt.
       - Jonas und ich haben einen gemeinsamen Plan.
@@ -222,7 +222,7 @@ entries:
 
   - term: gegenseitig
     tag: Adjektiv
-    definition: Einer macht es für den anderen, und der andere macht es auch.
+    definition: mutual, both ways — each one does it for the other
     use_cases:
       - Im Kurs helfen wir uns gegenseitig.
       - Die beiden Familien besuchen sich gegenseitig.
@@ -231,7 +231,7 @@ entries:
 
   - term: dringend
     tag: Adjektiv
-    definition: Sehr schnell nötig. Es kann nicht bis morgen warten.
+    definition: urgent — needed very soon, it cannot wait until tomorrow
     use_cases:
       - Ich brauche das Auto heute dringend.
       - Das ist eine dringende Bitte.
@@ -240,7 +240,7 @@ entries:
 
   - term: ausgerechnet
     tag: Adverb
-    definition: Genau diese Person oder genau dieser Tag — und das passt gar nicht.
+    definition: of all people, of all days — and it does not suit at all
     use_cases:
       - Ausgerechnet am Geburtstag hat es geregnet.
       - Ausgerechnet die Nachbarin hat die beste Idee gehabt.
@@ -249,7 +249,7 @@ entries:
 
   - term: selbst
     tag: Adverb
-    definition: Diese Person und keine andere macht es.
+    definition: personally, in person — this one and no one else does it
     use_cases:
       - Den Kuchen habe ich selbst gebacken.
       - Oma will die Fotos nächstes Jahr selbst aussuchen.
@@ -258,7 +258,7 @@ entries:
 
   - term: unbedingt
     tag: Adverb
-    definition: Ganz sicher. Es gibt keine andere Lösung.
+    definition: definitely, absolutely — there is no other way
     use_cases:
       - Diesmal wollen wir ihr unbedingt eine Überraschung machen.
       - Du musst ihm unbedingt danken.
@@ -267,7 +267,7 @@ entries:
 
   - term: persönlich
     tag: Adjektiv
-    definition: Nur für diese eine Person gemacht. Nicht für alle gleich.
+    definition: personal, made for this one person only, not the same for everyone
     use_cases:
       - Ein Gutschein ist praktisch, aber nicht persönlich.
       - Ich möchte ihr das Geschenk persönlich geben.

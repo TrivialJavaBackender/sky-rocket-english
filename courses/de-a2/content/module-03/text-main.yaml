@@ -1,9 +1,9 @@
 # Glossen stehen nur auf Wörtern, deren Form im Satz gleich der Grundform ist:
 # ReadingText rendert `gloss.term` direkt in den Fließtext.
 kind: main
-kicker: LESETEXT
+kicker: READING
 title: Endlich eingerichtet
-meta: ≈ 3 Min · Wörter mit Punkten haben eine Erklärung — tippen Sie darauf
+meta: ≈ 3 min · dotted words carry glosses — tap to reveal
 body:
   - - t: "Drei Monate haben Jonas und Mira eine Wohnung gesucht. Im April haben sie endlich eine gefunden: drei Zimmer, vierter Stock, zwei große Fenster. „Hell und "
     - g: praktisch
@@ -22,21 +22,21 @@ body:
 glosses:
   - key: praktisch
     term: praktisch
-    pos_label: Adjektiv
-    definition: Man kann es gut benutzen. Es hilft im Alltag.
+    pos_label: adjective
+    definition: practical, useful — easy to use in everyday life
     example: Das Regal ist klein, aber sehr praktisch.
   - key: eng
     term: eng
-    pos_label: Adjektiv
-    definition: Mit wenig Platz. Zwei Personen passen kaum nebeneinander.
+    pos_label: adjective
+    definition: narrow, cramped — two people barely fit side by side
     example: Die Küche ist sehr eng.
   - key: gegenüber
     term: gegenüber
-    pos_label: Adverb
-    definition: Auf der anderen Seite, genau vor dieser Sache.
+    pos_label: adverb
+    definition: opposite, on the other side, directly facing it
     example: Der Schreibtisch steht gegenüber vom Fenster.
   - key: daneben
     term: daneben
-    pos_label: Adverb
-    definition: Direkt neben dieser Sache.
+    pos_label: adverb
+    definition: next to it, right beside it
     example: Links steht der Schrank, daneben das Regal.

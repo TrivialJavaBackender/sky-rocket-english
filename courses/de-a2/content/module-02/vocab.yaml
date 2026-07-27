@@ -6,7 +6,7 @@
 entries:
   - term: die Haltestelle
     tag: Nomen
-    definition: Dort hält der Bus oder die Straßenbahn. Die Leute steigen ein und aus.
+    definition: a stop — where the bus or tram halts and people get on and off
     use_cases:
       - Die Haltestelle ist zwei Minuten von meiner Wohnung.
       - Bis zur Haltestelle gehe ich zu Fuß.
@@ -15,7 +15,7 @@ entries:
 
   - term: die Fahrkarte
     tag: Nomen
-    definition: Damit darf man mit dem Bus oder mit dem Zug fahren. Man kauft sie vor der Fahrt.
+    definition: a ticket for a bus or a train; you buy it before you travel
     use_cases:
       - Die Fahrkarte kaufe ich immer im Internet.
       - Eine Fahrkarte für den Zug nach Wien, bitte.
@@ -24,7 +24,7 @@ entries:
 
   - term: die Kreuzung
     tag: Nomen
-    definition: Dort treffen sich zwei Straßen.
+    definition: a crossroads, a junction where two streets meet
     use_cases:
       - Fahren Sie geradeaus bis zur Kreuzung.
       - Nach der Kreuzung kommt eine Ampel.
@@ -33,7 +33,7 @@ entries:
 
   - term: die Verspätung
     tag: Nomen
-    definition: Ein Zug oder ein Bus kommt später als im Fahrplan.
+    definition: a delay — the train or bus arrives later than the timetable says
     use_cases:
       - Der Zug hat heute zwanzig Minuten Verspätung.
       - Mit der Verspätung bin ich erst um acht zu Hause gewesen.
@@ -42,7 +42,7 @@ entries:
 
   - term: die Straßenbahn
     tag: Nomen
-    definition: Ein Zug für die Stadt. Er fährt mitten auf der Straße.
+    definition: a tram — a city train that runs in the middle of the street
     use_cases:
       - In Wien fahre ich immer mit der Straßenbahn.
       - Die Straßenbahn kommt alle fünf Minuten.
@@ -51,7 +51,7 @@ entries:
 
   - term: der Fahrplan
     tag: Nomen
-    definition: Dort stehen die Zeiten. Man liest, wann der Bus oder der Zug kommt.
+    definition: a timetable; it tells you when the bus or train comes
     use_cases:
       - Der Fahrplan steht im Internet und am Bahnsteig.
       - Nach dem Fahrplan fährt der Zug um 8:14.
@@ -60,7 +60,7 @@ entries:
 
   - term: der Bahnsteig
     tag: Nomen
-    definition: Der Platz am Bahnhof. Dort wartet man auf den Zug.
+    definition: a platform — where you wait for your train
     use_cases:
       - Der Zug nach Wien fährt von Bahnsteig 21 ab.
       - Wir treffen uns am Bahnsteig.
@@ -69,7 +69,7 @@ entries:
 
   - term: die Strecke
     tag: Nomen
-    definition: Der ganze Weg von Anfang bis Ende, oft in Kilometern.
+    definition: the distance, the whole way from start to finish, often in kilometres
     use_cases:
       - Die Strecke nach Wien ist sehr schön.
       - Auf dieser Strecke fahren nur zwei Züge pro Tag.
@@ -78,7 +78,7 @@ entries:
 
   - term: der Weg
     tag: Nomen
-    definition: So kommt man von einem Ort zum anderen. Man fragt nach ihm, wenn man ihn nicht kennt.
+    definition: the way, the route from one place to another; you ask for it when you do not know it
     use_cases:
       - Können Sie mir den Weg zum Museum sagen?
       - Der Weg zur Arbeit dauert bei mir vierzig Minuten.
@@ -87,7 +87,7 @@ entries:
 
   - term: die Richtung
     tag: Nomen
-    definition: Nach rechts, nach links, geradeaus oder zurück — dorthin geht oder fährt man.
+    definition: the direction — right, left, straight on or back
     use_cases:
       - Der Bus fährt in Richtung Zentrum.
       - Einmal bin ich in die falsche Richtung gefahren.
@@ -96,7 +96,7 @@ entries:
 
   - term: die Ampel
     tag: Nomen
-    definition: Sie steht an der Kreuzung und ist rot, gelb oder grün.
+    definition: "the traffic lights at a junction: red, amber or green"
     use_cases:
       - Nach der Ampel sehen Sie schon das Museum.
       - Die Ampel ist rot, wir warten.
@@ -105,7 +105,7 @@ entries:
 
   - term: der Verkehr
     tag: Nomen
-    definition: Alle Autos, Busse und Räder zusammen auf der Straße.
+    definition: the traffic — all the cars, buses and bikes on the road together
     use_cases:
       - Am Morgen ist in der Stadt viel Verkehr.
       - Bei so viel Verkehr dauert die Fahrt eine Stunde.
@@ -114,7 +114,7 @@ entries:
 
   - term: umsteigen
     tag: Verb
-    definition: Aus einem Zug oder Bus aussteigen und in einen anderen einsteigen.
+    definition: to change — to get off one train or bus and onto another
     use_cases:
       - In München müssen Sie einmal umsteigen.
       - Ich bin am Hauptbahnhof umgestiegen.
@@ -123,7 +123,7 @@ entries:
 
   - term: einsteigen
     tag: Verb
-    definition: In den Bus, in den Zug oder ins Auto gehen.
+    definition: to get on, to board a bus, train or car
     use_cases:
       - Ohne Fahrkarte kann man nicht in den Zug einsteigen.
       - Bitte einsteigen, der Zug fährt gleich ab!
@@ -132,7 +132,7 @@ entries:
 
   - term: aussteigen
     tag: Verb
-    definition: Aus dem Bus, aus dem Zug oder aus dem Auto gehen.
+    definition: to get off, to leave a bus, train or car
     use_cases:
       - Wir steigen an der nächsten Haltestelle aus.
       - Ich bin nach vier Stationen ausgestiegen.
@@ -141,7 +141,7 @@ entries:
 
   - term: abbiegen
     tag: Verb
-    definition: Nicht geradeaus gehen oder fahren, sondern nach rechts oder nach links.
+    definition: to turn — to go right or left instead of straight on
     use_cases:
       - Biegen Sie nach der Ampel rechts ab.
       - Ich bin zu früh links abgebogen.
@@ -150,7 +150,7 @@ entries:
 
   - term: ankommen
     tag: Verb
-    definition: Am Ende vom Weg sein. Man ist da.
+    definition: to arrive, to reach the end of the journey
     use_cases:
       - Der Zug kommt um 14:30 in Wien an.
       - Wir sind pünktlich angekommen.
@@ -159,7 +159,7 @@ entries:
 
   - term: abfahren
     tag: Verb
-    definition: Losfahren. Der Zug oder der Bus beginnt die Fahrt.
+    definition: to depart, to set off — the train or bus starts its journey
     use_cases:
       - Der Zug fährt um 8:14 von Bahnsteig 7 ab.
       - Wir sind heute sehr früh abgefahren.
@@ -168,7 +168,7 @@ entries:
 
   - term: dauern
     tag: Verb
-    definition: So viel Zeit braucht eine Sache von Anfang bis Ende.
+    definition: to last, to take (that amount of time) from start to finish
     use_cases:
       - Die Fahrt dauert ungefähr sechs Stunden.
       - Wie lange dauert das noch?
@@ -177,7 +177,7 @@ entries:
 
   - term: erreichen
     tag: Verb
-    definition: Rechtzeitig da sein und mitfahren können.
+    definition: to catch (a train or bus) — to be there in time and get on
     use_cases:
       - In München erreichen Sie Ihren Zug noch.
       - Ich habe den Bus um sieben nicht mehr erreicht.
@@ -186,7 +186,7 @@ entries:
 
   - term: verpassen
     tag: Verb
-    definition: Zu spät kommen. Der Zug oder der Bus ist schon weg.
+    definition: to miss (a train or bus) — to arrive too late, it has already gone
     use_cases:
       - Heute Morgen habe ich meinen Bus verpasst.
       - Schnell, sonst verpassen wir die Straßenbahn!
@@ -195,7 +195,7 @@ entries:
 
   - term: halten
     tag: Verb
-    definition: Kurz nicht weiterfahren. Die Leute steigen ein und aus.
+    definition: to stop briefly, so that people can get on and off
     use_cases:
       - Der Bus hält an jeder Haltestelle.
       - Dieser Zug hält nicht in Ulm.
@@ -204,7 +204,7 @@ entries:
 
   - term: pünktlich
     tag: Adjektiv
-    definition: "Genau zur richtigen Zeit, keine Minute später. Gegenteil: mit Verspätung."
+    definition: on time, punctual; opposite of mit Verspätung
     use_cases:
       - Der Zug ist heute pünktlich abgefahren.
       - Bitte sei pünktlich, der Film beginnt um acht.
@@ -213,7 +213,7 @@ entries:
 
   - term: bequem
     tag: Adjektiv
-    definition: Man sitzt gut und wird nicht müde.
+    definition: comfortable — you sit well and do not get tired
     use_cases:
       - Im Zug sitzt man bequem und kann lesen.
       - Der Sessel im Wartezimmer ist sehr bequem.
@@ -222,7 +222,7 @@ entries:
 
   - term: voll
     tag: Adjektiv
-    definition: "Es ist kein Platz mehr da. Gegenteil: leer."
+    definition: full — there is no room left; opposite of leer
     use_cases:
       - Am Morgen ist die Straßenbahn sehr voll.
       - Der Zug war sehr voll, wir haben keinen Platz gefunden.
@@ -231,7 +231,7 @@ entries:
 
   - term: geradeaus
     tag: Adverb
-    definition: Nicht nach rechts und nicht nach links. Immer in die gleiche Richtung.
+    definition: straight on — neither right nor left, always the same direction
     use_cases:
       - Gehen Sie hier geradeaus bis zur Kreuzung.
       - Immer geradeaus, dann sehen Sie den Bahnhof.
@@ -240,7 +240,7 @@ entries:
 
   - term: unterwegs
     tag: Adverb
-    definition: Nicht mehr zu Hause und noch nicht am Ziel. Auf dem Weg.
+    definition: on the way, en route — no longer at home and not yet there
     use_cases:
       - Ich bin seit sechs Stunden unterwegs.
       - Unterwegs habe ich zwei Kaffee getrunken.
@@ -249,7 +249,7 @@ entries:
 
   - term: zu Fuß
     tag: Adverb
-    definition: Ohne Auto, ohne Bus und ohne Rad. Man geht.
+    definition: on foot — no car, no bus, no bike
     use_cases:
       - Ich gehe jeden Morgen zu Fuß zur Arbeit.
       - Zu Fuß sind es nur fünf Minuten.
@@ -258,7 +258,7 @@ entries:
 
   - term: ungefähr
     tag: Adverb
-    definition: Nicht genau. Ein bisschen mehr oder ein bisschen weniger.
+    definition: roughly, about — a little more or a little less
     use_cases:
       - Die Fahrt dauert ungefähr eine Stunde.
       - Bis zum Museum sind es ungefähr zwanzig Minuten.
@@ -267,7 +267,7 @@ entries:
 
   - term: sofort
     tag: Adverb
-    definition: Gleich jetzt, ohne eine Minute zu warten.
+    definition: right away, immediately, without a minute of waiting
     use_cases:
       - Ich bin in München sofort umgestiegen.
       - Nach der Arbeit fahre ich sofort nach Hause.

@@ -1,17 +1,17 @@
 mode: writing
-genre: Beschreibung des eigenen Zimmers
+genre: a description of your own room
 word_target: [50, 60]
 prompt: |
-  Eine Freundin will Ihr Zimmer sehen, bevor sie zu Besuch kommt.
-  Beschreiben Sie ihr das Zimmer. 50–60 Wörter.
+  A friend wants to see your room before she visits. Describe it to her,
+  in German. 50–60 words.
 
-  Schreiben Sie zu allen vier Punkten:
-  • Wie das Zimmer ist — hell, dunkel, eng, praktisch
-  • Wo die großen Möbel stehen
-  • Was an der Wand hängt
-  • Was Sie noch ändern möchten
+  Cover all four points:
+  • what the room is like — hell, dunkel, eng, praktisch
+  • where the big pieces of furniture stand
+  • what hangs on the wall
+  • what you would still like to change
 
-  Benutzen Sie mindestens vier Wechselpräpositionen und die Frage Wo?
+  Use at least four two-way prepositions and the question Wo?
 model_answer: |
   Mein Zimmer ist klein, aber sehr hell. Der Schreibtisch steht am Fenster,
   daneben ein Regal mit meinen Büchern. Das Bett steht an der Wand,
@@ -19,11 +19,11 @@ model_answer: |
   dem Boden liegt ein Teppich. Nur der Sessel passt nicht: Er steht
   mitten im Zimmer. Nächste Woche stelle ich ihn in die Ecke.
 checklist:
-  - 50–60 Wörter
-  - Alle vier Punkte stehen im Text
-  - Mindestens vier Wechselpräpositionen kommen vor
-  - Nach Wo? steht der Dativ (auf dem Tisch, an der Wand)
-  - Nach Wohin? steht der Akkusativ (in die Ecke, an die Wand)
-  - stehen, liegen und hängen ohne Objekt — stellen, legen und hängen mit Objekt
-  - Adjektive stehen hinter dem Nomen mit sein (Das Zimmer ist hell)
-  - Mindestens acht Wörter aus dem Modul kommen vor
+  - 50–60 words
+  - All four points are covered
+  - At least four two-way prepositions appear
+  - Wo? is answered with the dative (auf dem Tisch, an der Wand)
+  - Wohin? is answered with the accusative (in die Ecke, an die Wand)
+  - stehen, liegen and hängen take no object — stellen, legen and hängen do
+  - Adjectives follow the noun with sein (Das Zimmer ist hell)
+  - At least eight words from the module appear

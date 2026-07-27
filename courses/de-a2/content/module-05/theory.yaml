@@ -1,28 +1,29 @@
-# Modul 05 · Früher und heute — Grammatik im Fokus, Watch out! und Lückenkarten.
-# 6 Punkte — genau die Grammatik-Liste der Modulkarte (courses/de-a2/PLAN.md §4).
-# Die Obergrenze des Profils (§6) wäre 2 Spotlights × 4 Punkte.
+# Modul 05 · Früher und heute — theory. Two spotlights, 9 items realising the
+# six grammar points of the module card (courses/de-a2/PLAN.md §4).
 #
-# Fachwörter: alle aus dem Grammatik-Wörterbuch der Diagnostik (der Hauptsatz,
-# der Nebensatz, die Konjunktion, das Verb, der Stamm, die Endung, das Präsens,
-# der Infinitiv, die Vergangenheit, das Partizip, die Person), dazu „das
-# Präteritum" — der Begriff nennt die Konstruktion, die dieses Modul einführt,
-# und steht deshalb im ersten Punkt der Theorie (PLAN.md §5.2). „Das Perfekt"
-# kommt aus Modul 01.
-# Für können, müssen, wollen, dürfen und sollen gibt es kein Fachwort im
-# Wörterbuch — deshalb stehen überall die fünf Verben selbst.
+# The simple past stays with sein, haben and the five modal verbs. Every other
+# verb keeps the perfect (module 01) — that is exactly how German is spoken.
 #
-# Das Präteritum bleibt bei sein, haben und diesen fünf Verben. Alle anderen
-# Verben stehen weiter im Perfekt (Modul 01) — genau so erzählt man im Alltag.
+# Word order in the subordinate clause is not a seventh point but lives in the
+# als/wenn tables: this is where the learner meets it for the first time.
 #
-# Die Stellung im Nebensatz ist kein siebter Punkt, sondern steht in den
-# Tabellen zu als und wenn: hier trifft der Lernende sie zum ersten Mal.
+# Scaffolding rule (§5, revised 2026-07): title, intro, form and note in English,
+# every example and table in German. Paradigms and the als/wenn/wann split come
+# from courses/_reference/basic-german/ units 22 and 27.
 spotlights:
-  - title: "Das Präteritum"
-    intro: "Von gestern erzählt man im Perfekt. Bei sein, haben und den Verben können, müssen, wollen, dürfen, sollen nimmt man aber eine andere Form: das Präteritum."
+  - title: The simple past
+    intro: >-
+      German has two past tenses and uses them differently from English. For
+      almost every verb, spoken German tells the story in the perfect — the
+      tense you learned in module 01. But a small group of very frequent verbs
+      sounds wrong in the perfect and takes the simple past instead: sein,
+      haben and the five modals können, müssen, wollen, dürfen, sollen. Nobody
+      says Ich habe ein Kind gewesen; everyone says Ich war ein Kind. These
+      seven paradigms are the whole of the simple past you need at A2.
     items:
-      - form: "Das Präteritum von sein: war"
+      - form: "The simple past of sein: war"
         example: Als ich ein Kind war, war ich sehr schüchtern.
-        note: "Nicht ich bin gewesen, sondern ich war. So spricht man von früher."
+        note: "Not ich bin gewesen but ich war. This is how you talk about the past."
         table:
           headers: ["", "Präsens", "Präteritum"]
           rows:
@@ -32,9 +33,9 @@ spotlights:
             - ["wir", "sind", "waren"]
             - ["ihr", "seid", "wart"]
             - ["sie / Sie", "sind", "waren"]
-      - form: "Das Präteritum von haben: hatte"
+      - form: "The simple past of haben: hatte"
         example: Damals hatten wir kein Auto und keinen Fernseher.
-        note: "Der Stamm heißt hatt-. Die 1. und die 3. Person sind gleich."
+        note: "The stem is hatt-. As everywhere in the simple past, the ich and er/sie/es forms are identical."
         table:
           headers: ["", "Präsens", "Präteritum"]
           rows:
@@ -44,9 +45,9 @@ spotlights:
             - ["wir", "haben", "hatten"]
             - ["ihr", "habt", "hattet"]
             - ["sie / Sie", "haben", "hatten"]
-      - form: "Das Präteritum von können, müssen, wollen, dürfen, sollen"
-        example: Mit acht Jahren durfte ich schon allein zur Schule gehen.
-        note: "Bei können, müssen, dürfen wird aus ö und ü ein o und u. Die Endung ist -te."
+      - form: "The simple past of können, müssen, wollen, dürfen, sollen"
+        example: Mit acht Jahren durfte ich schon allein zur Schule gehen. Wir konnten nicht schwimmen.
+        note: "The umlaut disappears — ö and ü become o and u — and the ending is -te."
         table:
           headers: ["Infinitiv", "ich / er, sie, es", "wir / sie"]
           rows:
@@ -55,30 +56,47 @@ spotlights:
             - ["wollen", "wollte", "wollten"]
             - ["dürfen", "durfte", "durften"]
             - ["sollen", "sollte", "sollten"]
+      - form: "Which past tense to use"
+        example: "Ich war müde. Ich hatte keine Zeit. Ich habe lange geschlafen."
+        note: Seven verbs take the simple past; everything else keeps the perfect. Mixing them in one text is normal, not a mistake.
+        table:
+          headers: ["Verb", "So sagt man", "Nicht"]
+          rows:
+            - ["sein", "Ich war krank.", "Ich bin krank gewesen."]
+            - ["haben", "Wir hatten Ferien.", "Wir haben Ferien gehabt."]
+            - ["können", "Ich konnte nicht kommen.", "Ich habe nicht kommen können."]
+            - ["spielen", "Ich habe gespielt.", "Ich spielte."]
+            - ["fahren", "Wir sind gefahren.", "Wir fuhren."]
 
-  - title: "als und wenn"
-    intro: "Beide Konjunktionen sagen: zu dieser Zeit früher. als steht für einmal, wenn für immer wieder. Nach beiden steht das Verb am Ende vom Nebensatz."
+  - title: als and wenn
+    intro: >-
+      English has one word, 'when', where German has three. als marks a single
+      occasion in the past, wenn a repeated one, and wann is only ever a
+      question. Both als and wenn open a subordinate clause, and that brings the
+      rule that shapes the whole of German from here on: in a subordinate clause
+      the finite verb goes right to the end. It is the first time you meet it —
+      it comes back with weil, dass and obwohl in block C.
     items:
-      - form: "als — einmal in der Vergangenheit"
+      - form: "als — one occasion in the past"
         example: Als ich acht Jahre alt war, sind wir in eine andere Stadt gezogen.
-        note: "Ein Tag, ein Jahr, ein Erlebnis. Der Nebensatz kann vorn oder hinten stehen."
+        note: One day, one year, one experience. The subordinate clause can come first or second.
         table:
           headers: ["Reihenfolge", "Beispiel"]
           rows:
             - ["Nebensatz zuerst", "Als ich sechs war, bin ich in die Schule gekommen."]
             - ["Hauptsatz zuerst", "Ich bin in die Schule gekommen, als ich sechs war."]
-      - form: "wenn — immer wieder in der Vergangenheit"
+      - form: "wenn — a repeated occasion in the past"
         example: Immer wenn wir Ferien hatten, sind wir zu meiner Oma gefahren.
-        note: "Oft steht immer oder jedes Mal dabei. Auch hier: Verb am Ende."
+        note: "immer or jedes Mal often stands beside it. Here too the verb goes to the end."
         table:
           headers: ["Wie oft?", "Konjunktion", "Beispiel"]
           rows:
             - ["einmal", "als", "Als ich zehn war, habe ich ein Fahrrad bekommen."]
             - ["immer wieder", "wenn", "Wenn ich Geburtstag hatte, hat Oma einen Kuchen gebacken."]
             - ["immer wieder", "wenn", "Immer wenn es geregnet hat, haben wir im Hof gespielt."]
-      - form: "Die Zeitangaben der Vergangenheit"
+      - form: Time expressions for the past
         example: Mit acht Jahren konnte ich schon Rad fahren.
-        note: "Sie stehen am Anfang oder in der Mitte. Am Anfang kommt danach das Verb."
+        note: They stand at the front or in the middle. At the front, the verb follows immediately.
         table:
           headers: ["Zeitangabe", "Beispiel"]
           rows:
@@ -87,47 +105,57 @@ spotlights:
             - ["mit acht Jahren", "Mit acht Jahren durfte ich allein zur Schule gehen."]
             - ["als Kind", "Als Kind war ich sehr schüchtern."]
             - ["am dritten Mai", "Am dritten Mai sind wir umgezogen."]
+      - form: "als, wenn or wann?"
+        example: "Als ich klein war … Wenn wir Ferien hatten … Wann bist du geboren?"
+        note: English uses 'when' for all three. German splits them, and wann only ever appears in a question.
+        table:
+          headers: ["Wort", "Wofür", "Beispiel"]
+          rows:
+            - ["als", "einmal, Vergangenheit", "Als ich zehn war, …"]
+            - ["wenn", "immer wieder, Vergangenheit", "Immer wenn es regnete, …"]
+            - ["wenn", "Gegenwart und Zukunft", "Wenn ich Zeit habe, komme ich."]
+            - ["wann", "nur in der Frage", "Wann bist du umgezogen?"]
 
 watchouts:
-  - title: "als oder wenn?"
+  - title: "als or wenn?"
     bad: Immer als wir Ferien hatten, sind wir zu Oma gefahren.
     good: Immer wenn wir Ferien hatten, sind wir zu Oma gefahren.
-    note: "Einmal in der Vergangenheit → als. Immer wieder → wenn."
-  - title: "Das Verb steht am Ende"
+    note: "One occasion in the past → als. A repeated one → wenn."
+  - title: The verb goes to the end
     bad: Als ich war klein, hatte ich einen Hund.
     good: Als ich klein war, hatte ich einen Hund.
-    note: "Nach als und wenn steht das Verb ganz am Ende vom Nebensatz."
-  - title: "Jahre alt"
+    note: "After als and wenn the finite verb stands right at the end of its clause."
+  - title: Jahre alt, not just Jahre
     bad: Damals war ich acht Jahre.
     good: Damals war ich acht Jahre alt.
-    note: "Nach der Zahl der Jahre steht immer alt. Auch: Ich bin 30 Jahre alt."
-  - title: "war statt habe gewesen"
+    note: "After the number of years German always adds alt: Ich bin 30 Jahre alt."
+  - title: war, not habe gewesen
     bad: Ich habe als Kind in einem Dorf gewesen.
     good: Ich war als Kind in einem Dorf.
-    note: "sein und haben stehen fast immer im Präteritum: war, hatte."
+    note: "sein and haben almost always take the simple past: war, hatte."
 
 cloze_cards:
   - text: "Als ich ein Kind {{c1::war}}, haben wir in einem kleinen Dorf gewohnt."
     hint: sein
-    rule: "sein im Präteritum: ich war. Nach als steht das Verb am Ende."
+    rule: "sein in the simple past: ich war. After als the verb goes to the end."
   - text: "Damals {{c1::hatten}} wir kein Auto und keinen Fernseher."
     hint: haben
-    rule: "haben im Präteritum: wir hatten. damals zeigt die Vergangenheit."
+    rule: "haben in the simple past: wir hatten. damals marks the past."
   - text: "Mit sechs Jahren {{c1::konnte}} ich noch nicht lesen."
     hint: können
-    rule: "können im Präteritum: ich konnte. Aus ö wird o."
+    rule: "können in the simple past: ich konnte. The ö becomes o."
   - text: "Meine Eltern waren streng. Ich {{c1::durfte}} abends nicht lange draußen bleiben."
     hint: dürfen
-    rule: "dürfen im Präteritum: ich durfte. Aus ü wird u."
+    rule: "dürfen in the simple past: ich durfte. The ü becomes u."
   - text: "{{c1::Als}} ich zehn war, habe ich mein erstes Fahrrad bekommen."
     hint: als oder wenn
-    rule: "Ein Erlebnis, einmal in der Vergangenheit → als."
+    rule: "One experience, one occasion in the past → als."
   - text: "Immer {{c1::wenn}} wir Ferien hatten, sind wir zu meiner Oma gefahren."
     hint: als oder wenn
-    rule: "Immer wieder in der Vergangenheit → wenn. Oft steht immer dabei."
+    rule: "A repeated occasion in the past → wenn, often with immer beside it."
   - text: "Meine Großmutter {{c1::war}} als Kind sehr arm."
     hint: sein
-    rule: "sein im Präteritum: sie war. Nicht: sie hat gewesen."
+    rule: "sein in the simple past: sie war — never sie hat gewesen."
   - text: "Ich {{c1::musste}} als Kind jeden Samstag im Hof helfen."
     hint: müssen
-    rule: "müssen im Präteritum: ich musste. Aus ü wird u, aus ß wird ss."
+    rule: "müssen in the simple past: ich musste. The ü becomes u and the ß becomes ss."

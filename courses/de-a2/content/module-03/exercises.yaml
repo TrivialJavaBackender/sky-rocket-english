@@ -18,7 +18,7 @@ core:
       post: " Tisch."
       options: [dem, den, der, das]
       answer: 0
-    explanation: "liegen fragt Wo? — also der Dativ. der Tisch → dem Tisch."
+    explanation: "liegen answers Wo? — so the case is dative. der Tisch → dem Tisch."
   - type: mc_cloze
     group: grammar
     content:
@@ -26,7 +26,7 @@ core:
       post: " Schreibtisch!"
       options: [dem, der, den, das]
       answer: 2
-    explanation: "stellen fragt Wohin? — also der Akkusativ. der Schreibtisch → den Schreibtisch."
+    explanation: "stellen answers Wohin? — so the case is accusative. der Schreibtisch → den Schreibtisch."
   - type: mc_cloze
     group: grammar
     content:
@@ -34,7 +34,7 @@ core:
       post: " dem Bett — man sieht ihn fast nicht."
       options: [über, unter, auf den, in die]
       answer: 1
-    explanation: "unter bedeutet: tiefer als etwas. Nach liegen (Wo?) steht der Dativ: unter dem Bett."
+    explanation: "unter means lower than something. After liegen (Wo?) comes the dative: unter dem Bett."
   - type: mc_cloze
     group: grammar
     content:
@@ -42,7 +42,7 @@ core:
       post: " Wand!"
       options: [der, dem, den, die]
       answer: 3
-    explanation: "hängen mit Objekt fragt Wohin? — Akkusativ. die Wand bleibt die Wand."
+    explanation: "hängen with an object answers Wohin? — accusative. die Wand stays die Wand."
   - type: mc_cloze
     group: grammar
     content:
@@ -50,7 +50,7 @@ core:
       post: " Regal, nicht auf dem Tisch."
       options: [ins, in die, im, in den]
       answer: 2
-    explanation: "stehen fragt Wo? — Dativ. in dem Regal wird kurz zu im Regal."
+    explanation: "stehen answers Wo? — dative, and in dem contracts to im Regal."
   - type: mc_cloze
     group: grammar
     content:
@@ -58,7 +58,7 @@ core:
       post: " die Ecke gestellt."
       options: [an, in, im, ins]
       answer: 1
-    explanation: "in die Ecke — stellen fragt Wohin?, also der Akkusativ. im wäre Wo?."
+    explanation: "in die Ecke — stellen answers Wohin?, so accusative. im would answer Wo?."
 
   # ───────────────────────── Lückentext ─────────────────────────
   - type: open_cloze
@@ -68,7 +68,7 @@ core:
       post: " Boden neben dem Sessel."
       answers: [dem]
       answer_shown: dem
-    explanation: "stehen fragt Wo? — Dativ. der Boden → dem Boden."
+    explanation: "stehen answers Wo? — dative. der Boden → dem Boden."
   - type: open_cloze
     group: grammar
     content:
@@ -76,7 +76,7 @@ core:
       post: " Wand über dem Bett."
       answers: [die]
       answer_shown: die
-    explanation: "hängen mit Objekt fragt Wohin? — Akkusativ. die Wand bleibt die."
+    explanation: "hängen with an object answers Wohin? — accusative. die Wand stays die."
   - type: open_cloze
     group: grammar
     content:
@@ -84,7 +84,7 @@ core:
       post: " Ecke neben der Tür."
       answers: [der]
       answer_shown: der
-    explanation: "stehen fragt Wo? — Dativ. die Ecke → der Ecke."
+    explanation: "stehen answers Wo? — dative. die Ecke → der Ecke."
   - type: open_cloze
     group: grammar
     content:
@@ -92,7 +92,7 @@ core:
       post: " Fenster!"
       answers: [das]
       answer_shown: das
-    explanation: "stellen fragt Wohin? — Akkusativ. das Fenster bleibt das."
+    explanation: "stellen answers Wohin? — accusative. das Fenster stays das."
   - type: open_cloze
     group: grammar
     content:
@@ -100,7 +100,7 @@ core:
       post: " Sofa."
       answers: [dem]
       answer_shown: dem
-    explanation: "hängen ohne Objekt fragt Wo? — Dativ. das Sofa → dem Sofa."
+    explanation: "hängen without an object answers Wo? — dative. das Sofa → dem Sofa."
   - type: open_cloze
     group: grammar
     content:
@@ -108,7 +108,7 @@ core:
       post: " Sessel und das Regal."
       answers: [den]
       answer_shown: den
-    explanation: "stellen fragt Wohin? — Akkusativ. der Sessel → den Sessel."
+    explanation: "stellen answers Wohin? — accusative. der Sessel → den Sessel."
   - type: open_cloze
     group: grammar
     content:
@@ -116,7 +116,7 @@ core:
       post: " Tisch."
       answers: [dem]
       answer_shown: dem
-    explanation: "liegen fragt Wo? — Dativ. der Tisch → dem Tisch."
+    explanation: "liegen answers Wo? — dative. der Tisch → dem Tisch."
   - type: open_cloze
     group: grammar
     content:
@@ -124,7 +124,7 @@ core:
       post: " Schrank!"
       answers: [den]
       answer_shown: den
-    explanation: "hängen mit Objekt fragt Wohin? — Akkusativ. der Schrank → den Schrank."
+    explanation: "hängen with an object answers Wohin? — accusative. der Schrank → den Schrank."
 
   # ───────────────────────── Wortbildung ─────────────────────────
   - type: word_formation
@@ -135,7 +135,7 @@ core:
       prompt: schlafen + das Zimmer
       answers: [Schlafzimmer]
       answer_shown: Schlafzimmer
-    explanation: "Zwei Teile werden ein Wort: schlafen + das Zimmer = das Schlafzimmer."
+    explanation: "Two parts become one word: schlafen + das Zimmer = das Schlafzimmer."
   - type: word_formation
     group: vocab
     content:
@@ -144,7 +144,7 @@ core:
       prompt: wohnen + das Zimmer
       answers: [Wohnzimmer]
       answer_shown: Wohnzimmer
-    explanation: "wohnen + das Zimmer = das Wohnzimmer. Der Artikel kommt vom zweiten Teil."
+    explanation: "wohnen + das Zimmer = das Wohnzimmer. The article comes from the second part."
   - type: word_formation
     group: vocab
     content:
@@ -193,7 +193,7 @@ core:
       answers: [den]
       hint: 1 Wort
       answer_shown: den
-    explanation: "Aus Wo? wird Wohin?: liegen → legen, Dativ → Akkusativ. dem Tisch → den Tisch."
+    explanation: "Wo? turns into Wohin?: liegen → legen, dative → accusative. dem Tisch → den Tisch."
   - type: key_word_transformation
     group: grammar
     content:
@@ -204,7 +204,7 @@ core:
       answers: [der]
       hint: 1 Wort
       answer_shown: der
-    explanation: "Aus Wohin? wird Wo?: der Akkusativ wird zum Dativ. die Wand → der Wand."
+    explanation: "Wohin? turns into Wo?: the accusative becomes the dative. die Wand → der Wand."
   - type: key_word_transformation
     group: grammar
     content:
@@ -215,7 +215,7 @@ core:
       answers: [der]
       hint: 1 Wort
       answer_shown: der
-    explanation: "stellen → stehen, Akkusativ → Dativ. die Ecke → der Ecke."
+    explanation: "stellen → stehen, accusative → dative. die Ecke → der Ecke."
   - type: key_word_transformation
     group: grammar
     content:
@@ -226,7 +226,7 @@ core:
       answers: [neben das Sofa]
       hint: 3 Wörter
       answer_shown: neben das Sofa
-    explanation: "Die Frage Wohin? verlangt den Akkusativ: neben das Sofa."
+    explanation: "The question Wohin? calls for the accusative: neben das Sofa."
 
   # ───────────────────────── Grammatik-Drill ─────────────────────────
   - type: grammar_drill
@@ -237,7 +237,7 @@ core:
       prompt: STEHEN ODER STELLEN
       options: [steht, stellt, stellen, stehen]
       answer: 0
-    explanation: "Kein Objekt im Satz und die Frage ist Wo? — also stehen."
+    explanation: "No object in the sentence and the question is Wo? — so the verb is stehen."
   - type: grammar_drill
     group: grammar
     content:
@@ -246,7 +246,7 @@ core:
       prompt: STEHEN ODER STELLEN
       options: [stehe, stelle, steht, stellt]
       answer: 1
-    explanation: "die Lampe ist das Objekt und die Frage ist Wohin? — also stellen."
+    explanation: "die Lampe is the object and the question is Wohin? — so the verb is stellen."
   - type: grammar_drill
     group: grammar
     content:
@@ -255,7 +255,7 @@ core:
       prompt: LIEGEN ODER LEGEN
       options: [lege, legt, liegt, liege]
       answer: 2
-    explanation: "Kein Objekt, Frage Wo? — also liegen: Das Buch liegt."
+    explanation: "No object, question Wo? — so the verb is liegen: Das Buch liegt."
   - type: grammar_drill
     group: grammar
     content:
@@ -264,7 +264,7 @@ core:
       prompt: LIEGEN ODER LEGEN
       options: [liegt, liege, legt, leg]
       answer: 3
-    explanation: "Bitte an eine Person mit du: leg. Mit Objekt und Wohin? gehört legen dazu."
+    explanation: "A request to one person with du: leg. With an object and Wohin? the verb is legen."
   - type: grammar_drill
     group: grammar
     content:
@@ -273,7 +273,7 @@ core:
       prompt: WO?
       options: [in, ins, in die, an die]
       answer: 0
-    explanation: "Wo? verlangt den Dativ: in der Ecke. ins und in die wären Wohin?."
+    explanation: "Wo? calls for the dative: in der Ecke. ins and in die would answer Wohin?."
   - type: grammar_drill
     group: grammar
     content:
@@ -282,7 +282,7 @@ core:
       prompt: WOHIN?
       options: [im, in, ins, an dem]
       answer: 1
-    explanation: "Wohin? verlangt den Akkusativ: in den Schrank."
+    explanation: "Wohin? calls for the accusative: in den Schrank."
   - type: grammar_drill
     group: grammar
     content:
@@ -291,7 +291,7 @@ core:
       prompt: PRÄPOSITION MIT DATIV
       options: [in, an, mit, auf]
       answer: 2
-    explanation: "mit nimmt immer den Dativ und wechselt nie: mit dem Fahrrad, mit der Bahn."
+    explanation: "mit always takes the dative and never alternates: mit dem Fahrrad, mit der Bahn."
   - type: grammar_drill
     group: grammar
     content:
@@ -300,7 +300,7 @@ core:
       prompt: HABEN ODER SEIN
       options: [hat, haben, war, ist]
       answer: 3
-    explanation: "umziehen ist Bewegung von A nach B: Perfekt mit sein. sie + sein = ist."
+    explanation: "umziehen is movement from A to B, so the perfect takes sein. sie + sein = ist."
 
   # ───────────────────────── Fehlersuche ─────────────────────────
   - type: error_correction
@@ -309,42 +309,42 @@ core:
       words: [Ich, lege, das, Buch, auf, dem, "Tisch."]
       wrong: 5
       correction: "dem → den"
-    explanation: "legen fragt Wohin? — der Akkusativ: auf den Tisch."
+    explanation: "legen answers Wohin? — accusative: auf den Tisch."
   - type: error_correction
     group: grammar
     content:
       words: [Der, Schrank, steht, in, die, "Ecke."]
       wrong: 4
       correction: "die → der"
-    explanation: "stehen fragt Wo? — der Dativ: in der Ecke."
+    explanation: "stehen answers Wo? — dative: in der Ecke."
   - type: error_correction
     group: grammar
     content:
       words: [Häng, das, Bild, bitte, an, der, "Wand!"]
       wrong: 5
       correction: "der → die"
-    explanation: "hängen mit Objekt fragt Wohin? — der Akkusativ: an die Wand."
+    explanation: "hängen with an object answers Wohin? — accusative: an die Wand."
   - type: error_correction
     group: grammar
     content:
       words: [Die, Lampe, stellt, auf, dem, "Schreibtisch."]
       wrong: 2
       correction: "stellt → steht"
-    explanation: "Ohne Objekt steht stehen. stellen braucht immer ein Objekt: Ich stelle die Lampe."
+    explanation: "With no object the verb is stehen. stellen always needs one: Ich stelle die Lampe."
   - type: error_correction
     group: grammar
     content:
       words: [Wir, haben, letzte, Woche, nach, Bremen, "umgezogen."]
       wrong: 1
       correction: "haben → sind"
-    explanation: "umziehen ist Bewegung von A nach B und bildet das Perfekt mit sein."
+    explanation: "umziehen is movement from A to B and forms its perfect with sein."
   - type: error_correction
     group: grammar
     content:
       words: [Wir, haben, ein, neues, Schlaf, Zimmer, "eingerichtet."]
       wrong: 4
       correction: "Schlaf Zimmer → Schlafzimmer"
-    explanation: "Zwei Nomen werden im Deutschen ein Wort: das Schlafzimmer."
+    explanation: "Two nouns always become one word in German: das Schlafzimmer."
 
   # ───────────────────────── Wörter verbinden ─────────────────────────
   - type: collocation_match
@@ -353,35 +353,35 @@ core:
       left: [stellen, legen, stehen, liegen]
       right: [Wo? + Dativ, aufrecht, Wohin? + Akkusativ, flach]
       pairs: { 0: 2, 1: 3, 2: 0, 3: 1 }
-    explanation: "stellen und legen fragen Wohin?, stehen und liegen fragen Wo?. legen und liegen sind flach, stellen und stehen aufrecht."
+    explanation: "stellen and legen answer Wohin?, stehen and liegen answer Wo?. legen and liegen are flat, stellen and stehen upright."
   - type: collocation_match
     group: grammar
     content:
       left: [in dem, in das, an dem, an das]
       right: [ins, am, im, ans]
       pairs: { 0: 2, 1: 0, 2: 1, 3: 3 }
-    explanation: "Die kurzen Formen: in dem = im, in das = ins, an dem = am, an das = ans."
+    explanation: "The contracted forms: in dem = im, in das = ins, an dem = am, an das = ans."
   - type: collocation_match
     group: vocab
     content:
       left: [der Schrank, das Regal, der Teppich, die Lampe]
       right: [liegt auf dem Boden, macht das Zimmer hell, hat Türen, hat Bretter für Bücher]
       pairs: { 0: 2, 1: 3, 2: 0, 3: 1 }
-    explanation: "Vier Möbelstücke — jedes mit dem, was es ausmacht."
+    explanation: "Four pieces of furniture, each with what defines it."
   - type: collocation_match
     group: vocab
     content:
       left: [hell, dunkel, eng, praktisch]
       right: [mit wenig Platz, mit viel Licht, gut zu benutzen, mit wenig Licht]
       pairs: { 0: 1, 1: 3, 2: 0, 3: 2 }
-    explanation: "hell und dunkel sind Gegenteile. eng beschreibt den Platz, praktisch den Nutzen."
+    explanation: "hell and dunkel are opposites. eng describes the space, praktisch the use."
   - type: collocation_match
     group: vocab
     content:
       left: [oben, unten, daneben, gegenüber]
       right: [direkt neben dieser Sache, an einem tiefen Ort, auf der anderen Seite, an einem hohen Ort]
       pairs: { 0: 3, 1: 1, 2: 0, 3: 2 }
-    explanation: "oben und unten sind Gegenteile. daneben und gegenüber zeigen die Seite."
+    explanation: "oben and unten are opposites. daneben and gegenüber tell you the side."
   - type: collocation_match
     group: vocab
     content:
@@ -395,14 +395,14 @@ core:
       left: [umziehen, einrichten, passen, finden]
       right: [die richtige Größe haben, Möbel in ein leeres Zimmer stellen, in eine andere Wohnung wechseln, was man gesucht hat]
       pairs: { 0: 2, 1: 1, 2: 0, 3: 3 }
-    explanation: "Vier Verben rund um den Umzug — jedes mit seiner Umschreibung."
+    explanation: "Four verbs about moving house, each with its paraphrase."
   - type: collocation_match
     group: vocab
     content:
       left: [schlafen + Zimmer, Bücher + Regal, Kleider + Schrank, schreiben + Tisch]
       right: [das Bücherregal, der Schreibtisch, das Schlafzimmer, der Kleiderschrank]
       pairs: { 0: 2, 1: 0, 2: 3, 3: 1 }
-    explanation: "Zwei Teile werden ein Wort. Der Artikel kommt immer vom zweiten Teil."
+    explanation: "Two parts become one word, and the article always comes from the second one."
 
   # ───────────────────────── Leseverstehen ─────────────────────────
   - type: reading_comprehension
@@ -416,7 +416,7 @@ core:
         - Der vierte Stock
         - Die Zahl der Zimmer
       answer: 0
-    explanation: "Im Text steht: Nur der Flur ist eng und dunkel. Alles andere findet sie hell und praktisch."
+    explanation: "The text says: Nur der Flur ist eng und dunkel. Everything else she finds bright and practical."
   - type: reading_comprehension
     group: reading
     content:
@@ -428,7 +428,7 @@ core:
         - Dort steht auch das Sofa.
         - Dort liegt der Teppich.
       answer: 1
-    explanation: "Im Text steht: dort ist es am hellsten, und Mira liest dort jeden Abend."
+    explanation: "The text says: dort ist es am hellsten, und Mira liest dort jeden Abend."
   - type: reading_comprehension
     group: reading
     content:
@@ -440,7 +440,7 @@ core:
         - Auf dem Boden
         - Im Flur
       answer: 2
-    explanation: "Im Text steht: es steht daneben auf dem Boden. An der Wand hängt es gerade nicht."
+    explanation: "The text says: es steht daneben auf dem Boden. It is not hanging on the wall at the moment."
   - type: reading_comprehension
     group: reading
     content:
@@ -452,7 +452,7 @@ core:
         - Er richtet zuerst das Schlafzimmer ein.
         - Er hängt das Foto über das Bett.
       answer: 3
-    explanation: "Im Text steht: Das Foto hängt in jeder Wohnung über unserem Bett."
+    explanation: "The text says: Das Foto hängt in jeder Wohnung über unserem Bett."
   - type: reading_comprehension
     group: reading
     content:
@@ -464,7 +464,7 @@ core:
         - Unten ist kein Platz mehr.
         - Die Töpfe sind zu groß.
       answer: 1
-    explanation: "Im Text steht: oben nehme ich zehnmal am Tag etwas heraus, unten zweimal."
+    explanation: "The text says: oben nehme ich zehnmal am Tag etwas heraus, unten zweimal."
   - type: reading_comprehension
     group: reading
     content:
@@ -476,7 +476,7 @@ core:
         - Er ist zu groß für den Platz.
         - Er passt nicht zu den Möbeln.
       answer: 2
-    explanation: "Im Text steht: Der Küchentisch ist zu groß. Er steht mitten im Raum, und alle laufen um ihn herum."
+    explanation: "The text says: Der Küchentisch ist zu groß. Er steht mitten im Raum, und alle laufen um ihn herum."
 
 # ───────────────────────── Wiederholungspool ─────────────────────────
 # 20 kurze Aufgaben für das Modul-Quiz und die Wiederholung nach 7 und 21 Tagen.
@@ -489,7 +489,7 @@ review_pool:
       post: " der Ecke."
       options: [in, in die, ins, an die]
       answer: 0
-    explanation: "stehen fragt Wo? — Dativ: in der Ecke."
+    explanation: "stehen answers Wo? — dative: in der Ecke."
   - type: mc_cloze
     group: grammar
     content:
@@ -497,7 +497,7 @@ review_pool:
       post: " Boden!"
       options: [dem, den, der, das]
       answer: 1
-    explanation: "legen fragt Wohin? — Akkusativ: auf den Boden."
+    explanation: "legen answers Wohin? — accusative: auf den Boden."
   - type: mc_cloze
     group: grammar
     content:
@@ -505,7 +505,7 @@ review_pool:
       post: " Schrank."
       options: [in den, ins, im, in die]
       answer: 2
-    explanation: "stehen fragt Wo? — in dem Schrank wird kurz zu im Schrank."
+    explanation: "stehen answers Wo? — and in dem contracts to im Schrank."
   - type: mc_cloze
     group: grammar
     content:
@@ -513,7 +513,7 @@ review_pool:
       post: " das Bett gehängt."
       options: [über dem, überm, unter dem, über]
       answer: 3
-    explanation: "hängen mit Objekt fragt Wohin? — Akkusativ: über das Bett."
+    explanation: "hängen with an object answers Wohin? — accusative: über das Bett."
   - type: open_cloze
     group: grammar
     content:
@@ -521,7 +521,7 @@ review_pool:
       post: " Wand im Flur."
       answers: [der]
       answer_shown: der
-    explanation: "hängen ohne Objekt fragt Wo? — Dativ. die Wand → der Wand."
+    explanation: "hängen without an object answers Wo? — dative. die Wand → der Wand."
   - type: open_cloze
     group: grammar
     content:
@@ -529,7 +529,7 @@ review_pool:
       post: " Schrank!"
       answers: [den]
       answer_shown: den
-    explanation: "stellen fragt Wohin? — Akkusativ. der Schrank → den Schrank."
+    explanation: "stellen answers Wohin? — accusative. der Schrank → den Schrank."
   - type: open_cloze
     group: grammar
     content:
@@ -537,7 +537,7 @@ review_pool:
       post: " Sofa."
       answers: [dem]
       answer_shown: dem
-    explanation: "liegen fragt Wo? — Dativ. das Sofa → dem Sofa."
+    explanation: "liegen answers Wo? — dative. das Sofa → dem Sofa."
   - type: open_cloze
     group: grammar
     content:
@@ -545,7 +545,7 @@ review_pool:
       post: " Lampe."
       answers: [die]
       answer_shown: die
-    explanation: "legen fragt Wohin? — Akkusativ. die Lampe bleibt die."
+    explanation: "legen answers Wohin? — accusative. die Lampe stays die."
   - type: open_cloze
     group: grammar
     content:
@@ -553,7 +553,7 @@ review_pool:
       post: " Fenster und der Tür."
       answers: [dem]
       answer_shown: dem
-    explanation: "stehen fragt Wo? — Dativ. das Fenster → dem Fenster."
+    explanation: "stehen answers Wo? — dative. das Fenster → dem Fenster."
   - type: open_cloze
     group: grammar
     content:
@@ -561,7 +561,7 @@ review_pool:
       post: " Flur gestellt."
       answers: [den]
       answer_shown: den
-    explanation: "stellen fragt Wohin? — Akkusativ. der Flur → den Flur."
+    explanation: "stellen answers Wohin? — accusative. der Flur → den Flur."
   - type: grammar_drill
     group: grammar
     content:
@@ -570,7 +570,7 @@ review_pool:
       prompt: LIEGEN ODER LEGEN
       options: [liegt, legt, lege, liege]
       answer: 0
-    explanation: "Kein Objekt, Frage Wo? — also liegen."
+    explanation: "No object, question Wo? — so the verb is liegen."
   - type: grammar_drill
     group: grammar
     content:
@@ -579,7 +579,7 @@ review_pool:
       prompt: STEHEN ODER STELLEN
       options: [stehe, stelle, steht, stellt]
       answer: 1
-    explanation: "den Sessel ist das Objekt, die Frage ist Wohin? — also stellen."
+    explanation: "den Sessel is the object and the question is Wohin? — so the verb is stellen."
   - type: grammar_drill
     group: grammar
     content:
@@ -588,7 +588,7 @@ review_pool:
       prompt: GUT ZU BENUTZEN
       options: [eng, dunkel, praktisch, oben]
       answer: 2
-    explanation: "praktisch heißt: man kann es gut benutzen."
+    explanation: "praktisch means it is easy and useful to work with."
   - type: grammar_drill
     group: grammar
     content:
@@ -597,28 +597,28 @@ review_pool:
       prompt: FINDEN
       options: [findet, gefindet, finden, gefunden]
       answer: 3
-    explanation: "finden ist unregelmäßig: gefunden."
+    explanation: "finden is irregular: gefunden."
   - type: error_correction
     group: grammar
     content:
       words: [Stell, die, Lampe, auf, dem, "Schreibtisch!"]
       wrong: 4
       correction: "dem → den"
-    explanation: "stellen fragt Wohin? — der Akkusativ: auf den Schreibtisch."
+    explanation: "stellen answers Wohin? — accusative: auf den Schreibtisch."
   - type: error_correction
     group: grammar
     content:
       words: [Das, Foto, hängt, über, das, "Bett."]
       wrong: 4
       correction: "das → dem"
-    explanation: "hängen ohne Objekt fragt Wo? — der Dativ: über dem Bett."
+    explanation: "hängen without an object answers Wo? — dative: über dem Bett."
   - type: error_correction
     group: grammar
     content:
       words: [Der, Teppich, legt, vor, dem, "Sofa."]
       wrong: 2
       correction: "legt → liegt"
-    explanation: "Ohne Objekt steht liegen. legen braucht immer ein Objekt."
+    explanation: "With no object the verb is liegen. legen always needs one."
   - type: word_formation
     group: vocab
     content:
@@ -634,7 +634,7 @@ review_pool:
       left: [die Wand, der Boden, die Ecke, das Regal]
       right: [dort kommen zwei Wände zusammen, dort stehen Bücher, dort hängen Bilder, dort liegt der Teppich]
       pairs: { 0: 2, 1: 3, 2: 0, 3: 1 }
-    explanation: "An der Wand hängen Bilder, auf dem Boden liegt der Teppich, in der Ecke kommen zwei Wände zusammen, im Regal stehen Bücher."
+    explanation: "Pictures hang an der Wand, the rug lies auf dem Boden, two walls meet in der Ecke, books stand im Regal."
   - type: key_word_transformation
     group: grammar
     content:
@@ -645,4 +645,4 @@ review_pool:
       answers: [der]
       hint: 1 Wort
       answer_shown: der
-    explanation: "Aus Wohin? wird Wo?: der Akkusativ wird zum Dativ. die Ecke → der Ecke."
+    explanation: "Wohin? turns into Wo?: the accusative becomes the dative. die Ecke → der Ecke."

@@ -1,65 +1,115 @@
-# Module 02 · theory. Two spotlights, 5 items — they realise the four grammar
+# Module 02 · theory. Two spotlights, 11 items — they realise the four grammar
 # points of the card (haben, regular present, possessives, verb second), plus a
 # numbers 20–100 reference (the module's lexical extension, PLAN.md §4). Scaffolding
 # rule (§5): intro and note English, every example and table German. Grammar terms
 # are named in English directly (§5.1).
+# Paradigms, spelling variations and the numbers: courses/_reference/basic-german/
+# units 02 (present tense), 03 (spelling variations), 04 (haben), 16 (possessives),
+# 26 (numbers), 28 (word order).
 spotlights:
   - title: haben and the present tense
-    intro: After sein, the next two things you need are haben (to have) and the regular present tense. Most German verbs follow one simple pattern.
+    intro: >-
+      After sein, the next two things you need are haben ('to have') and the
+      regular present tense. German verbs carry far more endings than English
+      ones: where English changes only the he/she form ('I work', 'he works'),
+      German has a different ending for almost every person. The good news is
+      that the pattern is one and the same for the great majority of verbs —
+      take the stem (the infinitive minus -en) and add the ending. haben is one
+      of the few verbs that break the pattern, and it breaks it in exactly two
+      places.
     items:
       - form: The verb haben (to have)
         example: "Ich habe zwei Brüder. Hast du Geschwister? Wir haben ein Baby."
-        note: haben is irregular in du and er — hast and hat. Learn them by heart.
+        note: haben is irregular in du and er — hast and hat, without the b. All the other forms are completely regular.
         table:
-          headers: ["", "haben"]
+          headers: ["", "haben", "Beispiel"]
           rows:
-            - ["ich", "habe"]
-            - ["du", "hast"]
-            - ["er / sie / es", "hat"]
-            - ["wir", "haben"]
-            - ["ihr", "habt"]
-            - ["sie / Sie", "haben"]
-      - form: "Regular verbs: stem + ending"
-        note: Take the stem (wohn-, spiel-, leb-) and add the ending for the person.
+            - ["ich", "habe", "Ich habe eine Schwester."]
+            - ["du", "hast", "Hast du Zeit?"]
+            - ["er / sie / es", "hat", "Mein Vater hat ein Auto."]
+            - ["wir", "haben", "Wir haben zwei Kinder."]
+            - ["ihr", "habt", "Habt ihr Geschwister?"]
+            - ["sie / Sie", "haben", "Haben Sie Kinder?"]
+      - form: "Phrases with haben where English uses 'to be'"
+        example: "Ich habe Hunger. Hast du Zeit? Meine Mutter hat Durst."
+        note: "German 'has' hunger and thirst where English 'is' hungry and thirsty. Learn each phrase whole, without an article."
         table:
-          headers: ["", "wohnen", "spielen"]
+          headers: ["Deutsch", "English"]
           rows:
-            - ["ich", "wohne", "spiele"]
-            - ["du", "wohnst", "spielst"]
-            - ["er / sie / es", "wohnt", "spielt"]
-            - ["wir", "wohnen", "spielen"]
-            - ["ihr", "wohnt", "spielt"]
-            - ["sie / Sie", "wohnen", "spielen"]
-      - form: Numbers from 20 to 100
-        note: "Say the small number first: einundzwanzig is literally 'one-and-twenty'."
+            - ["Hunger haben", "to be hungry"]
+            - ["Durst haben", "to be thirsty"]
+            - ["Zeit haben", "to have time, be free"]
+            - ["Angst haben", "to be afraid"]
+      - form: "Regular verbs: the stem plus four endings"
+        example: "Ich wohne in Berlin. Du spielst gut. Meine Eltern leben in Köln."
+        note: "The stem is the infinitive without -en: wohnen → wohn-. There are only four different endings, and two of them are -en."
         table:
-          headers: ["Zahl", "Wort"]
+          headers: ["", "Endung", "wohnen", "spielen", "leben"]
           rows:
-            - ["20", "zwanzig"]
-            - ["21", "einundzwanzig"]
-            - ["30", "dreißig"]
-            - ["40", "vierzig"]
-            - ["50", "fünfzig"]
-            - ["60", "sechzig"]
-            - ["70", "siebzig"]
-            - ["80", "achtzig"]
-            - ["100", "hundert"]
+            - ["ich", "-e", "wohne", "spiele", "lebe"]
+            - ["du", "-st", "wohnst", "spielst", "lebst"]
+            - ["er / sie / es", "-t", "wohnt", "spielt", "lebt"]
+            - ["wir", "-en", "wohnen", "spielen", "leben"]
+            - ["ihr", "-t", "wohnt", "spielt", "lebt"]
+            - ["sie / Sie", "-en", "wohnen", "spielen", "leben"]
+      - form: "Stems ending in -t or -d take an extra e"
+        example: "Mein Bruder arbeitet in Berlin. Du arbeitest zu viel. Das Buch kostet zehn Euro."
+        note: "arbeit- + -st is unpronounceable, so an e goes in between. Only du, er/sie/es and ihr are affected."
+        table:
+          headers: ["", "arbeiten", "kosten", "reden"]
+          rows:
+            - ["ich", "arbeite", "koste", "rede"]
+            - ["du", "arbeitest", "kostest", "redest"]
+            - ["er / sie / es", "arbeitet", "kostet", "redet"]
+            - ["wir", "arbeiten", "kosten", "reden"]
+            - ["ihr", "arbeitet", "kostet", "redet"]
+            - ["sie / Sie", "arbeiten", "kosten", "reden"]
+      - form: "Stems ending in -s, -ß, -z: du takes just -t"
+        example: "Du heißt Anna, oder? Wie heißt dein Bruder? Du tanzt sehr gut."
+        note: The s of the -st ending is already there in the stem, so du drops it. This is why it is du heißt, not du heißst.
+        table:
+          headers: ["Infinitiv", "du", "er / sie / es"]
+          rows:
+            - ["heißen", "du heißt", "er heißt"]
+            - ["reisen", "du reist", "sie reist"]
+            - ["tanzen", "du tanzt", "er tanzt"]
+      - form: "One present tense — German has no 'I am …ing'"
+        example: "Ich spiele Fußball. Meine Schwester lernt Deutsch. Was machst du?"
+        note: "Ich spiele means both 'I play' and 'I am playing'. Never build a second form with sein."
 
-  - title: Possessives and word order
-    intro: To say whose relative it is, use a possessive. And in a German statement the verb always comes second.
+  - title: Possessives, word order and the numbers
+    intro: >-
+      Talking about a family means saying whose it is, so this half is about the
+      possessives — mein, dein, sein and the rest. They behave like ein: they
+      take an -e in front of a die-word and stand unchanged in front of der- and
+      das-words. The second rule of the half is the one that shapes every German
+      statement: the finite verb stands in position two. Position one is one
+      idea, however many words it takes.
     items:
       - form: "Possessives (nominative): mein, dein, sein, ihr, unser"
-        note: Add -e before a die-word — mein Vater, but meine Mutter. The family word tells you der/die/das.
+        example: "Mein Vater heißt Thomas. Meine Mutter kommt aus Spanien. Meine Eltern wohnen in Köln."
+        note: Add -e before a die-word and before any plural — mein Vater, but meine Mutter and meine Eltern. The noun tells you which.
         table:
-          headers: ["", "der Vater", "die Mutter", "das Kind"]
+          headers: ["", "der Vater", "die Mutter", "das Kind", "die Eltern"]
           rows:
-            - ["ich →", "mein Vater", "meine Mutter", "mein Kind"]
-            - ["du →", "dein Vater", "deine Mutter", "dein Kind"]
-            - ["er →", "sein Vater", "seine Mutter", "sein Kind"]
-            - ["sie →", "ihr Vater", "ihre Mutter", "ihr Kind"]
-            - ["wir →", "unser Vater", "unsere Mutter", "unser Kind"]
+            - ["ich →", "mein Vater", "meine Mutter", "mein Kind", "meine Eltern"]
+            - ["du →", "dein Vater", "deine Mutter", "dein Kind", "deine Eltern"]
+            - ["er →", "sein Vater", "seine Mutter", "sein Kind", "seine Eltern"]
+            - ["sie →", "ihr Vater", "ihre Mutter", "ihr Kind", "ihre Eltern"]
+            - ["wir →", "unser Vater", "unsere Mutter", "unser Kind", "unsere Eltern"]
+      - form: "The rest of the set: euer, ihr and polite Ihr"
+        example: "Wo wohnen eure Eltern? Ihre Kinder sind schon groß. Wie ist Ihre Adresse?"
+        note: "Watch two pairs: ihr means 'her' and 'their', Ihr with a capital means 'your' (polite). euer loses its second e before an ending — euer Vater, but eure Mutter."
+        table:
+          headers: ["", "Possessiv", "Beispiel"]
+          rows:
+            - ["ihr (she)", "ihr / ihre", "ihr Bruder · ihre Schwester"]
+            - ["ihr (you, group)", "euer / eure", "euer Bruder · eure Schwester"]
+            - ["sie (they)", "ihr / ihre", "ihr Sohn · ihre Tochter"]
+            - ["Sie (polite)", "Ihr / Ihre", "Ihr Sohn · Ihre Adresse"]
       - form: The verb is the second element
-        note: The subject can be several words, but the verb still comes right after it — never at the end.
+        example: "Mein Vater heißt Thomas. Meine kleine Schwester ist acht Jahre alt."
+        note: Position one is one idea, not one word — a subject of four words still counts as one. The verb follows it directly.
         table:
           headers: ["Position 1", "Position 2 (Verb)", "Rest"]
           rows:
@@ -67,6 +117,31 @@ spotlights:
             - ["Mein Vater", "heißt", "Thomas."]
             - ["Meine Eltern", "wohnen", "in Berlin."]
             - ["Meine kleine Schwester", "ist", "acht Jahre alt."]
+            - ["Mein Bruder und ich", "leben", "in Spanien."]
+      - form: Numbers from 20 to 100
+        example: "Meine Mutter ist einundfünfzig. Mein Opa ist siebenundachtzig Jahre alt."
+        note: "Say the small number first: einundzwanzig is literally 'one-and-twenty'. Three tens are irregular — dreißig, sechzig, siebzig."
+        table:
+          headers: ["Zahl", "Wort", "Zahl", "Wort"]
+          rows:
+            - ["20", "zwanzig", "21", "einundzwanzig"]
+            - ["30", "dreißig", "32", "zweiunddreißig"]
+            - ["40", "vierzig", "45", "fünfundvierzig"]
+            - ["50", "fünfzig", "56", "sechsundfünfzig"]
+            - ["60", "sechzig", "67", "siebenundsechzig"]
+            - ["70", "siebzig", "78", "achtundsiebzig"]
+            - ["80", "achtzig", "89", "neunundachtzig"]
+            - ["90", "neunzig", "100", "hundert"]
+      - form: "How a number is written down"
+        example: "Meine Oma ist sechsundneunzig. Wir haben hundert Euro."
+        note: "A whole number is one word, however long. Two forms lose a letter: sechs → sechzehn/sechzig, sieben → siebzehn/siebzig."
+        table:
+          headers: ["Zahl", "Ein Wort", "Nicht"]
+          rows:
+            - ["16", "sechzehn", "sechszehn"]
+            - ["17", "siebzehn", "siebenzehn"]
+            - ["66", "sechsundsechzig", "sechs und sechzig"]
+            - ["100", "hundert", "einhundert"]
 
 watchouts:
   - title: haben changes in du and er
@@ -85,6 +160,14 @@ watchouts:
     bad: Meine Eltern wohnt in Berlin.
     good: Meine Eltern wohnen in Berlin.
     note: Eltern, Großeltern and Geschwister are always plural — use the sie/wir form.
+  - title: du arbeitest needs the extra e
+    bad: Du arbeitst in Berlin.
+    good: Du arbeitest in Berlin.
+    note: A stem in -t or -d takes an e before the ending — arbeitest, arbeitet.
+  - title: No 'am …ing' in German
+    bad: Ich bin spielen Fußball.
+    good: Ich spiele Fußball.
+    note: German has one present tense. Ich spiele covers 'I play' and 'I am playing'.
 
 cloze_cards:
   - text: "Ich {{c1::habe}} zwei Geschwister."

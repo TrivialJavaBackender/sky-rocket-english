@@ -16,7 +16,7 @@
 entries:
   - term: die Kindheit
     tag: Nomen
-    definition: Die Zeit als Kind — von der Geburt bis ungefähr vierzehn.
+    definition: childhood — from birth to about fourteen
     use_cases:
       - Meine Kindheit war laut und voll.
       - Er hat eine schöne Kindheit gehabt.
@@ -25,7 +25,7 @@ entries:
 
   - term: die Jugend
     tag: Nomen
-    definition: Die Zeit nach der Kindheit — ungefähr von vierzehn bis zwanzig.
+    definition: youth, adolescence — roughly from fourteen to twenty
     use_cases:
       - Meine Jugend war dann in der Stadt.
       - In seiner Jugend hat er viel Sport getrieben.
@@ -34,7 +34,7 @@ entries:
 
   - term: die Erinnerung
     tag: Nomen
-    definition: Ein Bild von früher im Kopf. Man weiß es noch.
+    definition: a memory — a picture of the past you still carry
     use_cases:
       - Ich habe nur schöne Erinnerungen an das Dorf.
       - Das Foto ist eine Erinnerung an meine Schulzeit.
@@ -43,7 +43,7 @@ entries:
 
   - term: das Erlebnis
     tag: Nomen
-    definition: Etwas Besonderes passiert. Man denkt später oft daran.
+    definition: an experience, something special that happened and stays with you
     use_cases:
       - Der erste Schultag war ein großes Erlebnis.
       - Von diesem Erlebnis hat sie allen erzählt.
@@ -52,7 +52,7 @@ entries:
 
   - term: die Schulzeit
     tag: Nomen
-    definition: Die Jahre in der Schule — von der ersten bis zur letzten Klasse.
+    definition: school days, the years from the first to the last class
     use_cases:
       - Meine Schulzeit hat gut angefangen.
       - Aus der Schulzeit habe ich noch drei Freunde.
@@ -61,7 +61,7 @@ entries:
 
   - term: das Dorf
     tag: Nomen
-    definition: Ein kleiner Ort auf dem Land. Dort wohnen wenige Menschen.
+    definition: a village — a small place in the countryside with few people
     use_cases:
       - Wir haben in einem kleinen Dorf gewohnt.
       - Im Dorf kennt jeder jeden.
@@ -70,7 +70,7 @@ entries:
 
   - term: der Hof
     tag: Nomen
-    definition: Der Platz zwischen den Häusern. Dort spielen die Kinder.
+    definition: a courtyard — the space between the houses where children play
     use_cases:
       - Wir haben jeden Tag im Hof Fußball gespielt.
       - Früher war dort ein Hof voller Kinder.
@@ -79,7 +79,7 @@ entries:
 
   - term: das Spielzeug
     tag: Nomen
-    definition: "Sachen zum Spielen: Autos, Puppen, Bälle."
+    definition: toys — cars, dolls, balls
     use_cases:
       - Spielzeug hatten wir fast keins.
       - Das alte Spielzeug liegt noch im Keller.
@@ -88,7 +88,7 @@ entries:
 
   - term: das Märchen
     tag: Nomen
-    definition: Eine alte Geschichte für Kinder. Oft kommt ein Tier oder ein König darin vor.
+    definition: a fairy tale — an old story for children, often with an animal or a king
     use_cases:
       - Am Abend hat Oma uns Märchen erzählt.
       - Kennst du das Märchen von dem Wolf?
@@ -97,7 +97,7 @@ entries:
 
   - term: der Enkel
     tag: Nomen
-    definition: Das Kind von meinem Kind.
+    definition: a grandchild — the child of your child
     use_cases:
       - Inzwischen habe ich vier Enkel.
       - Der Enkel macht für die Schule ein Interview.
@@ -106,7 +106,7 @@ entries:
 
   - term: die Note
     tag: Nomen
-    definition: "Die Zahl für eine Arbeit in der Schule: 1 ist sehr gut, 5 ist schlecht."
+    definition: a mark, a grade — the number a piece of school work gets (1 is very good, 5 is bad)
     use_cases:
       - In Mathe hatte ich nie gute Noten.
       - Sie hat für den Test eine gute Note bekommen.
@@ -115,7 +115,7 @@ entries:
 
   - term: die Freiheit
     tag: Nomen
-    definition: Man darf selbst wählen. Niemand sagt, was man machen muss.
+    definition: freedom — you choose for yourself and nobody tells you what to do
     use_cases:
       - Als Kind hatten wir viel Freiheit.
       - Mit achtzehn kommt die große Freiheit.
@@ -124,7 +124,7 @@ entries:
 
   - term: der Alltag
     tag: Nomen
-    definition: "Der normale Tag: Arbeit, Einkaufen, Essen, Schlafen."
+    definition: everyday life — work, shopping, eating, sleeping
     use_cases:
       - Inzwischen habe ich einen vollen Alltag.
       - Im Alltag bleibt wenig Zeit für Hobbys.
@@ -133,7 +133,7 @@ entries:
 
   - term: aufwachsen
     tag: Verb
-    definition: An einem Ort vom Kind zum erwachsenen Menschen werden.
+    definition: to grow up somewhere, from child to adult
     use_cases:
       - Ich bin in einem kleinen Dorf aufgewachsen.
       - Sie ist bei ihrer Großmutter aufgewachsen.
@@ -142,7 +142,7 @@ entries:
 
   - term: sich erinnern
     tag: Verb
-    definition: Etwas von früher ist wieder im Kopf. Man weiß es noch.
+    definition: to remember something from the past
     use_cases:
       - Ich erinnere mich gut an meinen ersten Schultag.
       - Erinnerst du dich noch an unser altes Haus?
@@ -151,7 +151,7 @@ entries:
 
   - term: vergessen
     tag: Verb
-    definition: Etwas ist nicht mehr im Kopf. Gegenteil von sich erinnern.
+    definition: to forget — the opposite of sich erinnern
     use_cases:
       - Diesen Tag vergesse ich nie.
       - Ich habe den Namen von meiner Lehrerin vergessen.
@@ -160,7 +160,7 @@ entries:
 
   - term: erlauben
     tag: Verb
-    definition: Ja sagen. Eine Person darf etwas machen.
+    definition: to allow, to let someone do something
     use_cases:
       - Meine Mutter hat es einmal erlaubt.
       - Die Eltern erlauben dem Kind einen Hund.
@@ -169,7 +169,7 @@ entries:
 
   - term: verbieten
     tag: Verb
-    definition: Nein sagen. Eine Person darf etwas nicht machen.
+    definition: to forbid, to say someone may not do it
     use_cases:
       - Meine Eltern haben uns den Fluss verboten.
       - Hier ist das Parken verboten.
@@ -178,7 +178,7 @@ entries:
 
   - term: klettern
     tag: Verb
-    definition: Mit Händen und Füßen nach oben gehen.
+    definition: to climb, to go up using hands and feet
     use_cases:
       - Wir sind auf die Bäume geklettert.
       - Mein Enkel klettert gern.
@@ -187,7 +187,7 @@ entries:
 
   - term: sammeln
     tag: Verb
-    definition: Viele gleiche Sachen suchen und behalten.
+    definition: to collect — to look for and keep many things of the same kind
     use_cases:
       - Wir haben Steine und alte Münzen gesammelt.
       - Mein Bruder sammelt seit zehn Jahren Briefmarken.
@@ -196,7 +196,7 @@ entries:
 
   - term: passieren
     tag: Verb
-    definition: Etwas geschieht plötzlich und ohne Plan.
+    definition: to happen suddenly and unplanned
     use_cases:
       - Einmal ist etwas Schlimmes passiert.
       - Was ist damals passiert?
@@ -205,7 +205,7 @@ entries:
 
   - term: verbringen
     tag: Verb
-    definition: Eine Zeit an einem Ort oder mit Personen sein.
+    definition: to spend (time) somewhere or with someone
     use_cases:
       - Dort habe ich jeden Sommer vier Wochen verbracht.
       - Wir verbringen den Urlaub bei meinen Eltern.
@@ -214,7 +214,7 @@ entries:
 
   - term: damals
     tag: Adverb
-    definition: In dieser Zeit früher — nicht heute.
+    definition: back then, in those days — not now
     use_cases:
       - Damals hatten wir kein Auto.
       - Ich war damals sieben Jahre alt.
@@ -223,7 +223,7 @@ entries:
 
   - term: früher
     tag: Adverb
-    definition: In der Zeit vor heute. Gegenteil von jetzt.
+    definition: in the past, earlier; opposite of jetzt
     use_cases:
       - Früher war hier ein Hof voller Kinder.
       - Früher habe ich viel Sport getrieben.
@@ -232,7 +232,7 @@ entries:
 
   - term: inzwischen
     tag: Adverb
-    definition: In der Zeit von damals bis heute. Jetzt ist es anders.
+    definition: by now, in the meantime — things have changed since
     use_cases:
       - Inzwischen bin ich erwachsen.
       - Inzwischen hat meine Oma vier Enkel.
@@ -241,7 +241,7 @@ entries:
 
   - term: streng
     tag: Adjektiv
-    definition: Eine Person sagt oft Nein und erlaubt wenig.
+    definition: strict — a person who often says no and allows little
     use_cases:
       - Meine Eltern waren sehr streng.
       - Unsere Lehrerin war streng, aber gut.
@@ -250,7 +250,7 @@ entries:
 
   - term: neugierig
     tag: Adjektiv
-    definition: Man will alles wissen und fragt viel.
+    definition: curious — you want to know everything and ask a lot
     use_cases:
       - Ich war neugierig und wollte alles wissen.
       - Sei nicht so neugierig!
@@ -259,7 +259,7 @@ entries:
 
   - term: schüchtern
     tag: Adjektiv
-    definition: Man spricht nicht gern mit fremden Menschen.
+    definition: shy — you do not like talking to strangers
     use_cases:
       - Ich war damals sehr schüchtern.
       - Als Kind ist er schüchtern gewesen.
@@ -268,7 +268,7 @@ entries:
 
   - term: erwachsen
     tag: Adjektiv
-    definition: Nicht mehr Kind. Über achtzehn Jahre alt.
+    definition: grown-up, adult — over eighteen and no longer a child
     use_cases:
       - Inzwischen bin ich erwachsen.
       - Ihre Kinder sind schon erwachsen.
@@ -277,7 +277,7 @@ entries:
 
   - term: plötzlich
     tag: Adverb
-    definition: Sehr schnell und ohne Plan. Niemand hat es erwartet.
+    definition: suddenly, out of the blue — nobody expected it
     use_cases:
       - Plötzlich war das Dorf weg.
       - Plötzlich hat es geregnet.

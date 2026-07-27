@@ -1,7 +1,7 @@
 kind: main
-kicker: LESETEXT
+kicker: READING
 title: Neu in der Stadt
-meta: ≈ 3 Min · Wörter mit Punkten haben eine Erklärung — tippen Sie darauf
+meta: ≈ 3 min · dotted words carry glosses — tap to reveal
 body:
   - - t: "Marek Nowak ist 32 Jahre alt und kommt aus Polen, aus Krakau. Seit einem Jahr wohnt er in Leipzig. Von Beruf ist er Koch und arbeitet in einem kleinen Restaurant in der Nähe vom Bahnhof. Seine Muttersprache ist Polnisch, aber er spricht auch Englisch und ein bisschen Deutsch. „Am Anfang war alles schwer“, sagt er. „Ich verstehe die Leute hier oft nicht, und sie sprechen sehr schnell.“"
   - - t: "Zweimal pro Woche besucht Marek einen Sprachkurs. Der Kurs beginnt am Montag und am Mittwoch um 18 Uhr. In der ersten Stunde stellt sich jeder kurz vor: Name, Land, Beruf. Für Marek ist das nicht leicht, denn sein Nachname ist für Deutsche schwer. Deshalb muss er ihn immer "
@@ -17,16 +17,16 @@ body:
 glosses:
   - key: buchstabieren
     term: buchstabieren
-    pos_label: Verb
-    definition: Ein Wort Buchstabe für Buchstabe sagen
+    pos_label: verb
+    definition: to spell — to say a word letter by letter
     example: "Wie schreibt man das? — Ich buchstabiere: W-e-b-e-r."
   - key: geduldig
     term: geduldig
-    pos_label: Adjektiv
-    definition: Ruhig. Diese Person wartet gern und wird nicht böse.
+    pos_label: adjective
+    definition: patient; calm, does not get annoyed by waiting
     example: Meine Lehrerin ist sehr geduldig und erklärt alles zweimal.
   - key: Formular
     term: Formular
-    pos_label: Nomen
-    definition: Ein Papier mit Fragen zu Name, Adresse und Alter. Es heißt das Formular.
+    pos_label: noun
+    definition: a form — a sheet asking for your name, address and age (das Formular)
     example: Bitte füllen Sie das Formular aus.

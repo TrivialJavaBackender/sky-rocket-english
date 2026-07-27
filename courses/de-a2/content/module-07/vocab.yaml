@@ -15,7 +15,7 @@
 entries:
 - term: die Miete
   tag: Nomen
-  definition: Das Geld, das man jeden Monat für die Wohnung zahlt.
+  definition: the rent — the money you pay for the flat every month
   use_cases:
   - Die Miete für die Wohnung ist ziemlich hoch.
   - Ich zahle die Miete immer am Anfang vom Monat.
@@ -23,7 +23,7 @@ entries:
   register: 'Plural: die Mieten. Vom Verb mieten: für Geld benutzen.'
 - term: die Nebenkosten
   tag: Nomen
-  definition: 'Das extra Geld neben der Miete: für Wasser, Strom und Heizung.'
+  definition: service charges — the extra money beside the rent, for water, electricity and heating
   use_cases:
   - Zur Miete kommen noch die Nebenkosten für Wasser und Heizung.
   - Die Nebenkosten sind in dieser Wohnung sehr niedrig.
@@ -31,7 +31,7 @@ entries:
   register: Nur im Plural. Aus neben + die Kosten.
 - term: der Mietvertrag
   tag: Nomen
-  definition: Das Papier zwischen Mieter und Vermieter. Man unterschreibt es vor dem Einzug.
+  definition: the tenancy agreement, signed by tenant and landlord before you move in
   use_cases:
   - Vor dem Einzug unterschreiben wir den Mietvertrag.
   - Im Mietvertrag steht, wie hoch die Miete ist.
@@ -39,7 +39,7 @@ entries:
   register: 'Plural: die Mietverträge. Aus Miete + Vertrag.'
 - term: besichtigen
   tag: Verb
-  definition: Eine Wohnung genau ansehen, bevor man sie mietet.
+  definition: to view a flat — to look at it properly before you rent it
   use_cases:
   - Am Samstag besichtigen wir eine Wohnung am Stadtrand.
   - Ich möchte die Wohnung zuerst besichtigen, dann entscheide ich.
@@ -47,7 +47,7 @@ entries:
   register: 'Partizip II: besichtigt. Von die Sicht (das Sehen).'
 - term: möbliert
   tag: Adjektiv
-  definition: 'Mit Möbeln. In der Wohnung stehen schon Bett, Tisch und Schrank. Gegenteil: leer.'
+  definition: furnished — bed, table and wardrobe are already there; opposite of leer
   use_cases:
   - Das Zimmer ist möbliert, ein Bett und ein Schrank sind schon da.
   - Wir suchen eine möblierte Wohnung für ein Jahr.
@@ -55,7 +55,7 @@ entries:
   register: 'Vom Verb möblieren: mit Möbeln füllen.'
 - term: ruhig
   tag: Adjektiv
-  definition: 'Ohne Lärm. Hier ist es still. Gegenteil: laut.'
+  definition: quiet, with no noise; opposite of laut
   use_cases:
   - Die Wohnung liegt in einer ruhigen Straße.
   - Hier ist es sehr ruhig, es gibt keinen Lärm.
@@ -63,7 +63,7 @@ entries:
   register: 'Aus die Ruhe + -ig. Gegenteil: laut.'
 - term: der Stadtrand
   tag: Nomen
-  definition: 'Der Rand der Stadt, weit weg vom Zentrum. Gegenteil: das Zentrum.'
+  definition: the outskirts, the edge of town, far from the centre; opposite of das Zentrum
   use_cases:
   - Wir wohnen am Stadtrand, weit weg vom Zentrum.
   - Am Stadtrand ist es ruhig und grün.
@@ -71,7 +71,7 @@ entries:
   register: 'Plural: die Stadtränder. Aus die Stadt + der Rand.'
 - term: die Umgebung
   tag: Nomen
-  definition: 'Alles rund um die Wohnung: die Straßen, die Geschäfte, der Park.'
+  definition: the surroundings — the streets, shops and park around the flat
   use_cases:
   - Die Umgebung ist schön, es gibt einen Park und viele Bäume.
   - In der Umgebung findet man Geschäfte und eine Schule.
@@ -79,7 +79,7 @@ entries:
   register: 'Plural: die Umgebungen. Vom Verb umgeben.'
 - term: der Vermieter
   tag: Nomen
-  definition: 'Die Person, der die Wohnung gehört. Sie vermietet sie. Gegenteil: der Mieter.'
+  definition: the landlord — the person who owns the flat and rents it out; opposite of der Mieter
   use_cases:
   - Der Vermieter zeigt uns die Wohnung.
   - Bei Fragen rufe ich den Vermieter an.
@@ -87,7 +87,7 @@ entries:
   register: 'Plural: die Vermieter. Die Frau: die Vermieterin. Von vermieten.'
 - term: kündigen
   tag: Verb
-  definition: Sagen, dass man den Vertrag beenden will. Man kündigt die Wohnung.
+  definition: to give notice, to say you want to end the contract
   use_cases:
   - Wir kündigen die Wohnung und ziehen im Mai aus.
   - Der Mieter hat den alten Vertrag gekündigt.
@@ -95,7 +95,7 @@ entries:
   register: 'Partizip II: gekündigt. Von die Kündigung.'
 - term: zentral
   tag: Adjektiv
-  definition: 'Mitten in der Stadt, im Zentrum. Gegenteil: am Stadtrand.'
+  definition: central, right in the middle of town; opposite of am Stadtrand
   use_cases:
   - Die Wohnung liegt sehr zentral, mitten in der Stadt.
   - Zentral wohnen ist teuer, aber sehr praktisch.
@@ -103,7 +103,7 @@ entries:
   register: 'Von das Zentrum. Gegenteil: am Rand.'
 - term: der Quadratmeter
   tag: Nomen
-  definition: Ein kleines Feld, einen Meter lang und einen Meter breit. So misst man die Wohnung.
+  definition: a square metre — one metre by one metre, the unit a flat is measured in
   use_cases:
   - Die Wohnung hat siebzig Quadratmeter.
   - Wie viele Quadratmeter hat das Zimmer?
@@ -111,7 +111,7 @@ entries:
   register: 'Plural: die Quadratmeter. Kurz: qm oder m². Aus Quadrat + Meter.'
 - term: die Kaution
   tag: Nomen
-  definition: Das Geld, das man am Anfang als Sicherheit gibt. Man bekommt es später zurück.
+  definition: the deposit — money paid up front as security and returned later
   use_cases:
   - Am Anfang zahlt man eine Kaution als Sicherheit.
   - Die Kaution beträgt drei Monatsmieten.
@@ -119,7 +119,7 @@ entries:
   register: 'Plural: die Kautionen. Aus dem Lateinischen.'
 - term: der Balkon
   tag: Nomen
-  definition: Ein kleiner Platz draußen an der Wohnung, oft oben im Haus.
+  definition: a balcony — a small outdoor space off the flat, usually upstairs
   use_cases:
   - Im Sommer sitzen wir gern auf dem Balkon.
   - Die Wohnung hat einen großen Balkon mit viel Sonne.
@@ -127,7 +127,7 @@ entries:
   register: 'Plural: die Balkone. Aus dem Italienischen.'
 - term: die Terrasse
   tag: Nomen
-  definition: Ein Platz draußen an der Wohnung, meist unten oder im Garten.
+  definition: a terrace — an outdoor space by the flat, usually at ground level or in the garden
   use_cases:
   - Die Wohnung im Erdgeschoss hat eine schöne Terrasse.
   - Auf der Terrasse steht ein Tisch mit vier Stühlen.
@@ -135,7 +135,7 @@ entries:
   register: 'Plural: die Terrassen. Aus dem Französischen.'
 - term: der Aufzug
   tag: Nomen
-  definition: 'Eine kleine Kabine. Sie fährt die Leute nach oben und unten. Auch: der Lift.'
+  definition: a lift, an elevator — the small cabin that takes people up and down
   use_cases:
   - Die Wohnung ist in der fünften Etage, aber es gibt einen Aufzug.
   - Der Aufzug fährt langsam nach oben.
@@ -143,7 +143,7 @@ entries:
   register: 'Plural: die Aufzüge. Aus auf + ziehen.'
 - term: das Erdgeschoss
   tag: Nomen
-  definition: Der Boden unten im Haus, gleich neben der Straße. Nicht oben.
+  definition: the ground floor — the level right by the street, not upstairs
   use_cases:
   - Die Wohnung liegt im Erdgeschoss, gleich neben der Straße.
   - Im Erdgeschoss gibt es keine Treppe.
@@ -151,7 +151,7 @@ entries:
   register: 'Plural: die Erdgeschosse. Aus die Erde + das Geschoss.'
 - term: die Etage
   tag: Nomen
-  definition: 'Ein Stock im Haus. Die Wohnung ist in der zweiten Etage. Auch: der Stock.'
+  definition: a floor, a storey — die Wohnung ist in der zweiten Etage; also der Stock
   use_cases:
   - Wir wohnen in der zweiten Etage.
   - Das Haus hat vier Etagen.
@@ -159,7 +159,7 @@ entries:
   register: 'Plural: die Etagen. Auch: der Stock. Aus dem Französischen.'
 - term: die Lage
   tag: Nomen
-  definition: Wo etwas liegt. Die Wohnung hat eine ruhige Lage am Park.
+  definition: the location — where something lies. Die Wohnung hat eine ruhige Lage am Park.
   use_cases:
   - Die Wohnung hat eine ruhige Lage am Park.
   - Die Lage ist zentral und trotzdem grün.
@@ -167,7 +167,7 @@ entries:
   register: 'Plural: die Lagen. Vom Verb liegen.'
 - term: der Mieter
   tag: Nomen
-  definition: 'Die Person, die in der Wohnung wohnt und Miete zahlt. Gegenteil: der Vermieter.'
+  definition: the tenant — the person who lives in the flat and pays rent; opposite of der Vermieter
   use_cases:
   - Der neue Mieter zieht am ersten Mai ein.
   - Der Mieter zahlt die Miete jeden Monat.
@@ -175,7 +175,7 @@ entries:
   register: 'Plural: die Mieter. Die Frau: die Mieterin. Von mieten.'
 - term: einziehen
   tag: Verb
-  definition: 'In eine neue Wohnung kommen und dort wohnen. Gegenteil: ausziehen.'
+  definition: to move in — to come into a new flat and live there; opposite of ausziehen
   use_cases:
   - Wir ziehen nächste Woche in die neue Wohnung ein.
   - Wann kann ich in die Wohnung einziehen?
@@ -183,7 +183,7 @@ entries:
   register: 'Partizip II: ist eingezogen (mit sein). Trennbar: ein + ziehen.'
 - term: renovieren
   tag: Verb
-  definition: 'Eine alte Wohnung wieder schön machen: neue Farbe, neue Küche.'
+  definition: to renovate — to make an old flat nice again with new paint and a new kitchen
   use_cases:
   - Wir renovieren das alte Bad und die Küche.
   - Die Wohnung ist frisch renoviert und sieht neu aus.
@@ -191,7 +191,7 @@ entries:
   register: 'Partizip II: renoviert. Aus dem Lateinischen: neu machen.'
 - term: die Kaltmiete
   tag: Nomen
-  definition: 'Die Miete ohne die Nebenkosten. Gegenteil: die Warmmiete.'
+  definition: the basic rent, without service charges; opposite of die Warmmiete
   use_cases:
   - Die Kaltmiete ist die Miete ohne die Nebenkosten.
   - Die Kaltmiete beträgt sechshundert Euro im Monat.
@@ -199,7 +199,7 @@ entries:
   register: 'Plural: die Kaltmieten. Aus kalt + Miete.'
 - term: die Warmmiete
   tag: Nomen
-  definition: 'Die Miete mit allen Nebenkosten zusammen. Gegenteil: die Kaltmiete.'
+  definition: the full rent including all service charges; opposite of die Kaltmiete
   use_cases:
   - Die Warmmiete ist die Kaltmiete plus die Nebenkosten.
   - Unsere Warmmiete ist siebenhundert Euro im Monat.
@@ -207,7 +207,7 @@ entries:
   register: 'Plural: die Warmmieten. Aus warm + Miete.'
 - term: der Keller
   tag: Nomen
-  definition: Ein Raum ganz unten im Haus. Dort stehen alte Sachen und Getränke.
+  definition: a cellar — a room at the very bottom of the house, for old things and drinks
   use_cases:
   - Im Keller steht mein altes Fahrrad.
   - Zur Wohnung gehört auch ein Keller.
@@ -215,7 +215,7 @@ entries:
   register: 'Plural: die Keller. Aus dem Lateinischen.'
 - term: die Heizung
   tag: Nomen
-  definition: Sie macht die Wohnung im Winter warm.
+  definition: the heating — what makes the flat warm in winter
   use_cases:
   - Im Winter machen wir die Heizung an.
   - Die Heizung in der Wohnung ist neu und modern.
@@ -223,7 +223,7 @@ entries:
   register: 'Plural: die Heizungen. Von heizen + -ung.'
 - term: provisionsfrei
   tag: Adjektiv
-  definition: Ohne Provision. Man zahlt nur die Miete, kein extra Geld.
+  definition: with no agency fee — you pay the rent and nothing on top
   use_cases:
   - Die Wohnung ist provisionsfrei, das spart viel Geld.
   - Wir suchen eine provisionsfreie Wohnung im Zentrum.
@@ -231,7 +231,7 @@ entries:
   register: Aus Provision + frei. Ohne extra Gebühr.
 - term: die Wohnfläche
   tag: Nomen
-  definition: Wie groß eine Wohnung ist, gemessen in Quadratmetern.
+  definition: the floor area — how big a flat is, measured in square metres
   use_cases:
   - Die Wohnfläche beträgt achtzig Quadratmeter.
   - Eine große Wohnfläche kostet mehr Miete.
@@ -239,7 +239,7 @@ entries:
   register: 'Plural: die Wohnflächen. Aus wohnen + die Fläche.'
 - term: der Altbau
   tag: Nomen
-  definition: 'Ein altes Haus, oft über hundert Jahre alt. Gegenteil: der Neubau.'
+  definition: a period building, often over a hundred years old; opposite of der Neubau
   use_cases:
   - Im Altbau sind die Zimmer hoch und hell.
   - Wir wohnen gern in einem Altbau im Zentrum.
@@ -247,7 +247,7 @@ entries:
   register: 'Plural: die Altbauten. Aus alt + Bau. Gegenteil: der Neubau.'
 - term: der Neubau
   tag: Nomen
-  definition: 'Ein neues Haus, erst vor kurzem gebaut. Gegenteil: der Altbau.'
+  definition: a new build, put up only recently; opposite of der Altbau
   use_cases:
   - Im Neubau sind die Fenster neu und die Heizung modern.
   - Der Neubau am Stadtrand ist erst ein Jahr alt.

@@ -1,21 +1,21 @@
-# Modul 06 · Kleidung und Einkaufen — Produktion: ein Gespräch im Geschäft.
-# mode: speaking, also kein word_target (das Schema verbietet es bei speaking).
-# Das Modell zeigt die Grammatik von Modul 06: das Adjektiv nach der, das, die
-# (den blauen Mantel, der graue Mantel), dieser Mantel und die kurze Antwort
-# (den nehme ich). Die Vokabeln des Moduls stehen im Gespräch.
+# Modul 06 · Kleidung und Einkaufen — production: a conversation in a shop.
+# mode: speaking, hence no word_target (the schema forbids it for speaking).
+# The model shows the grammar of module 06: the adjective after der, das, die
+# (den blauen Mantel, der graue Mantel), dieser Mantel and the short answer
+# (den nehme ich). The module vocabulary runs through the dialogue.
 mode: speaking
-genre: Gespräch im Geschäft
+genre: a conversation in a shop
 prompt: |
-  Sie sind in einem Kaufhaus und kaufen Kleidung. Spielen Sie ein Gespräch
-  zwischen der Kundin oder dem Kunden und der Verkäuferin (1–2 Minuten).
-  Nehmen Sie das Gespräch mit dem Handy auf.
+  You are in a department store buying clothes. Act out the conversation
+  between the customer and the shop assistant, in German (1–2 minutes).
+  Record it on your phone.
 
-  Sprechen Sie über diese vier Punkte:
-  - Sagen Sie, welches Kleidungsstück Sie suchen (zum Beispiel einen Mantel,
-    ein Kleid oder Schuhe) und in welcher Farbe.
-  - Nennen Sie Ihre Größe und fragen Sie, ob Sie es anprobieren dürfen.
-  - Sagen Sie, wie es Ihnen passt: zu eng, zu weit, zu lang oder gut.
-  - Fragen Sie nach dem Preis und ob Sie die Ware später umtauschen können.
+  Cover these four points:
+  - say which garment you are looking for (a coat, a dress, shoes) and in
+    which colour
+  - give your size and ask whether you may try it on
+  - say how it fits: zu eng, zu weit, zu lang or gut
+  - ask the price and whether you can exchange the item later
 model_answer: |
   — Guten Tag! Ich suche einen warmen Mantel für den Winter. Haben Sie den
   blauen Mantel aus dem Schaufenster auch in meiner Größe?
@@ -30,8 +30,8 @@ model_answer: |
   — Sehr gut, den nehme ich. Kann ich den Mantel später umtauschen?
   — Kein Problem. Bewahren Sie nur die Quittung gut auf.
 checklist:
-  - Ich nenne das Kleidungsstück, die Farbe und meine Größe.
-  - "Ich frage höflich: Darf ich … anprobieren? Was kostet …?"
-  - "Das Adjektiv nach der, das, die hat die richtige Endung: der blaue Mantel, den blauen Mantel."
-  - "Ich benutze dieser oder jeder und die kurze Antwort: Den nehme ich."
-  - Das Gespräch dauert 1–2 Minuten und ist aufgenommen.
+  - I name the garment, the colour and my size
+  - "I ask politely: Darf ich … anprobieren? Was kostet …?"
+  - "The adjective after der, das, die has the right ending: der blaue Mantel, den blauen Mantel"
+  - "I use dieser or jeder and the short answer: Den nehme ich"
+  - The conversation runs 1–2 minutes and is recorded

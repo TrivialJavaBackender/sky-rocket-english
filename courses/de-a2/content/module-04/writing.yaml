@@ -1,17 +1,17 @@
 mode: writing
-genre: E-Mail mit einer Bitte um einen Gefallen
+genre: an email asking for a favour
 word_target: [50, 60]
 prompt: |
-  Ihre Oma hat am Samstag Geburtstag. Sie brauchen Hilfe und schreiben
-  einer Freundin oder einem Freund eine E-Mail. 50–60 Wörter.
+  Your grandmother's birthday is on Saturday. You need help, so you write
+  an email to a friend. 50–60 words, in German.
 
-  Schreiben Sie zu allen vier Punkten:
-  • Warum Sie schreiben — Ihre Bitte
-  • Was Sie brauchen und wann
-  • Was Sie selbst schon gemacht haben
-  • Wie Sie danken — was Sie dafür versprechen
+  Cover all four points:
+  • why you are writing — your request
+  • what you need and when
+  • what you have already done yourself
+  • how you say thank you — what you promise in return
 
-  Benutzen Sie mindestens vier Verben mit dem Dativ und die Pronomen mir und dir.
+  Use at least four verbs that take the dative, plus the pronouns mir and dir.
 model_answer: |
   Liebe Mia,
 
@@ -23,11 +23,11 @@ model_answer: |
   Vielen Dank und liebe Grüße
   Lena
 checklist:
-  - 50–60 Wörter
-  - Alle vier Punkte stehen im Text
-  - Anrede (Liebe … / Lieber …) und Gruß am Ende
-  - Nach helfen, danken, gehören und gratulieren steht der Dativ
-  - Die Pronomen mir, dir, ihm und ihr stehen in der richtigen Form
-  - Bei zwei Objekten steht zuerst die Person, dann die Sache
-  - Das Perfekt steht mit haben oder sein und dem Partizip am Ende
-  - Mindestens acht Wörter aus dem Modul kommen vor
+  - 50–60 words
+  - All four points are covered
+  - It opens with Liebe … / Lieber … and closes with a greeting
+  - helfen, danken, gehören and gratulieren are followed by the dative
+  - The pronouns mir, dir, ihm and ihr carry the right form
+  - With two objects the person comes before the thing
+  - The perfect uses haben or sein with the participle at the end
+  - At least eight words from the module appear

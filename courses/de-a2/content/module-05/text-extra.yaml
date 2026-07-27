@@ -7,7 +7,7 @@
 kind: extra
 kicker: INTERVIEW
 title: Interview mit meiner Großmutter
-meta: ≈ 1 Min · Lena fragt ihre Oma für ein Schulprojekt
+meta: ≈ 1 min · Lena interviews her grandmother for a school project
 body:
   - - t: "– Oma, ich schreibe für die Schule über früher. Wie war deine Kindheit?"
   - - t: "– Ganz anders. Wir hatten kein Bad, aber viel Zeit."
@@ -32,11 +32,11 @@ body:
 glosses:
   - key: Spielzeug
     term: Spielzeug
-    pos_label: Nomen
-    definition: "Sachen zum Spielen: Autos, Puppen, Bälle."
+    pos_label: noun
+    definition: toys — cars, dolls, balls
     example: Das alte Spielzeug liegt noch im Keller.
   - key: Enkel
     term: Enkel
-    pos_label: Nomen
-    definition: Das Kind von meinem Kind.
+    pos_label: noun
+    definition: a grandchild — the child of your child
     example: Inzwischen habe ich vier Enkel.

@@ -1,7 +1,7 @@
 kind: extra
-kicker: ANZEIGEN
+kicker: SMALL ADS
 title: Fünf Möbelanzeigen
-meta: ≈ 1 Min · aus einem Portal für gebrauchte Möbel
+meta: ≈ 1 min · from a second-hand furniture site
 body:
   - - t: "SCHRANK, 2 Türen, weiß — 80 €"
   - - t: "Guter Zustand, steht seit fünf Jahren in unserem Schlafzimmer. Er ist 180 cm hoch und passt nicht in die neue Wohnung. Abholung am Wochenende."
@@ -18,6 +18,6 @@ body:
 glosses:
   - key: praktisch
     term: praktisch
-    pos_label: Adjektiv
-    definition: Man kann es gut benutzen. Es hilft im Alltag.
+    pos_label: adjective
+    definition: practical, useful — easy to use in everyday life
     example: Das Regal ist klein, aber sehr praktisch.

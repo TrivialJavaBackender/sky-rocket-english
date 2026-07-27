@@ -7,7 +7,7 @@
 kind: extra
 kicker: ANZEIGEN
 title: Vier Wohnungsanzeigen
-meta: ≈ 1 Min · vier kurze Anzeigen aus der Zeitung
+meta: ≈ 1 min · four short small ads from the paper
 body:
 - - t: '1. Schöne Altbauwohnung, zentral gelegen! Drei helle Zimmer, hohe Decken, großer Balkon. Wohnfläche 85 Quadratmeter. Kaltmiete 780 Euro plus Nebenkosten. Kaution: zwei Monatsmieten. Ab sofort frei. Ideal für eine kleine Familie. Bitte nur ernste Anfragen an den Vermieter.'
 - - t: '2. Moderne Zwei-Zimmer-Wohnung im '
@@ -22,16 +22,16 @@ body:
 glosses:
 - key: Neubau
   term: Neubau
-  pos_label: Nomen, der
-  definition: 'Ein neues Haus. Anders: der Altbau.'
+  pos_label: noun, der
+  definition: a new build; compare der Altbau
   example: Im Neubau sind die Zimmer neu und modern.
 - key: provisionsfrei
   term: provisionsfrei
-  pos_label: Adjektiv
-  definition: Ohne Provision. Man zahlt kein extra Geld für die Wohnung.
+  pos_label: adjective
+  definition: with no agency fee — no extra money for the flat
   example: Die Wohnung ist provisionsfrei.
 - key: Terrasse
   term: Terrasse
-  pos_label: Nomen, die
-  definition: Ein Platz draußen an der Wohnung, meist im Erdgeschoss.
+  pos_label: noun, die
+  definition: a terrace — an outdoor space by the flat, usually at ground level
   example: Im Sommer sitzen wir gern auf der Terrasse.
