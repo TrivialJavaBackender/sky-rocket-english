@@ -306,6 +306,21 @@
       }
     },
     {
+      "text": "Gestern habe ich gearbeitet. Letzte Woche hat sie gefeiert. Am Samstag bin ich zu Hause geblieben.",
+      "text_hash": "05b2e20edfb8da258019b454fcdbdfb0ad9944965d944d5e9b9f6705db212e97",
+      "refs": [
+        "m01|theory|spotlight|2|5|example"
+      ],
+      "audio": {
+        "normal": {
+          "key": "cc4572a1e5836409d4a00c9f7453e0b345d7ca652c31c2b1b65fe3501b5b4972",
+          "path": "/audio/de/cc/cc4572a1e5836409d4a00c9f7453e0b345d7ca652c31c2b1b65fe3501b5b4972.opus",
+          "duration_ms": 6340,
+          "bytes": 19167
+        }
+      }
+    },
+    {
       "text": "– Möchtest du zurück?",
       "text_hash": "05f603719184c09fb3d1e9d186fae091a47b39781bd5eb84a247b43f20ff230e",
       "refs": [
@@ -332,21 +347,6 @@
           "path": "/audio/de/3c/3cfb43045bb1f42a753e81189ee7ec14b42038594c868acc050ec2e7f88276fa.opus",
           "duration_ms": 1897,
           "bytes": 5681
-        }
-      }
-    },
-    {
-      "text": "Mit acht Jahren durfte ich schon allein zur Schule gehen.",
-      "text_hash": "0612bcfca5cb60d9ef151ed49ec5f5ee31d17f3c740f668eaeacbba9ea0634a7",
-      "refs": [
-        "m05|theory|spotlight|1|3|example"
-      ],
-      "audio": {
-        "normal": {
-          "key": "5c65b53c22fe039545f4ca830913bca267c77755f3721ceaa419cda81887d12a",
-          "path": "/audio/de/5c/5c65b53c22fe039545f4ca830913bca267c77755f3721ceaa419cda81887d12a.opus",
-          "duration_ms": 2857,
-          "bytes": 8972
         }
       }
     },
@@ -502,6 +502,21 @@
       }
     },
     {
+      "text": "Ich fahre mit dem Zug. Ich komme mit der Bahn. Wir fahren mit dem Auto.",
+      "text_hash": "076b960ac1c4394cccc29b1431cde43f8ed5d0562431997a54733b8350401609",
+      "refs": [
+        "m02|theory|spotlight|1|1|example"
+      ],
+      "audio": {
+        "normal": {
+          "key": "200cb41965555dcae62c708bdda2728c8f685b39bf76af361305f40ee7e2903a",
+          "path": "/audio/de/20/200cb41965555dcae62c708bdda2728c8f685b39bf76af361305f40ee7e2903a.opus",
+          "duration_ms": 3950,
+          "bytes": 12155
+        }
+      }
+    },
+    {
       "text": "In Wien nehme ich dann die Straßenbahn.",
       "text_hash": "07e2046ae5fd0919f70596572b0b59709bf83acc4a3548e2428f88b9b6a163ac",
       "refs": [
@@ -520,7 +535,7 @@
       "text": "ein schöner Balkon, einen schönen Balkon, mit einem schönen Balkon.",
       "text_hash": "07f0535a2b69899f9202b6a8ff1f00971464c51be9610005c02b90fc24e9c2fe",
       "refs": [
-        "m07|theory|spotlight|2|3|example"
+        "m07|theory|spotlight|2|4|example"
       ],
       "audio": {
         "normal": {
@@ -1163,6 +1178,21 @@
       }
     },
     {
+      "text": "Woher kommen Sie? Wo wohnst du? Was sind Sie von Beruf?",
+      "text_hash": "102bbef4ba71a83df31eb0bdd5178df115fc23804f63f392984f8bd6f0f3c401",
+      "refs": [
+        "a01|theory|spotlight|2|4|example"
+      ],
+      "audio": {
+        "normal": {
+          "key": "86d2b32a2921350305dce5ffe3a804740701c8be33359be67fa5df500e1ccd47",
+          "path": "/audio/de/86/86d2b32a2921350305dce5ffe3a804740701c8be33359be67fa5df500e1ccd47.opus",
+          "duration_ms": 3940,
+          "bytes": 11980
+        }
+      }
+    },
+    {
       "text": "Der Film war wirklich spannend.",
       "text_hash": "10514aada5a78f0c3287248064e6677bf2f9b1b67a6c6bc2a15d3abd718d69ee",
       "refs": [
@@ -1298,6 +1328,36 @@
       }
     },
     {
+      "text": "Ich lerne Deutsch. Du wohnst in Wien. Wir kommen aus Polen.",
+      "text_hash": "125b1b03f499646ed4baf83e15eacbd5b3516d1d61b99c678f21a3637092445d",
+      "refs": [
+        "a01|theory|spotlight|1|1|example"
+      ],
+      "audio": {
+        "normal": {
+          "key": "83b53197c64e55f2538112c5f0192e6aae8892b4adaccab238f4883b76f1e8ac",
+          "path": "/audio/de/83/83b53197c64e55f2538112c5f0192e6aae8892b4adaccab238f4883b76f1e8ac.opus",
+          "duration_ms": 4611,
+          "bytes": 13762
+        }
+      }
+    },
+    {
+      "text": "Ich gehe jetzt zum Bahnhof.",
+      "text_hash": "12db15617834c4e374039f08bcc4104a40a06f8019c994cc3ce719a7e8780667",
+      "refs": [
+        "m02|theory|watchout|5|good"
+      ],
+      "audio": {
+        "normal": {
+          "key": "135dc2c4b13cbd8ecc8b18284956a4239f1cfcfc7a174bd954fcf374a463de5d",
+          "path": "/audio/de/13/135dc2c4b13cbd8ecc8b18284956a4239f1cfcfc7a174bd954fcf374a463de5d.opus",
+          "duration_ms": 1706,
+          "bytes": 5404
+        }
+      }
+    },
+    {
       "text": "Mit ihrer Schwester hat sie sich am Bahnhof getroffen, und die beiden sind an den See gefahren.",
       "text_hash": "1334b9b1cd82e9fecdbf870a12e2bcb22c9ef2da7b6a5e283ad4b93d97ef4dc1",
       "refs": [
@@ -1403,6 +1463,21 @@
       }
     },
     {
+      "text": "Ich bin 32 Jahre alt. Ich bin Koch. Ich habe Hunger.",
+      "text_hash": "14f2d3d7d3b8bfae9f593ebe76e4b9223ff4f5a6c391ebd06ed94fef4d265dce",
+      "refs": [
+        "a01|theory|spotlight|2|3|example"
+      ],
+      "audio": {
+        "normal": {
+          "key": "3a4c4e7cdd7651e6938cc7e184c9f01ecde414390dc2b8a4ee2ccaf733722b1b",
+          "path": "/audio/de/3a/3a4c4e7cdd7651e6938cc7e184c9f01ecde414390dc2b8a4ee2ccaf733722b1b.opus",
+          "duration_ms": 6068,
+          "bytes": 17833
+        }
+      }
+    },
+    {
       "text": "Bei Kälte trage ich einen Schal.",
       "text_hash": "15073c412359ab8159a6ec961dca5955efe396a71dd742e636408c845b23a5fe",
       "refs": [
@@ -1459,6 +1534,21 @@
           "path": "/audio/de/1e/1ed75064071e1db18bb4eafd365562dde29cbc79215682850761ec1fdcc49a4a.opus",
           "duration_ms": 3530,
           "bytes": 10508
+        }
+      }
+    },
+    {
+      "text": "Wir haben meine Oma besucht.",
+      "text_hash": "15a933790535fcae3cf500f59c82efca3d5519f1195146f0a9fd959c56a20fa7",
+      "refs": [
+        "m01|theory|watchout|5|good"
+      ],
+      "audio": {
+        "normal": {
+          "key": "132482486af970ebf7e5a5dfdd87489e39db1c2658123f2150e5b3b2530a25c0",
+          "path": "/audio/de/13/132482486af970ebf7e5a5dfdd87489e39db1c2658123f2150e5b3b2530a25c0.opus",
+          "duration_ms": 1939,
+          "bytes": 6147
         }
       }
     },
@@ -1579,6 +1669,21 @@
           "path": "/audio/de/22/22778c437b20e7c5a0438299e720b1acb71ed5820fb326e68fd93ccf8ec60336.opus",
           "duration_ms": 1010,
           "bytes": 3296
+        }
+      }
+    },
+    {
+      "text": "Ich fahre mit dem Bus. Ich arbeite bei der Post. Sie kommt aus der Schweiz.",
+      "text_hash": "1765190f21e22fe8604b3355bde1c178def693924c6ece888974d46d560adcd4",
+      "refs": [
+        "m02|theory|spotlight|1|3|example"
+      ],
+      "audio": {
+        "normal": {
+          "key": "543c1629fd033ee8f056ae100ec770ffee173e634e3346d094bf03cd723015b1",
+          "path": "/audio/de/54/543c1629fd033ee8f056ae100ec770ffee173e634e3346d094bf03cd723015b1.opus",
+          "duration_ms": 4882,
+          "bytes": 14765
         }
       }
     },
@@ -2150,6 +2255,21 @@
           "path": "/audio/de/d7/d7e4b805300237ecc2b1bcd827548808ff7605c48495be69988c4b5a87c8b55a.opus",
           "duration_ms": 860,
           "bytes": 2849
+        }
+      }
+    },
+    {
+      "text": "Du arbeitest in einem Restaurant. Der Kurs kostet 90 Euro. Ihr redet zu schnell.",
+      "text_hash": "1d53faa1640292438fceea24f3e44da5c53f60e593b775f3de6b621534d50c68",
+      "refs": [
+        "a01|theory|spotlight|1|2|example"
+      ],
+      "audio": {
+        "normal": {
+          "key": "4f62ced107412f094d06278eb4c8c0b9892ef564bb22575eca4eaea6f695ccec",
+          "path": "/audio/de/4f/4f62ced107412f094d06278eb4c8c0b9892ef564bb22575eca4eaea6f695ccec.opus",
+          "duration_ms": 6541,
+          "bytes": 19369
         }
       }
     },
@@ -3700,6 +3820,21 @@
       }
     },
     {
+      "text": "Die Flasche steht auf dem Tisch. Das Buch liegt auf dem Tisch.",
+      "text_hash": "342e53f7efb85694becf28030eb37c95583c15633672856c78f767b3ae06da76",
+      "refs": [
+        "m03|theory|spotlight|2|4|example"
+      ],
+      "audio": {
+        "normal": {
+          "key": "9726e04e587e5817777ac018aff07309c84a081f89675eed5b8f2709a1839adb",
+          "path": "/audio/de/97/9726e04e587e5817777ac018aff07309c84a081f89675eed5b8f2709a1839adb.opus",
+          "duration_ms": 5473,
+          "bytes": 15780
+        }
+      }
+    },
+    {
       "text": "Der Verkäufer im kleinen Laden an der Ecke hat uns das Papier geschenkt — er kennt Oma auch.",
       "text_hash": "34342949ac592d376807ae13cc22c6fdbe03afe4cd58120b05fcebc8f9c96e81",
       "refs": [
@@ -3756,6 +3891,21 @@
           "path": "/audio/de/b0/b0e6ec22fd798fbd36d1808e210435f445cf6394b606bc1b275225ac36e3d3ec.opus",
           "duration_ms": 4202,
           "bytes": 13091
+        }
+      }
+    },
+    {
+      "text": "Ich sehe meinen Bruder. Ich helfe meinem Bruder. Ich schenke meinem Bruder ein Buch.",
+      "text_hash": "34a6b7700781c7356d89ec1e5ba19379df012ed71258dd847b22dc096b33b5e5",
+      "refs": [
+        "m04|theory|spotlight|1|5|example"
+      ],
+      "audio": {
+        "normal": {
+          "key": "4d8a8b5aac3c442672786383fb147a2f1cdbca76eea1c1fd5841852f56e0d975",
+          "path": "/audio/de/4d/4d8a8b5aac3c442672786383fb147a2f1cdbca76eea1c1fd5841852f56e0d975.opus",
+          "duration_ms": 6047,
+          "bytes": 18092
         }
       }
     },
@@ -4601,6 +4751,21 @@
       }
     },
     {
+      "text": "Wer ist das? Woher kommst du? Wohin fährst du am Wochenende?",
+      "text_hash": "3e95fdc3a73ce3ced2c48dea2cb6854095b2963d1d1c23dfad56986d08e2e7df",
+      "refs": [
+        "a01|theory|spotlight|2|6|example"
+      ],
+      "audio": {
+        "normal": {
+          "key": "10dd7540aa733bdc82fb8955e3f925b671e9d94a330a4ff8cb94c529cd379ba3",
+          "path": "/audio/de/10/10dd7540aa733bdc82fb8955e3f925b671e9d94a330a4ff8cb94c529cd379ba3.opus",
+          "duration_ms": 4489,
+          "bytes": 13232
+        }
+      }
+    },
+    {
       "text": "Die Wohnung hat eine ruhige Lage am Park.",
       "text_hash": "3eae21615134d892fe7d27b4094f6dcd06a0b969257b071acf97a02fc822fb05",
       "refs": [
@@ -4672,6 +4837,21 @@
           "path": "/audio/de/fb/fb60a27523b0295471c0c0501033e02c7d5cdb6b9db9b591703816901dd973e8.opus",
           "duration_ms": 1142,
           "bytes": 3655
+        }
+      }
+    },
+    {
+      "text": "Ich helfe dem Bruder. Ich helfe meinem Bruder. Ich helfe ihm.",
+      "text_hash": "3f7010502e8ff704f0d64c9307e15dec627bc8b0bc46c082b79cbb2a73240c31",
+      "refs": [
+        "m04|theory|spotlight|2|3|example"
+      ],
+      "audio": {
+        "normal": {
+          "key": "5caa13dbc00243abe9aaba0cc2ec4bb47a9d1ecf4f31b715ba462040472a0a82",
+          "path": "/audio/de/5c/5caa13dbc00243abe9aaba0cc2ec4bb47a9d1ecf4f31b715ba462040472a0a82.opus",
+          "duration_ms": 4672,
+          "bytes": 14155
         }
       }
     },
@@ -4844,7 +5024,7 @@
       "text": "Ich fahre zum Bahnhof und dann mit der Bahn zur Arbeit.",
       "text_hash": "417e7ebfa1d2a59139be8b5a630d68885aa69c848299c45fd2e4d6ff44da5fef",
       "refs": [
-        "m02|theory|spotlight|1|3|example"
+        "m02|theory|spotlight|1|4|example"
       ],
       "audio": {
         "normal": {
@@ -6042,6 +6222,21 @@
       }
     },
     {
+      "text": "Ich bin gegangen. Ich bin gekommen. Ich bin geblieben.",
+      "text_hash": "508bf205c51eb31e867b631939eaf7fb375118631f7021a1efc9e309329f5e3c",
+      "refs": [
+        "m01|theory|spotlight|2|3|example"
+      ],
+      "audio": {
+        "normal": {
+          "key": "6ebf479ab3b2f3de8e8418c295c6f76dfc3af2a4d8a666bab5ba6f9dadd39172",
+          "path": "/audio/de/6e/6ebf479ab3b2f3de8e8418c295c6f76dfc3af2a4d8a666bab5ba6f9dadd39172.opus",
+          "duration_ms": 3709,
+          "bytes": 11369
+        }
+      }
+    },
+    {
       "text": "Ihr Mode-Team.",
       "text_hash": "50a1aded1bed35185cf1c033cd376ea409a6dcb1264512688d45ea853807feeb",
       "refs": [
@@ -6237,6 +6432,21 @@
       }
     },
     {
+      "text": "Helle 2-Zimmer-Wohnung, ruhige Lage, mit großem Balkon, provisionsfrei.",
+      "text_hash": "52685f87a88ebee7dfeb029206c9b180efb6b2b366a50cdd1830f19f12bf4a63",
+      "refs": [
+        "m07|theory|spotlight|2|3|example"
+      ],
+      "audio": {
+        "normal": {
+          "key": "45cf0638a73fe0c537faaa9a67928e54e3089eee738614cebcc087e2e8560852",
+          "path": "/audio/de/45/45cf0638a73fe0c537faaa9a67928e54e3089eee738614cebcc087e2e8560852.opus",
+          "duration_ms": 5833,
+          "bytes": 17765
+        }
+      }
+    },
+    {
       "text": "Ich hänge das Foto an die Wand.",
       "text_hash": "52fb4bdd720c6d8286938ff6a2206833b6bf289ba9b950c59d525b51e7fa2f11",
       "refs": [
@@ -6248,6 +6458,21 @@
           "path": "/audio/de/ec/ec8c9ab239526913a5bf6060be4eb7e15d4873a31ded9cf4b940c719ce8294c5.opus",
           "duration_ms": 2041,
           "bytes": 6440
+        }
+      }
+    },
+    {
+      "text": "Der schöne Balkon gefällt mir. Das ist ein schöner Balkon.",
+      "text_hash": "5306de198d1d389947e1bee5dde74a1ad8c0a1d2302f2d78f78e6ca573b2b741",
+      "refs": [
+        "m07|theory|spotlight|1|4|example"
+      ],
+      "audio": {
+        "normal": {
+          "key": "bbbc2b90cc7c2c454e4fa3ea00ca2833923fac32e44e21c49de5c9caf09d3657",
+          "path": "/audio/de/bb/bbbc2b90cc7c2c454e4fa3ea00ca2833923fac32e44e21c49de5c9caf09d3657.opus",
+          "duration_ms": 4195,
+          "bytes": 13020
         }
       }
     },
@@ -7559,6 +7784,21 @@
       }
     },
     {
+      "text": "Ich habe gekocht. Hast du ferngesehen? Wir haben viel gelacht.",
+      "text_hash": "63830e272ff00debdecc34d00006d3a90a5363568b1442b3174c2f188fff2cc5",
+      "refs": [
+        "m01|theory|spotlight|2|1|example"
+      ],
+      "audio": {
+        "normal": {
+          "key": "3896a67212345ff10a56d43b4542b5aa9a8e0f6e51f44332b439d470df32f175",
+          "path": "/audio/de/38/3896a67212345ff10a56d43b4542b5aa9a8e0f6e51f44332b439d470df32f175.opus",
+          "duration_ms": 5408,
+          "bytes": 15921
+        }
+      }
+    },
+    {
       "text": "dauern",
       "text_hash": "6399c331925b5ff5755e1632fded2b8c6e7a8b6382fe2cb58223dfb70598f011",
       "refs": [
@@ -7935,6 +8175,21 @@
       }
     },
     {
+      "text": "Ich gehe zur Haltestelle und fahre mit der Bahn durch die Stadt.",
+      "text_hash": "688a46169c033159dfd5cc91cbb712dc8cbf7dd5e0e64c7e8c8fb934c2738ff0",
+      "refs": [
+        "m02|theory|spotlight|2|4|example"
+      ],
+      "audio": {
+        "normal": {
+          "key": "5ee44b2cdda1990c82da3fe249d0b15e9f4c69dfd05d541683884ff5af41dfd3",
+          "path": "/audio/de/5e/5ee44b2cdda1990c82da3fe249d0b15e9f4c69dfd05d541683884ff5af41dfd3.opus",
+          "duration_ms": 4640,
+          "bytes": 13831
+        }
+      }
+    },
+    {
       "text": "Ein heller Raum, ein möbliertes Zimmer, eine ruhige Straße — genau das hat sie gesucht.",
       "text_hash": "68b486f04265684f8d1984f9ff94b74dbb19470e833000eaae1c2ac78f132466",
       "refs": [
@@ -7946,6 +8201,36 @@
           "path": "/audio/de/4b/4bbdc483d30dcabfebb3a90b0fd706a66b08929b15e09633c886d6d952322e99.opus",
           "duration_ms": 5418,
           "bytes": 16558
+        }
+      }
+    },
+    {
+      "text": "Ich bin Koch. Wir wohnen in Leipzig. Sie sprechen sehr schnell.",
+      "text_hash": "6911732cd5aec2c540c6663d3d61eaf98629f8da08b6c6e78734e7f26fb502f3",
+      "refs": [
+        "a01|theory|spotlight|1|5|example"
+      ],
+      "audio": {
+        "normal": {
+          "key": "0dd1f981783418fd13195e2b29e7e05f0e7861fbe23d254c2490f40f452dbfe5",
+          "path": "/audio/de/0d/0dd1f981783418fd13195e2b29e7e05f0e7861fbe23d254c2490f40f452dbfe5.opus",
+          "duration_ms": 4036,
+          "bytes": 12320
+        }
+      }
+    },
+    {
+      "text": "Ich lege das Buch ins Regal.",
+      "text_hash": "693386a49020505880dd6e31411197b8ff8d9b45bd239d4233cb7830a23448f7",
+      "refs": [
+        "m03|theory|watchout|6|good"
+      ],
+      "audio": {
+        "normal": {
+          "key": "c864e62bbd09a4b48e08904360d654f20a7460252a2b5ed2f8ecabd135a9309f",
+          "path": "/audio/de/c8/c864e62bbd09a4b48e08904360d654f20a7460252a2b5ed2f8ecabd135a9309f.opus",
+          "duration_ms": 1589,
+          "bytes": 5107
         }
       }
     },
@@ -8025,10 +8310,25 @@
       }
     },
     {
+      "text": "Das Buch liegt auf dem Tisch. Ich lege das Buch auf den Tisch.",
+      "text_hash": "6a9ee8a0ecb35dc71277618d9ac031c7da3f7fbde3172ce55508cbacd27a64b6",
+      "refs": [
+        "m03|theory|spotlight|1|1|example"
+      ],
+      "audio": {
+        "normal": {
+          "key": "3e5b80732d90d9eca41d350dfe328806d3aeb3988de5f56d64dd0a3798e441ff",
+          "path": "/audio/de/3e/3e5b80732d90d9eca41d350dfe328806d3aeb3988de5f56d64dd0a3798e441ff.opus",
+          "duration_ms": 4758,
+          "bytes": 14076
+        }
+      }
+    },
+    {
       "text": "Ich bin Koch. Du bist müde. Wir sind aus Polen.",
       "text_hash": "6ac525cf9f616dae618ed958498181aee34d1ae4da2fdbf57a376863b4495b64",
       "refs": [
-        "a01|theory|spotlight|1|3|example"
+        "a01|theory|spotlight|2|1|example"
       ],
       "audio": {
         "normal": {
@@ -8595,6 +8895,21 @@
       }
     },
     {
+      "text": "Die Flasche steht im Schrank.",
+      "text_hash": "73c34fdbc987fa8ba494f390d19c5f22857619d22a17b5afc5367ff10ce180f5",
+      "refs": [
+        "m03|theory|watchout|5|good"
+      ],
+      "audio": {
+        "normal": {
+          "key": "f4bac8d65cad917b8e0918730130bed9b83494f6d3c82009ca450a58ddaf41f2",
+          "path": "/audio/de/f4/f4bac8d65cad917b8e0918730130bed9b83494f6d3c82009ca450a58ddaf41f2.opus",
+          "duration_ms": 1703,
+          "bytes": 5315
+        }
+      }
+    },
+    {
       "text": "Wir haben einen Ausflug gemacht.",
       "text_hash": "73ec1851dc8832ec8c79a3cc45c1245ba4d83e68d11b0a606a6c2f99d086829f",
       "refs": [
@@ -8685,6 +9000,21 @@
       }
     },
     {
+      "text": "Ich habe gespielt. Ich habe eingekauft. Ich habe studiert.",
+      "text_hash": "74e38e90b3794a3956798c9450055e0a5a9c0ac7ea7d574673f18484ae20680b",
+      "refs": [
+        "m01|theory|spotlight|1|5|example"
+      ],
+      "audio": {
+        "normal": {
+          "key": "7c5521c01d5f6165723e95392cb797c83060aeb4cb643cfbc4fff215d537b4fc",
+          "path": "/audio/de/7c/7c5521c01d5f6165723e95392cb797c83060aeb4cb643cfbc4fff215d537b4fc.opus",
+          "duration_ms": 4049,
+          "bytes": 12393
+        }
+      }
+    },
+    {
       "text": "Mein Zimmer ist klein, aber hell.",
       "text_hash": "751ba7b78193831a2b22b0a56a27cbb09942b92be90f57e5ada83a4bf3ef51d9",
       "refs": [
@@ -8726,6 +9056,21 @@
           "path": "/audio/de/4c/4c5a59dc8fe50bf76ae3ce097fdd6ed6d24a174e64c5d14dd027554a664f6f58.opus",
           "duration_ms": 1855,
           "bytes": 5881
+        }
+      }
+    },
+    {
+      "text": "Die Fahrkarte ist für den Zug. Der Zug fährt durch den Tunnel. Ich fahre ohne das Auto.",
+      "text_hash": "763dafe1df2f07e4c84d0eeaa5a42c43fd6fa69277c99c0b3c7bcefef30282fa",
+      "refs": [
+        "m02|theory|spotlight|2|1|example"
+      ],
+      "audio": {
+        "normal": {
+          "key": "f6ed19eed684c9ef80a9db125e65fa8947347162a07567cb079199313ed4ce78",
+          "path": "/audio/de/f6/f6ed19eed684c9ef80a9db125e65fa8947347162a07567cb079199313ed4ce78.opus",
+          "duration_ms": 5725,
+          "bytes": 17381
         }
       }
     },
@@ -9042,6 +9387,21 @@
           "path": "/audio/de/2a/2afefc4bb92e82cbc869db9fa7cbde100861beb1d9a20711fc4e192b64e78ecc.opus",
           "duration_ms": 1165,
           "bytes": 3823
+        }
+      }
+    },
+    {
+      "text": "Ich stelle die Lampe auf den Tisch. Ich hänge das Bild an die Wand.",
+      "text_hash": "7951ddcde810656c4670c318ec411c20ce5bf0e81283fb6e713841aef4eb4aab",
+      "refs": [
+        "m03|theory|spotlight|1|3|example"
+      ],
+      "audio": {
+        "normal": {
+          "key": "8025eebdb402189eeee7e8d8ba5754d16fdc3098aa15376d4f591f71cca70a45",
+          "path": "/audio/de/80/8025eebdb402189eeee7e8d8ba5754d16fdc3098aa15376d4f591f71cca70a45.opus",
+          "duration_ms": 4722,
+          "bytes": 14358
         }
       }
     },
@@ -9373,6 +9733,21 @@
           "path": "/audio/de/cd/cdaaf2fbd3bda5745b8a00661eaaff5d060786e2e6cf0ab3c0f3030065f9fa91.opus",
           "duration_ms": 1005,
           "bytes": 3262
+        }
+      }
+    },
+    {
+      "text": "Wo ist der Sessel? — In der Ecke. Wohin stellst du den Sessel? — In die Ecke.",
+      "text_hash": "7e67b6d96f599193a7f7f7b8e4e2ce0f4d40659cd36c08f9240fbe1861d311cb",
+      "refs": [
+        "m03|theory|spotlight|1|4|example"
+      ],
+      "audio": {
+        "normal": {
+          "key": "04f952035f36cc9c6cebc70b31bab19887f42bf15a553133e4cb650fd302a4df",
+          "path": "/audio/de/04/04f952035f36cc9c6cebc70b31bab19887f42bf15a553133e4cb650fd302a4df.opus",
+          "duration_ms": 5051,
+          "bytes": 15368
         }
       }
     },
@@ -10153,6 +10528,36 @@
           "path": "/audio/de/8c/8c80d1d82b9b25697811802254d9d1ebf6f62686394e55ce31863d4dcf6edc5b.opus",
           "duration_ms": 2125,
           "bytes": 6641
+        }
+      }
+    },
+    {
+      "text": "Wie geht es dir? Das gefällt mir sehr. Es tut mir leid.",
+      "text_hash": "8b80b3b381d800aad39b1a2a20112bde90fd334052affad49d3f047c43e4b9b1",
+      "refs": [
+        "m04|theory|spotlight|2|4|example"
+      ],
+      "audio": {
+        "normal": {
+          "key": "7fb60bf99f7509e80ce711a185c8a14e2f94dfb84e9881a9e6fecbeed0eac1e2",
+          "path": "/audio/de/7f/7fb60bf99f7509e80ce711a185c8a14e2f94dfb84e9881a9e6fecbeed0eac1e2.opus",
+          "duration_ms": 3888,
+          "bytes": 11846
+        }
+      }
+    },
+    {
+      "text": "Ich nehme den Zug. Ich nehme die Bahn. Ich nehme das Auto.",
+      "text_hash": "8bc7c6d7ec3b6b38d1b0cb39f9b0a0f74a21c86341aac6547c7273901ab79327",
+      "refs": [
+        "m02|theory|spotlight|2|2|example"
+      ],
+      "audio": {
+        "normal": {
+          "key": "864b823a18dd6fc3341d7f8e6690953609b67e4b3947dfb28fe9e233db9b9200",
+          "path": "/audio/de/86/864b823a18dd6fc3341d7f8e6690953609b67e4b3947dfb28fe9e233db9b9200.opus",
+          "duration_ms": 4336,
+          "bytes": 12937
         }
       }
     },
@@ -11057,6 +11462,21 @@
       }
     },
     {
+      "text": "Ich suche den langen blauen Mantel. Die neuen schwarzen Schuhe sind teuer.",
+      "text_hash": "98807f332fda7844f14e17b944ff6abefe709d594f67a969f749efcc25144459",
+      "refs": [
+        "m06|theory|spotlight|2|4|example"
+      ],
+      "audio": {
+        "normal": {
+          "key": "1904d0aeca2ca4edf905f3ec7682ecf42739c4adfedfc45a55e81f40f4c41ae9",
+          "path": "/audio/de/19/1904d0aeca2ca4edf905f3ec7682ecf42739c4adfedfc45a55e81f40f4c41ae9.opus",
+          "duration_ms": 4989,
+          "bytes": 14917
+        }
+      }
+    },
+    {
       "text": "Im Kurs lerne ich viele Leute kennen.",
       "text_hash": "9891f7d630594800f7ad35d23ecfa490f414099a842f0f01b863f6257016c46f",
       "refs": [
@@ -11233,6 +11653,21 @@
           "path": "/audio/de/c5/c56532f40d50781cf37c6565c6014c160db141ff4b7eadedd899b0bdf079a60a.opus",
           "duration_ms": 1710,
           "bytes": 5264
+        }
+      }
+    },
+    {
+      "text": "Ich fahre nach Wien. Ich gehe zum Arzt. Ich fahre in die Stadt.",
+      "text_hash": "9b1303fd3449056cf7d88943aea4aeb8f0a8b5cb308828a681e7fd4304f4e5d2",
+      "refs": [
+        "m02|theory|spotlight|1|5|example"
+      ],
+      "audio": {
+        "normal": {
+          "key": "b6a8b9020e4a96559637091b4f8051eaffd508b7b4cd4f1bfa289175652ad5fd",
+          "path": "/audio/de/b6/b6a8b9020e4a96559637091b4f8051eaffd508b7b4cd4f1bfa289175652ad5fd.opus",
+          "duration_ms": 3479,
+          "bytes": 10818
         }
       }
     },
@@ -11713,6 +12148,21 @@
           "path": "/audio/de/8b/8bd262acd985f0fc4db361756d6177bd679efcb929aa7f43435118a898ae6b61.opus",
           "duration_ms": 3346,
           "bytes": 10107
+        }
+      }
+    },
+    {
+      "text": "Ich fahre mit einem Freund. Ich komme von meiner Arbeit. Sie fährt mit ihrem Auto.",
+      "text_hash": "a0d85a35b15199a97f509d0eda3c714705c9fb2539285ebf966b3b183728851a",
+      "refs": [
+        "m02|theory|spotlight|1|2|example"
+      ],
+      "audio": {
+        "normal": {
+          "key": "edaeed8b6b25b27f256ba4cf84a9cc06ca89fdc587dabdb48eb9c30ed5d61dd4",
+          "path": "/audio/de/ed/edaeed8b6b25b27f256ba4cf84a9cc06ca89fdc587dabdb48eb9c30ed5d61dd4.opus",
+          "duration_ms": 5919,
+          "bytes": 17979
         }
       }
     },
@@ -12317,6 +12767,21 @@
       }
     },
     {
+      "text": "Als ich klein war … Wenn wir Ferien hatten … Wann bist du geboren?",
+      "text_hash": "a9687476c3041896802d6ff9a30f81f01d282fa33afac56c496727ec5dd701ad",
+      "refs": [
+        "m05|theory|spotlight|2|4|example"
+      ],
+      "audio": {
+        "normal": {
+          "key": "adda009ec316a82ab1dedffa54566e325452746bb5cddac520d3846fffa52706",
+          "path": "/audio/de/ad/adda009ec316a82ab1dedffa54566e325452746bb5cddac520d3846fffa52706.opus",
+          "duration_ms": 4663,
+          "bytes": 14071
+        }
+      }
+    },
+    {
       "text": "Lena, 19:12",
       "text_hash": "a9c1e5f050a529da7c6157b357c525c7ed951ed4db4a7432a9f5290ca5aeef36",
       "refs": [
@@ -12538,6 +13003,21 @@
           "path": "/audio/de/2c/2c7bd0244c94a6a3a5bc80ac522d729fdf2635c4550a4aec9eebf27ecc3c147f.opus",
           "duration_ms": 2449,
           "bytes": 7681
+        }
+      }
+    },
+    {
+      "text": "Ich habe mit Anna telefoniert. Wir haben das Museum besucht. Er hat das nicht verstanden.",
+      "text_hash": "acfd5090c2517b3a48fec2546c0ed031f825e5347aae9aaf2799bc5f7e403ec3",
+      "refs": [
+        "m01|theory|spotlight|1|4|example"
+      ],
+      "audio": {
+        "normal": {
+          "key": "6e5e7a28536c3f6886b812a1b7ee74b2ab3df28e17d967bdd31813f39efa504e",
+          "path": "/audio/de/6e/6e5e7a28536c3f6886b812a1b7ee74b2ab3df28e17d967bdd31813f39efa504e.opus",
+          "duration_ms": 6052,
+          "bytes": 18235
         }
       }
     },
@@ -12827,6 +13307,21 @@
       }
     },
     {
+      "text": "Hast du Zeit? Sprichst du Deutsch? Sind Sie verheiratet?",
+      "text_hash": "b06cde4d2c5c4c39d32e32ac314e45bde606e741718206b8ee7a5c22af384493",
+      "refs": [
+        "a01|theory|spotlight|2|5|example"
+      ],
+      "audio": {
+        "normal": {
+          "key": "fbf8aaeb006a2e2113d3f55fe567e23c0ccc52afaa447936cf9063c2419f8015",
+          "path": "/audio/de/fb/fbf8aaeb006a2e2113d3f55fe567e23c0ccc52afaa447936cf9063c2419f8015.opus",
+          "duration_ms": 4031,
+          "bytes": 12168
+        }
+      }
+    },
+    {
       "text": "Sind Sie spazieren gegangen, haben Sie Freunde besucht, haben Sie ein Konzert gehört?",
       "text_hash": "b078e20553f31849e04a02c2f4a81ea7aa81e644f3048eed5b14b99846038fc8",
       "refs": [
@@ -12868,6 +13363,21 @@
           "path": "/audio/de/8b/8b759ee37be9a0dd3365ba5bc84cc24020fe78d53bed75310f2042ef9d291839.opus",
           "duration_ms": 3980,
           "bytes": 12196
+        }
+      }
+    },
+    {
+      "text": "Ich helfe meiner Kollegin. Das Fahrrad gehört der Nachbarin.",
+      "text_hash": "b102a6f4cf329c1caee2560be87c1eff01f36b2119a46f2c35db71ace648b009",
+      "refs": [
+        "m04|theory|spotlight|1|2|example"
+      ],
+      "audio": {
+        "normal": {
+          "key": "b0afb0b37f4703027e4041af051abc4bf2fe8f265a62d73d4d7668eeb177575b",
+          "path": "/audio/de/b0/b0afb0b37f4703027e4041af051abc4bf2fe8f265a62d73d4d7668eeb177575b.opus",
+          "duration_ms": 4406,
+          "bytes": 13099
         }
       }
     },
@@ -13048,6 +13558,21 @@
           "path": "/audio/de/52/52ed2d2d8bee8fd1d245f9c03b3a11111ce14a04439c683eaf610af182ec3107.opus",
           "duration_ms": 1402,
           "bytes": 4554
+        }
+      }
+    },
+    {
+      "text": "Du sprichst schon gut Deutsch. Marek fährt nach Krakau. Fatima liest ein Buch.",
+      "text_hash": "b3e7fdc40b384d12459eed361f160c350591eac6ec2782bd4f1f19842f795c4a",
+      "refs": [
+        "a01|theory|spotlight|1|4|example"
+      ],
+      "audio": {
+        "normal": {
+          "key": "b9c2481365d77ddb4ba1ff3c1f13b29892cd51217f0d2da2d29639a6da00beac",
+          "path": "/audio/de/b9/b9c2481365d77ddb4ba1ff3c1f13b29892cd51217f0d2da2d29639a6da00beac.opus",
+          "duration_ms": 5146,
+          "bytes": 15626
         }
       }
     },
@@ -13743,6 +14268,21 @@
       }
     },
     {
+      "text": "Ich stelle das Glas auf den Tisch. Das Glas steht auf dem Tisch.",
+      "text_hash": "bd845529879a4f0681a23631e4f13bd92b1b46bc6a34ef6401bf8a7aac55578c",
+      "refs": [
+        "m03|theory|spotlight|2|3|example"
+      ],
+      "audio": {
+        "normal": {
+          "key": "0d6c20cd002a4289f8189e3e807ca572fa6968e1475386a98271b7c173d41f74",
+          "path": "/audio/de/0d/0d6c20cd002a4289f8189e3e807ca572fa6968e1475386a98271b7c173d41f74.opus",
+          "duration_ms": 3713,
+          "bytes": 11348
+        }
+      }
+    },
+    {
       "text": "Weißes Glas, Kabel 90 cm.",
       "text_hash": "be106f205080ace02e4544a9a46438ca5aeec241ec5b94b4326e686263f940cb",
       "refs": [
@@ -13814,6 +14354,21 @@
           "path": "/audio/de/2e/2e627787fe7bb26d1d6cbe7e549f515711dccdc12b5195bb91fbece16344798b.opus",
           "duration_ms": 949,
           "bytes": 3118
+        }
+      }
+    },
+    {
+      "text": "Ich habe gekocht. Wir haben Fußball gespielt. Sie hat viel gearbeitet.",
+      "text_hash": "be81fcb10a662ddf19fe3c47280a6eee4742d6afd9a8c88deae9168ddd73317d",
+      "refs": [
+        "m01|theory|spotlight|1|1|example"
+      ],
+      "audio": {
+        "normal": {
+          "key": "c7ce3bb8d5d5b9a08da0897d254f65faf116322cdd6b5df68f56ca659c625679",
+          "path": "/audio/de/c7/c7ce3bb8d5d5b9a08da0897d254f65faf116322cdd6b5df68f56ca659c625679.opus",
+          "duration_ms": 4934,
+          "bytes": 14850
         }
       }
     },
@@ -14133,6 +14688,21 @@
       }
     },
     {
+      "text": "Die Lampe steht auf dem Tisch. Das Bild hängt an der Wand. Die Bücher sind im Regal.",
+      "text_hash": "c172af698ec025b634bfdc664cde2f657b7ea41b4e4be8c30c27fcecf23818bf",
+      "refs": [
+        "m03|theory|spotlight|1|2|example"
+      ],
+      "audio": {
+        "normal": {
+          "key": "e22ae05e9878e7edf4cb786ae4afb53aaf680277c3dd133cc7c0243dbd65e478",
+          "path": "/audio/de/e2/e22ae05e9878e7edf4cb786ae4afb53aaf680277c3dd133cc7c0243dbd65e478.opus",
+          "duration_ms": 6090,
+          "bytes": 18322
+        }
+      }
+    },
+    {
       "text": "FATIMA: Arabisch, Französisch und Deutsch.",
       "text_hash": "c18d44d652834a46f1874277307b3556cb242d071c122f7749c498a45dd0455a",
       "refs": [
@@ -14313,6 +14883,21 @@
       }
     },
     {
+      "text": "Wohin fährst du am Wochenende?",
+      "text_hash": "c32bdd9bcd253a136679fe05857858fad53d4da30a2a8dfed839c42e32e331ff",
+      "refs": [
+        "a01|theory|watchout|6|good"
+      ],
+      "audio": {
+        "normal": {
+          "key": "aeafbdca9f955af390bd26471d05cf9def68b548b6bb75e10e6e348d3f832ebb",
+          "path": "/audio/de/ae/aeafbdca9f955af390bd26471d05cf9def68b548b6bb75e10e6e348d3f832ebb.opus",
+          "duration_ms": 2374,
+          "bytes": 7253
+        }
+      }
+    },
+    {
       "text": "Wie heißt deine Lehrerin? — Sie heißt Frau Weber.",
       "text_hash": "c3497f3765ff053798ab1a2d266ca0fa0670ff4bbd898bd19b210f4c2dae9d1d",
       "refs": [
@@ -14339,6 +14924,21 @@
           "path": "/audio/de/95/953ceef8d4cfa301f19239f9966306638d81425e9168ebac64ba7bd50840113e.opus",
           "duration_ms": 2535,
           "bytes": 7980
+        }
+      }
+    },
+    {
+      "text": "Du heißt Marek, oder? Wie heißt du? Du reist gern nach Polen.",
+      "text_hash": "c3812972e7e10873626fa6e164b3ac217e86ec8a7ce124f475bbb5cc6110b32b",
+      "refs": [
+        "a01|theory|spotlight|1|3|example"
+      ],
+      "audio": {
+        "normal": {
+          "key": "7af1e29887bf446903261840cbe0811fb1de1fe10c3d6e54efe89f67705f5520",
+          "path": "/audio/de/7a/7af1e29887bf446903261840cbe0811fb1de1fe10c3d6e54efe89f67705f5520.opus",
+          "duration_ms": 5362,
+          "bytes": 16160
         }
       }
     },
@@ -14391,7 +14991,7 @@
       "text": "Ich habe Zeit. Sie hat einen Bruder. Habt ihr Fragen?",
       "text_hash": "c435db9803f62d74d7e573b69f98357c2e4e673da7a9dad1aeaedd7b79125cae",
       "refs": [
-        "a01|theory|spotlight|1|4|example"
+        "a01|theory|spotlight|2|2|example"
       ],
       "audio": {
         "normal": {
@@ -14579,6 +15179,21 @@
           "path": "/audio/de/49/490c109fdb7c4b8abee73ef66d10644b85def15412166f3ebecc8758139df787.opus",
           "duration_ms": 3567,
           "bytes": 11073
+        }
+      }
+    },
+    {
+      "text": "Ich habe die Wohnung aufgeräumt. Wir haben eingekauft. Nina hat Freunde eingeladen.",
+      "text_hash": "c809eba19ee84c901d41041d9c6a079133e5ad3c1ec08d7a2cbd65a18830dcf1",
+      "refs": [
+        "m01|theory|spotlight|1|3|example"
+      ],
+      "audio": {
+        "normal": {
+          "key": "dbd64b7a0dac8509fe67865d9b6f312e3549fda6bc156367953924f22879ab92",
+          "path": "/audio/de/db/dbd64b7a0dac8509fe67865d9b6f312e3549fda6bc156367953924f22879ab92.opus",
+          "duration_ms": 5790,
+          "bytes": 17423
         }
       }
     },
@@ -14864,6 +15479,21 @@
           "path": "/audio/de/57/57b496c0bcb889688637f45421784097af7ba18ac312c5447d07bf39071b17fd.opus",
           "duration_ms": 5741,
           "bytes": 17084
+        }
+      }
+    },
+    {
+      "text": "Mit acht Jahren durfte ich schon allein zur Schule gehen. Wir konnten nicht schwimmen.",
+      "text_hash": "ccdfefc46214d24fba45fe0df6b2be8e1307338f70c8465c78fbf9b69ad2e02f",
+      "refs": [
+        "m05|theory|spotlight|1|3|example"
+      ],
+      "audio": {
+        "normal": {
+          "key": "24bd86118bae5d7a3d4614eb144b3a08bafbf90994338b9cb99881f88fe88d03",
+          "path": "/audio/de/24/24bd86118bae5d7a3d4614eb144b3a08bafbf90994338b9cb99881f88fe88d03.opus",
+          "duration_ms": 4725,
+          "bytes": 14374
         }
       }
     },
@@ -15513,6 +16143,21 @@
       }
     },
     {
+      "text": "Ich habe am Samstag Fußball gespielt. Am Samstag habe ich Fußball gespielt.",
+      "text_hash": "d72e0169a8cc73e39dbe323bb16ca4b9c786944a53395f6e4cd7aa09b0fe122a",
+      "refs": [
+        "m01|theory|spotlight|2|4|example"
+      ],
+      "audio": {
+        "normal": {
+          "key": "bde879179189fd77d648166783bdf68ece7731fe378ca94cb8eca11705f7fba7",
+          "path": "/audio/de/bd/bde879179189fd77d648166783bdf68ece7731fe378ca94cb8eca11705f7fba7.opus",
+          "duration_ms": 4355,
+          "bytes": 13337
+        }
+      }
+    },
+    {
       "text": "Was haben Sie am Wochenende gemacht?",
       "text_hash": "d73070ba1d1cf93b3d44de9abd32eaac9d6566a0462cc4b921df05d6abfed724",
       "refs": [
@@ -15794,6 +16439,21 @@
           "path": "/audio/de/b0/b0d1bcb2dd6793c3463f768d5df727a02113285e1359f6e50cfbe1841ce9bcfb.opus",
           "duration_ms": 2289,
           "bytes": 7165
+        }
+      }
+    },
+    {
+      "text": "Die Bücher sind im Regal. Ich lege sie ins Regal.",
+      "text_hash": "dbe206be360f019e9b09655d7b3c6b45c8cb43a20eeb9bd3d3812e7a3f8ce4fa",
+      "refs": [
+        "m03|theory|spotlight|1|5|example"
+      ],
+      "audio": {
+        "normal": {
+          "key": "cfc41a092116eb1ec6a7f12f62848a33356779950feb407aff2f72499c50d5e4",
+          "path": "/audio/de/cf/cfc41a092116eb1ec6a7f12f62848a33356779950feb407aff2f72499c50d5e4.opus",
+          "duration_ms": 3608,
+          "bytes": 11055
         }
       }
     },
@@ -16580,6 +17240,21 @@
       }
     },
     {
+      "text": "Ich habe zu viel gegessen. Wir sind nach Wien gefahren. Es ist schön gewesen.",
+      "text_hash": "e8848f70cf9fa0b86af952ef3acba7f578459d43635cf417c81939fbfe7d627f",
+      "refs": [
+        "m01|theory|spotlight|1|2|example"
+      ],
+      "audio": {
+        "normal": {
+          "key": "cd0f014fff97853c2a2615b67950aeaec2052103f47fff96520107ddba9eb8e0",
+          "path": "/audio/de/cd/cd0f014fff97853c2a2615b67950aeaec2052103f47fff96520107ddba9eb8e0.opus",
+          "duration_ms": 5692,
+          "bytes": 16830
+        }
+      }
+    },
+    {
       "text": "ausziehen",
       "text_hash": "e89f70615ff8833b2d62932e059014581519f583faa326cb04987a591e27b4aa",
       "refs": [
@@ -16640,6 +17315,21 @@
       }
     },
     {
+      "text": "Ich wohne seit einem Jahr hier.",
+      "text_hash": "e901c063871ee18801f808f1abf61b9135fb44f447ab0626991de29c23839058",
+      "refs": [
+        "m02|theory|watchout|6|good"
+      ],
+      "audio": {
+        "normal": {
+          "key": "67a26cc8ef4bc4610cc66860e5efd21cd1df3c17c9f81b1385d27e4d015a4aeb",
+          "path": "/audio/de/67/67a26cc8ef4bc4610cc66860e5efd21cd1df3c17c9f81b1385d27e4d015a4aeb.opus",
+          "duration_ms": 1950,
+          "bytes": 6187
+        }
+      }
+    },
+    {
       "text": "legen",
       "text_hash": "e91d032d46b8db0dc0a871b0b8a6e084a14e00f0308fd8489a8edf409cdf41ff",
       "refs": [
@@ -16681,6 +17371,21 @@
           "path": "/audio/de/89/897b6ec997599a0503356dac921b2d6f44f2fba8d9dd3d55c78656e9e1799383.opus",
           "duration_ms": 4229,
           "bytes": 12302
+        }
+      }
+    },
+    {
+      "text": "Du arbeitest in einem Restaurant.",
+      "text_hash": "e9af4e04d24632efcb58d977c366aff23276ccaf8a84fe662e2a0019d1b44ad5",
+      "refs": [
+        "a01|theory|watchout|5|good"
+      ],
+      "audio": {
+        "normal": {
+          "key": "7246e05721f4e1556eff0513b5963b06976ae1b51a62d79a43d2bbcfda558af7",
+          "path": "/audio/de/72/7246e05721f4e1556eff0513b5963b06976ae1b51a62d79a43d2bbcfda558af7.opus",
+          "duration_ms": 1785,
+          "bytes": 5705
         }
       }
     },
@@ -16786,6 +17491,21 @@
           "path": "/audio/de/bd/bdad489094ca9cd86ac374f3129439b82483529ac0a9c61d1713564b0feae75c.opus",
           "duration_ms": 913,
           "bytes": 2998
+        }
+      }
+    },
+    {
+      "text": "Ich habe die Wohnung aufgeräumt.",
+      "text_hash": "ead516550af9532d5baa68aa3588a6ad044651ab9c2724dd1d6b6f3fcf44cdab",
+      "refs": [
+        "m01|theory|watchout|6|good"
+      ],
+      "audio": {
+        "normal": {
+          "key": "fcc76075708d6425a6b8928cd92066f55848b4db0e4dee87cfd4d89f4e9c2205",
+          "path": "/audio/de/fc/fcc76075708d6425a6b8928cd92066f55848b4db0e4dee87cfd4d89f4e9c2205.opus",
+          "duration_ms": 3033,
+          "bytes": 9351
         }
       }
     },
@@ -17496,6 +18216,21 @@
       }
     },
     {
+      "text": "Der Mantel ist neu. Der neue Mantel ist warm.",
+      "text_hash": "f64cae4e1a0202a6344f736b16f26d6489e96738437db4292785b0dde5f0c05d",
+      "refs": [
+        "m06|theory|spotlight|1|4|example"
+      ],
+      "audio": {
+        "normal": {
+          "key": "e0841c85e77878d1daba5a358262315785dc93742755ae2b00e15ca1658109ee",
+          "path": "/audio/de/e0/e0841c85e77878d1daba5a358262315785dc93742755ae2b00e15ca1658109ee.opus",
+          "duration_ms": 4042,
+          "bytes": 12158
+        }
+      }
+    },
+    {
       "text": "Am Abend hat Nina nichts mehr geplant.",
       "text_hash": "f6f606eaf66040cd3fad67b6929c2b95ef7a3474498953d59e19e7ece32d40ac",
       "refs": [
@@ -17657,6 +18392,21 @@
           "path": "/audio/de/de/de6780ccdcb8d240e26c4cc162583022817d2a796dbb482b000a74956a90e547.opus",
           "duration_ms": 5039,
           "bytes": 15445
+        }
+      }
+    },
+    {
+      "text": "Ich war müde. Ich hatte keine Zeit. Ich habe lange geschlafen.",
+      "text_hash": "f854f8c67979652cf004355b129e7f798dbef01ba07a9766f655a7dd2197a7b3",
+      "refs": [
+        "m05|theory|spotlight|1|4|example"
+      ],
+      "audio": {
+        "normal": {
+          "key": "e6c502de7ffe7b73f42e7832d4313adcf88678f47ca0678028d59eb21e5d0983",
+          "path": "/audio/de/e6/e6c502de7ffe7b73f42e7832d4313adcf88678f47ca0678028d59eb21e5d0983.opus",
+          "duration_ms": 4185,
+          "bytes": 12621
         }
       }
     },
@@ -17883,6 +18633,21 @@
           "path": "/audio/de/f6/f6206463952aab10200ed7ecfe1e1bc81126ecf57de2946b768d15deeebbe886.opus",
           "duration_ms": 4208,
           "bytes": 12951
+        }
+      }
+    },
+    {
+      "text": "Ich bin nach Berlin gefahren. Wir sind zu Hause geblieben. Es ist spät geworden.",
+      "text_hash": "fac777a4f538c0337f76834e973cbfe694411ca3d5d61fc9828e48b2777a55e4",
+      "refs": [
+        "m01|theory|spotlight|2|2|example"
+      ],
+      "audio": {
+        "normal": {
+          "key": "e6593621f20af00feba6e88eb0cd7427351b0387c86bbd1e661dbe043fe75c88",
+          "path": "/audio/de/e6/e6593621f20af00feba6e88eb0cd7427351b0387c86bbd1e661dbe043fe75c88.opus",
+          "duration_ms": 6169,
+          "bytes": 18270
         }
       }
     },
