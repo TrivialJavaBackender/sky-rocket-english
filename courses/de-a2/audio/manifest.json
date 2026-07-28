@@ -1697,8 +1697,8 @@
         "normal": {
           "key": "17467c994802f244b325c7a98fc6ff015899f5661155df71b59b87ce1f37df49",
           "path": "/audio/de/17/17467c994802f244b325c7a98fc6ff015899f5661155df71b59b87ce1f37df49.opus",
-          "duration_ms": 5560,
-          "bytes": 16471
+          "duration_ms": 5473,
+          "bytes": 16549
         }
       }
     },
@@ -15552,8 +15552,8 @@
         "normal": {
           "key": "179f88c0ca983dd3c8c4d3daed7ea097361e6e92f7272fd362f4841cecaeeee0",
           "path": "/audio/de/17/179f88c0ca983dd3c8c4d3daed7ea097361e6e92f7272fd362f4841cecaeeee0.opus",
-          "duration_ms": 2652,
-          "bytes": 8187
+          "duration_ms": 2754,
+          "bytes": 8237
         }
       }
     },
@@ -17114,8 +17114,8 @@
         "normal": {
           "key": "1748424e10e532533241d9d29d451f1ced21bf2bc0a37702f64ce0094241a623",
           "path": "/audio/de/17/1748424e10e532533241d9d29d451f1ced21bf2bc0a37702f64ce0094241a623.opus",
-          "duration_ms": 2346,
-          "bytes": 7269
+          "duration_ms": 1869,
+          "bytes": 5967
         }
       }
     },
@@ -18149,8 +18149,8 @@
         "normal": {
           "key": "178b459cedce43af8135c7f331aa34b9da6bf339e23c08b3d333343fc851002f",
           "path": "/audio/de/17/178b459cedce43af8135c7f331aa34b9da6bf339e23c08b3d333343fc851002f.opus",
-          "duration_ms": 1743,
-          "bytes": 5327
+          "duration_ms": 1003,
+          "bytes": 3293
         }
       }
     },
@@ -18164,8 +18164,8 @@
         "normal": {
           "key": "170a77ca581e8203d5e08cbae2f7f20c16fcb21f52d98088f8b4dcc968b17096",
           "path": "/audio/de/17/170a77ca581e8203d5e08cbae2f7f20c16fcb21f52d98088f8b4dcc968b17096.opus",
-          "duration_ms": 2257,
-          "bytes": 7027
+          "duration_ms": 2321,
+          "bytes": 7258
         }
       }
     },
