@@ -236,9 +236,23 @@ async function main() {
   }
 
   // ── (d) Flashcard full cycle: due queue → grade → card_state + log ──────
-  section('(d) Flashcard cycle: introduce → due queue → grade (all 4 ratings) → card_state/card_review_log');
+  section('(d) Flashcard cycle: batch-dosed intro → due queue → grade (all 4 ratings) → card_state/card_review_log');
+
+  // Deck dosing (UC-15): only words already met in a `vocab` step are eligible,
+  // so with no vocab step done yet the intro is a no-op even though m01 has 90
+  // cards waiting.
+  const gatedIntro = await flashcardsUseCase.introduceModuleFlashcards(userId, moduleId);
+  assert(gatedIntro.introduced === 0, `intro introduces nothing before any vocab step is done (got ${gatedIntro.introduced})`);
+
+  const primeSteps = await moduleRepo.listStepsForSession(userId, primeRes.kind === 'ok' ? primeRes.session.id : 0);
+  const vocabStep1 = primeSteps.find((s) => s.kind === 'vocab');
+  assert(vocabStep1 !== undefined, "prime carries a `vocab` step to complete");
+  await sessionUseCase.advanceStep(userId, vocabStep1!.id);
+
   const introduced = await flashcardsUseCase.introduceModuleFlashcards(userId, moduleId);
   console.log(`  introduced ${introduced.introduced} new flashcards into rotation`);
+  // 45 lexemes dosed 15/15/15, two directions each: batch 1 is 30 cards.
+  assert(introduced.introduced === 30, `batch 1 of 3 introduces 15 words × 2 directions (got ${introduced.introduced})`);
 
   // spreadInitialDueDate (§6.4) never schedules a card for *today* — earliest
   // due is tomorrow, round-robined across 7 days — so right after
@@ -332,8 +346,10 @@ async function main() {
   console.log(`  r7 due=${r7.dueAt.toISOString()} r21 due=${r21.dueAt.toISOString()}`);
   assert(r7.dueAt.getTime() < r21.dueAt.getTime(), 'r7 due date is before r21 due date');
 
-  const m02 = await prisma.module.findFirst({ where: { slug: 'm02' } });
-  const m02State = m02 ? await moduleRepo.getUserModuleState(userId, Number(m02.id)) : null;
+  // Scoped to en-c1: de-a1 and de-a2 have an `m02` too, and an unqualified
+  // findFirst could resolve to either of them.
+  const m02 = await moduleRepo.getModuleBySlug(courseId, 'm02');
+  const m02State = m02 ? await moduleRepo.getUserModuleState(userId, m02.id) : null;
   assert(m02State?.status === 'upcoming', `D5: m02 unlocked to 'upcoming' after m01 closes (got ${m02State?.status})`);
 
   const r7Set = await moduleReviewUseCase.getModuleReviewSet(moduleId, 10);

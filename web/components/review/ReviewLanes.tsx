@@ -10,27 +10,40 @@ const NOTE_TYPE_LABELS: Record<string, string> = { vocab: 'word → meaning', vo
 
 /** UC-16/17 Review hub — the three lanes (ARCHITECTURE.md §1.4, §7.1 `/review`). Lane 1 links to the dedicated `/flashcards` route; lanes 2/3 launch `ExercisePlayer` in place. */
 export function ReviewLanes({ hub, queueItems, moduleReviewSets }: { hub: ReviewHubDTO; queueItems: PublicExerciseDTO[]; moduleReviewSets: Record<number, PublicExerciseDTO[]> }) {
-  const breakdown = Object.entries(hub.lane1.breakdown)
-    .filter(([, n]) => n > 0)
-    .map(([type, n]) => `${n} ${NOTE_TYPE_LABELS[type] ?? type.replace(/_/g, ' ')}`)
-    .join(' · ');
+  const describeBreakdown = (byNoteType: Record<string, number>) =>
+    Object.entries(byNoteType)
+      .filter(([, n]) => n > 0)
+      .map(([type, n]) => `${n} ${NOTE_TYPE_LABELS[type] ?? type.replace(/_/g, ' ')}`)
+      .join(' · ');
 
   return (
     <div className="animate-fade-up">
       <h1 className="m-0 mb-1 text-[30px] tracking-[-.01em]">Review</h1>
       <p className="m-0 mb-4 text-[15px] text-fg-muted">Three lanes keep everything you have met in circulation.</p>
 
+      {/* One row per course: a run has to be single-language, since both card
+          directions are labelled in English metalanguage and a merged deck is
+          unreadable (and the total alone said nothing about which language). */}
       <Card className="mb-3.5">
         <Kicker>Lane 1 · Flashcards</Kicker>
-        <div className="my-1.5 flex items-baseline gap-2">
-          <span className="text-[34px] font-bold tracking-[-.02em] tabular-nums">{hub.lane1.cardsDue}</span>
-          <span className="text-sm text-fg-muted">cards due</span>
-        </div>
-        {breakdown && <div className="text-[13.5px] text-fg-muted">{breakdown}</div>}
-        {hub.lane1.cardsDue > 0 ? (
-          <LinkButton href="/flashcards" className="mt-3">
-            Start · ≈ 12 min
-          </LinkButton>
+        {hub.lane1.byCourse.length > 0 ? (
+          hub.lane1.byCourse.map((course) => (
+            <div key={course.courseSlug} className="flex items-center gap-2.5 border-t border-border-faint py-3 first:border-t-0">
+              <span className="flex-1">
+                {/* Level matters here: de-a1 and de-a2 are both named "Deutsch". */}
+                <span className="block text-[15px] font-semibold">
+                  {course.courseName} · {course.levelLabel}
+                </span>
+                <span className="text-[13px] text-fg-muted">
+                  <span className="font-semibold tabular-nums">{course.cardsDue} due</span>
+                  {describeBreakdown(course.breakdown) && ` · ${describeBreakdown(course.breakdown)}`}
+                </span>
+              </span>
+              <LinkButton href={`/flashcards?course=${course.courseSlug}`} size="sm">
+                Start
+              </LinkButton>
+            </div>
+          ))
         ) : (
           <div className="mt-2.5 text-sm font-semibold text-green-text">Queue clear — the next batch opens as cards come due.</div>
         )}

@@ -32,7 +32,10 @@ export interface TodayDTO {
   courseName: string;
   levelLabel: string;
   streakDays: number;
+  /** Due cards of the active course — what the tile's Start actually deals out. */
   cardsDueCount: number;
+  /** Due cards waiting in the learner's other courses, so the tile can point at `/review` instead of hiding them. */
+  otherCoursesCardsDueCount: number;
   queueDueCount: number;
   overdueReviewCount: number;
   todayState: TodayState;
@@ -47,8 +50,12 @@ export async function getToday(userId: number, now: Date = new Date()): Promise<
   await moduleRepo.ensureFirstModuleUnlocked(userId, course.id);
   await moduleRepo.ensureOptionalModulesUnlocked(userId, course.id);
 
-  const [activeDates, cardsDueCount, queueDueCount, overdueReviewCount, currentModule] = await Promise.all([
+  // Cards are counted for the active course and, separately, for everything
+  // else: a run has to be single-language (§7.1), so the tile that starts one
+  // must not promise a number it would refuse to deal out.
+  const [activeDates, cardsDueCount, allCoursesCardsDueCount, queueDueCount, overdueReviewCount, currentModule] = await Promise.all([
     activityRepo.listActiveDates(userId, addDays(now, -STREAK_LOOKBACK_DAYS)),
+    srsRepo.countDueCards(userId, now, course.slug),
     srsRepo.countDueCards(userId, now),
     reviewRepo.countDueReviewQueueItems(userId, now),
     reviewRepo.countDueReviewQueueItems(userId, addDays(now, -OVERDUE_GRACE_DAYS)),
@@ -68,7 +75,7 @@ export async function getToday(userId: number, now: Date = new Date()): Promise<
   }
 
   const streakDays = computeStreak(activeDates, now);
-  const nothingDue = cardsDueCount === 0 && queueDueCount === 0 && steps.length === 0;
+  const nothingDue = allCoursesCardsDueCount === 0 && queueDueCount === 0 && steps.length === 0;
   const todayState: TodayState = nothingDue ? 'nothing-due' : overdueReviewCount > 0 ? 'overdue-reviews' : 'session-due';
 
   return {
@@ -78,6 +85,7 @@ export async function getToday(userId: number, now: Date = new Date()): Promise<
     levelLabel: course.levelLabel,
     streakDays,
     cardsDueCount,
+    otherCoursesCardsDueCount: allCoursesCardsDueCount - cardsDueCount,
     queueDueCount,
     overdueReviewCount,
     todayState,

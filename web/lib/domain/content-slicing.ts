@@ -24,3 +24,25 @@ export function slicePart<T>(items: T[], part: number, of: number): T[] {
   const { start, end } = partBounds(items.length, part, of);
   return items.slice(start, end);
 }
+
+/**
+ * How many of the module's ordered vocab entries the learner has actually met
+ * in a `vocab` step — the ceiling for what may enter the SRS deck.
+ *
+ * The deck used to be introduced whole by `flashcards_intro`, which sits in
+ * Prime right after "Vocabulary 1 of 3": batches 2 and 3 started coming up in
+ * daily review days before their step, as words the learner had never seen.
+ * Reading the done-ness of the `vocab` steps keeps the two dosing schemes
+ * (session batches, deck introduction) on the same clock, and stays correct
+ * whichever order the steps get completed in.
+ */
+export function metVocabCount(steps: { kind: string; config: Record<string, unknown>; status: string }[], totalVocab: number): number {
+  let met = 0;
+  for (const step of steps) {
+    if (step.kind !== 'vocab' || step.status !== 'done') continue;
+    const batch = typeof step.config.batch === 'number' ? step.config.batch : 1;
+    const of = typeof step.config.of === 'number' ? step.config.of : 1;
+    met = Math.max(met, partBounds(totalVocab, batch, of).end);
+  }
+  return met;
+}

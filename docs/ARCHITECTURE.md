@@ -139,14 +139,17 @@
 ### 1.4. Три колеи повторений
 
 **UC-15 · Колея 1 — Flashcards (SRS).**
-- Триггер: ежедневный ритуал (кнопка «Start · ≈12 min» на Today/Review) или `flashcards_intro`.
+- Триггер: ежедневный ритуал (кнопка «Start» в строке курса на Today/Review) или `flashcards_intro`.
 - Шаги: набрать карточки, у которых `card_state.due_at ≤ now` (+ новые из модуля); показать front → flip → оценка Again/Hard/Good/Easy; пересчитать расписание (SRS); лог.
-- R: `card_state` (due для U), `flashcard` (`fields jsonb {front,main,cases,extra}`, `note_type`).
+- R: `card_state` (due для U), `flashcard` (`fields jsonb {front,main,cases,extra}`, `note_type`), `module`→`block`→`course` (курс и модуль карточки).
 - W: `card_state` (`phase`,`due_at`,`interval_days`,`ease`,`reps`,`lapses`,`last_reviewed_at`), `card_review_log` (`rating 1–4`, `prev_phase`, `new_due_at`), `daily_activity.cards_reviewed++`.
-- Рендер: карточка (тип-бейдж, front/back с cases/extra), 4 кнопки оценки с интервалами. Формы — `SKY.flashcards`. Алгоритм — §6.4 (SM-2, интервалы на кнопках из мокапа: Again 10 min / Hard 2 d / Good 4 d / Easy 8 d).
-- Заметка: новые карточки модуля попадают в колею через `flashcards_intro` (создаётся `card_state phase='new'` для всех `flashcard` модуля, `due_at` раскидан по 7 дням — §6.4 `spreadInitialDueDate`).
+- Рендер: карточка (тип-бейдж, бейдж «курс · модуль», front/back с cases/extra), 4 кнопки оценки с **реальными** интервалами. Формы — `SKY.flashcards`. Алгоритм — §6.4 (SM-2; подписи считает `previewIntervals` тем же шагом, что и грейдинг, — статические подсказки мокапа Again 10 min / Hard 2 d / Good 4 d / Easy 8 d не описывали ни одну конкретную карточку и читались как поломка SRS).
+- Заметка: **колода одноязычная**. `listDueCards`/`countDueCards` принимают `courseSlug`, lane 1 на `/review` — по строке на курс со своей кнопкой Start (`/flashcards?course=<slug>`), плитка на Today — активный курс плюс «+N in your other courses». Причина: оба направления карточки подписаны английским метаязыком, поэтому в смешанной колоде немецкое слово не отличить от английского.
+- Заметка: ран ограничен `REVIEW_RUN_SIZE` (50) карточками; плеер показывает `N / 50 of <всего due>` и в конце «Run complete · осталось M» вместо «Queue clear». Раньше плеер отдавал 50, объявлял очередь пустой, а Today показывал полный бэклог — очередь выглядела бездонной.
+- Заметка: новые карточки модуля попадают в колею **батчами**: `flashcards_intro` вводит только слова, уже встреченные в шаге `vocab` (`metVocabCount` по `user_step_state`), `due_at` раскидан по 7 дням (§6.4 `spreadInitialDueDate`). Раньше Prime вводил всю колоду модуля — 45 лексем × 2 направления, — и батчи 2–3 приходили в ежедневный обзор словами, которых учащийся не видел.
 - Заметка: колода — **только лексика**, по две карточки на слово (`vocab` — term→definition, `vocab_reverse` — definition→term, миграция `0005`). Grammar cloze и transformation из колеи убраны: это задания, их место — колея 2. Отдельные строки, а не двусторонний показ одной ноты, потому что узнавание и воспроизведение планируются независимо (отменяет D9).
-- Заметка: `flashcards_intro` разовый, поэтому карточки, появившиеся у модуля позже (например reverse-сторона после `0005`), вводит `catchUpModuleIntroductions` — он вызывается при рендере `/flashcards` и `/review` и добирает всё непредставленное в модулях с уже начатой колодой.
+- Заметка: `flashcards_intro` разовый, поэтому всё, что стало пригодным позже — следующий батч слов после его шага `vocab`, reverse-сторона после `0005`, правка лексики выпущенного модуля, — добирает `catchUpModuleIntroductions` при рендере `/flashcards` и `/review`. Гейт считается из состояния шагов на каждом вызове, поэтому дозировка идемпотентна и самовосстанавливается: отдельной записи «докуда введено» нет.
+- Заметка: гейт не отменяет строки `card_state`, введённые до батчевой дозировки. Разово вычистить их — `pnpm prune-unmet-cards --username=<name> [--dry-run]`: удаляет только карточки непройденных слов с `reps=0`, без `last_reviewed_at` и без истории в `card_review_log`, то есть без потери прогресса; они вернутся сами, когда шаг `vocab` будет пройден.
 
 **UC-16 · Колея 2 — Exercise re-queue (Review Slot).**
 - Триггер: шаг `review_slot` сессий Input/Workout (config `{"count":10}`), либо кнопка «Run the Review Slot».
@@ -521,11 +524,13 @@ export const COURSE_ROOTS: string[] = ['courses/en-c1', 'courses/de-a2'];
 
 ### 6.4. Колея 1 — `srs.ts` (SRS)
 - Схема `card_state` (`phase`,`due_at`,`interval_days`,`ease`,`reps`,`lapses`) и рейтинги 1–4 (Again/Hard/Good/Easy) в `card_review_log` — **алгоритм-агностичны** (комментарий в 0001: «SM-2 / FSRS both fit»).
-- **Решение MVP: SM-2** (проще FSRS, покрывает 4 рейтинга; интервалы на кнопках мокапа — Again 10 min, Hard 2 d, Good 4 d, Easy 8 d — как presentational-подсказки).
-  - `new/learning`: короткие шаги (Again→10 min, Good→1 d, Easy→выход в review с interval из ease).
+- **Решение MVP: SM-2** (проще FSRS, покрывает 4 рейтинга).
+  - `new/learning/relearning`: короткие шаги (Again→10 min, **Hard→30 min**, Good→1 d, Easy→выход в review с interval из ease). Hard раньше ставил 0.5 д: карточка возвращалась через 12 часов — как правило на следующее утро, неотличимо от новой, — и очередь выглядела непроливаемой. Hard в короткой фазе означает шаг внутри сессии, а не сутки.
   - `review`: `Good` → `interval *= ease`; `Hard` → `interval *= 1.2`, `ease -= 0.15`; `Easy` → `interval *= ease * 1.3`, `ease += 0.15`; `Again` → `phase='relearning'`, `lapses++`, `ease -= 0.2`, короткий шаг.
   - `ease` в границах [1.3, 2.5+]; `reps++` на успех.
-- Новые карточки модуля вводятся `flashcards_intro`: массовое `card_state(phase='new', due_at=now)` для всех `flashcard` модуля. На первом заходе большого объёма — раскидать `due_at` по дням (порт `spreadInitialDueDate` из референса), чтобы дневная очередь была посильной.
+  - **Дневные `due_at` привязаны к `startOfDay`**, как в колеях 2 и 3 (`time.ts`). `addDays(now, n)` сохранял время суток: оценил в 22:00 — карточка приходила только после 22:00 следующего дня, а при более раннем занятии молча уезжала на день и возвращалась комом. Подднёвные шаги остаются точными до минуты.
+  - Подписи кнопок даёт `previewIntervals(state, now)` — прогоняет тот же чистый шаг на все четыре рейтинга, так что UI не может разойтись с алгоритмом. Подднёвные подписи считаются от `dueAt`, а не от `interval_days`: колонка `decimal(8,2)` округляет 30 мин до 0.02 д и читается назад как 29 мин.
+- Новые карточки модуля вводит `flashcards_intro` (и добирает `catchUpModuleIntroductions`), **дозируя по батчам**: пригодны только слова, уже встреченные в шаге `vocab` — `metVocabCount(steps, totalVocab)` в `content-slicing.ts` берёт максимальную границу `partBounds` по завершённым `vocab`-шагам и сравнивает с `vocab_entry.position`. `due_at` раскидан по 7 дням (`spreadInitialDueDate`), сортировка ввода — по слову, затем по направлению, чтобы две стороны одного слова попали в разные дни.
 - Функция чистая: `review(state, rating, now) → nextState` — тестируется без БД.
 
 ### 6.5. Статусы — `module-state.ts`
@@ -548,7 +553,7 @@ export const COURSE_ROOTS: string[] = ['courses/en-c1', 'courses/de-a2'];
 | `.../module/[moduleSlug]/session/[sessionType]` | UC-13..14 | RSC + острова | `getSession(U, moduleSlug, sessionType)` | `SKY.today.steps`, `SKY.unit.sessions` |
 | `/review` | UC-16,17 | RSC | `getReviewHub(U)` | `SKY.review.lanes` |
 | `/progress` | UC-04 | RSC | `getProgress(U, courseSlug)` | `SKY.progress` |
-| `/flashcards` | UC-15 | RSC-обёртка + client-плеер | `getDueCards(U)` | `SKY.flashcards` |
+| `/flashcards?course=<slug>` | UC-15 | RSC-обёртка + client-плеер | `getDueCards(U, now, limit, courseSlug)` | `SKY.flashcards` |
 
 Экран упражнений (UC-09) — **не отдельный роут**, а модальный клиент-остров (`ExercisePlayer`) внутри страницы сессии/модуля/ревью/чек-пойнта (в мокапе это overlay `screen:'ex'`). Аналогично `FlashcardPlayer` может открываться поверх Today/Review (в мокапе `screen:'fc'`).
 

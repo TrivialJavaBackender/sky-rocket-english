@@ -200,6 +200,11 @@ export async function listVocabForModule(userId: number, moduleId: number): Prom
   });
 }
 
+/** How many lexemes the module has — the denominator batch bounds are cut from (UC-15 deck dosing), without loading the entries themselves. */
+export async function countVocabForModule(moduleId: number): Promise<number> {
+  return prisma.vocab_entry.count({ where: { module_id: moduleId } });
+}
+
 export async function getVocabEntryById(vocabEntryId: number): Promise<VocabEntryDTO | null> {
   const r = await prisma.vocab_entry.findUnique({ where: { id: vocabEntryId } });
   if (!r) return null;

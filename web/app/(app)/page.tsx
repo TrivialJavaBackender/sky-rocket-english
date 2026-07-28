@@ -40,7 +40,7 @@ export default async function TodayPage() {
               plannedMinutes={today.currentSession.plannedMinutes}
               steps={today.steps}
             />
-            <DueTiles cardsDue={today.cardsDueCount} queueDue={today.queueDueCount} />
+            <DueTiles cardsDue={today.cardsDueCount} otherCoursesCardsDue={today.otherCoursesCardsDueCount} courseSlug={today.courseSlug} queueDue={today.queueDueCount} />
           </>
         )
       )}
