@@ -1,0 +1,25 @@
+# Module 13 · Beim Arzt. Scaffolding (goals, standfirst) English, title German
+# (§5). grammar_points repeat the module card's opis (3) with no additions.
+# sich fühlen is taught as a ready-made phrase with its forms listed, never as a
+# reflexive system — that is A2 work. The word-formation extension of this module
+# is the -schmerzen compound (der Kopf → die Kopfschmerzen); it lives in the
+# theory table and in the word_formation tasks, not as separate vocab entries.
+slug: m13
+title: Beim Arzt
+standfirst: The imperative and talking about health · 24 words · say how you feel.
+goals:
+  - text: Give a short command or a piece of advice with the du and ihr forms — Trink viel! Nehmt die Tabletten!
+    achieved_by: workout
+  - text: Say what hurts with Ich habe Kopfschmerzen and Mein Kopf tut weh
+    achieved_by: workout
+  - text: Learn 24 words for the body, illness, the doctor and the chemist's
+    achieved_by: input
+  - text: Write a short message about how you feel and give one piece of advice
+    achieved_by: output
+grammar_points:
+  - The imperative — the du and ihr forms (Trink viel! Nehmt die Tabletten!)
+  - The body and the phrases Ich habe … schmerzen / Mein … tut weh
+  - The modal verb sollen for advice (Du sollst …)
+production:
+  mode: writing
+  genre: a short message about how you feel and one piece of advice

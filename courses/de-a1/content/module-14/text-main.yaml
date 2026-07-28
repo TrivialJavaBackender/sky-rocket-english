@@ -1,0 +1,54 @@
+# Module 14 · main text — a real postcard from a holiday in Italy. The genre is
+# what makes the module's grammar natural: a postcard is written on the last day
+# of the trip, so almost every sentence looks back (sind gefahren, sind gegangen,
+# bin gewesen, haben gegessen, haben getrunken, haben gemacht) and the rest
+# reports today's weather (regnet es, der Wind ist kalt) and tomorrow's plan.
+# Only the seven participles of the closed list appear — no eighth form is shown
+# anywhere, so the list stays a list.
+# aber and denn each carry a clause; und links two more. 16 of the module's 24
+# words are here, the weather ones are in the extra text.
+# One paragraph = one part of the card, so every part gets a clip of its own.
+# Glosses (4) sit only on words whose form in the text is the dictionary form and
+# which are NOT vocab entries of this module.
+kind: main
+kicker: POSTKARTE
+title: Meine Reise
+meta: ≈ 2 min · dotted words have a note — tap to reveal
+body:
+  - - t: "Liebe Anna,"
+  - - t: "viele Grüße aus Rimini! Der Urlaub ist "
+    - g: super
+    - t: " und das Wetter ist "
+    - g: fantastisch
+    - t: "."
+  - - t: "Am Samstag sind wir mit dem Zug nach "
+    - g: Italien
+    - t: " gefahren. Elf Stunden im Zug sind lang, aber die Reise ist schön gewesen."
+  - - t: "Gestern sind wir an den Strand gegangen. Die Sonne scheint hier jeden Tag, und das Meer ist warm. Ich bin von zehn bis vier am Strand gewesen. Am Abend haben wir Pizza gegessen und Cola getrunken."
+  - - t: "Heute regnet es leider, und der Wind ist kalt. Wir haben nichts gemacht. Wir sind im Hotel gewesen, und ich schreibe diese Postkarte."
+  - - t: "Morgen fahren wir in die Berge, denn "
+    - g: dort
+    - t: " ist es nicht so warm. Im Sommer ist es hier immer schön."
+  - - t: "Und du? Was hast du am Wochenende gemacht? Schreib mir bitte!"
+  - - t: "Viele Grüße, Lukas"
+glosses:
+  - key: super
+    term: super
+    pos_label: adjective
+    definition: great; very good, better than gut
+    example: Der Urlaub ist super.
+  - key: fantastisch
+    term: fantastisch
+    pos_label: adjective
+    definition: fantastic; so good that you cannot believe it
+    example: Das Wetter ist fantastisch.
+  - key: Italien
+    term: Italien
+    pos_label: noun
+    definition: Italy; the country south of Österreich, with Rom and Rimini
+    example: Wir sind nach Italien gefahren.
+  - key: dort
+    term: dort
+    pos_label: adverb
+    definition: there; in that place, not here
+    example: Wir fahren in die Berge, denn dort ist es kalt.

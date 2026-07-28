@@ -1,0 +1,231 @@
+# Module 12 · 24 words: appointments, the calendar and time. The 12 anchors of the
+# card + 12 words that finish the same domain — the units of the calendar (der
+# Monat, das Jahr, die Stunde, die Minute), the two days you point at when you
+# make an appointment (heute, morgen), the three verbs the topic runs on
+# (anrufen, warten, treffen) and the three nouns around a date (die Zeit, der
+# Geburtstag, die Einladung).
+# The twelve month names are NOT twelve entries: they live inside der Monat, in
+# its use cases and its collocations, so that 24 stays 24.
+# morgen here is the small adverb "tomorrow" — der Morgen, the early part of the
+# day, is a different word and belongs to module 1.
+# später is given as one whole word, never as a form built from spät: this course
+# does not compare adjectives.
+# Scaffolding rule (§5): term/use_cases/collocations/register German, definition
+# English with a synonym or an opposite. Every noun carries its article and its
+# plural; every verb says whether it splits.
+entries:
+  - term: der Termin
+    tag: Nomen
+    definition: an appointment; a time you have agreed with somebody, often official
+    use_cases:
+      - Ich habe am Montag einen Termin.
+      - Der Termin ist um zehn Uhr.
+    collocations: einen Termin haben · einen Termin machen · einen Termin absagen
+    register: "Plural: die Termine."
+
+  - term: die Verabredung
+    tag: Nomen
+    definition: an arrangement to meet, a date with a friend; less official than ein Termin
+    use_cases:
+      - Ich habe heute eine Verabredung mit Anna.
+      - Die Verabredung ist um acht Uhr.
+    collocations: eine Verabredung haben · eine Verabredung absagen
+    register: "Plural: die Verabredungen."
+
+  - term: der Kalender
+    tag: Nomen
+    definition: a calendar or diary; the place where your appointments stand
+    use_cases:
+      - Der Termin steht schon im Kalender.
+      - Ich habe einen Kalender im Handy.
+    collocations: im Kalender · der Kalender im Handy · in den Kalender sehen
+    register: "Plural: die Kalender."
+
+  - term: das Datum
+    tag: Nomen
+    definition: a date; the day and the month, for example der fünfte Mai
+    use_cases:
+      - Das Datum ist der siebte Mai.
+      - Welches Datum haben wir heute?
+    collocations: das Datum von heute · ein Datum finden
+    register: "Plural: die Daten."
+
+  - term: der Monat
+    tag: Nomen
+    definition: a month; a year has twelve of them, from Januar to Dezember
+    use_cases:
+      - "Das Jahr hat zwölf Monate: Januar, Februar, März, April, Mai, Juni, Juli, August, September, Oktober, November, Dezember."
+      - Im Mai habe ich viele Termine.
+    collocations: im Januar · im Mai · im Dezember · zwölf Monate
+    register: "Plural: die Monate. Mit Monat: im Mai. Mit Datum: am fünften Mai."
+
+  - term: das Jahr
+    tag: Nomen
+    definition: a year; twelve months
+    use_cases:
+      - Ein Jahr hat zwölf Monate.
+      - Ich bin dreißig Jahre alt.
+    collocations: ein Jahr · zwei Jahre · das ganze Jahr
+    register: "Plural: die Jahre."
+
+  - term: die Stunde
+    tag: Nomen
+    definition: an hour, sixty minutes; also one lesson in a course
+    use_cases:
+      - Wir warten schon eine Stunde.
+      - Der Kurs hat heute zwei Stunden.
+    collocations: eine Stunde warten · zwei Stunden · eine halbe Stunde
+    register: "Plural: die Stunden."
+
+  - term: die Minute
+    tag: Nomen
+    definition: a minute; sixty of them make an hour
+    use_cases:
+      - Eine Stunde hat sechzig Minuten.
+      - Warten Sie bitte fünf Minuten!
+    collocations: fünf Minuten · eine Minute warten · in zehn Minuten
+    register: "Plural: die Minuten."
+
+  - term: die Zeit
+    tag: Nomen
+    definition: time; also whether you are free — Hast du Zeit?
+    use_cases:
+      - Hast du am Freitag Zeit?
+      - Ich habe leider keine Zeit.
+    collocations: Zeit haben · keine Zeit haben · viel Zeit
+    register: "Plural: die Zeiten."
+
+  - term: der Geburtstag
+    tag: Nomen
+    definition: a birthday, the day you were born
+    use_cases:
+      - Mein Geburtstag ist am dritten Mai.
+      - Wann hast du Geburtstag?
+    collocations: Geburtstag haben · am Geburtstag · der Geburtstag von Anna
+    register: "Plural: die Geburtstage."
+
+  - term: die Einladung
+    tag: Nomen
+    definition: an invitation; a card or a message that asks you to come
+    use_cases:
+      - Danke für die Einladung!
+      - Die Einladung ist für Samstag.
+    collocations: eine Einladung schreiben · danke für die Einladung
+    register: "Plural: die Einladungen. Verb: einladen."
+
+  - term: absagen
+    tag: Verb
+    definition: to cancel; to say that you cannot come after all
+    use_cases:
+      - Ich muss den Termin leider absagen.
+      - Anna sagt die Verabredung ab.
+    collocations: einen Termin absagen · eine Verabredung absagen
+    register: "Trennbar: ich sage ab. Mit Modalverb: Ich muss absagen."
+
+  - term: verschieben
+    tag: Verb
+    definition: to move something to a later day or time; not to cancel, only later
+    use_cases:
+      - Können wir den Termin verschieben?
+      - Wir verschieben die Verabredung auf Montag.
+    collocations: einen Termin verschieben · auf Montag verschieben
+    register: "Nicht trennbar: ich verschiebe, du verschiebst."
+
+  - term: anrufen
+    tag: Verb
+    definition: to call somebody on the phone
+    use_cases:
+      - Ich rufe dich morgen an.
+      - Können Sie mich am Montag anrufen?
+    collocations: Anna anrufen · später anrufen · noch einmal anrufen
+    register: "Trennbar: ich rufe an, du rufst an."
+
+  - term: warten
+    tag: Verb
+    definition: to wait; to stay somewhere until somebody comes
+    use_cases:
+      - Wir warten schon zehn Minuten.
+      - Warten Sie bitte einen Moment!
+    collocations: eine Stunde warten · auf den Bus warten · kurz warten
+    register: "Regelmäßig: ich warte, du wartest, er wartet."
+
+  - term: treffen
+    tag: Verb
+    definition: to meet somebody; e becomes i in the du and er forms
+    use_cases:
+      - Wir treffen Anna am Samstag.
+      - Wann triffst du Herrn Weber?
+    collocations: Freunde treffen · Anna treffen · am Bahnhof treffen
+    register: "Stammwechsel: du triffst, er trifft."
+
+  - term: pünktlich
+    tag: Adjektiv
+    definition: on time, not late; the opposite of spät
+    use_cases:
+      - Ich bin immer pünktlich.
+      - Der Bus kommt pünktlich um acht Uhr.
+    collocations: pünktlich sein · pünktlich kommen · pünktlich um acht
+    register: "Gegenteil: spät."
+
+  - term: frei
+    tag: Adjektiv
+    definition: free; with no appointment and no work, or still available
+    use_cases:
+      - Am Freitag habe ich frei.
+      - Ist der Termin um zehn Uhr noch frei?
+    collocations: frei haben · frei sein · noch frei
+    register: "Gegenteil: besetzt."
+
+  - term: besetzt
+    tag: Adjektiv
+    definition: taken, not free; a busy phone line or a full day
+    use_cases:
+      - Die Nummer ist besetzt. Ich rufe später an.
+      - Der Termin um zehn Uhr ist leider besetzt.
+    collocations: besetzt sein · die Nummer ist besetzt · der Tag ist besetzt
+    register: "Gegenteil: frei."
+
+  - term: dringend
+    tag: Adjektiv
+    definition: urgent; it cannot wait
+    use_cases:
+      - Der Termin ist sehr dringend.
+      - Ich muss dich dringend anrufen.
+    collocations: sehr dringend · dringend anrufen · dringend einen Termin brauchen
+    register: "Auch Adverb: Ich brauche dringend einen Termin."
+
+  - term: zusammen
+    tag: Adverb
+    definition: together, with each other; the opposite of allein
+    use_cases:
+      - Wir frühstücken am Sonntag zusammen.
+      - Wollen wir zusammen essen?
+    collocations: zusammen essen · zusammen lernen · alle zusammen
+    register: "Gegenteil: allein."
+
+  - term: später
+    tag: Adverb
+    definition: later, at a later time; the opposite of jetzt
+    use_cases:
+      - Ich rufe später an.
+      - Der Termin ist später — um vier Uhr.
+    collocations: später anrufen · später kommen · zwei Stunden später
+    register: "Ein Wort, immer gleich. Bis später! = Tschüss."
+
+  - term: heute
+    tag: Adverb
+    definition: today; this day
+    use_cases:
+      - Heute ist der fünfte Mai.
+      - Heute habe ich leider keine Zeit.
+    collocations: heute Morgen · heute Abend · das Datum von heute
+    register: "Zeitachse: heute – morgen – übermorgen."
+
+  - term: morgen
+    tag: Adverb
+    definition: tomorrow; the day after today. Small m — der Morgen with a capital M is the early part of the day
+    use_cases:
+      - Morgen habe ich einen Termin.
+      - Wir treffen Anna morgen um drei Uhr.
+    collocations: morgen früh · morgen Abend · bis morgen
+    register: "Klein: morgen = der Tag nach heute. Groß: der Morgen = 6–10 Uhr."

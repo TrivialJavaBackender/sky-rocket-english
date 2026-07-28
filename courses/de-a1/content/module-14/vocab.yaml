@@ -1,0 +1,233 @@
+# Module 14 · 24 words: the weather, the seasons and a trip. The 12 anchors of
+# the card (das Wetter · die Sonne · der Regen · der Schnee · warm · kalt ·
+# der Sommer · der Winter · die Reise · der Urlaub · gestern · schön) plus 12
+# words that finish the same three domains — the two missing seasons (der
+# Frühling, der Herbst), the three weather verbs the module runs on (regnen,
+# schneien, scheinen), der Wind, and the places and things of a trip (das Hotel,
+# der Strand, das Meer, der Berg, der Zug, die Postkarte).
+# The seven participles are NOT vocab entries: they live in the theory table as a
+# closed list and in the exercises, because each of them belongs to a verb the
+# course already teaches (machen, arbeiten, essen, trinken, fahren, gehen, sein).
+# Making them entries would sell them as new words instead of new forms.
+# der Himmel, grau, der Grad, Italien, super, fantastisch and dort are input in
+# the texts and carry glosses there, not entries.
+# Scaffolding rule (§5): term/use_cases/collocations/register German, definition
+# English with a synonym or an opposite. Every noun carries its article and its
+# plural; the weather verbs carry the es-form, because that is the only form the
+# course asks for.
+entries:
+  - term: das Wetter
+    tag: Nomen
+    definition: the weather; sun, rain, snow or wind outside
+    use_cases:
+      - Wie ist das Wetter heute?
+      - Das Wetter ist schön.
+    collocations: das Wetter ist schön · das Wetter ist schlecht · der Wetterbericht
+    register: "Kein Plural. Frage: Wie ist das Wetter?"
+
+  - term: die Sonne
+    tag: Nomen
+    definition: the sun; it makes the day warm and bright
+    use_cases:
+      - Die Sonne scheint.
+      - Im Sommer ist die Sonne warm.
+    collocations: die Sonne scheint · viel Sonne
+    register: "Plural: die Sonnen (sehr selten)."
+
+  - term: der Regen
+    tag: Nomen
+    definition: the rain; water from the sky, the opposite of Sonne
+    use_cases:
+      - Der Regen kommt am Morgen.
+      - Im Herbst gibt es viel Regen.
+    collocations: viel Regen · der Regen kommt
+    register: "Kein Plural. Verb: es regnet."
+
+  - term: der Schnee
+    tag: Nomen
+    definition: the snow; the soft white cold that falls in winter
+    use_cases:
+      - Im Winter kommt der Schnee.
+      - In den Bergen gibt es viel Schnee.
+    collocations: viel Schnee · der erste Schnee
+    register: "Kein Plural. Verb: es schneit."
+
+  - term: der Wind
+    tag: Nomen
+    definition: the wind; the air that moves, sometimes cold
+    use_cases:
+      - Der Wind ist kalt.
+      - Am Meer gibt es viel Wind.
+    collocations: der Wind ist kalt · viel Wind
+    register: "Plural: die Winde."
+
+  - term: regnen
+    tag: Verb
+    definition: to rain; water comes from the sky
+    use_cases:
+      - Es regnet den ganzen Tag.
+      - Regnet es in Hamburg?
+    collocations: es regnet · es regnet viel
+    register: "Nur mit es: es regnet. Nomen: der Regen."
+
+  - term: schneien
+    tag: Verb
+    definition: to snow; snow comes from the sky
+    use_cases:
+      - Im Winter schneit es oft.
+      - In den Bergen schneit es schon.
+    collocations: es schneit · es schneit viel
+    register: "Nur mit es: es schneit. Nomen: der Schnee."
+
+  - term: scheinen
+    tag: Verb
+    definition: to shine; the sun gives light and warmth
+    use_cases:
+      - Die Sonne scheint.
+      - Heute scheint die Sonne den ganzen Tag.
+    collocations: die Sonne scheint
+    register: "Fast immer mit die Sonne: die Sonne scheint."
+
+  - term: warm
+    tag: Adjektiv
+    definition: warm; not cold, pleasant on your skin
+    use_cases:
+      - Im Sommer ist es warm.
+      - Das Meer ist warm.
+    collocations: es ist warm · warmes Wetter
+    register: "Gegenteil: kalt."
+
+  - term: kalt
+    tag: Adjektiv
+    definition: cold; the opposite of warm
+    use_cases:
+      - Heute ist es kalt.
+      - Der Wind ist kalt.
+    collocations: es ist kalt · kaltes Wasser
+    register: "Gegenteil: warm."
+
+  - term: schön
+    tag: Adjektiv
+    definition: beautiful, nice; you like to see it, the opposite of schlecht
+    use_cases:
+      - Das Wetter ist schön.
+      - Der Urlaub ist schön gewesen.
+    collocations: schönes Wetter · ein schöner Tag · Schönen Tag!
+    register: "Gegenteil: schlecht. Auch: Schönes Wochenende!"
+
+  - term: der Sommer
+    tag: Nomen
+    definition: the summer; the warm season, Juni, Juli and August
+    use_cases:
+      - Im Sommer fahren wir ans Meer.
+      - Der Sommer ist warm.
+    collocations: im Sommer · der Sommerurlaub
+    register: "Plural: die Sommer. Wann? Im Sommer."
+
+  - term: der Winter
+    tag: Nomen
+    definition: the winter; the cold season, Dezember, Januar and Februar
+    use_cases:
+      - Im Winter schneit es.
+      - Der Winter ist kalt.
+    collocations: im Winter · der Winterurlaub
+    register: "Plural: die Winter. Wann? Im Winter."
+
+  - term: der Frühling
+    tag: Nomen
+    definition: the spring; the season after the winter, März, April and Mai
+    use_cases:
+      - Im Frühling kommen die Blumen.
+      - Der Frühling ist schön.
+    collocations: im Frühling · der Frühling kommt
+    register: "Plural: die Frühlinge. Wann? Im Frühling."
+
+  - term: der Herbst
+    tag: Nomen
+    definition: the autumn, the fall; the season after the summer, September, Oktober and November
+    use_cases:
+      - Im Herbst regnet es oft.
+      - Der Herbst ist da.
+    collocations: im Herbst · der Herbst kommt
+    register: "Plural: die Herbste. Wann? Im Herbst."
+
+  - term: die Reise
+    tag: Nomen
+    definition: the journey, the trip; you go from one city or country to another
+    use_cases:
+      - Die Reise ist lang.
+      - Gute Reise!
+    collocations: eine Reise machen · Gute Reise!
+    register: "Plural: die Reisen."
+
+  - term: der Urlaub
+    tag: Nomen
+    definition: the holiday, the vacation; days with no work
+    use_cases:
+      - Ich habe im August Urlaub.
+      - Der Urlaub ist schön gewesen.
+    collocations: Urlaub machen · Urlaub haben · im Urlaub
+    register: "Plural: die Urlaube (selten). Kein Artikel: Ich habe Urlaub."
+
+  - term: das Hotel
+    tag: Nomen
+    definition: the hotel; a house with rooms where you sleep in your holiday
+    use_cases:
+      - Das Hotel ist klein, aber schön.
+      - Wir sind zwei Tage im Hotel gewesen.
+    collocations: im Hotel · ein Hotel buchen
+    register: "Plural: die Hotels."
+
+  - term: der Strand
+    tag: Nomen
+    definition: the beach; the sand at the sea
+    use_cases:
+      - Wir sind an den Strand gegangen.
+      - Der Strand ist sehr lang.
+    collocations: an den Strand gehen · am Strand
+    register: "Plural: die Strände."
+
+  - term: das Meer
+    tag: Nomen
+    definition: the sea; very much water, you can swim in it
+    use_cases:
+      - Das Meer ist warm.
+      - Im Sommer fahren wir ans Meer.
+    collocations: ans Meer fahren · am Meer
+    register: "Plural: die Meere. Auch: die See."
+
+  - term: der Berg
+    tag: Nomen
+    definition: the mountain; it is very high, and in winter there is snow on it
+    use_cases:
+      - In den Bergen schneit es.
+      - Wir fahren in die Berge.
+    collocations: in die Berge fahren · in den Bergen
+    register: "Plural: die Berge."
+
+  - term: der Zug
+    tag: Nomen
+    definition: the train; it goes from one Bahnhof to the next
+    use_cases:
+      - Wir sind mit dem Zug nach Italien gefahren.
+      - Der Zug kommt um acht Uhr.
+    collocations: mit dem Zug fahren · der Zug nach Berlin
+    register: "Plural: die Züge."
+
+  - term: die Postkarte
+    tag: Nomen
+    definition: the postcard; a small card with a photo that you write in your holiday
+    use_cases:
+      - Ich schreibe eine Postkarte.
+      - Die Postkarte kommt aus Italien.
+    collocations: eine Postkarte schreiben · eine Postkarte aus Rom
+    register: "Plural: die Postkarten. Aus: die Post + die Karte."
+
+  - term: gestern
+    tag: Adverb
+    definition: yesterday; the day before today
+    use_cases:
+      - Gestern habe ich viel gearbeitet.
+      - Was hast du gestern gemacht?
+    collocations: gestern Abend · gestern Morgen
+    register: "heute · gestern · morgen. Mit Perfekt: Gestern habe ich …"

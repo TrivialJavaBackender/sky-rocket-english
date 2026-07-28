@@ -1,0 +1,54 @@
+# Module 11 · main text — a real street dialogue: a stranger asks the way to the
+# station and gets it, step by step. Real genre, not an exercise: it carries 21
+# of the 24 target words (die Stadt, die Bahn and der Weg come in the extra text)
+# and every target construction — the Sie-imperative (Gehen, Biegen … ab, Nehmen,
+# Kaufen, Steigen … aus), the direction phrases zum Bahnhof, zum Zentrum,
+# am Rathaus vorbei, and the adverbs links, rechts, geradeaus. Glosses (4) sit
+# only on words whose form in the text is the dictionary form and which are not
+# vocab entries of the module.
+kind: main
+kicker: DIALOG
+title: "Entschuldigung, wie komme ich zum Bahnhof?"
+meta: ≈ 2 min · dotted words have a note — tap to reveal
+body:
+  - - t: "— Entschuldigung! Wie komme ich zum Bahnhof?"
+  - - t: "— Zu Fuß oder mit dem Bus?"
+  - - t: "— Zu Fuß, bitte. Ist es weit?"
+  - - t: "— Nein, der Bahnhof ist ganz nah. Gehen Sie hier geradeaus bis zur Ampel. Da "
+    - g: vorne
+    - t: " sehen Sie eine Kreuzung."
+  - - t: "— Und dann?"
+  - - t: "— Biegen Sie an der Kreuzung links ab und gehen Sie am Rathaus vorbei. Die Straße heißt Bahnhofstraße. Der Bahnhof ist dann rechts."
+  - - t: "— Danke. Und wo ist die Post? Ich suche auch die Post."
+  - - t: "— Die Post ist "
+    - g: gleich
+    - t: " an der Ecke. Die Bank ist auch da."
+  - - t: "— Und wie komme ich zum Zentrum?"
+  - - t: "— Nehmen Sie den Bus "
+    - g: Nummer
+    - t: " 5. Die Haltestelle ist da "
+    - g: drüben
+    - t: ". Kaufen Sie die Fahrkarte im Bus und steigen Sie am Platz aus."
+  - - t: "— Vielen Dank! Auf Wiedersehen."
+  - - t: "— Bitte, gern!"
+glosses:
+  - key: vorne
+    term: vorne
+    pos_label: adverb
+    definition: at the front, a little way ahead of you; the opposite is hinten
+    example: Da vorne ist die Haltestelle.
+  - key: gleich
+    term: gleich
+    pos_label: adverb
+    definition: right there, very close; only a step away
+    example: Die Bank ist gleich an der Ecke.
+  - key: Nummer
+    term: die Nummer
+    pos_label: noun
+    definition: a number; every bus and every house has one
+    example: Nehmen Sie den Bus Nummer 5.
+  - key: drüben
+    term: drüben
+    pos_label: adverb
+    definition: over there, on the other side of the street
+    example: Die Haltestelle ist da drüben.

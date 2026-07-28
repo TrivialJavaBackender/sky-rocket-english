@@ -1,0 +1,36 @@
+# Module 11 · production. This module produces speech, not writing: a recorded
+# monologue of 30–60 seconds. Scaffolding (prompt, checklist) English; model
+# answer German (§5). The model stays inside what modules 1–11 can produce: the
+# Sie-imperative, direction phrases as whole chunks (zum …, zur …, mit dem …,
+# am … vorbei), the separable verbs from module 9, möchten from module 8, the
+# present tense and verb-second. No du-imperative, no müssen/dürfen/sollen, no
+# adjective endings, no ordinal and no date — die erste Straße links is a phrase
+# to recognise, not to produce.
+mode: speaking
+genre: a short spoken monologue that asks for the way and gives it
+prompt: |
+  A visitor stops you in the street in front of your language school and wants
+  to go to the station. Record a monologue of 30–60 seconds on your phone: first
+  ask the way like the visitor, then answer as the person who knows the town.
+
+  Say something about each point:
+  • the question — Entschuldigung, wie komme ich zum …?
+  • how far it is (Ist es weit? — Nein, es ist ganz nah.)
+  • two or three steps of the way (Gehen Sie …, Biegen Sie …, Nehmen Sie …)
+  • one building you go past (am Rathaus vorbei, an der Post vorbei)
+  • the bus or the tram, if the way is long (mit dem Bus, mit der Bahn)
+
+  Use at least four Sie-imperatives and at least two ready-made direction
+  phrases (zum …, zur …, mit dem …).
+model_answer: |
+  Entschuldigung, wie komme ich zum Bahnhof? — Zu Fuß sind es zehn Minuten, es
+  ist ganz nah. Gehen Sie hier geradeaus bis zur Ampel. Biegen Sie an der
+  Kreuzung links ab. Dann gehen Sie am Rathaus vorbei. Die Straße heißt
+  Bahnhofstraße, und der Bahnhof ist rechts. Sie möchten fahren? Nehmen Sie den
+  Bus Nummer 5 und steigen Sie am Bahnhof aus. Die Haltestelle ist da vorne.
+checklist:
+  - Four or more Sie-imperatives, each with Sie right behind the verb
+  - Two or more ready-made direction phrases — zum …, zur …, mit dem …
+  - One separable verb with the prefix at the end (Biegen Sie … ab)
+  - One phrase with an … vorbei, and vorbei stands last
+  - 30–60 seconds, and the way is clear from the first step to the last

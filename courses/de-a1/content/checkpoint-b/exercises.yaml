@@ -1,0 +1,303 @@
+# Checkpoint B · 30 items over modules 6–10 (Block B, "Everyday life") of
+# Deutsch von null → A1. Pass mark 75% (23/30) — declared in course.yaml (cp-b),
+# not here. 90 minutes: 30 items plus the short message in writing.yaml, sat in
+# one sitting, once.
+#
+# Every item is built from what Block B actually taught: the accusative (M06),
+# es gibt and quantity phrases (M07), the modals können/wollen/möchten and the
+# verb bracket (M08), separable verbs and the clock (M09), place as a ready-made
+# phrase and the question wo? (M10). Nothing here is copied from a module — the
+# sentences are new, the operations are not. The German sentences and the
+# paradigms behind them come from Basic German (Schenke & Seago), Units 12, 18,
+# 20, 5, 24 and 26, and from its key to the exercises.
+#
+# CUMULATIVE: Block A (M01–M05) is the environment, never the target. Subjects,
+# possessives, plurals, verb-second order, inversion after a front adverbial,
+# nicht/kein in the nominative and und/oder carry the sentences; the operation
+# under test and the attribution are always M06–M10.
+#
+# Design: exactly 6 items per module, types 1–7 of the catalogue mixed
+# throughout (never grouped in blocks of one type), ordered by module.
+# reading_comprehension is excluded — a checkpoint package carries no
+# reading_text, so sync would store reading_text_id = null.
+#
+# Type spread: 6 grammar_drill · 5 mc_cloze · 5 open_cloze · 4 word_formation ·
+#              4 error_correction · 3 collocation_match ·
+#              3 key_word_transformation = 30
+#
+# Per module (6 each):
+#   M06 grammar_drill 2 · mc_cloze 1 · open_cloze 1 · word_formation 1 · error_correction 1
+#   M07 mc_cloze 1 · open_cloze 1 · collocation_match 1 · grammar_drill 1 · word_formation 1 · key_word_transformation 1
+#   M08 grammar_drill 1 · mc_cloze 1 · open_cloze 1 · word_formation 1 · error_correction 1 · key_word_transformation 1
+#   M09 grammar_drill 1 · open_cloze 1 · mc_cloze 1 · word_formation 1 · error_correction 1 · collocation_match 1
+#   M10 mc_cloze 1 · grammar_drill 1 · open_cloze 1 · collocation_match 1 · error_correction 1 · key_word_transformation 1
+#
+# ATTRIBUTION: checkpoint exercises cannot carry `grammar_point` (the column is
+# module-scoped and syncCheckpoint passes an empty map), so the owning module and
+# grammar point travel in the explanation prefix — "M07 · kein in the accusative
+# (keinen, keine) — …", the heading taken verbatim from that module's meta.yaml.
+# The debrief in writing.yaml sorts misses by that prefix.
+#
+# review_pool is empty: a checkpoint is sat once and does not seed spaced review.
+#
+# Frames and answers German, explanations English (bridge metalanguage, PLAN §5).
+# All 30 idents are distinct; every mc_cloze/grammar_drill answer index is used.
+# One task = one operation. No answer needs anything past Module 10: no
+# imperative, no zum/zur, no müssen/dürfen/sollen, no dates or ordinals, no
+# von … bis, no body phrases, no Perfekt, no aber/denn, no weather. The dative
+# appears only inside ready-made whole phrases (im Bad, in der Küche, auf dem
+# Balkon) that are chosen or matched, never built.
+
+core:
+  # ══════════════ M06 · Im Café ══════════════
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Der Kellner bringt die Speisekarte. Ich nehme "
+      post: " Salat."
+      prompt: "der Salat (Akkusativ)"
+      options: [der, dem, das, den]
+      answer: 3
+    explanation: "M06 · The accusative of the definite article (der → den; das and die do not change) — Salat is the direct object of nehme, and der Salat is masculine, so der becomes den: Ich nehme den Salat."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Wir haben Durst. Wir bestellen "
+      post: " Saft und eine Cola."
+      options: [ein, eine, einen, einem]
+      answer: 2
+    explanation: "M06 · The accusative of the indefinite article (ein → einen) — der Saft is masculine and it is the direct object, so ein becomes einen: Wir bestellen einen Saft. eine Cola stays as it is — feminine does not change."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Mein Bruder heißt Tom. Ich treffe "
+      post: " oft im Café."
+      answers: [ihn]
+      answer_shown: ihn
+    explanation: "M06 · Personal pronouns in the accusative (mich, dich, ihn, sie, es, uns, euch) — mein Bruder is masculine and here he is the direct object of treffe, so the pronoun is ihn, not er: Ich treffe ihn oft im Café."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Ich habe Hunger. Ich nehme "
+      post: "."
+      prompt: "der Kuchen (Akkusativ)"
+      answers: [den Kuchen]
+      answer_shown: den Kuchen
+    explanation: "M06 · The accusative of the definite article (der → den; das and die do not change) — After nehmen the noun is the direct object, so the masculine article der becomes den: den Kuchen."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Der Kellner sieht "
+      post: " nicht. Wir warten schon zehn Minuten."
+      prompt: "wir (Akkusativ)"
+      options: [wir, uns, unser, euch]
+      answer: 1
+    explanation: "M06 · Personal pronouns in the accusative (mich, dich, ihn, sie, es, uns, euch) — We are the direct object of sieht, so wir becomes uns: Der Kellner sieht uns nicht."
+  - type: error_correction
+    group: grammar
+    content: { words: [Ich, trinke, der, Kaffee, ohne, "Milch."], wrong: 2, correction: "der → den" }
+    explanation: "M06 · The direct object with nehmen, essen, trinken and haben — Kaffee is the direct object of trinke, and der Kaffee is masculine, so the article is den: Ich trinke den Kaffee ohne Milch."
+
+  # ══════════════ M07 · Einkaufen ══════════════
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Der Supermarkt hat heute "
+      post: " Brot mehr."
+      options: [kein, keine, keinen, keinem]
+      answer: 0
+    explanation: "M07 · kein in the accusative (keinen, keine) — das Brot is neuter, and neuter does not change in the accusative: Der Supermarkt hat heute kein Brot mehr. Only the masculine adds -en."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Was ist im Kühlschrank? — Es "
+      post: " Milch, Butter und Käse."
+      answers: [gibt]
+      answer_shown: gibt
+    explanation: "M07 · es gibt + the accusative — German says there is and there are with one fixed phrase, es gibt, whether one thing or several follow: Es gibt Milch, Butter und Käse."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [ein Kilo, ein Liter, eine Flasche, ein Stück]
+      right: [Wasser, Kuchen, Äpfel, Milch]
+      pairs: { 0: 2, 1: 3, 2: 0, 3: 1 }
+    explanation: "M07 · Quantity phrases (ein Kilo, ein Liter, eine Flasche, ein Stück, 100 Gramm) — Each measure keeps its own noun: ein Kilo Äpfel · ein Liter Milch · eine Flasche Wasser · ein Stück Kuchen. The noun follows with no article of its own."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Ich brauche "
+      post: " Milch für den Kuchen."
+      prompt: "der Liter (Menge)"
+      options: ["ein Liter", "einen Liter", "eine Liter", "einem Liter"]
+      answer: 1
+    explanation: "M07 · Quantity phrases (ein Kilo, ein Liter, eine Flasche, ein Stück, 100 Gramm) — der Liter is masculine, and the whole quantity phrase is the direct object of brauche, so it is einen Liter Milch."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Ich trinke Wasser. Ich möchte "
+      post: ", danke."
+      prompt: "einen Kaffee (negativ)"
+      answers: [keinen Kaffee]
+      answer_shown: keinen Kaffee
+    explanation: "M07 · kein in the accusative (keinen, keine) — kein takes exactly the endings of ein, so the masculine direct object einen Kaffee becomes keinen Kaffee."
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: Hier ist ein Supermarkt.
+      key: ES GIBT
+      pre: "Hier gibt es "
+      post: "."
+      answers: [einen Supermarkt]
+      hint: 2 Wörter
+      answer_shown: einen Supermarkt
+    explanation: "M07 · es gibt + the accusative — sein says where something is, es gibt says that something exists. es gibt is followed by the accusative, so ein becomes einen: Hier gibt es einen Supermarkt."
+
+  # ══════════════ M08 · Ich kann das! ══════════════
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Meine Schwester "
+      post: " sehr gut Klavier spielen."
+      prompt: können
+      options: [kann, kannst, könnt, können]
+      answer: 0
+    explanation: "M08 · The modal verbs können and wollen in the present tense (all persons) — meine Schwester is sie (one person), and the ich and er/sie/es forms of können are both kann, with no ending: Sie kann Klavier spielen."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Meine Eltern "
+      post: " am Samstag im Supermarkt einkaufen."
+      options: [möchte, möchtest, möchtet, möchten]
+      answer: 3
+    explanation: "M08 · The modal möchten — meine Eltern is sie (more than one person), so the form is möchten: Meine Eltern möchten am Samstag im Supermarkt einkaufen."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Ich habe eine Prüfung. Ich kann heute leider nicht "
+      post: "."
+      hint: mitkommen
+      answers: [mitkommen]
+      answer_shown: mitkommen
+    explanation: "M08 · The verb bracket (the modal in second position, the infinitive at the end) — kann holds second position and the second verb closes the sentence in the infinitive; a separable verb is not split here, it stays whole: Ich kann heute leider nicht mitkommen."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Ich "
+      post: " am Samstag Fußball spielen."
+      prompt: "wollen (ich)"
+      answers: [will]
+      answer_shown: will
+    explanation: "M08 · The modal verbs können and wollen in the present tense (all persons) — The ich form of wollen changes the stem vowel and drops the ending: wollen → ich will."
+  - type: error_correction
+    group: grammar
+    content: { words: [Ich, kann, sprechen, gut, "Deutsch."], wrong: 2, correction: "sprechen gut Deutsch → gut Deutsch sprechen" }
+    explanation: "M08 · The verb bracket (the modal in second position, the infinitive at the end) — English keeps the two verbs together, German does not: the modal stays second and the infinitive goes right to the end. Ich kann gut Deutsch sprechen."
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: Ich spiele Klavier.
+      key: KÖNNEN
+      pre: "Ich "
+      post: "."
+      answers: [kann Klavier spielen]
+      hint: 3 Wörter
+      answer_shown: kann Klavier spielen
+    explanation: "M08 · The verb bracket (the modal in second position, the infinitive at the end) — können takes the finite slot in second position and the main verb goes to the end as an infinitive: Ich kann Klavier spielen."
+
+  # ══════════════ M09 · Mein Tag ══════════════
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Der Kurs "
+      post: " um zwölf Uhr auf."
+      prompt: aufhören
+      options: [aufhört, hören, hört, aufhören]
+      answer: 2
+    explanation: "M09 · Separable verbs (aufstehen, anfangen, aufhören, einkaufen, fernsehen, mitkommen) — the prefix goes to the end — aufhören splits in a statement: hört takes second position and auf is already waiting at the end: Der Kurs hört um zwölf Uhr auf."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Wann fängt der Kurs an? — Genau "
+      post: " neun Uhr."
+      answers: [um]
+      answer_shown: um
+    explanation: "M09 · Time adverbials with um and am — A clock time takes um: um neun Uhr. am belongs to days and parts of the day (am Montag, am Abend)."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Es ist 7.15 Uhr. Es ist Viertel "
+      post: " sieben."
+      options: [vor, nach, um, halb]
+      answer: 1
+    explanation: "M09 · Telling the time (official time and Viertel nach, halb) — 7.15 is fifteen minutes after seven, so it is Viertel nach sieben."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Meine Mutter "
+      post: " am Samstag im Supermarkt ein."
+      prompt: "einkaufen (sie)"
+      answers: [kauft]
+      answer_shown: kauft
+    explanation: "M09 · Separable verbs (aufstehen, anfangen, aufhören, einkaufen, fernsehen, mitkommen) — the prefix goes to the end — einkaufen splits into two parts: kauft takes second position and the prefix ein closes the sentence."
+  - type: error_correction
+    group: grammar
+    content: { words: [Ich, aufstehe, um, halb, acht, "Uhr."], wrong: 1, correction: "aufstehe → stehe … auf" }
+    explanation: "M09 · Separable verbs (aufstehen, anfangen, aufhören, einkaufen, fernsehen, mitkommen) — the prefix goes to the end — In a statement the prefix never stays on the verb: Ich stehe um halb acht Uhr auf."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: ["7.15 Uhr", "7.30 Uhr", "9.00 Uhr", "20.00 Uhr"]
+      right: ["zwanzig Uhr", "Viertel nach sieben", "neun Uhr", "halb acht"]
+      pairs: { 0: 1, 1: 3, 2: 2, 3: 0 }
+    explanation: "M09 · Telling the time (official time and Viertel nach, halb) — 7.15 is Viertel nach sieben · 7.30 is halb acht, because German counts towards eight, not past seven · 9.00 is neun Uhr · 20.00 is the official form zwanzig Uhr."
+
+  # ══════════════ M10 · Rund ums Haus ══════════════
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Wo ist die Dusche? — Sie ist "
+      post: "."
+      options: ["im Bad", "in der Küche", "auf dem Balkon", "im Wohnzimmer"]
+      answer: 0
+    explanation: "M10 · Place as a ready-made phrase (in der Küche, im Bad, auf dem Balkon) — learnt whole, not as a case system — A shower stands in the bathroom: im Bad. Learn each of these phrases as one whole unit and do not take the endings apart."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: ""
+      post: " ist mein Schlüssel? — Auf dem Tisch."
+      prompt: W-Frage
+      options: [Wer, Wie, Wo, Woher]
+      answer: 2
+    explanation: "M10 · The question wo? — The answer names the place where something is, so the question word is wo: Wo ist mein Schlüssel? woher would ask where it comes from, wer would ask for a person."
+  - type: open_cloze
+    group: reading
+    content:
+      pre: "In der Küche gibt "
+      post: " einen Kühlschrank und einen Tisch."
+      answers: [es]
+      answer_shown: es
+    explanation: "M10 · es gibt with the accusative in the home (revision) — The phrase keeps its es even when a place stands in first position and the verb moves in front of it: In der Küche gibt es einen Kühlschrank."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [die Dusche, der Kühlschrank, das Sofa, die Blumen]
+      right: ["auf dem Balkon", "im Bad", "im Wohnzimmer", "in der Küche"]
+      pairs: { 0: 1, 1: 3, 2: 2, 3: 0 }
+    explanation: "M10 · Place as a ready-made phrase (in der Küche, im Bad, auf dem Balkon) — learnt whole, not as a case system — Every thing has its room: die Dusche ist im Bad · der Kühlschrank ist in der Küche · das Sofa ist im Wohnzimmer · die Blumen sind auf dem Balkon."
+  - type: error_correction
+    group: grammar
+    content: { words: [In, der, Wohnung, gibt, es, ein, "Balkon."], wrong: 5, correction: "ein → einen" }
+    explanation: "M10 · es gibt with the accusative in the home (revision) — es gibt is always followed by the accusative, and der Balkon is masculine: In der Wohnung gibt es einen Balkon."
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: Mein Handy ist in der Küche.
+      key: WO
+      pre: ""
+      post: " mein Handy?"
+      answers: [Wo ist]
+      hint: 2 Wörter
+      answer_shown: Wo ist
+    explanation: "M10 · The question wo? — A question about a place starts with wo, and the verb comes straight after the question word: Wo ist mein Handy?"
+
+review_pool: []

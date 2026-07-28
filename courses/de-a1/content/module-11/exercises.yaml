@@ -1,0 +1,500 @@
+# Module 11 · 46 core tasks + 16 review. Distribution (PLAN.md §6):
+# 8 mc_cloze · 8 open_cloze · 6 word_formation · 2 key_word_transformation ·
+# 10 grammar_drill · 4 error_correction · 4 collocation_match · 4 reading_comprehension.
+#
+# Spiral revision of earlier modules (marked "SPIRAL"): mc_cloze 7 and
+# open_cloze 8 (separable verbs and the time phrase, M9/M5), mc_cloze 8
+# (es gibt with the accusative, M7), open_cloze 7 (kein, M4/M7),
+# word_formation 5 (plural, M3), word_formation 6 and grammar_drill 9 (the
+# stem-changing verb, M5), key_word_transformation 2 (the yes/no question, M4),
+# grammar_drill 8 (the modal frame, M8), grammar_drill 10 (gender, M3),
+# error_correction 4 (the capital noun, M1).
+#
+# One task = one operation. No case is ever built here: zum, zur, mit dem and
+# am … vorbei are asked for as whole chunks that the theory tables list place by
+# place — the same way im and in der were asked for in module 10. Nothing asks
+# for a du- or ihr-imperative, a müssen/dürfen/sollen form, an adjective ending,
+# an ordinal, a date or a Perfekt. die erste Straße links appears nowhere as an
+# answer.
+# Explanations English (§5); frames, options and answers German.
+core:
+  # ───────────────────────── Multiple Choice ─────────────────────────
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: ""
+      post: " Sie hier geradeaus, bitte."
+      options: [Geht, Gehen, Geh, Gehst]
+      answer: 1
+    explanation: "The Sie-imperative is the plain infinitive: Gehen Sie geradeaus."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Wie komme ich "
+      post: " Bahnhof?"
+      options: [zur, zu, zum, im]
+      answer: 2
+    explanation: "der Bahnhof takes the ready phrase zum Bahnhof."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Entschuldigung, wie komme ich "
+      post: " Post?"
+      options: [zur, zum, zu, am]
+      answer: 0
+    explanation: "die Post takes zur Post. Learn the place together with its phrase."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Ich fahre "
+      post: " dem Bus in die Stadt."
+      options: [zu, an, in, mit]
+      answer: 3
+    explanation: "Transport comes as one piece: mit dem Bus, mit der Bahn."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "Biegen Sie an der Ampel "
+      post: " ab."
+      options: [links, weit, nah, geradeaus]
+      answer: 0
+    explanation: "You turn off links or rechts. geradeaus means you do not turn at all."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Gehen Sie "
+      post: " Rathaus vorbei."
+      options: [zum, im, am, in der]
+      answer: 2
+    explanation: "das Rathaus takes the whole phrase am Rathaus vorbei."
+  # SPIRAL · M9 / M5 — separable verb with a stem change
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Wann "
+      post: " der Kurs an?"
+      options: [anfängt, fängt, fangt, fängst]
+      answer: 1
+    explanation: "anfangen splits and er/sie takes fängt: Wann fängt der Kurs an?"
+  # SPIRAL · M7 — es gibt with the accusative
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Im Zentrum gibt es "
+      post: " Bahnhof."
+      options: [ein, eine, einem, einen]
+      answer: 3
+    explanation: "es gibt takes the accusative: der Bahnhof → einen Bahnhof."
+
+  # ───────────────────────── Open Cloze ─────────────────────────
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Wie komme ich "
+      post: " Bahnhof?"
+      answers: [zum]
+      answer_shown: zum
+    explanation: "der Bahnhof → zum Bahnhof. The phrase is learnt whole."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Entschuldigung, wie komme ich "
+      post: " Post?"
+      answers: [zur]
+      answer_shown: zur
+    explanation: "die Post → zur Post, the same way die Bank → zur Bank."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Ich fahre "
+      post: " dem Bus zum Rathaus."
+      answers: [mit]
+      answer_shown: mit
+    explanation: "How you travel is always mit: mit dem Bus, mit der Bahn, mit dem Auto."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Gehen Sie "
+      post: " der Post vorbei."
+      answers: [an]
+      answer_shown: an
+    explanation: "The phrase is an der Post vorbei — an in front, vorbei at the end."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Biegen Sie an der Ampel links "
+      post: "."
+      hint: abbiegen
+      answers: [ab]
+      answer_shown: ab
+    explanation: "abbiegen splits: the prefix ab closes the sentence."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: ""
+      post: " Sie geradeaus bis zur Kreuzung."
+      hint: gehen
+      answers: [Gehen]
+      answer_shown: Gehen
+    explanation: "The Sie-imperative of gehen is Gehen Sie, and it opens the sentence."
+  # SPIRAL · M4 / M7 — kein
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Hier gibt es "
+      post: " Bank, nur eine Post."
+      answers: [keine]
+      answer_shown: keine
+    explanation: "die Bank is negated with keine: Hier gibt es keine Bank."
+  # SPIRAL · M9 — the time phrase with um
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Der Bus fährt "
+      post: " Viertel nach acht."
+      answers: [um]
+      answer_shown: um
+    explanation: "A clock time takes um: um Viertel nach acht, um sieben Uhr."
+
+  # ───────────────────────── Wortbildung ─────────────────────────
+  - type: word_formation
+    group: grammar
+    content:
+      pre: ""
+      post: " Sie hier geradeaus, bitte."
+      prompt: gehen
+      answers: [Gehen]
+      answer_shown: Gehen
+    explanation: "Infinitive plus Sie is the whole rule: gehen → Gehen Sie."
+  - type: word_formation
+    group: grammar
+    content:
+      pre: ""
+      post: " Sie den Bus Nummer 5."
+      prompt: nehmen
+      answers: [Nehmen]
+      answer_shown: Nehmen
+    explanation: "nehmen keeps its infinitive in the Sie-form — no stem change here."
+  - type: word_formation
+    group: grammar
+    content:
+      pre: ""
+      post: " Sie mit der Bahn bis zum Zentrum."
+      prompt: fahren
+      answers: [Fahren]
+      answer_shown: Fahren
+    explanation: "du fährst, but Fahren Sie. The Sie-form is always the infinitive."
+  - type: word_formation
+    group: grammar
+    content:
+      pre: ""
+      post: " Sie am Rathaus aus."
+      prompt: aussteigen
+      answers: [Steigen]
+      answer_shown: Steigen
+    explanation: "aussteigen splits: Steigen Sie … aus. The prefix waits at the end."
+  # SPIRAL · M3 — plural
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "In der Stadt gibt es drei "
+      post: "."
+      prompt: der Bahnhof
+      answers: [Bahnhöfe]
+      answer_shown: Bahnhöfe
+    explanation: "der Bahnhof takes -e and an umlaut in the plural: die Bahnhöfe."
+  # SPIRAL · M5 — the stem-changing verb
+  - type: word_formation
+    group: grammar
+    content:
+      pre: "Anna "
+      post: " mit dem Bus in die Stadt."
+      prompt: fahren (sie)
+      answers: [fährt]
+      answer_shown: fährt
+    explanation: "fahren changes a to ä in the er/sie form: sie fährt."
+
+  # ───────────────────────── Transformation ─────────────────────────
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: Sie gehen hier geradeaus.
+      key: GEHEN
+      pre: ""
+      post: " hier geradeaus, bitte."
+      answers: [Gehen Sie]
+      hint: 2 Wörter
+      answer_shown: Gehen Sie
+    explanation: "A statement becomes a command when the verb moves to the front: Gehen Sie …"
+  # SPIRAL · M4 — the yes/no question
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: Der Bus fährt zum Bahnhof.
+      key: FRAGE
+      pre: ""
+      post: " der Bus zum Bahnhof?"
+      answers: [Fährt]
+      hint: 1 Wort
+      answer_shown: Fährt
+    explanation: "In a yes/no question the verb comes first: Fährt der Bus zum Bahnhof?"
+
+  # ───────────────────────── Grammar Drill ─────────────────────────
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: ""
+      post: " Sie an der Ampel rechts."
+      prompt: gehen
+      options: [Geh, Geht, Gehen, Gehst]
+      answer: 2
+    explanation: "The Sie-imperative uses the infinitive form: Gehen Sie."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: ""
+      post: " Sie die Bahn bis zum Zentrum."
+      prompt: nehmen
+      options: [Nimm, Nehmen, Nimmt, Nehmt]
+      answer: 1
+    explanation: "Nimm is the du-form. With Sie the verb stays nehmen: Nehmen Sie."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: ""
+      post: " Sie geradeaus bis zur Kreuzung."
+      prompt: fahren
+      options: [Fährt, Fahrt, Fahren, Fahr]
+      answer: 2
+    explanation: "No stem change in the Sie-form: Fahren Sie geradeaus."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Biegen Sie hier links "
+      post: "."
+      prompt: abbiegen
+      options: [ab, an, aus, auf]
+      answer: 0
+    explanation: "The verb is abbiegen, so the prefix at the end is ab."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Wie komme ich "
+      post: " Rathaus?"
+      prompt: Richtung
+      options: [zur, zum, zu, nach]
+      answer: 1
+    explanation: "das Rathaus takes zum Rathaus — the phrase belongs to the place."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Ich fahre "
+      post: " zum Bahnhof."
+      prompt: Wie?
+      options: ["mit dem Bus", "mit der Bus", "mit Bus", "mit den Bus"]
+      answer: 0
+    explanation: "The ready phrase is mit dem Bus. It never loses its little word."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Gehen Sie "
+      post: "."
+      prompt: Wortstellung
+      options: ["vorbei am Rathaus", "am vorbei Rathaus", "vorbei das Rathaus", "am Rathaus vorbei"]
+      answer: 3
+    explanation: "German puts the place first and vorbei last: am Rathaus vorbei."
+  # SPIRAL · M8 — the modal frame
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Ich möchte "
+      post: "."
+      prompt: möchten
+      options: ["fahren mit dem Bus zum Bahnhof", "mit dem Bus zum Bahnhof fahren", "mit dem Bus fahren zum Bahnhof", "zum Bahnhof fahren mit dem Bus"]
+      answer: 1
+    explanation: "The modal stands second and the infinitive closes the sentence."
+  # SPIRAL · M5 — verb second after a front adverbial
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Heute "
+      post: " ich mit der Bahn."
+      prompt: fahren
+      options: [fahre, fährt, fahren, fährst]
+      answer: 0
+    explanation: "Heute stands first, the verb second, ich behind it: Heute fahre ich."
+  # SPIRAL · M3 — gender
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: ""
+      post: " Rathaus ist im Zentrum."
+      prompt: Artikel
+      options: [Der, Die, Das, Den]
+      answer: 2
+    explanation: "Rathaus ends in -haus, so it is das Rathaus."
+
+  # ───────────────────────── Fehler finden ─────────────────────────
+  - type: error_correction
+    group: grammar
+    content: {words: [Sie, biegen, hier, links, "ab."], wrong: 0, correction: "Sie biegen → Biegen Sie"}
+    explanation: "A command starts with the verb: Biegen Sie hier links ab."
+  - type: error_correction
+    group: grammar
+    content: {words: [Ich, fahre, mit, "Bus."], wrong: 3, correction: "Bus → dem Bus"}
+    explanation: "The transport phrase keeps its little word: mit dem Bus."
+  - type: error_correction
+    group: grammar
+    content: {words: [Gehen, Sie, vorbei, am, "Rathaus."], wrong: 2, correction: "vorbei am Rathaus → am Rathaus vorbei"}
+    explanation: "vorbei always stands last: Gehen Sie am Rathaus vorbei."
+  # SPIRAL · M1 — the capital noun
+  - type: error_correction
+    group: grammar
+    content: {words: [Die, post, ist, an, der, "Ecke."], wrong: 1, correction: "post → Post"}
+    explanation: "Every noun in German starts with a capital letter: die Post."
+
+  # ───────────────────────── Wörter verbinden ─────────────────────────
+  - type: collocation_match
+    group: vocab
+    content:
+      left: ["Gehen Sie", "Nehmen Sie", "Biegen Sie", "Kaufen Sie"]
+      right: ["links ab", "eine Fahrkarte", "geradeaus", "den Bus"]
+      pairs: {0: 2, 1: 3, 2: 0, 3: 1}
+    explanation: "Four commands, four things that go with them. Only abbiegen splits."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [der Bahnhof, die Post, der Bus, die Bahn]
+      right: ["mit dem Bus", "zum Bahnhof", "mit der Bahn", "zur Post"]
+      pairs: {0: 1, 1: 3, 2: 0, 3: 2}
+    explanation: "Every place and every vehicle has one ready phrase. Learn them as pairs."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [eine Fahrkarte, den Weg, den Bus, die Stadt]
+      right: [nehmen, kaufen, sehen, suchen]
+      pairs: {0: 1, 1: 3, 2: 0, 3: 2}
+    explanation: "eine Fahrkarte kaufen, den Weg suchen, den Bus nehmen, die Stadt sehen."
+  - type: collocation_match
+    group: reading
+    content:
+      left: ["Wie komme ich zum Bahnhof?", "Ist es weit?", "Wo ist die Haltestelle?", "Wie komme ich zum Zentrum?"]
+      right: ["Gehen Sie geradeaus.", "Nein, ganz nah.", "Mit dem Bus Nummer 5.", "Da vorne links."]
+      pairs: {0: 0, 1: 1, 2: 3, 3: 2}
+    explanation: "Four questions from the street and the four answers that fit them."
+
+  # ───────────────────────── Leseverstehen ─────────────────────────
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Nein, der Bahnhof ist ganz nah. Gehen Sie hier geradeaus bis zur Ampel."
+      q: "Ist der Bahnhof weit?"
+      options:
+        - Ja, sehr weit.
+        - "Nein, er ist ganz nah."
+        - Ja, zwanzig Minuten.
+        - Nur mit dem Bus.
+      answer: 1
+    explanation: "The answer in the text is: Nein, der Bahnhof ist ganz nah."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Biegen Sie an der Kreuzung links ab und gehen Sie am Rathaus vorbei."
+      q: "Wo biegt man links ab?"
+      options:
+        - An der Ampel
+        - Am Rathaus
+        - An der Kreuzung
+        - An der Haltestelle
+      answer: 2
+    explanation: "The text says: Biegen Sie an der Kreuzung links ab."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Die Post ist gleich an der Ecke. Die Bank ist auch da."
+      q: "Wo ist die Post?"
+      options:
+        - An der Ecke
+        - Am Bahnhof
+        - Im Rathaus
+        - An der Ampel
+      answer: 0
+    explanation: "The text says: Die Post ist gleich an der Ecke."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Nehmen Sie den Bus Nummer 5. Die Haltestelle ist da drüben. Kaufen Sie die Fahrkarte im Bus."
+      q: "Welcher Bus fährt zum Zentrum?"
+      options:
+        - Nummer 3
+        - Nummer 5
+        - Nummer 12
+        - Nummer 50
+      answer: 1
+    explanation: "The text says: Nehmen Sie den Bus Nummer 5."
+
+review_pool:
+  - type: mc_cloze
+    group: grammar
+    content: { pre: "", post: " Sie hier links.", options: [Geh, Gehen, Geht, Gehst], answer: 1 }
+    explanation: "The Sie-imperative is the infinitive plus Sie: Gehen Sie."
+  - type: mc_cloze
+    group: grammar
+    content: { pre: "Wie komme ich ", post: " Bank?", options: [zum, zu, zur, an], answer: 2 }
+    explanation: "die Bank → zur Bank."
+  - type: mc_cloze
+    group: grammar
+    content: { pre: "Wie komme ich ", post: " Rathaus?", options: [zum, zur, zu, im], answer: 0 }
+    explanation: "das Rathaus → zum Rathaus."
+  - type: mc_cloze
+    group: grammar
+    content: { pre: "Ich fahre ", post: " der Bahn zum Zentrum.", options: [an, in, zu, mit], answer: 3 }
+    explanation: "Transport is always mit: mit der Bahn."
+  - type: mc_cloze
+    group: grammar
+    content: { pre: "Gehen Sie ", post: " der Post vorbei.", options: [zu, an, in, auf], answer: 1 }
+    explanation: "die Post → an der Post vorbei."
+  - type: open_cloze
+    group: grammar
+    content: { pre: "Steigen Sie am Rathaus ", post: ".", hint: aussteigen, answers: [aus], answer_shown: aus }
+    explanation: "aussteigen splits: the prefix aus stands last."
+  - type: open_cloze
+    group: grammar
+    content: { pre: "Wie komme ich ", post: " Haltestelle?", answers: [zur], answer_shown: zur }
+    explanation: "die Haltestelle → zur Haltestelle."
+  - type: open_cloze
+    group: grammar
+    content: { pre: "Der Bahnhof ist ganz ", post: ".", hint: nah, answers: [nah], answer_shown: nah }
+    explanation: "ganz nah is the standard answer to Ist es weit?"
+  - type: open_cloze
+    group: grammar
+    content: { pre: "", post: " Sie eine Fahrkarte im Bus.", hint: kaufen, answers: [Kaufen], answer_shown: Kaufen }
+    explanation: "kaufen → Kaufen Sie. The verb opens the sentence."
+  - type: grammar_drill
+    group: grammar
+    content: { pre: "", post: " Sie an der Ampel rechts ab.", prompt: abbiegen, options: [Biegen, Bieg, Biegt, Biegst], answer: 0 }
+    explanation: "Biegen Sie … ab — infinitive form, prefix at the end."
+  - type: grammar_drill
+    group: grammar
+    content: { pre: "Ich gehe ", post: " zur Post.", prompt: "Wie?", options: ["zu Fuß", "mit Fuß", "auf Fuß", "zum Fuß"], answer: 0 }
+    explanation: "The fixed phrase is zu Fuß and it never changes."
+  - type: grammar_drill
+    group: grammar
+    content: { pre: "", post: " Straße heißt Bahnhofstraße.", prompt: Artikel, options: [Der, Die, Das, Den], answer: 1 }
+    explanation: "Straße is feminine: die Straße."
+  - type: grammar_drill
+    group: grammar
+    content: { pre: "Der Bus fährt ", post: " halb neun.", prompt: Zeit, options: [am, in, um, an], answer: 2 }
+    explanation: "A clock time takes um: um halb neun."
+  - type: error_correction
+    group: grammar
+    content: { words: [Gehen, hier, "geradeaus."], wrong: 0, correction: "Gehen → Gehen Sie" }
+    explanation: "The Sie in the imperative is never dropped."
+  - type: error_correction
+    group: grammar
+    content: { words: [Die, kreuzung, ist, "nah."], wrong: 1, correction: "kreuzung → Kreuzung" }
+    explanation: "Nouns are written with a capital letter: die Kreuzung."
+  - type: error_correction
+    group: grammar
+    content: { words: [Gehen, Sie, vorbei, am, "Bahnhof."], wrong: 2, correction: "vorbei am Bahnhof → am Bahnhof vorbei" }
+    explanation: "vorbei closes the sentence: am Bahnhof vorbei."

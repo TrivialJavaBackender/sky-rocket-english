@@ -1,0 +1,41 @@
+# Module 12 · extra text — the second genre of the card: a real invitation, the
+# private counterpart of the official phone call in the main text. It shows the
+# same material once more (the date on its own and in the am-frame, um for the
+# clock time, von … bis for the period, müssen and dürfen in the ihr form) and
+# brings in the words the dialogue had no room for: der Geburtstag, die
+# Einladung, zusammen, warten, heute, morgen, die Stunde.
+# Nothing here asks for a du/ihr imperative — the invitation asks with a question
+# (Könnt ihr kommen?), not with a command.
+kind: extra
+kicker: EINLADUNG
+title: Einladung zum Geburtstag
+meta: ≈ 1 min · dotted words have a note — tap to reveal
+body:
+  - - t: "Liebe Anna, lieber Tom,"
+  - - t: "ich habe am zwanzigsten Juni Geburtstag. Wir "
+    - g: feiern
+    - t: " zusammen: am Samstag, am zweiundzwanzigsten Juni."
+  - - t: "Der Abend fängt um sieben Uhr an und geht von sieben bis elf Uhr — vier Stunden Musik und Kuchen."
+  - - t: "Ihr müsst nichts "
+    - g: mitbringen
+    - t: ". Ihr dürft auch später kommen."
+  - - t: "Könnt ihr kommen? Ihr könnt mich heute oder morgen anrufen. Ich warte auf eine Antwort."
+  - - t: "Bis "
+    - g: bald
+    - t: "! Lena"
+glosses:
+  - key: feiern
+    term: feiern
+    pos_label: verb
+    definition: to celebrate; to have a party
+    example: Wir feiern am Samstag zusammen.
+  - key: mitbringen
+    term: mitbringen
+    pos_label: verb
+    definition: to bring something with you when you come
+    example: Ihr müsst nichts mitbringen.
+  - key: bald
+    term: bald
+    pos_label: adverb
+    definition: soon, in a short time; Bis bald! means see you soon
+    example: Bis bald!

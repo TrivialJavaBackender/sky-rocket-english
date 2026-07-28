@@ -1,0 +1,566 @@
+# Module 13 · 46 core tasks + 16 review. Distribution (PLAN.md §6):
+# 8 mc_cloze · 8 open_cloze · 6 word_formation · 2 key_word_transformation ·
+# 10 grammar_drill · 4 error_correction · 4 collocation_match · 4 reading_comprehension.
+#
+# Spiral revision of earlier modules (marked "SPIRAL"): mc_cloze 7 and open_cloze 8
+# (separable verbs, M9), open_cloze 7 and grammar_drill 9 (the modal frame, M8),
+# grammar_drill 10 (verb-second after a front adverbial, M5), word_formation 5
+# (plural, M3), word_formation 6 (the compound noun, M7/M10), error_correction 4
+# (the capital noun, M1).
+#
+# One task = one operation. Nothing here asks for a dative form, an adjective
+# ending, a comparative, a Perfekt, aber/denn, or the reflexive pronoun of
+# sich fühlen: every gap on that phrase sits on the verb (fühle, fühlst), never
+# on mich/dich/sich, because the phrase is a vocabulary item in this course, not
+# a rule. zum Arzt and zu Hause are asked for as whole chunks, exactly the way
+# module 10 asked for im Bad.
+# Explanations English (§5); frames, options and answers German.
+core:
+  # ───────────────────────── Multiple Choice ─────────────────────────
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Anna, "
+      post: " viel Wasser!"
+      options: [Trinkst, Trink, Trinken, Du trinkst]
+      answer: 1
+    explanation: "The du imperative is the bare stem with no pronoun: du trinkst → Trink!"
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Kinder, "
+      post: " die Tabletten!"
+      options: [Nimm, Nehmen, Nehmt, Nimmst]
+      answer: 2
+    explanation: "More than one person, so it is the ihr form without the pronoun: Nehmt!"
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Ich habe "
+      post: "."
+      options: ["Kopf Schmerzen", Kopfschmerz, Schmerzkopf, Kopfschmerzen]
+      answer: 3
+    explanation: "The body part and Schmerzen become one long plural word: die Kopfschmerzen."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Mein Bauch "
+      post: " weh."
+      options: [tut, tun, ist, hat]
+      answer: 0
+    explanation: "One body part hurts, so wehtun takes tut, and weh goes to the end."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Du "
+      post: " mehr schlafen."
+      options: [soll, sollst, sollt, sollen]
+      answer: 1
+    explanation: "sollen gives advice, and the du form is sollst. schlafen stays at the end."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Ich "
+      post: " mich heute nicht gut."
+      options: [fühlst, fühlt, fühle, fühlen]
+      answer: 2
+    explanation: "The phrase is ich fühle mich — the verb takes the normal ich ending -e."
+  # SPIRAL · M9 — separable verbs
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Ich stehe um sieben Uhr "
+      post: "."
+      options: [an, auf, aus, ab]
+      answer: 1
+    explanation: "aufstehen splits and the prefix auf closes the sentence."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "Die Tabletten bekomme ich in der "
+      post: "."
+      options: [Küche, Kasse, Apotheke, Prüfung]
+      answer: 2
+    explanation: "You buy Tabletten at the chemist's: in der Apotheke."
+
+  # ───────────────────────── Open Cloze ─────────────────────────
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Anna, "
+      post: " viel Tee!"
+      hint: trinken
+      answers: [Trink, Trinke]
+      answer_shown: Trink
+    explanation: "One person, so the du imperative: the stem, no ending, no pronoun."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Kinder, "
+      post: " die Tabletten!"
+      hint: nehmen
+      answers: [Nehmt]
+      answer_shown: Nehmt
+    explanation: "The ihr imperative is the ihr form without the pronoun, with no vowel change."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Mein Kopf "
+      post: " weh."
+      hint: wehtun
+      answers: [tut]
+      answer_shown: tut
+    explanation: "wehtun splits: the verb stands second and weh closes the sentence."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Ich "
+      post: " mich heute schlecht."
+      hint: fühlen
+      answers: [fühle]
+      answer_shown: fühle
+    explanation: "Ich fühle mich is a fixed phrase. Only the verb changes with the person."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Du "
+      post: " viel Wasser trinken."
+      hint: sollen
+      answers: [sollst]
+      answer_shown: sollst
+    explanation: "Advice with sollen: du sollst, and trinken waits at the end."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Ich bin krank. Ich gehe "
+      post: " Arzt."
+      hint: zu
+      answers: [zum]
+      answer_shown: zum
+    explanation: "The way to the doctor is one ready-made chunk: zum Arzt gehen."
+  # SPIRAL · M8 — the modal frame
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Ich "
+      post: " heute nicht arbeiten."
+      hint: können
+      answers: [kann]
+      answer_shown: kann
+    explanation: "können is second and arbeiten goes to the end — the frame from module 8."
+  # SPIRAL · M9 — separable verbs
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Am Morgen stehe ich um acht Uhr "
+      post: "."
+      hint: aufstehen
+      answers: [auf]
+      answer_shown: auf
+    explanation: "The prefix of aufstehen leaves the verb and closes the sentence."
+
+  # ───────────────────────── Wortbildung ─────────────────────────
+  - type: word_formation
+    group: grammar
+    content:
+      pre: "Ich habe "
+      post: "."
+      prompt: "der Kopf + Schmerzen"
+      answers: [Kopfschmerzen]
+      answer_shown: Kopfschmerzen
+    explanation: "der Kopf + Schmerzen = die Kopfschmerzen, one word and always plural."
+  - type: word_formation
+    group: grammar
+    content:
+      pre: "Nach dem Essen habe ich "
+      post: "."
+      prompt: "der Bauch + Schmerzen"
+      answers: [Bauchschmerzen]
+      answer_shown: Bauchschmerzen
+    explanation: "der Bauch + Schmerzen = die Bauchschmerzen."
+  - type: word_formation
+    group: grammar
+    content:
+      pre: "Ich kann nicht sprechen. Ich habe "
+      post: "."
+      prompt: "der Hals + Schmerzen"
+      answers: [Halsschmerzen]
+      answer_shown: Halsschmerzen
+    explanation: "der Hals + Schmerzen = die Halsschmerzen — the classic word with a cold."
+  - type: word_formation
+    group: grammar
+    content:
+      pre: "Der Zahn tut weh. Ich habe "
+      post: "."
+      prompt: "der Zahn + Schmerzen"
+      answers: [Zahnschmerzen]
+      answer_shown: Zahnschmerzen
+    explanation: "der Zahn + Schmerzen = die Zahnschmerzen."
+  # SPIRAL · M3 — the plural
+  - type: word_formation
+    group: grammar
+    content:
+      pre: "Der Mensch hat zwei "
+      post: "."
+      prompt: "die Hand"
+      answers: [Hände]
+      answer_shown: Hände
+    explanation: "die Hand takes an umlaut and -e in the plural: die Hände."
+  # SPIRAL · M7 / M10 — the compound noun
+  - type: word_formation
+    group: grammar
+    content:
+      pre: "Der "
+      post: " schreibt ein Rezept."
+      prompt: "der Zahn + der Arzt"
+      answers: [Zahnarzt]
+      answer_shown: Zahnarzt
+    explanation: "Two words become one, and the last part gives the article: der Zahnarzt."
+
+  # ───────────────────────── Satz-Transformation ─────────────────────────
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: Du trinkst viel Wasser.
+      key: BEFEHL
+      pre: ""
+      post: " viel Wasser!"
+      answers: [Trink, Trinke]
+      hint: 1 Wort
+      answer_shown: Trink
+    explanation: "A statement becomes a command: cut the -st and drop du. Trink viel Wasser!"
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: Trink viel Tee!
+      key: IHR
+      pre: ""
+      post: " viel Tee!"
+      answers: [Trinkt]
+      hint: 1 Wort
+      answer_shown: Trinkt
+    explanation: "The same command to more than one person takes the ihr form: Trinkt!"
+
+  # ───────────────────────── Formen-Drill ─────────────────────────
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Lukas, "
+      post: " zum Arzt!"
+      prompt: gehen
+      options: [Gehst, Geh, Gehen, Gehe du]
+      answer: 1
+    explanation: "du imperative: the stem geh, no ending, no pronoun."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Anna, "
+      post: " die Tabletten!"
+      prompt: nehmen
+      options: [Nimm, Nehm, Nimmst, Nehmen]
+      answer: 0
+    explanation: "nehmen changes e to i in the du form, and the imperative keeps it: Nimm!"
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Lukas, "
+      post: " langsam!"
+      prompt: fahren
+      options: [Fähr, Fährst, Fahr, Fahren]
+      answer: 2
+    explanation: "a → ä does not survive in the imperative: du fährst, but Fahr!"
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Anna, "
+      post: " bitte hier!"
+      prompt: warten
+      options: [Wartest, Wartet, Warten, Warte]
+      answer: 3
+    explanation: "A stem on -t takes an extra -e in the du imperative: Warte!"
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Kinder, "
+      post: " viel Obst!"
+      prompt: essen
+      options: [Iss, Esst, Essen, Isst]
+      answer: 1
+    explanation: "The ihr imperative has no vowel change: ihr esst → Esst!"
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Ihr "
+      post: " mehr schlafen."
+      prompt: sollen
+      options: [soll, sollst, sollt, sollen]
+      answer: 2
+    explanation: "The ihr form of sollen is sollt, and schlafen stands at the end."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Der Arzt sagt, ich "
+      post: " zu Hause bleiben."
+      prompt: sollen
+      options: [soll, sollst, sollen, sollt]
+      answer: 0
+    explanation: "ich soll — sollen has no ending for ich, exactly like können in module 8."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Meine Füße "
+      post: " weh."
+      prompt: wehtun
+      options: [tut, tust, tue, tun]
+      answer: 3
+    explanation: "Two feet are plural, so wehtun takes tun: Meine Füße tun weh."
+  # SPIRAL · M8 — the verb bracket
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Du sollst heute "
+      post: "."
+      prompt: Wortstellung
+      options: ["zu Hause bleiben", "bleiben zu Hause", "zu Hause bleibst", "bleibst zu Hause"]
+      answer: 0
+    explanation: "With a modal the other verb is an infinitive and it closes the sentence."
+  # SPIRAL · M5 — verb second after a front adverbial
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Heute "
+      post: " ich zum Arzt."
+      prompt: gehen
+      options: [gehe, "ich gehe", gehen, gehst]
+      answer: 0
+    explanation: "Heute opens the sentence, so the verb comes second and ich moves behind it."
+
+  # ───────────────────────── Fehler finden ─────────────────────────
+  - type: error_correction
+    group: grammar
+    content: { words: [Du, trink, viel, "Wasser!"], wrong: 0, correction: "Du trink → Trink" }
+    explanation: "The du imperative never keeps the pronoun: Trink viel Wasser!"
+  - type: error_correction
+    group: grammar
+    content: { words: [Ich, fühle, heute, "schlecht."], wrong: 1, correction: "fühle → fühle mich" }
+    explanation: "The phrase is ich fühle mich. The small word belongs to it."
+  - type: error_correction
+    group: grammar
+    content: { words: [Mein, Bauch, ist, "weh."], wrong: 2, correction: "ist → tut" }
+    explanation: "German says Mein Bauch tut weh, not ist weh."
+  # SPIRAL · M1 — nouns keep their capital letter
+  - type: error_correction
+    group: grammar
+    content: { words: [Ich, habe, kopfschmerzen, und, "Fieber."], wrong: 2, correction: "kopfschmerzen → Kopfschmerzen" }
+    explanation: "Every German noun starts with a capital letter, also a long one."
+
+  # ───────────────────────── Wort-Paare ─────────────────────────
+  - type: collocation_match
+    group: grammar
+    content:
+      left: [nehmen, haben, gehen, schreiben]
+      right: ["zum Arzt", Fieber, "ein Rezept", Tabletten]
+      pairs: { 0: 3, 1: 1, 2: 0, 3: 2 }
+    explanation: "Tabletten nehmen · Fieber haben · zum Arzt gehen · ein Rezept schreiben."
+  - type: collocation_match
+    group: grammar
+    content:
+      left: [Wasser, Tabletten, Sport, "zu Hause"]
+      right: [machen, trinken, bleiben, nehmen]
+      pairs: { 0: 1, 1: 3, 2: 0, 3: 2 }
+    explanation: "Wasser trinken · Tabletten nehmen · Sport machen · zu Hause bleiben."
+  - type: collocation_match
+    group: grammar
+    content:
+      left: ["der Kopf", "der Bauch", "der Hals", "der Zahn"]
+      right: [die Bauchschmerzen, die Zahnschmerzen, die Kopfschmerzen, die Halsschmerzen]
+      pairs: { 0: 2, 1: 0, 2: 3, 3: 1 }
+    explanation: "The body part comes first and Schmerzen closes the word: Kopfschmerzen."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [sehen, hören, gehen, "Tabletten kaufen"]
+      right: ["in der Apotheke", "mit den Augen", "mit den Füßen", "mit den Ohren"]
+      pairs: { 0: 1, 1: 3, 2: 2, 3: 0 }
+    explanation: "sehen mit den Augen · hören mit den Ohren · gehen mit den Füßen · Tabletten in der Apotheke kaufen."
+
+  # ───────────────────────── Leseverstehen ─────────────────────────
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Anna: Nicht gut. Ich bin krank. Mein Kopf tut weh und ich habe Halsschmerzen."
+      q: "Wie fühlt sich Anna?"
+      options:
+        - Schlecht, sie ist krank
+        - Sehr gut
+        - Sie ist gesund
+        - Sie hat kein Problem
+      answer: 0
+    explanation: "Anna says Nicht gut and names two problems: Kopf and Hals."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Dr. Berger: Der Hals ist rot. Sie haben eine Erkältung."
+      q: "Was hat Anna?"
+      options:
+        - Zahnschmerzen
+        - Bauchschmerzen
+        - Eine Erkältung
+        - Kein Fieber
+      answer: 2
+    explanation: "The doctor names it directly: Sie haben eine Erkältung."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Dr. Berger: Hier ist ein Rezept. Die Tabletten bekommen Sie in der Apotheke."
+      q: "Wo bekommt Anna die Tabletten?"
+      options:
+        - Beim Arzt
+        - In der Apotheke
+        - Im Supermarkt
+        - Zu Hause
+      answer: 1
+    explanation: "The prescription is from the doctor, the Tabletten come in der Apotheke."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Dr. Berger: Sie sollen drei Tage zu Hause bleiben und viel trinken. Kein Sport!"
+      q: "Was soll Anna machen?"
+      options:
+        - Sport machen
+        - Arbeiten gehen
+        - Drei Tage zu Hause bleiben
+        - Kaffee trinken
+      answer: 2
+    explanation: "The advice with sollen is: drei Tage zu Hause bleiben und viel trinken."
+
+review_pool:
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Lukas, "
+      post: " zum Arzt!"
+      options: [Gehst, Geh, Gehen, Geht]
+      answer: 1
+    explanation: "One friend, so the du imperative: Geh!"
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Kinder, "
+      post: " die Hände!"
+      options: [Wascht, Wasch, Waschen, Wäscht]
+      answer: 0
+    explanation: "More than one child, so the ihr form without the pronoun: Wascht!"
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Mein Zahn "
+      post: " weh."
+      options: [tun, tut, ist, hat]
+      answer: 1
+    explanation: "One tooth, so tut, and weh stands at the end."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Ihr "
+      post: " mehr Obst essen."
+      options: [soll, sollst, sollt, sollen]
+      answer: 2
+    explanation: "ihr sollt, and essen closes the sentence."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "Ich bin nicht krank. Ich bin "
+      post: "."
+      options: [müde, gesund, schlecht, teuer]
+      answer: 1
+    explanation: "The opposite of krank is gesund."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Anna, "
+      post: " viel Obst!"
+      hint: essen
+      answers: [Iss]
+      answer_shown: Iss
+    explanation: "essen changes e to i in the du form, and the imperative keeps it: Iss!"
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Wie "
+      post: " du dich heute?"
+      hint: fühlen
+      answers: [fühlst]
+      answer_shown: fühlst
+    explanation: "The question form of the phrase is Wie fühlst du dich?"
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Meine Augen "
+      post: " weh."
+      hint: wehtun
+      answers: [tun]
+      answer_shown: tun
+    explanation: "Two eyes are plural, so wehtun takes tun."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Der Arzt sagt, ich "
+      post: " zu Hause bleiben."
+      hint: sollen
+      answers: [soll]
+      answer_shown: soll
+    explanation: "sollen has no ending for ich: ich soll."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Kinder, "
+      post: " bitte hier!"
+      hint: warten
+      answers: [Wartet]
+      answer_shown: Wartet
+    explanation: "The ihr form of warten is wartet, and the imperative drops the pronoun."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Anna, "
+      post: " langsam!"
+      prompt: fahren
+      options: [Fähr, Fahr, Fährst, Fahren]
+      answer: 1
+    explanation: "a → ä is gone in the imperative: Fahr langsam!"
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Ich "
+      post: " mich heute gut."
+      prompt: fühlen
+      options: [fühlst, fühlt, fühle, fühlen]
+      answer: 2
+    explanation: "ich fühle mich — the verb takes -e, the rest of the phrase stays."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Du "
+      post: " die Tabletten dreimal am Tag nehmen."
+      prompt: sollen
+      options: [soll, sollen, sollt, sollst]
+      answer: 3
+    explanation: "du sollst, and nehmen waits at the end of the sentence."
+  - type: word_formation
+    group: grammar
+    content:
+      pre: "Ich kann nicht essen. Ich habe "
+      post: "."
+      prompt: "der Zahn + Schmerzen"
+      answers: [Zahnschmerzen]
+      answer_shown: Zahnschmerzen
+    explanation: "der Zahn + Schmerzen = die Zahnschmerzen."
+  - type: error_correction
+    group: grammar
+    content: { words: [Du, nimm, die, "Tabletten!"], wrong: 0, correction: "Du nimm → Nimm" }
+    explanation: "The du imperative drops the pronoun: Nimm die Tabletten!"
+  - type: error_correction
+    group: grammar
+    content: { words: [Ich, habe, Schmerzen, im, "Hals."], wrong: 2, correction: "Schmerzen im Hals → Halsschmerzen" }
+    explanation: "German makes one word out of it: Ich habe Halsschmerzen."

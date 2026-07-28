@@ -1,0 +1,884 @@
+# FINAL · Abschlusstest of Deutsch von null → A1 — a mock in the shape of
+# Goethe-Zertifikat A1 / Start Deutsch 1: Lesen, Sprachbausteine, Schreiben.
+# 80 items over all 14 modules and all three blocks. Pass mark 60% (48/80) —
+# declared in course.yaml (final), not here. Sat once, in one sitting with one
+# break: Lesen ~25 minutes, Sprachbausteine ~90 minutes, Schreiben (the form
+# plus the message in writing.yaml) 20 minutes.
+#
+# Nothing here is copied from a module or from checkpoint-a / checkpoint-b — the
+# sentences and the words are new, the operations are not. The German material
+# and the paradigms behind it come from Basic German (Schenke & Seago), Units 2,
+# 4, 5, 6, 8, 9, 12, 18, 20, 21, 26 and 27, and above all from its key to the
+# exercises, which is the bank of correct German sentences this test draws on.
+#
+# WEIGHTING (profile §8): the later and heavier the material, the more items.
+#   Block A · M01–M05   5 per module   25
+#   Block B · M06–M10   6 per module   30
+#   Block C · M11–M13   6 per module   18
+#   M14                 7              7
+#   total                              80
+# Block A gets five each because its material (sein/haben, the present tense,
+# gender, negation, verb-second) is the environment of the other 55 items
+# anyway. M14 gets a seventh because it is the entry point into de-a2.
+#
+# Type spread: 16 grammar_drill · 14 mc_cloze · 14 open_cloze ·
+#              11 word_formation · 11 error_correction · 7 collocation_match ·
+#              7 key_word_transformation = 80
+# reading_comprehension is excluded — a checkpoint package carries no
+# reading_text, so sync would store reading_text_id = null.
+#
+# SECTIONS. Items 1–12 are the Lesen part: a short notice, an SMS, a sign, a
+# menu, a calendar page or a weather report sits in the `pre` of an mc_cloze,
+# and the options are either richtig/falsch or three German statements about
+# what was read. Each Lesen text leans on the topic of its owning module
+# (Speisekarte → M06, Wohnungsanzeige → M10, Wegbeschreibung → M11,
+# Terminkalender → M12, Wetterbericht → M14). Items 13–80 are the
+# Sprachbausteine part, ordered by module M01 → M14, types mixed throughout and
+# never grouped in blocks of one type.
+#
+# Per module (mc_cloze is the Lesen item except for M05 and M08):
+#   M01 mc_cloze 1 · grammar_drill 1 · open_cloze 1 · word_formation 1 · error_correction 1
+#   M02 mc_cloze 1 · word_formation 1 · grammar_drill 1 · open_cloze 1 · key_word_transformation 1
+#   M03 mc_cloze 1 · grammar_drill 2 · word_formation 1 · open_cloze 1
+#   M04 mc_cloze 1 · open_cloze 1 · grammar_drill 1 · error_correction 1 · key_word_transformation 1
+#   M05 mc_cloze 1 · collocation_match 1 · grammar_drill 1 · open_cloze 1 · word_formation 1
+#   M06 mc_cloze 1 · grammar_drill 1 · open_cloze 1 · word_formation 1 · error_correction 1 · key_word_transformation 1
+#   M07 mc_cloze 1 · open_cloze 1 · grammar_drill 1 · word_formation 1 · collocation_match 1 · error_correction 1
+#   M08 mc_cloze 1 · grammar_drill 1 · open_cloze 1 · word_formation 1 · error_correction 1 · key_word_transformation 1
+#   M09 mc_cloze 1 · grammar_drill 1 · open_cloze 1 · word_formation 1 · error_correction 1 · collocation_match 1
+#   M10 mc_cloze 1 · open_cloze 1 · grammar_drill 1 · collocation_match 1 · error_correction 1 · key_word_transformation 1
+#   M11 mc_cloze 1 · grammar_drill 1 · word_formation 1 · open_cloze 1 · collocation_match 1 · error_correction 1
+#   M12 mc_cloze 1 · open_cloze 1 · grammar_drill 1 · word_formation 1 · error_correction 1 · key_word_transformation 1
+#   M13 mc_cloze 1 · grammar_drill 1 · open_cloze 1 · collocation_match 1 · error_correction 1 · key_word_transformation 1
+#   M14 mc_cloze 1 · grammar_drill 2 · open_cloze 1 · word_formation 1 · collocation_match 1 · error_correction 1
+#
+# ATTRIBUTION: checkpoint exercises cannot carry `grammar_point` (the column is
+# module-scoped and syncCheckpoint passes an empty map), so the owning module
+# and grammar point travel in the explanation prefix — "M09 · Separable verbs
+# (aufstehen, anfangen, aufhören, einkaufen, fernsehen, mitkommen) — the prefix
+# goes to the end — …", the heading taken verbatim from that module's
+# meta.yaml. The debrief in writing.yaml sorts misses by that prefix.
+#
+# review_pool is empty: a checkpoint is sat once and does not seed spaced review.
+#
+# Frames and answers German, explanations English (bridge metalanguage, PLAN §5).
+# One task = one operation. Every required answer comes from one of the 14
+# modules: no dative built out of endings (only the whole learnt chunks im Bad,
+# in der Küche, auf dem Balkon, zum Bahnhof, zur Post, mit dem Bus), no
+# Präteritum, no genitive, no adjective endings, no comparative, no subordinate
+# clauses, no reflexives, no werden-future, no Konjunktiv, no passive — and no
+# participle outside the seven M14 learnt ones (gemacht, gearbeitet, gegessen,
+# getrunken, gefahren, gegangen, gewesen). All of that may appear as input in a
+# text, a frame, a distractor or the model answer; none of it is ever the answer.
+# Every mc_cloze / grammar_drill index 0–3 is used and no value repeats three
+# times in a row.
+
+core:
+  # ═══════════════════════════════════════════════════════════════════════════
+  # LESEN · items 1–12 · ~25 minutes
+  # Read the text, then decide about the statement below it.
+  # ═══════════════════════════════════════════════════════════════════════════
+
+  # ────────────── Lesen 1 · M01 ──────────────
+  - type: mc_cloze
+    group: reading
+    content:
+      pre: |
+        NAMENSSCHILD · Deutschkurs A1
+
+        Name: Marta Nowak
+        Land: Polen
+        Sprachen: Polnisch, Englisch
+        Kurs: Deutsch A1, Zimmer 3
+
+        Aussage: Marta kommt aus Polen.
+      post: ""
+      options: [richtig, falsch]
+      answer: 0
+    explanation: "M01 · W-questions with wie, wer, woher and wo — Woher kommt Marta? The line Land: Polen answers it: Marta kommt aus Polen. The statement is richtig."
+
+  # ────────────── Lesen 2 · M02 ──────────────
+  - type: mc_cloze
+    group: reading
+    content:
+      pre: |
+        SMS von Lena
+
+        Hallo! Ich habe zwei Brüder und eine Schwester. Meine Schwester heißt
+        Nina. Meine Eltern wohnen in Wien, und mein Vater arbeitet dort.
+        Bis bald!
+
+        Aussage: Lena hat zwei Schwestern.
+      post: ""
+      options: [richtig, falsch]
+      answer: 1
+    explanation: "M02 · The verb haben in all persons — Lena writes Ich habe zwei Brüder und eine Schwester: two brothers, one sister. Two sisters is falsch."
+
+  # ────────────── Lesen 3 · M03 ──────────────
+  - type: mc_cloze
+    group: reading
+    content:
+      pre: |
+        SCHILD · Stadtbibliothek
+
+        Hier: Bücher, Zeitungen und Hefte.
+        Computer und Kopierer: Zimmer 4.
+        Montag bis Freitag von 9 bis 18 Uhr.
+
+        Aussage: In der Bibliothek gibt es Bücher und Zeitungen.
+      post: ""
+      options: [richtig, falsch]
+      answer: 0
+    explanation: "M03 · Plural forms (-e, -en, -er, -s, umlaut) — The sign lists die Bücher and die Zeitungen, both plural. The statement says exactly that, so it is richtig."
+
+  # ────────────── Lesen 4 · M04 ──────────────
+  - type: mc_cloze
+    group: reading
+    content:
+      pre: |
+        NOTIZ AN DER TÜR
+
+        Liebe Kunden,
+        heute ist der Supermarkt geschlossen. Wir haben kein Brot und keine
+        Milch mehr. Morgen um 8 Uhr sind wir wieder da.
+
+        Was ist richtig?
+      post: ""
+      options:
+        - "Der Supermarkt hat heute Brot."
+        - "Der Supermarkt ist morgen geschlossen."
+        - "Der Supermarkt hat heute kein Brot."
+      answer: 2
+    explanation: "M04 · Negation with kein/keine (nouns) and how it differs from nicht — The notice says Wir haben kein Brot: the shop has no bread today. Morgen sind wir wieder da says the opposite of option 2."
+
+  # ────────────── Lesen 5 · M06 ──────────────
+  - type: mc_cloze
+    group: reading
+    content:
+      pre: |
+        SPEISEKARTE · Café Sonne
+
+        Kaffee              2,50 €
+        Tee                 2,00 €
+        Apfelsaft           3,00 €
+        Käsebrot            4,50 €
+        Kuchen              3,50 €
+
+        Was ist richtig?
+      post: ""
+      options:
+        - "Der Kaffee kostet drei Euro."
+        - "Der Kuchen kostet drei Euro fünfzig."
+        - "Der Tee kostet vier Euro fünfzig."
+      answer: 1
+    explanation: "M06 · The direct object with nehmen, essen, trinken and haben — Read the price next to each item on the menu: der Kuchen 3,50 €. Der Kaffee kostet 2,50 € and der Tee 2,00 €."
+
+  # ────────────── Lesen 6 · M07 ──────────────
+  - type: mc_cloze
+    group: reading
+    content:
+      pre: |
+        ANZEIGE · Supermarkt Fischer
+
+        Diese Woche billig:
+        1 Kilo Äpfel            1,50 €
+        1 Liter Milch           0,99 €
+        eine Flasche Wasser     0,60 €
+
+        Aussage: Ein Kilo Äpfel kostet einen Euro fünfzig.
+      post: ""
+      options: [richtig, falsch]
+      answer: 0
+    explanation: "M07 · Quantity phrases (ein Kilo, ein Liter, eine Flasche, ein Stück, 100 Gramm) — The advert prices the goods by quantity: 1 Kilo Äpfel 1,50 €. The statement repeats that price, so it is richtig."
+
+  # ────────────── Lesen 7 · M09 ──────────────
+  - type: mc_cloze
+    group: reading
+    content:
+      pre: |
+        SMS von Jonas
+
+        Hallo! Ich stehe morgen um sechs Uhr auf. Der Kurs fängt um acht Uhr an
+        und hört um halb eins auf. Am Abend sehe ich fern.
+
+        Aussage: Jonas steht morgen um acht Uhr auf.
+      post: ""
+      options: [richtig, falsch]
+      answer: 1
+    explanation: "M09 · Telling the time (official time and Viertel nach, halb) — Jonas writes Ich stehe um sechs Uhr auf. Acht Uhr is when the course starts, not when he gets up, so the statement is falsch."
+
+  # ────────────── Lesen 8 · M10 ──────────────
+  - type: mc_cloze
+    group: reading
+    content:
+      pre: |
+        WOHNUNGSANZEIGE
+
+        3 Zimmer, Küche, Bad, Balkon.
+        Die Wohnung ist hell und gemütlich.
+        Miete: 700 Euro.
+        Telefon: 030 / 55 12 40
+
+        Was ist richtig?
+      post: ""
+      options:
+        - "Die Wohnung hat vier Zimmer."
+        - "Die Wohnung hat keinen Balkon."
+        - "Die Wohnung hat einen Balkon."
+      answer: 2
+    explanation: "M10 · es gibt with the accusative in the home (revision) — The advert lists Balkon, so es gibt einen Balkon. It offers 3 Zimmer, not four."
+
+  # ────────────── Lesen 9 · M11 ──────────────
+  - type: mc_cloze
+    group: reading
+    content:
+      pre: |
+        NOTIZ · Der Weg zur Post
+
+        Gehen Sie geradeaus bis zur Ampel. An der Ampel gehen Sie rechts.
+        Die Post ist an der Ecke, neben der Apotheke.
+
+        Aussage: Die Post ist neben der Apotheke.
+      post: ""
+      options: [richtig, falsch]
+      answer: 0
+    explanation: "M11 · The adverbs links, rechts, geradeaus and an … vorbei — The last line places the post office: an der Ecke, neben der Apotheke. The statement repeats it, so it is richtig."
+
+  # ────────────── Lesen 10 · M12 ──────────────
+  - type: mc_cloze
+    group: reading
+    content:
+      pre: |
+        TERMINKALENDER · Woche vom 3. Mai
+
+        Montag, 3. Mai        9.00 Uhr    Deutschkurs
+        Dienstag, 4. Mai      —
+        Mittwoch, 5. Mai      15.30 Uhr   Arzt
+        Freitag, 7. Mai       19.00 Uhr   Kino mit Anna
+
+        Aussage: Der Termin beim Arzt ist am Dienstag.
+      post: ""
+      options: [richtig, falsch]
+      answer: 1
+    explanation: "M12 · Dates and ordinal numbers (der erste, am dritten Mai) and the months — The doctor stands next to Mittwoch, 5. Mai, and Dienstag has no appointment at all, so the statement is falsch."
+
+  # ────────────── Lesen 11 · M13 ──────────────
+  - type: mc_cloze
+    group: reading
+    content:
+      pre: |
+        NOTIZ VOM ARZT
+
+        Sie haben eine Erkältung und Fieber.
+        Nehmen Sie die Tabletten dreimal am Tag.
+        Trinken Sie viel Wasser und schlafen Sie viel.
+        Kommen Sie am Freitag wieder.
+
+        Was ist richtig?
+      post: ""
+      options:
+        - "Der Patient soll wenig trinken."
+        - "Der Patient soll am Montag wiederkommen."
+        - "Der Patient soll die Tabletten dreimal am Tag nehmen."
+      answer: 2
+    explanation: "M13 · The modal verb sollen for advice (Du sollst …) — The note tells the patient Nehmen Sie die Tabletten dreimal am Tag, so er soll die Tabletten dreimal am Tag nehmen. It also says viel trinken and am Freitag."
+
+  # ────────────── Lesen 12 · M14 ──────────────
+  - type: mc_cloze
+    group: reading
+    content:
+      pre: |
+        WETTERBERICHT · Sonntag
+
+        Am Morgen regnet es. Am Mittag scheint die Sonne, aber der Wind ist
+        kalt. Am Abend ist es kalt: nur 6 Grad.
+
+        Aussage: Am Mittag scheint die Sonne.
+      post: ""
+      options: [richtig, falsch]
+      answer: 0
+    explanation: "M14 · The weather with es (es regnet, es schneit, es ist kalt) — The report says Am Mittag scheint die Sonne, so the statement is richtig. Am Morgen regnet es, and the evening is cold."
+
+  # ═══════════════════════════════════════════════════════════════════════════
+  # SPRACHBAUSTEINE · items 13–80 · ~90 minutes · ordered by module M01 → M14
+  # ═══════════════════════════════════════════════════════════════════════════
+
+  # ══════════════ M01 · Hallo! Ich bin … ══════════════
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Wir "
+      post: " aus Italien."
+      prompt: sein
+      options: [bin, bist, seid, sind]
+      answer: 3
+    explanation: "M01 · The verb sein in all persons — wir takes sind: Wir sind aus Italien. seid belongs to ihr."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: ""
+      post: " ist deine Telefonnummer? — 030 55 12 40."
+      answers: [Wie]
+      answer_shown: Wie
+    explanation: "M01 · W-questions with wie, wer, woher and wo — German asks for a name, an address or a number with wie, not with was: Wie ist deine Telefonnummer?"
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Meine "
+      post: " ist Spanisch."
+      prompt: "sprache (Nomen)"
+      answers: [Sprache]
+      answer_shown: Sprache
+    explanation: "M01 · The alphabet and pronunciation (ä ö ü ß; sch, ch, ei, ie, eu/äu; capital nouns) — Every German noun starts with a capital letter: sprache → Sprache."
+  - type: error_correction
+    group: grammar
+    content: { words: [Ich, bin, zwanzig, "Jahre."], wrong: 3, correction: "Jahre. → Jahre alt." }
+    explanation: "M01 · The verb sein in all persons — German says how old you are with sein plus alt: Ich bin zwanzig Jahre alt. Without alt the sentence is not finished."
+
+  # ══════════════ M02 · Meine Familie ══════════════
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Ihr "
+      post: " am Samstag Fußball."
+      prompt: "spielen (ihr)"
+      answers: [spielt]
+      answer_shown: spielt
+    explanation: "M02 · Regular verbs in the present tense (stem + -e/-st/-t/-en) — Take the stem spiel- and add the ihr ending -t: spielen → ihr spielt."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Mein Bruder "
+      post: " in Wien."
+      prompt: arbeiten
+      options: [arbeite, arbeitet, arbeitest, arbeiten]
+      answer: 1
+    explanation: "M02 · Regular verbs in the present tense (stem + -e/-st/-t/-en) — mein Bruder is er, so the ending is -t. The stem arbeit- already ends in t, so an e comes first: er arbeitet."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Ich habe einen Bruder. "
+      post: " Bruder heißt Tom."
+      answers: [Mein]
+      answer_shown: Mein
+    explanation: "M02 · Possessives in the nominative (mein, dein, sein, ihr, unser) — The brother belongs to ich, so the possessive is mein, and der Bruder is masculine: Mein Bruder heißt Tom."
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: Ich wohne in Hamburg.
+      key: WIR
+      pre: "Wir "
+      post: " in Hamburg."
+      answers: [wohnen]
+      hint: 1 Wort
+      answer_shown: wohnen
+    explanation: "M02 · Regular verbs in the present tense (stem + -e/-st/-t/-en) — Only the ending moves: wir takes -en, the same form as the infinitive. Wir wohnen in Hamburg."
+
+  # ══════════════ M03 · Der, die, das ══════════════
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Das ist "
+      post: " Lampe."
+      prompt: "ein / eine"
+      options: [ein, einen, eine, der]
+      answer: 2
+    explanation: "M03 · The indefinite article (ein / eine) — Lampe is feminine (die Lampe), so the indefinite article is eine: Das ist eine Lampe."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Österreich hat schöne "
+      post: "."
+      prompt: "die Stadt (Plural)"
+      answers: [Städte]
+      answer_shown: Städte
+    explanation: "M03 · Plural forms (-e, -en, -er, -s, umlaut) — die Stadt → die Städte: the plural adds -e and the a becomes ä."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Ein Haus, zwei "
+      post: "."
+      prompt: "das Haus (Plural)"
+      options: [Hause, Hausen, Hauses, Häuser]
+      answer: 3
+    explanation: "M03 · Plural forms (-e, -en, -er, -s, umlaut) — das Haus → die Häuser: this group adds -er and takes an umlaut, like das Buch → die Bücher."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Das Buch ist neu — die Bücher sind neu. Der Stift ist blau — "
+      post: " Stifte sind blau."
+      answers: [die]
+      answer_shown: die
+    explanation: "M03 · Gender and the definite article (der / die / das) — In the plural the three genders fall together: every plural noun takes die, der Stift as much as das Buch."
+
+  # ══════════════ M04 · Kein Problem! ══════════════
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Ich möchte einkaufen. Ich habe leider "
+      post: " Geld."
+      answers: [kein]
+      answer_shown: kein
+    explanation: "M04 · Negation with kein/keine (nouns) and how it differs from nicht — A noun is negated with kein, and das Geld is neuter, so it stays kein: Ich habe kein Geld."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Hast du keinen Hunger? — "
+      post: ", ich habe Hunger!"
+      prompt: "Ja / Nein / Doch"
+      options: [Doch, Ja, Nein, Nicht]
+      answer: 0
+    explanation: "M04 · Yes/no questions (verb first) and answering with doch — The question is negative and the answer says the opposite, so German uses doch, never ja: Doch, ich habe Hunger!"
+  - type: error_correction
+    group: grammar
+    content: { words: [Das, ist, nicht, ein, "Problem."], wrong: 2, correction: "nicht ein → kein" }
+    explanation: "M04 · Negation with kein/keine (nouns) and how it differs from nicht — German never says nicht ein. ein plus a negation is one word: Das ist kein Problem."
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: Ihr trinkt Tee.
+      key: JA/NEIN-FRAGE
+      pre: ""
+      post: " ihr Tee?"
+      answers: [Trinkt]
+      hint: 1 Wort
+      answer_shown: Trinkt
+    explanation: "M04 · Yes/no questions (verb first) and answering with doch — A question with no question word starts with the verb and the subject follows it: Trinkt ihr Tee?"
+
+  # ══════════════ M05 · Was machst du gern? ══════════════
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Mein Vater "
+      post: " oft mit dem Bus zur Arbeit."
+      options: [fahre, fährt, fahrst, fahren]
+      answer: 1
+    explanation: "M05 · Stem-changing verbs (e → i/ie, a → ä) in the du and er/sie/es forms — mein Vater is er, and fahren takes an umlaut in the du and er forms: er fährt."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [Wasser, Klavier, Kuchen, Deutsch]
+      right: [lernen, trinken, essen, spielen]
+      pairs: { 0: 1, 1: 3, 2: 2, 3: 0 }
+    explanation: "M05 · gern and nicht gern — Each noun keeps its own verb: Wasser trinken · Klavier spielen · Kuchen essen · Deutsch lernen. Ich spiele gern Klavier."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Trinkst du Kaffee "
+      post: " Tee? — Kaffee, bitte."
+      prompt: "und / oder"
+      options: [und, aber, denn, oder]
+      answer: 3
+    explanation: "M05 · The conjunctions und and oder — The answer picks one of the two drinks, so the question offers a choice with oder. und would ask for both together."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Heute Abend gehe ich ins Kino. Danach esse "
+      post: " im Café."
+      answers: [ich]
+      answer_shown: ich
+    explanation: "M05 · Verb-second word order and inversion after a front adverbial — Danach takes position 1, so the verb stays in position 2 and the subject moves behind it. The ending -e on esse can only belong to ich."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Du "
+      post: " sehr gut Deutsch."
+      prompt: "sprechen (du)"
+      answers: [sprichst]
+      answer_shown: sprichst
+    explanation: "M05 · Stem-changing verbs (e → i/ie, a → ä) in the du and er/sie/es forms — sprechen changes e → i in the du form: du sprichst."
+
+  # ══════════════ M06 · Im Café ══════════════
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Meine Schwester kauft "
+      post: " Kühlschrank."
+      prompt: "der Kühlschrank (Akkusativ)"
+      options: [der, dem, den, das]
+      answer: 2
+    explanation: "M06 · The accusative of the definite article (der → den; das and die do not change) — The fridge is the direct object of kauft, and der Kühlschrank is masculine, so der becomes den: Sie kauft den Kühlschrank."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Das Brot ist frisch. Ich nehme "
+      post: " für das Frühstück."
+      answers: [es]
+      answer_shown: es
+    explanation: "M06 · Personal pronouns in the accusative (mich, dich, ihn, sie, es, uns, euch) — das Brot is neuter, and neuter keeps the same pronoun as a direct object: Ich nehme es."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Ich esse "
+      post: " und ein Brötchen."
+      prompt: "ein Salat (Akkusativ)"
+      answers: [einen Salat]
+      answer_shown: einen Salat
+    explanation: "M06 · The accusative of the indefinite article (ein → einen) — der Salat is masculine and it is the direct object of esse, so ein becomes einen: einen Salat."
+  - type: error_correction
+    group: grammar
+    content: { words: [Ich, möchte, ein, "Kaffee."], wrong: 2, correction: "ein → einen" }
+    explanation: "M06 · The direct object with nehmen, essen, trinken and haben — After möchten the noun is the direct object, and der Kaffee is masculine: Ich möchte einen Kaffee."
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: Hier ist der Schlüssel.
+      key: NEHMEN
+      pre: "Ich nehme "
+      post: "."
+      answers: [den Schlüssel]
+      hint: 2 Wörter
+      answer_shown: den Schlüssel
+    explanation: "M06 · The accusative of the definite article (der → den; das and die do not change) — In the first sentence the key is the subject (der Schlüssel); after nehmen it is the direct object, so it becomes den Schlüssel."
+
+  # ══════════════ M07 · Einkaufen ══════════════
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Ich kaufe ein Kilo Äpfel und "
+      post: " Liter Milch."
+      answers: [einen]
+      answer_shown: einen
+    explanation: "M07 · Quantity phrases (ein Kilo, ein Liter, eine Flasche, ein Stück, 100 Gramm) — der Liter is masculine and the whole quantity is the direct object of kaufe, so ein becomes einen: einen Liter Milch."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Im Supermarkt "
+      post: " es heute keinen Salat."
+      prompt: "es gibt"
+      options: [gibt, gibst, geben, gebt]
+      answer: 0
+    explanation: "M07 · es gibt + the accusative — German says there is and there is not with one fixed phrase, es gibt, and the verb never changes its form: Im Supermarkt gibt es heute keinen Salat."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Ein Kuchen mit Äpfeln heißt "
+      post: "."
+      prompt: "der Apfel + der Kuchen"
+      answers: [Apfelkuchen, der Apfelkuchen]
+      answer_shown: Apfelkuchen
+    explanation: "M07 · Quantity phrases (ein Kilo, ein Liter, eine Flasche, ein Stück, 100 Gramm) — Two nouns are written as one word and the second stem gives the gender: der Apfel + der Kuchen → der Apfelkuchen. Then you can order ein Stück Apfelkuchen."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: ["100 Gramm", "ein Stück", "eine Flasche", "ein Kilo"]
+      right: [Äpfel, Cola, Käse, Brot]
+      pairs: { 0: 2, 1: 3, 2: 1, 3: 0 }
+    explanation: "M07 · Quantity phrases (ein Kilo, ein Liter, eine Flasche, ein Stück, 100 Gramm) — Each measure keeps its own noun: 100 Gramm Käse · ein Stück Brot · eine Flasche Cola · ein Kilo Äpfel."
+  - type: error_correction
+    group: grammar
+    content: { words: [Wir, haben, heute, keine, "Käse."], wrong: 3, correction: "keine → keinen" }
+    explanation: "M07 · kein in the accusative (keinen, keine) — der Käse is masculine and it is the direct object of haben, so kein takes the masculine accusative ending: Wir haben heute keinen Käse."
+
+  # ══════════════ M08 · Ich kann das! ══════════════
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: ""
+      post: " ihr am Samstag mitkommen?"
+      options: [Kann, Kannst, Können, Könnt]
+      answer: 3
+    explanation: "M08 · The modal verbs können and wollen in the present tense (all persons) — ihr takes könnt: Könnt ihr am Samstag mitkommen? A question with no question word puts the modal first."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Meine Freunde "
+      post: " heute ins Kino gehen."
+      prompt: wollen
+      options: [will, wollen, willst, wollt]
+      answer: 1
+    explanation: "M08 · The modal verbs können and wollen in the present tense (all persons) — meine Freunde is sie (more than one person), so the form is wollen: Sie wollen ins Kino gehen."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Wir haben Hunger. Wir wollen im Café ein Stück Kuchen "
+      post: "."
+      hint: essen
+      answers: [essen]
+      answer_shown: essen
+    explanation: "M08 · The verb bracket (the modal in second position, the infinitive at the end) — wollen holds second position and the second verb waits at the very end in the infinitive: Wir wollen ein Stück Kuchen essen."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: ""
+      post: " du gut Klavier spielen?"
+      prompt: "können (du)"
+      answers: [Kannst]
+      answer_shown: Kannst
+    explanation: "M08 · The modal verbs können and wollen in the present tense (all persons) — The du form of können changes the stem vowel and adds -st: können → du kannst."
+  - type: error_correction
+    group: grammar
+    content: { words: [Wir, wollen, fahren, nach, "Berlin."], wrong: 2, correction: "fahren nach Berlin → nach Berlin fahren" }
+    explanation: "M08 · The verb bracket (the modal in second position, the infinitive at the end) — The modal stays second and the infinitive goes right to the end, after everything else: Wir wollen nach Berlin fahren."
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: Ich trinke einen Kaffee.
+      key: MÖCHTEN
+      pre: "Ich "
+      post: "."
+      answers: [möchte einen Kaffee trinken]
+      hint: 4 Wörter
+      answer_shown: möchte einen Kaffee trinken
+    explanation: "M08 · The modal möchten — möchte takes the second position and the main verb goes to the end as an infinitive: Ich möchte einen Kaffee trinken."
+
+  # ══════════════ M09 · Mein Tag ══════════════
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Meine Kinder "
+      post: " am Abend fern."
+      prompt: fernsehen
+      options: [fernsehen, fernsieht, sehen, fernseht]
+      answer: 2
+    explanation: "M09 · Separable verbs (aufstehen, anfangen, aufhören, einkaufen, fernsehen, mitkommen) — the prefix goes to the end — In a statement fernsehen splits: sehen takes second position and fern is already waiting at the end."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Am Montag stehe ich um sieben Uhr "
+      post: "."
+      answers: [auf]
+      answer_shown: auf
+    explanation: "M09 · Separable verbs (aufstehen, anfangen, aufhören, einkaufen, fernsehen, mitkommen) — the prefix goes to the end — stehe at the front and auf at the end are one verb, aufstehen: Ich stehe um sieben Uhr auf."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Der Kurs "
+      post: " um neun Uhr an."
+      prompt: "anfangen (der Kurs)"
+      answers: [fängt]
+      answer_shown: fängt
+    explanation: "M09 · Separable verbs (aufstehen, anfangen, aufhören, einkaufen, fernsehen, mitkommen) — the prefix goes to the end — anfangen splits and the stem takes an umlaut in the er form: Der Kurs fängt um neun Uhr an."
+  - type: error_correction
+    group: grammar
+    content: { words: [Ich, frühstücke, um, "Morgen."], wrong: 2, correction: "um → am" }
+    explanation: "M09 · Time adverbials with um and am — um belongs to a clock time (um acht Uhr); a part of the day takes am: am Morgen, am Abend."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: ["6.30 Uhr", "8.15 Uhr", "12.00 Uhr", "19.00 Uhr"]
+      right: ["neunzehn Uhr", "halb sieben", "zwölf Uhr", "Viertel nach acht"]
+      pairs: { 0: 1, 1: 3, 2: 2, 3: 0 }
+    explanation: "M09 · Telling the time (official time and Viertel nach, halb) — 6.30 is halb sieben, because German counts towards seven · 8.15 is Viertel nach acht · 12.00 is zwölf Uhr · 19.00 is the official form neunzehn Uhr."
+
+  # ══════════════ M10 · Rund ums Haus ══════════════
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Wo ist die Milch? — Der Kühlschrank steht "
+      post: " der Küche."
+      answers: [in]
+      answer_shown: in
+    explanation: "M10 · Place as a ready-made phrase (in der Küche, im Bad, auf dem Balkon) — learnt whole, not as a case system — in der Küche is one learnt phrase; the first word is always in, and der Küche never changes inside it."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "In der Küche gibt es "
+      post: " Kühlschrank und einen Tisch."
+      prompt: "der Kühlschrank (Akkusativ)"
+      options: [ein, der, dem, einen]
+      answer: 3
+    explanation: "M10 · es gibt with the accusative in the home (revision) — es gibt is always followed by the accusative, and der Kühlschrank is masculine: Es gibt einen Kühlschrank."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [das Schlafzimmer, die Küche, das Bad, das Wohnzimmer]
+      right: [die Dusche, das Sofa, das Bett, der Kühlschrank]
+      pairs: { 0: 2, 1: 3, 2: 0, 3: 1 }
+    explanation: "M10 · Place as a ready-made phrase (in der Küche, im Bad, auf dem Balkon) — learnt whole, not as a case system — Every room has its thing: das Bett im Schlafzimmer · der Kühlschrank in der Küche · die Dusche im Bad · das Sofa im Wohnzimmer."
+  - type: error_correction
+    group: grammar
+    content: { words: [Die, Dusche, ist, in, "Bad."], wrong: 3, correction: "in Bad → im Bad" }
+    explanation: "M10 · Place as a ready-made phrase (in der Küche, im Bad, auf dem Balkon) — learnt whole, not as a case system — The phrase is im Bad, never in Bad. Learn the whole phrase as one unit."
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: In der Küche sind zwei Stühle.
+      key: ES GIBT
+      pre: "In der Küche gibt es "
+      post: "."
+      answers: [zwei Stühle]
+      hint: 2 Wörter
+      answer_shown: zwei Stühle
+    explanation: "M10 · es gibt with the accusative in the home (revision) — sein says where something is, es gibt says that it exists. A plural noun looks the same in the accusative, so only the frame changes: Es gibt zwei Stühle."
+
+  # ══════════════ M11 · Wie komme ich zum …? ══════════════
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Bitte "
+      post: " Sie an der Ampel rechts."
+      prompt: "gehen (Sie-Imperativ)"
+      options: [Gehen, Geht, Gehe, Gehst]
+      answer: 0
+    explanation: "M11 · The Sie-imperative (Gehen Sie …, Nehmen Sie …) — The Sie-imperative is the infinitive with Sie behind it: Gehen Sie rechts. The verb comes first, before Sie."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: ""
+      post: " den Bus Nummer 12."
+      prompt: "nehmen (Sie-Imperativ)"
+      answers: [Nehmen Sie]
+      answer_shown: Nehmen Sie
+    explanation: "M11 · The Sie-imperative (Gehen Sie …, Nehmen Sie …) — Take the infinitive and put Sie straight after it: nehmen → Nehmen Sie den Bus."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Entschuldigung, wie komme ich "
+      post: " Bahnhof?"
+      answers: [zum]
+      answer_shown: zum
+    explanation: "M11 · Direction as a ready-made phrase (zum Bahnhof, zur Post, mit dem Bus) — learnt whole, not as a case system — der Bahnhof goes with zum: Wie komme ich zum Bahnhof? die Post goes with zur."
+  - type: collocation_match
+    group: vocab
+    content:
+      left:
+        - "Wie komme ich zum Bahnhof?"
+        - "Wo ist die Post?"
+        - "Ist es weit?"
+        - "Fahren Sie mit dem Bus?"
+      right:
+        - "Nein, ich gehe zu Fuß."
+        - "Nehmen Sie den Bus Nummer 5."
+        - "Nein, nur fünf Minuten."
+        - "An der Ecke, neben der Apotheke."
+      pairs: { 0: 1, 1: 3, 2: 2, 3: 0 }
+    explanation: "M11 · Direction as a ready-made phrase (zum Bahnhof, zur Post, mit dem Bus) — learnt whole, not as a case system — Each question has its own answer on the street: the way is a bus number, a place is a corner, a distance is minutes, and mit dem Bus is answered by zu Fuß."
+  - type: error_correction
+    group: grammar
+    content: { words: [Sie, gehen, geradeaus, bis, zur, "Ampel."], wrong: 0, correction: "Sie gehen → Gehen Sie" }
+    explanation: "M11 · The Sie-imperative (Gehen Sie …, Nehmen Sie …) — An instruction is not a statement: the verb moves to the front and Sie follows it. Gehen Sie geradeaus bis zur Ampel."
+
+  # ══════════════ M12 · Termine ══════════════
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Der Deutschkurs ist "
+      post: " Montag bis Freitag."
+      answers: [von]
+      answer_shown: von
+    explanation: "M12 · Time prepositions am, um and von … bis — A period from one day to another is von … bis: von Montag bis Freitag. bis at the end already tells you the first word."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Ihr "
+      post: " die Tabletten dreimal am Tag nehmen."
+      prompt: müssen
+      options: [muss, musst, müsst, müssen]
+      answer: 2
+    explanation: "M12 · The modal verbs müssen and dürfen in the present tense (all persons) — ihr takes müsst: Ihr müsst die Tabletten nehmen. müssen belongs to wir and sie."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Heute ist der "
+      post: " März."
+      prompt: "zwanzig (Ordinalzahl)"
+      answers: [zwanzigste]
+      answer_shown: zwanzigste
+    explanation: "M12 · Dates and ordinal numbers (der erste, am dritten Mai) and the months — From 20 upwards the ordinal adds -ste: zwanzig → der zwanzigste. Up to 19 it is -te (der dritte)."
+  - type: error_correction
+    group: grammar
+    content: { words: [Der, Kurs, fängt, in, Montag, "an."], wrong: 3, correction: "in → am" }
+    explanation: "M12 · Time prepositions am, um and von … bis — A day of the week takes am: am Montag. um belongs to a clock time, um neun Uhr."
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: Ich arbeite am Samstag.
+      key: MÜSSEN
+      pre: "Ich "
+      post: "."
+      answers: [muss am Samstag arbeiten]
+      hint: 4 Wörter
+      answer_shown: muss am Samstag arbeiten
+    explanation: "M12 · The modal verbs müssen and dürfen in the present tense (all persons) — muss takes the second position and arbeiten goes to the end as an infinitive: Ich muss am Samstag arbeiten."
+
+  # ══════════════ M13 · Beim Arzt ══════════════
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Du bist krank. "
+      post: " viel Wasser!"
+      prompt: "trinken (du-Imperativ)"
+      options: [Trinkst, Trinken, Trinkt, Trink]
+      answer: 3
+    explanation: "M13 · The imperative — the du and ihr forms (Trink viel! Nehmt die Tabletten!) — The du-imperative is the bare stem with no ending and no du: Trink viel Wasser!"
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Ich bin krank. Mein Hals tut "
+      post: "."
+      answers: [weh]
+      answer_shown: weh
+    explanation: "M13 · The body and the phrases Ich habe … schmerzen / Mein … tut weh — tun and weh are one fixed phrase: Mein Hals tut weh. The same thing can be said as Ich habe Halsschmerzen."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [der Kopf, der Bauch, der Hals, der Zahn]
+      right: [Halsschmerzen, Zahnschmerzen, Kopfschmerzen, Bauchschmerzen]
+      pairs: { 0: 2, 1: 3, 2: 0, 3: 1 }
+    explanation: "M13 · The body and the phrases Ich habe … schmerzen / Mein … tut weh — The body part and -schmerzen are written as one word: der Kopf → Kopfschmerzen · der Bauch → Bauchschmerzen · der Hals → Halsschmerzen · der Zahn → Zahnschmerzen."
+  - type: error_correction
+    group: grammar
+    content: { words: [Mein, Kopf, ist, "weh."], wrong: 2, correction: "ist weh → tut weh" }
+    explanation: "M13 · The body and the phrases Ich habe … schmerzen / Mein … tut weh — German does not use sein here: the verb of the phrase is tun. Mein Kopf tut weh."
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: Trink viel Wasser!
+      key: SOLLEN
+      pre: "Du "
+      post: "."
+      answers: [sollst viel Wasser trinken]
+      hint: 4 Wörter
+      answer_shown: sollst viel Wasser trinken
+    explanation: "M13 · The modal verb sollen for advice (Du sollst …) — An order becomes advice with sollen: the modal goes to the second position and trinken to the end. Du sollst viel Wasser trinken."
+
+  # ══════════════ M14 · Was hast du gemacht? ══════════════
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Im Sommer "
+      post: " wir mit dem Zug nach Italien gefahren."
+      prompt: "haben / sein"
+      options: [haben, sind, seid, ist]
+      answer: 1
+    explanation: "M14 · The present perfect as a ready-made pattern — seven learnt participles (gemacht, gearbeitet, gegessen, getrunken, gefahren, gegangen, gewesen) with haben or sein in second position and the participle at the end — gefahren is a movement, so it takes sein, and wir takes sind: Wir sind nach Italien gefahren."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Gestern "
+      post: " ich den ganzen Tag gearbeitet."
+      answers: [habe]
+      answer_shown: habe
+    explanation: "M14 · The present perfect as a ready-made pattern — seven learnt participles (gemacht, gearbeitet, gegessen, getrunken, gefahren, gegangen, gewesen) with haben or sein in second position and the participle at the end — gearbeitet takes haben, and the subject is ich, so the form is habe: Gestern habe ich gearbeitet."
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Im Winter fahren wir in die "
+      post: "."
+      prompt: "der Berg (Plural)"
+      answers: [Berge]
+      answer_shown: Berge
+    explanation: "M14 · The weather with es (es regnet, es schneit, es ist kalt) — der Berg → die Berge: this plural adds -e and takes no umlaut. In den Bergen schneit es im Winter."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Ich möchte gern kommen, "
+      post: " ich muss arbeiten."
+      prompt: "und / oder / aber / denn"
+      options: [und, oder, denn, aber]
+      answer: 3
+    explanation: "M14 · The conjunctions und, oder, aber and denn — they join two sentences and do not move the verb — The second sentence says the opposite of the first, so the link is aber. denn would give a reason, und would simply add."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [der Sommer, der Winter, der Herbst, der Frühling]
+      right: ["Es regnet oft.", "Es schneit.", "Die Blumen kommen.", "Es ist warm."]
+      pairs: { 0: 3, 1: 1, 2: 0, 3: 2 }
+    explanation: "M14 · The weather with es (es regnet, es schneit, es ist kalt) — The weather verbs run on es and nothing else: im Sommer ist es warm · im Winter schneit es · im Herbst regnet es oft · im Frühling kommen die Blumen."
+  - type: error_correction
+    group: grammar
+    content: { words: [Ich, habe, gestern, ins, Kino, "gegangen."], wrong: 1, correction: "habe → bin" }
+    explanation: "M14 · The present perfect as a ready-made pattern — seven learnt participles (gemacht, gearbeitet, gegessen, getrunken, gefahren, gegangen, gewesen) with haben or sein in second position and the participle at the end — gehen is a movement, so its perfect takes sein, not haben: Ich bin gestern ins Kino gegangen."
+
+review_pool: []

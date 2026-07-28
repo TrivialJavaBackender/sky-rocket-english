@@ -1,0 +1,34 @@
+# Module 12 · production. Scaffolding (prompt, checklist) English; model answer
+# German (§5). The model stays inside what modules 1–12 can produce: müssen and
+# dürfen with the second verb at the end, the date in the ready-made frame (am
+# siebten Juni), um for the clock time, the present tense, a yes/no question with
+# a modal, und and oder. No sollen, no du/ihr imperative, no dative built from
+# scratch, no adjective ending, no Perfekt, no aber and no denn.
+mode: writing
+genre: a short message that makes an appointment
+word_target: [30, 40]
+prompt: |
+  Jonas from your German course wants to meet you. Write him a short message and
+  make an appointment. 30–40 words.
+
+  Say something about each point:
+  • which day you are free — with the date (am siebten Juni, am zwanzigsten Mai)
+  • at what time you can come (um vier Uhr, um halb acht)
+  • one thing you have to do or are allowed to do (Ich muss …, Ich darf …)
+  • ask him to call you
+
+  Use at least one date with am, one clock time with um, and müssen or dürfen
+  with the second verb at the end.
+model_answer: |
+  Hallo Jonas,
+  danke für die Einladung! Am siebten Juni habe ich frei. Um vier Uhr bin ich
+  pünktlich da. Ich muss um sieben Uhr wieder nach Hause gehen. Kannst du mich
+  heute noch anrufen?
+  Bis Freitag!
+  Anna
+checklist:
+  - One date in the am-frame — am siebten Juni, am zwanzigsten Mai
+  - One clock time with um, and no um in front of a day or a date
+  - müssen or dürfen at least once, with the second verb as the last word
+  - One question to Jonas, with the verb in first or second position
+  - Every noun has a capital letter, and the message is 30–40 words long

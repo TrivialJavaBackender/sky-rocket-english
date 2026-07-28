@@ -1,0 +1,36 @@
+# Module 13 · extra text — a health notice from the doctor's waiting room. Real
+# genre (an Aushang), and the genre is what makes the ihr imperative natural:
+# a notice speaks to all patients at once, so every sentence is Trinkt, Esst,
+# Schlaft, Wascht, Nehmt. Six of the module's words appear here.
+# Glosses (3) sit only on words whose form in the text is the dictionary form and
+# which are NOT vocab entries of this module.
+kind: extra
+kicker: AUSHANG
+title: Bleibt gesund!
+meta: ≈ 1 min · dotted words have a note — tap to reveal
+body:
+  - - t: "Liebe Patienten, gesund bleiben ist einfach. Trinkt jeden Tag zwei Liter Wasser. Esst viel Obst und Gemüse. Schlaft "
+    - g: genug
+    - t: " — sieben oder acht Stunden."
+  - - t: "Ein "
+    - g: Tipp
+    - t: ": Geht oft zu Fuß und macht dreimal in der Woche Sport. Arbeitet nicht zu viel und macht eine "
+    - g: Pause
+    - t: "."
+  - - t: "Wascht die Hände oft, dann kommt keine Erkältung. Seid ihr krank? Dann kommt in die Praxis. Nehmt Tabletten nur mit Rezept. Eure Praxis Dr. Berger."
+glosses:
+  - key: genug
+    term: genug
+    pos_label: adverb
+    definition: enough; not too little
+    example: Schlaft genug!
+  - key: Tipp
+    term: der Tipp
+    pos_label: noun
+    definition: a tip; a small good idea for you
+    example: "Ein Tipp: Trinkt viel Wasser!"
+  - key: Pause
+    term: die Pause
+    pos_label: noun
+    definition: a break; a short time with no work
+    example: Macht eine Pause!

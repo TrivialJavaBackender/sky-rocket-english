@@ -1,0 +1,27 @@
+# Module 11 · Wie komme ich zum …? Scaffolding (goals, standfirst) English, title
+# German (§5). grammar_points repeat the module card's opis (3) with no additions.
+# Direction in this module is a memorised chunk, never a system: zum Bahnhof,
+# zur Post, mit dem Bus and am Rathaus vorbei are learnt whole, the way im Bad
+# was learnt in module 10 and am Montag in module 9. No task asks for a case.
+# The word-formation extension is the Sie-imperative built from the infinitive
+# (gehen → Gehen Sie) — it lives in the theory table and in the word_formation
+# tasks, not as separate vocab entries.
+slug: m11
+title: "Wie komme ich zum …?"
+standfirst: "The imperative and giving directions · 24 words · ask and give the way."
+goals:
+  - text: Tell someone the way with the Sie-imperative — Gehen Sie …, Nehmen Sie …
+    achieved_by: workout
+  - text: Ask the way with one ready-made question — Wie komme ich zum Bahnhof?
+    achieved_by: workout
+  - text: Learn 24 words for the town, transport and the way
+    achieved_by: input
+  - text: Record a short monologue that asks for the way and explains it
+    achieved_by: output
+grammar_points:
+  - The Sie-imperative (Gehen Sie …, Nehmen Sie …)
+  - Direction as a ready-made phrase (zum Bahnhof, zur Post, mit dem Bus) — learnt whole, not as a case system
+  - The adverbs links, rechts, geradeaus and an … vorbei
+production:
+  mode: speaking
+  genre: a short spoken monologue that asks for the way and gives it

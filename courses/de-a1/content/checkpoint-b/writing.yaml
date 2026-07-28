@@ -1,0 +1,86 @@
+# Checkpoint B production task + debrief. The scenario is chosen so that all five
+# modules of Block B are needed to answer it: a direct object with an article
+# (M06), what there is and what there is not, with a quantity (M07), what you can
+# or want to do, with the modal second and the infinitive last (M08), when your
+# day starts, with a separable verb and a clock time (M09), and where things are
+# in the flat, as ready-made phrases (M10). Genre and length follow the Goethe A1
+# format: a short message of 30–40 words.
+mode: writing
+genre: kurze Nachricht
+word_target: [30, 40]
+prompt: |
+  Written under test conditions: 20 minutes, 30–40 words, no dictionary and no
+  second draft. Write it straight after the 30 test items, in the same session.
+
+  ## The task
+
+  Jonas comes to your flat on Saturday. He wrote to you: "Hallo! Wann stehst du
+  am Samstag auf? Wie ist deine Wohnung? Was können wir am Samstag machen?"
+
+  Write a short message back to Jonas. Say when you get up on Saturday. Say what
+  your flat has and where one thing in it is. Say one thing you do not have and
+  one thing you buy for Saturday. Say what the two of you can or want to do.
+
+  Begin with a greeting (Hallo Jonas,) and end with Tschüss and your name. Keep
+  the sentences short. Do not try to write anything you have not learnt yet.
+
+  ## Deliberately deploy
+
+  This is a checkpoint, so the grammar of the whole block should be visible:
+  · M06 — one direct object with the right accusative article, masculine if you
+    can manage it (Ich kaufe den Kuchen / einen Salat);
+  · M07 — one es gibt sentence about the flat, one kein sentence about what you
+    do not have, and one quantity phrase (Es gibt einen Balkon · Ich habe keinen
+    Saft · ein Liter Milch);
+  · M08 — one sentence with können, wollen or möchten, with the modal in second
+    position and the second verb at the very end (Wir können Musik hören);
+  · M09 — one separable verb in a statement, with the prefix at the end, and one
+    clock time with um (Ich stehe um neun Uhr auf);
+  · M10 — one place as a ready-made phrase, written whole and not built out of
+    endings (in der Küche · im Bad · im Wohnzimmer · auf dem Balkon).
+
+  Block A is still working underneath: the subjects, the possessives (mein /
+  meine), the plurals, the verb in second position and the inversion after a
+  front adverbial. They are not the point of this test, but a message that gets
+  them wrong is not a pass.
+
+  ## Afterwards · debrief
+
+  Mark the 30 items first and work out the percentage. The pass mark is 75%,
+  which is 23 out of 30. Then, before you read the model answer:
+
+  1. Sort every miss by the module named at the start of its explanation —
+    M06 … M10. Three misses spread over three modules is noise; three in one
+    module is a gap.
+  2. For each gap, reread that module's watchouts and redo only the exercises
+    you got wrong, not the whole set.
+  3. Look at what kind of miss it was, not only at which module it came from.
+    A wrong ending on den / einen / keinen is one problem; a verb or a prefix in
+    the wrong place is another, and it will follow you into Module 11.
+  4. Write each miss into the error map as error → rule → card, and check
+    whether it repeats a mistake you already made in that module.
+  5. Only then compare your message with the model answer. Look for the
+    structures you avoided, not only for the mistakes you made.
+
+  Below 75%: take a revision week before Module 11 — cards on the weak words
+  plus the failed items — and sit the checkpoint again. Module 11 puts the
+  Sie-imperative on top of the verb bracket you are drilling here, so a shaky
+  Block B does not stay a Block B problem for long.
+model_answer: |
+  Hallo Jonas,
+
+  ich stehe am Samstag um neun Uhr auf. Meine Wohnung ist klein. Es gibt einen
+  Balkon und ein Bad. Ich habe keinen Saft. Ich kaufe einen Liter Milch. Wir
+  können im Wohnzimmer Musik hören.
+
+  Tschüss, Tom
+checklist:
+  - 30–40 words, written in 20 minutes without a dictionary or a second draft
+  - Opens with a greeting to Jonas and closes with Tschüss and your name
+  - Answers all three of Jonas's questions — when, what the flat is like, what you can do
+  - Has one direct object with the right accusative article (den / einen)
+  - Has one es gibt sentence and one kein sentence about what you do not have
+  - Uses one quantity phrase (ein Kilo, ein Liter, eine Flasche, ein Stück)
+  - Has one modal in second position with the second verb at the very end
+  - Has one separable verb with its prefix at the end, and one time with um … Uhr
+  - Names one place as a whole phrase (in der Küche, im Bad, auf dem Balkon)

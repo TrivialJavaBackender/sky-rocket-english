@@ -1,0 +1,501 @@
+# Module 12 · 46 core tasks + 16 review. Distribution (PLAN.md §6):
+# 8 mc_cloze · 8 open_cloze · 6 word_formation · 2 key_word_transformation ·
+# 10 grammar_drill · 4 error_correction · 4 collocation_match · 4 reading_comprehension.
+#
+# Spiral revision of earlier modules (marked "SPIRAL"): mc_cloze 7 and
+# grammar_drill 6 (separable verbs and the modal bracket, M8/M9), open_cloze 8
+# (kein in the accusative, M4/M7), word_formation 5 (the modal form, M8),
+# word_formation 6 (plural, M3), key_word_transformation 2 (statement → yes/no
+# question, M4), grammar_drill 10 (stem-changing verbs, M5), error_correction 4
+# (the capital noun, M1).
+#
+# One task = one operation. Nothing here asks for a du/ihr imperative, for
+# sollen, for a body word, for a Perfekt or for an adjective ending built out of
+# a case: the date frame am dritten Mai is asked for as the whole ready-made
+# piece the theory table lists, exactly the way am Montag was asked for in
+# module 9. The Sie-imperative of module 11 counts as known and appears as input.
+# Explanations English (§5); frames, options and answers German.
+core:
+  # ───────────────────────── Multiple Choice ─────────────────────────
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Ich "
+      post: " heute noch einen Termin machen."
+      options: [müsst, muss, musst, müssen]
+      answer: 1
+    explanation: "With a modal verb ich takes no ending, and müssen loses its umlaut: ich muss."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: ""
+      post: " ich Sie am Montag anrufen?"
+      options: [Dürft, Darfst, Darf, Dürfen]
+      answer: 2
+    explanation: "ich takes darf, and a yes/no question opens with the modal: Darf ich …?"
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Heute ist der "
+      post: " Mai."
+      options: [drei, dreite, dritten, dritte]
+      answer: 3
+    explanation: "drei is irregular: der dritte. On its own the date ends in -te."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Ich habe "
+      post: " fünften Juni einen Termin."
+      options: [um, am, im, an]
+      answer: 1
+    explanation: "A single date takes am: am fünften Juni."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Der Kurs fängt "
+      post: " neun Uhr an."
+      options: [am, im, um, von]
+      answer: 2
+    explanation: "um goes with a clock time: um neun Uhr."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Mein Geburtstag ist "
+      post: " Januar."
+      options: [im, am, um, an]
+      answer: 0
+    explanation: "A whole month takes im: im Januar, im Mai, im Dezember."
+  # SPIRAL · M9 — separable verbs
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Am Montag "
+      post: " ich um sechs Uhr auf."
+      options: [steht, stehe, stehen, stehst]
+      answer: 1
+    explanation: "aufstehen splits: ich stehe … auf, and the verb stays in position two."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "Ich kann leider nicht kommen. Ich muss den Termin "
+      post: "."
+      options: [warten, treffen, absagen, anrufen]
+      answer: 2
+    explanation: "einen Termin absagen = you tell the other person that you cannot come."
+
+  # ───────────────────────── Open Cloze ─────────────────────────
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Der Termin ist "
+      post: " Montag."
+      answers: [am]
+      answer_shown: am
+    explanation: "A day of the week takes am: am Montag."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Der Kurs geht von neun "
+      post: " elf Uhr."
+      answers: [bis]
+      answer_shown: bis
+    explanation: "von and bis work as a pair: von neun bis elf Uhr."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Die Prüfung fängt "
+      post: " zehn Uhr an."
+      answers: [um]
+      answer_shown: um
+    explanation: "A clock time takes um: um zehn Uhr."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Mein Geburtstag ist "
+      post: " Juni."
+      answers: [im]
+      answer_shown: im
+    explanation: "A whole month takes im: im Juni."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: ""
+      post: " ich Ihren Kalender sehen?"
+      hint: dürfen
+      answers: [Darf]
+      answer_shown: Darf
+    explanation: "You are asking for permission, so the question starts with Darf ich …?"
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Du "
+      post: " pünktlich sein."
+      hint: müssen
+      answers: [musst]
+      answer_shown: musst
+    explanation: "du takes musst, and sein closes the sentence."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Der Termin ist dringend. Wir "
+      post: " heute noch anrufen."
+      hint: müssen
+      answers: [müssen]
+      answer_shown: müssen
+    explanation: "wir keeps the full form: wir müssen. The separable verb stays whole at the end."
+  # SPIRAL · M4 / M7 — kein
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Am Freitag habe ich leider "
+      post: " Zeit."
+      hint: kein
+      answers: [keine]
+      answer_shown: keine
+    explanation: "die Zeit is feminine, so the negative is keine Zeit."
+
+  # ───────────────────────── Wortbildung ─────────────────────────
+  - type: word_formation
+    group: grammar
+    content:
+      pre: "Heute ist der "
+      post: " Mai."
+      prompt: "drei"
+      answers: [dritte]
+      answer_shown: dritte
+    explanation: "drei is one of the four irregular ones: der dritte."
+  - type: word_formation
+    group: grammar
+    content:
+      pre: "Der "
+      post: " Juli ist ein Freitag."
+      prompt: "zwanzig"
+      answers: [zwanzigste]
+      answer_shown: zwanzigste
+    explanation: "From 20 upwards the ordinal ends in -ste: der zwanzigste."
+  - type: word_formation
+    group: grammar
+    content:
+      pre: "Der "
+      post: " Juli ist ein Sonntag."
+      prompt: "sieben"
+      answers: [siebte]
+      answer_shown: siebte
+    explanation: "sieben drops its -en before the ending: der siebte."
+  - type: word_formation
+    group: grammar
+    content:
+      pre: "Der Kurs fängt am "
+      post: " Mai an."
+      prompt: "der erste"
+      answers: [ersten]
+      answer_shown: ersten
+    explanation: "In the date frame the ordinal ends in -ten: am ersten Mai."
+  # SPIRAL · M8 — the form of a modal verb
+  - type: word_formation
+    group: grammar
+    content:
+      pre: "Ich "
+      post: " den Termin absagen."
+      prompt: "müssen (ich)"
+      answers: [muss]
+      answer_shown: muss
+    explanation: "A modal verb has no ending for ich, and müssen loses its umlaut: ich muss."
+  # SPIRAL · M3 — plural
+  - type: word_formation
+    group: vocab
+    content:
+      pre: "Ein Jahr hat zwölf "
+      post: "."
+      prompt: "der Monat (Plural)"
+      answers: [Monate]
+      answer_shown: Monate
+    explanation: "der Monat → die Monate. After zwölf the noun is plural."
+
+  # ───────────────────────── Umformung ─────────────────────────
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: Heute ist der fünfte Mai. Heute habe ich einen Termin.
+      key: AM
+      pre: "Ich habe "
+      post: " einen Termin."
+      answers: [am fünften Mai]
+      hint: 3 Wörter
+      answer_shown: am fünften Mai
+    explanation: "der fünfte Mai becomes am fünften Mai when you say on which day something happens."
+  # SPIRAL · M4 — statement → yes/no question
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: Du musst am Montag arbeiten.
+      key: FRAGE
+      pre: ""
+      post: " du am Montag arbeiten?"
+      answers: [Musst]
+      hint: 1 Wort
+      answer_shown: Musst
+    explanation: "A yes/no question starts with the verb, and here that is the modal: Musst du …?"
+
+  # ───────────────────────── Grammatik-Drill ─────────────────────────
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Ich "
+      post: " heute den Termin absagen."
+      prompt: müssen
+      options: [muss, musst, müsst, müssen]
+      answer: 0
+    explanation: "ich muss — no ending and no umlaut."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Wir "
+      post: " am Montag arbeiten."
+      prompt: müssen
+      options: [muss, musst, müsst, müssen]
+      answer: 3
+    explanation: "wir keeps the full form with the umlaut: wir müssen."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: ""
+      post: " ich später kommen?"
+      prompt: dürfen
+      options: [Dürfen, Darf, Darfst, Dürft]
+      answer: 1
+    explanation: "ich darf — and in a yes/no question the modal comes first."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Ihr "
+      post: " hier nicht warten."
+      prompt: dürfen
+      options: [darf, darfst, dürft, dürfen]
+      answer: 2
+    explanation: "ihr dürft — the ihr form keeps the umlaut and takes -t."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Anna "
+      post: " den Termin verschieben."
+      prompt: müssen
+      options: [musst, müssen, müsst, muss]
+      answer: 3
+    explanation: "Anna is er/sie/es, and that form is the same as ich: muss."
+  # SPIRAL · M8 / M9 — a separable verb after a modal
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Ich muss Herrn Weber morgen "
+      post: "."
+      prompt: anrufen
+      options: [anrufen, an rufen, rufe an, anrufe]
+      answer: 0
+    explanation: "After a modal verb the separable verb stands at the end in one piece: anrufen."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Heute ist "
+      post: " zwanzigste Juli."
+      prompt: Artikel
+      options: [den, dem, der, das]
+      answer: 2
+    explanation: "A date on its own always comes with der: der zwanzigste Juli."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Ich arbeite "
+      post: " neun bis fünf Uhr."
+      prompt: Zeitraum
+      options: [am, von, um, im]
+      answer: 1
+    explanation: "A period needs the pair von … bis: von neun bis fünf Uhr."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Der Termin ist "
+      post: " achten Mai."
+      prompt: Datum
+      options: [im, um, am, an]
+      answer: 2
+    explanation: "A date takes am, and the ordinal then ends in -ten: am achten Mai."
+  # SPIRAL · M5 — stem-changing verbs
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Wann "
+      post: " du Herrn Weber?"
+      prompt: treffen
+      options: [treffst, triffst, trefft, treffen]
+      answer: 1
+    explanation: "treffen changes e to i in the du form: du triffst."
+
+  # ───────────────────────── Fehlerkorrektur ─────────────────────────
+  - type: error_correction
+    group: grammar
+    content: { words: [Ich, muss, absagen, den, "Termin."], wrong: 2, correction: "absagen den Termin → den Termin absagen" }
+    explanation: "The modal stands second and the other verb closes the sentence: Ich muss den Termin absagen."
+  - type: error_correction
+    group: grammar
+    content: { words: [Ich, musse, heute, "arbeiten."], wrong: 1, correction: "musse → muss" }
+    explanation: "A modal verb has no ending for ich: ich muss, not musse."
+  - type: error_correction
+    group: grammar
+    content: { words: [Ich, habe, an, drei, Mai, einen, "Termin."], wrong: 2, correction: "an drei Mai → am dritten Mai" }
+    explanation: "A date after am is an ordinal ending in -ten: am dritten Mai."
+  # SPIRAL · M1 — nouns keep their capital letter
+  - type: error_correction
+    group: grammar
+    content: { words: [Mein, geburtstag, ist, im, "Mai."], wrong: 1, correction: "geburtstag → Geburtstag" }
+    explanation: "Every German noun starts with a capital letter: der Geburtstag."
+
+  # ───────────────────────── Wort-Paare ─────────────────────────
+  - type: collocation_match
+    group: grammar
+    content:
+      left: [Montag, zehn Uhr, Mai, neun bis elf]
+      right: [im Mai, um zehn Uhr, von neun bis elf, am Montag]
+      pairs: { 0: 3, 1: 1, 2: 0, 3: 2 }
+    explanation: "am for a day, um for a clock time, im for a month, von … bis for a period."
+  - type: collocation_match
+    group: grammar
+    content:
+      left: [der erste, der dritte, der siebte, der zwanzigste]
+      right: [am zwanzigsten, am ersten, am siebten, am dritten]
+      pairs: { 0: 1, 1: 3, 2: 2, 3: 0 }
+    explanation: "In the date frame every ordinal ends in -ten, and from 20 upwards in -sten."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [einen Termin, eine Stunde, Anna, Zeit]
+      right: [warten, haben, absagen, treffen]
+      pairs: { 0: 2, 1: 0, 2: 3, 3: 1 }
+    explanation: "einen Termin absagen · eine Stunde warten · Anna treffen · Zeit haben."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [frei, pünktlich, zusammen, heute]
+      right: [allein, besetzt, morgen, spät]
+      pairs: { 0: 1, 1: 3, 2: 0, 3: 2 }
+    explanation: "frei ↔ besetzt · pünktlich ↔ spät · zusammen ↔ allein · heute ↔ morgen."
+
+  # ───────────────────────── Leseverstehen ─────────────────────────
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Ich brauche dringend einen Termin. Haben Sie am Montag Zeit?"
+      q: "Wann möchte Lena zuerst einen Termin?"
+      options:
+        - Am Montag
+        - Am Dienstag
+        - Am Mittwoch
+        - Am Freitag
+      answer: 0
+    explanation: "Her first question is: Haben Sie am Montag Zeit?"
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Am Montag geht es leider nicht — der Tag ist schon besetzt."
+      q: "Warum geht der Montag nicht?"
+      options:
+        - Herr Weber ist in Berlin.
+        - Der Tag ist schon besetzt.
+        - Lena muss arbeiten.
+        - Der Termin ist zu früh.
+      answer: 1
+    explanation: "The text gives the reason directly: der Tag ist schon besetzt."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Am Dienstag ist um zehn Uhr ein Termin frei. Das Datum ist der siebte Mai."
+      q: "Welches Datum hat der Dienstag?"
+      options:
+        - Der fünfte Mai
+        - Der sechste Mai
+        - Der siebte Mai
+        - Der achte Mai
+      answer: 2
+    explanation: "The text says: Das Datum ist der siebte Mai."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Sie können den Termin bis Montag verschieben oder absagen. Rufen Sie einfach an."
+      q: "Was kann Lena bis Montag machen?"
+      options:
+        - Nur absagen
+        - Den Termin verschieben oder absagen
+        - Nichts
+        - Nur einen Kalender kaufen
+      answer: 1
+    explanation: "Herr Weber offers both: verschieben oder absagen, bis Montag."
+
+review_pool:
+  - type: mc_cloze
+    group: grammar
+    content: { pre: "Du ", post: " pünktlich sein.", options: [muss, musst, müsst, müssen], answer: 1 }
+    explanation: "du musst — the du form keeps -st and loses the umlaut."
+  - type: mc_cloze
+    group: grammar
+    content: { pre: "", post: " ich hier warten?", options: [Darf, Darfst, Dürft, Dürfen], answer: 0 }
+    explanation: "ich darf, and the modal opens the yes/no question."
+  - type: mc_cloze
+    group: grammar
+    content: { pre: "Heute ist der ", post: " Juli.", options: [zwanzig, zwanzigte, zwanzigste, zwanzigsten], answer: 2 }
+    explanation: "From 20 upwards the ordinal ends in -ste: der zwanzigste."
+  - type: mc_cloze
+    group: grammar
+    content: { pre: "Der Termin ist ", post: " zehn Uhr.", options: [am, im, um, von], answer: 2 }
+    explanation: "A clock time takes um."
+  - type: mc_cloze
+    group: grammar
+    content: { pre: "Ich habe ", post: " Dezember viel Zeit.", options: [am, im, um, an], answer: 1 }
+    explanation: "A whole month takes im: im Dezember."
+  - type: open_cloze
+    group: grammar
+    content: { pre: "Der Kurs geht von Januar ", post: " März.", answers: [bis], answer_shown: bis }
+    explanation: "von and bis always come as a pair: von Januar bis März."
+  - type: open_cloze
+    group: grammar
+    content: { pre: "Wir haben ", post: " ersten Mai frei.", answers: [am], answer_shown: am }
+    explanation: "A date takes am, and the ordinal then ends in -ten."
+  - type: open_cloze
+    group: grammar
+    content: { pre: "Ich ", post: " den Termin leider absagen.", hint: müssen, answers: [muss], answer_shown: muss }
+    explanation: "ich muss, and absagen closes the sentence."
+  - type: open_cloze
+    group: grammar
+    content: { pre: "", post: " ich Sie morgen anrufen?", hint: dürfen, answers: [Darf], answer_shown: Darf }
+    explanation: "Asking for permission: Darf ich Sie anrufen?"
+  - type: grammar_drill
+    group: grammar
+    content: { pre: "Ihr ", post: " nicht warten.", prompt: müssen, options: [muss, musst, müsst, müssen], answer: 2 }
+    explanation: "ihr müsst — and nicht müssen means that it is not necessary."
+  - type: grammar_drill
+    group: grammar
+    content: { pre: "Anna ", post: " heute nicht arbeiten.", prompt: dürfen, options: [darf, darfst, dürft, dürfen], answer: 0 }
+    explanation: "er/sie/es takes darf, the same form as ich."
+  - type: grammar_drill
+    group: grammar
+    content: { pre: "Der Termin ist ", post: " dritten Juni.", prompt: Datum, options: [um, im, an, am], answer: 3 }
+    explanation: "am dritten Juni — a date always takes am."
+  # SPIRAL · M9 — separable verbs
+  - type: grammar_drill
+    group: grammar
+    content: { pre: "Wann ", post: " du an?", prompt: anrufen, options: [rufst, ruft, rufen, rufe], answer: 0 }
+    explanation: "anrufen splits: Wann rufst du an?"
+  - type: error_correction
+    group: grammar
+    content: { words: [Ich, darf, kommen, "später."], wrong: 2, correction: "kommen später → später kommen" }
+    explanation: "The second verb is the last word: Ich darf später kommen."
+  - type: error_correction
+    group: grammar
+    content: { words: [Mein, Geburtstag, ist, am, zwanzig, "Juli."], wrong: 4, correction: "zwanzig → zwanzigsten" }
+    explanation: "After am the number becomes an ordinal in -sten: am zwanzigsten Juli."
+  - type: collocation_match
+    group: grammar
+    content:
+      left: [am, um, im, von … bis]
+      right: [die Uhrzeit, der Zeitraum, der Monat, der Tag]
+      pairs: { 0: 3, 1: 0, 2: 2, 3: 1 }
+    explanation: "am for a day, um for a clock time, im for a month, von … bis for a period."

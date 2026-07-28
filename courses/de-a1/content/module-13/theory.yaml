@@ -1,0 +1,193 @@
+# Module 13 · theory. Two spotlights, 11 items — six for the imperative (grammar
+# point 1 of the card), five for the body, wehtun, sich fühlen and sollen
+# (grammar points 2 and 3).
+# Only the du and the ihr form are taught here; the Sie form comes from module 11
+# and appears once, in the contrast table, so that the learner sees all three
+# side by side. That table is the point of the spotlight, not an extra rule.
+# sich fühlen is never presented as a reflexive verb: the table lists the six
+# ready-made forms and the note says learn them whole. Building mich / dich /
+# sich by rule is A2 work and is not asked for anywhere in this module.
+# Scaffolding rule (§5): intro and note English, every example and table German.
+# Grammar terms are named in English directly (§5.1).
+spotlights:
+  - title: Trink viel! — the imperative for du and ihr
+    intro: >-
+      When you tell one person to do something, German uses the shortest form it
+      has: the stem of the verb, with no ending and no pronoun. Trink! Geh! Komm!
+      For two or more people you take the ihr form and simply drop the pronoun:
+      Trinkt! Geht! Kommt! Nothing else moves — the verb still stands first, and
+      an exclamation mark is normal, not rude. Germans give advice this way all
+      day long, and at the doctor's you will hear little else.
+    items:
+      - form: "du form = the stem, no ending, no pronoun"
+        example: "Trink viel Wasser! Geh zum Arzt! Komm um acht! Mach das Fenster auf!"
+        note: "Take the du form, cut the -st, drop the pronoun. Trink, not Du trink."
+        table:
+          headers: ["Infinitiv", "du-Form", "Imperativ"]
+          rows:
+            - ["trinken", "du trinkst", "Trink!"]
+            - ["gehen", "du gehst", "Geh!"]
+            - ["kommen", "du kommst", "Komm!"]
+            - ["machen", "du machst", "Mach!"]
+            - ["bleiben", "du bleibst", "Bleib!"]
+      - form: "e → i verbs keep the change"
+        example: "Nimm die Tabletten! Iss viel Obst! Sprich langsam! Lies das Rezept! Sieh nicht so viel fern!"
+        note: "The vowel change you learned in module 5 stays in the imperative."
+        table:
+          headers: ["Infinitiv", "du-Form", "Imperativ"]
+          rows:
+            - ["nehmen", "du nimmst", "Nimm!"]
+            - ["essen", "du isst", "Iss!"]
+            - ["sprechen", "du sprichst", "Sprich!"]
+            - ["lesen", "du liest", "Lies!"]
+            - ["sehen", "du siehst", "Sieh!"]
+      - form: "a → ä verbs do NOT keep the change"
+        example: "Fahr langsam! Schlaf viel! Lauf nicht so schnell! Wasch die Hände!"
+        note: "Here the imperative goes back to the plain stem: du fährst, but Fahr!"
+        table:
+          headers: ["Infinitiv", "du-Form", "Imperativ"]
+          rows:
+            - ["fahren", "du fährst", "Fahr!"]
+            - ["schlafen", "du schläfst", "Schlaf!"]
+            - ["waschen", "du wäschst", "Wasch!"]
+            - ["laufen", "du läufst", "Lauf!"]
+      - form: "Stems on -t or -d take -e"
+        example: "Warte bitte hier! Arbeite nicht zu viel! Antworte mir! Finde die Tabletten!"
+        note: "The -e makes the word easy to say. Wart! is hard, Warte! is not."
+        table:
+          headers: ["Infinitiv", "Stamm", "Imperativ"]
+          rows:
+            - ["warten", "wart-", "Warte!"]
+            - ["arbeiten", "arbeit-", "Arbeite!"]
+            - ["antworten", "antwort-", "Antworte!"]
+            - ["finden", "find-", "Finde!"]
+      - form: "ihr form = the ihr form of the verb, without the pronoun"
+        example: "Trinkt viel Tee! Nehmt die Tabletten! Geht zum Arzt! Esst viel Obst! Wascht die Hände!"
+        note: "No vowel change here, ever: ihr nehmt → Nehmt!, ihr esst → Esst!"
+        table:
+          headers: ["Infinitiv", "ihr-Form", "Imperativ"]
+          rows:
+            - ["trinken", "ihr trinkt", "Trinkt!"]
+            - ["nehmen", "ihr nehmt", "Nehmt!"]
+            - ["essen", "ihr esst", "Esst!"]
+            - ["warten", "ihr wartet", "Wartet!"]
+            - ["aufstehen", "ihr steht auf", "Steht auf!"]
+      - form: "All three forms together"
+        example: "Trink viel Wasser! Trinkt viel Wasser! Trinken Sie viel Wasser!"
+        note: "Only the Sie form (module 11) keeps its pronoun. du and ihr never do."
+        table:
+          headers: ["Infinitiv", "du", "ihr", "Sie"]
+          rows:
+            - ["trinken", "Trink!", "Trinkt!", "Trinken Sie!"]
+            - ["gehen", "Geh!", "Geht!", "Gehen Sie!"]
+            - ["nehmen", "Nimm!", "Nehmt!", "Nehmen Sie!"]
+            - ["warten", "Warte!", "Wartet!", "Warten Sie!"]
+            - ["aufstehen", "Steh auf!", "Steht auf!", "Stehen Sie auf!"]
+
+  - title: Was tut weh? — the body, the doctor and good advice
+    intro: >-
+      There are two ways to say that something hurts, and German uses both every
+      day. The first glues the body part to the word Schmerzen and puts it after
+      haben: Ich habe Kopfschmerzen. The second makes the body part the subject
+      of the little verb wehtun: Mein Kopf tut weh. Learn both as whole patterns
+      and you can describe almost any problem. For how you are in general there
+      is a third fixed phrase, Ich fühle mich, and for advice there is sollen.
+    items:
+      - form: "der Kopf + Schmerzen → die Kopfschmerzen"
+        example: "Ich habe Kopfschmerzen. Nach dem Essen habe ich Bauchschmerzen. Hast du Halsschmerzen? Ich habe Zahnschmerzen."
+        note: "One long word, always plural, always after haben. Never Ich habe Schmerz."
+        table:
+          headers: ["Körperteil", "Ein Wort", "Satz"]
+          rows:
+            - ["der Kopf", "die Kopfschmerzen", "Ich habe Kopfschmerzen."]
+            - ["der Bauch", "die Bauchschmerzen", "Ich habe Bauchschmerzen."]
+            - ["der Hals", "die Halsschmerzen", "Ich habe Halsschmerzen."]
+            - ["der Zahn", "die Zahnschmerzen", "Ich habe Zahnschmerzen."]
+            - ["der Rücken", "die Rückenschmerzen", "Ich habe Rückenschmerzen."]
+      - form: "Mein Kopf tut weh — weh goes to the end"
+        example: "Mein Kopf tut weh. Mein Bauch tut weh. Meine Füße tun weh. Meine Augen tun auch weh."
+        note: "wehtun splits like the verbs of module 9: tut … weh. One part hurts → tut, two parts → tun."
+        table:
+          headers: ["Was?", "Satz"]
+          rows:
+            - ["der Kopf", "Mein Kopf tut weh."]
+            - ["der Arm", "Mein Arm tut weh."]
+            - ["die Hand", "Meine Hand tut weh."]
+            - ["die Füße", "Meine Füße tun weh."]
+            - ["die Augen", "Meine Augen tun weh."]
+      - form: "Ich fühle mich … — a fixed phrase, learnt whole"
+        example: "Ich fühle mich schlecht. Wie fühlst du dich? Sie fühlt sich heute gut. Wir fühlen uns nicht gut."
+        note: "The small word after the verb belongs to the phrase. Learn the six lines, do not build them."
+        table:
+          headers: ["Person", "Phrase", "Beispiel"]
+          rows:
+            - ["ich", "ich fühle mich", "Ich fühle mich krank."]
+            - ["du", "du fühlst dich", "Wie fühlst du dich?"]
+            - ["er/sie/es", "er fühlt sich", "Er fühlt sich müde."]
+            - ["wir", "wir fühlen uns", "Wir fühlen uns gut."]
+            - ["ihr", "ihr fühlt euch", "Wie fühlt ihr euch?"]
+            - ["Sie", "Sie fühlen sich", "Wie fühlen Sie sich?"]
+      - form: "sollen — advice from somebody else"
+        example: "Du sollst viel Wasser trinken. Der Arzt sagt, ich soll zu Hause bleiben. Ihr sollt mehr schlafen. Sie sollen Sport machen."
+        note: "sollen says what somebody else thinks is good for you. Advice, not an order."
+        table:
+          headers: ["Person", "sollen"]
+          rows:
+            - ["ich", "soll"]
+            - ["du", "sollst"]
+            - ["er/sie/es", "soll"]
+            - ["wir", "sollen"]
+            - ["ihr", "sollt"]
+            - ["Sie/sie", "sollen"]
+      - form: "Du sollst … + Infinitiv am Ende"
+        example: "Du sollst viel Wasser trinken. Du sollst drei Tage zu Hause bleiben. Ihr sollt nicht so viel arbeiten."
+        note: "The same frame as können and wollen in module 8: the modal is second, the other verb is last."
+        table:
+          headers: ["Position 1", "Position 2", "…", "Ende"]
+          rows:
+            - ["Du", "sollst", "viel Wasser", "trinken."]
+            - ["Du", "sollst", "heute zu Hause", "bleiben."]
+            - ["Ihr", "sollt", "die Tabletten", "nehmen."]
+            - ["Sie", "sollen", "mehr", "schlafen."]
+
+watchouts:
+  - title: Kopfschmerzen, not Schmerz im Kopf
+    bad: Ich habe Schmerz im Kopf.
+    good: Ich habe Kopfschmerzen.
+    note: "German glues the body part to Schmerzen and keeps it plural: Kopfschmerzen, Halsschmerzen."
+  - title: Mein Kopf tut weh — two words, and weh comes last
+    bad: Mein Kopf wehtut.
+    good: Mein Kopf tut weh.
+    note: "wehtun splits like aufstehen in module 9. The verb is second, weh closes the sentence."
+  - title: The du imperative has no pronoun
+    bad: Du trink viel Wasser!
+    good: Trink viel Wasser!
+    note: "Only the Sie form keeps its pronoun. du and ihr drop it: Trink! Trinkt!"
+  - title: Ich fühle mich, not Ich fühle
+    bad: Ich fühle heute schlecht.
+    good: Ich fühle mich heute schlecht.
+    note: "The small word belongs to the phrase — ich fühle mich, du fühlst dich. Learn them together."
+  - title: sollen keeps the other verb at the end
+    bad: Du sollst gehen zum Arzt.
+    good: Du sollst zum Arzt gehen.
+    note: "Same frame as können and wollen: sollst second, gehen last."
+
+cloze_cards:
+  - text: "Anna, {{c1::trink}} viel Wasser!"
+    hint: trinken
+    rule: "du imperative = the stem with no ending and no pronoun: du trinkst → Trink!"
+  - text: "Kinder, {{c1::nehmt}} die Tabletten!"
+    hint: nehmen
+    rule: "ihr imperative = the ihr form without the pronoun: ihr nehmt → Nehmt! No vowel change."
+  - text: "Ich habe {{c1::Kopfschmerzen}}."
+    hint: der Kopf
+    rule: "Body part + Schmerzen becomes one long plural word: der Kopf → die Kopfschmerzen."
+  - text: "Mein Bauch {{c1::tut}} weh."
+    hint: wehtun
+    rule: "wehtun splits: the verb comes second and weh goes to the end. One part hurts → tut."
+  - text: "Du {{c1::sollst}} viel schlafen."
+    hint: sollen
+    rule: "sollen gives advice. du sollst, and the other verb stands at the end."
+  - text: "Ich {{c1::fühle}} mich heute schlecht."
+    hint: fühlen
+    rule: "The phrase is ich fühle mich — the verb takes the normal -e ending for ich."

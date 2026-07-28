@@ -1,0 +1,35 @@
+# Module 14 · production, and the last piece of writing in the course.
+# Scaffolding (prompt, checklist) English; model answer German (§5).
+# The model stays inside what modules 1–14 can produce: the present perfect with
+# the seven learnt participles only (bin gefahren, habe gegessen, habe getrunken,
+# bin gewesen, hast gemacht), the weather with es, aber and denn with their
+# comma, present tense for now and for tomorrow, and the du imperative of module
+# 13 in the closing line. No Präteritum (war, hatte), no eighth participle, no
+# weil or dass, no adjective ending, no comparative. am Strand, im Hotel and mit
+# dem Zug are input chunks of modules 10 and 11, never a form the learner builds.
+mode: writing
+genre: Postkarte
+word_target: [30, 40]
+prompt: |
+  You are on holiday, or you have just had a free weekend. Write a postcard to
+  your German friend Anna. 30–40 words.
+
+  Say something about each point:
+  • where you are and how you got there (Ich bin … gefahren / gegangen)
+  • two things you did (Ich habe … gemacht / gegessen / getrunken / gearbeitet)
+  • the weather (Es regnet · Es ist warm · Die Sonne scheint)
+  • one sentence with aber or denn
+
+  Use at least three sentences with habe / bin + a participle from the list of
+  seven, and open and close the card the way a postcard does.
+model_answer: |
+  Liebe Anna, viele Grüße aus Hamburg! Am Freitag bin ich mit dem Zug gefahren.
+  Gestern bin ich am Meer gewesen und habe Pizza gegessen. Heute regnet es, aber
+  das Hotel ist schön. Am Montag bin ich wieder da. Lukas
+checklist:
+  - Three or more sentences with habe or bin plus a participle from the seven
+  - haben and sein stand in second position, and the participle is the last word
+  - bin, not habe, with gefahren, gegangen and gewesen
+  - One sentence with aber or denn, and a comma in front of it
+  - One sentence about the weather, and it has its es
+  - Every noun has a capital letter, and the card is 30–40 words long

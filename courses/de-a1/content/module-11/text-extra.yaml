@@ -1,0 +1,39 @@
+# Module 11 · extra text — a real Wegbeschreibung: the "how to find us" box of a
+# language school, the written twin of the street dialogue. Same material in a
+# second genre — the Sie-imperative in every line (Fahren Sie, Gehen Sie, Nehmen
+# Sie, steigen Sie … aus), the ready phrases zum Bahnhof, zum Rathaus, an der
+# Post vorbei, mit der Bahn, mit dem Bus, zu Fuß — and it brings the three target
+# words the dialogue does not have: die Bahn, der Weg, die Stadt.
+# der Termin and die Minute are anchors of module 12 and stay out of the entries.
+kind: extra
+kicker: WEGBESCHREIBUNG
+title: So kommen Sie zu uns
+meta: ≈ 1 min · dotted words have a note — tap to reveal
+body:
+  - - t: "SPRACHSCHULE AM MARKT · Rathausstraße 4, Hamburg"
+  - - t: "Mit der Bahn: Fahren Sie bis zum Bahnhof Mitte. Gehen Sie dann zu Fuß geradeaus, an der Post vorbei. Der Weg ist nicht weit: zehn Minuten."
+  - - t: "Mit dem Bus: Nehmen Sie den Bus 12 und steigen Sie an der Haltestelle Rathaus aus. Die "
+    - g: Schule
+    - t: " ist gleich an der Ecke."
+  - - t: "Mit dem Auto: Fahren Sie zum Rathaus. In der Stadt ist der "
+    - g: Parkplatz
+    - t: " teuer."
+  - - t: "Fragen? "
+    - g: Telefon
+    - t: " 040 55 12 33."
+glosses:
+  - key: Schule
+    term: die Schule
+    pos_label: noun
+    definition: a school; the house where you learn something
+    example: Die Schule ist im Zentrum.
+  - key: Parkplatz
+    term: der Parkplatz
+    pos_label: noun
+    definition: a car park; the place where you leave the car
+    example: Der Parkplatz am Bahnhof ist groß.
+  - key: Telefon
+    term: das Telefon
+    pos_label: noun
+    definition: a telephone; you call the school with it
+    example: Das Telefon ist im Flur.

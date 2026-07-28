@@ -1,0 +1,199 @@
+# Module 12 · theory. Two spotlights, 10 items — five for the two new modal verbs
+# (grammar point 1 of the card) and five for the date, the months and the three
+# small time words (points 2 and 3).
+# The verb bracket is NOT introduced here: module 8 built it on können and wollen,
+# item 3 only runs the same rule again on müssen and dürfen.
+# The date frame am dritten Mai is given as a ready-made piece with -ten, exactly
+# the way am Montag was given in module 9 and im Bad in module 10. No item and no
+# task asks the learner to derive an adjective ending from a case — that is A2
+# work, which is why unit 25 of courses/_reference/basic-german/ is deliberately
+# not a source here, only unit 20, unit 26 and the time part of unit 24.
+# Scaffolding rule (§5): intro and note English, every example and table German.
+# Grammar terms are named in English directly (§5.1).
+spotlights:
+  - title: müssen and dürfen — what you have to do and what you may do
+    intro: >-
+      You already know two modal verbs from module 8: können and wollen. Two more
+      do the everyday work of appointments. müssen says that something is
+      necessary — Ich muss den Termin absagen. dürfen says that something is
+      allowed — Darf ich später kommen? Both behave exactly like können: no
+      ending for ich and for er/sie/es, and the same bracket, with the modal in
+      position two and the other verb at the very end. Only the vowel is new, and
+      it changes in the singular: müssen loses its umlaut, dürfen turns ü into a.
+    items:
+      - form: "müssen — must, have to"
+        example: "Ich muss heute noch einen Termin machen. Du musst pünktlich sein. Wir müssen den Termin verschieben."
+        note: "ich and er/sie/es take no ending, and the umlaut is gone in the singular: muss, musst, muss."
+        table:
+          headers: ["Person", "müssen", "Beispiel"]
+          rows:
+            - ["ich", "muss", "Ich muss arbeiten."]
+            - ["du", "musst", "Du musst warten."]
+            - ["er/sie/es", "muss", "Anna muss anrufen."]
+            - ["wir", "müssen", "Wir müssen gehen."]
+            - ["ihr", "müsst", "Ihr müsst pünktlich sein."]
+            - ["sie/Sie", "müssen", "Sie müssen hier warten."]
+      - form: "dürfen — may, be allowed to"
+        example: "Darf ich Ihren Kalender sehen? Du darfst später kommen. Hier dürfen Sie nicht essen."
+        note: "The same pattern: no ending for ich and er/sie/es. In the singular ü becomes a — darf, darfst, darf."
+        table:
+          headers: ["Person", "dürfen", "Beispiel"]
+          rows:
+            - ["ich", "darf", "Darf ich fragen?"]
+            - ["du", "darfst", "Du darfst später kommen."]
+            - ["er/sie/es", "darf", "Anna darf nach Hause gehen."]
+            - ["wir", "dürfen", "Wir dürfen hier warten."]
+            - ["ihr", "dürft", "Ihr dürft zusammen lernen."]
+            - ["sie/Sie", "dürfen", "Sie dürfen den Termin verschieben."]
+      - form: "The bracket — the modal is second, the other verb is last"
+        example: "Ich muss am Montag um acht Uhr aufstehen. Wir dürfen heute nach Hause gehen. Ich muss Herrn Weber morgen anrufen."
+        note: "The same bracket you learned with können in module 8. A separable verb stays in one piece at the end: anrufen, aufstehen."
+        table:
+          headers: ["Position 2", "…", "Ende"]
+          rows:
+            - ["Ich muss", "morgen", "arbeiten."]
+            - ["Anna darf", "heute", "später kommen."]
+            - ["Wir müssen", "den Termin", "absagen."]
+            - ["Ich muss", "Herrn Weber", "anrufen."]
+            - ["Du musst", "am Montag um acht Uhr", "aufstehen."]
+      - form: "nicht müssen is not the same as nicht dürfen"
+        example: "Du musst nicht kommen. Du darfst nicht kommen. Ich muss nicht warten. Ich darf nicht warten."
+        note: "nicht müssen = it is not necessary. nicht dürfen = it is not allowed. English 'must not' is German nicht dürfen."
+        table:
+          headers: ["müssen + nicht", "dürfen + nicht"]
+          rows:
+            - ["Du musst nicht kommen.", "Du darfst nicht kommen."]
+            - ["Ich muss nicht warten.", "Ich darf nicht warten."]
+            - ["Wir müssen nicht absagen.", "Wir dürfen nicht absagen."]
+            - ["Ihr müsst nicht anrufen.", "Ihr dürft nicht anrufen."]
+      - form: "Questions with a modal verb"
+        example: "Musst du am Samstag arbeiten? Darf ich Sie morgen anrufen? Wann müssen wir da sein?"
+        note: "In a yes/no question the modal opens the sentence, in a W-question it stands second. The other verb still comes last."
+        table:
+          headers: ["Frage", "Antwort"]
+          rows:
+            - ["Musst du heute arbeiten?", "Ja, leider."]
+            - ["Darf ich später kommen?", "Ja, natürlich."]
+            - ["Wann müssen wir da sein?", "Um zehn Uhr."]
+            - ["Dürfen wir den Termin verschieben?", "Ja, gern."]
+
+  - title: The date — der dritte Mai, am dritten Mai
+    intro: >-
+      A date in German is a number with a small tail. drei becomes der dritte,
+      zwanzig becomes der zwanzigste, and that is almost the whole rule. When you
+      say on which day something happens, the phrase changes a little and becomes
+      am dritten Mai. Learn that one as a whole ready-made piece, exactly like am
+      Montag in module 9 — you do not build it, you use it. Around the date live
+      three small words: am for a day or a date, um for a clock time, and von …
+      bis for a period.
+    items:
+      - form: "Number → ordinal: add -te up to 19, -ste from 20"
+        example: "Heute ist der fünfte Mai. Der zwanzigste Juli ist ein Sonntag. Mein Geburtstag ist der achte August."
+        note: "Four forms are irregular and have to be learned: erste, dritte, siebte, achte."
+        table:
+          headers: ["Zahl", "der …", "Beispiel"]
+          rows:
+            - ["1", "der erste", "Der erste Mai ist frei."]
+            - ["2", "der zweite", "Heute ist der zweite Juni."]
+            - ["3", "der dritte", "Der dritte Mai ist ein Montag."]
+            - ["4", "der vierte", "Der vierte Juni ist besetzt."]
+            - ["7", "der siebte", "Der siebte Juli ist ein Sonntag."]
+            - ["8", "der achte", "Der achte August ist mein Geburtstag."]
+            - ["19", "der neunzehnte", "Der neunzehnte Mai ist frei."]
+            - ["20", "der zwanzigste", "Der zwanzigste Juli ist ein Freitag."]
+            - ["21", "der einundzwanzigste", "Der einundzwanzigste ist besetzt."]
+            - ["31", "der einunddreißigste", "Der einunddreißigste Mai ist ein Freitag."]
+      - form: "Der Wievielte ist heute? — the date on its own"
+        example: "Der Wievielte ist heute? — Heute ist der fünfte Mai. Morgen ist der sechste Mai. Welches Datum haben wir?"
+        note: "In writing the number takes a full stop: der 5. Mai. You read it as der fünfte Mai."
+        table:
+          headers: ["Frage", "Antwort", "Kurz"]
+          rows:
+            - ["Der Wievielte ist heute?", "Heute ist der fünfte Mai.", "5. Mai"]
+            - ["Der Wievielte ist morgen?", "Morgen ist der sechste Mai.", "6. Mai"]
+            - ["Welches Datum ist am Montag?", "Der achte Mai.", "8. Mai"]
+            - ["Wann hast du Geburtstag?", "Mein Geburtstag ist der dritte Juni.", "3. Juni"]
+      - form: "am + -ten — the ready-made date phrase"
+        example: "Am dritten Mai habe ich einen Termin. Ich muss am fünften Juni arbeiten. Am zwanzigsten Juli ist mein Geburtstag."
+        note: "After am the ordinal ends in -ten, or -sten from 20. Learn am dritten Mai as one whole piece, like am Montag."
+        table:
+          headers: ["Datum", "Wann?"]
+          rows:
+            - ["der erste Mai", "am ersten Mai"]
+            - ["der dritte Mai", "am dritten Mai"]
+            - ["der siebte Juni", "am siebten Juni"]
+            - ["der achte Juli", "am achten Juli"]
+            - ["der zwanzigste Mai", "am zwanzigsten Mai"]
+            - ["der einunddreißigste August", "am einunddreißigsten August"]
+      - form: "The twelve months"
+        example: "Mein Geburtstag ist im Mai. Im Dezember habe ich viel Zeit. Der Kurs geht von Januar bis März."
+        note: "All months are masculine and start with a capital letter. A whole month takes im, a single date takes am."
+        table:
+          headers: ["Monat", "Kurz", "im …"]
+          rows:
+            - ["Januar", "Jan.", "im Januar"]
+            - ["Februar", "Feb.", "im Februar"]
+            - ["März", "Mär.", "im März"]
+            - ["April", "Apr.", "im April"]
+            - ["Mai", "Mai", "im Mai"]
+            - ["Juni", "Jun.", "im Juni"]
+            - ["Juli", "Jul.", "im Juli"]
+            - ["August", "Aug.", "im August"]
+            - ["September", "Sep.", "im September"]
+            - ["Oktober", "Okt.", "im Oktober"]
+            - ["November", "Nov.", "im November"]
+            - ["Dezember", "Dez.", "im Dezember"]
+      - form: "am, um, im, von … bis — the small words of time"
+        example: "Der Termin ist am Montag um zehn Uhr. Ich arbeite von neun bis fünf Uhr. Der Kurs geht von Januar bis März."
+        note: "am for a day or a date, um for a clock time, im for a month, von … bis for a period. am and um never swap."
+        table:
+          headers: ["Wort", "Wofür?", "Beispiel"]
+          rows:
+            - ["am", "Tag", "am Montag, am Freitag"]
+            - ["am", "Datum", "am dritten Mai, am zwanzigsten Juli"]
+            - ["um", "Uhrzeit", "um zehn Uhr, um halb acht"]
+            - ["im", "Monat", "im Mai, im Dezember"]
+            - ["von … bis", "Uhrzeit", "von neun bis elf Uhr"]
+            - ["von … bis", "Tage und Monate", "von Montag bis Freitag, von Januar bis März"]
+
+watchouts:
+  - title: The second verb goes to the end
+    bad: Ich muss absagen den Termin.
+    good: Ich muss den Termin absagen.
+    note: "The modal verb stands in position two, the other verb closes the sentence — the bracket from module 8."
+  - title: ich muss, er muss — no ending
+    bad: Ich musse heute arbeiten.
+    good: Ich muss heute arbeiten.
+    note: "With a modal verb ich and er/sie/es take no ending at all, and müssen also loses its umlaut."
+  - title: "must not is nicht dürfen"
+    bad: Hier musst du nicht warten.
+    good: Hier darfst du nicht warten.
+    note: "nicht müssen only means that you do not have to. For a real no you need nicht dürfen."
+  - title: am dritten Mai, not an drei Mai
+    bad: Ich habe an drei Mai einen Termin.
+    good: Ich habe am dritten Mai einen Termin.
+    note: "A date after am is an ordinal ending in -ten. Learn the whole phrase in one piece."
+  - title: um for the clock, am for the day
+    bad: Der Termin ist um Montag um zehn Uhr.
+    good: Der Termin ist am Montag um zehn Uhr.
+    note: "am goes with a day or a date, um only with a clock time. A month takes im."
+
+cloze_cards:
+  - text: "Ich {{c1::muss}} heute noch den Termin absagen."
+    hint: müssen
+    rule: "müssen takes no ending for ich: ich muss. The other verb goes to the end."
+  - text: "{{c1::Darf}} ich Sie am Montag anrufen?"
+    hint: dürfen
+    rule: "dürfen asks for permission, and a yes/no question opens with the modal: Darf ich …?"
+  - text: "Heute ist der {{c1::dritte}} Mai."
+    hint: drei
+    rule: "Numbers up to 19 add -te, and drei is irregular: der dritte."
+  - text: "Ich habe {{c1::am}} fünften Mai einen Termin."
+    hint: an
+    rule: "A date takes am, and the ordinal then ends in -ten: am fünften Mai."
+  - text: "Der Kurs fängt {{c1::um}} neun Uhr an."
+    hint: um
+    rule: "um goes with a clock time. A day or a date takes am, a whole month takes im."
+  - text: "Mein Geburtstag ist {{c1::im}} Mai."
+    hint: in
+    rule: "A whole month takes im: im Mai, im Dezember. One single date takes am."

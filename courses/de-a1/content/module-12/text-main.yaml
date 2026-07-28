@@ -1,0 +1,52 @@
+# Module 12 · main text — a real phone dialogue, not an exercise: Lena calls Herr
+# Weber and they agree on a day, a date and a clock time. Every construction of
+# the module is inside it — müssen and dürfen with the second verb at the end,
+# the date on its own (der siebte Mai) and inside the ready-made frame (am
+# siebten Mai), am for the day, um for the clock time, bis for the deadline — and
+# so are twelve of the 24 words.
+# der Arzt, die Praxis, der Bus and die Haltestelle belong to the neighbouring
+# modules and stay out of it. The glosses sit on four small words that are not
+# vocabulary entries and appear here in their dictionary form.
+kind: main
+kicker: DIALOG
+title: Einen Termin machen
+meta: ≈ 2 min · dotted words have a note — tap to reveal
+body:
+  - - t: "Lena: Guten Tag, Herr Weber. Hier ist Lena Schulz. Ich brauche dringend einen Termin. Haben Sie am Montag Zeit?"
+  - - t: "Herr Weber: Einen "
+    - g: Moment
+    - t: ", ich sehe in den Kalender. Am Montag geht es leider nicht — der Tag ist "
+    - g: schon
+    - t: " besetzt."
+  - - t: "Lena: Und am Dienstag? Am Mittwoch muss ich Herrn Berg in Berlin treffen."
+  - - t: "Herr Weber: Am Dienstag ist um zehn Uhr ein Termin frei. Das Datum ist der siebte Mai."
+  - - t: "Lena: Zehn Uhr ist gut. Darf ich auch später kommen? Um halb elf?"
+  - - t: "Herr Weber: Ja, das geht. Aber bitte kommen Sie pünktlich: um elf Uhr habe ich "
+    - g: wieder
+    - t: " einen Termin."
+  - - t: "Lena: Gut. Also am siebten Mai um halb elf. Ich schreibe den Termin "
+    - g: gleich
+    - t: " in den Kalender."
+  - - t: "Herr Weber: Sie können den Termin bis Montag verschieben oder absagen. Rufen Sie einfach an."
+  - - t: "Lena: Vielen Dank. Bis Dienstag!"
+glosses:
+  - key: Moment
+    term: der Moment
+    pos_label: noun
+    definition: a moment, a very short time; Einen Moment! means please wait a second
+    example: Einen Moment, bitte!
+  - key: schon
+    term: schon
+    pos_label: adverb
+    definition: already; earlier than you thought
+    example: Der Tag ist schon besetzt.
+  - key: wieder
+    term: wieder
+    pos_label: adverb
+    definition: again, one more time
+    example: Um elf Uhr habe ich wieder einen Termin.
+  - key: gleich
+    term: gleich
+    pos_label: adverb
+    definition: right now, in a minute; not later
+    example: Ich schreibe den Termin gleich in den Kalender.

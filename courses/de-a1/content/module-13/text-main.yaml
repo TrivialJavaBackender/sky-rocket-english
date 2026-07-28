@@ -1,0 +1,57 @@
+# Module 13 · main text — a dialogue in two scenes: Anna tells her friend Lukas
+# how she feels, then she is at the doctor's. Real genre, not an exercise, and
+# the two scenes are what let both address forms appear naturally — Lukas uses
+# the du imperative (Geh! Trink! Schlaf!), Dr. Berger uses the Sie form from
+# module 11 (Machen Sie … auf, Nehmen Sie) and gives advice with sollen.
+# It carries the target constructions of the module (Ich habe Halsschmerzen,
+# Mein Kopf tut weh, Wie fühlst du dich?, Sie sollen …) and 17 of the 24 words.
+# One paragraph = one turn, so every speaker gets a clip of their own.
+# Glosses (4) sit only on words whose form in the text is the dictionary form and
+# which are NOT vocab entries of this module.
+kind: main
+kicker: DIALOG
+title: Beim Arzt
+meta: ≈ 2 min · dotted words have a note — tap to reveal
+body:
+  - - t: "Lukas: Guten Morgen, Anna! Wie fühlst du dich?"
+  - - t: "Anna: Nicht gut. Ich bin krank. Mein Kopf tut weh und ich habe Halsschmerzen."
+  - - t: "Lukas: Hast du Fieber?"
+  - - t: "Anna: Ja, 38,5. Und ich bin sehr müde."
+  - - t: "Lukas: Dann geh zum Arzt! Trink viel Tee und schlaf viel!"
+  - - t: "Dr. Berger: Guten Tag, Frau Weber. Was ist das Problem?"
+  - - t: "Anna: Ich habe Kopfschmerzen und Halsschmerzen. Auch mein Rücken und meine Beine tun weh."
+  - - t: "Dr. Berger: Machen Sie bitte den "
+    - g: Mund
+    - t: " auf. Der Hals ist rot. Sie haben eine Erkältung. Der Körper ist müde, das ist "
+    - g: normal
+    - t: "."
+  - - t: "Anna: Brauche ich Tabletten?"
+  - - t: "Dr. Berger: Ja. Hier ist ein Rezept. Die Tabletten bekommen Sie in der Apotheke. Nehmen Sie sie "
+    - g: dreimal
+    - t: " am Tag."
+  - - t: "Dr. Berger: Sie sollen drei Tage zu Hause "
+    - g: bleiben
+    - t: " und viel trinken. Kein Sport!"
+  - - t: "Anna: Und wann bin ich wieder gesund?"
+  - - t: "Dr. Berger: In einer Woche. Gute Besserung!"
+glosses:
+  - key: Mund
+    term: der Mund
+    pos_label: noun
+    definition: the mouth; you eat and speak with it
+    example: Machen Sie bitte den Mund auf.
+  - key: normal
+    term: normal
+    pos_label: adjective
+    definition: normal; the way it always is, nothing new
+    example: Der Körper ist müde, das ist normal.
+  - key: dreimal
+    term: dreimal
+    pos_label: adverb
+    definition: three times; einmal, zweimal, dreimal
+    example: Nehmen Sie die Tabletten dreimal am Tag.
+  - key: bleiben
+    term: bleiben
+    pos_label: verb
+    definition: to stay; not to go away
+    example: Ich bleibe heute zu Hause.

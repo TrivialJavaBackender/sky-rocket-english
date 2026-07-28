@@ -1,0 +1,28 @@
+# Module 14 · Was hast du gemacht? The last module of the course. Scaffolding
+# (goals, standfirst) English, title German (§5). grammar_points repeat the
+# module card's opis (3) with no additions.
+# The present perfect is taught as a pattern with a closed list of seven
+# participles learnt as words — gemacht, gearbeitet, gegessen, getrunken,
+# gefahren, gegangen, gewesen. Building the participle of any other verb is A2
+# work and is never asked for here; that is exactly the state de-a2 declares as
+# its own entry point. The word-formation part of this module is revision only:
+# the plural of module 3 and the compound noun of modules 7, 10 and 13.
+slug: m14
+title: Was hast du gemacht?
+standfirst: Talking about yesterday, the weather and a trip · 24 words · a postcard from your holiday.
+goals:
+  - text: Talk about yesterday with the seven ready-made participles — Ich habe gearbeitet, Ich bin gefahren
+    achieved_by: workout
+  - text: Join two sentences with und, oder, aber and denn without changing anything else
+    achieved_by: workout
+  - text: Learn 24 words for the weather, the seasons and a trip
+    achieved_by: input
+  - text: Write a postcard about a trip or a weekend with the present perfect
+    achieved_by: output
+grammar_points:
+  - The present perfect as a ready-made pattern — seven learnt participles (gemacht, gearbeitet, gegessen, getrunken, gefahren, gegangen, gewesen) with haben or sein in second position and the participle at the end
+  - The conjunctions und, oder, aber and denn — they join two sentences and do not move the verb
+  - The weather with es (es regnet, es schneit, es ist kalt)
+production:
+  mode: writing
+  genre: a postcard about a trip or a weekend

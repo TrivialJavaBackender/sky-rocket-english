@@ -1,0 +1,563 @@
+# Module 14 · 46 core tasks + 16 review. Distribution (PLAN.md §6):
+# 8 mc_cloze · 8 open_cloze · 6 word_formation · 2 key_word_transformation ·
+# 10 grammar_drill · 4 error_correction · 4 collocation_match · 4 reading_comprehension.
+#
+# The rule of support in this module is narrow and deliberate: every required
+# answer that contains a participle uses one of the seven learnt forms —
+# gemacht, gearbeitet, gegessen, getrunken, gefahren, gegangen, gewesen. No task
+# asks the learner to build a participle; the gaps sit on haben/sein, on the word
+# order, or on a participle that has just been given as a word. Nothing here asks
+# for a Präteritum (war, hatte, ging), for a dative form outside the ready-made
+# chunks of modules 10 and 11, for an adjective ending, a comparative or a
+# subordinating conjunction — weil and dass are not part of this course.
+#
+# Spiral revision of earlier modules (marked "SPIRAL"): mc_cloze 7 (the
+# accusative, M6), open_cloze 8 (separable verbs, M9), grammar_drill 10 (the
+# modal frame, M8), and all six word_formation tasks, which are revision by
+# design — the plural of M3 and the compound noun of M7/M10/M13.
+# Explanations English (§5); frames, options and answers German.
+core:
+  # ───────────────────────── Multiple Choice ─────────────────────────
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Gestern "
+      post: " ich viel gearbeitet."
+      options: [bin, habe, hat, bist]
+      answer: 1
+    explanation: "arbeiten takes haben, and for ich that is habe. Gestern in front changes nothing."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Wir "
+      post: " mit dem Zug nach Italien gefahren."
+      options: [sind, haben, hat, ist]
+      answer: 0
+    explanation: "fahren takes sein, and for wir that is sind: Wir sind gefahren."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Was hast du am Wochenende "
+      post: "?"
+      options: [machen, macht, gemacht, machst]
+      answer: 2
+    explanation: "The participle of machen is gemacht, and it closes the question."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Der Schnee kommt. "
+      post: " seit zwei Tagen."
+      options: ["Es regnet", "Es scheint", "Es ist warm", "Es schneit"]
+      answer: 3
+    explanation: "Snow comes with schneien: es schneit. Weather verbs always take es."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Ich möchte gern kommen, "
+      post: " ich habe leider keine Zeit."
+      options: [und, aber, denn, oder]
+      answer: 1
+    explanation: "The second half says the opposite of the first, so it is aber, with a comma in front."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Warum bleibst du zu Hause? Ich bleibe zu Hause, "
+      post: " es regnet."
+      options: [aber, oder, denn, und]
+      answer: 2
+    explanation: "Warum? asks for a reason, and the reason comes with denn."
+  # SPIRAL · M6 — the accusative of the definite article
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Am Morgen habe ich "
+      post: " Kaffee getrunken."
+      options: [den, der, dem, das]
+      answer: 0
+    explanation: "Kaffee is the direct object, so der becomes den — the rule from module 6."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "Im Sommer ist es in Italien sehr "
+      post: "."
+      options: [kalt, krank, teuer, warm]
+      answer: 3
+    explanation: "Summer in Italy is warm. The opposite of warm is kalt."
+
+  # ───────────────────────── Open Cloze ─────────────────────────
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Gestern "
+      post: " ich acht Stunden gearbeitet."
+      answers: [habe]
+      answer_shown: habe
+    explanation: "gearbeitet needs haben, and the ich form of haben is habe."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Wir "
+      post: " mit dem Zug nach Italien gefahren."
+      answers: [sind]
+      answer_shown: sind
+    explanation: "gefahren needs sein, and the wir form of sein is sind."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Was hast du am Wochenende "
+      post: "?"
+      hint: machen
+      answers: [gemacht]
+      answer_shown: gemacht
+    explanation: "machen → gemacht, and the participle stands at the end of the question."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Ich bin gestern an den Strand "
+      post: "."
+      hint: gehen
+      answers: [gegangen]
+      answer_shown: gegangen
+    explanation: "gehen → gegangen. bin already tells you the verb takes sein."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Im Winter "
+      post: " es hier oft."
+      hint: schneien
+      answers: [schneit]
+      answer_shown: schneit
+    explanation: "Weather verbs go with es and take the normal er/sie/es ending: es schneit."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Ich möchte gern kommen, "
+      post: " ich habe leider keine Zeit."
+      answers: [aber]
+      answer_shown: aber
+    explanation: "leider keine Zeit is the opposite of möchte gern kommen, so the link is aber."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Warum bleibst du zu Hause? Ich bleibe zu Hause, "
+      post: " es regnet."
+      answers: [denn]
+      answer_shown: denn
+    explanation: "denn is the word that answers Warum?, and the sentence after it stays normal."
+  # SPIRAL · M9 — separable verbs
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Im Urlaub stehe ich erst um zehn Uhr "
+      post: "."
+      hint: aufstehen
+      answers: [auf]
+      answer_shown: auf
+    explanation: "The prefix of aufstehen leaves the verb and closes the sentence."
+
+  # ───────────────────────── Wortbildung ─────────────────────────
+  # All six are revision (§4 of the card): the plural of M3 and the compound noun
+  # of M7 / M10 / M13. This module adds no new word-formation operation.
+  # SPIRAL · M3 — the plural
+  - type: word_formation
+    group: grammar
+    content:
+      pre: "Im Winter fahren wir in die "
+      post: "."
+      prompt: "der Berg"
+      answers: [Berge]
+      answer_shown: Berge
+    explanation: "der Berg takes -e in the plural: die Berge."
+  # SPIRAL · M3 — the plural
+  - type: word_formation
+    group: grammar
+    content:
+      pre: "In Rimini gibt es sehr viele "
+      post: "."
+      prompt: "das Hotel"
+      answers: [Hotels]
+      answer_shown: Hotels
+    explanation: "Words from other languages take -s in the plural: die Hotels."
+  # SPIRAL · M3 — the plural
+  - type: word_formation
+    group: grammar
+    content:
+      pre: "Lange "
+      post: " mit dem Zug sind teuer."
+      prompt: "die Reise"
+      answers: [Reisen]
+      answer_shown: Reisen
+    explanation: "Words in -e take -n in the plural: die Reise → die Reisen."
+  # SPIRAL · M7 / M10 / M13 — the compound noun
+  - type: word_formation
+    group: grammar
+    content:
+      pre: "Im Radio kommt jetzt der "
+      post: "."
+      prompt: "das Wetter + der Bericht"
+      answers: [Wetterbericht]
+      answer_shown: Wetterbericht
+    explanation: "Two words become one, and the last part gives the article: der Wetterbericht."
+  # SPIRAL · M7 / M10 / M13 — the compound noun
+  - type: word_formation
+    group: grammar
+    content:
+      pre: "Der "
+      post: " in Italien ist super gewesen."
+      prompt: "der Sommer + der Urlaub"
+      answers: [Sommerurlaub]
+      answer_shown: Sommerurlaub
+    explanation: "der Sommer + der Urlaub = der Sommerurlaub, one word, article from der Urlaub."
+  # SPIRAL · M7 / M10 / M13 — the compound noun
+  - type: word_formation
+    group: grammar
+    content:
+      pre: "Es schneit! Die Kinder machen einen "
+      post: "."
+      prompt: "der Schnee + der Mann"
+      answers: [Schneemann]
+      answer_shown: Schneemann
+    explanation: "der Schnee + der Mann = der Schneemann. The second part gives the article again."
+
+  # ───────────────────────── Satz-Transformation ─────────────────────────
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: Du hast Pizza gegessen.
+      key: FRAGE
+      pre: ""
+      post: " du Pizza gegessen?"
+      answers: [Hast]
+      hint: 1 Wort
+      answer_shown: Hast
+    explanation: "A statement becomes a question when haben moves to the front: Hast du Pizza gegessen?"
+  - type: key_word_transformation
+    group: grammar
+    content:
+      s1: Ich fahre nach Berlin.
+      key: GESTERN
+      pre: "Gestern "
+      post: " ich nach Berlin gefahren."
+      answers: [bin]
+      hint: 1 Wort
+      answer_shown: bin
+    explanation: "The past of ich fahre is ich bin gefahren — fahren takes sein, not haben."
+
+  # ───────────────────────── Formen-Drill ─────────────────────────
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Ich "
+      post: " am Abend Pizza gegessen."
+      prompt: haben
+      options: [habe, hast, hat, haben]
+      answer: 0
+    explanation: "ich habe — only haben carries the person, gegessen never changes."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Du "
+      post: " gestern viel gearbeitet."
+      prompt: haben
+      options: [habe, hat, hast, haben]
+      answer: 2
+    explanation: "du hast, and gearbeitet waits at the end."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Wir "
+      post: " im Café Cola getrunken."
+      prompt: haben
+      options: [habe, hast, hat, haben]
+      answer: 3
+    explanation: "wir haben — the same form you learnt in module 2."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Er "
+      post: " mit dem Bus nach Hause gefahren."
+      prompt: sein
+      options: [bin, bist, ist, sind]
+      answer: 2
+    explanation: "fahren takes sein: er ist gefahren."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Wir "
+      post: " drei Tage im Hotel gewesen."
+      prompt: sein
+      options: [bin, sind, ist, seid]
+      answer: 1
+    explanation: "gewesen also takes sein: wir sind gewesen."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Ich habe "
+      post: "."
+      prompt: Wortstellung
+      options: ["eine Pizza gegessen", "gegessen eine Pizza", "esse eine Pizza", "eine Pizza esse"]
+      answer: 0
+    explanation: "The participle closes the sentence, so the object stands in front of it."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Gestern "
+      post: "."
+      prompt: Wortstellung
+      options: ["ich habe gearbeitet", "habe ich gearbeitet", "ich gearbeitet habe", "habe gearbeitet ich"]
+      answer: 1
+    explanation: "A time word in front pushes ich behind haben — the rule of module 5, now with a participle at the end."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Wir haben im Urlaub viel "
+      post: "."
+      prompt: machen
+      options: [machen, macht, machst, gemacht]
+      answer: 3
+    explanation: "After haben comes the participle: gemacht."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Ich "
+      post: " gestern zu Hause gewesen."
+      prompt: haben oder sein
+      options: [habe, bin, ist, hat]
+      answer: 1
+    explanation: "gewesen goes with sein, so ich bin gewesen — never ich habe gewesen."
+  # SPIRAL · M8 — the modal frame
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Ich kann heute nicht "
+      post: "."
+      prompt: Wortstellung
+      options: ["fahre nach Berlin", "fahren nach Berlin", "nach Berlin fahren", "nach Berlin fahre"]
+      answer: 2
+    explanation: "With a modal the other verb is an infinitive and it stands at the very end — module 8."
+
+  # ───────────────────────── Fehler finden ─────────────────────────
+  - type: error_correction
+    group: grammar
+    content: { words: [Ich, habe, gegessen, eine, "Pizza."], wrong: 2, correction: "gegessen eine Pizza → eine Pizza gegessen" }
+    explanation: "The participle belongs at the very end: Ich habe eine Pizza gegessen."
+  - type: error_correction
+    group: grammar
+    content: { words: [Ich, habe, nach, Berlin, "gefahren."], wrong: 1, correction: "habe → bin" }
+    explanation: "fahren moves you somewhere, and for that German uses sein: Ich bin nach Berlin gefahren."
+  - type: error_correction
+    group: grammar
+    content: { words: [Wir, haben, im, Hotel, "gewesen."], wrong: 1, correction: "haben → sind" }
+    explanation: "sein is its own helper: Wir sind im Hotel gewesen."
+  - type: error_correction
+    group: grammar
+    content: { words: [Heute, ist, sehr, "kalt."], wrong: 1, correction: "ist → ist es" }
+    explanation: "The weather always needs es: Heute ist es sehr kalt."
+
+  # ───────────────────────── Wort-Paare ─────────────────────────
+  - type: collocation_match
+    group: grammar
+    content:
+      left: [die Sonne, der Regen, der Schnee, der Wind]
+      right: ["es regnet", "er ist kalt", "sie scheint", "es schneit"]
+      pairs: { 0: 2, 1: 0, 2: 3, 3: 1 }
+    explanation: "die Sonne scheint · es regnet · es schneit · der Wind ist kalt."
+  - type: collocation_match
+    group: grammar
+    content:
+      left: [Pizza, Cola, Urlaub, "acht Stunden"]
+      right: [gemacht, gegessen, gearbeitet, getrunken]
+      pairs: { 0: 1, 1: 3, 2: 0, 3: 2 }
+    explanation: "Pizza gegessen · Cola getrunken · Urlaub gemacht · acht Stunden gearbeitet."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [der Sommer, der Winter, der Frühling, der Herbst]
+      right: ["Es schneit.", "Es ist warm und die Sonne scheint.", "Die Blumen kommen.", "Es regnet und der Wind ist kalt."]
+      pairs: { 0: 1, 1: 0, 2: 2, 3: 3 }
+    explanation: "Sommer: warm · Winter: Schnee · Frühling: die Blumen · Herbst: Regen und Wind."
+  - type: collocation_match
+    group: vocab
+    content:
+      left: [der Zug, das Hotel, der Strand, der Berg]
+      right: ["Dort schlafen wir.", "Dort ist das Meer.", "Dort ist viel Schnee.", "Er fährt nach Rimini."]
+      pairs: { 0: 3, 1: 0, 2: 1, 3: 2 }
+    explanation: "Der Zug fährt · im Hotel schlafen wir · am Strand ist das Meer · in den Bergen ist Schnee."
+
+  # ───────────────────────── Leseverstehen ─────────────────────────
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Am Samstag sind wir mit dem Zug nach Italien gefahren. Elf Stunden im Zug sind lang, aber die Reise ist schön gewesen."
+      q: "Wie ist Lukas nach Italien gefahren?"
+      options:
+        - Mit dem Auto
+        - Mit dem Bus
+        - Mit dem Zug
+        - Zu Fuß
+      answer: 2
+    explanation: "The postcard says it directly: mit dem Zug, and the trip took eleven hours."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Gestern sind wir an den Strand gegangen. Die Sonne scheint hier jeden Tag, und das Meer ist warm."
+      q: "Was hat Lukas gestern gemacht?"
+      options:
+        - Er ist an den Strand gegangen.
+        - Er hat acht Stunden gearbeitet.
+        - Er ist nach Hause gefahren.
+        - Er hat im Hotel gearbeitet.
+      answer: 0
+    explanation: "Gestern sind wir an den Strand gegangen — that is yesterday, not today."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Heute regnet es leider, und der Wind ist kalt. Wir haben nichts gemacht."
+      q: "Wie ist das Wetter heute?"
+      options:
+        - Warm und schön
+        - Es schneit
+        - Die Sonne scheint
+        - Es regnet und der Wind ist kalt
+      answer: 3
+    explanation: "Two facts in one line: es regnet and der Wind ist kalt."
+  - type: reading_comprehension
+    group: reading
+    content:
+      passage: "Morgen fahren wir in die Berge, denn dort ist es nicht so warm."
+      q: "Warum fahren sie in die Berge?"
+      options:
+        - Dort ist das Meer.
+        - Dort ist es nicht so warm.
+        - Dort ist das Hotel.
+        - Dort schneit es.
+      answer: 1
+    explanation: "denn gives the reason, and the reason is the temperature in the mountains."
+
+review_pool:
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Anna "
+      post: " gestern acht Stunden gearbeitet."
+      options: [ist, hat, habe, sind]
+      answer: 1
+    explanation: "arbeiten takes haben, and for Anna that is hat."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Ich "
+      post: " am Samstag an den Strand gegangen."
+      options: [bin, habe, ist, hat]
+      answer: 0
+    explanation: "gehen takes sein: ich bin gegangen."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Wir haben im Café Kuchen "
+      post: "."
+      options: [essen, isst, gegessen, esst]
+      answer: 2
+    explanation: "After haben comes the participle, and it closes the sentence: gegessen."
+  - type: mc_cloze
+    group: grammar
+    content:
+      pre: "Das Hotel ist klein, "
+      post: " es ist sehr schön."
+      options: [denn, oder, und, aber]
+      answer: 3
+    explanation: "klein and sehr schön pull in different directions, so the link is aber."
+  - type: mc_cloze
+    group: vocab
+    content:
+      pre: "Im Winter kommt der "
+      post: "."
+      options: [Sommer, Schnee, Strand, Urlaub]
+      answer: 1
+    explanation: "Snow belongs to winter: Im Winter kommt der Schnee."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Ihr "
+      post: " am Wochenende viel gemacht."
+      answers: [habt]
+      answer_shown: habt
+    explanation: "The ihr form of haben is habt, and gemacht stays at the end."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Anna "
+      post: " mit dem Bus zum Bahnhof gefahren."
+      answers: [ist]
+      answer_shown: ist
+    explanation: "fahren takes sein, and for Anna that is ist."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Ich habe im Urlaub viel Wasser "
+      post: "."
+      hint: trinken
+      answers: [getrunken]
+      answer_shown: getrunken
+    explanation: "trinken → getrunken, one of the seven forms of this module."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Heute "
+      post: " es den ganzen Tag."
+      hint: regnen
+      answers: [regnet]
+      answer_shown: regnet
+    explanation: "Weather verbs go with es: es regnet."
+  - type: open_cloze
+    group: grammar
+    content:
+      pre: "Ich fahre nicht in die Berge, "
+      post: " ich habe kein Auto."
+      answers: [denn]
+      answer_shown: denn
+    explanation: "The second half is the reason for the first, so it is denn."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Wo "
+      post: " du im Urlaub gewesen?"
+      prompt: sein
+      options: [hast, bin, bist, ist]
+      answer: 2
+    explanation: "gewesen goes with sein, and in a question the du form comes second: Wo bist du gewesen?"
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Am Wochenende "
+      post: "."
+      prompt: Wortstellung
+      options: ["wir sind an den Strand gegangen", "sind wir an den Strand gegangen", "wir an den Strand gegangen sind", "sind an den Strand gegangen wir"]
+      answer: 1
+    explanation: "The time word is first, so sind comes second and wir moves behind it."
+  - type: grammar_drill
+    group: grammar
+    content:
+      pre: "Es "
+      post: " in den Bergen."
+      prompt: schneien
+      options: [schneie, schneist, schneien, schneit]
+      answer: 3
+    explanation: "es schneit — the weather verb takes the er/sie/es ending and nothing else."
+  - type: word_formation
+    group: grammar
+    content:
+      pre: "Im Frühling kommen die "
+      post: " im Garten."
+      prompt: "die Blume"
+      answers: [Blumen]
+      answer_shown: Blumen
+    explanation: "die Blume takes -n in the plural: die Blumen."
+  - type: error_correction
+    group: grammar
+    content: { words: [Ich, habe, gegangen, zum, "Bahnhof."], wrong: 1, correction: "habe → bin" }
+    explanation: "gehen takes sein: Ich bin zum Bahnhof gegangen."
+  - type: error_correction
+    group: grammar
+    content: { words: [Gestern, ich, habe, viel, "gearbeitet."], wrong: 1, correction: "ich habe → habe ich" }
+    explanation: "Gestern stands first, so haben must come second and ich moves behind it."

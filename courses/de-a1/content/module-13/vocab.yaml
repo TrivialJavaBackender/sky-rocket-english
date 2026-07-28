@@ -1,0 +1,227 @@
+# Module 13 · 24 words: the body, illness, the doctor and the chemist's. The 13
+# anchors of the card + 11 words that finish the same domain — the body parts an
+# A1 learner still needs (der Arm, das Bein, der Rücken, das Ohr, der Zahn, and
+# der Zahn also feeds the -schmerzen compound), the three places and things of a
+# visit (die Praxis, die Tablette, das Rezept), the state müde, and the two
+# phrases the whole module runs on (wehtun, sich fühlen).
+# der Mund, die Nase and die Medizin are input here, not entries.
+# Scaffolding rule (§5): term/use_cases/collocations/register German, definition
+# English with a synonym or an opposite. Every noun carries its article and its
+# plural; wehtun and sich fühlen carry their ready-made forms, because that is
+# exactly what the exercises ask for — never a reflexive pronoun built by rule.
+entries:
+  - term: der Körper
+    tag: Nomen
+    definition: the body; everything from your head to your feet
+    use_cases:
+      - Der Körper ist müde.
+      - Der Kopf und die Hände sind auch der Körper.
+    collocations: der ganze Körper · der Körper tut weh
+    register: "Plural: die Körper."
+
+  - term: der Kopf
+    tag: Nomen
+    definition: the head; the top part of the body, where your eyes are
+    use_cases:
+      - Mein Kopf tut weh.
+      - Ich habe Kopfschmerzen.
+    collocations: der Kopf tut weh · die Kopfschmerzen
+    register: "Plural: die Köpfe. Schmerzen: die Kopfschmerzen."
+
+  - term: der Bauch
+    tag: Nomen
+    definition: the stomach, the belly; the part under your chest
+    use_cases:
+      - Mein Bauch tut weh.
+      - Nach dem Essen habe ich Bauchschmerzen.
+    collocations: der Bauch tut weh · die Bauchschmerzen
+    register: "Plural: die Bäuche. Schmerzen: die Bauchschmerzen."
+
+  - term: der Hals
+    tag: Nomen
+    definition: the neck and the throat; you speak and drink through it
+    use_cases:
+      - Der Hals ist rot.
+      - Ich kann nicht sprechen. Ich habe Halsschmerzen.
+    collocations: der Hals ist rot · die Halsschmerzen
+    register: "Plural: die Hälse. Schmerzen: die Halsschmerzen."
+
+  - term: die Hand
+    tag: Nomen
+    definition: the hand; you write and eat with it
+    use_cases:
+      - Wascht die Hände oft!
+      - Meine Hand tut weh.
+    collocations: die Hände waschen · in der Hand
+    register: "Plural: die Hände."
+
+  - term: der Fuß
+    tag: Nomen
+    definition: the foot; the end of the leg, you stand on it
+    use_cases:
+      - Meine Füße tun weh.
+      - Ich gehe zu Fuß.
+    collocations: zu Fuß gehen · die Füße tun weh
+    register: "Plural: die Füße."
+
+  - term: das Auge
+    tag: Nomen
+    definition: the eye; you see with it
+    use_cases:
+      - Meine Augen sind müde.
+      - Ich sehe mit den Augen.
+    collocations: die Augen sind müde · blaue Augen
+    register: "Plural: die Augen."
+
+  - term: der Arm
+    tag: Nomen
+    definition: the arm; it goes from the shoulder to the hand
+    use_cases:
+      - Mein Arm tut weh.
+      - Der Arzt sieht den Arm an.
+    collocations: der Arm tut weh · der linke Arm
+    register: "Plural: die Arme."
+
+  - term: das Bein
+    tag: Nomen
+    definition: the leg; you walk with two of them
+    use_cases:
+      - Meine Beine tun weh.
+      - Das Kind hat kurze Beine.
+    collocations: die Beine tun weh · lange Beine
+    register: "Plural: die Beine."
+
+  - term: der Rücken
+    tag: Nomen
+    definition: the back; the part of the body behind you
+    use_cases:
+      - Mein Rücken tut weh.
+      - Ich habe oft Rückenschmerzen.
+    collocations: der Rücken tut weh · die Rückenschmerzen
+    register: "Plural: die Rücken. Schmerzen: die Rückenschmerzen."
+
+  - term: das Ohr
+    tag: Nomen
+    definition: the ear; you hear with it
+    use_cases:
+      - Mein Ohr tut weh.
+      - Ich höre Musik mit den Ohren.
+    collocations: die Ohren tun weh · gute Ohren
+    register: "Plural: die Ohren."
+
+  - term: der Zahn
+    tag: Nomen
+    definition: a tooth; you eat with your teeth
+    use_cases:
+      - Mein Zahn tut weh.
+      - Ich habe Zahnschmerzen und gehe zum Zahnarzt.
+    collocations: die Zähne · die Zahnschmerzen · der Zahnarzt
+    register: "Plural: die Zähne. Schmerzen: die Zahnschmerzen."
+
+  - term: krank
+    tag: Adjektiv
+    definition: ill, sick; not well. The opposite is gesund
+    use_cases:
+      - Ich bin heute krank.
+      - Bist du krank? Dann geh zum Arzt!
+    collocations: krank sein · sehr krank · krank werden
+    register: "Gegenteil: gesund."
+
+  - term: gesund
+    tag: Adjektiv
+    definition: healthy, well; not ill. The opposite is krank
+    use_cases:
+      - In einer Woche bist du wieder gesund.
+      - Obst und Gemüse sind gesund.
+    collocations: gesund sein · gesund bleiben · gesund essen
+    register: "Gegenteil: krank."
+
+  - term: müde
+    tag: Adjektiv
+    definition: tired; you want to sleep
+    use_cases:
+      - Ich bin sehr müde.
+      - Meine Augen sind müde.
+    collocations: müde sein · sehr müde · müde Augen
+    register: "Gegenteil: fit."
+
+  - term: die Erkältung
+    tag: Nomen
+    definition: a cold; a small illness with a red throat and a hot head
+    use_cases:
+      - Sie haben eine Erkältung.
+      - Bei einer Erkältung sollst du viel trinken.
+    collocations: eine Erkältung haben · eine kleine Erkältung
+    register: "Plural: die Erkältungen."
+
+  - term: das Fieber
+    tag: Nomen
+    definition: a temperature, a fever; the body is too hot, over 38 degrees
+    use_cases:
+      - Ich habe Fieber.
+      - Hast du Fieber? Dann bleib zu Hause!
+    collocations: Fieber haben · hohes Fieber
+    register: "Kein Plural."
+
+  - term: der Arzt
+    tag: Nomen
+    definition: a doctor; the person who helps you when you are ill
+    use_cases:
+      - Geh zum Arzt!
+      - Der Arzt schreibt ein Rezept.
+    collocations: zum Arzt gehen · beim Arzt · der Zahnarzt
+    register: "Plural: die Ärzte. Frau: die Ärztin."
+
+  - term: die Praxis
+    tag: Nomen
+    definition: a doctor's surgery; the rooms where the doctor works
+    use_cases:
+      - Die Praxis ist von acht bis zwölf Uhr offen.
+      - Seid ihr krank? Dann kommt in die Praxis!
+    collocations: in der Praxis · die Praxis Dr. Berger
+    register: "Plural: die Praxen."
+
+  - term: die Apotheke
+    tag: Nomen
+    definition: a chemist's, a pharmacy; the shop for Tabletten and Medizin
+    use_cases:
+      - Die Tabletten bekommen Sie in der Apotheke.
+      - Die Apotheke ist neben der Praxis.
+    collocations: in der Apotheke · zur Apotheke gehen
+    register: "Plural: die Apotheken."
+
+  - term: die Tablette
+    tag: Nomen
+    definition: a pill, a tablet; a small round thing you take when you are ill
+    use_cases:
+      - Nimm die Tabletten dreimal am Tag!
+      - Nehmt Tabletten nur mit Rezept!
+    collocations: Tabletten nehmen · eine Tablette gegen Kopfschmerzen
+    register: "Plural: die Tabletten."
+
+  - term: das Rezept
+    tag: Nomen
+    definition: a prescription; the paper from the doctor for the chemist's
+    use_cases:
+      - Hier ist ein Rezept.
+      - Der Arzt schreibt ein Rezept.
+    collocations: ein Rezept schreiben · mit Rezept · ohne Rezept
+    register: "Plural: die Rezepte."
+
+  - term: wehtun
+    tag: Phrase
+    definition: to hurt; it says which part of the body is not well
+    use_cases:
+      - Mein Kopf tut weh.
+      - Meine Füße tun weh.
+    collocations: tut weh · tun weh · Was tut weh?
+    register: "Formen: es tut weh · sie tun weh. weh geht ans Ende."
+
+  - term: sich fühlen
+    tag: Phrase
+    definition: to feel; it says how you are — good, bad or tired
+    use_cases:
+      - Ich fühle mich schlecht.
+      - Wie fühlst du dich heute?
+    collocations: sich gut fühlen · sich schlecht fühlen · Wie fühlst du dich?
+    register: "Formen: ich fühle mich · du fühlst dich · er/sie fühlt sich."

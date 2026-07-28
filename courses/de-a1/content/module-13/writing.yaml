@@ -1,0 +1,30 @@
+# Module 13 · production. Scaffolding (prompt, checklist) English; model answer
+# German (§5). The model stays inside what modules 1–13 can produce: the du
+# imperative, Ich habe …schmerzen, Mein … tut weh, the fixed phrase ich fühle
+# mich, sollen with the other verb at the end, present tense, und. No Perfekt,
+# no aber/denn, no comparative, no adjective ending, no dative built from
+# scratch — zum Arzt is the ready-made chunk from module 11.
+mode: writing
+genre: a short message about how you feel and one piece of advice
+word_target: [30, 40]
+prompt: |
+  Your German friend Lukas has written that he is ill. You are ill too. Write him
+  a short message on your phone. 30–40 words.
+
+  Say something about each point:
+  • how you feel (Ich fühle mich …, Ich bin krank / müde)
+  • what hurts (Ich habe …schmerzen · Mein … tut weh)
+  • one piece of advice with sollen (Du sollst …)
+  • one or two short commands with the du form (Trink …! Geh …! Nimm …!)
+
+  Use at least two du commands and one sentence with sollst.
+model_answer: |
+  Hallo Lukas, wie fühlst du dich? Ich bin auch krank. Ich habe Kopfschmerzen
+  und Fieber, und mein Hals tut weh. Ich fühle mich sehr müde. Du sollst viel
+  Wasser trinken. Geh zum Arzt und nimm Tabletten! Gute Besserung! Anna
+checklist:
+  - Two or more du commands, each one without the pronoun — Trink! Geh! Nimm!
+  - One sentence with sollst, and the other verb at the very end
+  - One sentence with Ich habe …schmerzen or Mein … tut weh
+  - The phrase ich fühle mich is complete, with its small word
+  - Every noun has a capital letter, and the message is 30–40 words long

@@ -1,0 +1,198 @@
+# Module 14 · theory. Two spotlights, 11 items — six for the present perfect
+# (grammar point 1 of the card), five for the four conjunctions and the weather
+# (grammar points 2 and 3).
+# The book (Basic German, Unit 21) teaches the present perfect as a full system:
+# ge- + stem + -t for weak verbs, ge- + stem + -en for strong ones, the vowel
+# change, the mixed verbs, the inseparable prefixes and -ieren. This course takes
+# from that unit only what it can carry: the word order (haben or sein second,
+# the participle last), the choice between haben and sein, and a closed list of
+# SEVEN participles handed over as vocabulary. The intro of spotlight 1 says so
+# in as many words, because a learner who thinks the list is a rule will build
+# *gespielt, *geschlafen, *getroffen and be wrong more often than right.
+# Spotlight 2 takes from Unit 27 only the co-ordinating half — und, oder, aber,
+# denn, the group that leaves the word order alone. weil, dass, wenn, als and ob
+# are not in this course at all.
+# Scaffolding rule (§5): intro and note English, every example and table German.
+# Grammar terms are named in English directly (§5.1).
+spotlights:
+  - title: Was hast du gemacht? — talking about yesterday
+    intro: >-
+      German talks about the past with two verbs, not one: haben or sein takes
+      the normal second position, and a second form — the participle — waits at
+      the very end of the sentence. Ich habe viel gearbeitet. Ich bin nach Berlin
+      gefahren. This course gives you seven participles and asks you to learn
+      them the way you learn any other word, by heart. Do not try to build new
+      ones from the verb: German has several patterns for that, and choosing
+      between them is the next course's job. Seven forms already cover most of
+      what you did yesterday.
+    items:
+      - form: "haben or sein in position 2, the participle at the end"
+        example: "Ich habe viel gearbeitet. Wir haben Pizza gegessen. Ich bin nach Italien gefahren. Am Abend sind wir ins Kino gegangen."
+        note: "Two verbs, two places: the small one second, the participle last. Nothing stands after it."
+        table:
+          headers: ["Position 1", "Position 2", "…", "Ende"]
+          rows:
+            - ["Ich", "habe", "gestern viel", "gearbeitet."]
+            - ["Wir", "haben", "am Abend Pizza", "gegessen."]
+            - ["Ich", "bin", "mit dem Zug nach Italien", "gefahren."]
+            - ["Anna", "ist", "an den Strand", "gegangen."]
+      - form: "The seven participles of this course — learn them as words"
+        example: "Ich habe gemacht. Ich habe gearbeitet. Ich habe gegessen. Ich habe getrunken. Ich bin gefahren. Ich bin gegangen. Ich bin gewesen."
+        note: "This is the whole list. Any other verb stays in the present tense for now."
+        table:
+          headers: ["Verb", "Partizip", "haben/sein", "Beispiel"]
+          rows:
+            - ["machen", "gemacht", "haben", "Was hast du gemacht?"]
+            - ["arbeiten", "gearbeitet", "haben", "Ich habe viel gearbeitet."]
+            - ["essen", "gegessen", "haben", "Wir haben Pizza gegessen."]
+            - ["trinken", "getrunken", "haben", "Ich habe Cola getrunken."]
+            - ["fahren", "gefahren", "sein", "Ich bin nach Rom gefahren."]
+            - ["gehen", "gegangen", "sein", "Sie ist zum Arzt gegangen."]
+            - ["sein", "gewesen", "sein", "Wir sind im Hotel gewesen."]
+      - form: "haben changes with the person, the participle never changes"
+        example: "Ich habe gearbeitet. Du hast gearbeitet. Er hat gearbeitet. Wir haben gearbeitet. Ihr habt gearbeitet."
+        note: "You already know these forms from module 2. Only haben carries the person."
+        table:
+          headers: ["Person", "haben", "Partizip"]
+          rows:
+            - ["ich", "habe", "gearbeitet"]
+            - ["du", "hast", "gearbeitet"]
+            - ["er/sie/es", "hat", "gearbeitet"]
+            - ["wir", "haben", "gearbeitet"]
+            - ["ihr", "habt", "gearbeitet"]
+            - ["Sie/sie", "haben", "gearbeitet"]
+      - form: "Three of the seven take sein, not haben"
+        example: "Ich bin nach Hamburg gefahren. Bist du zu Fuß gegangen? Wir sind am Strand gewesen. Sie ist mit dem Zug gefahren."
+        note: "gefahren and gegangen move you somewhere, gewesen says where you were. The other four take haben."
+        table:
+          headers: ["Person", "sein", "Partizip"]
+          rows:
+            - ["ich", "bin", "gefahren"]
+            - ["du", "bist", "gefahren"]
+            - ["er/sie/es", "ist", "gefahren"]
+            - ["wir", "sind", "gefahren"]
+            - ["ihr", "seid", "gefahren"]
+            - ["Sie/sie", "sind", "gefahren"]
+      - form: "Questions: haben or sein comes first, the participle still last"
+        example: "Was hast du gestern gemacht? Hast du gut gegessen? Wo bist du gewesen? Wann seid ihr nach Hause gefahren?"
+        note: "The same frame as the yes/no question of module 4 — only the ends have grown."
+        table:
+          headers: ["Frage", "Antwort"]
+          rows:
+            - ["Was hast du gemacht?", "Ich habe gearbeitet."]
+            - ["Hast du Kaffee getrunken?", "Ja, ich habe Kaffee getrunken."]
+            - ["Wo bist du gewesen?", "Ich bin im Urlaub gewesen."]
+            - ["Wann bist du gefahren?", "Ich bin am Samstag gefahren."]
+      - form: "gestern in front → haben or sein still comes second"
+        example: "Gestern habe ich viel gearbeitet. Am Wochenende sind wir an den Strand gegangen. Im Urlaub haben wir viel gemacht."
+        note: "The rule of module 5 does not change: put a time word first and the verb still stands in position 2."
+        table:
+          headers: ["Position 1", "Position 2", "…", "Ende"]
+          rows:
+            - ["Gestern", "habe", "ich viel", "gearbeitet."]
+            - ["Am Wochenende", "sind", "wir an den Strand", "gegangen."]
+            - ["Im Sommer", "sind", "wir nach Italien", "gefahren."]
+            - ["Am Abend", "haben", "wir Cola", "getrunken."]
+
+  - title: und, oder, aber, denn — and how to talk about the weather
+    intro: >-
+      These four little words put two sentences together, and that is all they
+      do: nothing else in either sentence moves. You already use und and oder
+      from module 5; aber adds a contrast and denn gives a reason. Both of the
+      new ones take a comma in front of them. The weather works in the same easy
+      way, with the small word es doing the job of the subject — es regnet, es
+      schneit, es ist kalt. German never leaves that es out.
+    items:
+      - form: "und and oder — the two from module 5"
+        example: "Ich trinke Kaffee und du trinkst Tee. Möchtest du Pizza oder möchtest du Suppe? Wir gehen an den Strand und wir schwimmen im Meer."
+        note: "und adds, oder gives a choice. If the person is the same you may drop it after und."
+        table:
+          headers: ["Satz 1", "Konjunktion", "Satz 2"]
+          rows:
+            - ["Ich trinke Kaffee", "und", "du trinkst Tee."]
+            - ["Anna arbeitet in Berlin", "und", "sie wohnt in Potsdam."]
+            - ["Möchtest du Pizza", "oder", "möchtest du Suppe?"]
+            - ["Bleibst du zu Hause", "oder", "kommst du mit?"]
+      - form: "aber — the second sentence says something different"
+        example: "Ich möchte gern kommen, aber ich habe leider keine Zeit. Das Hotel ist klein, aber sehr schön. Die Sonne scheint, aber der Wind ist kalt."
+        note: "Always a comma before aber. The verb stays where it was — nothing moves."
+        table:
+          headers: ["Satz 1", "Konjunktion", "Satz 2"]
+          rows:
+            - ["Ich möchte gern kommen,", "aber", "ich habe keine Zeit."]
+            - ["Das Zimmer ist klein,", "aber", "es ist sehr schön."]
+            - ["Die Sonne scheint,", "aber", "es ist kalt."]
+            - ["Ich habe Hunger,", "aber", "ich habe kein Geld."]
+      - form: "denn — the second sentence gives the reason"
+        example: "Er kann nicht kommen, denn er muss arbeiten. Ich bleibe zu Hause, denn es regnet. Wir fahren in die Berge, denn dort ist es nicht so warm."
+        note: "denn answers Warum?. Comma in front, and again the verb does not move."
+        table:
+          headers: ["Warum?", "Konjunktion", "Grund"]
+          rows:
+            - ["Er kann nicht kommen,", "denn", "er muss arbeiten."]
+            - ["Ich bleibe zu Hause,", "denn", "es regnet."]
+            - ["Wir fahren nach Italien,", "denn", "das Wetter ist dort schön."]
+            - ["Ich trinke Wasser,", "denn", "ich habe Durst."]
+      - form: "All four together — the word order never changes"
+        example: "Ich arbeite und du schläfst. Kommst du oder bleibst du? Ich komme gern, aber ich habe keine Zeit. Ich komme nicht, denn ich muss arbeiten."
+        note: "Only aber and denn need a comma. In all four the next word is the person, then the verb."
+        table:
+          headers: ["Konjunktion", "Was macht sie?", "Komma?"]
+          rows:
+            - ["und", "addiert", "kein Komma"]
+            - ["oder", "gibt eine Wahl", "kein Komma"]
+            - ["aber", "gibt einen Kontrast", "Komma"]
+            - ["denn", "gibt einen Grund", "Komma"]
+      - form: "The weather always needs es"
+        example: "Es regnet. Es schneit. Es ist kalt. Heute ist es warm und die Sonne scheint. Im Winter schneit es oft."
+        note: "es is not a person here — it is simply the word German puts in front of weather verbs."
+        table:
+          headers: ["Wetter", "Satz", "Frage"]
+          rows:
+            - ["der Regen", "Es regnet.", "Regnet es?"]
+            - ["der Schnee", "Es schneit.", "Schneit es?"]
+            - ["die Sonne", "Die Sonne scheint.", "Scheint die Sonne?"]
+            - ["kalt/warm", "Es ist kalt. Es ist warm.", "Ist es kalt?"]
+            - ["das Wetter", "Das Wetter ist schön.", "Wie ist das Wetter?"]
+
+watchouts:
+  - title: The participle goes to the very end
+    bad: Ich habe gegessen eine Pizza.
+    good: Ich habe eine Pizza gegessen.
+    note: "English keeps the two verbs together, German does not. Everything else stands between them."
+  - title: fahren and gehen take sein
+    bad: Ich habe nach Berlin gefahren.
+    good: Ich bin nach Berlin gefahren.
+    note: "These two move you from one place to another, and for that German uses bin, bist, ist, sind."
+  - title: gewesen also takes sein
+    bad: Wir haben im Hotel gewesen.
+    good: Wir sind im Hotel gewesen.
+    note: "sein is its own helper: ich bin gewesen, du bist gewesen, wir sind gewesen."
+  - title: The weather cannot start without es
+    bad: Heute ist sehr kalt.
+    good: Heute ist es sehr kalt.
+    note: "Russian and English can drop the subject here, German never can: es regnet, es ist kalt."
+  - title: After denn everything stays normal
+    bad: Ich bleibe zu Hause, denn es kalt ist.
+    good: Ich bleibe zu Hause, denn es ist kalt.
+    note: "denn joins two normal sentences. The person comes first, then the verb, exactly as always."
+
+cloze_cards:
+  - text: "Gestern {{c1::habe}} ich viel gearbeitet."
+    hint: haben
+    rule: "The present perfect of arbeiten uses haben, and a time word in front does not move it: Gestern habe ich …"
+  - text: "Ich {{c1::bin}} mit dem Zug nach Hamburg gefahren."
+    hint: sein
+    rule: "fahren takes sein, not haben: ich bin gefahren, du bist gefahren."
+  - text: "Was hast du am Wochenende {{c1::gemacht}}?"
+    hint: machen
+    rule: "The participle of machen is gemacht, and it closes the question."
+  - text: "Im Winter {{c1::schneit}} es hier oft."
+    hint: schneien
+    rule: "Weather verbs go with es and nothing else: es schneit, es regnet."
+  - text: "Ich möchte gern kommen, {{c1::aber}} ich habe leider keine Zeit."
+    hint: aber
+    rule: "aber marks a contrast and always takes a comma in front. The word order does not change."
+  - text: "Warum bleibst du zu Hause? Ich bleibe zu Hause, {{c1::denn}} es regnet."
+    hint: denn
+    rule: "denn gives the reason after Warum?. Comma in front, and the next sentence stays normal."

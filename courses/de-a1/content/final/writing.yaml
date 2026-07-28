@@ -1,0 +1,154 @@
+# FINAL · the Schreiben part of the Abschlusstest, in the shape of
+# Goethe-Zertifikat A1 / Start Deutsch 1: a registration form (Anmeldeformular)
+# plus a short message (kurze Nachricht). Both live in one `prompt`; the form is
+# written out in full with its German field labels, and word_target [30, 40]
+# applies to the message only.
+#
+# The scenario is chosen so that all three blocks and M14 are needed: who you
+# are and where you are from (Block A), what you have and have not, what you can
+# or want to do and when your day starts (Block B), what you must do and how you
+# get somewhere (Block C), and what you did yesterday, with the weather and a
+# second sentence joined by und/aber/denn (M14).
+#
+# `model_answer` shows both parts, so its total word count is larger than
+# word_target — the target is the message, not the form.
+mode: writing
+genre: Anmeldeformular + kurze Nachricht
+word_target: [30, 40]
+prompt: |
+  Written under test conditions: 20 minutes, no dictionary and no second draft.
+  Sit the whole test in one go with one break — Lesen (items 1–12) about 25
+  minutes, Sprachbausteine (items 13–80) about 90 minutes, then the break, then
+  the form and the message together in 20 minutes.
+
+  ## The task
+
+  ### Teil 1 · Anmeldeformular
+
+  You are joining a language school in Vienna. Fill in the registration form
+  for yourself. Answer every line in German. Invented details are fine, but
+  they have to be plausible and they have to be German.
+
+      SPRACHSCHULE WIEN · ANMELDUNG
+
+      Familienname:        ______________________
+      Vorname:             ______________________
+      Geburtsdatum:        ______________________
+      Land:                ______________________
+      Straße und Hausnummer: ____________________
+      Stadt:               ______________________
+      Telefonnummer:       ______________________
+      E-Mail:              ______________________
+      Beruf:               ______________________
+      Sprachen:            ______________________
+      Kurs:                ______________________
+
+  Watch the two lines that are not just a word: Geburtsdatum wants a date the
+  way German writes it, and Sprachen wants more than one language, so it wants
+  a plural.
+
+  ### Teil 2 · Kurze Nachricht
+
+  Your teacher at the school is Frau Klein. She wrote to you: "Hallo! Wer sind
+  Sie? Wann können Sie kommen? Was haben Sie gestern gemacht?"
+
+  Write a short message back, 30–40 words. Say who you are and where you are
+  from. Say one thing you do not have for the course. Say when you can come
+  and one thing you must do that week. Say what you did yesterday.
+
+  Begin with a greeting (Hallo Frau Klein,) and end with Tschüss and your name.
+  Keep the sentences short. Do not try to write anything you have not learnt
+  yet — no weil, no dass, no war or hatte, and no participle outside the seven
+  you know (gemacht, gearbeitet, gegessen, getrunken, gefahren, gegangen,
+  gewesen).
+
+  ## Deliberately deploy
+
+  This is the final test, so the whole course should be visible in fourteen
+  lines of writing:
+
+  · Block A (M01–M05) — sein and kommen aus for who you are and where you are
+    from, haben and a possessive for what belongs to you, one noun with its
+    article or a plural, one negative with kein or nicht, and one sentence that
+    starts with a time word so the verb stays second (Gestern bin ich …);
+  · Block B (M06–M10) — one direct object with the right accusative article
+    (einen Kurs, den Bus), one modal with the infinitive at the very end (Ich
+    kann am Montag kommen), one separable verb with its prefix at the end and
+    one clock time with um (Ich fange um acht Uhr an);
+  · Block C (M11–M13) — one müssen or dürfen sentence, one date or day with am,
+    and one direction as a whole learnt phrase (zum Bahnhof, zur Post, mit dem
+    Bus);
+  · M14 — one present perfect sentence about yesterday with one of the seven
+    participles and haben or sein in second position, and one pair of sentences
+    joined by aber or denn, which do not move the verb.
+
+  The form is marked as strictly as the message: a lower-case noun, a missing
+  umlaut or an English date on the Geburtsdatum line is a mistake.
+
+  ## Afterwards · debrief
+
+  Mark the 80 items first and work out the percentage. The pass mark is 60%,
+  which is 48 out of 80. Then, before you read the model answer:
+
+  1. Sort every miss by the module named at the start of its explanation —
+    M01 … M14 — and write the fourteen numbers in a column. Two misses spread
+    over two modules is noise; three or more in one module is a gap, whatever
+    your total was.
+  2. Look at where the gaps sit. Gaps in Block A are the serious ones: gender,
+    the present tense, verb-second and kein/nicht are underneath every other
+    item on this test and underneath the whole of de-a2. Gaps in M11–M14 are
+    younger material and close faster.
+  3. Look at the kind of miss, not only at its module. A wrong ending on
+    den/einen/keinen is one problem; a verb or a prefix in the wrong place is
+    another, and only the second one will still be hurting you in six months.
+  4. Write each miss into the error map as error → rule → card.
+  5. Only then compare your form and your message with the model answer. Look
+    for the structures you avoided, not only for the mistakes you made — an
+    answer that stays safe is also information.
+
+  60% or above: the course is finished. You go into de-a2 with no preparation
+  week — de-a2 opens with the present perfect and takes the seven participles
+  of M14 as its own entry level, so you start exactly where this test leaves
+  you.
+
+  Below 60%: do not start de-a2 yet. Take the two or three modules where your
+  misses cluster, redo only the failed items and their watchouts, put the weak
+  words back on cards for a week, and sit the test again. A retake at 60% is
+  worth more than a first sitting at 55% and a course you cannot follow.
+model_answer: |
+  ### Teil 1 · Anmeldeformular
+
+  Familienname:          Nowak
+  Vorname:               Marta
+  Geburtsdatum:          14. Juni 1996
+  Land:                  Polen
+  Straße und Hausnummer: Blumenstraße 12
+  Stadt:                 Wien
+  Telefonnummer:         0664 55 12 40
+  E-Mail:                marta.nowak@web.de
+  Beruf:                 Lehrerin
+  Sprachen:              Polnisch, Englisch, Deutsch
+  Kurs:                  Deutsch A1, am Abend
+
+  ### Teil 2 · Kurze Nachricht
+
+  Hallo Frau Klein,
+
+  ich bin Marta und komme aus Polen. Ich spreche Englisch, aber ich habe kein
+  Buch. Am Montag muss ich arbeiten, denn ich fange um acht Uhr an. Gestern bin
+  ich zum Bahnhof gefahren.
+
+  Tschüss, Marta
+checklist:
+  - Both parts written in 20 minutes, without a dictionary and without a second draft
+  - Every line of the form filled in, in German, with capital letters on the nouns
+  - Geburtsdatum written the German way (14. Juni 1996) and Sprachen in the plural
+  - The message is 30–40 words, opens with Hallo Frau Klein and closes with Tschüss and your name
+  - Answers all three of Frau Klein's questions — who, when, what you did yesterday
+  - Says who you are and where you are from with sein and kommen aus
+  - Has one negative sentence with kein / keine or nicht
+  - Has one modal (können, müssen, dürfen) with the second verb at the very end
+  - Has one separable verb with its prefix at the end, or one clock time with um … Uhr
+  - Has one day or date with am, or one direction as a whole phrase (zum Bahnhof, mit dem Bus)
+  - Has one present perfect sentence about yesterday, using one of the seven participles
+  - Has one pair of sentences joined by aber or denn, with the verb still in second position

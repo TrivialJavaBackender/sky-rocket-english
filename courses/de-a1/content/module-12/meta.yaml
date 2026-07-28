@@ -1,0 +1,26 @@
+# Module 12 · Termine. Scaffolding (goals, standfirst) English, title German (§5).
+# grammar_points repeat the module card's opis (3) with no additions. The verb
+# bracket is not introduced here — module 8 built it on können and wollen, this
+# module only runs it again on two new modal verbs. The date frame am dritten Mai
+# is taught as a whole ready-made piece, the same way am Montag was taught in
+# module 9: nothing in this module asks the learner to build an adjective ending
+# out of a case.
+slug: m12
+title: Termine
+standfirst: müssen and dürfen, dates and ordinals · 24 words · make an appointment.
+goals:
+  - text: Say what you have to do and what you are allowed to do with müssen and dürfen
+    achieved_by: workout
+  - text: Give a date — der dritte Mai, am dritten Mai — and name the twelve months
+    achieved_by: workout
+  - text: Learn 24 words for appointments, the calendar and time
+    achieved_by: input
+  - text: Agree a time and write a short message about an appointment
+    achieved_by: output
+grammar_points:
+  - The modal verbs müssen and dürfen in the present tense (all persons)
+  - Dates and ordinal numbers (der erste, am dritten Mai) and the months
+  - Time prepositions am, um and von … bis
+production:
+  mode: writing
+  genre: a short message that makes an appointment

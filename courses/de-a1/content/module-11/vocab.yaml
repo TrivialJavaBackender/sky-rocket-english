@@ -1,0 +1,227 @@
+# Module 11 · 24 words: the town, transport and the way. The 12 anchors of the
+# card + 12 words that finish the same domain — the three direction adverbs the
+# card asks for (links, rechts, geradeaus), the words a route is made of
+# (die Straße, der Weg, die Ecke, der Platz, das Zentrum), the near/far pair
+# (nah is an anchor, weit is its opposite), and the three words a bus ride needs
+# (die Fahrkarte, aussteigen, zu Fuß). der Termin, die Minute and die Apotheke
+# belong to later modules and are input here, not entries.
+# Scaffolding rule (§5): term/use_cases/collocations/register German, definition
+# English with a synonym or an opposite. Every noun carries its article, its
+# plural and — as in module 10 — the ready-made phrase the exercises ask for
+# (Richtung: zum Bahnhof, zur Post), because that phrase is learnt whole.
+entries:
+  - term: die Stadt
+    tag: Nomen
+    definition: a town, a city; many streets, houses and people together
+    use_cases:
+      - Ich wohne gern in der Stadt.
+      - Am Samstag fahren wir in die Stadt.
+    collocations: in der Stadt wohnen · in die Stadt fahren · die Stadt Hamburg
+    register: "Plural: die Städte. Ortsangabe: in der Stadt."
+
+  - term: der Bahnhof
+    tag: Nomen
+    definition: a train station; the place where the trains come and go
+    use_cases:
+      - Wie komme ich zum Bahnhof?
+      - Der Bahnhof ist nicht weit.
+    collocations: zum Bahnhof gehen · am Bahnhof · der Bahnhof Mitte
+    register: "Plural: die Bahnhöfe. Richtung: zum Bahnhof."
+
+  - term: die Post
+    tag: Nomen
+    definition: a post office; you send letters and cards there
+    use_cases:
+      - Die Post ist gleich an der Ecke.
+      - Ich gehe zu Fuß zur Post.
+    collocations: zur Post gehen · an der Post vorbei · die Post ist offen
+    register: "Nur Singular: die Post. Richtung: zur Post."
+
+  - term: die Bank
+    tag: Nomen
+    definition: a bank; the place where you get your money
+    use_cases:
+      - Die Bank ist im Zentrum.
+      - Ich brauche Geld und gehe zur Bank.
+    collocations: zur Bank gehen · Geld auf der Bank · die Bank ist zu
+    register: "Plural: die Banken. Richtung: zur Bank."
+
+  - term: das Rathaus
+    tag: Nomen
+    definition: a town hall; the big old house of the town at the market square
+    use_cases:
+      - Das Rathaus ist sehr alt.
+      - Gehen Sie am Rathaus vorbei.
+    collocations: zum Rathaus · am Rathaus vorbei · der Platz vor dem Rathaus
+    register: "Plural: die Rathäuser. Richtung: zum Rathaus."
+
+  - term: die Haltestelle
+    tag: Nomen
+    definition: a bus stop; the place where the bus or the tram waits for you
+    use_cases:
+      - Wo ist die Haltestelle, bitte?
+      - Die Haltestelle ist da vorne links.
+    collocations: an der Haltestelle · zur Haltestelle gehen · die Haltestelle Rathaus
+    register: "Plural: die Haltestellen. Ortsangabe: an der Haltestelle."
+
+  - term: der Bus
+    tag: Nomen
+    definition: a bus; it takes many people through the town
+    use_cases:
+      - Der Bus fährt zum Bahnhof.
+      - Ich fahre mit dem Bus in die Stadt.
+    collocations: mit dem Bus fahren · den Bus nehmen · der Bus Nummer 5
+    register: "Plural: die Busse. Wie? mit dem Bus."
+
+  - term: die Bahn
+    tag: Nomen
+    definition: a train or a tram; it runs on rails, not on the street
+    use_cases:
+      - Die Bahn fährt bis zum Zentrum.
+      - Nehmen Sie die Bahn Nummer 3.
+    collocations: mit der Bahn fahren · die Bahn nehmen · die Bahn zum Bahnhof
+    register: "Plural: die Bahnen. Wie? mit der Bahn."
+
+  - term: abbiegen
+    tag: Verb
+    definition: to turn off, to take another street; you do it left or right
+    use_cases:
+      - Biegen Sie an der Ampel links ab.
+      - Ich biege hier rechts ab.
+    collocations: links abbiegen · rechts abbiegen · an der Kreuzung abbiegen
+    register: "Trennbar: ich biege ab. Sie-Form: Biegen Sie ab."
+
+  - term: die Ampel
+    tag: Nomen
+    definition: a traffic light; it is red, yellow and green
+    use_cases:
+      - Die Ampel ist rot.
+      - Gehen Sie geradeaus bis zur Ampel.
+    collocations: an der Ampel · bis zur Ampel · die Ampel ist grün
+    register: "Plural: die Ampeln. Ortsangabe: an der Ampel."
+
+  - term: die Kreuzung
+    tag: Nomen
+    definition: a crossroads; the point where two streets meet
+    use_cases:
+      - Da vorne ist eine Kreuzung.
+      - An der Kreuzung gehen Sie geradeaus.
+    collocations: an der Kreuzung · bis zur Kreuzung · die große Kreuzung
+    register: "Plural: die Kreuzungen. Ortsangabe: an der Kreuzung."
+
+  - term: nah
+    tag: Adjektiv
+    definition: near, close by; only a short way. The opposite is weit
+    use_cases:
+      - Der Bahnhof ist ganz nah.
+      - Die Post? Das ist sehr nah.
+    collocations: ganz nah · sehr nah · nah am Zentrum
+    register: "Gegenteil: weit. Frage: Ist es weit? — Nein, ganz nah."
+
+  - term: weit
+    tag: Adjektiv
+    definition: far, a long way. The opposite is nah
+    use_cases:
+      - Ist es weit bis zum Bahnhof?
+      - Nein, das ist nicht weit.
+    collocations: sehr weit · nicht weit · Wie weit ist es?
+    register: "Gegenteil: nah. Frage: Ist es weit?"
+
+  - term: links
+    tag: Adverb
+    definition: on the left, to the left. The opposite is rechts
+    use_cases:
+      - Gehen Sie hier links.
+      - Die Post ist links.
+    collocations: links abbiegen · nach links · da vorne links
+    register: "Gegenteil: rechts. Frage: Links oder rechts?"
+
+  - term: rechts
+    tag: Adverb
+    definition: on the right, to the right. The opposite is links
+    use_cases:
+      - Biegen Sie an der Kreuzung rechts ab.
+      - Rechts sehen Sie das Rathaus.
+    collocations: rechts abbiegen · nach rechts · der Bahnhof ist rechts
+    register: "Gegenteil: links. Frage: Links oder rechts?"
+
+  - term: geradeaus
+    tag: Adverb
+    definition: straight ahead, straight on; not left and not right
+    use_cases:
+      - Gehen Sie immer geradeaus.
+      - Fahren Sie geradeaus bis zur Ampel.
+    collocations: immer geradeaus · geradeaus gehen · geradeaus bis zur Kreuzung
+    register: "Feste Antwort: Gehen Sie geradeaus."
+
+  - term: die Straße
+    tag: Nomen
+    definition: a street, a road; the houses stand left and right of it
+    use_cases:
+      - Die Straße heißt Bahnhofstraße.
+      - In der Straße gibt es einen Supermarkt.
+    collocations: in der Straße · die Straße heißt … · die Bahnhofstraße
+    register: "Plural: die Straßen. Ortsangabe: in der Straße."
+
+  - term: der Weg
+    tag: Nomen
+    definition: the way, the route; how you get from here to there
+    use_cases:
+      - Ist das der Weg zum Zentrum?
+      - Der Weg ist nicht weit.
+    collocations: der Weg zum Bahnhof · den Weg suchen · der Weg ist weit
+    register: "Plural: die Wege. Frage: Wie ist der Weg zum Bahnhof?"
+
+  - term: die Ecke
+    tag: Nomen
+    definition: a corner; the point where one street ends and the next begins
+    use_cases:
+      - Die Bank ist an der Ecke.
+      - An der Ecke biegen Sie links ab.
+    collocations: an der Ecke · gleich um die Ecke · die Ecke Bahnhofstraße
+    register: "Plural: die Ecken. Ortsangabe: an der Ecke."
+
+  - term: der Platz
+    tag: Nomen
+    definition: a square in a town; an open space between the houses
+    use_cases:
+      - Der Platz vor dem Rathaus ist groß.
+      - Am Platz gibt es einen Supermarkt.
+    collocations: der Platz vor dem Rathaus · am Platz · der Marktplatz
+    register: "Plural: die Plätze. Ortsangabe: auf dem Platz."
+
+  - term: das Zentrum
+    tag: Nomen
+    definition: the centre of a town; where the shops and the town hall are
+    use_cases:
+      - Das Zentrum ist nicht weit.
+      - Ich fahre mit dem Bus zum Zentrum.
+    collocations: im Zentrum wohnen · zum Zentrum fahren · das Zentrum von Hamburg
+    register: "Plural: die Zentren. Ortsangabe: im Zentrum."
+
+  - term: die Fahrkarte
+    tag: Nomen
+    definition: a ticket; you buy it before you take the bus or the train
+    use_cases:
+      - Kaufen Sie eine Fahrkarte für den Bus.
+      - Die Fahrkarte kostet zwei Euro fünfzig.
+    collocations: eine Fahrkarte kaufen · die Fahrkarte kostet … · die Fahrkarte für den Bus
+    register: "Plural: die Fahrkarten. Wortbildung: fahren + die Karte."
+
+  - term: aussteigen
+    tag: Verb
+    definition: to get off, to leave the bus or the train. The opposite is einsteigen
+    use_cases:
+      - Steigen Sie am Rathaus aus.
+      - Ich steige an der Haltestelle Zentrum aus.
+    collocations: am Bahnhof aussteigen · an der Haltestelle aussteigen · hier aussteigen
+    register: "Trennbar: ich steige aus. Sie-Form: Steigen Sie aus."
+
+  - term: zu Fuß
+    tag: Phrase
+    definition: on foot, walking; not by bus and not by car
+    use_cases:
+      - Ich gehe zu Fuß zur Post.
+      - Zu Fuß sind es zehn Minuten.
+    collocations: zu Fuß gehen · zu Fuß zum Bahnhof · zehn Minuten zu Fuß
+    register: "Feste Phrase, immer zu Fuß. Wie? zu Fuß oder mit dem Bus."

@@ -1,0 +1,186 @@
+# Module 11 · theory. Two spotlights, 10 items — five for the Sie-imperative
+# (grammar point 1 of the card, plus its word-formation extension gehen →
+# Gehen Sie), five for direction and the direction adverbs (points 2 and 3).
+# The dative is NEVER presented as a system here: zum Bahnhof, zur Post,
+# mit dem Bus and am Rathaus vorbei arrive ready-made in a table, noun by noun,
+# and no item explains why it is dem or der. The table lists places, not cases —
+# building a case form is A2 work, which is why unit 24 of
+# courses/_reference/basic-german/ supplies only its list of ready phrases here.
+# Unit 06 supplies the Sie-imperative; the du and ihr forms it also gives belong
+# to module 13 and stay out.
+# Scaffolding rule (§5): intro and note English, every example and table German.
+# Grammar terms are named in English directly (§5.1).
+spotlights:
+  - title: Gehen Sie geradeaus — the Sie-imperative
+    intro: >-
+      When a stranger in the street tells you the way, almost every sentence
+      starts with a verb: Gehen Sie …, Biegen Sie …, Nehmen Sie … This is the
+      Sie-imperative, and it is the easiest form in German — you take the
+      infinitive from the dictionary and put Sie behind it. Nothing is added,
+      nothing changes. Two things are worth noticing right away: the verb stands
+      first, and the little word Sie never disappears. An imperative is not rude
+      in German; it is simply how directions are given.
+    items:
+      - form: "Sie-imperative = infinitive + Sie"
+        example: "Gehen Sie geradeaus. Nehmen Sie den Bus. Fahren Sie bis zum Bahnhof. Warten Sie hier, bitte."
+        note: The verb comes first and Sie stands right after it. The form is the plain infinitive.
+        table:
+          headers: ["Infinitiv", "Sie-Form", "Beispiel"]
+          rows:
+            - ["gehen", "Gehen Sie", "Gehen Sie geradeaus."]
+            - ["fahren", "Fahren Sie", "Fahren Sie bis zur Ampel."]
+            - ["nehmen", "Nehmen Sie", "Nehmen Sie den Bus."]
+            - ["warten", "Warten Sie", "Warten Sie an der Haltestelle."]
+            - ["kaufen", "Kaufen Sie", "Kaufen Sie eine Fahrkarte."]
+      - form: "No stem change in the Sie-form"
+        example: "Du fährst mit dem Bus. — Fahren Sie mit dem Bus! Du nimmst die Bahn. — Nehmen Sie die Bahn!"
+        note: fahren and nehmen change their stem in the du form. The Sie-form never does — it stays the infinitive.
+        table:
+          headers: ["Infinitiv", "du", "Sie-Form"]
+          rows:
+            - ["fahren", "du fährst", "Fahren Sie"]
+            - ["nehmen", "du nimmst", "Nehmen Sie"]
+            - ["sehen", "du siehst", "Sehen Sie"]
+            - ["sprechen", "du sprichst", "Sprechen Sie"]
+            - ["gehen", "du gehst", "Gehen Sie"]
+      - form: "Separable verbs: the prefix closes the sentence"
+        example: "Biegen Sie links ab. Steigen Sie am Rathaus aus. Kaufen Sie im Zentrum ein. Kommen Sie bitte mit."
+        note: "Same rule as in module 9: the verb comes first, the prefix goes to the end."
+        table:
+          headers: ["Infinitiv", "Sie-Form", "Beispiel"]
+          rows:
+            - ["abbiegen", "Biegen Sie … ab", "Biegen Sie an der Ampel links ab."]
+            - ["aussteigen", "Steigen Sie … aus", "Steigen Sie am Bahnhof aus."]
+            - ["einkaufen", "Kaufen Sie … ein", "Kaufen Sie im Zentrum ein."]
+            - ["mitkommen", "Kommen Sie … mit", "Kommen Sie bitte mit."]
+      - form: "bitte makes it friendly"
+        example: "Gehen Sie bitte geradeaus. Bitte nehmen Sie den Bus. Warten Sie bitte hier."
+        note: bitte can stand at the front or behind the verb. With bitte a command sounds like a friendly answer.
+        table:
+          headers: ["Wo steht bitte?", "Satz"]
+          rows:
+            - ["vorn", "Bitte gehen Sie geradeaus."]
+            - ["hinter dem Verb", "Gehen Sie bitte geradeaus."]
+            - ["am Ende", "Nehmen Sie den Bus, bitte."]
+            - ["ohne bitte", "Gehen Sie geradeaus."]
+      - form: "Asking the way: Wie komme ich …?"
+        example: "Entschuldigung, wie komme ich zum Bahnhof? Wie komme ich zur Post? Ist es weit? Wo ist die Haltestelle?"
+        note: One fixed question opens every conversation about the way. Start it with Entschuldigung.
+        table:
+          headers: ["Frage", "Antwort"]
+          rows:
+            - ["Wie komme ich zum Bahnhof?", "Gehen Sie hier geradeaus."]
+            - ["Wie komme ich zur Post?", "Nehmen Sie den Bus Nummer 5."]
+            - ["Wo ist die Haltestelle?", "Da vorne links."]
+            - ["Ist es weit?", "Nein, es ist ganz nah."]
+            - ["Zu Fuß oder mit dem Bus?", "Zu Fuß sind es zehn Minuten."]
+
+  - title: zum Bahnhof, mit dem Bus — direction comes in one piece
+    intro: >-
+      A direction in German carries a small word in front of the place: zum
+      Bahnhof, zur Post, mit dem Bus. Which small word a place takes is not
+      something you work out here — you learn the place and its phrase together,
+      exactly the way you learned im Bad in module 10 and am Montag in module 9.
+      There is a system behind it and the A2 course will show it; until then
+      these phrases are whole words. Three tiny adverbs do the rest of the work:
+      links, rechts, geradeaus.
+    items:
+      - form: "zum + der/das places · zur + die places"
+        example: "Wie komme ich zum Bahnhof? Ich gehe zur Post. Der Bus fährt zum Rathaus. Ist das der Weg zur Bank?"
+        note: Learn every place together with its little word. Never say zu Post or zu Bahnhof alone.
+        table:
+          headers: ["Nomen", "Richtung", "Beispiel"]
+          rows:
+            - ["der Bahnhof", "zum Bahnhof", "Wie komme ich zum Bahnhof?"]
+            - ["der Platz", "zum Platz", "Gehen Sie zum Platz."]
+            - ["das Rathaus", "zum Rathaus", "Der Bus fährt zum Rathaus."]
+            - ["das Zentrum", "zum Zentrum", "Ist das der Weg zum Zentrum?"]
+            - ["die Post", "zur Post", "Ich gehe zu Fuß zur Post."]
+            - ["die Bank", "zur Bank", "Wie komme ich zur Bank?"]
+            - ["die Haltestelle", "zur Haltestelle", "Gehen Sie zur Haltestelle."]
+            - ["die Ampel", "zur Ampel", "Gehen Sie geradeaus bis zur Ampel."]
+      - form: "mit dem Bus, mit der Bahn, zu Fuß"
+        example: "Ich fahre mit dem Bus. Fahren Sie mit der Bahn. Zu Fuß sind es zehn Minuten. Mit dem Auto ist es weit."
+        note: Three ready phrases for the three ways of getting there. They answer the question Wie?
+        table:
+          headers: ["Wie?", "Beispiel"]
+          rows:
+            - ["mit dem Bus", "Ich fahre mit dem Bus zum Bahnhof."]
+            - ["mit der Bahn", "Fahren Sie mit der Bahn zum Zentrum."]
+            - ["mit dem Auto", "Mit dem Auto sind es fünf Minuten."]
+            - ["zu Fuß", "Ich gehe zu Fuß zur Post."]
+      - form: "links, rechts, geradeaus"
+        example: "Gehen Sie geradeaus. Biegen Sie links ab. Rechts sehen Sie die Bank. Die Post ist links."
+        note: Three small words carry a whole direction. They stand behind the verb or at the front of the answer.
+        table:
+          headers: ["Wort", "Beispiel"]
+          rows:
+            - ["geradeaus", "Gehen Sie immer geradeaus."]
+            - ["links", "Biegen Sie hier links ab."]
+            - ["rechts", "An der Ampel gehen Sie rechts."]
+            - ["nah", "Der Bahnhof ist ganz nah."]
+            - ["weit", "Ist es weit? — Nein, nicht weit."]
+      - form: "an … vorbei — vorbei stands last"
+        example: "Gehen Sie am Rathaus vorbei. Fahren Sie an der Post vorbei. Der Bus fährt am Bahnhof vorbei."
+        note: Learn the phrase whole, place by place. Wherever the sentence goes, vorbei closes it.
+        table:
+          headers: ["Nomen", "Phrase", "Beispiel"]
+          rows:
+            - ["das Rathaus", "am Rathaus vorbei", "Gehen Sie am Rathaus vorbei."]
+            - ["der Bahnhof", "am Bahnhof vorbei", "Der Bus fährt am Bahnhof vorbei."]
+            - ["der Platz", "am Platz vorbei", "Fahren Sie am Platz vorbei."]
+            - ["die Post", "an der Post vorbei", "Gehen Sie an der Post vorbei."]
+            - ["die Bank", "an der Bank vorbei", "Fahren Sie an der Bank vorbei."]
+      - form: "Putting a way together — dann, dann, dann"
+        example: "Gehen Sie hier geradeaus. Dann biegen Sie links ab. Dann gehen Sie am Rathaus vorbei. Der Bahnhof ist rechts."
+        note: Three or four short sentences are a complete answer. dann links the steps and the verb still comes first.
+        table:
+          headers: ["Schritt", "Satz"]
+          rows:
+            - ["1", "Gehen Sie hier geradeaus."]
+            - ["2", "Biegen Sie an der Ampel links ab."]
+            - ["3", "Gehen Sie am Rathaus vorbei."]
+            - ["4", "Der Bahnhof ist dann rechts."]
+            - ["mit dem Bus", "Nehmen Sie den Bus und steigen Sie am Bahnhof aus."]
+
+watchouts:
+  - title: Gehen Sie, not Gehen
+    bad: Gehen geradeaus, bitte.
+    good: Gehen Sie geradeaus, bitte.
+    note: English drops the pronoun in a command, German does not. Sie always stays behind the verb.
+  - title: The prefix goes to the end
+    bad: Abbiegen Sie hier links.
+    good: Biegen Sie hier links ab.
+    note: "abbiegen splits, like every separable verb from module 9: Biegen Sie … ab."
+  - title: zur Post, not zu die Post
+    bad: Wie komme ich zu die Post?
+    good: Wie komme ich zur Post?
+    note: "Each place has one ready phrase: zur Post, zum Bahnhof, zum Rathaus. Learn it whole."
+  - title: mit dem Bus, not mit Bus
+    bad: Ich fahre mit Bus in die Stadt.
+    good: Ich fahre mit dem Bus in die Stadt.
+    note: The phrase for transport keeps its little word — mit dem Bus, mit der Bahn.
+  - title: vorbei closes the sentence
+    bad: Gehen Sie vorbei am Rathaus.
+    good: Gehen Sie am Rathaus vorbei.
+    note: German puts the place first and vorbei last. English says it the other way round.
+
+cloze_cards:
+  - text: "{{c1::Gehen}} Sie hier geradeaus, bitte."
+    hint: gehen
+    rule: "The Sie-imperative is the infinitive plus Sie: gehen → Gehen Sie."
+  - text: "Biegen Sie an der Ampel links {{c1::ab}}."
+    hint: abbiegen
+    rule: "abbiegen splits: the verb comes first, the prefix ab stands last."
+  - text: "Wie komme ich {{c1::zum}} Bahnhof?"
+    hint: zu
+    rule: "der Bahnhof takes the ready phrase zum Bahnhof — learn the place with its phrase."
+  - text: "Ich fahre {{c1::mit}} dem Bus zur Post."
+    hint: mit
+    rule: "Transport comes as one piece: mit dem Bus, mit der Bahn, mit dem Auto."
+  - text: "{{c1::Nehmen}} Sie den Bus Nummer 5."
+    hint: nehmen
+    rule: "nehmen keeps its infinitive form in the Sie-imperative: Nehmen Sie."
+  - text: "Gehen Sie am Rathaus {{c1::vorbei}}."
+    hint: vorbei
+    rule: "am Rathaus vorbei is one ready phrase, and vorbei always stands last."

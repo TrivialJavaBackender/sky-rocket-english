@@ -1,0 +1,41 @@
+# Module 14 · extra text — the weather forecast from the radio. Real genre, and
+# the genre is what makes the es-sentences natural: a Wetterbericht is almost
+# nothing but es regnet, es schneit, es ist kalt, die Sonne scheint. It also
+# carries the four seasons and one present perfect looking back at yesterday
+# (Gestern ist das Wetter schön gewesen), which is the only participle here.
+# Twelve of the module's words appear in these six short lines.
+# Glosses (3) sit only on words whose form in the text is the dictionary form and
+# which are NOT vocab entries of this module.
+kind: extra
+kicker: WETTERBERICHT
+title: Das Wetter am Dienstag
+meta: ≈ 1 min · dotted words have a note — tap to reveal
+body:
+  - - t: "Guten Morgen! Hier ist der Wetterbericht für Dienstag."
+  - - t: "Am Morgen kommt der Regen. In Hamburg regnet es, und es ist kalt, nur vier "
+    - g: Grad
+    - t: "."
+  - - t: "Am Mittag scheint die Sonne, und es ist warm. Am Abend kommt der Wind, und der "
+    - g: Himmel
+    - t: " ist "
+    - g: grau
+    - t: "."
+  - - t: "In den Bergen schneit es. Der Schnee kommt früh."
+  - - t: "Gestern ist das Wetter schön gewesen, heute leider nicht."
+  - - t: "Der Herbst ist da, der Winter ist nicht weit, und der Frühling kommt erst im März. Einen schönen Tag!"
+glosses:
+  - key: Grad
+    term: der Grad
+    pos_label: noun
+    definition: the degree; how warm or cold it is — 4, 13 or 25 Grad
+    example: Heute sind es vier Grad.
+  - key: Himmel
+    term: der Himmel
+    pos_label: noun
+    definition: the sky; you see the sun and the clouds up there
+    example: Der Himmel ist blau.
+  - key: grau
+    term: grau
+    pos_label: adjective
+    definition: grey; the colour between white and black, the colour of rain
+    example: Im November ist der Himmel oft grau.
