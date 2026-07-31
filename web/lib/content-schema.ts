@@ -1,5 +1,6 @@
 import { z } from 'zod';
 import { isDeterminateGap, OPEN_CLASS_ANSWER_THRESHOLD } from './content-gap-words';
+import { normalize as normalizeAnswer } from './domain/grading/normalize';
 
 /**
  * Zod schemas for the content package format (docs/CONTENT-PACKAGE-SCHEMA.md).
@@ -256,7 +257,7 @@ export const WordFormationContentSchema = z.object({
 });
 export type WordFormationContent = z.infer<typeof WordFormationContentSchema>;
 
-export const KeyWordTransformationContentSchema = z.object({
+const KeyWordTransformationShape = z.object({
   s1: z.string().min(1),
   key: z.string().min(1),
   pre: z.string(),
@@ -265,7 +266,101 @@ export const KeyWordTransformationContentSchema = z.object({
   hint: z.string().optional(),
   answer_shown: z.string().min(1),
 });
-export type KeyWordTransformationContent = z.infer<typeof KeyWordTransformationContentSchema>;
+
+// Word sequence used by the key-word rule below. Case- and punctuation-blind,
+// and ß folds to ss so the uppercase chip HEISSEN matches the answer's heißen.
+const keyWords = (text: string): string[] =>
+  text
+    .toLowerCase()
+    .replace(/ß/g, 'ss')
+    .replace(/[^\p{L}\p{N}\s']/gu, ' ')
+    .split(/\s+/)
+    .filter(Boolean);
+
+const containsSequence = (haystack: string[], needle: string[]): boolean =>
+  needle.length > 0 && haystack.some((_, i) => needle.every((word, j) => haystack[i + j] === word));
+
+// The chip the player prints above the gap (KeyWordTransformation.tsx) carries
+// one of two contracts, and its case is what tells them apart — the same signal
+// the learner reads on screen:
+//
+//   ALL CAPS  → a key word (Cambridge Use of English Part 4): "rewrite s1 so
+//               that this exact word appears in the gap, unchanged".
+//   lower case → an instruction naming the rule under test ("wir-form",
+//               "polite form (Sie)"), used where the transformation is a change
+//               of form rather than the insertion of a given word. Written in
+//               the course's metalanguage, so the gap can stay one word long.
+//
+// Either way the chip must not be the answer, and a key word must actually land
+// in the gap: "FRAGE" as an ALL CAPS chip reads as a word to type but is not
+// one, and `key: NEUEN` over `answers: [neuen]` shows the answer outright.
+const isKeyWordChip = (key: string): boolean => key === key.toUpperCase() && /\p{L}/u.test(key);
+
+export const KeyWordTransformationContentSchema = KeyWordTransformationShape.superRefine((content, ctx) => {
+  const key = keyWords(content.key);
+  const fail = (path: string, message: string) => ctx.addIssue({ code: z.ZodIssueCode.custom, path: [path], message });
+
+  if (isKeyWordChip(content.key)) {
+    for (const answer of content.answers) {
+      const answerWords = keyWords(answer);
+      if (!containsSequence(answerWords, key)) {
+        fail(
+          'key',
+          `key_word_transformation key "${content.key}" is ALL CAPS, which promises a word the learner types ` +
+            `verbatim, but it does not appear in accepted answer "${answer}". Either make it a word of the answer, ` +
+            `or — if it names the operation ("FRAGE", "PERFEKT") — write it lower case as an instruction chip ` +
+            `in the course's metalanguage ("yes/no question", "Perfekt").`,
+        );
+        break;
+      }
+      if (answerWords.length <= key.length) {
+        fail(
+          'answers',
+          `key_word_transformation answer "${answer}" is the key "${content.key}" itself, so the chip above the gap ` +
+            `already shows the answer. Widen the gap so the key is only part of what the learner supplies, or turn ` +
+            `the chip into a lower-case instruction naming the rule.`,
+        );
+        break;
+      }
+    }
+
+    if (containsSequence(keyWords(content.pre), key) || containsSequence(keyWords(content.post), key)) {
+      fail(
+        'key',
+        `key_word_transformation key "${content.key}" is already printed in "${content.pre}___${content.post}", ` +
+          `so the chip asks for a word that is not missing. Put it in the gap, or make the chip a lower-case ` +
+          `instruction naming the rule ("wir-form").`,
+      );
+    }
+  } else {
+    // Instruction chip: it may name the rule, and may quote a dictionary form
+    // of the target language ("nehmen (ich-form)", "Präteritum of sein"), but
+    // it must not contain a word the learner is supposed to type — that would
+    // print the answer above the gap just as `key: NEUEN` did.
+    const keySet = new Set(key);
+    for (const answer of content.answers) {
+      const leaked = keyWords(answer).find((word) => keySet.has(word));
+      if (leaked) {
+        fail(
+          'key',
+          `key_word_transformation instruction "${content.key}" contains "${leaked}", a word of accepted answer ` +
+            `"${answer}", so the chip gives the answer away. Name the rule instead of the wording ` +
+            `("polite form (Sie)", "adjective ending after der/die/das").`,
+        );
+        break;
+      }
+    }
+  }
+
+  if (!content.answers.some((answer) => normalizeAnswer(answer) === normalizeAnswer(content.answer_shown))) {
+    fail(
+      'answer_shown',
+      `key_word_transformation answer_shown "${content.answer_shown}" is not one of \`answers\`, so the model answer ` +
+        `shown after checking would be graded wrong.`,
+    );
+  }
+});
+export type KeyWordTransformationContent = z.infer<typeof KeyWordTransformationShape>;
 
 export const ErrorCorrectionContentSchema = z.object({
   words: z.array(z.string().min(1)).min(2),

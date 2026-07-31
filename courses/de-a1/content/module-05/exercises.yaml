@@ -209,7 +209,7 @@ core:
     group: grammar
     content:
       s1: Ich spiele heute Fußball.
-      key: HEUTE
+      key: verb second after a front adverbial
       pre: "Heute "
       post: " Fußball."
       answers: [spiele ich]
@@ -220,7 +220,7 @@ core:
     group: grammar
     content:
       s1: Du kochst gern.
-      key: FRAGE
+      key: yes/no question
       pre: ""
       post: " gern?"
       answers: [Kochst du]
@@ -476,7 +476,7 @@ review_pool:
     group: grammar
     content:
       s1: Ich schwimme am Montag.
-      key: AM MONTAG
+      key: verb second after a front adverbial
       pre: "Am Montag "
       post: "."
       answers: [schwimme ich]

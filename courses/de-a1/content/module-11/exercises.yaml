@@ -231,7 +231,7 @@ core:
     group: grammar
     content:
       s1: Der Bus fährt zum Bahnhof.
-      key: FRAGE
+      key: yes/no question
       pre: ""
       post: " der Bus zum Bahnhof?"
       answers: [Fährt]

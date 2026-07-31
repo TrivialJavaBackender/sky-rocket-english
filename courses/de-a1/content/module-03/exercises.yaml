@@ -227,7 +227,7 @@ core:
     grammar_point: Plural forms (-e, -en, -er, -s, umlaut)
     content:
       s1: Das ist ein Tisch.
-      key: ZWEI
+      key: plural
       pre: "Das sind zwei "
       post: "."
       answers: [Tische]
@@ -239,7 +239,7 @@ core:
     grammar_point: Plural forms (-e, -en, -er, -s, umlaut)
     content:
       s1: Hier ist ein Buch.
-      key: DREI
+      key: plural
       pre: "Hier sind drei "
       post: "."
       answers: [Bücher]

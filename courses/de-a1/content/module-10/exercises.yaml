@@ -215,7 +215,7 @@ core:
     group: grammar
     content:
       s1: Die Lampe ist im Wohnzimmer.
-      key: WO
+      key: question word for a place
       pre: ""
       post: " ist die Lampe?"
       answers: [Wo]
@@ -227,7 +227,7 @@ core:
     group: grammar
     content:
       s1: In der Wohnung ist ein Balkon.
-      key: ES GIBT
+      key: existence, not location
       pre: "In der Wohnung "
       post: " einen Balkon."
       answers: [gibt es]

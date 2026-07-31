@@ -62,7 +62,7 @@ core:
     group: grammar
     content:
       s1: Meine Freunde besuchen mich.
-      key: AM SONNTAG
+      key: Perfekt after a front time phrase
       pre: "Am Sonntag "
       post: " mich besucht."
       answers: [haben meine Freunde]
@@ -225,7 +225,7 @@ core:
     group: grammar
     content:
       s1: Ich habe meinem Bruder und meiner Schwester Karten für das Konzert besorgt.
-      key: IHNEN
+      key: dative pronoun
       pre: "Ich habe "
       post: " Karten für das Konzert besorgt."
       answers: [ihnen]

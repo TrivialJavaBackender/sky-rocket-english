@@ -225,7 +225,7 @@ core:
     group: grammar
     content:
       s1: Du kommst aus Spanien.
-      key: JA/NEIN-FRAGE
+      key: yes/no question
       pre: ""
       post: " du aus Spanien?"
       answers: [Kommst]
@@ -279,7 +279,7 @@ core:
     group: grammar
     content:
       s1: Ich tanze manchmal.
-      key: MANCHMAL
+      key: verb second after a front adverbial
       pre: "Manchmal "
       post: "."
       answers: [tanze ich]

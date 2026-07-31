@@ -187,7 +187,7 @@ core:
     group: grammar
     content:
       s1: Das Buch liegt auf dem Tisch.
-      key: LEGEN
+      key: Wohin? — accusative
       pre: "Ich lege das Buch auf "
       post: " Tisch."
       answers: [den]
@@ -198,7 +198,7 @@ core:
     group: grammar
     content:
       s1: Ich hänge das Bild an die Wand.
-      key: HÄNGEN
+      key: Wo? — dative
       pre: "Das Bild hängt an "
       post: " Wand."
       answers: [der]
@@ -209,7 +209,7 @@ core:
     group: grammar
     content:
       s1: Wir stellen den Sessel in die Ecke.
-      key: STEHEN
+      key: Wo? — dative
       pre: "Der Sessel steht in "
       post: " Ecke."
       answers: [der]
@@ -639,7 +639,7 @@ review_pool:
     group: grammar
     content:
       s1: Ich stelle den Sessel in die Ecke.
-      key: STEHEN
+      key: Wo? — dative
       pre: "Der Sessel steht in "
       post: " Ecke."
       answers: [der]

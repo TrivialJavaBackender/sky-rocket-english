@@ -207,8 +207,8 @@ core:
     group: grammar
     content:
       s1: Ich habe zwei Brüder.
-      key: WIR
-      pre: ""
+      key: wir-form
+      pre: "Wir "
       post: " zwei Brüder."
       answers: [haben]
       hint: 1 Wort
@@ -218,7 +218,7 @@ core:
     group: grammar
     content:
       s1: Mein Vater kommt aus Wien.
-      key: ELTERN
+      key: plural subject
       pre: "Meine Eltern "
       post: " aus Wien."
       answers: [kommen]

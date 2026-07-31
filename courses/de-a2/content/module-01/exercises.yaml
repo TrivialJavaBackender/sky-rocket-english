@@ -186,7 +186,7 @@ core:
     group: grammar
     content:
       s1: Ich spiele am Samstag Fußball.
-      key: GESTERN
+      key: Perfekt after a front time phrase
       pre: "Gestern "
       post: " Fußball gespielt."
       answers: [habe ich]
@@ -197,7 +197,7 @@ core:
     group: grammar
     content:
       s1: Wir fahren nach Berlin.
-      key: LETZTE WOCHE
+      key: Perfekt with sein
       pre: "Letzte Woche "
       post: " nach Berlin gefahren."
       answers: [sind wir]
@@ -208,7 +208,7 @@ core:
     group: grammar
     content:
       s1: Sie räumt die Wohnung auf.
-      key: PERFEKT
+      key: Perfekt of a separable verb
       pre: "Sie hat die Wohnung "
       post: "."
       answers: [aufgeräumt]
@@ -219,10 +219,10 @@ core:
     group: grammar
     content:
       s1: Besuchst du deine Eltern?
-      key: PERFEKT
+      key: Perfekt
       pre: ""
       post: " du deine Eltern besucht?"
-      answers: [hast]
+      answers: [Hast]
       hint: 1 Wort
       answer_shown: Hast
     explanation: "besuchen takes haben. In a question it comes first: Hast du … besucht?"
@@ -638,7 +638,7 @@ review_pool:
     group: grammar
     content:
       s1: Wir gehen am Sonntag spazieren.
-      key: VORGESTERN
+      key: Perfekt with sein
       pre: "Vorgestern "
       post: " spazieren gegangen."
       answers: [sind wir]

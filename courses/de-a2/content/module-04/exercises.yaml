@@ -195,7 +195,7 @@ core:
     group: grammar
     content:
       s1: Ich schenke meiner Schwester ein Buch.
-      key: SIE
+      key: dative pronoun
       pre: "Ich schenke "
       post: " ein Buch."
       answers: [ihr]
@@ -206,7 +206,7 @@ core:
     group: grammar
     content:
       s1: Ich helfe meinem Bruder am Wochenende.
-      key: ER
+      key: dative pronoun
       pre: "Ich helfe "
       post: " am Wochenende."
       answers: [ihm]
@@ -217,7 +217,7 @@ core:
     group: grammar
     content:
       s1: Wir danken dir für die Hilfe.
-      key: IHR
+      key: dative of ihr
       pre: "Wir danken "
       post: " für die Hilfe."
       answers: [euch]
@@ -228,7 +228,7 @@ core:
     group: grammar
     content:
       s1: Ich habe meinem Vater ein Buch geschenkt.
-      key: HEUTE
+      key: present tense, verb second
       pre: "Heute "
       post: " meinem Vater ein Buch."
       answers: [schenke ich]
@@ -651,7 +651,7 @@ review_pool:
     group: grammar
     content:
       s1: Ich zeige meiner Kollegin die Fotos.
-      key: SIE
+      key: dative pronoun
       pre: "Ich zeige "
       post: " die Fotos."
       answers: [ihr]

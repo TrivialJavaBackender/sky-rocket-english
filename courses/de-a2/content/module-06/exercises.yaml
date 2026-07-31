@@ -204,7 +204,7 @@ core:
     group: grammar
     content:
       s1: Der Mantel ist neu.
-      key: NEUEN
+      key: adjective ending after den
       pre: "Ich kaufe den "
       post: " Mantel."
       answers: [neuen]
@@ -215,7 +215,7 @@ core:
     group: grammar
     content:
       s1: Das Kleid ist rot.
-      key: ROTE
+      key: adjective ending after das
       pre: "Ich möchte das "
       post: " Kleid anprobieren."
       answers: [rote]
@@ -226,7 +226,7 @@ core:
     group: grammar
     content:
       s1: Die Schuhe sind schwarz.
-      key: SCHWARZEN
+      key: adjective ending after die (plural)
       pre: "Ich nehme die "
       post: " Schuhe."
       answers: [schwarzen]
@@ -237,7 +237,7 @@ core:
     group: grammar
     content:
       s1: Dieser Pullover ist gestreift.
-      key: DIESEN
+      key: dieser in the accusative
       pre: "Ich möchte "
       post: " gestreiften Pullover."
       answers: [diesen]
@@ -669,7 +669,7 @@ review_pool:
     group: grammar
     content:
       s1: Die Jacke ist blau.
-      key: BLAUE
+      key: adjective ending after die
       pre: "Ich nehme die "
       post: " Jacke."
       answers: [blaue]

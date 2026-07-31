@@ -366,7 +366,7 @@ core:
     group: grammar
     content:
       s1: Ich wohne in Hamburg.
-      key: WIR
+      key: wir-form
       pre: "Wir "
       post: " in Hamburg."
       answers: [wohnen]
@@ -437,7 +437,7 @@ core:
     group: grammar
     content:
       s1: Ihr trinkt Tee.
-      key: JA/NEIN-FRAGE
+      key: yes/no question
       pre: ""
       post: " ihr Tee?"
       answers: [Trinkt]
@@ -523,7 +523,7 @@ core:
     group: grammar
     content:
       s1: Hier ist der Schlüssel.
-      key: NEHMEN
+      key: accusative after nehmen
       pre: "Ich nehme "
       post: "."
       answers: [den Schlüssel]
@@ -614,7 +614,7 @@ core:
     group: grammar
     content:
       s1: Ich trinke einen Kaffee.
-      key: MÖCHTEN
+      key: polite wish (möchten)
       pre: "Ich "
       post: "."
       answers: [möchte einen Kaffee trinken]
@@ -694,7 +694,7 @@ core:
     group: grammar
     content:
       s1: In der Küche sind zwei Stühle.
-      key: ES GIBT
+      key: existence, not location
       pre: "In der Küche gibt es "
       post: "."
       answers: [zwei Stühle]
@@ -784,7 +784,7 @@ core:
     group: grammar
     content:
       s1: Ich arbeite am Samstag.
-      key: MÜSSEN
+      key: obligation (müssen)
       pre: "Ich "
       post: "."
       answers: [muss am Samstag arbeiten]
@@ -825,7 +825,7 @@ core:
     group: grammar
     content:
       s1: Trink viel Wasser!
-      key: SOLLEN
+      key: advice (sollen)
       pre: "Du "
       post: "."
       answers: [sollst viel Wasser trinken]

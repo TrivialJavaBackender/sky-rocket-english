@@ -222,7 +222,7 @@ core:
     group: grammar
     content:
       s1: Du trinkst viel Wasser.
-      key: BEFEHL
+      key: imperative (du)
       pre: ""
       post: " viel Wasser!"
       answers: [Trink, Trinke]
@@ -233,7 +233,7 @@ core:
     group: grammar
     content:
       s1: Trink viel Tee!
-      key: IHR
+      key: imperative (ihr)
       pre: ""
       post: " viel Tee!"
       answers: [Trinkt]

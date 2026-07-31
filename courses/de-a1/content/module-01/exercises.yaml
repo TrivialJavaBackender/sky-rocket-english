@@ -203,8 +203,8 @@ core:
     group: grammar
     content:
       s1: Ich bin Student.
-      key: WIR
-      pre: ""
+      key: wir-form
+      pre: "Wir "
       post: " Studenten."
       answers: [sind]
       hint: 1 Wort
@@ -214,7 +214,7 @@ core:
     group: grammar
     content:
       s1: Nina wohnt in Berlin.
-      key: WO
+      key: question word for a place
       pre: ""
       post: " wohnt Nina?"
       answers: [Wo]

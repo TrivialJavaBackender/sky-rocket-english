@@ -202,7 +202,7 @@ core:
     group: grammar
     content:
       s1: Ich bin als Kind sehr schüchtern gewesen.
-      key: WAR
+      key: Präteritum of sein
       pre: "Ich "
       post: " als Kind sehr schüchtern."
       answers: [war]
@@ -213,7 +213,7 @@ core:
     group: grammar
     content:
       s1: Wir haben damals keinen Fernseher gehabt.
-      key: HATTEN
+      key: Präteritum of haben
       pre: "Wir "
       post: " damals keinen Fernseher."
       answers: [hatten]
@@ -224,7 +224,7 @@ core:
     group: grammar
     content:
       s1: Ich war acht Jahre alt. Da sind wir in eine andere Stadt gezogen.
-      key: ALS
+      key: als-clause — verb at the end
       pre: "Wir sind in eine andere Stadt gezogen, als ich acht Jahre "
       post: "."
       answers: [alt war]
@@ -235,7 +235,7 @@ core:
     group: grammar
     content:
       s1: Meine Eltern haben mir das Fahrrad nicht erlaubt.
-      key: DURFTE
+      key: Präteritum of dürfen
       pre: "Ich "
       post: " nicht Rad fahren."
       answers: [durfte]
@@ -658,7 +658,7 @@ review_pool:
     group: grammar
     content:
       s1: Meine Oma ist als Kind sehr arm gewesen.
-      key: WAR
+      key: Präteritum of sein
       pre: "Meine Oma "
       post: " als Kind sehr arm."
       answers: [war]

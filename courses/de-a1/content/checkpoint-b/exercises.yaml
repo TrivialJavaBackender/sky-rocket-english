@@ -144,7 +144,7 @@ core:
     group: grammar
     content:
       s1: Hier ist ein Supermarkt.
-      key: ES GIBT
+      key: existence, not location
       pre: "Hier gibt es "
       post: "."
       answers: [einen Supermarkt]
@@ -196,7 +196,7 @@ core:
     group: grammar
     content:
       s1: Ich spiele Klavier.
-      key: KÖNNEN
+      key: ability (können)
       pre: "Ich "
       post: "."
       answers: [kann Klavier spielen]

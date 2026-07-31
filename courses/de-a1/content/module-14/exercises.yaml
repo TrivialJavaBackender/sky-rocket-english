@@ -224,7 +224,7 @@ core:
     group: grammar
     content:
       s1: Du hast Pizza gegessen.
-      key: FRAGE
+      key: yes/no question
       pre: ""
       post: " du Pizza gegessen?"
       answers: [Hast]
@@ -235,7 +235,7 @@ core:
     group: grammar
     content:
       s1: Ich fahre nach Berlin.
-      key: GESTERN
+      key: Perfekt with sein
       pre: "Gestern "
       post: " ich nach Berlin gefahren."
       answers: [bin]

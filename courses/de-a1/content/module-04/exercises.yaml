@@ -206,7 +206,7 @@ core:
     group: grammar
     content:
       s1: Du kommst aus Berlin.
-      key: FRAGE
+      key: yes/no question
       pre: ""
       post: " du aus Berlin?"
       answers: [Kommst]
@@ -217,7 +217,7 @@ core:
     group: grammar
     content:
       s1: Das ist eine Antwort.
-      key: KEINE
+      key: negative article
       pre: "Das ist "
       post: " Antwort."
       answers: [keine]

@@ -222,7 +222,7 @@ core:
     group: grammar
     content:
       s1: Es gibt Käse.
-      key: KEIN
+      key: kein in the accusative
       pre: "Es gibt "
       post: "."
       answers: [keinen Käse]

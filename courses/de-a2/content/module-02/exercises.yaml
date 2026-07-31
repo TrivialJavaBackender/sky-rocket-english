@@ -201,7 +201,7 @@ core:
     group: grammar
     content:
       s1: Wir gehen zu dem Bahnhof.
-      key: KURZ
+      key: contraction of preposition and article
       pre: "Wir gehen "
       post: " Bahnhof."
       answers: [zum]
@@ -212,7 +212,7 @@ core:
     group: grammar
     content:
       s1: Ich steige am Hauptbahnhof um.
-      key: GESTERN
+      key: Perfekt with sein
       pre: "Gestern "
       post: " am Hauptbahnhof umgestiegen."
       answers: [bin ich]
@@ -642,7 +642,7 @@ review_pool:
     group: grammar
     content:
       s1: Wir fahren mit dem Bus in die Stadt.
-      key: ZU FUSS
+      key: on foot
       pre: "Wir gehen "
       post: " in die Stadt."
       answers: [zu Fuß]

@@ -114,7 +114,7 @@
 | `mc_cloze` | выбор | CAE Part 1 — лексика | Artikel, Verbform, Präposition |
 | `open_cloze` | ввод | CAE Part 2 — служебные слова | Endungen und Funktionswörter (падежи) |
 | `word_formation` | ввод | CAE Part 3 — словообразование | Plural, Partizip II, Komparativ |
-| `key_word_transformation` | ввод | CAE Part 4 | Satzumformung: Präsens ↔ Perfekt |
+| `key_word_transformation` | ввод | CAE Part 4 — чип = заданное слово | Satzumformung: Präsens ↔ Perfekt; на A1–A2 чип обычно не слово, а строчная метка правила («wir-form»), пропуск при этом 1–2 слова — см. «Правило чипа» в `CONTENT-PACKAGE-SCHEMA.md` |
 | `grammar_drill` | выбор | конструкция модуля | Konjugation, Kasus, Wortstellung |
 | `error_correction` | тап по слову | L1-интерференция | те же типовые ошибки |
 | `collocation_match` | сопоставление | коллокации | Verb + Nomen |

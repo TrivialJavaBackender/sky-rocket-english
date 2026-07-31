@@ -215,7 +215,7 @@ core:
     group: grammar
     content:
       s1: Du kannst gut zeichnen.
-      key: FRAGE
+      key: yes/no question
       pre: ""
       post: " du gut zeichnen?"
       answers: [Kannst]
@@ -226,7 +226,7 @@ core:
     group: grammar
     content:
       s1: Ich will einen Kurs machen.
-      key: MÖCHTEN
+      key: polite form
       pre: "Ich "
       post: " einen Kurs machen."
       answers: [möchte]

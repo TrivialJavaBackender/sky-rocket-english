@@ -183,7 +183,7 @@ core:
     group: grammar
     content:
       s1: Mein Name ist Marek.
-      key: HEISSEN
+      key: heißen (ich-form)
       pre: "Ich "
       post: " Marek."
       answers: [heiße]
@@ -194,7 +194,7 @@ core:
     group: grammar
     content:
       s1: Ich bin Koch von Beruf.
-      key: ARBEITEN
+      key: name the job with arbeiten
       pre: "Ich "
       post: " Koch."
       answers: [arbeite als]
@@ -635,7 +635,7 @@ review_pool:
     group: grammar
     content:
       s1: Wie ist Ihr Name?
-      key: HEISSEN
+      key: polite form (Sie)
       pre: "Wie "
       post: " Sie?"
       answers: [heißen]

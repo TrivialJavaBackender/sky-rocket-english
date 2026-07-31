@@ -215,7 +215,7 @@ core:
     group: grammar
     content:
       s1: Ich stehe um sechs Uhr auf.
-      key: WIR
+      key: wir-form
       pre: "Wir "
       post: " um sechs Uhr auf."
       answers: [stehen]
@@ -227,7 +227,7 @@ core:
     group: grammar
     content:
       s1: Ich sehe am Abend fern.
-      key: WOLLEN
+      key: infinitive after a modal
       pre: "Ich will am Abend "
       post: "."
       answers: [fernsehen]

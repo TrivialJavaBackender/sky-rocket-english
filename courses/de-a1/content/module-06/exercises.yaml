@@ -210,7 +210,7 @@ core:
     group: grammar
     content:
       s1: Ich möchte einen Kaffee.
-      key: NEHMEN
+      key: nehmen (ich-form)
       pre: "Ich "
       post: " einen Kaffee."
       answers: [nehme]
@@ -221,7 +221,7 @@ core:
     group: grammar
     content:
       s1: Anna trinkt den Kaffee.
-      key: IHN
+      key: replace the object with a pronoun
       pre: "Anna trinkt "
       post: "."
       answers: [ihn]
