@@ -210,7 +210,7 @@ entries:
 
   - term: aussteigen
     tag: Verb
-    definition: to get off, to leave the bus or the train. The opposite is einsteigen
+    definition: to get off, to leave the bus or the train. The opposite is to get on
     use_cases:
       - Steigen Sie am Rathaus aus.
       - Ich steige an der Haltestelle Zentrum aus.

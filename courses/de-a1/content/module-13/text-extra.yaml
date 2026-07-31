@@ -25,12 +25,12 @@ glosses:
     definition: enough; not too little
     example: Schlaft genug!
   - key: Tipp
-    term: der Tipp
-    pos_label: noun
+    term: Tipp
+    pos_label: noun, der
     definition: a tip; a small good idea for you
     example: "Ein Tipp: Trinkt viel Wasser!"
   - key: Pause
-    term: die Pause
-    pos_label: noun
+    term: Pause
+    pos_label: noun, die
     definition: a break; a short time with no work
     example: Macht eine Pause!

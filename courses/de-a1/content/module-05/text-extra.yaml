@@ -16,7 +16,7 @@ body:
 glosses:
   - key: Chor
     term: Chor
-    pos_label: noun
+    pos_label: noun, der
     definition: a choir — a group that sings together (der Chor)
     example: Ich singe im Chor.
   - key: fast

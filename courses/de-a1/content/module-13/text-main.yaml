@@ -36,8 +36,8 @@ body:
   - - t: "Dr. Berger: In einer Woche. Gute Besserung!"
 glosses:
   - key: Mund
-    term: der Mund
-    pos_label: noun
+    term: Mund
+    pos_label: noun, der
     definition: the mouth; you eat and speak with it
     example: Machen Sie bitte den Mund auf.
   - key: normal

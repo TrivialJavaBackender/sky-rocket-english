@@ -88,7 +88,7 @@ entries:
 
   - term: die Zeit
     tag: Nomen
-    definition: time; also whether you are free — Hast du Zeit?
+    definition: time; also whether you are free — you ask a friend if they have any
     use_cases:
       - Hast du am Freitag Zeit?
       - Ich habe leider keine Zeit.
@@ -223,7 +223,7 @@ entries:
 
   - term: morgen
     tag: Adverb
-    definition: tomorrow; the day after today. Small m — der Morgen with a capital M is the early part of the day
+    definition: tomorrow; the day after today. Always with a small m — with a capital M the same word means the early part of the day
     use_cases:
       - Morgen habe ich einen Termin.
       - Wir treffen Anna morgen um drei Uhr.

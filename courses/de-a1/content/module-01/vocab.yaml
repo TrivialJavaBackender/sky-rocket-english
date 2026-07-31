@@ -15,7 +15,7 @@ entries:
 
   - term: kommen
     tag: Verb
-    definition: to come; here — to come from a place (kommen aus)
+    definition: to come; here — to come from a place, with aus + country
     use_cases:
       - Ich komme aus Spanien.
       - Woher kommst du?
@@ -24,7 +24,7 @@ entries:
 
   - term: wohnen
     tag: Verb
-    definition: to live somewhere, to have your home there (wohnen in)
+    definition: to live somewhere, to have your home there, with in + town
     use_cases:
       - Ich wohne in Berlin.
       - Wo wohnst du?

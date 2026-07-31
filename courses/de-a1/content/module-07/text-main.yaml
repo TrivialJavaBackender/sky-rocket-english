@@ -29,8 +29,8 @@ body:
     - t: " Geld. Die Preise sind hier wirklich billig. Am Abend esse ich ein Butterbrot und ich trinke Tee."
 glosses:
   - key: Einkaufszettel
-    term: der Einkaufszettel
-    pos_label: noun
+    term: Einkaufszettel
+    pos_label: noun, der
     definition: a shopping list — the paper with everything you want to buy
     example: Mein Einkaufszettel ist heute lang.
   - key: links

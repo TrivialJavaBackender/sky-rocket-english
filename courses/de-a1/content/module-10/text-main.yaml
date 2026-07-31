@@ -27,18 +27,18 @@ body:
     - t: " und gemütlich."
 glosses:
   - key: Treppe
-    term: die Treppe
-    pos_label: noun
+    term: Treppe
+    pos_label: noun, die
     definition: stairs; you use them to go up in a house
     example: Die Treppe im Haus ist lang.
   - key: Keller
-    term: der Keller
-    pos_label: noun
+    term: Keller
+    pos_label: noun, der
     definition: a cellar, a basement; the dark room under the house
     example: Der Keller ist dunkel und kalt.
   - key: Toilette
-    term: die Toilette
-    pos_label: noun
+    term: Toilette
+    pos_label: noun, die
     definition: a toilet; it is in the bathroom or next to it
     example: Im Bad gibt es eine Toilette.
   - key: ruhig

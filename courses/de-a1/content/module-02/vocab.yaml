@@ -105,7 +105,7 @@ entries:
 
   - term: alt
     tag: Adjektiv
-    definition: old; used for age (… Jahre alt). Opposite - jung
+    definition: old; also used for age, after the number of years. Opposite - jung
     use_cases:
       - Mein Vater ist fünfzig Jahre alt.
       - Wie alt bist du?
@@ -123,7 +123,7 @@ entries:
 
   - term: die Frau
     tag: Nomen
-    definition: woman; also wife. Also a title before a name (Frau Meyer)
+    definition: woman; also wife. Also the polite title before a surname, like Mrs
     use_cases:
       - Die Frau von Tom heißt Julia.
       - Frau Schmidt ist meine Lehrerin.

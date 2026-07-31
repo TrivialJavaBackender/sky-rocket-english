@@ -31,8 +31,8 @@ body:
   - - t: "Lena: Vielen Dank. Bis Dienstag!"
 glosses:
   - key: Moment
-    term: der Moment
-    pos_label: noun
+    term: Moment
+    pos_label: noun, der
     definition: a moment, a very short time; Einen Moment! means please wait a second
     example: Einen Moment, bitte!
   - key: schon

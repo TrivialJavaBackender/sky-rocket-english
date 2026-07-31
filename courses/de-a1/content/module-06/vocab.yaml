@@ -61,7 +61,7 @@ entries:
 
   - term: das Brötchen
     tag: Nomen
-    definition: a bread roll; a small round Brot for breakfast
+    definition: a bread roll; small and round, for breakfast
     use_cases:
       - Ich nehme ein Brötchen.
       - Das Brötchen ist frisch.
@@ -205,7 +205,7 @@ entries:
 
   - term: schmecken
     tag: Verb
-    definition: to taste good; Das schmeckt! means it is lecker
+    definition: to taste good; you say it about food that is lecker
     use_cases:
       - Die Suppe schmeckt sehr gut.
       - Schmeckt der Kuchen?

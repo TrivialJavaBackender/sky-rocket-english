@@ -22,8 +22,8 @@ body:
     - t: " einen Plan: üben, üben, üben."
 glosses:
   - key: Grammatik
-    term: die Grammatik
-    pos_label: noun
+    term: Grammatik
+    pos_label: noun, die
     definition: grammar — the rules of a language
     example: Die Grammatik ist nicht schwierig.
   - key: jetzt

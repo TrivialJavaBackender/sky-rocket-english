@@ -38,7 +38,7 @@ entries:
 
   - term: die Idee
     tag: Nomen
-    definition: an idea; something new in your head. Gute Idee! = I like that
+    definition: an idea; something new in your head. With gut in front it praises a suggestion
     use_cases:
       - Ich habe eine Idee.
       - Deine Idee ist sehr gut.
@@ -209,7 +209,7 @@ entries:
 
   - term: der Lehrer
     tag: Nomen
-    definition: a teacher; he gives the lessons. A woman is die Lehrerin
+    definition: a teacher; he gives the lessons. The female form ends in -in
     use_cases:
       - Der Lehrer kommt aus Berlin.
       - Mein Lehrer ist sehr gut.
@@ -218,7 +218,7 @@ entries:
 
   - term: möglich
     tag: Adjektiv
-    definition: "possible; it can happen. Opposite: nicht möglich"
+    definition: "possible; it can happen. Opposite: impossible, with un- in front"
     use_cases:
       - Das ist möglich.
       - "Ist das möglich?"

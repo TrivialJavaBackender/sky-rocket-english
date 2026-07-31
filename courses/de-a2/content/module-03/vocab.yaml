@@ -14,7 +14,7 @@ entries:
 
   - term: das Zimmer
     tag: Nomen
-    definition: a room; kitchen, bathroom and bedroom are all Zimmer
+    definition: a room; kitchen, bathroom and bedroom are all one of these
     use_cases:
       - Mein Zimmer ist klein, aber hell.
       - Wie viele Zimmer hat die Wohnung?

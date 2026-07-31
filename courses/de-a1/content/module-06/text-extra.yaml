@@ -19,11 +19,11 @@ body:
 glosses:
   - key: frisch
     term: frisch
-    pos_label: Adjektiv
+    pos_label: adjective
     definition: fresh; made today, not old
     example: Das Brot ist frisch.
   - key: täglich
     term: täglich
-    pos_label: Adverb
+    pos_label: adverb
     definition: every day; on all seven days
     example: Wir haben täglich Kuchen.

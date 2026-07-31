@@ -151,7 +151,7 @@ entries:
 
   - term: der Freund
     tag: Nomen
-    definition: a friend; also a boyfriend. Female form — die Freundin
+    definition: a friend; also a boyfriend. The female form ends in -in
     use_cases:
       - Mein Freund heißt Tom.
       - Meine Freunde spielen gern Tennis.
@@ -169,7 +169,7 @@ entries:
 
   - term: essen
     tag: Verb
-    definition: to eat; to take food. Related noun — das Essen
+    definition: to eat; to take food. The noun for a meal is the same word, capitalised
     use_cases:
       - Du isst gern Pizza.
       - Er isst nie am Morgen.

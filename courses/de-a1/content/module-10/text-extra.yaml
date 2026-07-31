@@ -22,17 +22,17 @@ body:
   - - t: "Wo? Blumenstraße 12, Hamburg. Wann? Am Samstag um 15 Uhr. Fragen? Herr Klein, Telefon 040 55 12 33."
 glosses:
   - key: Quadratmeter
-    term: der Quadratmeter
-    pos_label: noun
+    term: Quadratmeter
+    pos_label: noun, der
     definition: a square metre; how you say how big a flat is
     example: Die Wohnung hat 68 Quadratmeter.
   - key: Keller
-    term: der Keller
-    pos_label: noun
+    term: Keller
+    pos_label: noun, der
     definition: a cellar, a basement; the dark room under the house
     example: Im Keller ist mein Fahrrad.
   - key: Aufzug
-    term: der Aufzug
-    pos_label: noun
+    term: Aufzug
+    pos_label: noun, der
     definition: a lift, an elevator; it takes you up without the stairs
     example: Im Haus gibt es keinen Aufzug.

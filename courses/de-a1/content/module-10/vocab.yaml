@@ -39,7 +39,7 @@ entries:
 
   - term: das Bad
     tag: Nomen
-    definition: the bathroom; the room with a shower. The long word is das Badezimmer
+    definition: the bathroom; the room with a shower. The longer word for it ends in -zimmer
     use_cases:
       - Im Bad gibt es eine Dusche.
       - Das Bad ist klein und hell.

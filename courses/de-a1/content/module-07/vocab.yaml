@@ -135,7 +135,7 @@ entries:
 
   - term: das Kilo
     tag: Nomen
-    definition: a kilo, 1000 grams. Long form — das Kilogramm
+    definition: a kilo, 1000 grams. The long form ends in -gramm
     use_cases:
       - Ich kaufe ein Kilo Äpfel.
       - Ein Kilo Bananen kostet ein Euro zwanzig.

@@ -28,21 +28,21 @@ body:
 glosses:
   - key: freundlich
     term: freundlich
-    pos_label: Adjektiv
+    pos_label: adjective
     definition: friendly, kind; a friendly person says hello and smiles
     example: Der Kellner ist sehr freundlich.
   - key: heiß
     term: heiß
-    pos_label: Adjektiv
+    pos_label: adjective
     definition: hot; too hot to drink now — the opposite is kalt
     example: Der Tee ist zu heiß.
   - key: nur
     term: nur
-    pos_label: Adverb
+    pos_label: adverb
     definition: only, just; nothing more than that
     example: Ich trinke nur Wasser.
   - key: sofort
     term: sofort
-    pos_label: Adverb
+    pos_label: adverb
     definition: right now, immediately; not in five minutes
     example: Der Kellner kommt sofort.

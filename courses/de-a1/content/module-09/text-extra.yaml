@@ -25,17 +25,17 @@ body:
   - - t: "NOTIZ: Am Wochenende stehe ich spät auf."
 glosses:
   - key: Frühstück
-    term: das Frühstück
-    pos_label: noun
+    term: Frühstück
+    pos_label: noun, das
     definition: breakfast, the first food of the day
     example: Das Frühstück ist um halb acht.
   - key: Kurs
-    term: der Kurs
-    pos_label: noun
+    term: Kurs
+    pos_label: noun, der
     definition: a course, lessons at a school
     example: Der Kurs fängt um sieben Uhr an.
   - key: Termin
-    term: der Termin
-    pos_label: noun
+    term: Termin
+    pos_label: noun, der
     definition: an appointment, a fixed time to meet somebody
     example: Am Donnerstag habe ich einen Termin.

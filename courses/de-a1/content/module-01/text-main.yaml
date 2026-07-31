@@ -38,6 +38,6 @@ glosses:
     example: Ich spreche ein bisschen Deutsch.
   - key: muttersprache
     term: Muttersprache
-    pos_label: noun
+    pos_label: noun, die
     definition: mother tongue, the language you grew up with
     example: Meine Muttersprache ist Spanisch.

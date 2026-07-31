@@ -21,13 +21,13 @@ body:
   - - t: "Kurs A1: hundert Euro. Die Prüfung kostet zwanzig Euro. Sie haben eine Frage? Telefon 030 55 12 40."
 glosses:
   - key: Anfänger
-    term: der Anfänger
-    pos_label: noun
+    term: Anfänger
+    pos_label: noun, der
     definition: a beginner; somebody who starts and knows nothing yet
     example: Der Kurs ist für Anfänger.
   - key: Gruppe
-    term: die Gruppe
-    pos_label: noun
+    term: Gruppe
+    pos_label: noun, die
     definition: a group; here — the people in one course
     example: Die Gruppe ist klein.
   - key: online

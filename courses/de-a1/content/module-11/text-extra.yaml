@@ -23,17 +23,17 @@ body:
     - t: " 040 55 12 33."
 glosses:
   - key: Schule
-    term: die Schule
-    pos_label: noun
+    term: Schule
+    pos_label: noun, die
     definition: a school; the house where you learn something
     example: Die Schule ist im Zentrum.
   - key: Parkplatz
-    term: der Parkplatz
-    pos_label: noun
+    term: Parkplatz
+    pos_label: noun, der
     definition: a car park; the place where you leave the car
     example: Der Parkplatz am Bahnhof ist groß.
   - key: Telefon
-    term: das Telefon
-    pos_label: noun
+    term: Telefon
+    pos_label: noun, das
     definition: a telephone; you call the school with it
     example: Das Telefon ist im Flur.

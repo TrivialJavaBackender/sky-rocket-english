@@ -214,7 +214,7 @@ entries:
 
   - term: anziehen
     tag: Verb
-    definition: to put on (clothes); opposite of ausziehen
+    definition: to put on (clothes); the opposite is to take them off
     use_cases:
       - Zieh die warme Jacke an!
       - Ich ziehe heute das blaue Hemd an.
@@ -223,7 +223,7 @@ entries:
 
   - term: ausziehen
     tag: Verb
-    definition: to take off (clothes); opposite of anziehen
+    definition: to take off (clothes); the opposite is to put them on
     use_cases:
       - Zieh die nasse Jacke aus!
       - Zu Hause ziehe ich die Schuhe aus.

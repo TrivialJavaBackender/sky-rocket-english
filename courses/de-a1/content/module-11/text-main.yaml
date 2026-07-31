@@ -43,8 +43,8 @@ glosses:
     definition: right there, very close; only a step away
     example: Die Bank ist gleich an der Ecke.
   - key: Nummer
-    term: die Nummer
-    pos_label: noun
+    term: Nummer
+    pos_label: noun, die
     definition: a number; every bus and every house has one
     example: Nehmen Sie den Bus Nummer 5.
   - key: drüben

@@ -4,7 +4,7 @@
 entries:
   - term: heißen
     tag: Verb
-    definition: to be called; the verb for saying your name (Wie heißt du?)
+    definition: to be called; the verb for saying and asking a name
     use_cases:
       - Ich heiße Marek und komme aus Polen.
       - Wie heißt deine Lehrerin? — Sie heißt Frau Weber.
@@ -13,7 +13,7 @@ entries:
 
   - term: kommen aus
     tag: Verb
-    definition: to come from a country or a town (Woher kommst du?)
+    definition: to come from a country or a town — it answers the question Woher?
     use_cases:
       - Ich komme aus Italien, aus Neapel.
       - Woher kommt ihr? — Wir kommen aus der Türkei.
@@ -103,7 +103,7 @@ entries:
 
   - term: das Alter
     tag: Nomen
-    definition: age, the number of years (Wie alt bist du?)
+    definition: age, the number of years someone has lived
     use_cases:
       - Bitte schreiben Sie Ihr Alter in das Formular.
       - Wir haben das gleiche Alter.
@@ -157,7 +157,7 @@ entries:
 
   - term: der Name
     tag: Nomen
-    definition: name — Anna, Weber
+    definition: what a person is called; Anna Weber has two of them
     use_cases:
       - Mein Name ist Weber.
       - Wie schreibt man Ihren Namen?

@@ -79,7 +79,7 @@ entries:
   register: 'Plural: die Umgebungen. Vom Verb umgeben.'
 - term: der Vermieter
   tag: Nomen
-  definition: the landlord — the person who owns the flat and rents it out; opposite of der Mieter
+  definition: the landlord — the person who owns the flat and rents it out; the other side of the contract
   use_cases:
   - Der Vermieter zeigt uns die Wohnung.
   - Bei Fragen rufe ich den Vermieter an.
@@ -151,7 +151,7 @@ entries:
   register: 'Plural: die Erdgeschosse. Aus die Erde + das Geschoss.'
 - term: die Etage
   tag: Nomen
-  definition: a floor, a storey — die Wohnung ist in der zweiten Etage; also der Stock
+  definition: a floor, a storey — which level of the building the flat is on; a synonym is der Stock
   use_cases:
   - Wir wohnen in der zweiten Etage.
   - Das Haus hat vier Etagen.
@@ -159,7 +159,7 @@ entries:
   register: 'Plural: die Etagen. Auch: der Stock. Aus dem Französischen.'
 - term: die Lage
   tag: Nomen
-  definition: the location — where something lies. Die Wohnung hat eine ruhige Lage am Park.
+  definition: the location — where a flat lies, quiet or noisy, central or outside
   use_cases:
   - Die Wohnung hat eine ruhige Lage am Park.
   - Die Lage ist zentral und trotzdem grün.
@@ -167,7 +167,7 @@ entries:
   register: 'Plural: die Lagen. Vom Verb liegen.'
 - term: der Mieter
   tag: Nomen
-  definition: the tenant — the person who lives in the flat and pays rent; opposite of der Vermieter
+  definition: the tenant — the person who lives in the flat and pays rent; the other side of the contract
   use_cases:
   - Der neue Mieter zieht am ersten Mai ein.
   - Der Mieter zahlt die Miete jeden Monat.
@@ -175,7 +175,7 @@ entries:
   register: 'Plural: die Mieter. Die Frau: die Mieterin. Von mieten.'
 - term: einziehen
   tag: Verb
-  definition: to move in — to come into a new flat and live there; opposite of ausziehen
+  definition: to move in — to come into a new flat and live there; the opposite is to move out
   use_cases:
   - Wir ziehen nächste Woche in die neue Wohnung ein.
   - Wann kann ich in die Wohnung einziehen?
@@ -191,7 +191,7 @@ entries:
   register: 'Partizip II: renoviert. Aus dem Lateinischen: neu machen.'
 - term: die Kaltmiete
   tag: Nomen
-  definition: the basic rent, without service charges; opposite of die Warmmiete
+  definition: the basic rent, without service charges; the opposite includes them
   use_cases:
   - Die Kaltmiete ist die Miete ohne die Nebenkosten.
   - Die Kaltmiete beträgt sechshundert Euro im Monat.
@@ -199,7 +199,7 @@ entries:
   register: 'Plural: die Kaltmieten. Aus kalt + Miete.'
 - term: die Warmmiete
   tag: Nomen
-  definition: the full rent including all service charges; opposite of die Kaltmiete
+  definition: the full rent including all service charges; the opposite leaves them out
   use_cases:
   - Die Warmmiete ist die Kaltmiete plus die Nebenkosten.
   - Unsere Warmmiete ist siebenhundert Euro im Monat.
@@ -239,7 +239,7 @@ entries:
   register: 'Plural: die Wohnflächen. Aus wohnen + die Fläche.'
 - term: der Altbau
   tag: Nomen
-  definition: a period building, often over a hundred years old; opposite of der Neubau
+  definition: a period building, often over a hundred years old; the opposite is a recent one
   use_cases:
   - Im Altbau sind die Zimmer hoch und hell.
   - Wir wohnen gern in einem Altbau im Zentrum.
@@ -247,7 +247,7 @@ entries:
   register: 'Plural: die Altbauten. Aus alt + Bau. Gegenteil: der Neubau.'
 - term: der Neubau
   tag: Nomen
-  definition: a new build, put up only recently; opposite of der Altbau
+  definition: a new build, put up only recently; the opposite is a period building
   use_cases:
   - Im Neubau sind die Fenster neu und die Heizung modern.
   - Der Neubau am Stadtrand ist erst ein Jahr alt.

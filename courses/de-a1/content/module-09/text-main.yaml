@@ -23,18 +23,18 @@ body:
     - t: "."
 glosses:
   - key: Zeitung
-    term: die Zeitung
-    pos_label: noun
+    term: Zeitung
+    pos_label: noun, die
     definition: newspaper; you read the news in it
     example: Am Morgen lese ich die Zeitung.
   - key: Pause
-    term: die Pause
-    pos_label: noun
+    term: Pause
+    pos_label: noun, die
     definition: a break, a short stop in your work
     example: Am Mittag mache ich eine Pause.
   - key: Viertel
-    term: das Viertel
-    pos_label: noun
+    term: Viertel
+    pos_label: noun, das
     definition: a quarter, 15 minutes
     example: Es ist Viertel nach sechs.
   - key: kurz
