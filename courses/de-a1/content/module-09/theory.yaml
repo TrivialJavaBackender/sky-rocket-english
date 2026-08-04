@@ -136,10 +136,10 @@ watchouts:
     bad: Ich aufstehe um sieben Uhr.
     good: Ich stehe um sieben Uhr auf.
     note: "aufstehen splits in a sentence: stehe takes the ending, auf closes the sentence."
-  - title: halb acht is 7.30
-    bad: Es ist halb acht. Es ist acht Uhr dreißig.
-    good: Es ist halb acht. Es ist sieben Uhr dreißig.
-    note: halb looks forward — halb acht is half an hour before eight.
+  - title: halb neun is 8.30, not 9.30
+    bad: Es ist acht Uhr dreißig. Das ist halb acht.
+    good: Es ist acht Uhr dreißig. Das ist halb neun.
+    note: halb counts forward to the next hour — halb neun is 8.30, halb acht is 7.30.
   - title: am Montag, not in Montag
     bad: Ich arbeite in Montag.
     good: Ich arbeite am Montag.

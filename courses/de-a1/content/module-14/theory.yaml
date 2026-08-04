@@ -171,7 +171,7 @@ watchouts:
   - title: The weather cannot start without es
     bad: Heute ist sehr kalt.
     good: Heute ist es sehr kalt.
-    note: "Russian and English can drop the subject here, German never can: es regnet, es ist kalt."
+    note: "A weather sentence always names its subject: es regnet, es schneit, es ist kalt. The es is never left out."
   - title: After denn everything stays normal
     bad: Ich bleibe zu Hause, denn es kalt ist.
     good: Ich bleibe zu Hause, denn es ist kalt.

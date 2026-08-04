@@ -138,10 +138,10 @@ watchouts:
     bad: Ich schenke ein Buch meinem Vater.
     good: Ich schenke meinem Vater ein Buch.
     note: "Wem? first, Was? second. The dative stands in front of the accusative."
-  - title: These verbs take haben in the perfect
-    bad: Ich bin meiner Nachbarin beim Umzug geholfen.
-    good: Ich habe meiner Nachbarin beim Umzug geholfen.
-    note: "helfen, danken and schenken always build their perfect with haben, never with sein."
+  - title: gefallen goes with mir, not mich
+    bad: Das Geschenk gefällt mich sehr.
+    good: Das Geschenk gefällt mir sehr.
+    note: "gefallen, gehören and Wie geht es …? all take a dative pronoun: mir, dir, ihm, ihr, uns, euch, ihnen."
 
 cloze_cards:
   - text: "Ich helfe {{c1::meinem}} Bruder jeden Samstag im Garten."

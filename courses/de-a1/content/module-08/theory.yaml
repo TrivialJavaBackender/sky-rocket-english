@@ -58,7 +58,7 @@ spotlights:
             - ["sie/Sie", "wollen", "Sie wollen viel lernen."]
       - form: "The verb bracket: modal second, infinitive last"
         example: "Ich kann gut Klavier spielen. Heute will ich allein üben. Anna möchte die Prüfung machen."
-        note: The modal is verb number two. The second verb stays an infinitive and waits at the end.
+        note: The modal is verb number two. The second verb waits at the end as a bare infinitive — never with zu.
         table:
           headers: ["Position 1", "Position 2 (Modalverb)", "Mitte", "Ende (Infinitiv)"]
           rows:

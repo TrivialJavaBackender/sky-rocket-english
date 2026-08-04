@@ -139,10 +139,10 @@ watchouts:
     bad: Die Lampe stellt auf dem Tisch.
     good: Die Lampe steht auf dem Tisch.
     note: "stellen needs an object: Ich stelle die Lampe. With no object the verb is stehen."
-  - title: One word, not two
-    bad: Wir haben ein neues Schlaf Zimmer.
-    good: Wir haben ein neues Schlafzimmer.
-    note: "Two nouns always become one word in German: das Schlafzimmer, der Kleiderschrank."
+  - title: legen or liegen?
+    bad: Ich liege das Buch auf den Tisch.
+    good: Ich lege das Buch auf den Tisch.
+    note: legen takes an object and moves the book; with no object the verb is liegen — Das Buch liegt auf dem Tisch.
   - title: A bottle stands, a book lies
     bad: Die Flasche liegt im Schrank.
     good: Die Flasche steht im Schrank.

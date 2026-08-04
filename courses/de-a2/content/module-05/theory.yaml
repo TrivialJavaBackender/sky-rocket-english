@@ -125,10 +125,10 @@ watchouts:
     bad: Als ich war klein, hatte ich einen Hund.
     good: Als ich klein war, hatte ich einen Hund.
     note: "After als and wenn the finite verb stands right at the end of its clause."
-  - title: Jahre alt, not just Jahre
-    bad: Damals war ich acht Jahre.
-    good: Damals war ich acht Jahre alt.
-    note: "After the number of years German always adds alt: Ich bin 30 Jahre alt."
+  - title: wann only ever asks a question
+    bad: Wann ich zehn war, habe ich ein Fahrrad bekommen.
+    good: Als ich zehn war, habe ich ein Fahrrad bekommen.
+    note: English says 'when' for all three. A statement about one past occasion takes als — wann belongs in a question.
   - title: war, not habe gewesen
     bad: Ich habe als Kind in einem Dorf gewesen.
     good: Ich war als Kind in einem Dorf.

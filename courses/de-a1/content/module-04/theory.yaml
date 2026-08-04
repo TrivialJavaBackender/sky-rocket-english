@@ -122,10 +122,10 @@ watchouts:
     bad: Verstehst du das nicht? — Ja, ich verstehe das.
     good: Verstehst du das nicht? — Doch, ich verstehe das.
     note: "A negative question plus a positive answer needs doch, not ja."
-  - title: Nouns keep their capital letter
-    bad: Das ist keine idee.
+  - title: kein or keine?
+    bad: Das ist kein Idee.
     good: Das ist keine Idee.
-    note: Every German noun starts with a capital letter, also after kein.
+    note: kein copies the endings of ein — eine Idee → keine Idee, ein Buch → kein Buch.
   - title: kein never stands before mein
     bad: Das ist kein mein Buch.
     good: Das ist nicht mein Buch.

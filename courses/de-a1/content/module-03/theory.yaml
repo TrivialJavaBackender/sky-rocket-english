@@ -151,10 +151,10 @@ spotlights:
             - ["das Bild ist …", "die Bilder sind …"]
 
 watchouts:
-  - title: Nouns start with a capital letter
-    bad: Der tisch ist groß und schwarz.
-    good: Der Tisch ist groß und schwarz.
-    note: Every German noun takes a capital letter — Tisch, Tür, Buch, Handy.
+  - title: ein or eine?
+    bad: Das ist ein Uhr.
+    good: Das ist eine Uhr.
+    note: eine goes with a die-word, ein with a der- or das-word — eine Uhr, but ein Tisch.
   - title: The gender is in the word, not in the meaning
     bad: Der Buch ist rot.
     good: Das Buch ist rot.
@@ -162,7 +162,7 @@ watchouts:
   - title: A singular noun needs an article
     bad: Das ist Stuhl.
     good: Das ist ein Stuhl.
-    note: German almost never leaves a singular noun bare — say ein Stuhl or der Stuhl.
+    note: "A thing needs its article — say ein Stuhl or der Stuhl. Only a job after sein stands bare: Ich bin Lehrer."
   - title: The plural is not always -s
     bad: Hier sind zwei Buchs.
     good: Hier sind zwei Bücher.

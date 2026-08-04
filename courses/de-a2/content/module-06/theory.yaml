@@ -125,6 +125,10 @@ watchouts:
     bad: Ich möchte die neue Schuhe.
     good: Ich möchte die neuen Schuhe.
     note: "After plural die the adjective takes -en: die neuen Schuhe."
+  - title: dieser and jeder work like der
+    bad: Ich nehme diesen gestreifte Pullover.
+    good: Ich nehme diesen gestreiften Pullover.
+    note: dieser and jeder end like der, das, die — so the adjective after them takes the same -e or -en.
 
 cloze_cards:
   - text: "Der {{c1::neue}} Mantel ist warm und nicht zu eng."

@@ -484,8 +484,8 @@ review_pool:
     explanation: "A noun is negated with keine, so nicht eine becomes keine."
   - type: error_correction
     group: grammar
-    content: { words: [Das, ist, keine, "idee."], wrong: 3, correction: "idee → Idee" }
-    explanation: "Every German noun keeps its capital letter, also after keine."
+    content: { words: [Das, ist, kein, mein, "Buch."], wrong: 2, correction: "kein mein → nicht mein" }
+    explanation: "A noun with mein or der takes nicht: Das ist nicht mein Buch."
   - type: word_formation
     group: vocab
     content:

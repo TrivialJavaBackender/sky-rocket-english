@@ -168,10 +168,10 @@ watchouts:
     bad: Woher du kommst?
     good: Woher kommst du?
     note: Question word, then verb, then subject. Nothing may come between the first two.
-  - title: The language stands alone
-    bad: Ich spreche die deutsche Sprache.
-    good: Ich spreche Deutsch.
-    note: "Names of languages are used bare and with a capital: Deutsch, Polnisch, Englisch."
+  - title: du and er change the stem
+    bad: Du sprechst schon gut Deutsch.
+    good: Du sprichst schon gut Deutsch.
+    note: "du and er/sie/es change the stem vowel: sprechen → du sprichst, fahren → er fährt. ich, wir and ihr keep it plain."
   - title: du arbeitest needs the extra e
     bad: Du arbeitst in einem Restaurant.
     good: Du arbeitest in einem Restaurant.
